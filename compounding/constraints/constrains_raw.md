@@ -151,7 +151,7 @@
 * -en- occurs non-paradigmatically only in such cases when former weak nouns moved to another class (maintaining their original linking element) (79)
 * -(e)n- can be added to monosyllabic or polysyllabic final-stressed weak F only when the plural interpretation is allowed, with a very few counterexamples (80)
 * Final-stressed weak F without plural interpretation mostly adopt -s- or 0 (80)
-* Monosyllabic M and N with plural interpretation sometimes attach -en- but not as obligatorily as F
+* Monosyllabic M and N with plural interpretation sometimes attach -en- but not as obligatorily as F (80)
 * -er- is always paradigmatic (80)
 * -er- is often associated with plural meaning, with many counterexamples (80)
 * First members with -er- often indicate concrete, countable entities (81)
@@ -165,18 +165,17 @@
 ## _Ortner & Müller-Bollhagen 1991_. Deutsche Wortbildung, Hauptteil 4, Substantivkomposita
 
 * Most compounds have 0 (50, 52, 54, 103)
-* Derivatives with the suffix -er- adopt 0 as a rule (56)
 * Compounds with the second constituent Mann, Frau, Leute, Tochter, Gattin, Witwe that denote persons, can insert -(e)s-, even when the first constituent would otherwise attach 0 (56)
 * Copulative compounds always have 0 (57, 109)
 * Almost all F with -s- are polysyllabic (73)
 * -s- always occurs with F ending in -ung, -beit, -keit, -igkeit, -schaft, -ität, -ion, with a few exceptions (73, 94)
 * F ending in -ität- can adopt -en- where the plural interpretation should be preserved (74, 94)
-* -s- occurs regularly after polysyllabic F ending with [t] (74-75)
+* -s- occurs regularly after polysyllabic F ending with [t] (74,75)
 * All M where a non-paradigmatic -en- occurs are monosyllabic and belong to the following semantic classes: male persons, animals, astronomic objects, months (78)
 * All N with the unparadigmatic -en- linking element are polysyllabic foreign words with final stress that necessarily express plurality (78)
 * -(e)ns- occurs with a few M and a single N (80, 97)
-* 0-Plural, especially with suffixes -er, -ler, -ner, -el, -sel, -en, -chen, -lein regularly have 0 (82, 106)
-* =Plural, e-Plural, e=Plural nouns rarely have linkers (83)
+* 0-Plural, especially with suffixes -er, -ler, -ner, -el, -sel, -en, -chen, -lein regularly have 0 (56, 82, 106)
+* =Plural, e-Plural, e=Plural nouns rarely have linkers (83, 106, 197)
 * s-Plural has 0 as a rule (83, 106)
 * Derivates ending in -ing, -ling regularly attach -s- (83, 88)
 * Nouns ending in -sal extensively attach -s- (83)
@@ -200,11 +199,10 @@
 * Most er-Plural nouns attach both -er- (=er=) or 0 in different cases, often depending on plural interpretation (80% singular meaning cases have 0) (99, 108)
 * -e- is paradigmatic, mostly simplexes, no loanwords (102)
 * -e- mostly signalizes plural meaning (103)
-* Nouns ending in dental fricatives and affricates ([s], [ts], [ʃ]), and [st] mostly have 0
 * Derivative M ending in -el regularly have 0 (106)
-* About 90% of (e)s-Genitive 0-Plural have 0 (106)
-* 0 attaches to (e)s-Genitive e-Plural nouns (level of regularity not mentioned) (107)
+* About 90% of (e)s-Genitive 0-Plural have 0 (106, 107)
 * e=Plural nouns mostly have 0 (107)
+* Nouns ending in dental fricatives and affricates ([s], [ts], [ʃ]), and [st] mostly have 0 (109)
 
 
 ## _Schäfer 2018_. Einführung in die grammatische Beschreibung des Deutschen
@@ -213,7 +211,7 @@
 * s-Plural nouns never have -s- (229)
 * Nouns with suffixes -heit, -ung, -tum etc. a strong tendency to adopt -s- (229)
 * When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter usually adopts its plural ending (230)
-* Linkers identical to the plural ending are tendencially associated with plural meaning (231)
+* Linkers identical to the plural ending are tendentially associated with plural meaning (231)
 
 
 ## _Schäfer & Pankratz 2018_. The plural interpretability of German linking elements
@@ -225,9 +223,9 @@
 * F ending in -e virtually always occur with -(e)n- (9)
 * Weak M, as well as (e)n-Plural mixed M and N often adopt -(e)n- (9)
 * -(e)ns- is only used with a few nouns (9)
-* =e= and =er= have significantly strong effect on plural reading
-* -er- and = have moderate effect on plural reading
-* -e-, -(e)n- have insignificant effect on plural reading
+* =e= and =er= have significantly strong effect on plural reading (29)
+* -er- and = have moderate effect on plural reading (29)
+* -e-, -(e)n- have insignificant effect on plural reading (29)
 
 
 ## _Schlücker 2012_. Die deutsche Kompositionsfreudigkeit. Übersicht und Einführung. _Das Deutsche als kompositionsfreudige Sprache_
@@ -239,7 +237,7 @@
 
 * -s- occurs with -schaft, -heit, -ung, -tum, -tät, -ion (level of regularity not mentioned) (because it reopens the stem) (19)
 * Syllabic linkers usually attach to monosyllabic stems or stems with word-final stress (19)
-* Linkers identical to the plural ending can be associated with plural meaning  (level of regularity not mentioned) (20)
+* Linkers identical to the plural ending can be associated with plural meaning (level of regularity not mentioned) (20)
 * In compounds used both in common and specialized language that have a doubful -s-, technical terms usually omit the -s- while the common language keeps it (20)
 
 
