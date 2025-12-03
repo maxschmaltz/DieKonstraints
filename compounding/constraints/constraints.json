@@ -61,8 +61,9 @@
 			}
 		],
 		"evidence_contra": [],
-		"examples_pro": [""],
-		"examples_contra": []
+		"examples_pro": ["land_kreis", "haus_tür", "stadt_mauer"],
+		"examples_contra": ["land_+es_regierung", "haus_+=er_block", "stadt_+=e_tag"],
+		"footnotes": {}
 	},
 	{
 		"id": "NA",
@@ -82,7 +83,7 @@
 			{
 				"ref": "nübling_szczepaniak_2008",
 				"pages": [3],
-				"summary": "-(e)n- sometimes has a plural meaning (especially after weak F)."
+				"summary": "-(e)n- sometimes has a plural meaning (especially after weak F) [1]."
 			},
 			{
 				"ref": "nübling_szczepaniak_2013",
@@ -92,16 +93,20 @@
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [94],
-				"summary": "F not ending in -e [stress positioning not specified] do not usually attach -(e)n-; if there is a singular interpretation, they attach a zero linker."
+				"summary": "F not ending in -e [1] do not usually attach -(e)n-; if there is a singular interpretation, they attach a zero linker."
 			},
 			{
 				"ref": "schäfer_2018",
 				"pages": [29],
-				"summary": "-(e)n- exhibits a very weak positive effect on plural reading (with non-significant p-value)."
+				"summary": "-(e)n- exhibits a very weak positive effect on plural reading (with non-significant p-value) [2]."
 			}
 		],
 		"evidence_contra": [],
-		"examples_pro": [],
-		"examples_contra": []
+		"examples_pro": ["schrift_en_verzeichnis", "schrift_führer", "geburt_en_kontrolle", "geburt_s_tag"],
+		"examples_contra": ["burg_en_blick"],
+		"footnotes": {
+			"1": "Stress positioning not specified.",
+			"2": "This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. However, all the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall example is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well."
+		}
 	}
 ]
