@@ -1,0 +1,107 @@
+[
+	{
+		"id": "NA",
+		"name": "zero_default",
+		"summary": "The majority of compounds have a zero linker.",
+		"type": ["default"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"condition_check": "zero_default_is_applicable",
+		"application_check": "zero_default_applies",
+		"evidence_pro": [
+			{
+				"ref": "eisenberg_2013",
+				"pages": [226],
+				"summary": "73% of compounds have a zero linker."
+			},
+			{
+				"ref": "fuhrhop_kürschner_2015",
+				"pages": [569],
+				"summary": "70% of compounds have a zero linker."
+			},
+			{
+				"ref": "kopf_2017",
+				"pages": [177],
+				"summary": "About 60% of compounds have a zero linker."
+			},
+			{
+				"ref": "krott_etal_2007",
+				"pages": [3],
+				"summary": "60% of compounds have a zero linker."
+			},
+			{
+				"ref": "kürschner_2005",
+				"pages": [107],
+				"summary": "58% of compounds have a zero linker."
+			},
+			{
+				"ref": "libben_etal_2009",
+				"pages": [150, 156],
+				"summary": "The majority of compounds have a zero linker."
+			},
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [2],
+				"summary": "In most German compounds there is no linking element."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [50, 52, 54, 103],
+				"summary": "Most nominal compounds have a zero linker (in about 2/3 of cases)."
+			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [8, 9],
+				"summary": "65-70% of compounds have a zero linker."
+			},
+			{
+				"ref": "schlücker_2012",
+				"pages": [9],
+				"summary": "Zero linker prevails in nominal compounds."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": [""],
+		"examples_contra": []
+	},
+	{
+		"id": "NA",
+		"name": "one_syl_f",
+		"summary": "Final-stressed (incl. one-syllable) F mostly adopt -(e)n-, a zero linker or an -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -(e)n- is more likely, otherwise mostly a zero linker or -s- is chosen depending on further constraints.",
+		"type": ["morphological", "phonological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"condition_check": "one_syl_f_is_applicable",
+		"application_check": "one_syl_f_applies",
+		"evidence_pro": [
+			{
+				"ref": "eisenberg_2013",
+				"pages": [229],
+				"summary": "One-syllable F sometimes adopt -(e)n-, sometimes 0. It is possible that there is a tendency to choose by singular/plural meaning."
+			},
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [3],
+				"summary": "-(e)n- sometimes has a plural meaning (especially after weak F)."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [80],
+				"summary": "-(e)n- can be added to monosyllabic or polysyllabic final-stressed weak F only when the plural interpretation is allowed, with a very few counterexamples. If the plural reading is inadequate, another linking element, mostly -s- or zero, has to be chosen."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [94],
+				"summary": "F not ending in -e [stress positioning not specified] do not usually attach -(e)n-; if there is a singular interpretation, they attach a zero linker."
+			},
+			{
+				"ref": "schäfer_2018",
+				"pages": [29],
+				"summary": "-(e)n- exhibits a very weak positive effect on plural reading (with non-significant p-value)."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": [],
+		"examples_contra": []
+	}
+]
