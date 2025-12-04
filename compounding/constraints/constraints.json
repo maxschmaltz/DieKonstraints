@@ -78,7 +78,7 @@
 			{
 				"ref": "eisenberg_2013",
 				"pages": [229],
-				"summary": "One-syllable F sometimes adopt -(e)n-, sometimes 0. It is possible that there is a tendency to choose by singular/plural meaning."
+				"summary": "One-syllable F sometimes adopt -(e)n-, sometimes a zero linker. It is possible that there is a tendency to choose by singular/plural meaning."
 			},
 			{
 				"ref": "nübling_szczepaniak_2008",
@@ -102,8 +102,8 @@
 			}
 		],
 		"evidence_contra": [],
-		"examples_pro": ["schrift_en_verzeichnis", "schrift_führer", "geburt_en_kontrolle", "geburt_s_tag"],
-		"examples_contra": ["burg_en_blick"],
+		"examples_pro": ["schrift_+en_verzeichnis", "schrift_führer", "geburt_+en_kontrolle", "geburt_+s_tag"],
+		"examples_contra": ["burg_+en_blick"],
 		"footnotes": {
 			"1": "Stress positioning not specified.",
 			"2": "This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. However, all the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall example is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well."
