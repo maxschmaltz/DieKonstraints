@@ -4,7 +4,6 @@ Module for parsing the DECOW16 compound dataset.
 
 import re
 from dataclasses import dataclass, field
-import pandas as pd
 from typing import Tuple, List, Optional, Union, Literal
 
 
@@ -103,7 +102,7 @@ class Link:
 	component: str = field(compare=True)
 	realization: Optional[str] = field(compare=True, default=None)
 	span: Tuple[int] = field(compare=True, kw_only=True)
-	type: str = field(compare=True, kw_only=True)
+	type: Literal["addition_umlaut", "addition", "zero"] = field(compare=True, kw_only=True)
 	# further features
 
 	def __post_init__(self) -> None:
