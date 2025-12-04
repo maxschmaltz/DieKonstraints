@@ -67,13 +67,13 @@
 	},
 	{
 		"id": "NA",
-		"name": "one_syl_f",
-		"summary": "Final-stressed (incl. one-syllable) F mostly adopt -(e)n-, a zero linker or an -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -(e)n- is more likely, otherwise mostly a zero linker or -s- is chosen depending on further constraints.",
+		"name": "final_stressed_f",
+		"summary": "Final-stressed (incl. monosyllabic) F mostly adopt -(e)n-, a zero linker or an -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -(e)n- is more likely, otherwise mostly a zero linker or -s- is chosen depending on further constraints.",
 		"type": ["morphological", "phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"condition_check": "one_syl_f_is_applicable",
-		"application_check": "one_syl_f_applies",
+		"condition_check": "final_stressed_f_is_applicable",
+		"application_check": "final_stressed_f_applies",
 		"evidence_pro": [
 			{
 				"ref": "eisenberg_2013",
@@ -108,5 +108,81 @@
 			"1": "Stress positioning not specified.",
 			"2": "This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. However, all the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall example is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well."
 		}
+	},
+	{
+		"id": "NA",
+		"name": "schwa_f",
+		"summary": "(Polysyllabic) F ending in schwa always adopt -(e)n- if the schwa is not a suffix. If the schwa is a suffix of a deadjective F, -(e)n- and zero linkers are about equally possible. Deverbal F with the schwa suffix mostly attach a zero linker but can attach an -(e)n- when the first constituent has a plural reading.",
+		"type": ["morphological", "phonological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"condition_check": "schwa_f_is_applicable",
+		"application_check": "schwa_f_applies",
+		"evidence_pro": [
+			{
+				"ref": "eisenberg_2013",
+				"pages": [229],
+				"summary": "F ending in schwa (they are already two-syllabic) regularly adopt -(e)n-."
+			},
+			{
+				"ref": "fuhrhop_kürschner_2015",
+				"pages": [573],
+				"summary": "F ending in schwa adopt -(e)n- if schwa is not a suffix, otherwise a zero linker."
+			},
+			{
+				"ref": "krott_etal_2007",
+				"pages": [3],
+				"summary": "F ending in schwa adopt -(e)n- productively."
+			},
+			{
+				"ref": "kürschner_2005",
+				"pages": [112],
+				"summary": "The claim that F ending in schwa always attach a zero linker is not supported by the empirical data, but it should be marked as a tendency [1]."
+			},
+			{
+				"ref": "libben_etal_2009",
+				"pages": [151, 157],
+				"summary": "F ending in schwa will almost always attach an -(e)n- with a very few exceptions [3]."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [92, 93],
+				"summary": "From weak F, those ending in schwa are those that adopt -(e)n- the most. Otherwise, deadjective F ending in a schwa suffix  have a zero linker or -(e)n- in about the same number of cases. Deverbative F ending in schwa suffix  mostly have a zero linker; they can attach an -(e)n- though when the first constituent has a plural reading. Finally, further F ending in schwa can adopt an -(e)n- if they denote a concrete countable, even if no plural meaning occurs [2]."
+			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [9],
+				"summary": "F ending in schwa virtually always occur with -(e)n-."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["biene_+n_zucht", "suppe_+n_schüssel", "fläche_+e_maß", "hitze_welle", "abgabe_soll", "abgabe_+n_ordnung", "sorge_pflicht"],
+		"examples_contra": ["kohle_filter"],
+		"footnotes": {
+			"1": "The counterexample there is a deadjective F: tiefe_+n_meter, which is in line with the overall constraint.",
+			"2": "The last claim falls into the cases of F ending in a non-suffix schwa and are only a subset thereof.",
+			"3": "The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `tech_term` is stronger than `schwa_f` and thus -- since these are technical terms -- it blocks the application of `schwa_f` in these cases."
+		} 
+	},
+
+
+
+
+
+
+	{
+		"id": "NA",
+		"name": "tech_term",
+		"summary": "",
+		"type": [""],
+		"regularity": "NA",
+		"coverage": "NA",
+		"condition_check": "",
+		"application_check": "",
+		"evidence_pro": [],
+		"evidence_contra": [],
+		"examples_pro": [""],
+		"examples_contra": ["burg_+"],
+		"footnotes": {}
 	}
 ]

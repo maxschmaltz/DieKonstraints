@@ -1,8 +1,4 @@
 # Intermediate
-* F ending in schwa (two syllables or more) always adopt -n- if schwa is not a suffix, otherwise always/tendentially 0 | [1:229], [2:573], [5:3], [6:112], [7:151,157], [14:9]
-    * Deadjective F ending in -e have 0 or -(e)n- in about the same number of cases | [12:93]
-    * Deverbative F ending in -e mostly have 0 | [12:93]
-    * Further F ending in -e can attach -(e)n- if they denote a concrete countable | [12:93]
 * Consonant-final F and M adopt -en- less productively | [5:3]
 * Final-stressed weak F without plural interpretation mostly adopt -s- or 0 | [11:80]
 * Monosyllabic M and N with plural interpretation sometimes attach -en- but not as obligatorily as F | [11:80]

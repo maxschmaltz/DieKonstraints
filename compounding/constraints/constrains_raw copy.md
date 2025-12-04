@@ -4,7 +4,6 @@
 * =e= occurs in some e=Plural F and strong nouns (228)
 * A larger group where -e- occurs is animal designations, but certainly not with all of them (228)
 * All weak M adopt -(e)n- by a rule no matter or their complexity and origin (228)
-* Two-syllable F ending in schwa adopt -n- (229)
 * -er- and =er= occur only in er-Plural and er=Plural nouns. These nouns tend to choose -er- / =er= when a plural meaning is present, otherwise 0 or another link, except for person and animal designations, for which -er- and =er= are not necessarily associated with a plural meaning (229)
 * -es- occurs in a row of s-Genitiv M and N and is isolated (229)
 * -s- occurs regularly after suffixes -keit, -heit, -igkeit, -tum, -schaft, -ung, -sal, -ling (because they form phonologically bad words) (229)
@@ -18,8 +17,6 @@
 * -s- is impossible with nouns ending on a full vowel (572)
 * The acceptability of -s- grows when the first constituent is morphologically / phonologically complex (572)
 * -s- occurs regularly after suffixes -heit, -ung, -ling, -schaft, -tum, -ität (because they form phonologically bad words) (572)
-* -(e)n- is typical for weak M (573)
-* F ending in schwa adopt -n- if schwa is not a suffix, otherwise 0 (573)
 
 
 ## 3	_Koliopoulou 2014_. How close to syntax are compounds? Evidence from the linking element in German and Modern Greek compounds. _Rivista di Linguistica_
@@ -41,7 +38,6 @@
 ## 5	_Krott et al. 2007_. Analogical effects on linking elements in German compounds
 
 * When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning (3)
-* F ending in schwa adopt -n productively (3)
 * Animate M ending in schwa adopt -n productively (3)
 * Consonant-final F and M adopt -en- less productively (3)
 * There is a significant analogical effect from the first constituent (7)
@@ -57,7 +53,6 @@
 * Compound first constituents adopt -s- more frequently as simplexes (108)
 * If 0 appears after a compound constituent, the corresponding simplex most probably also attaches 0, while -s- sometimes replaces the default simplex linker (110)
 * 0 always appear after a full vowel (110)
-* It is incorrect that no linker ever appears after derivate F with -e suffix, it is more of a tendency (112)
 * -s- can signalize the head boundary (112)
 * -(e)n- points to weak nouns, even if not ending in schwa (118, 119)
 * -(e)n- is required by weak M (mostly animate) (119)
@@ -87,11 +82,6 @@
 * In simplexes, -s- occurs only in M and N except for a few cases; in F, -s- occurs only with morphological complexity (23)
 * In simplexes, -s- occurs mostly after plosives, much rarer after nasals and liquids, and never after a full vocal (24)
 * Many simplexes with an -s- are high frequent tokens (25)
-
-
-## 8	_Libben et al. 2009_. Interfixation in German compounds: What factors govern acceptability judgements?. _Rivista di Linguistica_
-
-* A feminine noun ending in schwa will almost always take an -n- (151) with a very few exceptions (157)
 
 
 ## 9	_Neef & Borgwaldt 2012_. Fugenelemente in neugebildeten Nominalkomposita. _Das Deutsche als kompositionsfreudige Sprache_
@@ -177,9 +167,6 @@
 * Derivate N ending in -tum regularly attach -(e)s- (89)
 * Weak M always adopt -(e)n-, if they are not copulative (91)
 * Mixed M mostly attach -s- or 0; they sometimes attach -(e)n- if the first constituent exhibits a plural meaning (92)
-* Deadjective F ending in -e have 0 or -(e)n- in about the same number of cases (93)
-* Deverbative F ending in -e mostly have 0 (93)
-* Further F ending in -e can attach -(e)n- if they denote a concrete countable (93)
 * Derivate F with suffix -in always attach -(e)n-, if they are not copulative (94)
 * If 'Herz' is used in a medical context, it has 0 (98)
 * -er- (and =er=) are always paradigmatic, mostly N and some M, mostly simplexes, no loanwords (98)
@@ -206,8 +193,6 @@
 * Derivates with suffixes -ung, -heit, -tum etc. have a strong tendency to occur with an -s linking element (8)
 * Strong and mixed M and N often take -(e)s- (8)
 * s-Plural nouns never have -s- and occur with 0 (9)
-* F ending in -e virtually always occur with -(e)n- (9)
-* Weak M, as well as (e)n-Plural mixed M and N often adopt -(e)n- (9)
 * -(e)ns- is only used with a few nouns (9)
 * =e= and =er= have significantly strong effect on plural reading (29)
 * -er- and = have moderate effect on plural reading (29)
