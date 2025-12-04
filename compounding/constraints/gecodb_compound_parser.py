@@ -167,7 +167,7 @@ class Compound:
 		self.j += len(component)
 		return stem
 	
-	def _get_link_info(link: str) -> Tuple[str]:
+	def _get_link_info(self, link: str) -> Tuple[str]:
 
 		"""
 		Determines realization and type of the link.
@@ -210,7 +210,7 @@ class Compound:
 		self.j += len(realization)
 		return link
 	
-	def _perform_umlaut(string: str) -> str:
+	def _perform_umlaut(self, string: str) -> str:
 
 		"""
 		Performs rightmost (!) umlaut, like "altstadt" --> "altstädt".
