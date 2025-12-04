@@ -14,8 +14,7 @@ LINK_TYPES = {  # (legacy)
 	# raw compound is split, links are returns as well
 	"addition_umlaut": f"(_\+={DE}_)",  # gast_+=e_buch = Gästebuch, mutter_+=_rente = Mütterrente
 	"addition": f"(_\+{DE}_)",          # bund_+es_land = Bundesland
-	"deletion": f"(_\-{DE}_)",          # schule_-e_jahr = Schuljahr
-	"concatenation": "(_)"              # zeit_punkt = Zeitpunkt
+	"zero": "(_)"              # zeit_punkt = Zeitpunkt
 }
 LINK_PATTERN = '|'.join(LINK_TYPES.values())    # any link
 UMLAUTS = {
@@ -46,13 +45,13 @@ class Stem:
 
 	Example
 	-------
-	>>> compound = Compound("schule_-e_jahr")
+	>>> compound = Compound("gast_+=e_buch")
 	>>> compound.components[0].component
-	"schule"
+	"gast"
 	>>> compound.components[0].realization
-	"schul"
+	"gäst"
 	>>> compound.components[0].span
-	(0, 5)
+	(0, 4)
 	"""
 
 	component: str = field(compare=True)
@@ -90,15 +89,15 @@ class Link:
 
 	Example
 	-------
-	>>> compound = Compound("schule_-e_jahr")
+	>>> compound = Compound("mutter_+=_rente")
 	>>> compound.components[1].component
-	"_-e_"
+	"_+=_"
 	>>> compound.components[1].realization
 	""
 	>>> compound.components[1].span
-	(5, 5)
+	(6, 6)
 	>>> compound.components[1].type
-	"deletion"
+	"addition_umlaut"
 	"""
 
 	component: str = field(compare=True)
@@ -142,13 +141,13 @@ class Compound:
 
 	Example
 	-------
-	>>> compound = Compound("schule_-e_jahr")
+	>>> compound = Compound("gast_+=e_buch")
 	>>> compound.raw
-	"schule_-e_jahr"
+	"gast_+=e_buch"
 	>>> compound.lemma
-	"schuljahr"
+	"gästebuch"
 	>>> compound.components
-	["schule", "", "jahr"]
+	["gast", "_+=e", "buch"]
 	"""
 
 	raw: str = field(compare=True)
@@ -169,54 +168,7 @@ class Compound:
 		self.j += len(component)
 		return stem
 	
-	@staticmethod
-	def eliminate_allomorphy(link: str) -> str:
-
-		"""
-		Eliminate allomorphy of a linking element, e.g. _+es_ to _+s_.
-
-		Parameters
-		----------
-		link : `str`
-			link for elimination
-
-		Returns
-		-------
-		`str`
-			link with eliminated allomorphy (input link if not applicable)
-		"""
-
-		# if link == "_+es_": link = "_+s_" # -es vs -s
-		# elif link == "_+en_": link = "_+n_" # -en vs -n
-		# elif link == "_+ens_": link = "_+ns_" # -ens vs -ns
-		link = re.sub(r"_\+e(?=(n|s|ns))", "_+", link)    # just remove the -e-
-		return link
-	
-	@staticmethod
-	def return_allomorphy(link: str) -> str:
-
-		"""
-		Return allomorphy of a linking element after `eliminate_allomorphy()`, e.g. _+es_ to _+s_.
-
-		Parameters
-		----------
-		link : `str`
-			link for returning
-
-		Returns
-		-------
-		`str`
-			link with returned allomorphy (input link if not applicable)
-		"""
-
-		# if link == "_+s_": link = "_+es_" # -es vs -s
-		# elif link == "_+n_": link = "_+en_" # -en vs -n
-		# elif link == "_+ns_": link = "_+ens_" # -ens vs -ns
-		link = re.sub(r"_\+(?=(n|s|ns))", "_+e", link)    # just return the -e-
-		return link
-	
-	@staticmethod
-	def get_link_info(link: str) -> Tuple[str]:
+	def _get_link_info(link: str) -> Tuple[str]:
 
 		"""
 		Determines realization and type of the link.
@@ -243,49 +195,23 @@ class Compound:
 				# the links when splitting a raw compound (same as the whole match),
 				# and the last span is the realization of the component
 				# that we capture in (DE)
-				realization = match.groupdict().get("r", "")  # in concatenation, there is no group "r"
-				if link_type == "deletion":
-					realization = ""
+				realization = match.groupdict().get("r", "")  # in zero, there is no group "r"
 				# eliminate allophones
 				link = Compound.eliminate_allomorphy(link)
 				return link, realization, link_type
 
 	def _get_link_obj(self, component: str) -> Link:
-		component, realization, link_type = self.get_link_info(component)
+		component, realization, link_type = self._get_link_info(component)
 		link = Link(
-				component=component,
-				realization=realization,
-				span=(self.j, self.j + len(realization)),
-				type=link_type
-			)
+			component=component,
+			realization=realization,
+			span=(self.j, self.j + len(realization)),
+			type=link_type
+		)
 		self.j += len(realization)
 		return link
 	
-	@staticmethod
-	def get_deletion(deletion_link: str) -> str:
-
-		"""
-		In a deletion link like _-e_, determines the deletion substring: "e" in this example.
-
-		Parameters
-		----------
-		deletion_link : `str`
-			link to analyze
-
-		Returns
-		-------
-		`str`
-			deletion substring
-		"""
-
-		to_delete = re.match(
-			LINK_TYPES["deletion"].replace(DE, f"(?P<r>{DE})"),
-			deletion_link
-		).group("r")   # capturing groups as is in `_get_link_obj()`
-		return to_delete
-	
-	@staticmethod
-	def perform_umlaut(string: str) -> str:
+	def _perform_umlaut(string: str) -> str:
 
 		"""
 		Performs rightmost (!) umlaut, like "altstadt" --> "altstädt".
@@ -320,66 +246,17 @@ class Compound:
 				string
 			)
 		return string
-
-	@staticmethod
-	def reverse_umlaut(string: str) -> str:
-
-		"""
-		Reverse rightmost (!) umlaut, like "altstädt" --> "altstadt".
-
-		Parameters
-		----------
-		string : `str`
-			string to reverse umlaut in
-
-		Returns
-		-------
-		`str`
-			string after reversing umlaut (input string if not applicable)
-		"""
-
-		match = re.search("(äu|ä|ö|ü)[^äöü]+$", string)
-		if match:
-			# the whole suffix containing the vowel
-			suffix_after_umlaut = match.group(0)
-			# the vowel itself
-			umlaut = match.group(1)
-			# perform umlaut in the suffix
-			suffix_before_umlaut = re.sub(
-				umlaut,
-				UMLAUTS_REVERSED[umlaut],
-				suffix_after_umlaut
-			)
-			# adjust realization: perform umlaut
-			string = re.sub(
-				f"{suffix_after_umlaut}$",
-				suffix_before_umlaut,
-				string
-			)
-		return string
 	
 	def _fuse_link(self, link: Link) -> None:
 		# build the lemma by fusing currently processed part with incoming links;
-		# that includes, for example, umlaut and deletion processing, concatenation and so on;
+		# that includes, for example, umlaut and deletion processing, zero and so on;
 		# adjust previous stem
 		previous_stem = self.stems[-1]
-		if link.type == "deletion":
-			to_delete = self.get_deletion(link.component)
-			ld = len(to_delete)
-			previous_stem.realization = re.sub(
-				f'{to_delete}$',
-				'',
-				previous_stem.component
-			)
-			# adjust spans accordingly
-			self.j -= ld
-			previous_stem.span = (previous_stem.span[0], previous_stem.span[1] - ld)
-			link.span = (link.span[0] - ld, link.span[1] - ld)
-		elif link.type == "addition_umlaut":
+		if link.type == "addition_umlaut":
 			# search for the closest to the link "umlautable" vowel;
 			# will return 2 matches (if finds anything):
 			# the whole suffix with umlaut, and the vowel itself (in the capturing group)
-			previous_stem.realization = self.perform_umlaut(previous_stem.component)
+			previous_stem.realization = self._perform_umlaut(previous_stem.component)
 
 	def _analyze(self, raw: str) -> None:
 		raw = raw.lower()
@@ -406,47 +283,3 @@ class Compound:
 
 	def __repr__(self) -> str:
 		return f"{self.lemma} <-- {self.raw}"
-
-
-def parse_gecodb(
-	gecodb_path: str,
-	version: Optional[Literal["4", "5", "ds"]]="5"
-) -> pd.DataFrame:
-
-	"""
-	Parse the DECOW16-format compounds dataset.
-
-	Parameters
-	----------
-	gecodb_path : `str`
-		path to the TSV DECOW16-format compounds dataset
-
-	version : `str`, optional, one of `["4", "5", "ds"]`, defaults to `"5"`
-		expects columns with raw DECOW16 entries if `version="4"`,
-		those plus first constituent count if `version="5"`,
-		and those plus compound type if `version="ds"`
-
-	Returns
-	-------
-	`pandas.DataFrame`
-		dataframe with columns respectively to `version` plus compound column:
-		* "raw": `str`: DECOW16-format compound entry (`"4"`, `"5"`, and `"ds"`)
-		* "count": `int`: number of occurrences in DECOW16 (`"4"`, `"5"`, and `"ds"`)
-		* "fc_count": `int`: number of first constituent occurrences in the data (`"5"` and `"ds"`)
-		* "comp_type": `str`: compound type by first constituent frequency (`"ds"`)
-		* "compound": `Compound`: processed compounds (`"4"`, `"5"`, and `"ds"`)
-	"""
-
-	colnames = (
-		["raw", "count"] if version == "4" else
-		["raw", "count", "fc_count"] if version == "5"
-		else ["raw", "count", "fc_count", "comp_type"]
-	)
-	gecodb = pd.read_csv(
-		gecodb_path,
-		sep='\t',
-		names=colnames,
-		encoding="utf-8"
-	)
-	gecodb["compound"] = gecodb["raw"].apply(Compound)
-	return gecodb
