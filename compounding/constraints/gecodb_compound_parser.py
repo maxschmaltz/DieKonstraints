@@ -195,8 +195,6 @@ class Compound:
 				# and the last span is the realization of the component
 				# that we capture in (DE)
 				realization = match.groupdict().get("r", "")  # in zero, there is no group "r"
-				# eliminate allophones
-				link = Compound.eliminate_allomorphy(link)
 				return link, realization, link_type
 
 	def _get_link_obj(self, component: str) -> Link:
