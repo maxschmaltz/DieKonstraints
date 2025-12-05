@@ -1,21 +1,6 @@
 # Intermediate
-* Consonant-final F and M adopt -en- less productively | [5:3]
-* Final-stressed weak F without plural interpretation mostly adopt -s- or 0 | [11:80]
-* Monosyllabic M and N with plural interpretation sometimes attach -en- but not as obligatorily as F | [11:80]
-* The probability of a linking element to appear sinks as the compound type becomes closer to syntax: from determinative compounds that adopt linkers non-systematically, through copulative compounds with additive relations, and to copulative compounds with appositive relations that systematically adopt 0 | [3:63,64], [9:31,32], [12:57,109], [12:91,94]
-* When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning | [5:3]
-* There is a significant analogical effect from the first constituent | [5:7]
-* Gender is more important for -(e)n-, the inflectional class is more important for 0, rime is most relevant for -s- | [5:9]
-* Nouns ending on a full vowel always adopt 0 | [2:572], [6:110], [7:19], [7:24], [10:17]
-* Syllabic linkers form trochee where one main stress would follow another one otherwise; however, there are many exceptions | [7:17], [10:17], [17:446]
-* Syllabic linkers tend to be attached to monosyllabic first parts (or stems with word-final stress), and non-syllabic linkers to polysyllabic first parts: rule for -(e)n-, tendency for -(e)s- | [10:7], [16:19]
-* In technical terminology (economics, law, etc.), a linking element is often missing (even in cases where it would be obligatory in comparable instances) | [10:11], [16:20]
-    * If 'Herz' is used in a medical context, it has 0 [12:98]
-* Mass nouns usually have 0 | [11:81]
-* 0-Plural, especially with suffixes -er, -ler, -ner, -el, -sel, -en, -chen, -lein regularly have 0 | [12:56,82,106]
-    * M ending in -en regularly attach -s- | [12:88]
-    * Compounds with the second constituent Mann, Frau, Leute, Tochter, Gattin, Witwe that denote persons, can insert -s-, even when the first constituent would otherwise attach 0 | [12:56]
 * Simplex M ending in -el regularly attach -s- with some exceptions | [12:88]
+* M ending in -en regularly attach -s- (simplexes and deverbatives) | [12:88]
 * =Plural, e-Plural, e=Plural nouns rarely have linkers | [12:83]
 * s-Plural has 0 as a rule | [1:227], [2:572], [7:9], [11:78], [12:83,106], [13:229], [14:9]
 * Nouns with suffixes -bold, -nis, -rich, -at, -al, F with stressed -ei, -ie, also -ik usually have 0 | [12:83,107]
@@ -96,3 +81,19 @@
 
 # -(e)ns-
 * -(e)ns- only occurs after a few M and a single N | [11:82], [12:80,97], [14:9]
+
+
+
+
+
+
+
+
+* Consonant-final F and M adopt -en- less productively | [5:3]
+* Monosyllabic M and N with plural interpretation sometimes attach -en- but not as obligatorily as F | [11:80]
+* When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning | [5:3]
+* There is a significant analogical effect from the first constituent | [5:7]
+* Gender is more important for -(e)n-, the inflectional class is more important for 0, rime is most relevant for -s- | [5:9]
+* Syllabic linkers form trochee where one main stress would follow another one otherwise; however, there are many exceptions | [7:17], [10:17], [17:446]
+* Syllabic linkers tend to be attached to monosyllabic first parts (or stems with word-final stress), and non-syllabic linkers to polysyllabic first parts: rule for -(e)n-, tendency for -(e)s- | [10:7], [16:19]
+* Mass nouns usually have 0 | [11:81]

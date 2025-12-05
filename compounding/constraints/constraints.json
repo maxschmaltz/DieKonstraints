@@ -6,8 +6,6 @@
 		"type": ["default"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"condition_check": "zero_default_is_applicable",
-		"application_check": "zero_default_applies",
 		"evidence_pro": [
 			{
 				"ref": "eisenberg_2013",
@@ -72,8 +70,6 @@
 		"type": ["morphological", "phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"condition_check": "final_stressed_f_is_applicable",
-		"application_check": "final_stressed_f_applies",
 		"evidence_pro": [
 			{
 				"ref": "eisenberg_2013",
@@ -116,8 +112,6 @@
 		"type": ["morphological", "phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"condition_check": "schwa_f_is_applicable",
-		"application_check": "schwa_f_applies",
 		"evidence_pro": [
 			{
 				"ref": "eisenberg_2013",
@@ -164,25 +158,219 @@
 			"3": "The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `tech_term` is stronger than `schwa_f` and thus -- since these are technical terms -- it blocks the application of `schwa_f` in these cases."
 		} 
 	},
-
-
-
+	{
+		"id": "NA",
+		"name": "copula",
+		"summary": "Copulative compounds regularly attach a zero linker.",
+		"type": ["semantic"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "koliopoulou_2014",
+				"pages": [63, 64],
+				"summary": "The probability of a linking element to appear decreases as the compound type becomes closer to syntax: determinative compounds adopt explicit linkers non-systematically; copulative compounds with additive relations can adopt explicit linkers, but less frequently; copulative compounds with appositive relations systematically adopt a zero linker. [1]"
+			},
+			{
+				"ref": "neef_borgwaldt_2012",
+				"pages": [31, 32],
+				"summary": "Copulative compounds do not attach explicit linkers."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [57, 91, 94, 109],
+				"summary": "Copulative compounds always have a zero linker. In particular, weak M and F ending with suffix -in always adopt -(e)n- unless they are copulative, in which case they have a zero linker. [2]"
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["dichter_componist", "bett_sofa", "königin_mutter"],
+		"examples_contra": [""],
+		"footnotes": {
+			"1": "The author defines two different types of copulative compounds: with additive relations and with appositive relations. However, this notation is not conventional. What the author calls 'copulative compounds with additive relations' are not defined as copulative compounds in most of the literature, while what the author calls 'copulative compounds with appositive relations' are what is defined \"usual\" copulative compounds. Thus, in our terms this finding can be summarized as 'non-copulative compounds adopt explicit linkers non-systematically, while copulative compounds systematically adopt a zero linker'.",
+			"2": "The last claim gives evidence that `copula` is stronger than (at least) some other constraints."
+		}
+	},
+	{
+		"id": "NA",
+		"name": "final_full_v",
+		"summary": "Nouns ending on a full vowel always adopt a zero linker.",
+		"type": ["phonological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "fuhrhop_kürschner_2015",
+				"pages": [572],
+				"summary": "-s- is impossible with nouns ending on a full vowel"
+			},
+			{
+				"ref": "kürschner_2005",
+				"pages": [110],
+				"summary": "After a full vowel, a zero linker always appears."
+			},
+			{
+				"ref": "kürschner_2010",
+				"pages": [19, 24],
+				"summary": "In simplexes, -s- occurs mostly after plosives, much rarer after nasals and liquids, and never after a full vowel."
+			},
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [17],
+				"summary": "-s- never occurs after a full vowel."
+			},
+			{
+				"ref": "wegener_2003",
+				"pages": [434],
+				"summary": "-s- never occurs after a full vowel except for in uhu_+s_nest [1]."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["auto_bahn", "uhu_paar", "gummi_bär"],
+		"examples_contra": ["uhu_+s_nest"],
+		"footnotes": {
+			"1": "The given counterexample uhu_+s_nest could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
+		}
+	},
+	{
+		"id": "NA",
+		"name": "tech_term",
+		"summary": "In technical terminology (economics, law, medicine, etc.), compounds are often missing a linking element (even in cases where it would be obligatory in non-technical context).",
+		"type": ["lexical"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [11],
+				"summary": "In technical terminology (economics, law, etc.), a linking element is often missing (even in cases where it would be obligatory in comparable instances)."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [98],
+				"summary": "If 'Herz' is used in a medical context, it adopts a zero linker. [1]"
+			},
+			{
+				"ref": "schlücker_2023",
+				"pages": [20],
+				"summary": "In compounds that have a doubful -s- and that are used both in common and specialized language, technical terms usually omit the -s- while the common language keeps it."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["erbschaft_steuer", "herz_schlagen", "schaden_ersatz"],
+		"examples_contra": ["schaden_+s_ersatz"],
+		"footnotes": {
+			"1": "This finding is provided as an example of the constraint."
+		}
+	},
+	{
+		"id": "NA",
+		"name": "null_plural",
+		"summary": "Derivatives forming a plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Those with suffix -en also attach a zero linker unless they are a deverbative, in which case they mostly attach -s-.",
+		"type": ["morphological", "derivational"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [56, 82, 106],
+				"summary": "Derivatives forming a plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Those with suffix -en also attach a zero linker unless they are a deverbative, in which case they mostly attach -s-. [1]"
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["reiter_schwert", "gürtel_schnalle", "brötchen_geber"],
+		"examples_contra": ["reiter_+s_mann", "bauer_+s_leute"],
+		"footnotes": {
+			"1": "For more info on deverbatives see `deverba_en`."
+		}
+	},
+	{
+		"id": "NA",
+		"name": "second_const_pers_design",
+		"summary": "Compounds with the second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' can insert -s- or -es-, if the compound designates a person, even when the first constituent would otherwise attach a zero linker.",
+		"type": ["lexical"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [56],
+				"summary": "Compounds with the second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' can insert -s- or -es-, if the compound designates a person, even when the first constituent would otherwise attach a zero linker."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["reiter_+s_mann", "bauer_+s_frau", "lehrer_+es_tochter", "bäcker_+s_leute"],
+		"examples_contra": [""],
+		"footnotes": {}
+	},
+	{
+		"id": "NA",
+		"name": "s_plural",
+		"summary": "Nouns forming a plural with -s regularly attach a zero linker.",
+		"type": ["morphological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "eisenberg_2013",
+				"pages": [227],
+				"summary": ""
+			},
+			{
+				"ref": "",
+				"pages": [],
+				"summary": ""
+			},
+			{
+				"ref": "",
+				"pages": [],
+				"summary": ""
+			},
+			{
+				"ref": "",
+				"pages": [],
+				"summary": ""
+			},
+			{
+				"ref": "",
+				"pages": [],
+				"summary": ""
+			},
+			{
+				"ref": "",
+				"pages": [],
+				"summary": ""
+			},
+			{
+				"ref": "",
+				"pages": [],
+				"summary": ""
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": [""],
+		"examples_contra": [""],
+		"footnotes": {}
+	},
 
 
 
 	{
 		"id": "NA",
-		"name": "tech_term",
+		"name": "deverba_en",
 		"summary": "",
 		"type": [""],
 		"regularity": "NA",
 		"coverage": "NA",
-		"condition_check": "",
-		"application_check": "",
-		"evidence_pro": [],
+		"evidence_pro": [
+			{
+				"ref": "",
+				"pages": [],
+				"summary": ""
+			}
+		],
 		"evidence_contra": [],
 		"examples_pro": [""],
-		"examples_contra": ["burg_+"],
+		"examples_contra": [""],
 		"footnotes": {}
 	}
 ]

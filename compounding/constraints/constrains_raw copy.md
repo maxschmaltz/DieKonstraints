@@ -14,7 +14,6 @@
 ## 2	_Fuhrhop & Kürschner 2015_. Linking elements in Germanic. _Word-Formation. An International Handbook of the Languages of Europe_
 
 * -s- is impossible with s-Plural nouns (572)
-* -s- is impossible with nouns ending on a full vowel (572)
 * The acceptability of -s- grows when the first constituent is morphologically / phonologically complex (572)
 * -s- occurs regularly after suffixes -heit, -ung, -ling, -schaft, -tum, -ität (because they form phonologically bad words) (572)
 
@@ -23,8 +22,6 @@
 
 * -s- occurs after nouns that bears a prefix, a suffix, or is a compound (61)
 * -s- occurs after suffixes -heit, -keit, -igkeit, -ling and -ung (because it reopens the stem) (61)
-* Copulative compounds systematically have 0 (63)
-* The probability of a linking element to appear sinks as the compound type becomes closer to syntax: from determinative compounds that adopt linkers non-systematically, through copulative compounds with additive relations, and to copulative compounds with appositive relations that systematically adopt 0 (64)
 
 
 ## 4	_Kopf 2017_. Fugenelement und Bindestrich in der Compositions-Fuge. _Sichtbare und hörbare Morphologie_
@@ -52,7 +49,6 @@
 * Probability of -s- increases in deverbatives ending in -en (107)
 * Compound first constituents adopt -s- more frequently as simplexes (108)
 * If 0 appears after a compound constituent, the corresponding simplex most probably also attaches 0, while -s- sometimes replaces the default simplex linker (110)
-* 0 always appear after a full vowel (110)
 * -s- can signalize the head boundary (112)
 * -(e)n- points to weak nouns, even if not ending in schwa (118, 119)
 * -(e)n- is required by weak M (mostly animate) (119)
@@ -70,7 +66,6 @@
 * -e-, -er-, and -es- occur only after nouns with the stressed last syllable (18)
 * -n- occurs only after schwa (18)
 * The probability of -s- grows with the morphologic complexity of the noun (19), but it is not regular in German (22)
-* -s- hardly occurs after nouns ending with a full vowel (19)
 * -s- doesn't occur after nouns ending with an -s (19)
 * As a rule, -s- doesn't usually occur after noun ending with a sibilant (19)
 * -s- rarely occurs after noun ending with a consonant cluster that has an [s] in it (19)
@@ -80,13 +75,7 @@
 * -s- occurs (level of regularity not mentioned) at the end of a compound constituent to mark the correct segmentation (22)
 * -s- occurs (level of regularity not mentioned) after a complex syllable boundary (22)
 * In simplexes, -s- occurs only in M and N except for a few cases; in F, -s- occurs only with morphological complexity (23)
-* In simplexes, -s- occurs mostly after plosives, much rarer after nasals and liquids, and never after a full vocal (24)
 * Many simplexes with an -s- are high frequent tokens (25)
-
-
-## 9	_Neef & Borgwaldt 2012_. Fugenelemente in neugebildeten Nominalkomposita. _Das Deutsche als kompositionsfreudige Sprache_
-
-* Copulative compounds have 0 (31, 32)
 
 
 ## 10	_Nübling & Szczepaniak 2008_. On the way from morphology to phonology: German linking elements and the role of the phonological word
@@ -102,11 +91,9 @@
 * -s- occurs regularly after suffixes -ung, -heit, -keit, -igkeit, -sal, -schaft, -ling, -ität, -ion (because they form phonologically bad words) (10, 20)
 * There is an observable tendency to insert -e- after stems designating animals with many counterexamples (11)
 * There is an observable tendency to insert -s- before a stem designating a person (11)
-* In technical terminology (economics, law, etc.), a linking element is often missing (even in cases where it would be obligatory in comparable instances) (11)
 * -es-, -e-, -er-, and -(e)ns- occur only after monosyllabic stems and produce trochees (17)
 * -(e)n- produce or maintain trochee (17)
 * -s- strengthens the right edge of a pword: most effectively after plosives, less after nasals and liquids (17)
-* -s- and never after a full vocal (17)
 * There is very strong tendency to adopt -s- after a derivative with an unstressed prefix (because they form phonologically bad words) (18, 19)
 * Derivatives with stressed prefixes mostly have 0 (because they don't form phonologically bad words) (18)
 * The probability of -s- after a complex compound is comparable to that after derivatives with stressed prefixes, hence, mostly 0 (19)
@@ -142,9 +129,6 @@
 
 
 ## 12	_Ortner & Müller-Bollhagen 1991_. Deutsche Wortbildung, Hauptteil 4, Substantivkomposita
-
-* Compounds with the second constituent Mann, Frau, Leute, Tochter, Gattin, Witwe that denote persons, can insert -(e)s-, even when the first constituent would otherwise attach 0 (56)
-* Copulative compounds always have 0 (57, 109)
 * Almost all F with -s- are polysyllabic (73)
 * -s- always occurs with F ending in -ung, -beit, -keit, -igkeit, -schaft, -ität, -ion, with a few exceptions (73, 94)
 * F ending in -ität- can adopt -en- where the plural interpretation should be preserved (74, 94)
@@ -165,10 +149,8 @@
 * Polysyllable deverbative M attach -(e)s- regularly if they don't end with [s] or [ts] (89)
 * Deverbative N attach -(e)s- regularly (89)
 * Derivate N ending in -tum regularly attach -(e)s- (89)
-* Weak M always adopt -(e)n-, if they are not copulative (91)
 * Mixed M mostly attach -s- or 0; they sometimes attach -(e)n- if the first constituent exhibits a plural meaning (92)
 * Derivate F with suffix -in always attach -(e)n-, if they are not copulative (94)
-* If 'Herz' is used in a medical context, it has 0 (98)
 * -er- (and =er=) are always paradigmatic, mostly N and some M, mostly simplexes, no loanwords (98)
 * Most er-Plural nouns attach both -er- (=er=) or 0 in different cases, often depending on plural interpretation (80% singular meaning cases have 0) (99, 108)
 * -e- is paradigmatic, mostly simplexes, no loanwords (102)
@@ -204,7 +186,6 @@
 * -s- occurs with -schaft, -heit, -ung, -tum, -tät, -ion (level of regularity not mentioned) (because it reopens the stem) (19)
 * Syllabic linkers usually attach to monosyllabic stems or stems with word-final stress (19)
 * Linkers identical to the plural ending can be associated with plural meaning (level of regularity not mentioned) (20)
-* In compounds used both in common and specialized language that have a doubful -s-, technical terms usually omit the -s- while the common language keeps it (20)
 
 
 ## 17	_Wegener 2003_. Entstehung und Funktion der Fugenelemente im Deutschen, oder: warum wir keine Autosbahn haben

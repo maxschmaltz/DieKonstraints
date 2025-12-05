@@ -38,3 +38,63 @@ def schwa_f_is_applicable(compound: Compound):
 
 def schwa_f_applies(compound: Compound):
 	pass
+
+
+# 				copula
+# Copulative compounds regularly attach a zero linker.
+
+def copula_is_applicable(compound: Compound):
+	pass
+
+def copula_applies(compound: Compound):
+	pass
+
+
+# 				final_full_v
+# Nouns ending on a full vowel always adopt a zero linker.
+
+def final_full_v_is_applicable(compound: Compound):
+	pass
+
+def final_full_v_applies(compound: Compound):
+	pass
+
+
+
+# 				tech_term
+# In technical terminology (economics, law, medicine, etc.), compounds 
+# are often missing a linking element (even in cases where 
+# it would be obligatory in non-technical context).
+
+def tech_term_is_applicable(compound: Compound):
+	pass
+
+def tech_term_applies(compound: Compound):
+	pass
+
+
+# 				null_plural
+# Derivatives forming a plural with a zero ending -- 
+# especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- 
+# attach a zero linking element regularly. Those with suffix -en 
+# also attach a zero linker unless they are a deverbative, 
+# in which case they mostly attach -s-.
+
+def null_plural_is_applicable(compound: Compound):
+	pass
+
+def null_plural_applies(compound: Compound):
+	pass
+
+
+# 				second_const_pers_design
+# Compounds with the second constituents 'Mann', 'Frau', 'Leute',
+# 'Tochter', 'Gattin', 'Witwe' can insert -s- or -es-, 
+# if the compound designates a person, even when the first constituent 
+# would otherwise attach a zero linker.
+
+def second_const_pers_design_is_applicable(compound: Compound):
+	pass
+
+def second_const_pers_design_applies(compound: Compound):
+	pass
