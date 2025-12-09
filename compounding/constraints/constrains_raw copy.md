@@ -1,10 +1,9 @@
 ## 1	_Eisenberg 2013_. Grundriss der deutschen Grammatik. Band 1: Das Wort
 
-* -s- is avoided with s-Plural nouns (227)
 * =e= occurs in some e=Plural F and strong nouns (228)
 * A larger group where -e- occurs is animal designations, but certainly not with all of them (228)
 * All weak M adopt -(e)n- by a rule no matter or their complexity and origin (228)
-* -er- and =er= occur only in er-Plural and er=Plural nouns. These nouns tend to choose -er- / =er= when a plural meaning is present, otherwise 0 or another link, except for person and animal designations, for which -er- and =er= are not necessarily associated with a plural meaning (229)
+* -er- and =er= occur only in er-plural and er=Plural nouns. These nouns tend to choose -er- / =er= when a plural meaning is present, otherwise 0 or another link, except for person and animal designations, for which -er- and =er= are not necessarily associated with a plural meaning (229)
 * -es- occurs in a row of s-Genitiv M and N and is isolated (229)
 * -s- occurs regularly after suffixes -keit, -heit, -igkeit, -tum, -schaft, -ung, -sal, -ling (because they form phonologically bad words) (229)
 * -s- occurs by a rule in deverbatives ending in -en (229)
@@ -13,7 +12,6 @@
 
 ## 2	_Fuhrhop & Kürschner 2015_. Linking elements in Germanic. _Word-Formation. An International Handbook of the Languages of Europe_
 
-* -s- is impossible with s-Plural nouns (572)
 * The acceptability of -s- grows when the first constituent is morphologically / phonologically complex (572)
 * -s- occurs regularly after suffixes -heit, -ung, -ling, -schaft, -tum, -ität (because they form phonologically bad words) (572)
 
@@ -58,9 +56,8 @@
 ## 7	_Kürschner 2010_. Fuge-n-kitt, voeg-en-mes, fuge-masse und fog-e-ord. Fugenelemente im Deutschen, Niederländischen, Schwedischen und Dänischen
 
 * -(e)n- is regular for weak M (9)
-* -s- almost never occurs with s-Plural nouns (9)
 * -(e)n-, -e-, and -er- are always paradigmatic (9)
-* -er- is found in few er-Plural M and N (11)
+* -er- is found in few er-plural M and N (11)
 * -es- is found in a few one-syllable M and N (11)
 * Syllabic linkers form trochee where one main stress would follow another one otherwise; however, there are many exceptions (17)
 * -e-, -er-, and -es- occur only after nouns with the stressed last syllable (18)
@@ -110,7 +107,6 @@
 * First constituents with unstressed prefixes adopt -s- in 85 % of the cases (because they form phonologically bad words) (78)
 * First constituents with stressed prefixes adopt -s- in 36 % of the cases (because they don't form phonologically bad words) (78)
 * Compound constituents adopt -s- in 27% of cases (78)
-* -s- does not occur in s-Plural nouns (78)
 * -s- occurs after deverbatives in many cases (78)
 * -s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument (so argumental compounds), with many doubtful cases (79)
 * -s- is productive after polysyllabic words: there is only a fixed group of 30-40 monosyllabic M and N that adopt -s- (79)
@@ -136,27 +132,18 @@
 * All M where a non-paradigmatic -en- occurs are monosyllabic and belong to the following semantic classes: male persons, animals, astronomic objects, months (78)
 * All N with the unparadigmatic -en- linking element are polysyllabic foreign words with final stress that necessarily express plurality (78)
 * -(e)ns- occurs with a few M and a single N (80, 97)
-* 0-Plural, especially with suffixes -er, -ler, -ner, -el, -sel, -en, -chen, -lein regularly have 0 (56, 82, 106)
-* =Plural, e-Plural, e=Plural nouns rarely have linkers (83, 106, 197)
-* s-Plural has 0 as a rule (83, 106)
+* =Plural, e-plural, e=Plural nouns rarely have linkers (83, 106, 197)
 * Derivates ending in -ing, -ling regularly attach -s- (83, 88)
 * Nouns ending in -sal extensively attach -s- (83)
-* Nouns ending in -e mostly attach -(e)n (83, 92)
-* Nouns with suffixes -bold, -nis, -rich, -at, -al, F with stressed -ei, -ie, also -ik usually have 0 (83, 107)
 * -(e)s- sometimes occurs more frequently with compound first constituents compared to the corresponding simplex (85)
-* Simplex M ending in -el regularly attach -(e)s- with some exceptions (88)
-* M ending in -en regularly attach -(e)s- (88)
 * Polysyllable deverbative M attach -(e)s- regularly if they don't end with [s] or [ts] (89)
 * Deverbative N attach -(e)s- regularly (89)
 * Derivate N ending in -tum regularly attach -(e)s- (89)
-* Mixed M mostly attach -s- or 0; they sometimes attach -(e)n- if the first constituent exhibits a plural meaning (92)
 * Derivate F with suffix -in always attach -(e)n-, if they are not copulative (94)
 * -er- (and =er=) are always paradigmatic, mostly N and some M, mostly simplexes, no loanwords (98)
-* Most er-Plural nouns attach both -er- (=er=) or 0 in different cases, often depending on plural interpretation (80% singular meaning cases have 0) (99, 108)
+* Most er-plural nouns attach both -er- (=er=) or 0 in different cases, often depending on plural interpretation (80% singular meaning cases have 0) (99, 108)
 * -e- is paradigmatic, mostly simplexes, no loanwords (102)
 * -e- mostly signalizes plural meaning (103)
-* Derivative M ending in -el regularly have 0 (106)
-* About 90% of (e)s-Genitive 0-Plural have 0 (106, 107)
 * e=Plural nouns mostly have 0 (107)
 * Nouns ending in dental fricatives and affricates ([s], [ts], [ʃ]), and [st] mostly have 0 (109)
 
@@ -164,7 +151,6 @@
 ## 13	_Schäfer 2018_. Einführung in die grammatische Beschreibung des Deutschen
 
 * Strong and mixed M and N often take -(e)s- (229)
-* s-Plural nouns never have -s- (229)
 * Nouns with suffixes -heit, -ung, -tum etc. a strong tendency to adopt -s- (229)
 * When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter usually adopts its plural ending (230)
 * Linkers identical to the plural ending are tendentially associated with plural meaning (231)
@@ -173,8 +159,7 @@
 ## 14	_Schäfer & Pankratz 2018_. The plural interpretability of German linking elements
 
 * Derivates with suffixes -ung, -heit, -tum etc. have a strong tendency to occur with an -s linking element (8)
-* Strong and mixed M and N often take -(e)s- (8)
-* s-Plural nouns never have -s- and occur with 0 (9)
+* Simplex M and N often take -(e)s- (8)
 * -(e)ns- is only used with a few nouns (9)
 * =e= and =er= have significantly strong effect on plural reading (29)
 * -er- and = have moderate effect on plural reading (29)

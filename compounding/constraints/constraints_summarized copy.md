@@ -1,14 +1,5 @@
 # Intermediate
-* Simplex M ending in -el regularly attach -s- with some exceptions | [12:88]
-* M ending in -en regularly attach -s- (simplexes and deverbatives) | [12:88]
-* =Plural, e-Plural, e=Plural nouns rarely have linkers | [12:83]
-* s-Plural has 0 as a rule | [1:227], [2:572], [7:9], [11:78], [12:83,106], [13:229], [14:9]
-* Nouns with suffixes -bold, -nis, -rich, -at, -al, F with stressed -ei, -ie, also -ik usually have 0 | [12:83,107]
-* Mixed M mostly attach -s- or 0; they sometimes attach -(e)n- if the first constituent exhibits a plural meaning | [12:92]
-    * Strong and mixed M and N often take -(e)s- | [13:229], [14:8]
-* Derivative M ending in -el regularly have 0 | [12:106]
-* About 90% of (e)s-Genitive 0-Plural have 0 | [12:106,107]
-* e=Plural nouns mostly have 0 | [12:107]
+* =Plural, e-Plural, e=Plural nouns rarely have linkers | [12:83,106,107]
 * When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter usually adopts its plural ending | [13:230]
 * Linkers identical to the plural ending are tendentially associated with plural meaning | [13:231], [16:20]
 

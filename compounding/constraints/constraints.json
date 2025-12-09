@@ -107,8 +107,8 @@
 	},
 	{
 		"id": "NA",
-		"name": "schwa_f",
-		"summary": "(Polysyllabic) F ending in schwa always adopt -(e)n- if the schwa is not a suffix. If the schwa is a suffix of a deadjective F, -(e)n- and zero linkers are about equally possible. Deverbal F with the schwa suffix mostly attach a zero linker but can attach an -(e)n- when the first constituent has a plural reading.",
+		"name": "schwa",
+		"summary": "Nouns ending in schwa regularly adopt -(e)n- if the schwa is not a suffix. If the schwa is a suffix of a deadjective F, -(e)n- and zero linkers are about equally possible. Deverbal F with the schwa suffix mostly attach a zero linker but can attach an -(e)n- when the first constituent has a plural reading.",
 		"type": ["morphological", "phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -136,12 +136,12 @@
 			{
 				"ref": "libben_etal_2009",
 				"pages": [151, 157],
-				"summary": "F ending in schwa will almost always attach an -(e)n- with a very few exceptions [3]."
+				"summary": "F ending in schwa will almost always attach an -(e)n- with a very few exceptions [2]."
 			},
 			{
 				"ref": "ortner_müller-bollhagen_1991",
-				"pages": [92, 93],
-				"summary": "From weak F, those ending in schwa are those that adopt -(e)n- the most. Otherwise, deadjective F ending in a schwa suffix  have a zero linker or -(e)n- in about the same number of cases. Deverbative F ending in schwa suffix  mostly have a zero linker; they can attach an -(e)n- though when the first constituent has a plural reading. Finally, further F ending in schwa can adopt an -(e)n- if they denote a concrete countable, even if no plural meaning occurs [2]."
+				"pages": [83, 92, 93],
+				"summary": "Nouns (especially weak F) ending in schwa mostly adopt -(e)n-. However, deadjective F ending in a schwa suffix have a zero linker or -(e)n- in about the same number of cases. Deverbative F ending in schwa suffix  mostly have a zero linker; they can attach an -(e)n- though when the first constituent has a plural reading. [3, 4]"
 			},
 			{
 				"ref": "schäfer_pankratz_2018",
@@ -150,12 +150,13 @@
 			}
 		],
 		"evidence_contra": [],
-		"examples_pro": ["biene_+n_zucht", "suppe_+n_schüssel", "fläche_+e_maß", "hitze_welle", "abgabe_soll", "abgabe_+n_ordnung", "sorge_pflicht"],
-		"examples_contra": ["kohle_filter"],
+		"examples_pro": ["biene_+n_zucht", "suppe_+n_schüssel", "fläche_+e_maß", "hitze_welle", "abgabe_soll", "abgabe_+n_ordnung", "sorge_pflicht", "auge_+n_lied", "interesse_+n_bereich"],
+		"examples_contra": ["kohle_filter", "gebäude_komplex"],
 		"footnotes": {
 			"1": "The counterexample there is a deadjective F: tiefe_+n_meter, which is in line with the overall constraint.",
-			"2": "The last claim falls into the cases of F ending in a non-suffix schwa and are only a subset thereof.",
-			"3": "The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `tech_term` is stronger than `schwa_f` and thus -- since these are technical terms -- it blocks the application of `schwa_f` in these cases."
+			"2": "The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `tech_term` is stronger than `schwa_f` and thus -- since these are technical terms -- it blocks the application of `schwa_f` in these cases.",
+			"3": "A further claim was made in the paper: 'Finally, further F ending in schwa can adopt an -(e)n- if they denote a concrete countable, even if no plural meaning occurs'. However, these cases simply fall into the cases of F ending in a non-suffix schwa and are only a subset thereof.",
+			"4": "Mixed and irregular M and N ending in schwa also fall here: 'Auge', 'Interesse' can be handled assuming `schwa` > `mixed_mn`. However, many of further examples are eventually overtaken by other constraints: 'Name', 'Glaube'. etc. will be governed by `ens` (assuming `ens` > `schwa`); 'Ende' mostly removes the schwa and is thus not considered in this iteration; 'Gebäude' will be governed by `null_plural` (assuming `null_plural` > `schwa`)."
 		} 
 	},
 	{
@@ -193,7 +194,7 @@
 	{
 		"id": "NA",
 		"name": "final_full_v",
-		"summary": "Nouns ending on a full vowel always adopt a zero linker.",
+		"summary": "Nouns ending in a full vowel always adopt a zero linker.",
 		"type": ["phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -201,7 +202,7 @@
 			{
 				"ref": "fuhrhop_kürschner_2015",
 				"pages": [572],
-				"summary": "-s- is impossible with nouns ending on a full vowel"
+				"summary": "-s- is impossible with nouns ending in a full vowel"
 			},
 			{
 				"ref": "kürschner_2005",
@@ -217,6 +218,11 @@
 				"ref": "nübling_szczepaniak_2008",
 				"pages": [17],
 				"summary": "-s- never occurs after a full vowel."
+			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [9],
+				"summary": "Nouns ending in a full vowel never have -s- and occur with a zero linker."
 			},
 			{
 				"ref": "wegener_2003",
@@ -265,20 +271,20 @@
 	{
 		"id": "NA",
 		"name": "null_plural",
-		"summary": "Derivatives forming a plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Those with suffix -en also attach a zero linker unless they are a deverbative, in which case they mostly attach -s-.",
+		"summary": "Derivatives forming a plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker with a few exceptions unless they are a deverbative, in which case they mostly attach -s-. Simplex M and N, as well as any F forming a plural with a zero ending attach a zero linker in majority of cases.",
 		"type": ["morphological", "derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence_pro": [
 			{
 				"ref": "ortner_müller-bollhagen_1991",
-				"pages": [56, 82, 106],
-				"summary": "Derivatives forming a plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Those with suffix -en also attach a zero linker unless they are a deverbative, in which case they mostly attach -s-. [1]"
+				"pages": [56, 82, 88, 106],
+				"summary": "Derivatives forming a plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker unless they are a deverbative, in which case they mostly attach -s- [1]. Simplex M and N forming a plural with a zero ending attach a zero linker in 90% of cases. F forming a plural with a zero ending attach a zero linker in 85% of cases."
 			}
 		],
 		"evidence_contra": [],
-		"examples_pro": ["reiter_schwert", "gürtel_schnalle", "brötchen_geber"],
-		"examples_contra": ["reiter_+s_mann", "bauer_+s_leute"],
+		"examples_pro": ["reiter_schwert", "gürtel_schnalle", "brötchen_geber", "gebäude_komplex"],
+		"examples_contra": ["reiter_+s_mann", "bauer_+s_leute", "orden_+s_bruder"],
 		"footnotes": {
 			"1": "For more info on deverbatives see `deverba_en`."
 		}
@@ -313,33 +319,108 @@
 			{
 				"ref": "eisenberg_2013",
 				"pages": [227],
-				"summary": ""
+				"summary": "-s- is avoided with s-plural nouns."
 			},
 			{
-				"ref": "",
-				"pages": [],
-				"summary": ""
+				"ref": "fuhrhop_kürschner_2015",
+				"pages": [572],
+				"summary": "-s- is impossible with s-plural nouns."
 			},
 			{
-				"ref": "",
-				"pages": [],
-				"summary": ""
+				"ref": "kürschner_2010",
+				"pages": [9],
+				"summary": "-s- almost never occurs with s-plural nouns."
 			},
 			{
-				"ref": "",
-				"pages": [],
-				"summary": ""
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [78],
+				"summary": "-s- does not occur in s-plural nouns."
 			},
 			{
-				"ref": "",
-				"pages": [],
-				"summary": ""
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [83, 106],
+				"summary": "s-plural has a zero linker as a rule."
 			},
 			{
-				"ref": "",
-				"pages": [],
-				"summary": ""
+				"ref": "schäfer_2018",
+				"pages": [229],
+				"summary": "s-plural nouns never attach -s-."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["balkon_möbel", "hotel_kette", "bob_bahn"],
+		"examples_contra": [""],
+		"footnotes": {}
+	},
+	{
+		"id": "NA",
+		"name": "suffixes_cond_zero",
+		"summary": "Nouns with suffixes -bold, -nis, -rich, -at, -al, -ik, also stressed -ei, -ie, -ur usually attach a zero linker.",
+		"type": ["derivational"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [83, 107],
+				"summary": "Nouns with suffixes -bold, -nis, -rich, -at, -al, -ik, also stressed -ei, -ie, -ur usually attach a zero linker."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["erlaubnis_schein", "plakat_kunst", "kultur_wissenschaft", "kosmetik_industrie"],
+		"examples_contra": [""],
+		"footnotes": {}
+	},
+	{
+		"id": "NA",
+		"name": "mixed_mn",
+		"summary": "Mixed M and N mostly attach an -s- or a zero linker. Mixed M can also attach an -(e)n- if the second constitiuent forces its plural meaning.",
+		"type": ["morphological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [92],
+				"summary": "Mixed M mostly attach a zero linker or an -s-. Mixed M can also attach an -(e)n- if the second constitiuent forces its plural meaning; however, there are counterexamples where -(e)n- is attached even when no plural reading is possible."
 			},
+			{
+				"ref": "schäfer_2018",
+				"pages": [229],
+				"summary": "Strong and mixed M and N often (but surely not always) adopt -s- [2]."
+			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [8],
+				"summary": "Simplex M and N [3] often adopt -s- [2]."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["staat_+s_amt", "autor_korrektur", "bett_anzug", "ohr_wurm", "staat_+en_bund"],
+		"examples_contra": ["motor_+en_geräusch", "professor_+en_titel", "ohr_+en_schmalz", "auge_+n_lied", "interesse_+n_bereich"],
+		"footnotes": {
+			"1": "Mixed M and N ending in schwa are overtaken by other constraints (see `schwa`, `ens` > `mixed_mn`).",
+			"2": "The original text says -(e)s- but since 1) we divide these two in our research and 2) -es- is handled separately by `es`, we modify it to -s- here.",
+			"3": "Even though mixed M or N are not explicitly mentioned, they are all simplixes so we keep it as an indirect evidence for this constraint."
+		}
+	},
+
+
+
+
+
+
+
+
+
+	{
+		"id": "NA",
+		"name": "deverba_en",
+		"summary": "",
+		"type": [""],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
 			{
 				"ref": "",
 				"pages": [],
@@ -351,12 +432,28 @@
 		"examples_contra": [""],
 		"footnotes": {}
 	},
-
-
-
 	{
 		"id": "NA",
-		"name": "deverba_en",
+		"name": "ens",
+		"summary": "",
+		"type": [""],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "",
+				"pages": [],
+				"summary": ""
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": [""],
+		"examples_contra": [""],
+		"footnotes": {}
+	},
+	{
+		"id": "NA",
+		"name": "es",
 		"summary": "",
 		"type": [""],
 		"regularity": "NA",
