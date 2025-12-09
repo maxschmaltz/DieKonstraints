@@ -541,7 +541,7 @@
 	{
 		"id": "NA",
 		"name": "sibilant_cond_zero",
-		"summary": "Nouns ending in a sibilant or a consonant cluster including a [s] mostly adopt a zero linker.",
+		"summary": "Nouns ending in a sibilant or a consonant cluster including [s] mostly adopt a zero linker.",
 		"type": ["phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -549,12 +549,12 @@
 			{
 				"ref": "kürschner_2010",
 				"pages": [19],
-				"summary": "As a rule, -s- does not occur after noun ending with a sibilant and very rarely occurs after noun ending with a consonant cluster that has a [s] in it."
+				"summary": "As a rule, -s- does not occur after noun ending with a sibilant and very rarely occurs after noun ending with a consonant cluster that has [s] in it."
 			},
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [89, 109],
-				"summary": "Most nouns ending with a [s], a [ʃ], a [ts], or a [st] adopt a zero linker. In particular, polysyllabic deverbative M do not attach -s- as they regularly do if they end with a sibilant or a [ts] [1]."
+				"summary": "Most nouns ending with [s], [ʃ], [ts], or [st] adopt a zero linker. In particular, polysyllabic deverbative M do not attach -s- as they regularly do if they end with a sibilant or [ts] [1]."
 			}
 		],
 		"evidence_contra": [],
@@ -563,6 +563,30 @@
 		"footnotes": {
 			"1": "Evidence for `sibilant_s` > `deverba_m`."
 		}
+	},
+	{
+		"id": "NA",
+		"name": "f_final_t",
+		"summary": "F ending with a [t] often attach an -s- if the [t] is part of the stem (not of a suffix).",
+		"type": [""],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [77],
+				"summary": "F ending with [t] often attach an -s- if the [t] is part of the stem (not of a suffix)."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [74, 75],
+				"summary": "-s- occurs regularly after polysyllabic F ending with [t]."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["arbeit_+s_tag", "heirat_+s_antrag", "zukunft_+s_angst"],
+		"examples_contra": ["arbeit_geber", "schuld_gefühl", "sicht_schutz"],
+		"footnotes": {}
 	},
 
 

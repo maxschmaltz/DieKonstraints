@@ -95,7 +95,6 @@
 ## 11	_Nübling & Szczepaniak 2013_. Linking elements in German Origin, Change, Functionalization. _Morphology_
 
 * -s- regularly appears after suffixes -heit, -keit, -igkeit -schaft, -ung, -ion, and -ität (because they form a phonologically bad words) (77)
-* Apart from the suffixes, -s- often occurs in F ending with in [t] (77)
 * The greater the distance of the word to the phonological ideal (trochee with schwa in the second syllable), the more probable the occurrence of -s- (78)
 * First constituents with unstressed prefixes adopt -s- in 85 % of the cases (because they form phonologically bad words) (78)
 * First constituents with stressed prefixes adopt -s- in 36 % of the cases (because they don't form phonologically bad words) (78)
@@ -119,7 +118,6 @@
 * Almost all F with -s- are polysyllabic (73)
 * -s- always occurs with F ending in -ung, -beit, -keit, -igkeit, -schaft, -ität, -ion, with a few exceptions (73, 94)
 * F ending in -ität- can adopt -en- where the plural interpretation should be preserved (74, 94)
-* -s- occurs regularly after polysyllabic F ending with [t] (74,75)
 * All M where a non-paradigmatic -en- occurs are monosyllabic and belong to the following semantic classes: male persons, animals, astronomic objects, months (78)
 * All N with the unparadigmatic -en- linking element are polysyllabic foreign words with final stress that necessarily express plurality (78)
 * -(e)ns- occurs with a few M and a single N (80, 97)

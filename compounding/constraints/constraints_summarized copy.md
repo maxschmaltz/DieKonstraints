@@ -3,7 +3,6 @@
 
 
 # -s-
-* -s- often occurs in F ending with in [t] | [11:77], [12:74,75]
 * The acceptability of -s- irregularly grows when the first constituent is morphologically (any form of derivation of composition) / phonologically (3 or more syllables, several feet, non-trochaic, full vowel in an unstressed syllable, words with unstressed prefixes, words with stressed or semi-stressed suffixes starting with a vowel, words with semi-stressed suffixes that form a pword) complex* (NB! -s- has nothing to do with phonology | [4:201]) | [2:572], [6:106,111,112], [7:19,22], [10:10], [11:78]
     * Almost all F with -s- are polysyllabic | [12:73]
     * -s- occurs more probably after nouns that bear a prefix or a suffix | [3:61], [6:107], [7:21]
