@@ -1,7 +1,5 @@
 ## 1	_Eisenberg 2013_. Grundriss der deutschen Grammatik. Band 1: Das Wort
 
-* =e= occurs in some e=Plural F and strong nouns (228)
-* A larger group where -e- occurs is animal designations, but certainly not with all of them (228)
 * All weak M adopt -(e)n- by a rule no matter or their complexity and origin (228)
 * -er- and =er= occur only in er-plural and er=Plural nouns. These nouns tend to choose -er- / =er= when a plural meaning is present, otherwise 0 or another link, except for person and animal designations, for which -er- and =er= are not necessarily associated with a plural meaning (229)
 * -es- occurs in a row of s-Genitiv M and N and is isolated (229)
@@ -56,22 +54,21 @@
 ## 7	_Kürschner 2010_. Fuge-n-kitt, voeg-en-mes, fuge-masse und fog-e-ord. Fugenelemente im Deutschen, Niederländischen, Schwedischen und Dänischen
 
 * -(e)n- is regular for weak M (9)
-* -(e)n-, -e-, and -er- are always paradigmatic (9)
+* -(e)n- and -er- are always paradigmatic (9)
 * -er- is found in few er-plural M and N (11)
 * -es- is found in a few one-syllable M and N (11)
 * Syllabic linkers form trochee where one main stress would follow another one otherwise; however, there are many exceptions (17)
-* -e-, -er-, and -es- occur only after nouns with the stressed last syllable (18)
+* -er-, and -es- occur only after nouns with the stressed last syllable (18)
 * -n- occurs only after schwa (18)
 * The probability of -s- grows with the morphologic complexity of the noun (19), but it is not regular in German (22)
 * -s- doesn't occur after nouns ending with an -s (19)
-* As a rule, -s- doesn't usually occur after noun ending with a sibilant (19)
-* -s- rarely occurs after noun ending with a consonant cluster that has an [s] in it (19)
 * -s- regularly occurs after suffixes -heit, -schaft, -ling, -tum, -ung (20)
 * -s- occurs (level of regularity not mentioned) after suffixes -ität, -ion (21)
 * Many simplexes that don't attach -s-, do so after prefixation (21)
 * -s- occurs (level of regularity not mentioned) at the end of a compound constituent to mark the correct segmentation (22)
 * -s- occurs (level of regularity not mentioned) after a complex syllable boundary (22)
 * In simplexes, -s- occurs only in M and N except for a few cases; in F, -s- occurs only with morphological complexity (23)
+* -s- marks phonologically bad words (24)
 * Many simplexes with an -s- are high frequent tokens (25)
 
 
@@ -81,16 +78,13 @@
 * -e(n)- is found only with weak nouns (3)
 * -er- is always paradigmatic (3)
 * Syllabic linkers tend to be attached to monosyllabic first parts, and non-syllabic linkers to polysyllabic first parts: rule for -(e)n-, tendency for -(e)s- (7)
-* The higher the sonority, the lower the probability of -s-, and vice versa (7)
 * Sometimes, linkers help the listener correctly analyze complex compounds by marking the border between head and non-head (8)
 * The more complex the first part of a compound, the more probable the occurrence of a linking element (because they are usually phonologically bad words) (9)
 * The occurrence of the linking -s- correlates with the phonological quality of the first constituent (10)
 * -s- occurs regularly after suffixes -ung, -heit, -keit, -igkeit, -sal, -schaft, -ling, -ität, -ion (because they form phonologically bad words) (10, 20)
-* There is an observable tendency to insert -e- after stems designating animals with many counterexamples (11)
 * There is an observable tendency to insert -s- before a stem designating a person (11)
 * -es-, -e-, -er-, and -(e)ns- occur only after monosyllabic stems and produce trochees (17)
 * -(e)n- produce or maintain trochee (17)
-* -s- strengthens the right edge of a pword: most effectively after plosives, less after nasals and liquids (17)
 * There is very strong tendency to adopt -s- after a derivative with an unstressed prefix (because they form phonologically bad words) (18, 19)
 * Derivatives with stressed prefixes mostly have 0 (because they don't form phonologically bad words) (18)
 * The probability of -s- after a complex compound is comparable to that after derivatives with stressed prefixes, hence, mostly 0 (19)
@@ -100,7 +94,6 @@
 
 ## 11	_Nübling & Szczepaniak 2013_. Linking elements in German Origin, Change, Functionalization. _Morphology_
 
-* -e- is always paradigmatic (70, 81)
 * -s- regularly appears after suffixes -heit, -keit, -igkeit -schaft, -ung, -ion, and -ität (because they form a phonologically bad words) (77)
 * Apart from the suffixes, -s- often occurs in F ending with in [t] (77)
 * The greater the distance of the word to the phonological ideal (trochee with schwa in the second syllable), the more probable the occurrence of -s- (78)
@@ -118,8 +111,6 @@
 * -er- is often associated with plural meaning, with many counterexamples (80)
 * First members with -er- often indicate concrete, countable entities (81)
 * Mass nouns usually have 0 (81)
-* -e- occurs most frequently and even partly productively after monosyllabic nouns denoting animals (81)
-* In compounds with =e=, plural interpretation occurs in most cases (81)
 * There is only a fixed number of about 30 M and N that adopt -es- (81)
 * -(e)ns- only occurs after very few nouns (82)
 
@@ -132,7 +123,6 @@
 * All M where a non-paradigmatic -en- occurs are monosyllabic and belong to the following semantic classes: male persons, animals, astronomic objects, months (78)
 * All N with the unparadigmatic -en- linking element are polysyllabic foreign words with final stress that necessarily express plurality (78)
 * -(e)ns- occurs with a few M and a single N (80, 97)
-* =Plural, e-plural, e=Plural nouns rarely have linkers (83, 106, 197)
 * Derivates ending in -ing, -ling regularly attach -s- (83, 88)
 * Nouns ending in -sal extensively attach -s- (83)
 * -(e)s- sometimes occurs more frequently with compound first constituents compared to the corresponding simplex (85)
@@ -142,10 +132,6 @@
 * Derivate F with suffix -in always attach -(e)n-, if they are not copulative (94)
 * -er- (and =er=) are always paradigmatic, mostly N and some M, mostly simplexes, no loanwords (98)
 * Most er-plural nouns attach both -er- (=er=) or 0 in different cases, often depending on plural interpretation (80% singular meaning cases have 0) (99, 108)
-* -e- is paradigmatic, mostly simplexes, no loanwords (102)
-* -e- mostly signalizes plural meaning (103)
-* e=Plural nouns mostly have 0 (107)
-* Nouns ending in dental fricatives and affricates ([s], [ts], [ʃ]), and [st] mostly have 0 (109)
 
 
 ## 13	_Schäfer 2018_. Einführung in die grammatische Beschreibung des Deutschen
@@ -161,9 +147,8 @@
 * Derivates with suffixes -ung, -heit, -tum etc. have a strong tendency to occur with an -s linking element (8)
 * Simplex M and N often take -(e)s- (8)
 * -(e)ns- is only used with a few nouns (9)
-* =e= and =er= have significantly strong effect on plural reading (29)
-* -er- and = have moderate effect on plural reading (29)
-* -e-, -(e)n- have insignificant effect on plural reading (29)
+* =er= have significantly strong effect on plural reading (29)
+* -er- has moderate effect on plural reading (29)
 
 
 ## 16	_Schlücker 2022_. Compounding and Linking Elements in Germanic

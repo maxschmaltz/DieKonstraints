@@ -102,7 +102,7 @@
 		"examples_contra": ["burg_+en_blick"],
 		"footnotes": {
 			"1": "Stress positioning not specified.",
-			"2": "This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. However, all the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall example is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well."
+			"2": "This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. All the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well."
 		}
 	},
 	{
@@ -200,34 +200,14 @@
 		"coverage": "NA",
 		"evidence_pro": [
 			{
-				"ref": "fuhrhop_kürschner_2015",
-				"pages": [572],
-				"summary": "-s- is impossible with nouns ending in a full vowel"
-			},
-			{
 				"ref": "kürschner_2005",
 				"pages": [110],
 				"summary": "After a full vowel, a zero linker always appears."
 			},
 			{
-				"ref": "kürschner_2010",
-				"pages": [19, 24],
-				"summary": "In simplexes, -s- occurs mostly after plosives, much rarer after nasals and liquids, and never after a full vowel."
-			},
-			{
-				"ref": "nübling_szczepaniak_2008",
-				"pages": [17],
-				"summary": "-s- never occurs after a full vowel."
-			},
-			{
 				"ref": "schäfer_pankratz_2018",
 				"pages": [9],
-				"summary": "Nouns ending in a full vowel never have -s- and occur with a zero linker."
-			},
-			{
-				"ref": "wegener_2003",
-				"pages": [434],
-				"summary": "-s- never occurs after a full vowel except for in uhu_+s_nest [1]."
+				"summary": "Nouns ending in a full vowel occur with a zero linker."
 			}
 		],
 		"evidence_contra": [],
@@ -404,6 +384,186 @@
 			"3": "Even though mixed M or N are not explicitly mentioned, they are all simplixes so we keep it as an indirect evidence for this constraint."
 		}
 	},
+	{
+		"id": "NA",
+		"name": "zero_umlaut_plural",
+		"summary": "Nouns forming a plural with a zero ending and an umlaut mostly have a zero linker. Otherwise, they may adopt the umlaut (as in the plural form) if the first constituent has a collective or plural meaning.",
+		"type": ["morphological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [83, 106],
+				"summary": "=plural nouns rarely have an explicit linking element. =plural M always have a zero linker."
+			},
+			{
+				"ref": "schäfer_2018",
+				"pages": [29],
+				"summary": "Linker = exhibits moderate effect on plural reading."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["vater_land", "apfel_baum", "kloster_kirche", "mutter_sprache", "bruder_+=_gemeinde", "mutter_+=_zentrum"],
+		"examples_contra": [""],
+		"footnotes": {}
+	},
+	{
+		"id": "NA",
+		"name": "e_umlaut_plural",
+		"summary": "Nouns forming a plural with an -e ending and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach -e- with an umlaut, and this is the only class of words that can attach this linker.",
+		"type": ["morphological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "eisenberg_2013",
+				"pages": [228],
+				"summary": "=e= occurs in some [1] e=plural nouns."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [83, 107],
+				"summary": "e=plural nouns regularly have a zero linker with a few exceptions."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [81],
+				"summary": "In compounds with =e=, plural interpretation occurs in most cases."
+			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [29],
+				"summary": "=e= exhibits moderate effect on plural reading."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["hand_fläche", "frucht_joghurt", "arzt_praxis", "hand_+=e_druck", "arzt_+=e_streik"],
+		"examples_contra": ["baum_gruppe", "zug_verkehr"],
+		"footnotes": {
+			"1": "Level of regularity not mentioned."
+		}
+	},
+	{
+		"id": "NA",
+		"name": "e_plural",
+		"summary": "Nouns forming a plural with an -e ending mostly have a zero linker. In case of plural or collective meaning, as well as if it is a monosyllabic noun designating an animal, it may also non-regularly attach -e-, and this is the only class of words that can attach this linker.",
+		"type": ["morphological", "semantic"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "eisenberg_2013",
+				"pages": [228],
+				"summary": "A larger group where -e- occurs is animal designations, but certainly not with all of them."
+			},
+			{
+				"ref": "kürschner_2010",
+				"pages": [9, 18],
+				"summary": "-e- is always paradigmatic and occurs only after nouns with stressed last syllable [1]."
+			},
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [11],
+				"summary": "There is an observable tendency to insert -e- after nouns designating animals with many counterexamples."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [70, 80, 81],
+				"summary": "-e- is always paradigmatic. It occurs most frequently and even partly productively after monosyllabic nouns denoting animals."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [83, 102, 103, 107],
+				"summary": "e-plural nouns rarely have explicit linkers. -e- is always paradigmatic, occurs mostly after symplexes and never after loanwords, and it mostly signalized a plural or collective meaning."
+			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [29],
+				"summary": "-e- exhibits insignificant effect on plural reading [2]."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["tisch_decke", "projekt_gruppe", "projekt_+e_macherei", "hund_+e_leine", "swein_+e_stall"],
+		"examples_contra": ["tag_+e_gericht", "pilz_sammler", "hund_+s_stern", "schwein_kram"],
+		"footnotes": {
+			"1": "The last claim explains why nouns like 'Teppich' do not attach -e- (teppich_boden).",
+			"2": "This finding concerning plural interpretability of -e- is not very reliable. Most of the entries in the dataset were nouns designating animals -- that, as pointed out in the literature, tendentially attach -e- with no respect to the plural meaning. Furthermore, the sample contained noise such as 'Arzt' which is a e=plural noun. Thus, making a single conclusion about all occurrences from different classes adopting -e- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -e- after non-animal designations was most probably positive as well."
+		}
+	},
+	{
+		"id": "NA",
+		"name": "sonority_s",
+		"summary": "The probability of -s- decreases with increasing sonority of the final segment of the first constituent: it is more frequent after plosives, infrequent after nasals and liquids, and it never occurs after a full vowel.",
+		"type": ["phonological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "fuhrhop_kürschner_2015",
+				"pages": [572],
+				"summary": "-s- is impossible with nouns ending in a full vowel."
+			},
+			{
+				"ref": "kürschner_2005",
+				"pages": [110],
+				"summary": "After a full vowel, a zero linker always appears."
+			},
+			{
+				"ref": "kürschner_2010",
+				"pages": [19, 24],
+				"summary": "In simpices, -s- occurs more often after plosives, much rarer after nasals and liquids. Furthermore, -s- never occurs after a full vowel [1]."
+			},
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [7, 17],
+				"summary": "The probability of -s- decreases with increasing sonority of the final segment of the first constituent: it occurs after plosives in about 15-20% and after nasals and liquids in only about 1.8-4.7% of cases, and it never occurs after a full vowel."
+			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [9],
+				"summary": "Nouns ending in a full vowel never have -s-."
+			},
+			{
+				"ref": "wegener_2003",
+				"pages": [434],
+				"summary": "-s- never occurs after a full vowel except for in uhu_+s_nest [2]."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["ort_+s_tarif", "arbeit_+s_tag", "himmel_reich", "uhu_paar"],
+		"examples_contra": ["arbeit_geber", "heil_+s_lehre", "uhu_+s_nest"],
+		"footnotes": {
+			"1": "Claim about full vowel: works whether it is a simplex or a derivative.",
+			"2": "The given counterexample uhu_+s_nest could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
+		}
+	},
+	{
+		"id": "NA",
+		"name": "sibilant_cond_zero",
+		"summary": "Nouns ending in a sibilant or a consonant cluster including a [s] mostly adopt a zero linker.",
+		"type": ["phonological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "kürschner_2010",
+				"pages": [19],
+				"summary": "As a rule, -s- does not occur after noun ending with a sibilant and very rarely occurs after noun ending with a consonant cluster that has a [s] in it."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [89, 109],
+				"summary": "Most nouns ending with a [s], a [ʃ], a [ts], or a [st] adopt a zero linker. In particular, polysyllabic deverbative M do not attach -s- as they regularly do if they end with a sibilant or a [ts] [1]."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["gefäß_system", "notiz_buch", "fisch_öl", "herbst_anfang"],
+		"examples_contra": [""],
+		"footnotes": {
+			"1": "Evidence for `sibilant_s` > `deverba_m`."
+		}
+	},
 
 
 
@@ -411,8 +571,25 @@
 
 
 
-
-
+	{
+		"id": "NA",
+		"name": "deverba_m",
+		"summary": "",
+		"type": [""],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "",
+				"pages": [],
+				"summary": ""
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": [""],
+		"examples_contra": [""],
+		"footnotes": {}
+	},
 	{
 		"id": "NA",
 		"name": "deverba_en",

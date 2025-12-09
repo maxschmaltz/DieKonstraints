@@ -1,15 +1,9 @@
 # Intermediate
-* =Plural, e-Plural, e=Plural nouns rarely have linkers | [12:83,106,107]
-* When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter usually adopts its plural ending | [13:230]
-* Linkers identical to the plural ending are tendentially associated with plural meaning | [13:231], [16:20]
+
 
 
 # -s-
-* The higher the sonority, the lower the probability of -s-, and vice versa | [10:7]
-    * As a rule, -s- doesn't usually occur after noun ending with a sibilant | [7:19], [12:89,104]
-    * -s- rarely occurs after noun ending with a consonant cluster that has an [s] in it | [7:19], [12:89,109]
-    * In simplexes, -s- occurs mostly after plosives, much rarer after nasals and liquids | [7:24], [10:17]
-        * -s- often occurs in F ending with in [t] | [11:77], [12:74,75]
+* -s- often occurs in F ending with in [t] | [11:77], [12:74,75]
 * The acceptability of -s- irregularly grows when the first constituent is morphologically (any form of derivation of composition) / phonologically (3 or more syllables, several feet, non-trochaic, full vowel in an unstressed syllable, words with unstressed prefixes, words with stressed or semi-stressed suffixes starting with a vowel, words with semi-stressed suffixes that form a pword) complex* (NB! -s- has nothing to do with phonology | [4:201]) | [2:572], [6:106,111,112], [7:19,22], [10:10], [11:78]
     * Almost all F with -s- are polysyllabic | [12:73]
     * -s- occurs more probably after nouns that bear a prefix or a suffix | [3:61], [6:107], [7:21]
@@ -32,20 +26,6 @@
 * Many simplexes with an -s- are high frequent tokens | [7:25]
 * -s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument (so argumental compounds), with many doubtful cases | [11:79]
 * There is an observable tendency to insert -s- before a stem designating a person | [10:11]
-
-
-# =e=
-* =e= occurs in some e=Plural F and strong nouns | [1:228]
-* In compounds with =e=, plural interpretation occurs in most cases | [11:81], [14:29]
-
-
-# -e-
-* A larger group where -e- occurs is animal designations, but certainly not with all of them | [1:228], [10:11], [11:80]
-* -e- is always paradigmatic, mostly simplexes, no loanwords | [7:9], [11:70,81], [12:102]
-* -e- mostly signalizes plural meaning | [12:103]
-    * -e- have insignificant effect on plural reading | [14:29]
-* -e- occurs only after nouns with the stressed last syllable | [7:18]
-
 
 # =er=
 * =er= is always paradigmatic | [1:229], [7:9,11], [10:3], [11:80], [12:98]
@@ -88,3 +68,5 @@
 * Syllabic linkers form trochee where one main stress would follow another one otherwise; however, there are many exceptions | [7:17], [10:17], [17:446]
 * Syllabic linkers tend to be attached to monosyllabic first parts (or stems with word-final stress), and non-syllabic linkers to polysyllabic first parts: rule for -(e)n-, tendency for -(e)s- | [10:7], [16:19]
 * Mass nouns usually have 0 | [11:81]
+* When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter usually adopts its plural ending | [13:230]
+* Linkers identical to the plural ending are tendentially associated with plural meaning | [13:231], [16:20]
