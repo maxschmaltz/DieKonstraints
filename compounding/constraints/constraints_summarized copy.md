@@ -7,10 +7,10 @@
     * Almost all F with -s- are polysyllabic | [12:73]
     * -s- occurs more probably after nouns that bear a prefix or a suffix | [3:61], [6:107], [7:21]
         * -s- occurs regularly after suffixes -keit, -heit, -igkeit, -schaft, -ung, -sal, -ing, -ling and tendentially after -tum, -ion, -(i)tät (because they form phonologically bad words / because it reopens the stem) | [1:229], [2:572], [3:61], [6:107,115], [7:20,21], [10:10,20,24], [11:77], [12:73,83,88,89,94], [13:229], [14:8], [16:19], [17:448]
-            * F ending in -ität- can adopt -en- where the plural interpretation should be preserved | [12:74,94]
+            * F ending in -(i)tät- can adopt -en- where the plural interpretation should be preserved | [12:74,94]
         * -s- occurs by a rule/tendentially in deverbatives ending in -en | [1:229], [6:107], [11:78], [12:89]
-            * Polysyllable deverbative M attach -s- regularly if they don't end with [s] or [ts] | [12:89]
         * -s- occurs in a large number of M and F derivatives from prefixed verbs | [1:230]
+            * Polysyllable deverbative M attach -s- regularly if they don't end with [s] or [ts] | [12:89]
             * There is very strong tendency to adopt -s- after a derivative with an unstressed prefix (because they form phonologically bad words) | [10:18,19], [11:78]
             * Derivatives with stressed prefixes mostly have 0 (because they don't form phonologically bad words) | [10:18], [11:78]
             * Occurrences of -s- in words with stressed and unstressed prefixes is almost the same (76.5% vs 78%) | [4:190]
@@ -27,15 +27,8 @@
 * There is an observable tendency to insert -s- before a stem designating a person | [10:11]
 
 # =er=
-* =er= is always paradigmatic | [1:229], [7:9,11], [10:3], [11:80], [12:98]
-* =er= is more probable when a plural meaning is present, otherwise 0 or another link, except for person and animal designations, for which =er= are not necessarily associated with a plural meaning | [1:229], [11:80], [12:99,108], [14:29]
-* =er= occurs only after nouns with the stressed last syllable | [7:18]
-* First members with -er- are often N and M, mostly simplexes, no loanwords, that indicate concrete, countable entities | [11:81]
-
-
-# -es-
-* -es- occurs after a row (30-40) of one-syllable s-Genitiv M and N and is isolated | [1:229], [7:11], [10:7], [11:79], [11:81]
-* -es- occurs only after nouns with the stressed last syllable | [7:18]
+* =er= is always paradigmatic |[12:98]
+* =er= is more probable when a plural meaning is present, otherwise 0 or another link, except for person and animal designations, for which =er= are not necessarily associated with a plural meaning | [12:99,108], [14:29]
 
 
 # -(e)n-
@@ -49,12 +42,6 @@
 * (e)n-Plural mixed M and N often adopt -(e)n- | [14:9]
 
 
-# -(e)ns-
-* -(e)ns- only occurs after a few M and a single N | [11:82], [12:80,97], [14:9]
-
-
-
-
 
 
 
@@ -66,6 +53,5 @@
 * Gender is more important for -(e)n-, the inflectional class is more important for 0, rime is most relevant for -s- | [5:9]
 * Syllabic linkers form trochee where one main stress would follow another one otherwise; however, there are many exceptions | [7:17], [10:17], [17:446]
 * Syllabic linkers tend to be attached to monosyllabic first parts (or stems with word-final stress), and non-syllabic linkers to polysyllabic first parts: rule for -(e)n-, tendency for -(e)s- | [10:7], [16:19]
-* Mass nouns usually have 0 | [11:81]
 * When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter usually adopts its plural ending | [13:230]
 * Linkers identical to the plural ending are tendentially associated with plural meaning | [13:231], [16:20]

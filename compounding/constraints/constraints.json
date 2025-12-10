@@ -588,6 +588,117 @@
 		"examples_contra": ["arbeit_geber", "schuld_gefühl", "sicht_schutz"],
 		"footnotes": {}
 	},
+	{
+		"id": "NA",
+		"name": "es",
+		"summary": "-es- occurs exclusively after a row  of one-syllable M and N that form a genitive with -(e)s- (about 30-40 nouns) and is isolated. These nouns can, however, also attach other linkers.",
+		"type": ["lexical"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "eisenberg_2013",
+				"pages": [229],
+				"summary": "-es- occurs in a row of s-genitiv M and N and is isolated."
+			},
+			{
+				"ref": "kürschner_2010",
+				"pages": [11],
+				"summary": "-es- is found in a few one-syllable M and N. [1]"
+			},
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [3, 7],
+				"summary": "-es- is found only after M and N, and there are only about 30 nouns that attach -es-."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [81],
+				"summary": "There is only a fixed number of about 30 M and N that adopt -es-."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["bund_+es_tag", "kind_+es_alter", "tag_+es_schau", "land_+es_regierung"],
+		"examples_contra": ["kind_+er_garten", "land_kreis", "tag_blatt"],
+		"footnotes": {
+			"1": "[kürschner_2010:18] also mentions: '-es- occurs only after nouns with the stressed last syllable', which, however, always holds for the nouns in question since they are all monosyllabic."
+		}
+	},
+	{
+		"id": "NA",
+		"name": "ens",
+		"summary": "-(e)ns- only occurs after a few M and a single N not necessarily forming a genitive with -(e)ns- and is completely isolated. These nouns can, however, also attach other linkers.",
+		"type": ["lexical"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [82],
+				"summary": "-(e)ns- only occurs after very few nouns with different genitive endings."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [80, 97],
+				"summary": "-(e)ns- occurs with a few M and a single N."
+			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [9],
+				"summary": "-(e)ns- is idiosyncratic and rare and is used only with a few nouns."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["schmerz_+ens_geld", "name_+ens_tag", "herz_+ens_angst"],
+		"examples_contra": ["schmerz_grenze", "name_+n_buch", "herz_leiden"],
+		"footnotes": {}
+	},
+	{
+		"id": "NA",
+		"name": "er",
+		"summary": "=er= can only occur with M and N forming a plural with -er (with or without umlaut) and are mostly simplices and never loanwords. =er= is more probable when a plural meaning is present, in which case these nouns will indicate concrete, countable entities, while when having a mass meaning, they tend to attach a zero linker (both come with counterexamples). For person and animal designations though, =er= is not necessarily associated with a plural meaning. Otherwise, another linkers can also be adopted by these nouns.",
+		"type": ["morphological", "semantic"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "eisenberg_2013",
+				"pages": [229],
+				"summary": "=er= occurs only in er=plural nouns. These nouns tend to choose =er= when a plural meaning is present, otherwise a zero linker or another linker, except for person and animal designations, for which =er= is not necessarily associated with a plural meaning."
+			},
+			{
+				"ref": "kürschner_2010",
+				"pages": [9, 11],
+				"summary": "=er= is always paradigmatic and is found in a few er-plural M and N. [1]"
+			},
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [3],
+				"summary": "=er= is always paradigmatic."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [80, 81],
+				"summary": "=er= is always paradigmatic and is often associated with plural meaning, with many counterexamples. When attaching =er=, these nouns often indicate concrete, countable entities, while when having a mass meaning, they tend to attach a zero linker."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [],
+				"summary": ""
+			},
+			{
+				"ref": "",
+				"pages": [],
+				"summary": ""
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": [""],
+		"examples_contra": [""],
+		"footnotes": {
+			"1": "[kürschner_2010:18] also mentions: '-er- occurs only after nouns with the stressed last syllable'; however, to the best of our knowledge, this always holds for er-plural nouns and, hence, for the nouns in question since =er= is always paradigmatic."
+		}
+	},
 
 
 
@@ -617,44 +728,6 @@
 	{
 		"id": "NA",
 		"name": "deverba_en",
-		"summary": "",
-		"type": [""],
-		"regularity": "NA",
-		"coverage": "NA",
-		"evidence_pro": [
-			{
-				"ref": "",
-				"pages": [],
-				"summary": ""
-			}
-		],
-		"evidence_contra": [],
-		"examples_pro": [""],
-		"examples_contra": [""],
-		"footnotes": {}
-	},
-	{
-		"id": "NA",
-		"name": "ens",
-		"summary": "",
-		"type": [""],
-		"regularity": "NA",
-		"coverage": "NA",
-		"evidence_pro": [
-			{
-				"ref": "",
-				"pages": [],
-				"summary": ""
-			}
-		],
-		"evidence_contra": [],
-		"examples_pro": [""],
-		"examples_contra": [""],
-		"footnotes": {}
-	},
-	{
-		"id": "NA",
-		"name": "es",
 		"summary": "",
 		"type": [""],
 		"regularity": "NA",

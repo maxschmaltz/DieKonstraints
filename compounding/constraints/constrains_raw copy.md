@@ -1,8 +1,6 @@
 ## 1	_Eisenberg 2013_. Grundriss der deutschen Grammatik. Band 1: Das Wort
 
 * All weak M adopt -(e)n- by a rule no matter or their complexity and origin (228)
-* -er- and =er= occur only in er-plural and er=Plural nouns. These nouns tend to choose -er- / =er= when a plural meaning is present, otherwise 0 or another link, except for person and animal designations, for which -er- and =er= are not necessarily associated with a plural meaning (229)
-* -es- occurs in a row of s-Genitiv M and N and is isolated (229)
 * -s- occurs regularly after suffixes -keit, -heit, -igkeit, -tum, -schaft, -ung, -sal, -ling (because they form phonologically bad words) (229)
 * -s- occurs by a rule in deverbatives ending in -en (229)
 * -s- occurs in a large number of M and F derivatives from prefixed verbs (230)
@@ -54,11 +52,7 @@
 ## 7	_Kürschner 2010_. Fuge-n-kitt, voeg-en-mes, fuge-masse und fog-e-ord. Fugenelemente im Deutschen, Niederländischen, Schwedischen und Dänischen
 
 * -(e)n- is regular for weak M (9)
-* -(e)n- and -er- are always paradigmatic (9)
-* -er- is found in few er-plural M and N (11)
-* -es- is found in a few one-syllable M and N (11)
 * Syllabic linkers form trochee where one main stress would follow another one otherwise; however, there are many exceptions (17)
-* -er-, and -es- occur only after nouns with the stressed last syllable (18)
 * -n- occurs only after schwa (18)
 * The probability of -s- grows with the morphologic complexity of the noun (19), but it is not regular in German (22)
 * -s- doesn't occur after nouns ending with an -s (19)
@@ -74,9 +68,7 @@
 
 ## 10	_Nübling & Szczepaniak 2008_. On the way from morphology to phonology: German linking elements and the role of the phonological word
 
-* -es- is found only after M and N (3), and there are only about 30 nouns that take -es- (7) 
 * -e(n)- is found only with weak nouns (3)
-* -er- is always paradigmatic (3)
 * Syllabic linkers tend to be attached to monosyllabic first parts, and non-syllabic linkers to polysyllabic first parts: rule for -(e)n-, tendency for -(e)s- (7)
 * Sometimes, linkers help the listener correctly analyze complex compounds by marking the border between head and non-head (8)
 * The more complex the first part of a compound, the more probable the occurrence of a linking element (because they are usually phonologically bad words) (9)
@@ -106,12 +98,7 @@
 * -(e)n- creates or maintains trochees (79)
 * -en- occurs non-paradigmatically only in such cases when former weak nouns moved to another class (maintaining their original linking element) (79)
 * Monosyllabic M and N with plural interpretation sometimes attach -en- but not as obligatorily as F (80)
-* -er- is always paradigmatic (80)
-* -er- is often associated with plural meaning, with many counterexamples (80)
-* First members with -er- often indicate concrete, countable entities (81)
-* Mass nouns usually have 0 (81)
-* There is only a fixed number of about 30 M and N that adopt -es- (81)
-* -(e)ns- only occurs after very few nouns (82)
+
 
 
 ## 12	_Ortner & Müller-Bollhagen 1991_. Deutsche Wortbildung, Hauptteil 4, Substantivkomposita
@@ -120,7 +107,6 @@
 * F ending in -ität- can adopt -en- where the plural interpretation should be preserved (74, 94)
 * All M where a non-paradigmatic -en- occurs are monosyllabic and belong to the following semantic classes: male persons, animals, astronomic objects, months (78)
 * All N with the unparadigmatic -en- linking element are polysyllabic foreign words with final stress that necessarily express plurality (78)
-* -(e)ns- occurs with a few M and a single N (80, 97)
 * Derivates ending in -ing, -ling regularly attach -s- (83, 88)
 * Nouns ending in -sal extensively attach -s- (83)
 * -(e)s- sometimes occurs more frequently with compound first constituents compared to the corresponding simplex (85)
@@ -144,7 +130,6 @@
 
 * Derivates with suffixes -ung, -heit, -tum etc. have a strong tendency to occur with an -s linking element (8)
 * Simplex M and N often take -(e)s- (8)
-* -(e)ns- is only used with a few nouns (9)
 * =er= have significantly strong effect on plural reading (29)
 * -er- has moderate effect on plural reading (29)
 
