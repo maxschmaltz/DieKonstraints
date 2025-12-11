@@ -53,7 +53,6 @@
 
 * -(e)n- is regular for weak M (9)
 * Syllabic linkers form trochee where one main stress would follow another one otherwise; however, there are many exceptions (17)
-* -n- occurs only after schwa (18)
 * The probability of -s- grows with the morphologic complexity of the noun (19), but it is not regular in German (22)
 * -s- doesn't occur after nouns ending with an -s (19)
 * -s- regularly occurs after suffixes -heit, -schaft, -ling, -tum, -ung (20)
@@ -114,8 +113,6 @@
 * Deverbative N attach -(e)s- regularly (89)
 * Derivate N ending in -tum regularly attach -(e)s- (89)
 * Derivate F with suffix -in always attach -(e)n-, if they are not copulative (94)
-* -er- (and =er=) are always paradigmatic, mostly N and some M, mostly simplexes, no loanwords (98)
-* Most er-plural nouns attach both -er- (=er=) or 0 in different cases, often depending on plural interpretation (80% singular meaning cases have 0) (99, 108)
 
 
 ## 13	_Schäfer 2018_. Einführung in die grammatische Beschreibung des Deutschen
@@ -130,8 +127,6 @@
 
 * Derivates with suffixes -ung, -heit, -tum etc. have a strong tendency to occur with an -s linking element (8)
 * Simplex M and N often take -(e)s- (8)
-* =er= have significantly strong effect on plural reading (29)
-* -er- has moderate effect on plural reading (29)
 
 
 ## 16	_Schlücker 2022_. Compounding and Linking Elements in Germanic

@@ -1,7 +1,3 @@
-# Intermediate
-
-
-
 # -s-
 * The acceptability of -s- irregularly grows when the first constituent is morphologically (any form of derivation of composition) / phonologically (3 or more syllables, several feet, non-trochaic, full vowel in an unstressed syllable, words with unstressed prefixes, words with stressed or semi-stressed suffixes starting with a vowel, words with semi-stressed suffixes that form a pword) complex* (NB! -s- has nothing to do with phonology | [4:201]) | [2:572], [6:106,111,112], [7:19,22], [10:10], [11:78]
     * Almost all F with -s- are polysyllabic | [12:73]
@@ -25,10 +21,7 @@
 * Many simplexes with an -s- are high frequent tokens | [7:25]
 * -s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument (so argumental compounds), with many doubtful cases | [11:79]
 * There is an observable tendency to insert -s- before a stem designating a person | [10:11]
-
-# =er=
-* =er= is always paradigmatic |[12:98]
-* =er= is more probable when a plural meaning is present, otherwise 0 or another link, except for person and animal designations, for which =er= are not necessarily associated with a plural meaning | [12:99,108], [14:29]
+* Simplex M and N [3] often adopt -s-
 
 
 # -(e)n-
@@ -37,17 +30,15 @@
     * All M where a non-paradigmatic -en- occurs are monosyllabic and belong to the following semantic classes: male persons, animals, astronomic objects, months | [12:78]
     * All N with the unparadigmatic -en- linking element are polysyllabic foreign words with final stress that necessarily express plurality | [12:78]
 * -(e)n- mostly occurs to form/maintain trochees | [4:195], [10:17], [11:79]
-* -n- occurs only after schwa, and most of the words ending with a schwa adopt it | [7:18], [12:83,92]
 * Derivate F with suffix -in always attach -(e)n-, if they are not copulative | [12:94]
-* (e)n-Plural mixed M and N often adopt -(e)n- | [14:9]
-
-
-
-
-
-
 * Consonant-final F and M adopt -en- less productively | [5:3]
 * Monosyllabic M and N with plural interpretation sometimes attach -en- but not as obligatorily as F | [11:80]
+
+
+
+
+
+
 * When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning | [5:3]
 * There is a significant analogical effect from the first constituent | [5:7]
 * Gender is more important for -(e)n-, the inflectional class is more important for 0, rime is most relevant for -s- | [5:9]

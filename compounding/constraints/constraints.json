@@ -66,7 +66,7 @@
 	{
 		"id": "NA",
 		"name": "final_stressed_f",
-		"summary": "Final-stressed (incl. monosyllabic) F mostly adopt -(e)n-, a zero linker or an -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -(e)n- is more likely, otherwise mostly a zero linker or -s- is chosen depending on further constraints.",
+		"summary": "Final-stressed (incl. monosyllabic) F mostly adopt -en-, a zero linker or an -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -en- is more likely, otherwise mostly a zero linker or -s- is chosen depending on further constraints.",
 		"type": ["morphological", "phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -74,7 +74,7 @@
 			{
 				"ref": "eisenberg_2013",
 				"pages": [229],
-				"summary": "One-syllable F sometimes adopt -(e)n-, sometimes a zero linker. It is possible that there is a tendency to choose by singular/plural meaning."
+				"summary": "One-syllable F sometimes adopt -en-, sometimes a zero linker. It is possible that there is a tendency to choose by singular/plural meaning."
 			},
 			{
 				"ref": "nübling_szczepaniak_2008",
@@ -84,12 +84,12 @@
 			{
 				"ref": "nübling_szczepaniak_2013",
 				"pages": [80],
-				"summary": "-(e)n- can be added to monosyllabic or polysyllabic final-stressed weak F only when the plural interpretation is allowed, with a very few counterexamples. If the plural reading is inadequate, another linking element, mostly -s- or zero, has to be chosen."
+				"summary": "-en- can be added to monosyllabic or polysyllabic final-stressed weak F only when the plural interpretation is allowed, with a very few counterexamples. If the plural reading is inadequate, another linking element, mostly -s- or zero, has to be chosen."
 			},
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [94],
-				"summary": "F not ending in -e [1] do not usually attach -(e)n-; if there is a singular interpretation, they attach a zero linker."
+				"summary": "F not ending in -e [1] do not usually attach -en-; if there is a singular interpretation, they attach a zero linker."
 			},
 			{
 				"ref": "schäfer_2018",
@@ -108,7 +108,7 @@
 	{
 		"id": "NA",
 		"name": "schwa",
-		"summary": "Nouns ending in schwa regularly adopt -(e)n- if the schwa is not a suffix. If the schwa is a suffix of a deadjective F, -(e)n- and zero linkers are about equally possible. Deverbal F with the schwa suffix mostly attach a zero linker but can attach an -(e)n- when the first constituent has a plural reading.",
+		"summary": "Nouns ending in schwa regularly adopt -n- if the schwa is not a suffix, this is the only class of words that can attach this linker. If the schwa is a suffix of a deadjective F, -n- and zero linkers are about equally possible. Deverbal F with the schwa suffix mostly attach a zero linker but can attach an -n- when the first constituent has a plural reading.",
 		"type": ["morphological", "phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -116,17 +116,17 @@
 			{
 				"ref": "eisenberg_2013",
 				"pages": [229],
-				"summary": "F ending in schwa (they are already two-syllabic) regularly adopt -(e)n-."
+				"summary": "F ending in schwa (they are already two-syllabic) regularly adopt -n-."
 			},
 			{
 				"ref": "fuhrhop_kürschner_2015",
 				"pages": [573],
-				"summary": "F ending in schwa adopt -(e)n- if schwa is not a suffix, otherwise a zero linker."
+				"summary": "F ending in schwa adopt -n- if schwa is not a suffix, otherwise a zero linker."
 			},
 			{
 				"ref": "krott_etal_2007",
 				"pages": [3],
-				"summary": "F ending in schwa adopt -(e)n- productively."
+				"summary": "F ending in schwa adopt -n- productively."
 			},
 			{
 				"ref": "kürschner_2005",
@@ -134,19 +134,24 @@
 				"summary": "The claim that F ending in schwa always attach a zero linker is not supported by the empirical data, but it should be marked as a tendency [1]."
 			},
 			{
+				"ref": "kürschner_2010",
+				"pages": [18],
+				"summary": "-n- occurs only after schwa, and most of the words ending with a schwa adopt it."
+			},
+			{
 				"ref": "libben_etal_2009",
 				"pages": [151, 157],
-				"summary": "F ending in schwa will almost always attach an -(e)n- with a very few exceptions [2]."
+				"summary": "F ending in schwa will almost always attach an -n- with a very few exceptions [2]."
 			},
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [83, 92, 93],
-				"summary": "Nouns (especially weak F) ending in schwa mostly adopt -(e)n-. However, deadjective F ending in a schwa suffix have a zero linker or -(e)n- in about the same number of cases. Deverbative F ending in schwa suffix  mostly have a zero linker; they can attach an -(e)n- though when the first constituent has a plural reading. [3, 4]"
+				"summary": "Nouns (especially weak F) ending in schwa mostly adopt -n-. However, deadjective F ending in a schwa suffix have a zero linker or -n- in about the same number of cases. Deverbative F ending in schwa suffix  mostly have a zero linker; they can attach an -n- though when the first constituent has a plural reading. [3, 4]"
 			},
 			{
 				"ref": "schäfer_pankratz_2018",
 				"pages": [9],
-				"summary": "F ending in schwa virtually always occur with -(e)n-."
+				"summary": "F ending in schwa virtually always occur with -n-."
 			}
 		],
 		"evidence_contra": [],
@@ -155,7 +160,7 @@
 		"footnotes": {
 			"1": "The counterexample there is a deadjective F: tiefe_+n_meter, which is in line with the overall constraint.",
 			"2": "The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `tech_term` is stronger than `schwa_f` and thus -- since these are technical terms -- it blocks the application of `schwa_f` in these cases.",
-			"3": "A further claim was made in the paper: 'Finally, further F ending in schwa can adopt an -(e)n- if they denote a concrete countable, even if no plural meaning occurs'. However, these cases simply fall into the cases of F ending in a non-suffix schwa and are only a subset thereof.",
+			"3": "A further claim was made in the paper: 'Finally, further F ending in schwa can adopt an -n- if they denote a concrete countable, even if no plural meaning occurs'. However, these cases simply fall into the cases of F ending in a non-suffix schwa and are only a subset thereof.",
 			"4": "Mixed and irregular M and N ending in schwa also fall here: 'Auge', 'Interesse' can be handled assuming `schwa` > `mixed_mn`. However, many of further examples are eventually overtaken by other constraints: 'Name', 'Glaube'. etc. will be governed by `ens` (assuming `ens` > `schwa`); 'Ende' mostly removes the schwa and is thus not considered in this iteration; 'Gebäude' will be governed by `null_plural` (assuming `null_plural` > `schwa`)."
 		} 
 	},
@@ -180,7 +185,7 @@
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [57, 91, 94, 109],
-				"summary": "Copulative compounds always have a zero linker. In particular, weak M and F ending with suffix -in always adopt -(e)n- unless they are copulative, in which case they have a zero linker. [2]"
+				"summary": "Copulative compounds always have a zero linker. In particular, weak M and F ending with suffix -in always adopt -en- unless they are copulative, in which case they have a zero linker. [2]"
 			}
 		],
 		"evidence_contra": [],
@@ -188,7 +193,7 @@
 		"examples_contra": [""],
 		"footnotes": {
 			"1": "The author defines two different types of copulative compounds: with additive relations and with appositive relations. However, this notation is not conventional. What the author calls 'copulative compounds with additive relations' are not defined as copulative compounds in most of the literature, while what the author calls 'copulative compounds with appositive relations' are what is defined \"usual\" copulative compounds. Thus, in our terms this finding can be summarized as 'non-copulative compounds adopt explicit linkers non-systematically, while copulative compounds systematically adopt a zero linker'.",
-			"2": "The last claim gives evidence that `copula` is stronger than (at least) some other constraints."
+			"2": "Evidence for `copula` > `f_in`."
 		}
 	},
 	{
@@ -251,7 +256,7 @@
 	{
 		"id": "NA",
 		"name": "null_plural",
-		"summary": "Derivatives forming a plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker with a few exceptions unless they are a deverbative, in which case they mostly attach -s-. Simplex M and N, as well as any F forming a plural with a zero ending attach a zero linker in majority of cases.",
+		"summary": "Derivatives forming the plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker with a few exceptions unless they are a deverbative, in which case they mostly attach -s-. Simplex M and N, as well as any F forming the plural with a zero ending attach a zero linker in majority of cases.",
 		"type": ["morphological", "derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -259,7 +264,7 @@
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [56, 82, 88, 106],
-				"summary": "Derivatives forming a plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker unless they are a deverbative, in which case they mostly attach -s- [1]. Simplex M and N forming a plural with a zero ending attach a zero linker in 90% of cases. F forming a plural with a zero ending attach a zero linker in 85% of cases."
+				"summary": "Derivatives forming the plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker unless they are a deverbative, in which case they mostly attach -s- [1]. Simplex M and N forming the plural with a zero ending attach a zero linker in 90% of cases. F forming the plural with a zero ending attach a zero linker in 85% of cases."
 			}
 		],
 		"evidence_contra": [],
@@ -291,7 +296,7 @@
 	{
 		"id": "NA",
 		"name": "s_plural",
-		"summary": "Nouns forming a plural with -s regularly attach a zero linker.",
+		"summary": "Nouns forming the plural with -s regularly attach a zero linker.",
 		"type": ["morphological"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -354,7 +359,7 @@
 	{
 		"id": "NA",
 		"name": "mixed_mn",
-		"summary": "Mixed M and N mostly attach an -s- or a zero linker. Mixed M can also attach an -(e)n- if the second constitiuent forces its plural meaning.",
+		"summary": "Mixed M and N can attach -s-, -(e)n-, or a zero linker. -(e)n- may be associated with a plural meaning (with counterexamples).",
 		"type": ["morphological"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -371,8 +376,8 @@
 			},
 			{
 				"ref": "schäfer_pankratz_2018",
-				"pages": [8],
-				"summary": "Simplex M and N [3] often adopt -s- [2]."
+				"pages": [9],
+				"summary": "Mixed M and N often occur with -(e)n-."
 			}
 		],
 		"evidence_contra": [],
@@ -380,14 +385,13 @@
 		"examples_contra": ["motor_+en_geräusch", "professor_+en_titel", "ohr_+en_schmalz", "auge_+n_lied", "interesse_+n_bereich"],
 		"footnotes": {
 			"1": "Mixed M and N ending in schwa are overtaken by other constraints (see `schwa`, `ens` > `mixed_mn`).",
-			"2": "The original text says -(e)s- but since 1) we divide these two in our research and 2) -es- is handled separately by `es`, we modify it to -s- here.",
-			"3": "Even though mixed M or N are not explicitly mentioned, they are all simplixes so we keep it as an indirect evidence for this constraint."
+			"2": "The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `es`, we modify it to -s- here."
 		}
 	},
 	{
 		"id": "NA",
 		"name": "zero_umlaut_plural",
-		"summary": "Nouns forming a plural with a zero ending and an umlaut mostly have a zero linker. Otherwise, they may adopt the umlaut (as in the plural form) if the first constituent has a collective or plural meaning.",
+		"summary": "Nouns forming the plural with a zero ending and an umlaut mostly have a zero linker. Otherwise, they may adopt the umlaut (as in the plural form) if the first constituent has a collective or plural meaning.",
 		"type": ["morphological"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -411,7 +415,7 @@
 	{
 		"id": "NA",
 		"name": "e_umlaut_plural",
-		"summary": "Nouns forming a plural with an -e ending and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach -e- with an umlaut, and this is the only class of words that can attach this linker.",
+		"summary": "Nouns forming the plural with an -e ending and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach -e- with an umlaut, and this is the only class of words that can attach this linker.",
 		"type": ["morphological"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -447,7 +451,7 @@
 	{
 		"id": "NA",
 		"name": "e_plural",
-		"summary": "Nouns forming a plural with an -e ending mostly have a zero linker. In case of plural or collective meaning, as well as if it is a monosyllabic noun designating an animal, it may also non-regularly attach -e-, and this is the only class of words that can attach this linker.",
+		"summary": "Nouns forming the plural with an -e ending mostly have a zero linker. In case of plural or collective meaning, as well as if it is a monosyllabic noun designating an animal, it may also non-regularly attach -e-, and this is the only class of words that can attach this linker.",
 		"type": ["morphological", "semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -655,8 +659,8 @@
 	},
 	{
 		"id": "NA",
-		"name": "er",
-		"summary": "=er= can only occur with M and N forming a plural with -er (with or without umlaut) and are mostly simplices and never loanwords. =er= is more probable when a plural meaning is present, in which case these nouns will indicate concrete, countable entities, while when having a mass meaning, they tend to attach a zero linker (both come with counterexamples). For person and animal designations though, =er= is not necessarily associated with a plural meaning. Otherwise, another linkers can also be adopted by these nouns.",
+		"name": "er_plural",
+		"summary": "Nouns forming the plural with an -er with or without an umlaut (these are mostly N and some M, mostly simplices and never loanwords) mostly attach both a zero linker and =er= in different cases, and this is the only class of words that can attach the latter. =er= is more probable (with counterexamples) when a plural meaning is present, in which case these nouns will indicate concrete, countable entities. When having a mass meaning, these nouns tend (with counterexamples) to attach a zero linker. For person and animal designations though, =er= is not necessarily associated with a plural meaning. Another linkers can also be rarely adopted by these nouns.",
 		"type": ["morphological", "semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -683,9 +687,31 @@
 			},
 			{
 				"ref": "ortner_müller-bollhagen_1991",
-				"pages": [],
-				"summary": ""
+				"pages": [98, 99, 108],
+				"summary": "Most er-plural nouns attach both =er= and a zero linker in different cases, often depending on plural interpretation (80% singular meaning cases have a zero linker). =er= is always paradigmatic and attaches mostly to N and to some M, mostly simplexes, no loanwords. [2]"
 			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [29],
+				"summary": "=er= with no umlauting exhibits moderate, and =er= with umlauting exhibits significantly strong effect on plural reading."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["rad_kasten", "rad_+er_wechsel", "buch_deckel", "buch_+=er_regal", "kind_+=er_jacke", "rind_+=er_brust"],
+		"examples_contra": ["kind_+es_alter", "buch_handel", "bild_band"],
+		"footnotes": {
+			"1": "[kürschner_2010:18] also mentions: '-er- occurs only after nouns with the stressed last syllable'; however, to the best of our knowledge, this always holds for er-plural nouns and, hence, for the nouns in question since =er= is always paradigmatic.",
+			"2": "Even though not explicitly stated, counterexamples for the plural meaning given in [ortner_müller-bollhagen_1991:98] confirm the hypothesis from [eisenberg_2013:229] that for person and animal designations, =er= is not necessarily associated with a plural meaning: huhn_+=er_keule, kind_+=er_jacke, rind_+=er_brust."
+		}
+	},
+	{
+		"id": "NA",
+		"name": "f_in",
+		"summary": "",
+		"type": [""],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
 			{
 				"ref": "",
 				"pages": [],
@@ -695,9 +721,7 @@
 		"evidence_contra": [],
 		"examples_pro": [""],
 		"examples_contra": [""],
-		"footnotes": {
-			"1": "[kürschner_2010:18] also mentions: '-er- occurs only after nouns with the stressed last syllable'; however, to the best of our knowledge, this always holds for er-plural nouns and, hence, for the nouns in question since =er= is always paradigmatic."
-		}
+		"footnotes": {}
 	},
 
 
