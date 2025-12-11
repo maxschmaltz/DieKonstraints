@@ -1,7 +1,6 @@
 [
 	{
-		"id": "NA",
-		"name": "zero_default",
+		"id": "zero_default",
 		"summary": "The majority of compounds have a zero linker.",
 		"type": ["default"],
 		"regularity": "NA",
@@ -64,8 +63,7 @@
 		"footnotes": {}
 	},
 	{
-		"id": "NA",
-		"name": "cons_final_f",
+		"id": "cons_final_f",
 		"summary": "Consonant-final F mostly adopt either -en-, or a zero linker, or -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -en- is more likely (especially in final-stressed F), otherwise mostly a zero linker or -s- is chosen.",
 		"type": ["morphological", "phonological"],
 		"regularity": "NA",
@@ -106,13 +104,12 @@
 		"examples_pro": ["schrift_+en_verzeichnis", "schrift_führer", "geburt_+en_kontrolle", "geburt_+s_tag"],
 		"examples_contra": ["burg_+en_blick"],
 		"footnotes": {
-			"1": "Final sound (schwa/consonant) not specified.",
+			"1": "Final phoneme (schwa/consonant) not specified.",
 			"2": "This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. All the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well."
 		}
 	},
 	{
-		"id": "NA",
-		"name": "schwa",
+		"id": "schwa",
 		"summary": "Nouns ending in schwa regularly adopt -n- if the schwa is not a suffix, this is the only class of words that can attach this linker. If the schwa is a suffix of a deadjective F, -n- and zero linkers are about equally possible. Deverbal F with the schwa suffix mostly attach a zero linker but can attach an -n- when the first constituent has a plural reading.",
 		"type": ["morphological", "phonological"],
 		"regularity": "NA",
@@ -170,8 +167,7 @@
 		} 
 	},
 	{
-		"id": "NA",
-		"name": "copula",
+		"id": "copula",
 		"summary": "Copulative compounds regularly attach a zero linker.",
 		"type": ["semantic"],
 		"regularity": "NA",
@@ -190,7 +186,7 @@
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [57, 91, 94, 109],
-				"summary": "Copulative compounds always have a zero linker. In particular, weak M and F ending with suffix -in always adopt -en- unless they are copulative, in which case they have a zero linker. [2]"
+				"summary": "Copulative compounds always have a zero linker. In particular, weak M as well as F ending with suffix -in always adopt -en- unless they are copulative, in which case they have a zero linker. [2]"
 			}
 		],
 		"evidence_contra": [],
@@ -198,12 +194,11 @@
 		"examples_contra": [""],
 		"footnotes": {
 			"1": "The author defines two different types of copulative compounds: with additive relations and with appositive relations. However, this notation is not conventional. What the author calls 'copulative compounds with additive relations' are not defined as copulative compounds in most of the literature, while what the author calls 'copulative compounds with appositive relations' are what is defined \"usual\" copulative compounds. Thus, in our terms this finding can be summarized as 'non-copulative compounds adopt explicit linkers non-systematically, while copulative compounds systematically adopt a zero linker'.",
-			"2": "Evidence for `copula` > `f_in`."
+			"2": "Evidence for `copula` > weak M (disregarded), `f_in`."
 		}
 	},
 	{
-		"id": "NA",
-		"name": "final_full_v",
+		"id": "final_full_v",
 		"summary": "Nouns ending in a full vowel always adopt a zero linker.",
 		"type": ["phonological"],
 		"regularity": "NA",
@@ -228,8 +223,7 @@
 		}
 	},
 	{
-		"id": "NA",
-		"name": "tech_term",
+		"id": "tech_term",
 		"summary": "In technical terminology (economics, law, medicine, etc.), compounds are often missing a linking element (even in cases where it would be obligatory in non-technical context).",
 		"type": ["lexical"],
 		"regularity": "NA",
@@ -259,8 +253,7 @@
 		}
 	},
 	{
-		"id": "NA",
-		"name": "null_plural",
+		"id": "null_plural",
 		"summary": "Derivatives forming the plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker with a few exceptions unless they are a deverbative, in which case they mostly attach -s-. Simplex M and N, as well as any F forming the plural with a zero ending attach a zero linker in majority of cases.",
 		"type": ["morphological", "derivational"],
 		"regularity": "NA",
@@ -280,13 +273,17 @@
 		}
 	},
 	{
-		"id": "NA",
-		"name": "second_const_pers_design",
+		"id": "second_const_pers_desig",
 		"summary": "Compounds with the second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' can insert -s- or -es-, if the compound designates a person, even when the first constituent would otherwise attach a zero linker.",
 		"type": ["lexical"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence_pro": [
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [11],
+				"summary": "There is an observable tendency to insert -s- before a stem designating a person"
+			},
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [56],
@@ -299,8 +296,7 @@
 		"footnotes": {}
 	},
 	{
-		"id": "NA",
-		"name": "s_plural",
+		"id": "s_plural",
 		"summary": "Nouns forming the plural with -s regularly attach a zero linker.",
 		"type": ["morphological"],
 		"regularity": "NA",
@@ -343,8 +339,7 @@
 		"footnotes": {}
 	},
 	{
-		"id": "NA",
-		"name": "suffixes_cond_zero",
+		"id": "suffixes_cond_zero",
 		"summary": "Nouns with suffixes -bold, -nis, -rich, -at, -al, -ik, also stressed -ei, -ie, -ur usually attach a zero linker.",
 		"type": ["derivational"],
 		"regularity": "NA",
@@ -362,8 +357,7 @@
 		"footnotes": {}
 	},
 	{
-		"id": "NA",
-		"name": "mixed_mn",
+		"id": "mixed_mn",
 		"summary": "Mixed M and N can attach -s-, -(e)n-, or a zero linker. -(e)n- may be associated with a plural meaning (with counterexamples).",
 		"type": ["morphological"],
 		"regularity": "NA",
@@ -404,8 +398,7 @@
 		}
 	},
 	{
-		"id": "NA",
-		"name": "zero_umlaut_plural",
+		"id": "zero_umlaut_plural",
 		"summary": "Nouns forming the plural with a zero ending and an umlaut mostly have a zero linker. Otherwise, they may adopt the umlaut (as in the plural form) if the first constituent has a collective or plural meaning.",
 		"type": ["morphological"],
 		"regularity": "NA",
@@ -428,8 +421,7 @@
 		"footnotes": {}
 	},
 	{
-		"id": "NA",
-		"name": "e_umlaut_plural",
+		"id": "e_umlaut_plural",
 		"summary": "Nouns forming the plural with an -e ending and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach -e- with an umlaut, and this is the only class of words that can attach this linker.",
 		"type": ["morphological"],
 		"regularity": "NA",
@@ -464,8 +456,7 @@
 		}
 	},
 	{
-		"id": "NA",
-		"name": "e_plural",
+		"id": "e_plural",
 		"summary": "Nouns forming the plural with an -e ending mostly have a zero linker. In case of plural or collective meaning, as well as if it is a monosyllabic noun designating an animal, it may also non-regularly attach -e-, and this is the only class of words that can attach this linker.",
 		"type": ["morphological", "semantic"],
 		"regularity": "NA",
@@ -511,8 +502,7 @@
 		}
 	},
 	{
-		"id": "NA",
-		"name": "sonority_s",
+		"id": "sonority_s",
 		"summary": "The probability of -s- decreases with increasing sonority of the final segment of the first constituent: it is more frequent after plosives, infrequent after nasals and liquids, and it never occurs after a full vowel.",
 		"type": ["phonological"],
 		"regularity": "NA",
@@ -558,8 +548,7 @@
 		}
 	},
 	{
-		"id": "NA",
-		"name": "sibilant_cond_zero",
+		"id": "sibilant_cond_zero",
 		"summary": "Nouns ending in a sibilant or a consonant cluster including [s] mostly adopt a zero linker.",
 		"type": ["phonological"],
 		"regularity": "NA",
@@ -584,8 +573,7 @@
 		}
 	},
 	{
-		"id": "NA",
-		"name": "f_final_t",
+		"id": "f_final_t",
 		"summary": "F ending with a [t] often attach an -s- if the [t] is part of the stem (not of a suffix).",
 		"type": [""],
 		"regularity": "NA",
@@ -608,8 +596,7 @@
 		"footnotes": {}
 	},
 	{
-		"id": "NA",
-		"name": "es",
+		"id": "es",
 		"summary": "-es- occurs exclusively after a row  of one-syllable M and N that form a genitive with -(e)s- (about 30-40 nouns) and is isolated. These nouns can, however, also attach other linkers.",
 		"type": ["lexical"],
 		"regularity": "NA",
@@ -644,8 +631,7 @@
 		}
 	},
 	{
-		"id": "NA",
-		"name": "ens",
+		"id": "ens",
 		"summary": "-(e)ns- only occurs after a few M and a single N not necessarily forming a genitive with -(e)ns- and is completely isolated. These nouns can, however, also attach other linkers.",
 		"type": ["lexical"],
 		"regularity": "NA",
@@ -673,8 +659,7 @@
 		"footnotes": {}
 	},
 	{
-		"id": "NA",
-		"name": "er_plural",
+		"id": "er_plural",
 		"summary": "Nouns forming the plural with an -er with or without umlaut (these are mostly N and some M, mostly simplices and never loanwords) mostly attach both a zero linker or =er= in different cases, and this is the only class of words that can attach the latter. =er= is more probable (with counterexamples) when a plural meaning is present, in which case these nouns will indicate concrete, countable entities. When having a mass meaning, these nouns tend (with counterexamples) to attach a zero linker. For person and animal designations though, =er= is not necessarily associated with a plural meaning. Another linkers can also be rarely adopted by these nouns.",
 		"type": ["morphological", "semantic"],
 		"regularity": "NA",
@@ -720,8 +705,7 @@
 		}
 	},
 	{
-		"id": "NA",
-		"name": "f_in",
+		"id": "f_in",
 		"summary": "Derivate F with suffix -in always attach -en-. The suffix -in adopts orthographically in this case and becomes an -inn.",
 		"type": ["derivational"],
 		"regularity": "NA",
@@ -741,8 +725,7 @@
 		}
 	},
 	{
-		"id": "NA",
-		"name": "en_paradigm",
+		"id": "en_paradigm",
 		"summary": "Only nouns forming the plural with -(e)n can attach -(e)n- as a linking element with a very few exceptions.",
 		"type": ["morphological"],
 		"regularity": "NA",
@@ -759,6 +742,11 @@
 				"summary": "-(e)n- only attaches to nouns forming the plural with -(e)n."
 			},
 			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [3],
+				"summary": "-(e)n- is found only with weak nouns."
+			},
+			{
 				"ref": "nübling_szczepaniak_2013",
 				"pages": [79],
 				"summary": "-(e)n- is restricted to weak nouns and is in most cases paradigmatic."
@@ -770,8 +758,7 @@
 		"footnotes": {}
 	},
 	{
-		"id": "NA",
-		"name": "en_non_paradigm",
+		"id": "en_non_paradigm",
 		"summary": "There are a few idiosyncratic exceptions where -(e)n- occurs after nouns not forming the plural with -(e)n. These are 1) a few monosyllabic M designating male persons, animals, astronomic objects, months, and 2) polysyllabic foreign N with final stress (mostly ending with -at and -ment) that adopt -en- only when they express plurality.",
 		"type": ["lexical"],
 		"regularity": "NA",
@@ -801,8 +788,7 @@
 
 
 	{
-		"id": "NA",
-		"name": "deverba_m",
+		"id": "deverba_m",
 		"summary": "",
 		"type": [""],
 		"regularity": "NA",
@@ -820,8 +806,7 @@
 		"footnotes": {}
 	},
 	{
-		"id": "NA",
-		"name": "deverba_en",
+		"id": "deverba_en",
 		"summary": "",
 		"type": [""],
 		"regularity": "NA",
