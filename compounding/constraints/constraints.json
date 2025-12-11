@@ -65,8 +65,8 @@
 	},
 	{
 		"id": "NA",
-		"name": "final_stressed_f",
-		"summary": "Final-stressed (incl. monosyllabic) F mostly adopt -en-, a zero linker or an -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -en- is more likely, otherwise mostly a zero linker or -s- is chosen depending on further constraints.",
+		"name": "cons_final_f",
+		"summary": "Consonant-final F mostly adopt either -en-, or a zero linker, or -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -en- is more likely (especially in final-stressed F), otherwise mostly a zero linker or -s- is chosen.",
 		"type": ["morphological", "phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -77,19 +77,24 @@
 				"summary": "One-syllable F sometimes adopt -en-, sometimes a zero linker. It is possible that there is a tendency to choose by singular/plural meaning."
 			},
 			{
+				"ref": "krott_etal_2007",
+				"pages": [3],
+				"summary": "Consonant-final F adopt -en- less productively."
+			},
+			{
 				"ref": "nübling_szczepaniak_2008",
 				"pages": [3],
-				"summary": "-(e)n- sometimes has a plural meaning (especially after weak F) [1]."
+				"summary": "-(e)n- sometimes has a plural meaning (especially after weak F [1])."
 			},
 			{
 				"ref": "nübling_szczepaniak_2013",
 				"pages": [80],
-				"summary": "-en- can be added to monosyllabic or polysyllabic final-stressed weak F only when the plural interpretation is allowed, with a very few counterexamples. If the plural reading is inadequate, another linking element, mostly -s- or zero, has to be chosen."
+				"summary": "-en- attaches regularly to monosyllabic or polysyllabic final-stressed weak F when the plural interpretation is allowed, with a very few counterexamples. If the plural reading is inadequate, another linking element, mostly -s- or zero, has to be chosen."
 			},
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [94],
-				"summary": "F not ending in -e [1] do not usually attach -en-; if there is a singular interpretation, they attach a zero linker."
+				"summary": "F not ending in -e do not usually attach -en-; if there is a singular interpretation, they attach a zero linker."
 			},
 			{
 				"ref": "schäfer_2018",
@@ -101,7 +106,7 @@
 		"examples_pro": ["schrift_+en_verzeichnis", "schrift_führer", "geburt_+en_kontrolle", "geburt_+s_tag"],
 		"examples_contra": ["burg_+en_blick"],
 		"footnotes": {
-			"1": "Stress positioning not specified.",
+			"1": "Final sound (schwa/consonant) not specified.",
 			"2": "This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. All the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well."
 		}
 	},
@@ -365,6 +370,16 @@
 		"coverage": "NA",
 		"evidence_pro": [
 			{
+				"ref": "krott_etal_2007",
+				"pages": [3],
+				"summary": "Consonant-final M [1] adopt -en- less productively."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [80],
+				"summary": "Monosyllabic M and N [1] with plural interpretation sometimes attach -en-."
+			},
+			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [92],
 				"summary": "Mixed M mostly attach a zero linker or an -s-. Mixed M can also attach an -(e)n- if the second constitiuent forces its plural meaning; however, there are counterexamples where -(e)n- is attached even when no plural reading is possible."
@@ -384,7 +399,7 @@
 		"examples_pro": ["staat_+s_amt", "autor_korrektur", "bett_anzug", "ohr_wurm", "staat_+en_bund"],
 		"examples_contra": ["motor_+en_geräusch", "professor_+en_titel", "ohr_+en_schmalz", "auge_+n_lied", "interesse_+n_bereich"],
 		"footnotes": {
-			"1": "Mixed M and N ending in schwa are overtaken by other constraints (see `schwa`, `ens` > `mixed_mn`).",
+			"1": "Even though these papers do not explicitly say 'mixed M and N', the examples they provide are all mixed M and N: staat_+en_bund, bett_+en_zahl, farm_+en_verkauf.",
 			"2": "The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `es`, we modify it to -s- here."
 		}
 	},
@@ -660,7 +675,7 @@
 	{
 		"id": "NA",
 		"name": "er_plural",
-		"summary": "Nouns forming the plural with an -er with or without an umlaut (these are mostly N and some M, mostly simplices and never loanwords) mostly attach both a zero linker and =er= in different cases, and this is the only class of words that can attach the latter. =er= is more probable (with counterexamples) when a plural meaning is present, in which case these nouns will indicate concrete, countable entities. When having a mass meaning, these nouns tend (with counterexamples) to attach a zero linker. For person and animal designations though, =er= is not necessarily associated with a plural meaning. Another linkers can also be rarely adopted by these nouns.",
+		"summary": "Nouns forming the plural with an -er with or without umlaut (these are mostly N and some M, mostly simplices and never loanwords) mostly attach both a zero linker or =er= in different cases, and this is the only class of words that can attach the latter. =er= is more probable (with counterexamples) when a plural meaning is present, in which case these nouns will indicate concrete, countable entities. When having a mass meaning, these nouns tend (with counterexamples) to attach a zero linker. For person and animal designations though, =er= is not necessarily associated with a plural meaning. Another linkers can also be rarely adopted by these nouns.",
 		"type": ["morphological", "semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -673,7 +688,7 @@
 			{
 				"ref": "kürschner_2010",
 				"pages": [9, 11],
-				"summary": "=er= is always paradigmatic and is found in a few er-plural M and N. [1]"
+				"summary": "=er= only attaches to nouns forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N. [1]"
 			},
 			{
 				"ref": "nübling_szczepaniak_2008",
@@ -707,20 +722,75 @@
 	{
 		"id": "NA",
 		"name": "f_in",
-		"summary": "",
-		"type": [""],
+		"summary": "Derivate F with suffix -in always attach -en-. The suffix -in adopts orthographically in this case and becomes an -inn.",
+		"type": ["derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence_pro": [
 			{
-				"ref": "",
-				"pages": [],
-				"summary": ""
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [94],
+				"summary": "Derivate F with suffix -in always attach -en-, if they are not copulative [1]."
 			}
 		],
 		"evidence_contra": [],
-		"examples_pro": [""],
+		"examples_pro": ["lehrehrinn_+en_mentalität", "freundinn_+en_gruppe", "schülerinn_+en_rat"],
+		"examples_contra": ["königin_mutter"],
+		"footnotes": {
+			"1": "Evidence for `copula` > `f_in`."
+		}
+	},
+	{
+		"id": "NA",
+		"name": "en_paradigm",
+		"summary": "Only nouns forming the plural with -(e)n can attach -(e)n- as a linking element with a very few exceptions.",
+		"type": ["morphological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "kopf_2017",
+				"pages": [187],
+				"summary": "-(e)n- almost always occurs paradigmatically."
+			},
+			{
+				"ref": "kürschner_2010",
+				"pages": [9],
+				"summary": "-(e)n- only attaches to nouns forming the plural with -(e)n."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [79],
+				"summary": "-(e)n- is restricted to weak nouns and is in most cases paradigmatic."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["blume_+n_topf", "katze_+n_fell", "frau_+en_hand"],
 		"examples_contra": [""],
+		"footnotes": {}
+	},
+	{
+		"id": "NA",
+		"name": "en_non_paradigm",
+		"summary": "There are a few idiosyncratic exceptions where -(e)n- occurs after nouns not forming the plural with -(e)n. These are 1) a few monosyllabic M designating male persons, animals, astronomic objects, months, and 2) polysyllabic foreign N with final stress (mostly ending with -at and -ment) that adopt -en- only when they express plurality.",
+		"type": ["lexical"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [79, 80],
+				"summary": "-e(n)- occurs non-paradigmatically only in such cases when a former weak noun moved to another class and maintained its original linking element."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [77, 78, 79],
+				"summary": "All M where a non-paradigmatic -(e)n- occurs are monosyllabic and belong to the following semantic classes: male persons, animals, astronomic objects, months. All N with a non-paradigmatic -(e)n- linking element are polysyllabic foreign words with final stress (mostly ending with -at and -ment) that adopt -en- only when they express plurality."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": ["hahn_+en_kamm", "mond_+en_schein", "stern_+en_himmel", "mai_+en_nacht", "instrument_+en_bau", "dokument_+en_sammlung"],
+		"examples_contra": ["zertifikat_system"],
 		"footnotes": {}
 	},
 

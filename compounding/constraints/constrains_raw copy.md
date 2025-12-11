@@ -20,7 +20,7 @@
 
 ## 4	_Kopf 2017_. Fugenelement und Bindestrich in der Compositions-Fuge. _Sichtbare und hörbare Morphologie_
 
-* -(e)n- almost always occurs paradigmatically (187)
+
 * Occurrences of -s- in words with stressed and unstressed prefixes is almost the same (76.5% vs 78%) (190)
 * -(e)n- mostly occurs to form/maintain trochees (195)
 * -s- often occurs with derived nouns and has nothing to do with phonology (201)
@@ -29,8 +29,10 @@
 ## 5	_Krott et al. 2007_. Analogical effects on linking elements in German compounds
 
 * When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning (3)
-* Animate M ending in schwa adopt -n productively (3)
-* Consonant-final F and M adopt -en- less productively (3)
+* An -s- is inserted productively and
+automatically after certain suffixes (3)
+* An -s- is optionally after
+consonant-final masculine and some feminine words (3)
 * There is a significant analogical effect from the first constituent (7)
 * Gender is more important for -(e)n-, the inflectional class is more important for 0, rime is most relevant for -s- (9)
 
@@ -51,7 +53,6 @@
 
 ## 7	_Kürschner 2010_. Fuge-n-kitt, voeg-en-mes, fuge-masse und fog-e-ord. Fugenelemente im Deutschen, Niederländischen, Schwedischen und Dänischen
 
-* -(e)n- is regular for weak M (9)
 * Syllabic linkers form trochee where one main stress would follow another one otherwise; however, there are many exceptions (17)
 * The probability of -s- grows with the morphologic complexity of the noun (19), but it is not regular in German (22)
 * -s- doesn't occur after nouns ending with an -s (19)
@@ -93,26 +94,20 @@
 * -s- occurs after deverbatives in many cases (78)
 * -s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument (so argumental compounds), with many doubtful cases (79)
 * -s- is productive after polysyllabic words: there is only a fixed group of 30-40 monosyllabic M and N that adopt -s- (79)
-* -(e)n- is restricted to weak nouns and is in most cases paradigmatic (79)
 * -(e)n- creates or maintains trochees (79)
-* -en- occurs non-paradigmatically only in such cases when former weak nouns moved to another class (maintaining their original linking element) (79)
-* Monosyllabic M and N with plural interpretation sometimes attach -en- but not as obligatorily as F (80)
 
 
 
 ## 12	_Ortner & Müller-Bollhagen 1991_. Deutsche Wortbildung, Hauptteil 4, Substantivkomposita
 * Almost all F with -s- are polysyllabic (73)
 * -s- always occurs with F ending in -ung, -beit, -keit, -igkeit, -schaft, -ität, -ion, with a few exceptions (73, 94)
-* F ending in -ität- can adopt -en- where the plural interpretation should be preserved (74, 94)
-* All M where a non-paradigmatic -en- occurs are monosyllabic and belong to the following semantic classes: male persons, animals, astronomic objects, months (78)
-* All N with the unparadigmatic -en- linking element are polysyllabic foreign words with final stress that necessarily express plurality (78)
+* F ending in -ität- and other suffixes can adopt -en- where the plural interpretation should be preserved (74, 94, 95)
 * Derivates ending in -ing, -ling regularly attach -s- (83, 88)
 * Nouns ending in -sal extensively attach -s- (83)
 * -(e)s- sometimes occurs more frequently with compound first constituents compared to the corresponding simplex (85)
 * Polysyllable deverbative M attach -(e)s- regularly if they don't end with [s] or [ts] (89)
 * Deverbative N attach -(e)s- regularly (89)
 * Derivate N ending in -tum regularly attach -(e)s- (89)
-* Derivate F with suffix -in always attach -(e)n-, if they are not copulative (94)
 
 
 ## 13	_Schäfer 2018_. Einführung in die grammatische Beschreibung des Deutschen
