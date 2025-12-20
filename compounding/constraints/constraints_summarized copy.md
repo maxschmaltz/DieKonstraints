@@ -1,9 +1,8 @@
 # -s-
 * The acceptability of -s- irregularly grows when the first constituent is morphologically (any form of derivation of composition) / phonologically (3 or more syllables, several feet, non-trochaic, full vowel in an unstressed syllable, words with unstressed prefixes, words with stressed or semi-stressed suffixes starting with a vowel, words with semi-stressed suffixes that form a pword) complex* (NB! -s- has nothing to do with phonology | [4:201]) | [2:572], [6:106,111,112], [7:19,22], [10:10], [11:78]
     * -s- occurs more probably after nouns that bear a prefix or a suffix | [3:61], [6:107], [7:21]
-        * -s- occurs by a rule/tendentially in deverbatives ending in -en | [1:229], [6:107], [11:78], [12:89]
         * -s- occurs in a large number of M and F derivatives from prefixed verbs | [1:230]
-            * Polysyllable deverbative M attach -s- regularly if they don't end with [s] or [ts] | [12:89]
+            * Prefixed deverbative M attach -s- regularly if they don't end with [s] or [ts] | [12:89]
             * There is very strong tendency to adopt -s- after a derivative with an unstressed prefix (because they form phonologically bad words) | [10:18,19], [11:78]
             * Derivatives with stressed prefixes mostly have 0 (because they don't form phonologically bad words) | [10:18,19], [11:78]
             * Occurrences of -s- in words with stressed and unstressed prefixes is almost the same (76.5% vs 78%) | [4:190]

@@ -1,6 +1,5 @@
 ## 1	_Eisenberg 2013_. Grundriss der deutschen Grammatik. Band 1: Das Wort
 
-* -s- occurs by a rule in deverbatives ending in -en (229)
 * -s- occurs in a large number of M and F derivatives from prefixed verbs (230)
 
 
@@ -34,7 +33,6 @@ consonant-final masculine and some feminine words (3)
 
 * Morphological complexity (any form of derivation of composition) increases the probability of -s- (106, 111, 112)
 * Prefixed nouns adopt -s- more frequently than the corresponding simplexes (67.5%) (107)
-* Probability of -s- increases in deverbatives ending in -en (107)
 * -s- can signalize the head boundary (112)
 * -(e)n- points to weak nouns, even if not ending in schwa (118, 119)
 * -(e)n- is required by weak M (mostly animate) (119)
@@ -65,7 +63,6 @@ consonant-final masculine and some feminine words (3)
 * The greater the distance of the word to the phonological ideal (trochee with schwa in the second syllable), the more probable the occurrence of -s- (78)
 * First constituents with unstressed prefixes adopt -s- in 85 % of the cases (because they form phonologically bad words) (78)
 * First constituents with stressed prefixes adopt -s- in 36 % of the cases (because they don't form phonologically bad words) (78)
-* -s- occurs after deverbatives in many cases (78)
 * -s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument (so argumental compounds), with many doubtful cases (79)
 * -s- is productive after polysyllabic words: there is only a fixed group of 30-40 monosyllabic M and N that adopt -s- (79)
 
@@ -75,7 +72,6 @@ consonant-final masculine and some feminine words (3)
 * Almost all F with -s- are polysyllabic (73)
 * Derivates ending in -ing, -ling regularly attach -s- (83, 88)
 * Polysyllable deverbative M attach -(e)s- regularly if they don't end with [s] or [ts] (89)
-* Deverbative N attach -(e)s- regularly (89)
 
 
 ## 13	_Schäfer 2018_. Einführung in die grammatische Beschreibung des Deutschen

@@ -254,7 +254,7 @@
 	},
 	{
 		"id": "null_plural",
-		"summary": "Derivatives forming the plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker with a few exceptions unless they are a deverbative, in which case they mostly attach -s-. Simplex M and N, as well as any F forming the plural with a zero ending attach a zero linker in majority of cases.",
+		"summary": "Derivatives forming the plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker with a few exceptions unless they are a deverbative, in which case they always attach -s-. Simplex M and N, as well as any F forming the plural with a zero ending attach a zero linker in majority of cases.",
 		"type": ["morphological", "derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -562,14 +562,14 @@
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [89, 109],
-				"summary": "Most nouns ending with [s], [ʃ], [ts], or [st] adopt a zero linker. In particular, polysyllabic deverbative M do not attach -s- as they regularly do if they end with a sibilant or [ts] [1]."
+				"summary": "Most nouns ending with [s], [ʃ], [ts], or [st] adopt a zero linker. In particular, prefixed deverbative M attach an -s- regularly unless they end with a sibilant or [ts] [1]."
 			}
 		],
 		"evidence_contra": [],
 		"examples_pro": ["gefäß_system", "notiz_buch", "fisch_öl", "herbst_anfang"],
 		"examples_contra": [""],
 		"footnotes": {
-			"1": "Evidence for `sibilant_s` > `deverba_m`."
+			"1": "Evidence for `sibilant_cond_zero` > `deverba_m`."
 		}
 	},
 	{
@@ -819,7 +819,7 @@
 			},
 			{
 				"ref": "nübling_szczepaniak_2008",
-				"pages": [10, 20, 24],
+				"pages": [10, 20, 23],
 				"summary": "-s- occurs regularly after suffixes -ung, -heit, -keit, -igkeit, -sal, -schaft, -ling, -ität, -ion [1]; derivations in -um also tend to adopt -s- [1]."
 			},
 			{
@@ -854,7 +854,7 @@
 			}
 		],
 		"evidence_contra": [],
-		"examples_pro": [""],
+		"examples_pro": ["gesundheit_+s_amt", "gesellschaft_+s_politik", "kommunikation_+s_mittel", "schicksal_+s_drama", "rarität_+s_wert", "rarität_+en_sammlung"],
 		"examples_contra": ["minderheit_+en_recht"],
 		"footnotes": {
 			"1": "Explanation: these are (semi-)stressed suffixes that form phonologically bad words. -s- is therefore used to mark the boundary of the phonological word ending with such a suffix.",
@@ -864,30 +864,47 @@
 			"5": "Level of regularity not mentioned."
 		}
 	},
-
-
-
-
-
-
 	{
 		"id": "deverba_en",
-		"summary": "",
-		"type": [""],
+		"summary": " -s- occurs regularly in deverbatives ending in -en",
+		"type": ["derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence_pro": [
 			{
-				"ref": "",
-				"pages": [],
-				"summary": ""
+				"ref": "eisenberg_2013",
+				"pages": [230],
+				"summary": "-s- occurs by a rule in deverbatives ending in -en."
+			},
+			{
+				"ref": "kürschner_2005",
+				"pages": [107],
+				"summary": "Deverbatives ending in -en build compounds with -s-."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [78],
+				"summary": "Deverbatives ending in -en always attach -s-."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [89],
+				"summary": "Deverbative N with suffix -en regularly attach -s-."
 			}
 		],
 		"evidence_contra": [],
-		"examples_pro": [""],
+		"examples_pro": ["leben_+s_mittel", "essen_+s_gewohnheit", "schlaf_+en_zeit"],
 		"examples_contra": [""],
-		"footnotes": {}
+		"footnotes": {
+			"1": "Which must be interpreted as a marker of the nominal status of the first constituent."
+		}
 	},
+
+
+
+
+
+
 	{
 		"id": "deverba_m",
 		"summary": "",
