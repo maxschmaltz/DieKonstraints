@@ -1,8 +1,3 @@
-## 1	_Eisenberg 2013_. Grundriss der deutschen Grammatik. Band 1: Das Wort
-
-* -s- occurs in a large number of M and F derivatives from prefixed verbs (230)
-
-
 ## 2	_Fuhrhop & Kürschner 2015_. Linking elements in Germanic. _Word-Formation. An International Handbook of the Languages of Europe_
 
 * The acceptability of -s- grows when the first constituent is morphologically / phonologically complex (572)
@@ -15,8 +10,6 @@
 
 ## 4	_Kopf 2017_. Fugenelement und Bindestrich in der Compositions-Fuge. _Sichtbare und hörbare Morphologie_
 
-
-* Occurrences of -s- in words with stressed and unstressed prefixes is almost the same (76.5% vs 78%) (190)
 * -s- often occurs with derived nouns and has nothing to do with phonology (201)
 
 
@@ -52,17 +45,12 @@ consonant-final masculine and some feminine words (3)
 ## 10	_Nübling & Szczepaniak 2008_. On the way from morphology to phonology: German linking elements and the role of the phonological word
 
 * The occurrence of the linking -s- correlates with the phonological quality of the first constituent (10)
-* There is an observable tendency to insert -s- before a stem designating a person (11)
-* There is very strong tendency to adopt -s- after a derivative with an unstressed prefix (because they form phonologically bad words) (18, 19)
-* Derivatives with stressed prefixes mostly have 0 (because they don't form phonologically bad words) (18)
 * There is a strong tendency for the linking -s- to attach to pwords starting with unstressed syllables (21)
 
 
 ## 11	_Nübling & Szczepaniak 2013_. Linking elements in German Origin, Change, Functionalization. _Morphology_
 
 * The greater the distance of the word to the phonological ideal (trochee with schwa in the second syllable), the more probable the occurrence of -s- (78)
-* First constituents with unstressed prefixes adopt -s- in 85 % of the cases (because they form phonologically bad words) (78)
-* First constituents with stressed prefixes adopt -s- in 36 % of the cases (because they don't form phonologically bad words) (78)
 * -s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument (so argumental compounds), with many doubtful cases (79)
 * -s- is productive after polysyllabic words: there is only a fixed group of 30-40 monosyllabic M and N that adopt -s- (79)
 

@@ -5,7 +5,7 @@
 		"type": ["default"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "eisenberg_2013",
 				"pages": [226],
@@ -57,7 +57,6 @@
 				"summary": "Zero linker prevails in nominal compounds."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["land_kreis", "haus_tür", "stadt_mauer"],
 		"examples_contra": ["land_+es_regierung", "haus_+=er_block", "stadt_+=e_tag"],
 		"footnotes": {}
@@ -68,7 +67,7 @@
 		"type": ["morphological", "phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "eisenberg_2013",
 				"pages": [229],
@@ -100,7 +99,6 @@
 				"summary": "-(e)n- exhibits a very weak positive effect on plural reading (with non-significant p-value) [2]."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["schrift_+en_verzeichnis", "schrift_führer", "geburt_+en_kontrolle", "geburt_+s_tag"],
 		"examples_contra": ["burg_+en_blick"],
 		"footnotes": {
@@ -114,7 +112,7 @@
 		"type": ["morphological", "phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "eisenberg_2013",
 				"pages": [229],
@@ -156,7 +154,6 @@
 				"summary": "F ending in schwa virtually always occur with -n-."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["biene_+n_zucht", "suppe_+n_schüssel", "fläche_+e_maß", "hitze_welle", "abgabe_soll", "abgabe_+n_ordnung", "sorge_pflicht", "auge_+n_lied", "interesse_+n_bereich"],
 		"examples_contra": ["kohle_filter", "gebäude_komplex"],
 		"footnotes": {
@@ -172,7 +169,7 @@
 		"type": ["semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "koliopoulou_2014",
 				"pages": [63, 64],
@@ -189,7 +186,6 @@
 				"summary": "Copulative compounds always have a zero linker. In particular, weak M as well as F ending with suffix -in always adopt -en- unless they are copulative, in which case they have a zero linker [2]."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["dichter_componist", "bett_sofa", "königin_mutter"],
 		"examples_contra": [""],
 		"footnotes": {
@@ -203,7 +199,7 @@
 		"type": ["phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "kürschner_2005",
 				"pages": [110],
@@ -215,7 +211,6 @@
 				"summary": "Nouns ending in a full vowel occur with a zero linker."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["auto_bahn", "uhu_paar", "gummi_bär"],
 		"examples_contra": ["uhu_+s_nest"],
 		"footnotes": {
@@ -228,7 +223,7 @@
 		"type": ["lexical"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "nübling_szczepaniak_2008",
 				"pages": [11],
@@ -245,7 +240,6 @@
 				"summary": "In compounds that have a doubful -s- and that are used both in common and specialized language, technical terms usually omit the -s- while the common language keeps it."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["erbschaft_steuer", "herz_schlagen", "schaden_ersatz"],
 		"examples_contra": ["schaden_+s_ersatz"],
 		"footnotes": {
@@ -258,14 +252,13 @@
 		"type": ["morphological", "derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [56, 82, 88, 106],
 				"summary": "Derivatives forming the plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker unless they are a deverbative, in which case they mostly attach -s- [1]. Simplex M and N forming the plural with a zero ending attach a zero linker in 90% of cases. F forming the plural with a zero ending attach a zero linker in 85% of cases."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["reiter_schwert", "gürtel_schnalle", "brötchen_geber", "gebäude_komplex"],
 		"examples_contra": ["reiter_+s_mann", "bauer_+s_leute", "orden_+s_bruder"],
 		"footnotes": {
@@ -278,7 +271,7 @@
 		"type": ["lexical"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "nübling_szczepaniak_2008",
 				"pages": [11],
@@ -290,7 +283,6 @@
 				"summary": "Compounds with the second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' can insert -s- or -es-, if the compound designates a person, even when the first constituent would otherwise attach a zero linker."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["reiter_+s_mann", "bauer_+s_frau", "lehrer_+es_tochter", "bäcker_+s_leute"],
 		"examples_contra": [""],
 		"footnotes": {}
@@ -301,7 +293,7 @@
 		"type": ["morphological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "eisenberg_2013",
 				"pages": [227],
@@ -333,7 +325,6 @@
 				"summary": "s-plural nouns never attach -s-."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["balkon_möbel", "hotel_kette", "bob_bahn"],
 		"examples_contra": [""],
 		"footnotes": {}
@@ -344,14 +335,13 @@
 		"type": ["derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [83, 107],
 				"summary": "Nouns with suffixes -bold, -nis, -rich, -at, -al, -ik, also stressed -ei, -ie, -ur usually attach a zero linker."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["erlaubnis_schein", "plakat_kunst", "kultur_wissenschaft", "kosmetik_industrie"],
 		"examples_contra": [""],
 		"footnotes": {}
@@ -362,7 +352,7 @@
 		"type": ["morphological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "krott_etal_2007",
 				"pages": [3],
@@ -389,7 +379,6 @@
 				"summary": "Mixed M and N often occur with -(e)n-."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["staat_+s_amt", "autor_korrektur", "bett_anzug", "ohr_wurm", "staat_+en_bund"],
 		"examples_contra": ["motor_+en_geräusch", "professor_+en_titel", "ohr_+en_schmalz", "auge_+n_lied", "interesse_+n_bereich"],
 		"footnotes": {
@@ -403,7 +392,7 @@
 		"type": ["morphological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [83, 106],
@@ -415,7 +404,6 @@
 				"summary": "Linker = exhibits moderate effect on plural reading."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["vater_land", "apfel_baum", "kloster_kirche", "mutter_sprache", "bruder_+=_gemeinde", "mutter_+=_zentrum"],
 		"examples_contra": [""],
 		"footnotes": {}
@@ -426,7 +414,7 @@
 		"type": ["morphological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "eisenberg_2013",
 				"pages": [228],
@@ -448,7 +436,6 @@
 				"summary": "=e= exhibits moderate effect on plural reading."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["hand_fläche", "frucht_joghurt", "arzt_praxis", "hand_+=e_druck", "arzt_+=e_streik"],
 		"examples_contra": ["baum_gruppe", "zug_verkehr"],
 		"footnotes": {
@@ -461,7 +448,7 @@
 		"type": ["morphological", "semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "eisenberg_2013",
 				"pages": [228],
@@ -493,7 +480,6 @@
 				"summary": "-e- exhibits insignificant effect on plural reading [2]."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["tisch_decke", "projekt_gruppe", "projekt_+e_macherei", "hund_+e_leine", "swein_+e_stall"],
 		"examples_contra": ["tag_+e_gericht", "pilz_sammler", "hund_+s_stern", "schwein_kram"],
 		"footnotes": {
@@ -507,7 +493,7 @@
 		"type": ["phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "fuhrhop_kürschner_2015",
 				"pages": [572],
@@ -539,7 +525,6 @@
 				"summary": "-s- never occurs after a full vowel except for in uhu_+s_nest [2]."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["ort_+s_tarif", "arbeit_+s_tag", "himmel_reich", "uhu_paar"],
 		"examples_contra": ["arbeit_geber", "heil_+s_lehre", "uhu_+s_nest"],
 		"footnotes": {
@@ -553,7 +538,7 @@
 		"type": ["phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "kürschner_2010",
 				"pages": [19],
@@ -565,11 +550,10 @@
 				"summary": "Most nouns ending with [s], [ʃ], [ts], or [st] adopt a zero linker. In particular, prefixed deverbative M attach an -s- regularly unless they end with a sibilant or [ts] [1]."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["gefäß_system", "notiz_buch", "fisch_öl", "herbst_anfang"],
 		"examples_contra": [""],
 		"footnotes": {
-			"1": "Evidence for `sibilant_cond_zero` > `deverba_m`."
+			"1": "Evidence for `sibilant_cond_zero` > `prefix_deverba`."
 		}
 	},
 	{
@@ -578,7 +562,7 @@
 		"type": [""],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "nübling_szczepaniak_2013",
 				"pages": [77],
@@ -590,7 +574,6 @@
 				"summary": "-s- occurs regularly after polysyllabic F ending with [t]."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["arbeit_+s_tag", "heirat_+s_antrag", "zukunft_+s_angst"],
 		"examples_contra": ["arbeit_geber", "schuld_gefühl", "sicht_schutz"],
 		"footnotes": {}
@@ -601,7 +584,7 @@
 		"type": ["lexical"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "eisenberg_2013",
 				"pages": [229],
@@ -623,7 +606,6 @@
 				"summary": "There is only a fixed number of about 30 M and N that adopt -es-."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["bund_+es_tag", "kind_+es_alter", "tag_+es_schau", "land_+es_regierung"],
 		"examples_contra": ["kind_+er_garten", "land_kreis", "tag_blatt"],
 		"footnotes": {
@@ -636,7 +618,7 @@
 		"type": ["lexical"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "nübling_szczepaniak_2013",
 				"pages": [82],
@@ -653,7 +635,6 @@
 				"summary": "-(e)ns- is idiosyncratic and rare and is used only with a few nouns."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["schmerz_+ens_geld", "name_+ens_tag", "herz_+ens_angst"],
 		"examples_contra": ["schmerz_grenze", "name_+n_buch", "herz_leiden"],
 		"footnotes": {}
@@ -664,7 +645,7 @@
 		"type": ["morphological", "semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "eisenberg_2013",
 				"pages": [229],
@@ -696,7 +677,6 @@
 				"summary": "=er= with no umlauting exhibits moderate, and =er= with umlauting exhibits significantly strong effect on plural reading."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["rad_kasten", "rad_+er_wechsel", "buch_deckel", "buch_+=er_regal", "kind_+=er_jacke", "rind_+=er_brust"],
 		"examples_contra": ["kind_+es_alter", "buch_handel", "bild_band"],
 		"footnotes": {
@@ -710,14 +690,13 @@
 		"type": ["derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [94],
 				"summary": "Derivate F with suffix -in always attach -en-, if they are not copulative [1]."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["lehrehrinn_+en_mentalität", "freundinn_+en_gruppe", "schülerinn_+en_rat"],
 		"examples_contra": ["königin_mutter"],
 		"footnotes": {
@@ -730,7 +709,7 @@
 		"type": ["morphological"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "kopf_2017",
 				"pages": [187],
@@ -752,7 +731,6 @@
 				"summary": "-(e)n- is restricted to weak nouns and is in most cases paradigmatic."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["blume_+n_topf", "katze_+n_fell", "frau_+en_hand"],
 		"examples_contra": [""],
 		"footnotes": {}
@@ -763,7 +741,7 @@
 		"type": ["lexical"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "nübling_szczepaniak_2013",
 				"pages": [79, 80],
@@ -775,7 +753,6 @@
 				"summary": "All M where a non-paradigmatic -(e)n- occurs are monosyllabic and belong to the following semantic classes: male persons, animals, astronomic objects, months. All N with a non-paradigmatic -(e)n- linking element are polysyllabic foreign words with final stress (mostly ending with -at and -ment) that adopt -en- only when they express plurality."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["hahn_+en_kamm", "mond_+en_schein", "stern_+en_himmel", "mai_+en_nacht", "instrument_+en_bau", "dokument_+en_sammlung"],
 		"examples_contra": ["zertifikat_system"],
 		"footnotes": {}
@@ -786,7 +763,7 @@
 		"type": ["derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "eisenberg_2013",
 				"pages": [230],
@@ -853,7 +830,6 @@
 				"summary": "-s- regularly occurs after suffixes -heit, -keit, -ung, -ling, -schaft [3]."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["gesundheit_+s_amt", "gesellschaft_+s_politik", "kommunikation_+s_mittel", "schicksal_+s_drama", "rarität_+s_wert", "rarität_+en_sammlung"],
 		"examples_contra": ["minderheit_+en_recht"],
 		"footnotes": {
@@ -870,7 +846,7 @@
 		"type": ["derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "eisenberg_2013",
 				"pages": [230],
@@ -892,11 +868,51 @@
 				"summary": "Deverbative N with suffix -en regularly attach -s-."
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": ["leben_+s_mittel", "essen_+s_gewohnheit", "schlaf_+en_zeit"],
 		"examples_contra": [""],
 		"footnotes": {
 			"1": "Which must be interpreted as a marker of the nominal status of the first constituent."
+		}
+	},
+	{
+		"id": "prefix_deverba",
+		"summary": "There is a strong tendency to adopt -s- after prefixed deverbatives, especially when the prefix is stressed.",
+		"type": ["derivational"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence": [
+			{
+				"ref": "eisenberg_2013",
+				"pages": [230],
+				"summary": "-s- occurs in a large number of M and F derivatives from prefixed verbs [1]."
+			},
+			{
+				"ref": "kopf_2017",
+				"pages": [190],
+				"summary": "Occurrences of -s- in words with stressed and unstressed prefixes is almost the same: 76.5% vs 78%, respectively."
+			},
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [18, 19],
+				"summary": "Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [3]."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [78],
+				"summary": "Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [3]."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [89],
+				"summary": "Prefixed deverbative M attach an -s- regularly unless they end with a sibilant or [ts] [2]."
+			}
+		],
+		"examples_pro": ["anspruch_+s_haltung", "eintrag_+s_frist", "bedarf_+s_fall", "verfall_+s_datum"],
+		"examples_contra": ["anruf_beantworter", "überfall_kommando", "bestand_teil"],
+		"footnotes": {
+			"1": "All the examples provided in this source have stressed prefixes.",
+			"2": "Evidence for `sibilant_cond_zero` > `prefix_deverba`.",
+			"3": "The results of `nübling_szczepaniak_2008` (provided again in `nübling_szczepaniak_2013`) are based on a corpus study but are however subject to questions because of the methodology used. First of all, only 21 nouns with unstressed and 19 nouns with stressed prefixes were considered for further combinations, which is a very small sample. Even though the number of resulting compounds was very large, the fact that the same nouns tend to occur with the same linkers (see TODO) discards the representativeness of the large sample size. Furthermore, many of the prefixed nouns were derivates from the same verb (e.g. 'Ansicht', 'Aufsicht', 'Übersicht') which again reduces the diversity of the sample. Furthermore, no specific examples were provided in the paper, whereas further literature suggest several counterexamples to the claim about derivatives with stressed prefixes. Hence, we believe the absolute numbers provided in `nübling_szczepaniak_2008` might not be very reliable. However, these findings may suggest a general trend that prefixed deverbatives with unstressed prefixes tend to attach -s- more often than those with stressed prefixes: verfall_+s_datum vs überfall_kommando."
 		}
 	},
 
@@ -911,14 +927,13 @@
 		"type": [""],
 		"regularity": "NA",
 		"coverage": "NA",
-		"evidence_pro": [
+		"evidence": [
 			{
 				"ref": "",
 				"pages": [],
 				"summary": ""
 			}
 		],
-		"evidence_contra": [],
 		"examples_pro": [""],
 		"examples_contra": [""],
 		"footnotes": {}
