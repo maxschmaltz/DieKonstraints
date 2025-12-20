@@ -1,7 +1,5 @@
 ## 1	_Eisenberg 2013_. Grundriss der deutschen Grammatik. Band 1: Das Wort
 
-* All weak M adopt -(e)n- by a rule no matter or their complexity and origin (228)
-* -s- occurs regularly after suffixes -keit, -heit, -igkeit, -tum, -schaft, -ung, -sal, -ling (because they form phonologically bad words) (229)
 * -s- occurs by a rule in deverbatives ending in -en (229)
 * -s- occurs in a large number of M and F derivatives from prefixed verbs (230)
 
@@ -9,13 +7,11 @@
 ## 2	_Fuhrhop & Kürschner 2015_. Linking elements in Germanic. _Word-Formation. An International Handbook of the Languages of Europe_
 
 * The acceptability of -s- grows when the first constituent is morphologically / phonologically complex (572)
-* -s- occurs regularly after suffixes -heit, -ung, -ling, -schaft, -tum, -ität (because they form phonologically bad words) (572)
 
 
 ## 3	_Koliopoulou 2014_. How close to syntax are compounds? Evidence from the linking element in German and Modern Greek compounds. _Rivista di Linguistica_
 
 * -s- occurs after nouns that bears a prefix or a suffix (61)
-* -s- occurs after suffixes -heit, -keit, -igkeit, -ling and -ung (because it reopens the stem) (61)
 
 
 ## 4	_Kopf 2017_. Fugenelement und Bindestrich in der Compositions-Fuge. _Sichtbare und hörbare Morphologie_
@@ -28,8 +24,6 @@
 ## 5	_Krott et al. 2007_. Analogical effects on linking elements in German compounds
 
 * When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning (3)
-* An -s- is inserted productively and
-automatically after certain suffixes (3)
 * An -s- is optionally after
 consonant-final masculine and some feminine words (3)
 * There is a significant analogical effect from the first constituent (7)
@@ -40,7 +34,6 @@ consonant-final masculine and some feminine words (3)
 
 * Morphological complexity (any form of derivation of composition) increases the probability of -s- (106, 111, 112)
 * Prefixed nouns adopt -s- more frequently than the corresponding simplexes (67.5%) (107)
-* -heit, -keit, -ling, -ung, -schaft always require -s- (because it reopens the stem), probability of -s- increases (level of regularity not mentioned) after suffixes -tum, -ion, -tät (107, 115)
 * Probability of -s- increases in deverbatives ending in -en (107)
 * -s- can signalize the head boundary (112)
 * -(e)n- points to weak nouns, even if not ending in schwa (118, 119)
@@ -52,11 +45,7 @@ consonant-final masculine and some feminine words (3)
 
 
 * The probability of -s- grows with the morphologic complexity of the noun (19), but it is not regular in German (22)
-* -s- doesn't occur after nouns ending with an -s (19)
-* -s- regularly occurs after suffixes -heit, -schaft, -ling, -tum, -ung (20)
-* -s- occurs (level of regularity not mentioned) after suffixes -ität, -ion (21)
 * Many simplexes that don't attach -s-, do so after prefixation (21)
-* -s- occurs (level of regularity not mentioned) at the end of a compound constituent to mark the correct segmentation (22)
 * In simplexes, -s- occurs only in M and N except for a few cases; in F, -s- occurs only with morphological complexity (23)
 * -s- marks phonologically bad words (24)
 * Many simplexes with an -s- are high frequent tokens (25)
@@ -65,17 +54,14 @@ consonant-final masculine and some feminine words (3)
 ## 10	_Nübling & Szczepaniak 2008_. On the way from morphology to phonology: German linking elements and the role of the phonological word
 
 * The occurrence of the linking -s- correlates with the phonological quality of the first constituent (10)
-* -s- occurs regularly after suffixes -ung, -heit, -keit, -igkeit, -sal, -schaft, -ling, -ität, -ion (because they form phonologically bad words) (10, 20)
 * There is an observable tendency to insert -s- before a stem designating a person (11)
 * There is very strong tendency to adopt -s- after a derivative with an unstressed prefix (because they form phonologically bad words) (18, 19)
 * Derivatives with stressed prefixes mostly have 0 (because they don't form phonologically bad words) (18)
-* Some derivations with -um also tend to adopt -s- (because they form phonologically bad words) (24)
 * There is a strong tendency for the linking -s- to attach to pwords starting with unstressed syllables (21)
 
 
 ## 11	_Nübling & Szczepaniak 2013_. Linking elements in German Origin, Change, Functionalization. _Morphology_
 
-* -s- regularly appears after suffixes -heit, -keit, -igkeit -schaft, -ung, -ion, and -ität (because they form a phonologically bad words) (77)
 * The greater the distance of the word to the phonological ideal (trochee with schwa in the second syllable), the more probable the occurrence of -s- (78)
 * First constituents with unstressed prefixes adopt -s- in 85 % of the cases (because they form phonologically bad words) (78)
 * First constituents with stressed prefixes adopt -s- in 36 % of the cases (because they don't form phonologically bad words) (78)
@@ -87,35 +73,23 @@ consonant-final masculine and some feminine words (3)
 
 ## 12	_Ortner & Müller-Bollhagen 1991_. Deutsche Wortbildung, Hauptteil 4, Substantivkomposita
 * Almost all F with -s- are polysyllabic (73)
-* -s- always occurs with F ending in -ung, -beit, -keit, -igkeit, -schaft, -ität, -ion, with a few exceptions (73, 94)
-* F ending in -ität- and other suffixes can adopt -en- where the plural interpretation should be preserved (74, 94, 95)
 * Derivates ending in -ing, -ling regularly attach -s- (83, 88)
-* Nouns ending in -sal extensively attach -s- (83)
 * Polysyllable deverbative M attach -(e)s- regularly if they don't end with [s] or [ts] (89)
 * Deverbative N attach -(e)s- regularly (89)
-* Derivate N ending in -tum regularly attach -(e)s- (89)
 
 
 ## 13	_Schäfer 2018_. Einführung in die grammatische Beschreibung des Deutschen
 
 * Strong and mixed M and N often take -(e)s- (229)
-* Nouns with suffixes -heit, -ung, -tum etc. a strong tendency to adopt -s- (229)
 * When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter usually adopts its plural ending (230)
 * Linkers identical to the plural ending are tendentially associated with plural meaning (231)
 
 
 ## 14	_Schäfer & Pankratz 2018_. The plural interpretability of German linking elements
 
-* Derivates with suffixes -ung, -heit, -tum etc. have a strong tendency to occur with an -s linking element (8)
 * Simplex M and N often take -(e)s- (8)
 
 
 ## 16	_Schlücker 2022_. Compounding and Linking Elements in Germanic
 
-* -s- occurs with -schaft, -heit, -ung, -tum, -tät, -ion (level of regularity not mentioned) (because it reopens the stem) (19)
 * Linkers identical to the plural ending can be associated with plural meaning (level of regularity not mentioned) (20)
-
-
-## 17	_Wegener 2003_. Entstehung und Funktion der Fugenelemente im Deutschen, oder: warum wir keine Autosbahn haben
-
-* -s- regularly occurs after suffixes -heit, -keit, -ung, -ling, -schaft (because it reopens the stem) (448)

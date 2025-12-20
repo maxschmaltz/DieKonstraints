@@ -1,9 +1,6 @@
 # -s-
 * The acceptability of -s- irregularly grows when the first constituent is morphologically (any form of derivation of composition) / phonologically (3 or more syllables, several feet, non-trochaic, full vowel in an unstressed syllable, words with unstressed prefixes, words with stressed or semi-stressed suffixes starting with a vowel, words with semi-stressed suffixes that form a pword) complex* (NB! -s- has nothing to do with phonology | [4:201]) | [2:572], [6:106,111,112], [7:19,22], [10:10], [11:78]
-    * Almost all F with -s- are polysyllabic | [12:73]
     * -s- occurs more probably after nouns that bear a prefix or a suffix | [3:61], [6:107], [7:21]
-        * -s- occurs regularly after suffixes -keit, -heit, -igkeit, -schaft, -ung, -sal, -ing, -ling and tendentially after -tum, -ion, -(i)tät (because they form phonologically bad words / because it reopens the stem) | [1:229], [2:572], [3:61], [5:3], [6:107,115], [7:20,21], [10:10,20,24], [11:77], [12:73,83,88,89,94], [13:229], [14:8], [16:19], [17:448]
-            * F ending in -(i)tät- can adopt -en- where the plural interpretation should be preserved | [12:74,94]
         * -s- occurs by a rule/tendentially in deverbatives ending in -en | [1:229], [6:107], [11:78], [12:89]
         * -s- occurs in a large number of M and F derivatives from prefixed verbs | [1:230]
             * Polysyllable deverbative M attach -s- regularly if they don't end with [s] or [ts] | [12:89]
@@ -13,6 +10,7 @@
     * -s- occurs (level of regularity not mentioned) after a complex syllable boundary | [7:22]
     * There is a strong tendency for the linking -s- to attach to pwords starting with unstressed syllables | [10:21]
 * In simplexes, -s- occurs only in M and N except for a few cases; in F, -s- occurs only with morphological complexity | [7:23]
+* Almost all F with -s- are polysyllabic | [12:73]
 * Many simplexes with an -s- are high frequent tokens | [7:25]
 * -s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument (so argumental compounds), with many doubtful cases | [11:79]
 * Simplex M and N often take -s-/-es- [14:8]

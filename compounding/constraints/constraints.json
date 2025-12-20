@@ -148,7 +148,7 @@
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [83, 92, 93],
-				"summary": "Nouns (especially weak F) ending in schwa mostly adopt -n-. However, deadjective F ending in a schwa suffix have a zero linker or -n- in about the same number of cases. Deverbative F ending in schwa suffix  mostly have a zero linker; they can attach an -n- though when the first constituent has a plural reading. [3, 4]"
+				"summary": "Nouns (especially weak F) ending in schwa mostly adopt -n-. However, deadjective F ending in a schwa suffix have a zero linker or -n- in about the same number of cases. Deverbative F ending in schwa suffix  mostly have a zero linker; they can attach an -n- though when the first constituent has a plural reading [3, 4]."
 			},
 			{
 				"ref": "schäfer_pankratz_2018",
@@ -176,7 +176,7 @@
 			{
 				"ref": "koliopoulou_2014",
 				"pages": [63, 64],
-				"summary": "The probability of a linking element to appear decreases as the compound type becomes closer to syntax: determinative compounds adopt explicit linkers non-systematically; copulative compounds with additive relations can adopt explicit linkers, but less frequently; copulative compounds with appositive relations systematically adopt a zero linker. [1]"
+				"summary": "The probability of a linking element to appear decreases as the compound type becomes closer to syntax: determinative compounds adopt explicit linkers non-systematically; copulative compounds with additive relations can adopt explicit linkers, but less frequently; copulative compounds with appositive relations systematically adopt a zero linker [1]."
 			},
 			{
 				"ref": "neef_borgwaldt_2012",
@@ -186,7 +186,7 @@
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [57, 91, 94, 109],
-				"summary": "Copulative compounds always have a zero linker. In particular, weak M as well as F ending with suffix -in always adopt -en- unless they are copulative, in which case they have a zero linker. [2]"
+				"summary": "Copulative compounds always have a zero linker. In particular, weak M as well as F ending with suffix -in always adopt -en- unless they are copulative, in which case they have a zero linker [2]."
 			}
 		],
 		"evidence_contra": [],
@@ -237,7 +237,7 @@
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [98],
-				"summary": "If 'Herz' is used in a medical context, it adopts a zero linker. [1]"
+				"summary": "If 'Herz' is used in a medical context, it adopts a zero linker [1]."
 			},
 			{
 				"ref": "schlücker_2023",
@@ -249,7 +249,7 @@
 		"examples_pro": ["erbschaft_steuer", "herz_schlagen", "schaden_ersatz"],
 		"examples_contra": ["schaden_+s_ersatz"],
 		"footnotes": {
-			"1": "This finding is provided as an example of the constraint."
+			"1": "This finding is provided as an example for the constraint."
 		}
 	},
 	{
@@ -610,7 +610,7 @@
 			{
 				"ref": "kürschner_2010",
 				"pages": [11],
-				"summary": "-es- is found in a few one-syllable M and N. [1]"
+				"summary": "-es- is found in a few one-syllable M and N [1]."
 			},
 			{
 				"ref": "nübling_szczepaniak_2008",
@@ -673,7 +673,7 @@
 			{
 				"ref": "kürschner_2010",
 				"pages": [9, 11],
-				"summary": "=er= only attaches to nouns forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N. [1]"
+				"summary": "=er= only attaches to nouns forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N [1]."
 			},
 			{
 				"ref": "nübling_szczepaniak_2008",
@@ -688,7 +688,7 @@
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [98, 99, 108],
-				"summary": "Most er-plural nouns attach both =er= and a zero linker in different cases, often depending on plural interpretation (80% singular meaning cases have a zero linker). =er= is always paradigmatic and attaches mostly to N and to some M, mostly simplexes, no loanwords. [2]"
+				"summary": "Most er-plural nouns attach both =er= and a zero linker in different cases, often depending on plural interpretation (80% singular meaning cases have a zero linker). =er= is always paradigmatic and attaches mostly to N and to some M, mostly simplexes, no loanwords [2]."
 			},
 			{
 				"ref": "schäfer_pankratz_2018",
@@ -780,7 +780,90 @@
 		"examples_contra": ["zertifikat_system"],
 		"footnotes": {}
 	},
-
+	{
+		"id": "suffixes_cond_s",
+		"summary": "-s- occurs regularly after suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling and tendentially after -(t)um, -ion. Suffix -(i)tät also regularly attaches -s- unless there is a plural interpretation, in which case -en- is preferred.",
+		"type": ["derivational"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence_pro": [
+			{
+				"ref": "eisenberg_2013",
+				"pages": [230],
+				"summary": "-s- occurs regularly after suffixes -(ig)keit, -heit, -tum, -schaft, -ung, -sal, -ling [1, 2]."
+			},
+			{
+				"ref": "fuhrhop_kürschner_2015",
+				"pages": [572],
+				"summary": "-s- occurs regularly after suffixes -heit, -ung, -ling, -schaft, -tum, -ität [2]."
+			},
+			{
+				"ref": "koliopoulou_2014",
+				"pages": [61],
+				"summary": "-s- occurs after suffixes -heit, -keit, -igkeit, -ling and -ung [2, 3]."
+			},
+			{
+				"ref": "krott_etal_2007",
+				"pages": [3],
+				"summary": "An -s- is inserted productively and automatically after certain suffixes [4]."
+			},
+			{
+				"ref": "kürschner_2005",
+				"pages": [107, 115],
+				"summary": "Suffixes -heit, -keit, -ling, -ung, -schaft always require -s- [2, 3]. The probability of -s- increases [5] after suffixes -tum, -ion, -tät."
+			},
+			{
+				"ref": "kürschner_2010",
+				"pages": [20, 21],
+				"summary": "-s- regularly occurs after suffixes -heit, -schaft, -ling, -tum, -ung [3]. -s- also occurs [5] after suffixes -ität, -ion."
+			},
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [10, 20, 24],
+				"summary": "-s- occurs regularly after suffixes -ung, -heit, -keit, -igkeit, -sal, -schaft, -ling, -ität, -ion [1]; derivations in -um also tend to adopt -s- [1]."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [77],
+				"summary": "-s- regularly appears after suffixes -heit, -keit, -igkeit -schaft, -ung, -ion, and -ität [1]."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [73, 83, 88, 89, 94, 95],
+				"summary": "-s- regularly occurs with F ending in -ung, -beit, -keit, -igkeit, -schaft, -ität, -ion, -tum with a few exceptions, extensively occurs after -sal. Those ending in -ität- can adopt -en- where the plural interpretation should be preserved."
+			},
+			{
+				"ref": "schäfer_2018",
+				"pages": [229],
+				"summary": "Nouns with suffixes -heit, -ung, -tum etc. a strong tendency to adopt -s-."
+			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [8],
+				"summary": "Derivates with suffixes -ung, -heit, -tum etc. have a strong tendency to occur with an -s- linking element."
+			},
+			{
+				"ref": "schlücker_2023",
+				"pages": [19],
+				"summary": "-s- occurs with -schaft, -heit, -ung, -tum, -tät, -ion [3, 5]."
+			},
+			{
+				"ref": "wegener_2003",
+				"pages": [448],
+				"summary": "-s- regularly occurs after suffixes -heit, -keit, -ung, -ling, -schaft [3]."
+			}
+		],
+		"evidence_contra": [],
+		"examples_pro": [""],
+		"examples_contra": ["minderheit_+en_recht"],
+		"footnotes": {
+			"1": "Explanation: these are (semi-)stressed suffixes that form phonologically bad words. -s- is therefore used to mark the boundary of the phonological word ending with such a suffix.",
+			"2": "Explanation: -s- is used to mark a morphological boundary after a morphologically complex constituent.",
+			"3": "Explanation: these are (except for -schaft) closing suffixes, and -s- reopens the stem for further derivation.",
+			"4": "Even though not explicitly stated, we assume that the authors refer to these suffixes, as, to the best of our knowledge, these are the only suffixes in German that regularly trigger the insertion of -s-.",
+			"5": "Level of regularity not mentioned."
+		}
+	},
 
 
 
@@ -788,7 +871,7 @@
 
 
 	{
-		"id": "deverba_m",
+		"id": "deverba_en",
 		"summary": "",
 		"type": [""],
 		"regularity": "NA",
@@ -806,7 +889,7 @@
 		"footnotes": {}
 	},
 	{
-		"id": "deverba_en",
+		"id": "deverba_m",
 		"summary": "",
 		"type": [""],
 		"regularity": "NA",
