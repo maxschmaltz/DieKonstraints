@@ -3,11 +3,6 @@
 * The acceptability of -s- grows when the first constituent is morphologically / phonologically complex (572)
 
 
-## 3	_Koliopoulou 2014_. How close to syntax are compounds? Evidence from the linking element in German and Modern Greek compounds. _Rivista di Linguistica_
-
-* -s- occurs after nouns that bears a prefix or a suffix (61)
-
-
 ## 4	_Kopf 2017_. Fugenelement und Bindestrich in der Compositions-Fuge. _Sichtbare und hörbare Morphologie_
 
 * -s- often occurs with derived nouns and has nothing to do with phonology (201)
@@ -25,7 +20,6 @@ consonant-final masculine and some feminine words (3)
 ## 6	_Kürschner 2005_: Verfugung-s-nutzung kontrastiv: Zur Funktion der Fugenelemente im Deutschen und Dänischen
 
 * Morphological complexity (any form of derivation of composition) increases the probability of -s- (106, 111, 112)
-* Prefixed nouns adopt -s- more frequently than the corresponding simplexes (67.5%) (107)
 * -s- can signalize the head boundary (112)
 * -(e)n- points to weak nouns, even if not ending in schwa (118, 119)
 * -(e)n- is required by weak M (mostly animate) (119)
@@ -36,7 +30,6 @@ consonant-final masculine and some feminine words (3)
 
 
 * The probability of -s- grows with the morphologic complexity of the noun (19), but it is not regular in German (22)
-* Many simplexes that don't attach -s-, do so after prefixation (21)
 * In simplexes, -s- occurs only in M and N except for a few cases; in F, -s- occurs only with morphological complexity (23)
 * -s- marks phonologically bad words (24)
 * Many simplexes with an -s- are high frequent tokens (25)

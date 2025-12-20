@@ -777,7 +777,7 @@
 			{
 				"ref": "koliopoulou_2014",
 				"pages": [61],
-				"summary": "-s- occurs after suffixes -heit, -keit, -igkeit, -ling and -ung [2, 3]."
+				"summary": "-s- follows first constituents that bear a prefix [5]. Furthermore, nouns with closing suffixes (-heit, -keit, -igkeit, -ling and -ung) are usually followed by -s- [2, 3]."
 			},
 			{
 				"ref": "krott_etal_2007",
@@ -887,6 +887,21 @@
 				"summary": "-s- occurs in a large number of M and F derivatives from prefixed verbs [1]."
 			},
 			{
+				"ref": "koliopoulou_2014",
+				"pages": [61],
+				"summary": "-s- follows first constituents that bear a prefix [5, 6]."
+			},
+			{
+				"ref": "kürschner_2005",
+				"pages": [107],
+				"summary": "Prefixed nouns adopt -s- more frequently than the corresponding simplexes (67.5% vs 28.8%)."
+			},
+			{
+				"ref": "kürschner_2010",
+				"pages": [21],
+				"summary": "Many simplexes that don't attach -s-, do so after prefixation."
+			},
+			{
 				"ref": "kopf_2017",
 				"pages": [190],
 				"summary": "Occurrences of -s- in words with stressed and unstressed prefixes is almost the same: 76.5% vs 78%, respectively."
@@ -894,12 +909,12 @@
 			{
 				"ref": "nübling_szczepaniak_2008",
 				"pages": [18, 19],
-				"summary": "Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [3]."
+				"summary": "Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [3, 4]."
 			},
 			{
 				"ref": "nübling_szczepaniak_2013",
 				"pages": [78],
-				"summary": "Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [3]."
+				"summary": "Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [3, 4]."
 			},
 			{
 				"ref": "ortner_müller-bollhagen_1991",
@@ -912,7 +927,10 @@
 		"footnotes": {
 			"1": "All the examples provided in this source have stressed prefixes.",
 			"2": "Evidence for `sibilant_cond_zero` > `prefix_deverba`.",
-			"3": "The results of `nübling_szczepaniak_2008` (provided again in `nübling_szczepaniak_2013`) are based on a corpus study but are however subject to questions because of the methodology used. First of all, only 21 nouns with unstressed and 19 nouns with stressed prefixes were considered for further combinations, which is a very small sample. Even though the number of resulting compounds was very large, the fact that the same nouns tend to occur with the same linkers (see TODO) discards the representativeness of the large sample size. Furthermore, many of the prefixed nouns were derivates from the same verb (e.g. 'Ansicht', 'Aufsicht', 'Übersicht') which again reduces the diversity of the sample. Furthermore, no specific examples were provided in the paper, whereas further literature suggest several counterexamples to the claim about derivatives with stressed prefixes. Hence, we believe the absolute numbers provided in `nübling_szczepaniak_2008` might not be very reliable. However, these findings may suggest a general trend that prefixed deverbatives with unstressed prefixes tend to attach -s- more often than those with stressed prefixes: verfall_+s_datum vs überfall_kommando."
+			"3": "The results of `nübling_szczepaniak_2008` (provided again in `nübling_szczepaniak_2013`) are based on a corpus study but are however subject to questions because of the methodology used. First of all, only 21 nouns with unstressed and 19 nouns with stressed prefixes were considered for further combinations, which is a very small sample. Even though the number of resulting compounds was very large, the fact that the same nouns tend to occur with the same linkers (see TODO) discards the representativeness of the large sample size. Furthermore, many of the prefixed nouns were derivates from the same verb (e.g. 'Ansicht', 'Aufsicht', 'Übersicht') which again reduces the diversity of the sample. Furthermore, no specific examples were provided in the paper, whereas further literature suggest several counterexamples to the claim about derivatives with stressed prefixes. Hence, we believe the absolute numbers provided in `nübling_szczepaniak_2008` might not be very reliable. However, these findings may suggest a general trend that prefixed deverbatives with unstressed prefixes tend to attach -s- more often than those with stressed prefixes: verfall_+s_datum vs überfall_kommando.",
+			"4": "Explanation: unstressed prefixes form phonologically bad words. -s- is therefore used to mark the boundary of the phonological word starting with such a suffix.",
+			"5": "Explanation: -s- is used to mark a morphological boundary after a morphologically complex constituent.",
+			"6": "Level of regularity not mentioned."
 		}
 	},
 
