@@ -505,11 +505,6 @@
 				"summary": "After a full vowel, a zero linker always appears."
 			},
 			{
-				"ref": "kürschner_2010",
-				"pages": [19, 24],
-				"summary": "In simpices, -s- occurs more often after plosives, much rarer after nasals and liquids. Furthermore, -s- never occurs after a full vowel [1]."
-			},
-			{
 				"ref": "nübling_szczepaniak_2008",
 				"pages": [7, 17],
 				"summary": "The probability of -s- decreases with increasing sonority of the final segment of the first constituent: it occurs after plosives in about 15-20% and after nasals and liquids in only about 1.8-4.7% of cases, and it never occurs after a full vowel."
@@ -522,13 +517,13 @@
 			{
 				"ref": "wegener_2003",
 				"pages": [434],
-				"summary": "-s- never occurs after a full vowel except for in uhu_+s_nest [2]."
+				"summary": "In simpices, -s- occurs more often after plosives, much rarer after nasals and liquids. Furthermore, -s- never occurs after a full vowel [1] (except for uhu_+s_nest [2])."
 			}
 		],
 		"examples_pro": ["ort_+s_tarif", "arbeit_+s_tag", "himmel_reich", "uhu_paar"],
 		"examples_contra": ["arbeit_geber", "heil_+s_lehre", "uhu_+s_nest"],
 		"footnotes": {
-			"1": "Claim about full vowel: works whether it is a simplex or a derivative.",
+			"1": "The given passage is taken from the literature review from [kürschner_2010:24] where different works of Wegener were considered. Thus, there is a chance that Wegener made this claim not in this particular paper.",
 			"2": "The given counterexample uhu_+s_nest could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
 		}
 	},
@@ -716,6 +711,11 @@
 				"summary": "-(e)n- almost always occurs paradigmatically."
 			},
 			{
+				"ref": "kürschner_2005",
+				"pages": [118, 119],
+				"summary": "-(e)n- points to weak nouns, even those not ending in schwa."
+			},
+			{
 				"ref": "kürschner_2010",
 				"pages": [9],
 				"summary": "-(e)n- only attaches to nouns forming the plural with -(e)n."
@@ -842,7 +842,7 @@
 	},
 	{
 		"id": "deverba_en",
-		"summary": " -s- occurs regularly in deverbatives ending in -en",
+		"summary": " -s- occurs regularly in deverbatives ending in -en.",
 		"type": ["derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -933,6 +933,114 @@
 			"6": "Level of regularity not mentioned."
 		}
 	},
+	{
+		"id": "s_morph_complex",
+		"summary": "The acceptability of -s- irregularly grows when the first constituent is morphologically complex (any form of derivation).",
+		"type": ["derivational"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence": [
+			{
+				"ref": "fuhrhop_kürschner_2015",
+				"pages": [572],
+				"summary": "The probability of -s- increases if the first element is morphologically complex."
+			},
+			{
+				"ref": "kopf_2017",
+				"pages": [201],
+				"summary": "-s- often occurs with derived nouns and marks its complexity."
+			},
+			{
+				"ref": "kürschner_2005",
+				"pages": [106, 111, 112],
+				"summary": "Morphological complexity (any form of derivation [1]) increases the probability of -s-."
+			},
+			{
+				"ref": "kürschner_2010",
+				"pages": [19, 22],
+				"summary": "The probability of -s- grows with the morphologic complexity of the noun, but it is not regular in German."
+			},
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [10],
+				"summary": ""
+			},
+			{
+				"ref": "`suffixes_cond_s` [2]"
+			},
+			{
+				"ref": "`deverba_en` [2]"
+			},
+			{
+				"ref": "`prefix_deverba` [2]"
+			}
+		],
+		"examples_pro": ["gesundheit_+s_amt", "gesellschaft_+s_politik", "anspruch_+s_haltung", "eintrag_+s_frist"],
+		"examples_contra": ["minderheit_+en_recht", "anruf_beantworter", "überfall_kommando"],
+		"footnotes": {
+			"1": "Originally: 'derivational and compositional'. For reasons for excluding complex first constituents see notes.",
+			"2": "Evidence for higher probabability of -s- in particular cases of derivation."
+		}
+	},
+	{
+		"id": "s_phon_complex",
+		"summary": "The acceptability of -s- irregularly grows when the first constituent is phonologically complex: non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes.",
+		"type": ["phonological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence": [
+			{
+				"ref": "fuhrhop_kürschner_2015",
+				"pages": [572],
+				"summary": "The probability of -s- increases if the first element is prosodically complex."
+			},
+			{
+				"ref": "nübling_szczepaniak_2008",
+				"pages": [10, 21, 22],
+				"summary": "The occurrence of the linking -s- correlates with the bad phonological quality of the first constituent. The two most important cases of bad phonological words are words with unstressed prefixes and foreign words with non-native structures and accent positions [1]. In particular, corpus research shows there is a string tendency to attach -s- to words with unstressed prefixes."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [78],
+				"summary": "The greater the distance of the word to the phonological ideal, the more probable the occurrence of -s-."
+			},
+			{
+				"ref": "`complex_syl_bound` [2]"
+			},
+			{
+				"ref": "`suffixes_cond_s` [2, 3]"
+			},
+			{
+				"ref": "`prefix_deverba` [2, 3]"
+			}
+		],
+		"examples_pro": ["anruf_beantworter", "beruf_+s_erfahrung", "religion_+s_unterricht"],
+		"examples_contra": ["schlaf_plan", "wirtschaft_+s_politik", "bestand_teil"],
+		"footnotes": {
+			"1": "These results are also mentioned in literature review in [kürschner_2010:24], however, without an explicit estimation of the claim's validity.",
+			"2": "Evidence for higher probabability of -s- in particular cases of phonological complexity.",
+			"3": "These cases of phonological complexity are bound to morphological complexity of the constituents. NB! Only a few of these pieces of evidence claim that these derivational processes increase the probability of -s- particularly because of the bad phonological structures of the derivates."
+		}
+	},
+	{
+		"id": "complex_syl_bound",
+		"summary": "-s- may occur after a complex syllable boundary.",
+		"type": ["phonological"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence": [
+			{
+				"ref": "kürschner_2010",
+				"pages": [22],
+				"summary": "-s- may occur [1] after a complex syllable boundary."
+			}
+		],
+		"examples_pro": ["weihnacht_+s_baum"],
+		"examples_contra": [""],
+		"footnotes": {
+			"1": "Level of regularity not mentioned."
+		}
+	},
 
 
 
@@ -940,7 +1048,7 @@
 
 
 	{
-		"id": "deverba_m",
+		"id": "",
 		"summary": "",
 		"type": [""],
 		"regularity": "NA",

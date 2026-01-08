@@ -1,13 +1,3 @@
-## 2	_Fuhrhop & Kürschner 2015_. Linking elements in Germanic. _Word-Formation. An International Handbook of the Languages of Europe_
-
-* The acceptability of -s- grows when the first constituent is morphologically / phonologically complex (572)
-
-
-## 4	_Kopf 2017_. Fugenelement und Bindestrich in der Compositions-Fuge. _Sichtbare und hörbare Morphologie_
-
-* -s- often occurs with derived nouns and has nothing to do with phonology (201)
-
-
 ## 5	_Krott et al. 2007_. Analogical effects on linking elements in German compounds
 
 * When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning (3)
@@ -17,42 +7,22 @@ consonant-final masculine and some feminine words (3)
 * Gender is more important for -(e)n-, the inflectional class is more important for 0, rime is most relevant for -s- (9)
 
 
-## 6	_Kürschner 2005_: Verfugung-s-nutzung kontrastiv: Zur Funktion der Fugenelemente im Deutschen und Dänischen
-
-* Morphological complexity (any form of derivation of composition) increases the probability of -s- (106, 111, 112)
-* -s- can signalize the head boundary (112)
-* -(e)n- points to weak nouns, even if not ending in schwa (118, 119)
-* -(e)n- is required by weak M (mostly animate) (119)
-
-
-
 ## 7	_Kürschner 2010_. Fuge-n-kitt, voeg-en-mes, fuge-masse und fog-e-ord. Fugenelemente im Deutschen, Niederländischen, Schwedischen und Dänischen
 
-
-* The probability of -s- grows with the morphologic complexity of the noun (19), but it is not regular in German (22)
-* In simplexes, -s- occurs only in M and N except for a few cases; in F, -s- occurs only with morphological complexity (23)
-* -s- marks phonologically bad words (24)
+* In simplexes, -s- occurs only in M and N except for a few cases; in F, -s- occurs only with morphological complexity (23, 24)
 * Many simplexes with an -s- are high frequent tokens (25)
-
-
-## 10	_Nübling & Szczepaniak 2008_. On the way from morphology to phonology: German linking elements and the role of the phonological word
-
-* The occurrence of the linking -s- correlates with the phonological quality of the first constituent (10)
-* There is a strong tendency for the linking -s- to attach to pwords starting with unstressed syllables (21)
 
 
 ## 11	_Nübling & Szczepaniak 2013_. Linking elements in German Origin, Change, Functionalization. _Morphology_
 
-* The greater the distance of the word to the phonological ideal (trochee with schwa in the second syllable), the more probable the occurrence of -s- (78)
 * -s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument (so argumental compounds), with many doubtful cases (79)
 * -s- is productive after polysyllabic words: there is only a fixed group of 30-40 monosyllabic M and N that adopt -s- (79)
 
 
 
 ## 12	_Ortner & Müller-Bollhagen 1991_. Deutsche Wortbildung, Hauptteil 4, Substantivkomposita
+
 * Almost all F with -s- are polysyllabic (73)
-* Derivates ending in -ing, -ling regularly attach -s- (83, 88)
-* Polysyllable deverbative M attach -(e)s- regularly if they don't end with [s] or [ts] (89)
 
 
 ## 13	_Schäfer 2018_. Einführung in die grammatische Beschreibung des Deutschen
