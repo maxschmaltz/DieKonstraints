@@ -63,8 +63,8 @@
 	},
 	{
 		"id": "cons_final_f",
-		"summary": "Consonant-final F mostly adopt either -en-, or a zero linker, or -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -en- is more likely (especially in final-stressed F), otherwise mostly a zero linker or -s- is chosen.",
-		"type": ["morphological", "phonological"],
+		"summary": "Consonant-final simplex F mostly adopt either -en-, or a zero linker, or -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -en- is more likely (especially in final-stressed F), otherwise mostly a zero linker or -s- is chosen.",
+		"type": ["morphological", "phonological", "semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence": [
@@ -109,7 +109,7 @@
 	{
 		"id": "schwa",
 		"summary": "Nouns ending in schwa regularly adopt -n- if the schwa is not a suffix, this is the only class of words that can attach this linker. If the schwa is a suffix of a deadjective F, -n- and zero linkers are about equally possible. Deverbal F with the schwa suffix mostly attach a zero linker but can attach an -n- when the first constituent has a plural reading.",
-		"type": ["morphological", "phonological"],
+		"type": ["phonological", "derivational", "semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence": [
@@ -349,7 +349,7 @@
 	{
 		"id": "mixed_mn",
 		"summary": "Mixed M and N can attach -s-, -(e)n-, or a zero linker. -(e)n- may be associated with a plural meaning (with counterexamples).",
-		"type": ["morphological"],
+		"type": ["morphological", "semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence": [
@@ -371,7 +371,7 @@
 			{
 				"ref": "schäfer_2018",
 				"pages": [229],
-				"summary": "Strong and mixed M and N often (but surely not always) adopt -s- [2]."
+				"summary": "Mixed M and N often (but surely not always) adopt -s- [2, 3, 4]."
 			},
 			{
 				"ref": "schäfer_pankratz_2018",
@@ -383,13 +383,15 @@
 		"examples_contra": ["motor_+en_geräusch", "professor_+en_titel", "ohr_+en_schmalz", "auge_+n_lied", "interesse_+n_bereich"],
 		"footnotes": {
 			"1": "Even though these papers do not explicitly say 'mixed M and N', the examples they provide are all mixed M and N: staat_+en_bund, bett_+en_zahl, farm_+en_verkauf.",
-			"2": "The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `es`, we modify it to -s- here."
+			"2": "The original text refers to both strong and mixed M.",
+			"3": "The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `es`, we modify it to -s- here.",
+			"4": "Since from the whole class of strong and mixed M and N taking -s- and -es- mentioned in the paper we only consider the subclass of mixed M and N taking -s- here, the evidence is to be considered indirect. The rest of the claim about strong M and N consideres such a broad class that we disregard it in this iteration."
 		}
 	},
 	{
 		"id": "zero_umlaut_plural",
 		"summary": "Nouns forming the plural with a zero ending and an umlaut mostly have a zero linker. Otherwise, they may adopt the umlaut (as in the plural form) if the first constituent has a collective or plural meaning.",
-		"type": ["morphological"],
+		"type": ["morphological", "semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence": [
@@ -411,7 +413,7 @@
 	{
 		"id": "e_umlaut_plural",
 		"summary": "Nouns forming the plural with an -e ending and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach -e- with an umlaut, and this is the only class of words that can attach this linker.",
-		"type": ["morphological"],
+		"type": ["morphological", "semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence": [
@@ -445,7 +447,7 @@
 	{
 		"id": "e_plural",
 		"summary": "Nouns forming the plural with an -e ending mostly have a zero linker. In case of plural or collective meaning, as well as if it is a monosyllabic noun designating an animal, it may also non-regularly attach -e-, and this is the only class of words that can attach this linker.",
-		"type": ["morphological", "semantic"],
+		"type": ["morphological", "semantic", "lexical"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence": [
@@ -472,7 +474,7 @@
 			{
 				"ref": "ortner_müller-bollhagen_1991",
 				"pages": [83, 102, 103, 107],
-				"summary": "e-plural nouns rarely have explicit linkers. -e- is always paradigmatic, occurs mostly after symplexes and never after loanwords, and it mostly signalized a plural or collective meaning."
+				"summary": "e-plural nouns rarely have explicit linkers. -e- is always paradigmatic, occurs mostly after simplexes and never after loanwords, and it mostly signalized a plural or collective meaning."
 			},
 			{
 				"ref": "schäfer_pankratz_2018",
@@ -554,7 +556,7 @@
 	{
 		"id": "f_final_t",
 		"summary": "F ending with a [t] often attach an -s- if the [t] is part of the stem (not of a suffix).",
-		"type": [""],
+		"type": ["phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence": [
@@ -599,12 +601,20 @@
 				"ref": "nübling_szczepaniak_2013",
 				"pages": [81],
 				"summary": "There is only a fixed number of about 30 M and N that adopt -es-."
+			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [8],
+				"summary": "Simplex M and N often [2] take -es- [3, 4]."
 			}
 		],
 		"examples_pro": ["bund_+es_tag", "kind_+es_alter", "tag_+es_schau", "land_+es_regierung"],
 		"examples_contra": ["kind_+er_garten", "land_kreis", "tag_blatt"],
 		"footnotes": {
-			"1": "[kürschner_2010:18] also mentions: '-es- occurs only after nouns with the stressed last syllable', which, however, always holds for the nouns in question since they are all monosyllabic."
+			"1": "[kürschner_2010:18] also mentions: '-es- occurs only after nouns with the stressed last syllable', which, however, always holds for the nouns in question since they are all monosyllabic.",
+			"2": "Level of regularity not mentioned.",
+			"3": "The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -s- is handled separately in `s`, we modify it to -es- here.",
+			"4": "Since the original text claimed simplex M and N often adopt -es- or (!) -s-, this evidence is to be considered indirect since simplexes taking -s- -- that may be polysyllabic (e.g. könig_+s_haus) -- are also included in this evidence. However, the 30-40 nouns taking -es- are all monosyllabic, hence, simplexes, so the evidence is still relevant."
 		}
 	},
 	{
@@ -672,7 +682,7 @@
 				"summary": "=er= with no umlauting exhibits moderate, and =er= with umlauting exhibits significantly strong effect on plural reading."
 			}
 		],
-		"examples_pro": ["rad_kasten", "rad_+er_wechsel", "buch_deckel", "buch_+=er_regal", "kind_+=er_jacke", "rind_+=er_brust"],
+		"examples_pro": ["buch_deckel", "buch_+=er_regal", "kraut_+=er_frau", "kraut_salat", "kind_+=er_jacke", "rind_+=er_brust"],
 		"examples_contra": ["kind_+es_alter", "buch_handel", "bild_band"],
 		"footnotes": {
 			"1": "[kürschner_2010:18] also mentions: '-er- occurs only after nouns with the stressed last syllable'; however, to the best of our knowledge, this always holds for er-plural nouns and, hence, for the nouns in question since =er= is always paradigmatic.",
@@ -760,7 +770,7 @@
 	{
 		"id": "suffixes_cond_s",
 		"summary": "-s- occurs regularly after suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling and tendentially after -(t)um, -ion. Suffix -(i)tät also regularly attaches -s- unless there is a plural interpretation, in which case -en- is preferred.",
-		"type": ["derivational"],
+		"type": ["derivational", "semantic"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence": [
@@ -927,7 +937,7 @@
 		"footnotes": {
 			"1": "All the examples provided in this source have stressed prefixes.",
 			"2": "Evidence for `sibilant_cond_zero` > `prefix_deverba`.",
-			"3": "The results of `nübling_szczepaniak_2008` (provided again in `nübling_szczepaniak_2013`) are based on a corpus study but are however subject to questions because of the methodology used. First of all, only 21 nouns with unstressed and 19 nouns with stressed prefixes were considered for further combinations, which is a very small sample. Even though the number of resulting compounds was very large, the fact that the same nouns tend to occur with the same linkers (see TODO) discards the representativeness of the large sample size. Furthermore, many of the prefixed nouns were derivates from the same verb (e.g. 'Ansicht', 'Aufsicht', 'Übersicht') which again reduces the diversity of the sample. Furthermore, no specific examples were provided in the paper, whereas further literature suggest several counterexamples to the claim about derivatives with stressed prefixes. Hence, we believe the absolute numbers provided in `nübling_szczepaniak_2008` might not be very reliable. However, these findings may suggest a general trend that prefixed deverbatives with unstressed prefixes tend to attach -s- more often than those with stressed prefixes: verfall_+s_datum vs überfall_kommando.",
+			"3": "The results of `nübling_szczepaniak_2008` (provided again in `nübling_szczepaniak_2013`) are based on a corpus study but are however subject to questions because of the methodology used. First of all, only 21 nouns with unstressed and 19 nouns with stressed prefixes were considered for further combinations, which is a very small sample. Even though the number of resulting compounds was very large, the fact that the same nouns tend to occur with the same linkers discards the representativeness of the large sample size. Furthermore, many of the prefixed nouns were derivates from the same verb (e.g. 'Ansicht', 'Aufsicht', 'Übersicht') which again reduces the diversity of the sample. Furthermore, no specific examples were provided in the paper, whereas further literature suggest several counterexamples to the claim about derivatives with stressed prefixes. Hence, we believe the absolute numbers provided in `nübling_szczepaniak_2008` might not be very reliable. However, these findings may suggest a general trend that prefixed deverbatives with unstressed prefixes tend to attach -s- more often than those with stressed prefixes: verfall_+s_datum vs überfall_kommando.",
 			"4": "Explanation: unstressed prefixes form phonologically bad words. -s- is therefore used to mark the boundary of the phonological word starting with such a suffix.",
 			"5": "Explanation: -s- is used to mark a morphological boundary after a morphologically complex constituent.",
 			"6": "Level of regularity not mentioned."
@@ -961,11 +971,6 @@
 				"summary": "The probability of -s- grows with the morphologic complexity of the noun, but it is not regular in German."
 			},
 			{
-				"ref": "nübling_szczepaniak_2008",
-				"pages": [10],
-				"summary": ""
-			},
-			{
 				"ref": "`suffixes_cond_s` [2]"
 			},
 			{
@@ -984,7 +989,7 @@
 	},
 	{
 		"id": "s_phon_complex",
-		"summary": "The acceptability of -s- irregularly grows when the first constituent is phonologically complex: non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes.",
+		"summary": "The acceptability of -s- irregularly grows when the first constituent is phonologically complex: non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc..",
 		"type": ["phonological"],
 		"regularity": "NA",
 		"coverage": "NA",
@@ -1005,17 +1010,17 @@
 				"summary": "The greater the distance of the word to the phonological ideal, the more probable the occurrence of -s-."
 			},
 			{
-				"ref": "`complex_syl_bound` [2]"
-			},
-			{
 				"ref": "`suffixes_cond_s` [2, 3]"
 			},
 			{
 				"ref": "`prefix_deverba` [2, 3]"
+			},
+			{
+				"ref": "`complex_syl_bound` [2]"
 			}
 		],
 		"examples_pro": ["anruf_beantworter", "beruf_+s_erfahrung", "religion_+s_unterricht"],
-		"examples_contra": ["schlaf_plan", "wirtschaft_+s_politik", "bestand_teil"],
+		"examples_contra": ["schlaf_plan", "herbst_anfang", "bestand_teil"],
 		"footnotes": {
 			"1": "These results are also mentioned in literature review in [kürschner_2010:24], however, without an explicit estimation of the claim's validity.",
 			"2": "Evidence for higher probabability of -s- in particular cases of phonological complexity.",
@@ -1035,33 +1040,156 @@
 				"summary": "-s- may occur [1] after a complex syllable boundary."
 			}
 		],
-		"examples_pro": ["weihnacht_+s_baum"],
-		"examples_contra": [""],
+		"examples_pro": ["weihnacht_+s_baum", "geschäft_+s_führer", "geburt_+s_tag"],
+		"examples_contra": ["herbst_anfang", "milch_kaffee", "markt_platz"],
 		"footnotes": {
 			"1": "Level of regularity not mentioned."
 		}
 	},
-
-
-
-
-
-
 	{
-		"id": "",
-		"summary": "",
-		"type": [""],
+		"id": "s_mn_simplex",
+		"summary": "In simplexes, -s- occurs only in M and N except for a few cases.",
+		"type": ["morphological", "derivational"],
 		"regularity": "NA",
 		"coverage": "NA",
 		"evidence": [
 			{
-				"ref": "",
-				"pages": [],
-				"summary": ""
+				"ref": "kürschner_2010",
+				"pages": [23],
+				"summary": "In simplexes, -s- occurs only in M and N except for a few cases."
+			},
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [79],
+				"summary": "-s- is productive after polysyllabic words: there is only a fixed group of 30-40 monosyllabic [1] M and N that adopt -s-."
+			},
+			{
+				"ref": "schäfer_pankratz_2018",
+				"pages": [8],
+				"summary": "Simplex M and N often [2] take -s- [3]."
+			}
+		],
+		"examples_pro": ["zwang_+s_jacke", "ort_+s_angabe", "könig_+s_haus"],
+		"examples_contra": ["arbeit_+s_amt", "heirat_+s_antrag", "liebe_+s_brief"],
+		"footnotes": {
+			"1": "All monosyllabic M and N are simplexes. This evidence is however partial since it does not mention polysyllabic M and N that may also attach -s- (könig_+s_haus).",
+			"2": "Level of regularity not mentioned.",
+			"3": "The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `es`, we modify it to -s- here."
+		}
+	},
+	{
+		"id": "s_f_complex",
+		"summary": "-s- can occur with F only if it is a morphological complex and/or polysyllabic F.",
+		"type": ["morphological", "derivational"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence": [
+			{
+				"ref": "kürschner_2010",
+				"pages": [23, 24],
+				"summary": "In F, -s- occurs only with morphological complexity [1]."
+			},
+			{
+				"ref": "ortner_müller-bollhagen_1991",
+				"pages": [73],
+				"summary": "Almost all F with -s- are polysyllabic [2]."
+			}
+		],
+		"examples_pro": ["gesundheit_+s_amt", "gesellschaft_+s_politik", "heirat_+s_antrag", "liebe_+s_brief"],
+		"examples_contra": ["acht_+s_erklärung"],
+		"footnotes": {
+			"1": "[kürschner_2010:23] notes that simplex F adopting -s- are mostly early derivates ('hauptsächlich handelt es sich um frühere Derivate').",
+			"2": "Examples with schwa-deletion (such as hilf_+s_bereitschaft) aside."
+		}
+	},
+	{
+		"id": "arg_comp",
+		"summary": "-s- may sometimes, with many doubtful cases, mark argumental compounds: those where the second constituent still contains a high degree of verbiness and the first constituent of which constitutes their argument.",
+		"type": ["semantic"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence": [
+			{
+				"ref": "nübling_szczepaniak_2013",
+				"pages": [79],
+				"summary": "-s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument, with many doubtful cases [1]."
+			}
+		],
+		"examples_pro": ["gewicht_+s_heber", "krieg_+s_führung"],
+		"examples_contra": ["gewicht_heber", "krieg_führung"],
+		"footnotes": {
+			"1": "As in: cases where both variants coexist. Search in COSMAS II does not reveal a clear preference: for example gewicht_heber (~11k) > gewicht_+s_heber (~50) but krieg_+s_führung (~19k) > krieg_führung (~7k)."
+		}
+	},
+	{
+		"id": "s_freq_simplex",
+		"summary": "Many simplexes with an -s- are high frequent tokens.",
+		"type": ["lexical"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence": [
+			{
+				"ref": "kürschner_2010",
+				"pages": [25],
+				"summary": "Many simplexes with an -s- are high frequent tokens."
+			}
+		],
+		"examples_pro": ["volk_+s_brauch", "amt_+s_anwalt", "staat_+s_amt"],
+		"examples_contra": [""],
+		"footnotes": {}
+	},
+	{
+		"id": "plural_inter",
+		"summary": "Linkers identical to the plural ending can be associated with plural meaning.",
+		"type": ["semantic"],
+		"regularity": "NA",
+		"coverage": "NA",
+		"evidence": [
+			{
+				"ref": "krott_etal_2007",
+				"pages": [3],
+				"summary": "When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning [1]."
+			},
+			{
+				"ref": "schäfer_2018",
+				"pages": [230, 231],
+				"summary": "Linkers identical to the plural ending are tendentially associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element."
+			},
+			{
+				"ref": "schlücker_2023",
+				"pages": [20],
+				"summary": "Linkers identical to the plural ending can be [2] associated with plural meaning."
+			},
+			{
+				"ref": "`schwa`"
+			},
+			{
+				"ref": "`cons_final_f`"
+			},
+			{
+				"ref": "`mixed_mn`"
+			},
+			{
+				"ref": "`zero_umlaut_plural`"
+			},
+			{
+				"ref": "`e_umlaut_plural`"
+			},
+			{
+				"ref": "`e_plural`"
+			},
+			{
+				"ref": "`er_plural`"
+			},
+			{
+				"ref": "`suffixes_cond_s`"
 			}
 		],
 		"examples_pro": [""],
 		"examples_contra": [""],
-		"footnotes": {}
+		"footnotes": {
+			"1": "The irreguarity of this constraint is quite high, which is supported by the fact this evidence contradicts its definition.",
+			"2": "Level of regularity not mentioned."
+		}
 	}
 ]
