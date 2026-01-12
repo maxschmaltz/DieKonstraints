@@ -7,33 +7,27 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: eisenberg_2013
+          - ref: eisenberg_2013
             pages:
                 - 229
             summary: 'One-syllable F sometimes adopt -en-, sometimes a zero linker. It is possible that there is a tendency to choose by singular/plural meaning.'
-        - 
-            ref: krott_etal_2007
+          - ref: krott_etal_2007
             pages:
                 - 3
             summary: Consonant-final F adopt -en- less productively.
-        - 
-            ref: nübling_szczepaniak_2008
+          - ref: nübling_szczepaniak_2008
             pages:
                 - 3
             summary: '-(e)n- sometimes has a plural meaning (especially after weak F [1]).'
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 80
             summary: '-en- attaches regularly to monosyllabic or polysyllabic final-stressed weak F when the plural interpretation is allowed, with a very few counterexamples. If the plural reading is inadequate, another linking element, mostly -s- or zero, has to be chosen.'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 94, 110
             summary: 'F not ending in -e do not usually attach -en-; if there is a singular interpretation, they attach a zero linker. \ Monosyllabic F adopt zero linker or plural suffix (-en- or =e=) depending on the plural meaning."
-        - 
-            ref: schäfer_2018
+          - ref: schäfer_2018
             pages:
                 - 29
             summary: '-(e)n- exhibits a very weak positive effect on plural reading (with non-significant p-value) [2].'
@@ -56,46 +50,38 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: eisenberg_2013
+          - ref: eisenberg_2013
             pages:
                 - 229
             summary: F ending in schwa (they are already two-syllabic) regularly adopt -n-.
-        - 
-            ref: fuhrhop_kürschner_2015
+          - ref: fuhrhop_kürschner_2015
             pages:
                 - 573
             summary: 'F ending in schwa adopt -n- if schwa is not a suffix, otherwise a zero linker.'
-        - 
-            ref: krott_etal_2007
+          - ref: krott_etal_2007
             pages:
                 - 3
             summary: F ending in schwa adopt -n- productively.
-        - 
-            ref: kürschner_2005
+          - ref: kürschner_2005
             pages:
                 - 112
             summary: 'The claim that F ending in schwa always attach a zero linker is not supported by the empirical data, but it should be marked as a tendency [1].'
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 18
             summary: '-n- occurs only after schwa, and most of the words ending with a schwa adopt it.'
-        - 
-            ref: libben_etal_2009
+          - ref: libben_etal_2009
             pages:
                 - 151
                 - 157
             summary: 'F ending in schwa will almost always attach an -n- with a very few exceptions [2].'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 83
                 - 92
                 - 93
             summary: 'Nouns (especially weak F) ending in schwa mostly adopt -n-. However, deadjective F ending in a schwa suffix have a zero linker or -n- in about the same number of cases. Deverbative F ending in schwa suffix  mostly have a zero linker; they can attach an -n- though when the first constituent has a plural reading [3, 4].'
-        - 
-            ref: schäfer_pankratz_2018
+          - ref: schäfer_pankratz_2018
             pages:
                 - 9
             summary: F ending in schwa virtually always occur with -n-.
@@ -124,20 +110,17 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: koliopoulou_2014
+          - ref: koliopoulou_2014
             pages:
                 - 63
                 - 64
             summary: 'The probability of a linking element to appear decreases as the compound type becomes closer to syntax: determinative compounds adopt explicit linkers non-systematically; copulative compounds with additive relations can adopt explicit linkers, but less frequently; copulative compounds with appositive relations systematically adopt a zero linker [1].'
-        - 
-            ref: neef_borgwaldt_2012
+          - ref: neef_borgwaldt_2012
             pages:
                 - 31
                 - 32
             summary: Copulative compounds do not attach explicit linkers.
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 57
                 - 91
@@ -160,13 +143,11 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: kürschner_2005
+          - ref: kürschner_2005
             pages:
                 - 110
             summary: 'After a full vowel, a zero linker always appears.'
-        - 
-            ref: schäfer_pankratz_2018
+          - ref: schäfer_pankratz_2018
             pages:
                 - 9
             summary: Nouns ending in a full vowel occur with a zero linker.
@@ -185,18 +166,15 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: nübling_szczepaniak_2008
+          - ref: nübling_szczepaniak_2008
             pages:
                 - 11
             summary: 'In technical terminology (economics, law, etc.), a linking element is often missing (even in cases where it would be obligatory in comparable instances).'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 98
             summary: "If 'Herz' is used in a medical context, it adopts a zero linker [1]."
-        - 
-            ref: schlücker_2023
+          - ref: schlücker_2023
             pages:
                 - 20
             summary: 'In compounds that have a doubful -s- and that are used both in common and specialized language, technical terms usually omit the -s- while the common language keeps it.'
@@ -208,33 +186,6 @@
         - schaden_+s_ersatz
     footnotes:
         '1': This finding is provided as an example for the constraint.
--   id: null_plural
-    summary: 'Derivatives forming the plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker with a few exceptions unless they are a deverbative, in which case they always attach -s-. Simplex M and N, as well as any F forming the plural with a zero ending attach a zero linker in majority of cases.'
-    type:
-        - morphological
-        - derivational
-    regularity: NA
-    coverage: NA
-    evidence:
-        - 
-            ref: ortner_müller-bollhagen_1991
-            pages:
-                - 56
-                - 82
-                - 88
-                - 106
-            summary: 'Derivatives forming the plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker unless they are a deverbative, in which case they mostly attach -s- [1]. Simplex M and N forming the plural with a zero ending attach a zero linker in 90% of cases. F forming the plural with a zero ending attach a zero linker in 85% of cases.'
-    examples_pro:
-        - reiter_schwert
-        - gürtel_schnalle
-        - brötchen_geber
-        - gebäude_komplex
-    examples_contra:
-        - reiter_+s_mann
-        - bauer_+s_leute
-        - orden_+s_bruder
-    footnotes:
-        '1': For more info on deverbatives see `deverba_en`.
 -   id: second_const_pers_desig
     summary: "Compounds with the second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' can insert -s- or -es-, if the compound designates a person, even when the first constituent would otherwise attach a zero linker."
     type:
@@ -242,13 +193,11 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: nübling_szczepaniak_2008
+          - ref: nübling_szczepaniak_2008
             pages:
                 - 11
             summary: There is an observable tendency to insert -s- before a stem designating a person
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 56
             summary: "Compounds with the second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' can insert -s- or -es-, if the compound designates a person, even when the first constituent would otherwise attach a zero linker."
@@ -267,8 +216,7 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 83
                 - 107
@@ -289,28 +237,23 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: krott_etal_2007
+          - ref: krott_etal_2007
             pages:
                 - 3
             summary: 'Consonant-final M [1] adopt -en- less productively.'
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 80
             summary: 'Monosyllabic M and N [1] with plural interpretation sometimes attach -en-.'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 92
             summary: 'Mixed M mostly attach a zero linker or an -s-. Mixed M can also attach an -(e)n- if the second constitiuent forces its plural meaning; however, there are counterexamples where -(e)n- is attached even when no plural reading is possible.'
-        - 
-            ref: schäfer_2018
+          - ref: schäfer_2018
             pages:
                 - 229
             summary: 'Mixed M and N often (but surely not always) adopt -s- [2, 3, 4].'
-        - 
-            ref: schäfer_pankratz_2018
+          - ref: schäfer_pankratz_2018
             pages:
                 - 9
             summary: Mixed M and N often occur with -(e)n-.
@@ -339,8 +282,7 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 83
                 - 106
@@ -351,8 +293,7 @@
                 - 5
             summary: 'In German, there are only two cases of non-paradigmatic linkers: -en- aften non-human M, and -s- after F [1].'
         
-        - 
-            ref: schäfer_pankratz_2018
+          - ref: schäfer_pankratz_2018
             pages:
                 - 29
             summary: Linker = exhibits moderate effect on plural reading.
@@ -375,24 +316,20 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: eisenberg_2013
+          - ref: eisenberg_2013
             pages:
                 - 228
             summary: '=e= occurs in some [1] e=plural nouns.'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 83
                 - 107
             summary: e=plural nouns regularly have a zero linker with a few exceptions.
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 81, 84
             summary: 'In compounds with =e=, plural interpretation occurs in most cases. \ E-plural strong feminine nouns is the only class of words that can attach this linker.'
-        - 
-            ref: schäfer_pankratz_2018
+          - ref: schäfer_pankratz_2018
             pages:
                 - 29
             summary: =e= exhibits moderate effect on plural reading.
@@ -408,65 +345,6 @@
     footnotes:
         '1': Level of regularity not mentioned.
         '2': 'Which implicitly points out that further overt markers (=er=, -e-, =e=, =) are always paradigmatic.'
--   id: e_plural
-    summary: 'Nouns forming the plural with an -e ending mostly have a zero linker. In case of plural or collective meaning, as well as if it is a monosyllabic noun designating an animal, it may also non-regularly attach -e-, and this is the only class of words that can attach this linker.'
-    type:
-        - morphological
-        - semantic
-        - lexical
-    regularity: NA
-    coverage: NA
-    evidence:
-        - 
-            ref: eisenberg_2013
-            pages:
-                - 228
-            summary: 'A larger group where -e- occurs is animal designations, but certainly not with all of them.'
-        - 
-            ref: kürschner_2010
-            pages:
-                - 9
-                - 18
-            summary: '-e- is always paradigmatic and occurs only after nouns with stressed last syllable [1].'
-        - 
-            ref: nübling_szczepaniak_2008
-            pages:
-                - 5, 11
-            summary: "In German, there are only two cases of non-paradigmatic linkers: -en- aften non-human M, and -s- after F [1]. There is an observable tendency to insert -e- after nouns designating animals with many counterexamples."
-        - 
-            ref: nübling_szczepaniak_2013
-            pages:
-                - 70
-                - 80
-                - 81
-            summary: '-e- is always paradigmatic. It occurs most frequently and even partly productively after monosyllabic nouns denoting animals.'
-        - 
-            ref: ortner_müller-bollhagen_1991
-            pages:
-                - 83
-                - 102
-                - 103
-                - 107
-            summary: 'e-plural nouns rarely have explicit linkers. -e- is always paradigmatic, occurs mostly after simplexes and never after loanwords, and it mostly signalized a plural or collective meaning.'
-        - 
-            ref: schäfer_pankratz_2018
-            pages:
-                - 29
-            summary: '-e- exhibits insignificant effect on plural reading [2].'
-    examples_pro:
-        - tisch_decke
-        - projekt_gruppe
-        - projekt_+e_macherei
-        - hund_+e_leine
-        - swein_+e_stall
-    examples_contra:
-        - tag_+e_gericht
-        - pilz_sammler
-        - hund_+s_stern
-        - schwein_kram
-    footnotes:
-        '1': "The last claim explains why nouns like 'Teppich' do not attach -e- (teppich_boden)."
-        '2': "This finding concerning plural interpretability of -e- is not very reliable. Most of the entries in the dataset were nouns designating animals -- that, as pointed out in the literature, tendentially attach -e- with no respect to the plural meaning. Furthermore, the sample contained noise such as 'Arzt' which is a e=plural noun. Thus, making a single conclusion about all occurrences from different classes adopting -e- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -e- after non-animal designations was most probably positive as well."
 -   id: sonority_s
     summary: 'The probability of -s- decreases with increasing sonority of the final segment of the first constituent: it is more frequent after plosives, infrequent after nasals and liquids, and it never occurs after a full vowel.'
     type:
@@ -474,29 +352,24 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: fuhrhop_kürschner_2015
+          - ref: fuhrhop_kürschner_2015
             pages:
                 - 572
             summary: '-s- is impossible with nouns ending in a full vowel.'
-        - 
-            ref: kürschner_2005
+          - ref: kürschner_2005
             pages:
                 - 110
             summary: 'After a full vowel, a zero linker always appears.'
-        - 
-            ref: nübling_szczepaniak_2008
+          - ref: nübling_szczepaniak_2008
             pages:
                 - 7
                 - 17
             summary: 'The probability of -s- decreases with increasing sonority of the final segment of the first constituent: it occurs after plosives in about 15-20% and after nasals and liquids in only about 1.8-4.7% of cases, and it never occurs after a full vowel.'
-        - 
-            ref: schäfer_pankratz_2018
+          - ref: schäfer_pankratz_2018
             pages:
                 - 9
             summary: Nouns ending in a full vowel never have -s-.
-        - 
-            ref: wegener_2003
+          - ref: wegener_2003
             pages:
                 - 434
             summary: 'In simpices, -s- occurs more often after plosives, much rarer after nasals and liquids. Furthermore, -s- never occurs after a full vowel [1] (except for uhu_+s_nest [2]).'
@@ -519,13 +392,11 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 19
             summary: 'As a rule, -s- does not occur after noun ending with a sibilant and very rarely occurs after noun ending with a consonant cluster that has [s] in it.'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 89
                 - 109
@@ -546,13 +417,11 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 77
             summary: 'F ending with [t] often attach an -s- if the [t] is part of the stem (not of a suffix).'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 74
                 - 75
@@ -573,29 +442,24 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: eisenberg_2013
+          - ref: eisenberg_2013
             pages:
                 - 229
             summary: '-es- occurs in a row of s-genitiv M and N and is isolated.'
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 11
             summary: '-es- is found in a few one-syllable M and N [1].'
-        - 
-            ref: nübling_szczepaniak_2008
+          - ref: nübling_szczepaniak_2008
             pages:
                 - 3
                 - 7
             summary: '-es- is found only after M and N, and there are only about 30 nouns that attach -es-.'
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 81
             summary: There is only a fixed number of about 30 M and N that adopt -es-.
-        - 
-            ref: schäfer_pankratz_2018
+          - ref: schäfer_pankratz_2018
             pages:
                 - 8
             summary: 'Simplex M and N often [2] take -es- [3, 4].'
@@ -620,19 +484,16 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 82
             summary: '-(e)ns- only occurs after very few nouns with different genitive endings.'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 80
                 - 97
             summary: '-(e)ns- occurs with a few M and a single N.'
-        - 
-            ref: schäfer_pankratz_2018
+          - ref: schäfer_pankratz_2018
             pages:
                 - 9
             summary: '-(e)ns- is idiosyncratic and rare and is used only with a few nouns.'
@@ -653,38 +514,32 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: eisenberg_2013
+          - ref: eisenberg_2013
             pages:
                 - 229
             summary: '=er= occurs only in er=plural nouns. These nouns tend to choose =er= when a plural meaning is present, otherwise a zero linker or another linker, except for person and animal designations, for which =er= is not necessarily associated with a plural meaning.'
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 9
                 - 11
             summary: '=er= only attaches to nouns forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N [1].'
-        - 
-            ref: nübling_szczepaniak_2008
+          - ref: nübling_szczepaniak_2008
             pages:
                 - 3
             summary: =er= is always paradigmatic.
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 80
                 - 81
             summary: '=er= is always paradigmatic and is often associated with plural meaning, with many counterexamples.'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 98
                 - 99
                 - 101
                 - 108
             summary: 'Most er-plural nouns attach both =er= and a zero linker in different cases, often depending on plural interpretation (80% singular meaning cases have a zero linker). =er= is always paradigmatic and attaches mostly to N and to some M, mostly simplexes, no loanwords [2]. When attaching =er=, these nouns often indicate concrete, countable entities, while when having a mass meaning, they tend to attach a zero linker.'
-        - 
-            ref: schäfer_pankratz_2018
+          - ref: schäfer_pankratz_2018
             pages:
                 - 29
             summary: '=er= with no umlauting exhibits moderate, and =er= with umlauting exhibits significantly strong effect on plural reading.'
@@ -710,8 +565,7 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 94
             summary: 'Derivate F with suffix -in always attach -en-, if they are not copulative [1].'
@@ -730,29 +584,24 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: kopf_2017
+          - ref: kopf_2017
             pages:
                 - 187
             summary: '-(e)n- almost always occurs paradigmatically.'
-        - 
-            ref: kürschner_2005
+          - ref: kürschner_2005
             pages:
                 - 118
                 - 119
             summary: '-(e)n- points to weak nouns, even those not ending in schwa.'
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 9
             summary: '-(e)n- only attaches to nouns forming the plural with -(e)n.'
-        - 
-            ref: nübling_szczepaniak_2008
+          - ref: nübling_szczepaniak_2008
             pages:
                 - 3
             summary: '-(e)n- is found only with weak nouns.'
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 79
             summary: '-(e)n- is restricted to weak nouns and is in most cases paradigmatic.'
@@ -770,14 +619,12 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 79
                 - 80
             summary: '-e(n)- occurs non-paradigmatically only in such cases when a former weak noun moved to another class and maintained its original linking element.'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 77
                 - 78
@@ -801,52 +648,43 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: eisenberg_2013
+          - ref: eisenberg_2013
             pages:
                 - 230
             summary: '-s- occurs regularly after suffixes -(ig)keit, -heit, -tum, -schaft, -ung, -sal, -ling [1, 2].'
-        - 
-            ref: fuhrhop_kürschner_2015
+          - ref: fuhrhop_kürschner_2015
             pages:
                 - 572
             summary: '-s- occurs regularly after suffixes -heit, -ung, -ling, -schaft, -tum, -ität [2].'
-        - 
-            ref: koliopoulou_2014
+          - ref: koliopoulou_2014
             pages:
                 - 61
             summary: '-s- follows first constituents that bear a prefix [5]. Furthermore, nouns with closing suffixes (-heit, -keit, -igkeit, -ling and -ung) are usually followed by -s- [2, 3].'
-        - 
-            ref: krott_etal_2007
+          - ref: krott_etal_2007
             pages:
                 - 3
             summary: 'An -s- is inserted productively and automatically after certain suffixes [4].'
-        - 
-            ref: kürschner_2005
+          - ref: kürschner_2005
             pages:
                 - 107
                 - 115
             summary: 'Suffixes -heit, -keit, -ling, -ung, -schaft always require -s- [2, 3]. The probability of -s- increases [5] after suffixes -tum, -ion, -tät.'
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 20
                 - 21
             summary: '-s- regularly occurs after suffixes -heit, -schaft, -ling, -tum, -ung [3]. -s- also occurs [5] after suffixes -ität, -ion.'
-        - 
-            ref: nübling_szczepaniak_2008
+          - ref: nübling_szczepaniak_2008
             pages:
                 - 10
                 - 20
                 - 23
             summary: '-s- occurs regularly after suffixes -ung, -heit, -keit, -igkeit, -sal, -schaft, -ling, -ität, -ion [1]; derivations in -um also tend to adopt -s- [1].'
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 77
             summary: '-s- regularly appears after suffixes -heit, -keit, -igkeit -schaft, -ung, -ion, and -ität [1].'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 73
                 - 83
@@ -855,23 +693,19 @@
                 - 94
                 - 95
             summary: '-s- regularly occurs with F ending in -ung, -beit, -keit, -igkeit, -schaft, -ität, -ion, -tum with a few exceptions, extensively occurs after -sal. Those ending in -ität- can adopt -en- where the plural interpretation should be preserved.'
-        - 
-            ref: schäfer_2018
+          - ref: schäfer_2018
             pages:
                 - 229
             summary: 'Nouns with suffixes -heit, -ung, -tum etc. a strong tendency to adopt -s-.'
-        - 
-            ref: schäfer_pankratz_2018
+          - ref: schäfer_pankratz_2018
             pages:
                 - 8
             summary: 'Derivates with suffixes -ung, -heit, -tum etc. have a strong tendency to occur with an -s- linking element.'
-        - 
-            ref: schlücker_2023
+          - ref: schlücker_2023
             pages:
                 - 19
             summary: '-s- occurs with -schaft, -heit, -ung, -tum, -tät, -ion [3, 5].'
-        - 
-            ref: wegener_2003
+          - ref: wegener_2003
             pages:
                 - 448
             summary: '-s- regularly occurs after suffixes -heit, -keit, -ung, -ling, -schaft [3].'
@@ -890,41 +724,6 @@
         '3': 'Explanation: these are (except for -schaft) closing suffixes, and -s- reopens the stem for further derivation.'
         '4': 'Even though not explicitly stated, we assume that the authors refer to these suffixes, as, to the best of our knowledge, these are the only suffixes in German that regularly trigger the insertion of -s-.'
         '5': Level of regularity not mentioned.
--   id: deverba_en
-    summary: ' -s- occurs regularly in deverbatives ending in -en.'
-    type:
-        - derivational
-    regularity: NA
-    coverage: NA
-    evidence:
-        - 
-            ref: eisenberg_2013
-            pages:
-                - 230
-            summary: '-s- occurs by a rule in deverbatives ending in -en.'
-        - 
-            ref: kürschner_2005
-            pages:
-                - 107
-            summary: Deverbatives ending in -en build compounds with -s-.
-        - 
-            ref: nübling_szczepaniak_2013
-            pages:
-                - 78
-            summary: Deverbatives ending in -en always attach -s-.
-        - 
-            ref: ortner_müller-bollhagen_1991
-            pages:
-                - 89
-            summary: Deverbative N with suffix -en regularly attach -s-.
-    examples_pro:
-        - leben_+s_mittel
-        - essen_+s_gewohnheit
-        - schlaf_+en_zeit
-    examples_contra:
-        - ''
-    footnotes:
-        '1': Which must be interpreted as a marker of the nominal status of the first constituent.
 -   id: prefix_deverba
     summary: 'There is a strong tendency to adopt -s- after prefixed deverbatives, especially when the prefix is stressed.'
     type:
@@ -932,44 +731,36 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: eisenberg_2013
+          - ref: eisenberg_2013
             pages:
                 - 230
             summary: '-s- occurs in a large number of M and F derivatives from prefixed verbs [1].'
-        - 
-            ref: koliopoulou_2014
+          - ref: koliopoulou_2014
             pages:
                 - 61
             summary: '-s- follows first constituents that bear a prefix [5, 6].'
-        - 
-            ref: kürschner_2005
+          - ref: kürschner_2005
             pages:
                 - 107
             summary: 'Prefixed nouns adopt -s- more frequently than the corresponding simplexes (67.5% vs 28.8%).'
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 21
             summary: "Many simplexes that don't attach -s-, do so after prefixation."
-        - 
-            ref: kopf_2017
+          - ref: kopf_2017
             pages:
                 - 190
             summary: 'Occurrences of -s- in words with stressed and unstressed prefixes is almost the same: 76.5% vs 78%, respectively.'
-        - 
-            ref: nübling_szczepaniak_2008
+          - ref: nübling_szczepaniak_2008
             pages:
                 - 18
                 - 19
             summary: 'Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [3, 4].'
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 78
             summary: 'Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [3, 4].'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 89
             summary: 'Prefixed deverbative M attach an -s- regularly unless they end with a sibilant or [ts] [2].'
@@ -996,35 +787,28 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: fuhrhop_kürschner_2015
+          - ref: fuhrhop_kürschner_2015
             pages:
                 - 572
             summary: The probability of -s- increases if the first element is morphologically complex.
-        - 
-            ref: kopf_2017
+          - ref: kopf_2017
             pages:
                 - 201
             summary: '-s- often occurs with derived nouns and marks its complexity.'
-        - 
-            ref: kürschner_2005
+          - ref: kürschner_2005
             pages:
                 - 106
                 - 111
                 - 112
             summary: 'Morphological complexity (any form of derivation [1]) increases the probability of -s-.'
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 19
                 - 22
             summary: 'The probability of -s- grows with the morphologic complexity of the noun, but it is not regular in German.'
-        - 
-            ref: '`suffixes_cond_s` [2]'
-        - 
-            ref: '`deverba_en` [2]'
-        - 
-            ref: '`prefix_deverba` [2]'
+          - ref: '`suffixes_cond_s` [2]'
+          - ref: '`deverba_en` [2]'
+          - ref: '`prefix_deverba` [2]'
     examples_pro:
         - gesundheit_+s_amt
         - gesellschaft_+s_politik
@@ -1044,29 +828,23 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: fuhrhop_kürschner_2015
+          - ref: fuhrhop_kürschner_2015
             pages:
                 - 572
             summary: The probability of -s- increases if the first element is prosodically complex.
-        - 
-            ref: nübling_szczepaniak_2008
+          - ref: nübling_szczepaniak_2008
             pages:
                 - 10
                 - 21
                 - 22
             summary: 'The occurrence of the linking -s- correlates with the bad phonological quality of the first constituent. The two most important cases of bad phonological words are words with unstressed prefixes and foreign words with non-native structures and accent positions [1]. In particular, corpus research shows there is a string tendency to attach -s- to words with unstressed prefixes.'
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 78
             summary: 'The greater the distance of the word to the phonological ideal, the more probable the occurrence of -s-.'
-        - 
-            ref: '`suffixes_cond_s` [2, 3]'
-        - 
-            ref: '`prefix_deverba` [2, 3]'
-        - 
-            ref: '`complex_syl_bound` [2]'
+          - ref: '`suffixes_cond_s` [2, 3]'
+          - ref: '`prefix_deverba` [2, 3]'
+          - ref: '`complex_syl_bound` [2]'
     examples_pro:
         - anruf_beantworter
         - beruf_+s_erfahrung
@@ -1086,8 +864,7 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 22
             summary: '-s- may occur [1] after a complex syllable boundary.'
@@ -1109,18 +886,15 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 23
             summary: 'In simplexes, -s- occurs only in M and N except for a few cases.'
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 79
             summary: '-s- is productive after polysyllabic words: there is only a fixed group of 30-40 monosyllabic [1] M and N that adopt -s-.'
-        - 
-            ref: schäfer_pankratz_2018
+          - ref: schäfer_pankratz_2018
             pages:
                 - 8
             summary: 'Simplex M and N often [2] take -s- [3].'
@@ -1144,14 +918,12 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 23
                 - 24
             summary: 'In F, -s- occurs only with morphological complexity [1].'
-        - 
-            ref: ortner_müller-bollhagen_1991
+          - ref: ortner_müller-bollhagen_1991
             pages:
                 - 73
             summary: 'Almost all F with -s- are polysyllabic [2].'
@@ -1172,8 +944,7 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: nübling_szczepaniak_2013
+          - ref: nübling_szczepaniak_2013
             pages:
                 - 79
             summary: '-s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument, with many doubtful cases [1].'
@@ -1192,8 +963,7 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: kürschner_2010
+          - ref: kürschner_2010
             pages:
                 - 25
             summary: Many simplexes with an -s- are high frequent tokens.
@@ -1211,38 +981,27 @@
     regularity: NA
     coverage: NA
     evidence:
-        - 
-            ref: krott_etal_2007
+          - ref: krott_etal_2007
             pages:
                 - 3
             summary: 'When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning [1].'
-        - 
-            ref: schäfer_2018
+          - ref: schäfer_2018
             pages:
                 - 230
                 - 231
             summary: 'Linkers identical to the plural ending are tendentially associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element.'
-        - 
-            ref: schlücker_2023
+          - ref: schlücker_2023
             pages:
                 - 20
             summary: 'Linkers identical to the plural ending can be [2] associated with plural meaning.'
-        - 
-            ref: '`schwa`'
-        - 
-            ref: '`cons_final_f`'
-        - 
-            ref: '`mixed_mn`'
-        - 
-            ref: '`zero_umlaut_plural`'
-        - 
-            ref: '`e_umlaut_plural`'
-        - 
-            ref: '`e_plural`'
-        - 
-            ref: '`er_plural`'
-        - 
-            ref: '`suffixes_cond_s`'
+          - ref: '`schwa`'
+          - ref: '`cons_final_f`'
+          - ref: '`mixed_mn`'
+          - ref: '`zero_umlaut_plural`'
+          - ref: '`e_umlaut_plural`'
+          - ref: '`e_plural`'
+          - ref: '`er_plural`'
+          - ref: '`suffixes_cond_s`'
     examples_pro:
         - ''
     examples_contra:
