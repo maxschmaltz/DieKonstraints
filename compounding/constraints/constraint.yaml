@@ -124,8 +124,8 @@ topology:
                 - id: &p2l:drv:sfx
                   summary: Clusters of constraints that map derivational suffixes of compounds to most probable linkers.
                   children:
-                      - *p2l:drv:sfx:sfx-0
-                      - *p2l:drv:sfx:deverb_#en$-s
+                      - *p2l:drv:sfx:0_pl_sfx-0
+                      - *p2l:drv:sfx:!0_pl_sfx-0
                       - *p2l:drv:sfx:sfx-s
                       - *p2l:drv:sfx:F_#in$-en
                 - *p2l:drv:prx_deverb-0
@@ -180,13 +180,14 @@ constraint_clusters:
     #     1.1.1. Clusters of constraints that map plural forms of compounds to most probable linkers.
 
     - id: &p2l:decl_cl:pl:#0-0
-      summary: Derivatives forming the plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker with a few exceptions unless they are a deverbative, in which case they always attach -s-. Simplex masculine and neuter nouns, as well as any feminines forming the plural with a zero ending attach a zero linker in majority of cases.
+      summary: Simplex masculine and neuter nouns, as well as any feminines forming the plural with a zero ending attach a zero linker in majority of cases. Derivatives forming the plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker with a few exceptions unless they are a deverbative, in which case they always attach -s-.
       children:
-          - *p2l:decl_cl:pl:#0-0|drv_!#en$-0
-          - *p2l:decl_cl:pl:#0-0|drv_!deverb_#en$-0
-          - *p2l:drv:sfx:deverb_#en$-s   # EXTERNAL
           - *p2l:decl_cl:pl:#0-0|smpx_mn-0
           - *p2l:decl_cl:pl:#0-0|f-0
+          - *p2l:drv:sfx:0_pl_sfx-0:!#en$-0 # EXTERNAL
+          - *p2l:drv:sfx:0_pl_sfx-0:!deverb_#en$-0  # EXTERNAL
+          - *p2l:drv:sfx:0_pl_sfx-0:deverb_#en$-s # EXTERNAL
+          - *p2l:drv:sfx:deverb_#en$-s   # EXTERNAL
 
 
     - id: &p2l:decl_cl:pl:#e-0
@@ -294,16 +295,20 @@ constraints:
 
     #     1.1.1. Clusters of constraints that map plural forms of compounds to most probable linkers.
 
+    - id: &p2l:decl_cl:pl:#0-0|smpx_mn-0
+      summary: Simplex masculine and neuter nouns forming the plural with a zero ending attach a zero linker in majority of cases.
+      type: [morphological]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [gürtel_schnalle, gebäude_komplex, hebel_wirkung]
+      examples_contra: [orden_+s_bruder, teufel_+s_werk, frieden_+s_angebot]
 
 
-    - *p2l:decl_cl:pl:#0-0|drv_!#en$-0
-    - *p2l:decl_cl:pl:#0-0|drv_!deverb_#en$-0
-    - *p2l:decl_cl:pl:#0-0|smpx_mn-0
-    - *p2l:decl_cl:pl:#0-0|f-0
+    - id: &p2l:decl_cl:pl:#0-0|f-0
 
 
     - id: &p2l:decl_cl:pl:#s-0
-
       summary: Nouns forming the plural with -s regularly attach a zero linker.
       type: [morphological]
       regularity: NA
