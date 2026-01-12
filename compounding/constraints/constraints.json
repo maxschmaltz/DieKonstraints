@@ -1,66 +1,9 @@
 [
-	{
-		"id": "zero_default",
-		"summary": "The majority of compounds have a zero linker.",
-		"type": ["default"],
-		"regularity": "NA",
-		"coverage": "NA",
-		"evidence": [
-			{
-				"ref": "eisenberg_2013",
-				"pages": [226],
-				"summary": "73% of compounds have a zero linker."
-			},
-			{
-				"ref": "fuhrhop_kürschner_2015",
-				"pages": [569],
-				"summary": "70% of compounds have a zero linker."
-			},
-			{
-				"ref": "kopf_2017",
-				"pages": [177],
-				"summary": "About 60% of compounds have a zero linker."
-			},
-			{
-				"ref": "krott_etal_2007",
-				"pages": [3],
-				"summary": "60% of compounds have a zero linker."
-			},
-			{
-				"ref": "kürschner_2005",
-				"pages": [107],
-				"summary": "58% of compounds have a zero linker."
-			},
-			{
-				"ref": "libben_etal_2009",
-				"pages": [150, 156],
-				"summary": "The majority of compounds have a zero linker."
-			},
-			{
-				"ref": "nübling_szczepaniak_2008",
-				"pages": [2],
-				"summary": "In most German compounds there is no linking element."
-			},
-			{
-				"ref": "ortner_müller-bollhagen_1991",
-				"pages": [50, 52, 54, 103],
-				"summary": "Most nominal compounds have a zero linker (in about 2/3 of cases)."
-			},
-			{
-				"ref": "schäfer_pankratz_2018",
-				"pages": [8, 9],
-				"summary": "65-70% of compounds have a zero linker."
-			},
-			{
-				"ref": "schlücker_2012",
-				"pages": [9],
-				"summary": "Zero linker prevails in nominal compounds."
-			}
-		],
-		"examples_pro": ["land_kreis", "haus_tür", "stadt_mauer"],
-		"examples_contra": ["land_+es_regierung", "haus_+=er_block", "stadt_+=e_tag"],
-		"footnotes": {}
-	},
+
+
+
+
+
 	{
 		"id": "cons_final_f",
 		"summary": "Consonant-final simplex F mostly adopt either -en-, or a zero linker, or -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -en- is more likely (especially in final-stressed F), otherwise mostly a zero linker or -s- is chosen.",

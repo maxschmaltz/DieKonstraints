@@ -1,0 +1,360 @@
+# Part 1: README
+
+*
+readme: |
+
+
+
+
+    TODO
+
+
+    ## On reading constraint ids.
+
+    Constraints ids and constraint cluster ids are designed to provide instant information about the constraint they represent.
+    Every constraint id consists of a path and a descriptor -- a codified description of the constraint (cluster) itself.
+    The path and the descriptor are separated by the last colon in the id.
+    The path describes the location of the constraint (cluster) in the topology (see topology below).
+    The information encoded in descriptor depends on the topological type of the constraint (cluster) (see topology below). The topological type of a constraint (cluster) is also included at the beginning of the path.
+    
+    * The descriptors of the default constraint and the `p2l` constraints and constraint clusters consist of two parts separated by a hyphen. They codify the properties of the compounds in the left part and the most probable linker(s) in the right part. The linguistic status of the compound properties can be inferred from the topological path. For codes of the properties see the glossary below.
+    
+    * The descriptors of the `l2p` constraint clusters directly specify the linkers they target.
+
+    Examples:
+    
+    * `p2l:decl_cl:pl:s-0` -- the path of the id says that this constraint describes a certain compound property that determines the most probable linker(s) (`p2l`); more specifically, it maps a certain declination class (`decl_cl`), namely, a plural formation scheme (`pl`), to the most probable linker(s) (`s-0`); the descriptor specifies that s-plural nouns (`s-`) mostly attach a zero linker (`-0`). Reading: plural nouns that form their plural with -s mostly attach a zero linker.
+
+    * `l2p:s` -- the path of the id says that this constraint describes the restrictions put on the nouns that may attach a certain linker (`l2p`); the descriptor specifies that the constraint targets the s-linker (`s`). Reading: restrictions on compounds with an s-linker.
+
+
+    ## On reading linker ids.
+
+    All linker ids (except for '_' -- zero linker) are separated from the left and the right constituents by underscores. In the middle part, the linker is specified after a plus sign. Note that linker ids specify concrete allomorphs of the linkers (e.g. _+n_ and _+en_ are allomorphs of the en-linker). If the plus sign is followed by an equal sign, the linker puts umlaut on the stem vowel of the left constituent (for _+=er_: whenever applicable).
+    The full list of linker ids is given in the linkers glossary below.
+
+---
+
+
+# Part 2: GLOSSARY & LINKER DESIGNATIONS
+
+glossary:
+
+    "!": "[negation]"
+    "#": "[marks a literal (phoneme, suffix, etc.) ahead]"
+    "$": "[marks that the noun ends with a literal (phoneme, suffix, etc.) behind]"
+    2const: second constituent
+    anim: person or animal designation
+    arg: argumental compound
+    cl: class
+    cmpx: complex (in different contexts)
+    comp: compound
+    cons: consonant
+    copula: copula compound
+    decl: declination
+    def: default
+    deverb: deverbative
+    drv: derivative
+    f: feminine noun
+    interpr: interpretation
+    m: masculine noun
+    morph: morphological
+    msyl: monosyllabic
+    n: neuter noun
+    p2l: properties to linkers
+    fin: final
+    phon: phonological
+    pl: plural formation scheme
+    pl_interpr: plural/collective interpretation
+    prx: prefix
+    sem: semantics of the compound/first constituent
+    sfx: (derivational) suffix
+    smpx: simplex noun
+    tech: technical
+    tend: tendency
+    uml: umlaut
+    vow: full vowel
+
+
+linkers:
+
+    _: zero linker
+    _+s_: s-linker
+    _+n_: en-linker (allomorph after schwa)
+    _+en_: en-linker (allomorph after consonant)
+    _+e_: e-linker
+    _+=er_: er-linker (puts umlaut whenever possible)
+    _+=e_: e-linker with umlaut
+    _+es_: es-linker
+    _+ns_: ens-linker (allomorph after schwa)
+    _+ens_: ens-linker (allomorph after consonant)
+    _+=_: zero linker with umlaut
+
+---
+
+
+# Part 3: ENTRIES
+
+topology:
+
+    # - *def-0
+
+
+    - id: &p2l
+      summary: Clusters of constraints the map properties of compounds to most probable linkers.
+      children:
+
+          - id: &p2l:decl_cl
+            summary: CLusters of constraint that map declination classes of compounds to most probable linkers.
+            children:
+                - id: &p2l:decl_cl:pl
+                  summary: Clusters of constraints that map plural forms of compounds to most probable linkers.
+                  children:
+                #       - *p2l:decl_cl:pl:#0-0
+                #       - *p2l:decl_cl:pl:#s-0
+                #       - *p2l:decl_cl:pl:#e-0
+                #       - *p2l:decl_cl:pl:#er-er/0
+                #       - *p2l:decl_cl:pl:#e_uml-0
+                #       - *p2l:decl_cl:pl:#0_uml-0
+                # - *p2l:decl_cl:mixed-0/s/en
+
+          - id: &p2l:drv
+            summary: Clusters of constraints that map derivational classes of compounds to most probable linkers.
+            children:
+                - id: &p2l:drv:sfx
+                  summary: Clusters of constraints that map derivational suffixes of compounds to most probable linkers.
+                  children:
+                      - *p2l:drv:sfx:sfx-0
+                      - *p2l:drv:sfx:deverb_#en$-s
+                      - *p2l:drv:sfx:sfx-s
+                      - *p2l:drv:sfx:F_#in$-en
+                - *p2l:drv:prx_deverb-0
+                
+          - id: &p2l:phon_fin
+            summary: Clusters of constraints that map final phoneme(s) of compounds to most probable linkers.
+            children:
+                - *p2l:phon_fin:sibilant$-0
+                - *p2l:phon_fin:cmpx_syl$-0
+                - *p2l:phon_fin:vow$-0
+                - *p2l:phon_fin:F_#t$-s
+                - *p2l:phon_fin:schwa$-en
+                - *p2l:phon_fin:F_cons$-0/s/en
+
+          - id: &p2l:sem
+            summary: Clusters of constraints that map semantic properties of compounds/first constituents to most probable linkers.
+            children:
+                - id: &p2l:sem:comp_type
+                  summary: Clusters of constraints that map compound types to most probable linkers.
+                  children:
+                      - *p2l:sem:comp_type:copula-0
+                      - *p2l:sem:comp_type:arg-0
+                - *p2l:sem:tech_term-0
+                - *p2l:sem:2const_anim-0
+
+          - id: &p2l:tend
+            summary: Clusters of constraints that describe general irregular tendencies.
+            children:
+                - *p2l:tend:sonority-!s
+                - *p2l:tend:cmpx_morph-s
+                - *p2l:tend:cmpx_phon-s
+                - *p2l:tend:pl_interpr-pl_marker
+
+
+    - id: &l2p
+      summary: Clusters of constraints that restrict properties of compounds appearing with certain linkers.
+      children:
+          - *l2p:en
+          - *l2p:e
+          - *l2p:s
+          - *l2p:er
+          - *l2p:e_uml
+          - *l2p:0_uml
+
+
+constraint_clusters:
+
+    # 1. Clusters of constraints the map properties of compounds to most probable linkers.
+
+    #   1.1. Clusters of constraints that map declination classes of compounds to most probable linkers.
+
+    #     1.1.1. Clusters of constraints that map plural forms of compounds to most probable linkers.
+
+    - id: &p2l:decl_cl:pl:#0-0
+      summary: Derivatives forming the plural with a zero ending -- especially with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker with a few exceptions unless they are a deverbative, in which case they always attach -s-. Simplex masculine and neuter nouns, as well as any feminines forming the plural with a zero ending attach a zero linker in majority of cases.
+      children:
+          - *p2l:decl_cl:pl:#0-0|drv_!#en$-0
+          - *p2l:decl_cl:pl:#0-0|drv_!deverb_#en$-0
+          - *p2l:drv:sfx:deverb_#en$-s   # EXTERNAL
+          - *p2l:decl_cl:pl:#0-0|smpx_mn-0
+          - *p2l:decl_cl:pl:#0-0|f-0
+
+
+    - id: &p2l:decl_cl:pl:#e-0
+      summary: Nouns forming the plural with -e mostly have a zero linker. In case of plural or collective meaning, they may also non-regularly attach -e-. Monosyllabic e-plural nouns designating animals may also non-regularly attach -e-. E-plural strong feminine nouns is the only class of words that can attach this linker.
+      children:
+          - *p2l:decl_cl:pl:#e-0|def-0
+          - *p2l:decl_cl:pl:#e-0|pl_interpr-e
+          - *p2l:decl_cl:pl:#e-0|msyl_anim-e
+          - *l2p:e  # EXTERNAL
+
+
+    - id: &p2l:decl_cl:pl:#er-er/0
+      summary: Nouns forming the plural with -er (with or without umlaut) (these are mostly N and some M, mostly simplices and never loanwords) mostly attach a zero linker or =er= in different cases. Another linkers can also be rarely adopted by these nouns. =er= is more probable (with counterexamples) when a plural or collective meaning is present, in which case these nouns will indicate concrete, countable entities. For person and animal designations though, =er= is not necessarily associated with a plural meaning. When having a mass meaning, these nouns tend (with counterexamples) to attach a zero linker. Er-plural nouns is the only class of words that can attach this linker.
+      children:
+          - *p2l:decl_cl:pl:#er-er/0|def-er/0
+          - *p2l:decl_cl:pl:#er-er/0|pl_interpr-er
+          - *p2l:decl_cl:pl:#er-er/0|anim-er
+          - *p2l:decl_cl:pl:#er-er/0|mass-interpr-0
+          - *l2p:er  # EXTERNAL
+
+
+    - id: &p2l:decl_cl:pl:#e_uml-0
+      summary: Nouns forming the plural with -e and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach -e- with an umlaut. Nouns forming the plural with -e and an umlaut is the only class of words that can attach this linker.
+      children:
+          - *p2l:decl_cl:pl:#e_uml-0|def-0
+          - *p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml
+          - *l2p:e_uml  # EXTERNAL
+
+
+    - id: &p2l:decl_cl:pl:#0_uml-0
+      summary: Nouns forming the plural with a zero ending and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach a zero linker with an umlaut. Nouns forming the plural with a zero ending and an umlaut is the only class of words that can attach this linker.
+      children:
+          - *p2l:decl_cl:pl:#0_uml-0|def-0
+          - *p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml
+          - *l2p:0_uml  # EXTERNAL
+
+
+    - id: &p2l:decl_cl:mixed-0/s/en
+      summary: Mixed masculine and neuter nouns can attach -s-, a zero linker, or -(e)n-. The latter may be associated with a plural or collective meaning (with counterexamples).
+      children:
+          - *p2l:decl_cl:mixed-0/s/en|def-0/s/en
+          - *p2l:decl_cl:mixed-0/s/en|pl_interpr-en
+      
+
+
+constraints:
+
+    - id: &def-0
+      summary: The majority of compounds have a zero linker. Zero linker is default for German compounds.
+      type: [default]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [land_kreis, haus_tür, stadt_mauer]
+      examples_contra: [land_+es_regierung, haus_+=er_block, stadt_+=e_tag]
+
+      evidence:
+
+          - ref: eisenberg_2013
+            pages: [226]
+            summary: 73% of compounds have a zero linker.
+
+          - ref: fuhrhop_kürschner_2015
+            pages: [569]
+            summary: 70% of compounds have a zero linker.
+
+          - ref: kopf_2017
+            pages: [177]
+            summary: About 60% of compounds have a zero linker.
+
+          - ref: krott_etal_2007
+            pages: [3]
+            summary: 60% of compounds have a zero linker.
+
+          - ref: kürschner_2005
+            pages: [107]
+            summary: 58% of compounds have a zero linker.
+
+          - ref: libben_etal_2009
+            pages: [150, 156]
+            summary: The majority of compounds have a zero linker.
+
+          - ref: nübling_szczepaniak_2008
+            pages: [2]
+            summary: In most German compounds there is no linking element.
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [50, 52, 54, 103]
+            summary: Most nominal compounds have a zero linker (in about 2/3 of cases).
+
+          - ref: schäfer_pankratz_2018
+            pages: [8, 9]
+            summary: 65-70% of compounds have a zero linker.
+
+          - ref: schlücker_2012
+            pages: [9]
+            summary: Zero linker prevails in nominal compounds.
+
+      footnotes: {}
+
+
+    # 1. Clusters of constraints the map properties of compounds to most probable linkers.
+
+    #   1.1. Clusters of constraints that map declination classes of compounds to most probable linkers.
+
+    #     1.1.1. Clusters of constraints that map plural forms of compounds to most probable linkers.
+
+
+
+    - *p2l:decl_cl:pl:#0-0|drv_!#en$-0
+    - *p2l:decl_cl:pl:#0-0|drv_!deverb_#en$-0
+    - *p2l:decl_cl:pl:#0-0|smpx_mn-0
+    - *p2l:decl_cl:pl:#0-0|f-0
+
+
+    - id: &p2l:decl_cl:pl:#s-0
+
+      summary: Nouns forming the plural with -s regularly attach a zero linker.
+      type: [morphological]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [balkon_möbel, hotel_kette, bob_bahn]
+      examples_contra: []
+
+      evidence:
+
+          - ref: eisenberg_2013
+            pages: [227]
+            summary: -s- is avoided with s-plural nouns.
+          
+          - ref: fuhrhop_kürschner_2015
+            pages: [572]
+            summary: -s- is impossible with s-plural nouns.
+
+          - ref: kürschner_2010
+            pages: [9]
+            summary: -s- almost never occurs with s-plural nouns.
+
+          - ref: nübling_szczepaniak_2013
+            pages: [78]
+            summary: -s- does not occur in s-plural nouns.
+          
+          - ref: ortner_müller-bollhagen_1991
+            pages: [83, 106]
+            summary: s-plural nouns have a zero linker as a rule.
+          
+          - ref: schäfer_2018
+            pages: [229]
+            summary: s-plural nouns never attach -s-.
+      
+      footnotes: {}
+
+
+    - *p2l:decl_cl:pl:#e-0|def-0
+    - *p2l:decl_cl:pl:#e-0|pl_interpr-e
+    - *p2l:decl_cl:pl:#e-0|msyl_anim-e
+
+    - *p2l:decl_cl:pl:#er-er/0|def-er/0
+    - *p2l:decl_cl:pl:#er-er/0|pl_interpr-er
+    - *p2l:decl_cl:pl:#er-er/0|anim-er
+    - *p2l:decl_cl:pl:#er-er/0|mass-interpr-0
+
+    - *p2l:decl_cl:pl:#e_uml-0|def-0
+    - *p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml
+
+    - *p2l:decl_cl:pl:#0_uml-0|def-0
+    - *p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml
+
+    - *p2l:decl_cl:mixed-0/s/en|def-0/s/en
+    - *p2l:decl_cl:mixed-0/s/en|pl_interpr-en
