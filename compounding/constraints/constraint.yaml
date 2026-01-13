@@ -40,7 +40,6 @@ readme: |
 # Part 2: GLOSSARY & LINKER DESIGNATIONS
 
 glossary:
-
     "!": "[negation]"
     "#": "[marks a literal (phoneme, suffix, etc.) ahead]"
     "$": "[marks that the noun ends with a literal (phoneme, suffix, etc.) behind]"
@@ -80,7 +79,6 @@ glossary:
 
 
 linkers:
-
     _: zero linker
     _+s_: s-linker
     _+n_: en-linker (allomorph after schwa)
@@ -195,7 +193,7 @@ topology:
                       - *p2l:drv:sfx:!0_pl_sfx-0
 
                       - id: &p2l:drv:sfx:sfx-s
-                        summary: -s- occurs regularly after suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling and tendentially after -(t)um, -ion. Suffix -(i)tät also regularly attaches -s- unless there is a plural interpretation, in which case -en- is preferred.
+                        summary: Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling regularly, and nouns with suffixes -(t)um, -ion tendentially attach -s-. Suffix -(i)tät also regularly attaches -s- unless there is a plural interpretation, in which case -en- is preferred.
                         children:
 
                             - *p2l:drv:sfx:sfx-s|def-s
@@ -640,7 +638,7 @@ constraints:
 
           - ref: eisenberg_2013
             pages: [229]
-            summary: For er-plural nouns designating persons and animals, =er= is not necessarily associated with a plural 
+            summary: For er-plural nouns designating persons and animals, =er= is not necessarily associated with a plural meaning.
 
           - ref: ortner_müller-bollhagen_1991
             pages: [98]
@@ -764,7 +762,7 @@ constraints:
       footnotes:
           "1": "Even though these papers do not explicitly say 'mixed M and N', the examples they provide are all mixed M and N: farm_+en_verkauf, staat_+en_bund, bett_+en_zahl."
           "2": The original text refers to both strong and mixed M.
-          "3": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `es`, we modify it to -s- here.
+          "3": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `l2p:es`, we modify it to -s- here.
           "4": Since from the whole class of strong and mixed M and N taking -s- and -es- mentioned in the paper we only consider the subclass of mixed M and N taking -s- here, the evidence is to be considered indirect. The rest of the claim about strong M and N consideres such a broad class that we disregard it in this iteration.
 
 
@@ -796,7 +794,7 @@ constraints:
     #    1.2.1. Constraints that map derivational suffixes of compounds to most probable linkers.
 
     - id: &p2l:drv:sfx:0_pl_sfx-0
-      summary: Derivatives forming the plural with a zero ending -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly.
+      summary: Derivatives forming the plural with a zero ending -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- regularly attach a zero linking element.
       type: [derivational]
       regularity: NA
       coverage: NA
@@ -813,11 +811,114 @@ constraints:
       footnotes: {}
 
 
-    *p2l:drv:sfx:!0_pl_sfx-0
+    - id: &p2l:drv:sfx:!0_pl_sfx-0
+      summary: Nouns with suffixes -bold, -nis, -rich, -at, -al, -ik, also stressed -ei, -ie, -ur usually attach a zero linker.
+      type: [derivational]
+      regularity: NA
+      coverage: NA
 
-    *p2l:drv:sfx:sfx-s|def-s
+      examples_pro: [erlaubnis_schein, kultur_wissenschaft, kosmetik_industrie]
+      examples_contra: []
 
-    *p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en
+      evidence:
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [83, 107]
+            summary: Nouns with suffixes -bold, -nis, -rich, -at, -al, -ik, also stressed -ei, -ie, -ur usually attach a zero linker.
+
+      footnotes: {}
+
+
+
+    - id: &p2l:drv:sfx:sfx-s|def-s
+      summary: Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -tum, -um, -ion, -(i)tät regularly attach -s-.
+      type: [derivational]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, schicksal_+s_drama, rarität_+s_wert, eigentum_+s_recht]
+      examples_contra: [minderheit_+en_recht]
+
+      evidence:
+
+          - ref: eisenberg_2013
+            pages: [230]
+            summary: -s- occurs regularly after suffixes -(ig)keit, -heit, -tum, -schaft, -ung, -sal, -ling [1, 2].
+
+          - ref: fuhrhop_kürschner_2015
+            pages: [572]
+            summary: -s- occurs regularly after suffixes -heit, -ung, -ling, -schaft, -tum, -ität [2].
+
+          - ref: koliopoulou_2014
+            pages: [61]
+            summary: -s- follows first constituents that bear a prefix [5]. Furthermore, nouns with closing suffixes (-heit, -keit, -igkeit, -ling and -ung) are usually followed by -s- [2, 3].
+
+          - ref: krott_etal_2007
+            pages: [3]
+            summary: -s- is inserted productively and automatically after certain suffixes [4].
+
+          - ref: kürschner_2005
+            pages: [107, 115]
+            summary: Suffixes -heit, -keit, -ling, -ung, -schaft always require -s- [2, 3]. The probability of -s- increases [5] after suffixes -tum, -ion, -tät.
+
+          - ref: kürschner_2010
+            pages: [20, 21]
+            summary: -s- regularly occurs after suffixes -heit, -schaft, -ling, -tum, -ung [3]. -s- also occurs [5] after suffixes -ität, -ion.
+
+          - ref: nübling_szczepaniak_2008
+            pages: [10, 20, 23]
+            summary: -s- occurs regularly after suffixes -ung, -heit, -keit, -igkeit, -sal, -schaft, -ling, -ität, -ion [1]; derivations in -um also tend to adopt -s- [1].
+
+          - ref: nübling_szczepaniak_2013
+            pages: [77]
+            summary: -s- regularly appears after suffixes -heit, -keit, -igkeit -schaft, -ung, -ion, and -ität [1].
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [73, 83, 88, 89, 94]
+            summary: -s- regularly occurs with F ending in -ung, -beit, -keit, -igkeit, -schaft, -ität, -ion, -tum with a few exceptions, extensively occurs after -sal.
+
+          - ref: schäfer_2018
+            pages: [229]
+            summary: Nouns with suffixes -heit, -ung, -tum etc. a strong tendency to adopt -s-.
+
+          - ref: schäfer_pankratz_2018
+            pages: [8]
+            summary: Derivates with suffixes -ung, -heit, -tum etc. have a strong tendency to occur with an -s- linking element.
+
+          - ref: schlücker_2023
+            pages: [19]
+            summary: -s- occurs with -schaft, -heit, -ung, -tum, -tät, -ion [3, 5].
+
+          - ref: wegener_2003
+            pages: [448]
+            summary: -s- regularly occurs after suffixes -heit, -keit, -ung, -ling, -schaft [3].
+
+      footnotes:
+          "1": "Explanation: these are (semi-)stressed suffixes that form phonologically bad words. -s- is therefore used to mark the boundary of the phonological word ending with such a suffix."
+          "2": "Explanation: -s- is used to mark a morphological boundary after a morphologically complex constituent."
+          "3": "Explanation: these are (except for -schaft) closing suffixes, and -s- reopens the stem for further derivation."
+          "4": Even though not explicitly stated, we assume that the authors refer to these suffixes, as, to the best of our knowledge, these are the only suffixes in German that regularly trigger the insertion of -s-. To be considered indirect evidence.
+          "5": Level of regularity not mentioned.
+
+
+    - id: &p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en
+      summary: Nouns with suffix -(i)tät prefer -en- when the second constituent forces a plural or collective meaning of this noun.
+      type: [derivational, semantic]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [rarität_+en_sammlung, kuriosität_+en_händler, aktualitäten_+en_kino]
+      examples_contra: []
+
+      evidence:
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [94]
+            summary: Nouns ending in -ität- can adopt -en- where the plural interpretation should be preserved.
+
+      footnotes: {}
+
+
 
     - id: &p2l:drv:sfx:deverb_#en$-s
       summary: -s- occurs regularly in deverbatives ending in -en.
@@ -849,12 +950,78 @@ constraints:
       footnotes: {}
 
     
-    *p2l:drv:sfx:F_#in$-en
+    - id: &p2l:drv:sfx:F_#in$-en
+      summary: Derivative feminine nouns with suffix -in always attach -en-. (The suffix -in adjusts orthographically in this case and becomes an -inn.)
+      type: [derivational]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [lehrehrinn_+en_mentalität, freundinn_+en_gruppe, schülerinn_+en_rat]
+      examples_contra: [königin_mutter]
+
+      evidence:
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [94]
+            summary: Derivative F with suffix -in always attach -en-[, if they are not copulative [1]].
+
+      footnotes:
+          "1": Evidence for `p2l:sem:comp_type:copula-0` > `p2l:drv:sfx:F_#in$-en`.
 
 
     #    1.2.2. Constraint for prexied deverbatives.
 
-    *p2l:drv:prx_deverb-s
+    - id: &p2l:drv:prx_deverb-s
+      summary: There is a strong tendency to adopt -s- after prefixed deverbatives, especially when the prefix is stressed.
+      type: [derivational]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [anspruch_+s_haltung, eintrag_+s_frist, bedarf_+s_fall, verfall_+s_datum]
+      examples_contra: [anruf_beantworter, überfall_kommando, bestand_teil]
+
+      evidence:
+
+          - ref: eisenberg_2013
+            pages: [230]
+            summary: -s- occurs in a large number of M and F derivatives from prefixed verbs [1].
+
+          - ref: koliopoulou_2014
+            pages: [61]
+            summary: -s- follows first constituents that bear a prefix [2, 3].
+
+          - ref: kürschner_2005
+            pages: [107]
+            summary: Prefixed nouns adopt -s- more frequently than the corresponding simplexes (67.5% vs 28.8%).
+          
+          - ref: kürschner_2010
+            pages: [21]
+            summary: Many simplexes that don't attach -s-, do so after prefixation.
+
+          - ref: kopf_2017
+            pages: [190]
+            summary: "Occurrences of -s- in words with stressed and unstressed prefixes is almost the same: 76.5% vs 78%, respectively."
+
+          - ref: nübling_szczepaniak_2008
+            pages: [18, 19]
+            summary: Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [4, 5].
+
+          - ref: nübling_szczepaniak_2013
+            pages: [78]
+            summary: Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [4, 5].
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [89]
+            summary: Prefixed deverbative M attach an -s- regularly unless they end with a sibilant or [ts] [6].
+
+      footnotes:
+          "1": All the examples provided in this source have stressed prefixes.
+          "2": "Explanation: -s- is used to mark a morphological boundary after a morphologically complex constituent."
+          "3": Level of regularity not mentioned.
+          "4": "The results of [nübling_szczepaniak_2008] (provided again in [nübling_szczepaniak_2013]) are based on a corpus study but are however subject to questions because of the methodology used. First of all, only 21 nouns with unstressed and 19 nouns with stressed prefixes were considered for further combinations, which is a very small sample. Even though the number of resulting compounds was very large, the fact that the same nouns tend to occur with the same linkers discards the representativeness of the large sample size. Furthermore, many of the prefixed nouns were derivates from the same verb (e.g. 'Ansicht', 'Aufsicht', 'Übersicht') which again reduces the diversity of the sample. Furthermore, no specific examples were provided in the paper, whereas further literature suggest several counterexamples to the claim about derivatives with stressed prefixes. Hence, we believe the absolute numbers provided in [nübling_szczepaniak_2008] might not be very reliable. However, these findings may suggest a general trend that prefixed deverbatives with unstressed prefixes tend to attach -s- more often than those with stressed prefixes: verfall_+s_datum vs überfall_kommando."
+          "5": "Explanation: unstressed prefixes form phonologically bad words. -s- is therefore used to mark the boundary of the phonological word starting with such a suffix."
+          "6": Evidence for `p2l:phon_fin:sibilant$-0` > `p2l:drv:prx_deverb-s`.
+    
 
     # 1.3. Constraints that map final phoneme(s) of compounds to most probable linkers.
 
