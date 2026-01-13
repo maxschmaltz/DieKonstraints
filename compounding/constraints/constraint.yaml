@@ -5,6 +5,7 @@ readme: |
 
     TODO: constraints are designed to overlap from general to specific (e.g. schwa)
 
+    TODO: er-, =plural, M, N, F etc. in evidence and footnotes
 
     TODO
 
@@ -64,6 +65,7 @@ glossary:
     n: neuter noun
     p2l: properties to linkers
     fin: final
+    par: paradigmatic
     pers: person
     phon: phonological
     pl: plural
@@ -98,7 +100,7 @@ linkers:
 
 topology:
 
-    # - *def-0
+    - *def-0
 
 
     - id: &p2l
@@ -117,42 +119,42 @@ topology:
                         summary: Simplex masculine and neuter nouns ending with -el or -en that form the plural with a zero ending attach a zero linker in majority of cases. Derivatives forming the plural with a zero ending -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker regularly unless they are a deverbative, in which case they always attach -s-.
                         children:
 
-                            # - *p2l:drv:sfx:0_pl_sfx-0 # EXTERNAL
+                            - *p2l:drv:sfx:0_pl_sfx-0 # EXTERNAL
 
-                            # - *p2l:decl_cl:pl:#0-0|smpx_mn_#el$/#en$-s
+                            - *p2l:decl_cl:pl:#0-0|smpx_mn_#el$/#en$-s
 
-                            # - *p2l:drv:sfx:deverb_#en$-s   # EXTERNAL
+                            - *p2l:drv:sfx:deverb_#en$-s   # EXTERNAL
 
                       - id: &p2l:decl_cl:pl:#e-0
-                        summary: Nouns forming the plural with -e mostly have a zero linker. In case of plural or collective meaning, they may also non-regularly attach -e-. Monosyllabic e-plural nouns designating animals may also non-regularly attach -e-. E-plural nouns is the only class of words that can attach this linker.
+                        summary: Nouns forming the plural with -e mostly have a zero linker. In case of plural or collective meaning, they may also non-regularly attach -e-. Monosyllabic e-plural nouns designating animals may also non-regularly attach -e-. e-plural nouns is the only class of words that can attach this linker.
                         children:
 
-                            # - *p2l:decl_cl:pl:#e-0|def-0
+                            - *p2l:decl_cl:pl:#e-0|def-0
 
-                            # - *p2l:decl_cl:pl:#e-0|pl_interpr-e
+                            - *p2l:decl_cl:pl:#e-0|pl_interpr-e
 
-                            # - *p2l:decl_cl:pl:#e-0|msyl_anim-e
+                            - *p2l:decl_cl:pl:#e-0|msyl_anim-e
 
-                            # - *l2p:e  # EXTERNAL
+                            - *l2p:e  # EXTERNAL
 
                       - id: &p2l:decl_cl:pl:#er-0/er
-                        summary: Nouns forming the plural with -er (with or without umlaut) mostly attach a zero linker or =er= in different cases. Another linkers can also be rarely adopted by these nouns. =er= is more probable (with counterexamples) when a plural or collective meaning is present, in which case these nouns indicate concrete, countable entities, otherwise a zero linker is more probable. For person and animal designations though, =er= is not necessarily associated with a plural meaning. When having a mass meaning, these nouns tend (with counterexamples) to attach a zero linker. Er-plural nouns (these are mostly N and some M, mostly simplices and never loanwords) is the only class of words that can attach this linker.
+                        summary: Nouns forming the plural with -er (with or without umlaut) mostly attach a zero linker or =er= in different cases. Another linkers can also be rarely adopted by these nouns. =er= is more probable (with counterexamples) when a plural or collective meaning is present, in which case these nouns indicate concrete, countable entities, otherwise a zero linker is more probable. For person and animal designations though, =er= is not necessarily associated with a plural meaning. When having a mass meaning, these nouns tend (with counterexamples) to attach a zero linker. er-plural nouns (these are mostly N and some M, mostly simplices and never loanwords) is the only class of words that can attach this linker.
                         children:
 
-                            # - *p2l:decl_cl:pl:#er-0/er|def-0/er
+                            - *p2l:decl_cl:pl:#er-0/er|def-0/er
 
-                            # - *p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
+                            - *p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 
-                            # - *p2l:decl_cl:pl:#er-0/er|mass-interpr-0
+                            - *p2l:decl_cl:pl:#er-0/er|mass-interpr-0
 
-                            # - *p2l:decl_cl:pl:#er-0/er|pl_interpr-er
+                            - *p2l:decl_cl:pl:#er-0/er|pl_interpr-er
 
-                            # - *p2l:decl_cl:pl:#er-0/er|anim-er
+                            - *p2l:decl_cl:pl:#er-0/er|anim-er
 
-                            # - *l2p:er  # EXTERNAL
+                            - *l2p:er  # EXTERNAL
 
                       - id: &p2l:decl_cl:pl:#e_uml-0
-                        summary: Nouns forming the plural with -e and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach -e- with an umlaut. Strong feminine nouns forming the plural with -e and an umlaut is the only class of words that can attach this linker.
+                        summary: Nouns forming the plural with -e and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach -e- with an umlaut. Nouns forming the plural with -e and an umlaut is the only class of words that can attach this linker.
                         children:
 
                             - *p2l:decl_cl:pl:#e_uml-0|def-0
@@ -220,7 +222,7 @@ topology:
                 - *p2l:phon_fin:F_stem_#t$-s
 
                 - id: &p2l:phon_fin:schwa$-en
-                  summary: Nouns ending in schwa regularly adopt -n- if the schwa is not a suffix. If the schwa is a suffix of a deadjective F, -n- and zero linkers are about equally possible. Deverbal F with the schwa suffix mostly attach a zero linker but can attach an -n- when the first constituent has a plural reading. Nouns ending in schwa is the only class of words that can attach the allomorph -n- of the en-linker.
+                  summary: Nouns ending in schwa regularly adopt -n- if the schwa is not a suffix. If the schwa is a suffix of a deadjective feminine noun, -n- and zero linkers are about equally possible. Deverbal feminine nouns with the schwa suffix mostly attach a zero linker but can attach an -n- when the first constituent has a plural reading. Nouns ending in schwa is the only class of words that can attach the allomorph -n- of the en-linker.
                   children:
 
                       - *p2l:phon_fin:schwa$-en|def-en
@@ -234,7 +236,7 @@ topology:
                       - *l2p:n  # EXTERNAL
 
                 - id: &p2l:phon_fin:weak_F_cons$-0/s/en
-                  summary: "Consonant-final weak F mostly adopt -en-, a zero linker, or -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -en- is more likely (especially in final-stressed incl. monosyllabic F), otherwise mostly a zero linker or -s- is chosen."
+                  summary: "Consonant-final weak feminine nouns mostly adopt -en-, a zero linker, or -s-. It is possible that there is a tendency to choose by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -en- is more likely (especially in final-stressed incl. monosyllabic feminine nouns), otherwise mostly a zero linker or -s- is chosen."
                   children:
 
                       - *p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
@@ -318,7 +320,15 @@ topology:
 
           - *l2p:n
 
-          - *l2p:en
+          - id: &l2p:en
+            summary: Only nouns forming the plural with -(e)n can attach -(e)n- as a linking element with a very few idiosyncratic exceptions where -(e)n- occurs after nouns not forming the plural with -(e)n. The exceptions are 1) a few monosyllabic masculine nouns designating male persons, animals, astronomic objects, months, and 2) polysyllabic foreign neuter nouns with final stress (mostly ending with -at and -ment) that adopt -en- only when they express plurality.
+            children:
+
+                - *l2p:en|par
+
+                - *l2p:en|non_par_m
+
+                - *l2p:en|non_par_n_pl_interpr
 
           - *l2p:e          
 
@@ -408,7 +418,7 @@ constraints:
 
           - ref: ortner_müller-bollhagen_1991
             pages: [82, 88, 106]
-            summary: Simplex masculine and neuter nouns ending in -en or -el that form the plural with a zero ending attach -s- in majority of cases.
+            summary: Simplex M and N ending in -en or -el that form the plural with a zero ending attach -s- in majority of cases.
 
       footnotes: {}
 
@@ -534,7 +544,7 @@ constraints:
 
           - ref: eisenberg_2013
             pages: [229]
-            summary: Er-plural nouns tend to choose =er= when a plural meaning is present, otherwise a zero linker [1].
+            summary: er-plural nouns tend to choose =er= [when a plural meaning is present], otherwise a zero linker [1].
 
           - ref: ortner_müller-bollhagen_1991
             pages: [99]
@@ -600,7 +610,7 @@ constraints:
 
           - ref: eisenberg_2013
             pages: [229]
-            summary: Er-plural nouns tend to choose =er= when a plural meaning is present.
+            summary: er-plural nouns tend to choose =er= when a plural meaning is present.
 
           - ref: nübling_szczepaniak_2013
             pages: [80, 81]
@@ -641,21 +651,144 @@ constraints:
 
 
 
-    *p2l:decl_cl:pl:#e_uml-0|def-0
+    - id: &p2l:decl_cl:pl:#e_uml-0|def-0
+      summary: Nouns forming the plural with -e and an umlaut mostly have a zero linker.
+      type: [morphological]
+      regularity: NA
+      coverage: NA
 
-    *p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml
+      examples_pro: [hand_fläche, frucht_joghurt, arzt_praxis]
+      examples_contra: [hand_+=e_druck, arzt_+=e_streik]
+
+      evidence:
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [83, 107]
+            summary: e=plural nouns regularly have a zero linker with a few exceptions.
+
+      footnotes: {}
 
 
-    *p2l:decl_cl:pl:#0_uml-0|def-0
+    - id: &p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml
+      summary: Nouns forming the plural with -e and an umlaut non-regularly attach -e- with an umlaut when the second constituent forces a plural or collective meaning of this noun.
+      type: [morphological, semantic]
+      regularity: NA
+      coverage: NA
 
-    *p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml
+      examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
+      examples_contra: [baum_gruppe, zug_verkehr]
+
+      evidence:
+
+          - ref: nübling_szczepaniak_2013
+            pages: [81]
+            summary: In compounds with =e=, plural interpretation occurs in most cases.
+
+          - ref: schäfer_pankratz_2018
+            pages: [29]
+            summary: =e= exhibits moderate effect on plural reading.
+
+      footnotes: {}
+
+
+
+    - id: &p2l:decl_cl:pl:#0_uml-0|def-0
+      summary: Nouns forming the plural with a zero ending and an umlaut mostly have a zero linker.
+      type: [morphological]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [apfel_baum, kloster_kirche, mutter_sprache]
+      examples_contra: [bruder_+=_gemeinde, mutter_+=_zentrum]
+
+      evidence:
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [83, 106]
+            summary: =plural nouns rarely have an explicit linking element. =plural M always have a zero linker.
+
+      footnotes: {}
+
+
+    - id: &p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml
+      summary: Nouns forming the plural with a zero ending and an umlaut may non-regularly attach a zero linker with an umlaut when the second constituent forces a plural or collective meaning of this noun.
+      type: [morphological, semantic]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
+      examples_contra: []
+
+      evidence:
+        
+          - ref: schäfer_pankratz_2018
+            pages: [29]
+            summary: Linker = exhibits moderate effect on plural reading.
+
+      footnotes: {}
 
 
     #     1.1.2. Constraints for mixed nouns.
 
-    *p2l:decl_cl:mixed-0/s/en|def-0/s/en
+    - id: &p2l:decl_cl:mixed-0/s/en|def-0/s/en
+      summary: Mixed masculine and neuter nouns can attach -s-, a zero linker, or -(e)n-.
+      type: [morphological]
+      regularity: NA
+      coverage: NA
 
-    *p2l:decl_cl:mixed-0/s/en|pl_interpr-en
+      examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
+      examples_contra: []
+
+      evidence:
+
+          - ref: krott_etal_2007
+            pages: [3]
+            summary: Consonant-final M [1] adopt -en- less productively.
+
+          - ref: nübling_szczepaniak_2013
+            pages: [80]
+            summary: Monosyllabic M and N [1] with plural interpretation sometimes attach -en-.
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [92]
+            summary: Mixed M mostly attach a zero linker or an -s-. Mixed M can also attach an -(e)n- [if the second constitiuent forces its plural meaning].
+
+          - ref: schäfer_2018
+            pages: [229]
+            summary: Mixed M and N often (but surely not always) adopt -s- [2, 3, 4].
+
+          - ref: schäfer_pankratz_2018
+            pages: [9]
+            summary: Mixed M and N often occur with -(e)n-.
+
+      footnotes:
+          "1": "Even though these papers do not explicitly say 'mixed M and N', the examples they provide are all mixed M and N: farm_+en_verkauf, staat_+en_bund, bett_+en_zahl."
+          "2": The original text refers to both strong and mixed M.
+          "3": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `es`, we modify it to -s- here.
+          "4": Since from the whole class of strong and mixed M and N taking -s- and -es- mentioned in the paper we only consider the subclass of mixed M and N taking -s- here, the evidence is to be considered indirect. The rest of the claim about strong M and N consideres such a broad class that we disregard it in this iteration.
+
+
+    - id: &p2l:decl_cl:mixed-0/s/en|pl_interpr-en
+      summary: Mixed masculine and neuter nouns can attach attach -(e)n- more likely when the second constituent forces a plural or collective meaning of this noun. However, there are counterexamples where -(e)n- is attached even when no plural reading is possible.
+      type: [morphological, semantic]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [staat_+en_bund, bett_+en_zahl, strahl_+en_belastung]
+      examples_contra: [motor_+en_geräusch, professor_+en_titel, auge_+n_lied, interesse_+n_bereich]
+
+      evidence:
+
+          - ref: nübling_szczepaniak_2013
+            pages: [80]
+            summary: Monosyllabic M and N [1] with plural interpretation sometimes attach -en-.
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [92]
+            summary: Mixed M can also attach an -(e)n- if the second constitiuent forces its plural meaning; however, there are counterexamples where -(e)n- is attached even when no plural reading is possible.
+
+      footnotes:
+          "1": "Even though these papers do not explicitly say 'mixed M and N', the examples they provide are all mixed M and N: farm_+en_verkauf, staat_+en_bund, bett_+en_zahl."
 
 
     #   1.2. Constraints that map derivational classes of compounds to most probable linkers.
@@ -711,7 +844,7 @@ constraints:
           
           - ref: ortner_müller-bollhagen_1991
             pages: [89]
-            summary: Deverbative neuter nouns with suffix -en regularly attach -s-.
+            summary: Deverbative N with suffix -en regularly attach -s-.
 
       footnotes: {}
 
@@ -779,15 +912,23 @@ constraints:
 
     *l2p:n
 
-    *l2p:en
+    *l2p:en|par
+    - ref: nübling_szczepaniak_2013
+            pages: [84]
+            summary: -(e)n- is strictly bound to weak nouns (inflectional class).
+
+    *l2p:en|non_par_m
+
+    *l2p:en|non_par_n_pl_interpr
+    
 
     - id: &l2p:e
-      summary: E-plural nouns with stressed last syllable is the only class of words that can attach -e-.
+      summary: e-plural nouns with stressed last syllable is the only class of words that can attach -e-.
       type: [morphological]
       regularity: NA
       coverage: NA
 
-      examples_pro: [hunde]
+      examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
       examples_contra: [herz_+e_leid]
 
       evidence:
@@ -810,11 +951,11 @@ constraints:
 
       footnotes:
           "1": The last claim explains why nouns like 'Teppich' do not attach -e- (teppich_boden).
-          "2": Which implicitly points out that further overt markers (=er=, -e-, =e=, =) are always paradigmatic.        
+          "2": Which implicitly points out that further overt markers ([=er=,] -e-[, =e=, =]) are always paradigmatic.        
 
    
     - id: &l2p:er
-      summary: Er-plural nouns (these are few words, mostly N and some M, mostly simplices and never loanwords) is the only class of words that can attach =er=.
+      summary: er-plural nouns (these are few words, mostly N and some M, mostly simplices and never loanwords) is the only class of words that can attach =er=.
       type: [morphological]
       regularity: NA
       coverage: NA
@@ -848,25 +989,67 @@ constraints:
           "1": "[kürschner_2010:18] also mentions: '-er- occurs only after nouns with the stressed last syllable'; however, to the best of our knowledge, this always holds for er-plural nouns and, hence, for the nouns in question since =er= is always paradigmatic."
 
 
-    *l2p:e_uml
+    - id: &l2p:e_uml
+      summary: Nouns forming the plural with -e and an umlaut is the only class of words that can attach -e- with an umlaut.
+      type: [morphological]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
+      examples_contra: []
+
+      evidence:
+
+          - ref: eisenberg_2013
+            pages: [228]
+            summary: =e= occurs in some [1] e=plural nouns.
+
+          - ref: nübling_szczepaniak_2008
+            pages: [5]
+            summary: "In German, there are only two cases of non-paradigmatic linkers: -en- aften non-human M, and -s- after F [2]."
+
+      footnotes:
+          "1": Level of regularity not mentioned.
+          "2": Which implicitly points out that further overt markers ([=er=, -e-,] =e=[, =]) are always paradigmatic.
+
 
     *l2p:es
 
     *l2p:ens
 
-    *l2p:0_uml
+
+    - id: &l2p:0_uml
+      summary: Nouns forming the plural with a zero ending and an umlaut is the only class of words that can attach a zero linker with an umlaut.
+      type: [morphological]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
+      examples_contra: []
+
+      evidence:
+
+          - ref: nübling_szczepaniak_2008
+            pages: [5]
+            summary: In German, there are only two cases of non-paradigmatic linkers: -en- aften non-human M, and -s- after F [1].
+
+      footnotes:
+          "1": Which implicitly points out that further overt markers ([=er=, -e-, =e=,] =) are always paradigmatic.
 
 
 
 
-    summary: 
-    type: []
-    regularity: NA
-    coverage: NA
 
-    examples_pro: []
-    examples_contra: []
+  ================================================
 
-    evidence:
+      summary: 
+      type: []
+      regularity: NA
+      coverage: NA
 
-    footnotes: {}
+      examples_pro: []
+      examples_contra: []
+
+      evidence:
+
+      footnotes: {}
