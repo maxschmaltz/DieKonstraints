@@ -26,7 +26,7 @@
           - ref: ortner_müller-bollhagen_1991
             pages:
                 - 94, 110
-            summary: 'F not ending in -e do not usually attach -en-; if there is a singular interpretation, they attach a zero linker. \ Monosyllabic F adopt zero linker or plural suffix (-en- or =e=) depending on the plural meaning."
+            summary: 'F not ending in -e do not usually attach -en-; if there is a singular interpretation, they attach a zero linker. \ Monosyllabic F adopt zero linker or plural suffix (-en- or =e= (`p2l:decl_cl:pl:#e_uml-0`)) depending on the plural meaning."
           - ref: schäfer_2018
             pages:
                 - 29
@@ -822,7 +822,7 @@
         '1': "Originally: 'derivational and compositional'. For reasons for excluding complex first constituents see notes."
         '2': Evidence for higher probabability of -s- in particular cases of derivation.
 -   id: s_phon_complex
-    summary: 'The acceptability of -s- irregularly grows when the first constituent is phonologically complex: non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc..'
+    summary: 'The acceptability of -s- irregularly grows when the first constituent is phonologically complex: non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.'
     type:
         - phonological
     regularity: NA
@@ -844,7 +844,6 @@
             summary: 'The greater the distance of the word to the phonological ideal, the more probable the occurrence of -s-.'
           - ref: '`suffixes_cond_s` [2, 3]'
           - ref: '`prefix_deverba` [2, 3]'
-          - ref: '`complex_syl_bound` [2]'
     examples_pro:
         - anruf_beantworter
         - beruf_+s_erfahrung
