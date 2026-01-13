@@ -135,19 +135,21 @@ topology:
 
                             # - *l2p:e  # EXTERNAL
 
-                      - id: &p2l:decl_cl:pl:#er-er/0
-                        summary: Nouns forming the plural with -er (with or without umlaut) mostly attach a zero linker or =er= in different cases. Another linkers can also be rarely adopted by these nouns. =er= is more probable (with counterexamples) when a plural or collective meaning is present, in which case these nouns will indicate concrete, countable entities. For person and animal designations though, =er= is not necessarily associated with a plural meaning. When having a mass meaning, these nouns tend (with counterexamples) to attach a zero linker. Er-plural nouns (these are mostly N and some M, mostly simplices and never loanwords) is the only class of words that can attach this linker.
+                      - id: &p2l:decl_cl:pl:#er-0/er
+                        summary: Nouns forming the plural with -er (with or without umlaut) mostly attach a zero linker or =er= in different cases. Another linkers can also be rarely adopted by these nouns. =er= is more probable (with counterexamples) when a plural or collective meaning is present, in which case these nouns indicate concrete, countable entities, otherwise a zero linker is more probable. For person and animal designations though, =er= is not necessarily associated with a plural meaning. When having a mass meaning, these nouns tend (with counterexamples) to attach a zero linker. Er-plural nouns (these are mostly N and some M, mostly simplices and never loanwords) is the only class of words that can attach this linker.
                         children:
 
-                            - *p2l:decl_cl:pl:#er-er/0|def-0/er
+                            # - *p2l:decl_cl:pl:#er-0/er|def-0/er
 
-                            - *p2l:decl_cl:pl:#er-er/0|pl_interpr-er
+                            # - *p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 
-                            - *p2l:decl_cl:pl:#er-er/0|anim-er
+                            # - *p2l:decl_cl:pl:#er-0/er|mass-interpr-0
 
-                            - *p2l:decl_cl:pl:#er-er/0|mass-interpr-0
+                            # - *p2l:decl_cl:pl:#er-0/er|pl_interpr-er
 
-                            - *l2p:er  # EXTERNAL
+                            # - *p2l:decl_cl:pl:#er-0/er|anim-er
+
+                            # - *l2p:er  # EXTERNAL
 
                       - id: &p2l:decl_cl:pl:#e_uml-0
                         summary: Nouns forming the plural with -e and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach -e- with an umlaut. Strong feminine nouns forming the plural with -e and an umlaut is the only class of words that can attach this linker.
@@ -293,7 +295,7 @@ topology:
 
                       - *p2l:decl_cl:pl:#e-0|pl_interpr-e   # EXTERNAL
 
-                      - *p2l:decl_cl:pl:#er-er/0|pl_interpr-er    # EXTERNAL
+                      - *p2l:decl_cl:pl:#er-0/er|pl_interpr-er    # EXTERNAL
 
                       - *p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml   # EXTERNAL
 
@@ -411,6 +413,7 @@ constraints:
       footnotes: {}
 
 
+
     - id: &p2l:decl_cl:pl:#s-0
       summary: Nouns forming the plural with -s regularly attach a zero linker.
       type: [morphological]
@@ -449,6 +452,7 @@ constraints:
       footnotes: {}
 
 
+
     - id: &p2l:decl_cl:pl:#e-0|def-0
       summary: Nouns forming the plural with -e mostly have a zero linker.
       type: [morphological]
@@ -468,7 +472,7 @@ constraints:
 
 
     - id: &p2l:decl_cl:pl:#e-0|pl_interpr-e
-      summary: Nouns forming the plural with -e with plural or collective meaning non-regularly attach -e-.
+      summary: Nouns forming the plural with -e non-regularly attach -e- when the second constituent forces a plural or collective meaning of this noun.
       type: [morphological, semantic]
       regularity: NA
       coverage: NA
@@ -516,13 +520,125 @@ constraints:
       footnotes: {}
 
 
-    *p2l:decl_cl:pl:#er-er/0|def-0/er
 
-    *p2l:decl_cl:pl:#er-er/0|pl_interpr-er
+    - id: &p2l:decl_cl:pl:#er-0/er|def-0/er
+      summary: Nouns forming the plural with -er (with or without umlaut) mostly attach a zero linker or =er= in different cases. Another linkers can also be rarely adopted by these nouns.
+      type: [morphological]
+      regularity: NA
+      coverage: NA
 
-    *p2l:decl_cl:pl:#er-er/0|anim-er
+      examples_pro: [buch_deckel, buch_+=er_regal, kind_+=er_jacke]
+      examples_contra: [kind_+es_alter, mann_+s_volk]
 
-    *p2l:decl_cl:pl:#er-er/0|mass-interpr-0
+      evidence:
+
+          - ref: eisenberg_2013
+            pages: [229]
+            summary: Er-plural nouns tend to choose =er= when a plural meaning is present, otherwise a zero linker [1].
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [99]
+            summary: Most er-plural nouns attach both =er= or a zero linker in different cases.
+
+      footnotes:
+          "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or =er=.
+
+
+    - id: &p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
+      summary: Nouns forming the plural with -er (with or without umlaut) attach a zero linker in majority of cases when the second constituent forces a singular meaning of this noun.
+      type: [morphological, semantic]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [buch_deckel, grab_stein, blatt_fläche]
+      examples_contra: [mann_+=er_herz, kind_+=er_bild]
+
+      evidence:
+
+          - ref: eisenberg_2013
+            pages: [229]
+            summary: Nouns forming the plural with -er (with or without umlaut) tend to choose a zero linker [1] when no plural meaning is present.
+            
+          - ref: ortner_müller-bollhagen_1991
+            pages: [99, 108]
+            summary: 80% er-plural nouns having a singular meaning choose a zero linker [2].
+            
+      footnotes:
+          "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or =er=.
+          "2": Note that non-N+N compounds are included in this statistics.
+
+
+    - id: &p2l:decl_cl:pl:#er-0/er|mass-interpr-0
+      summary: Nouns forming the plural with -er (with or without umlaut) tend (with counterexamples) to attach a zero linker when the second constituent forces a mass meaning of this noun.
+      type: [morphological, semantic]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [glas_auge, kraut_salat, horn_haut]
+      examples_contra: []
+
+      evidence:
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [101]
+            summary: When having a mass meaning, er-plural nouns tend to attach a zero linker [1].
+
+      footnotes:
+          "1": "Generalization taken from [nübling_szczepaniak_2013:81]."
+
+
+    - id: &p2l:decl_cl:pl:#er-0/er|pl_interpr-er
+      summary: Nouns forming the plural with -er (with or without umlaut) attach =er= more likely when the second constituent forces a plural or collective meaning of this noun (with counterexamples), in which case these nouns indicate concrete, countable entities.
+      type: [morphological, semantic]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [buch_+=er_regal, grab_+=er_feld, kraut_+=er_frau]
+      examples_contra: [buch_handel, bild_band]
+
+      evidence:
+
+          - ref: eisenberg_2013
+            pages: [229]
+            summary: Er-plural nouns tend to choose =er= when a plural meaning is present.
+
+          - ref: nübling_szczepaniak_2013
+            pages: [80, 81]
+            summary: =er= is often associated with plural meaning, with many counterexamples.
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [99]
+            summary: er-plural often attach =er= to signalize plural meaning, in which case they indicate concrete, countable entities.
+
+          - ref: schäfer_pankratz_2018
+            pages: [29]
+            summary: =er= with no umlauting exhibits moderate, and =er= with umlauting exhibits significantly strong effect on plural reading.
+            
+      footnotes: {}
+    
+
+    - id: &p2l:decl_cl:pl:#er-0/er|anim-er
+      summary: Nouns forming the plural with -er (with or without umlaut) that designate persons and animals may attach =er= also with singular interpretation.
+      type: [morphological, semantic]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [kind_+=er_jacke, huhn_+=er_ei, rind_+=er_brust]
+      examples_contra: []
+
+      evidence:
+
+          - ref: eisenberg_2013
+            pages: [229]
+            summary: For er-plural nouns designating persons and animals, =er= is not necessarily associated with a plural 
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [98]
+            summary: Some examples exhibit that =er= is not always associated with a plural meaning [1].
+            
+      footnotes:
+          "1": Even though not explicitly stated, counterexamples for the plural meaning given in [ortner_müller-bollhagen_1991:98] confirm the hypothesis from [eisenberg_2013:229] that for person and animal designations, =er= is not necessarily associated with a plural meaning: huhn_+=er_keule, kind_+=er_jacke, rind_+=er_brust.
+
 
 
     *p2l:decl_cl:pl:#e_uml-0|def-0
@@ -697,7 +813,40 @@ constraints:
           "2": Which implicitly points out that further overt markers (=er=, -e-, =e=, =) are always paradigmatic.        
 
    
-    *l2p:er
+    - id: &l2p:er
+      summary: Er-plural nouns (these are few words, mostly N and some M, mostly simplices and never loanwords) is the only class of words that can attach =er=.
+      type: [morphological]
+      regularity: NA
+      coverage: NA
+
+      examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
+      examples_contra: []
+
+      evidence:
+
+          - ref: eisenberg_2013
+            pages: [229]
+            summary: =er= occurs only in er-plural nouns.
+
+          - ref: kürschner_2010
+            pages: [9, 11]
+            summary: =er= only attaches to nouns forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N [1].
+
+          - ref: nübling_szczepaniak_2008
+            pages: [3]
+            summary: =er= is always paradigmatic.
+
+          - ref: nübling_szczepaniak_2013
+            pages: [80, 81]
+            summary: =er= is always paradigmatic.
+
+          - ref: ortner_müller-bollhagen_1991
+            pages: [98]
+            summary: =er= is always paradigmatic and attaches mostly to N and to some M, mostly simplexes, no loanwords.
+            
+      footnotes:
+          "1": "[kürschner_2010:18] also mentions: '-er- occurs only after nouns with the stressed last syllable'; however, to the best of our knowledge, this always holds for er-plural nouns and, hence, for the nouns in question since =er= is always paradigmatic."
+
 
     *l2p:e_uml
 
@@ -706,3 +855,18 @@ constraints:
     *l2p:ens
 
     *l2p:0_uml
+
+
+
+
+    summary: 
+    type: []
+    regularity: NA
+    coverage: NA
+
+    examples_pro: []
+    examples_contra: []
+
+    evidence:
+
+    footnotes: {}
