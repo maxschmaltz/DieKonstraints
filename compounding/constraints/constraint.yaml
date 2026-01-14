@@ -1,16 +1,21 @@
 # Part 1: README
 
-*
 readme: |
 
-    TODO: constraints are designed to overlap from general to specific (e.g. schwa)
+    ## About
 
-    TODO: er-, =plural, M, N, F etc. in evidence and footnotes
+    This document contains the list of constraints governing the choice of linking elements in German N+N compounds and restrictions on this choice, and supporting material.
+    
+    The constraints are organized in a topological structure. In this structure, the constraints might be a part of a constraint cluster, in which case the cluster collects all constraints targeting the same class of nouns. Singular constraints and constraint clusters are joined in groups of clusters with respect to the linguistic status of the properties they describe.
 
-    TODO
+    For each constraint, its linguistic type, regularity, coverage, examples pro and contra, and evidence from the literature are provided.
+    
+    Note that constraint clusters are designed such that more general constraints in them overlap with more specific constraints, so that the latter override the former for certain inputs. This is done on purpose to be able to inspect the behavior of LLMs when operating with conflicting constraints. From linguistic point of view, the more general constraints might be slightly inaccurate since edge cases are omitted there on purpose to enforce overlapping. For example, the general constraint for schwa-final nouns (`p2l:phon_fin:schwa$-en|def-en`) reads 'Nouns ending in schwa regularly adopt -n-.' whereas there are in fact some exceptions not mentioned. The exceptions are then captured in more specific constraints of the same cluster (e.g. `p2l:phon_fin:schwa$-en|deverb-0`: 'Deverbal feminine nouns with the schwa suffix mostly attach a zero linker.'), so that the LLM has to choose between the general and the specific constraint when presented with a noun to which both are applicable (deverbal feminine noun ending in schwa in this case, e.g. 'Tiefe'). For linguistically accurate descriptions in such cases, refer to the descriptions of the parent constraint clusters, e.g. `p2l:phon_fin:schwa$-en` reads 'Nouns ending in schwa regularly adopt -n- if the schwa is not a suffix. If the schwa is a suffix of a deadjective feminine noun, ...'.
+
+    Both the constraints, the constraint clusters, and their topological structure are given in Part 3 below. Part 2 contains the glossary of abbreviations and linker designations used in the document.
 
 
-    ## On reading constraint ids.
+    ## On understanding constraint ids
 
     Constraints ids and constraint cluster ids are designed to provide instant information about the constraint they represent.
     Every constraint id consists of a path and a descriptor -- a codified description of the constraint (cluster) itself.
@@ -29,10 +34,15 @@ readme: |
     * `l2p:s` -- the path of the id says that this constraint describes the restrictions put on the nouns that may attach a certain linker (`l2p`); the descriptor specifies that the constraint targets the s-linker (`s`). Reading: restrictions on compounds with an s-linker.
 
 
-    ## On reading linker ids.
+    ## On understanding linkers
 
-    All linker ids (except for '_' -- zero linker) are separated from the left and the right constituents by underscores. In the middle part, the linker is specified after a plus sign. Note that linker ids specify concrete allomorphs of the linkers (e.g. _+n_ and _+en_ are allomorphs of the en-linker). If the plus sign is followed by an equal sign, the linker puts umlaut on the stem vowel of the left constituent (for _+=er_: whenever applicable).
+    All linkers (except for '_' -- zero linker) are separated from the left and the right constituents by underscores. In the middle part, the linker is specified after a plus sign. Note that linker ids specify concrete allomorphs of the linkers (e.g. _+n_ and _+en_ are allomorphs of the en-linker). If the plus sign is followed by an equal sign, the linker puts umlaut on the stem vowel of the left constituent (for _+=er_: whenever applicable).
     The full list of linker ids is given in the linkers glossary below.
+
+
+    ## On reading evidence
+
+    There are a few abbreviations used in the evidence summaries of the constraints: M/N/F -- masculine/neuter/feminine nouns; xx-plural -- nouns forming the plural with the ending xx; xx=plural -- nouns forming the plural with the ending xx with umlaut; =plural -- nouns forming the plural with umlaut but no explicit ending. Linkers are represented in a plain text and share the notation scheme with plural designations: -x- -- linker x; =x= -- linker x with umlaut; = -- a zero linker with umlaut.
 
 ---
 
@@ -153,7 +163,7 @@ topology:
                             - *l2p:er  # EXTERNAL
 
                       - id: &p2l:decl_cl:pl:#e_uml-0
-                        summary: Nouns forming the plural with -e and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach -e- with an umlaut. Nouns forming the plural with -e and an umlaut is the only class of words that can attach this linker.
+                        summary: Nouns forming the plural with -e and umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach -e- with umlaut. Nouns forming the plural with -e and umlaut is the only class of words that can attach this linker.
                         children:
 
                             - *p2l:decl_cl:pl:#e_uml-0|def-0
@@ -163,7 +173,7 @@ topology:
                             - *l2p:e_uml  # EXTERNAL
 
                       - id: &p2l:decl_cl:pl:#0_uml-0
-                        summary: Nouns forming the plural with a zero ending and an umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach a zero linker with an umlaut. Nouns forming the plural with a zero ending and an umlaut is the only class of words that can attach this linker.
+                        summary: Nouns forming the plural with a zero ending and umlaut mostly have a zero linker. In case of plural or collective meaning they may also non-regularly attach a zero linker with umlaut. Nouns forming the plural with a zero ending and umlaut is the only class of words that can attach this linker.
                         children:
 
                             - *p2l:decl_cl:pl:#0_uml-0|def-0
@@ -659,7 +669,7 @@ constraints:
 
 
     - id: &p2l:decl_cl:pl:#e_uml-0|def-0
-      summary: Nouns forming the plural with -e and an umlaut mostly have a zero linker.
+      summary: Nouns forming the plural with -e and umlaut mostly have a zero linker.
       type: [morphological]
       regularity: NA
       coverage: NA
@@ -677,7 +687,7 @@ constraints:
 
 
     - id: &p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml
-      summary: Nouns forming the plural with -e and an umlaut non-regularly attach -e- with an umlaut when the second constituent forces a plural or collective meaning of this noun.
+      summary: Nouns forming the plural with -e and umlaut non-regularly attach -e- with umlaut when the second constituent forces a plural or collective meaning of this noun.
       type: [morphological, semantic]
       regularity: NA
       coverage: NA
@@ -700,7 +710,7 @@ constraints:
 
 
     - id: &p2l:decl_cl:pl:#0_uml-0|def-0
-      summary: Nouns forming the plural with a zero ending and an umlaut mostly have a zero linker.
+      summary: Nouns forming the plural with a zero ending and umlaut mostly have a zero linker.
       type: [morphological]
       regularity: NA
       coverage: NA
@@ -718,7 +728,7 @@ constraints:
 
 
     - id: &p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml
-      summary: Nouns forming the plural with a zero ending and an umlaut may non-regularly attach a zero linker with an umlaut when the second constituent forces a plural or collective meaning of this noun.
+      summary: Nouns forming the plural with a zero ending and umlaut may non-regularly attach a zero linker with umlaut when the second constituent forces a plural or collective meaning of this noun.
       type: [morphological, semantic]
       regularity: NA
       coverage: NA
@@ -1782,7 +1792,7 @@ constraints:
 
 
     - id: &l2p:e_uml
-      summary: Nouns forming the plural with -e and an umlaut is the only class of words that can attach -e- with an umlaut.
+      summary: Nouns forming the plural with -e and umlaut is the only class of words that can attach -e- with umlaut.
       type: [morphological]
       regularity: NA
       coverage: NA
@@ -1873,7 +1883,7 @@ constraints:
 
 
     - id: &l2p:0_uml
-      summary: Nouns forming the plural with a zero ending and an umlaut is the only class of words that can attach a zero linker with an umlaut.
+      summary: Nouns forming the plural with a zero ending and umlaut is the only class of words that can attach a zero linker with umlaut.
       type: [morphological]
       regularity: NA
       coverage: NA
