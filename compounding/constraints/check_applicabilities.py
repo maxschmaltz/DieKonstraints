@@ -1,4 +1,4 @@
-from compounding.constraints.gecodb_compound_parser import Compound
+from compounding.constraints.data_utils.gecodb_compound_parser import Compound
 
 
 # 				zero_default
