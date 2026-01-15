@@ -169,6 +169,33 @@ class Linker:
 
 	def __repr__(self) -> str:
 		return self.gecodb
+	
+
+def perform_umlaut(morph: str) -> str:
+
+	# find rightmost "umlautable" vowel before the end
+	match = re.search("(au|a|o|u)[^aou]+$", morph)
+	if match:
+
+		# the whole substring containing the vowel
+		substr_before_umlaut = match.group(0)
+		# the vowel itself
+		umlaut = match.group(1)
+		# perform umlaut in the substring
+		substr_after_umlaut = re.sub(
+			umlaut,
+			UMLAUTS[umlaut],
+			substr_before_umlaut
+		)
+
+		# adjust realization: perform umlaut
+		morph = re.sub(
+			f"{substr_before_umlaut}$",
+			substr_after_umlaut,
+			morph
+		)
+
+	return morph	
 
 
 @dataclass
@@ -266,27 +293,8 @@ class Compound:
 					if linker.adds_umlaut: # adjust previous stem if needed
 						
 						prev_stem = self.stems[-1]
-						# find rightmost "umlautable" vowel before the end
-						match = re.search("(au|a|o|u)[^aou]+$", prev_stem.morph)
-						if match:
-
-							# the whole substring containing the vowel
-							substr_before_umlaut = match.group(0)
-							# the vowel itself
-							umlaut = match.group(1)
-							# perform umlaut in the substring
-							substr_after_umlaut = re.sub(
-								umlaut,
-								UMLAUTS[umlaut],
-								substr_before_umlaut
-							)
-
-							# adjust realization: perform umlaut
-							prev_stem.allomorph = re.sub(
-								f"{substr_before_umlaut}$",
-								substr_after_umlaut,
-								prev_stem.morph
-							)
+						# adjust realization: perform umlaut
+						prev_stem.allomorph = perform_umlaut(prev_stem.morph)
 
 				self.linkers.append(linker)
 
