@@ -8,6 +8,7 @@
 
 import os
 import pandas as pd
+from phonecodes import phonecodes
 
 
 def main():
@@ -20,10 +21,10 @@ def main():
     # 3. Morphemic structure: to identify prefixes and suffixes. Used in derivational constraints.
     # 4. Derivational information: to identify base stems of derived nouns to be able to identify
     #   deverbal/deadjective/etc. nouns. Used in derivational constraints.
-    # 4. Phonological information: to identify the final segment(s) of the noun. Used in phonological constraints.
-    # 5. Syllabic structure: to identify monosyllabic vs. polysyllabic nouns as well as phonological quality of the noun.
+    # 5. Phonological information: to identify the final segment(s) of the noun. Used in phonological constraints.
+    # 6. Syllabic structure: to identify monosyllabic vs. polysyllabic nouns as well as phonological quality of the noun.
     #   Used in phonological constraints.
-    # 6. Frequency information.
+    # 7. Frequency information.
     # Semantic and lexical properties are not contained in the CELEX data, so we do not extract them here.
 
 
@@ -31,20 +32,23 @@ def main():
     # resources/Celex/german/gml/README):
     # 1. `gml.cd`: 'German Morphology, Lemmas'. This file contains lemmas, their POS, their derivational information and,
     #   hence, morphemic structure. We will only extract non-compound nouns.
-    # 2. `gsl.cd`: 'German Syntax, Lexicon'. This file contains gender information for the lemmas.
+    # 2. `gsl.cd`: 'German Syntax, Lemmas'. This file contains gender information for the lemmas.
     # 3. `gmw.cd`: 'German Morphology, Wordforms'. This file contains the inflected forms of the lemmas,
     #   one row per inflected form. We will extract the GenSg and NomPl forms of the nouns from here and will map
     #   them to the lemmas in `gml.cd` via lemma ids.
-    # TODO
+    # 4. `gpl.cd`: 'German Phonology, Lemmas'. This file contains phonological and syllabic information
+    #   for the lemmas.
+    # 5. `gfl.cd`: 'German Frequency, Lemmas'. This file contains frequency information for the lemmas.
+
 
     # To summarize:
     # 1. Lemma.                             `gml.cd`
     # 2. Morphological information.         POS & gender: `gsl.cd` (POS alternatively: `gml.cd`), paradigm: `gmw.cd` (derived)
     # 3. Morphemic structure.               `gml.cd`
     # 4. Derivational information.          `gml.cd`
-    # 5. Phonological information.          TODO
-    # 6. Syllabic structure.                TODO
-    # 7. Frequency information.             TODO
+    # 5. Phonological information.          `gpl.cd`
+    # 6. Syllabic structure.                `gpl.cd`
+    # 7. Frequency information.             `gfl.cd`
 
     datapath = "resources/Celex/german"
     outpath = "resources/custom/compounding/intermediate_data"
@@ -60,8 +64,17 @@ def main():
     #   in the filtered joint table from step 4.
     # 7. Join the filtered `gmw.cd` table to the filtered
     #   joint table from step 4 on lemma id.
-    # TODO: Parse and join phonological, syllabic, frequency information.
-    # X. Save the final table as TSV.
+    # 8. Parse `gpl.cd` (no filtering yet).
+    # 9. Filter `gpl.cd` for phonological and syllabic information
+    #   of the nouns in the table from step 7. Convert phonological
+    #   and notations into SAMPA.
+    # 10. Join the filtered `gpl.cd` table to the table from step 7 on lemma id.
+    # 11. Parse `gfl.cd` (no filtering yet).
+    # 12. Filter `gfl.cd` for frequency information of the nouns
+    #   in the table from step 10.
+    # 13. Join the filtered `gfl.cd` table to the table from step 10 on lemma id.
+    # 14. Filter out lemmas with frequency below a certain threshold.
+    # 15. Save the final table as TSV.
 
     # Note: intermediate tables are to be filtered at each step
     # by suitable criteria.
@@ -233,8 +246,102 @@ def main():
     gmslw = gmslw.dropna(subset=["GenSg"])
 
 
-    # X. Save the final table as TSV.
-    gmslw.to_csv(
+    # 8. Parse `gpl.cd`. For reference, see the CELEX documentation
+    # (5-28) and `gpl/README`.
+
+    # The following columns are relevant:
+    # * Column 1: Lemma id.
+    # * Column 4: phonetic transcription of the lemma in DISC notation,
+    #   including syllable boundaries and stress marker. Since the latter
+    #   are included, we do not need to parse syllabic structure separately.
+
+    gpl = pd.read_csv(
+        os.path.join(datapath, "gpl/gpl.cd"),
+        sep="\\",
+        header=None,
+        dtype=str,
+        usecols=[0, 3],
+        names=["id", "phonetic_transcription"],
+        index_col="id"
+    )
+
+    # drop records with any missing fields
+    gpl = gpl.dropna()
+
+
+    # 9. We filter `gpl.cd` for phonological and syllabic information
+    # of the nouns in the table from step 7. Convert phonological
+    # and notations into SAMPA.
+
+    # remove phonetic transcriptions of lemmas that are not in `gmslw`
+    gpl = gpl[gpl.index.isin(gmslw.index.values)]
+
+    # convert CELEX DISC notation into SAMPA (X-SAMPA used)
+    gpl = gpl["phonetic_transcription"].apply(
+        lambda x: phonecodes.convert(
+            # phonecodes cannot convert directly from disc to xsampa,
+            # so we convert via ipa
+            phonecodes.convert(
+                x,
+                "disc",
+                "ipa",
+                language="deu"
+            ),
+            "ipa",
+            "xsampa",
+            # for 'xsampa',
+            # specifying a language is optional and ignored by the code,
+            # since X-SAMPA is language agnostic
+        # replace double quotes with asterisk for stress marker
+        # for better TSV readability
+        ).replace('"', "*")
+    )
+
+
+    # 10. We join the filtered `gpl.cd` table to the table from step 7 on lemma id.
+    gmsplw = gmslw.join(gpl, how="inner")
+
+    
+    
+    # 11. Parse `gfl.cd`. For reference, see the CELEX documentation
+    # (5-98) and `gfl/README`.
+
+    # The following columns are relevant:
+    # * Column 1: Lemma id.
+    # * Column 7: raw count (all wordforms of a lemma) in Mannheim corpus
+    #   (6M tokens, 5.4M from written, and 0.6M from spoken texts).
+
+    gfl = pd.read_csv(
+        os.path.join(datapath, "gfl/gfl.cd"),
+        sep="\\",
+        header=None,
+        dtype=str,
+        usecols=[0, 6],
+        names=["id", "freq"],
+        index_col="id"
+    )
+
+    # drop records with any missing fields
+    gfl = gfl.dropna()
+
+
+    # 12. We filter `gfl.cd` for frequency information of the nouns
+    # in the table from step 10.
+
+    gfl = gfl[gfl.index.isin(gmsplw.index.values)]
+
+
+    # 13. We join the filtered `gfl.cd` table to the table from step 10 on lemma id.
+    gmspflw = gmsplw.join(gfl, how="inner")
+
+
+    # 14. Filter out lemmas with frequency below a certain threshold.
+    freq_threshold = 5
+    gmspflw = gmspflw[gmspflw["freq"].astype(int) >= freq_threshold]
+
+
+    # 15. Save the final table as TSV.
+    gmspflw.to_csv(
         os.path.join(outpath, "celex_nouns.tsv"),
         sep="\t",
         index=True,
