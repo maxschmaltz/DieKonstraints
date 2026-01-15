@@ -52,7 +52,7 @@ def main():
     # 6. Syllabic structure.                `gpl.cd`
     # 7. Frequency information.             `gfl.cd`
 
-    datapath = "resources/Celex/german"
+    celex_path = "resources/Celex/german"
     outpath = "resources/custom/compounding/intermediate_data"
     os.makedirs(outpath, exist_ok=True)
 
@@ -113,7 +113,7 @@ def main():
     #   Hence, we will extracting the GenSg and NomPl forms directly from `gmw.cd`.
 
     gml = pd.read_csv(
-        os.path.join(datapath, "gml/gml.cd"),
+        os.path.join(celex_path, "gml/gml.cd"),
         sep="\\",
         header=None,
         dtype=str,
@@ -189,7 +189,7 @@ def main():
     # * Column 5: Gender.
 
     gsl = pd.read_csv(
-        os.path.join(datapath, "gsl/gsl.cd"),
+        os.path.join(celex_path, "gsl/gsl.cd"),
         sep="\\",
         header=None,
         dtype=str,
@@ -228,7 +228,7 @@ def main():
     # * Column 5: Paradigm codes (to identify GenSg and NomPl forms).
 
     gmw = pd.read_csv(
-        os.path.join(datapath, "gmw/gmw.cd"),
+        os.path.join(celex_path, "gmw/gmw.cd"),
         sep="\\",
         header=None,
         dtype=str,
@@ -288,7 +288,7 @@ def main():
     #   are included, we do not need to parse syllabic structure separately.
 
     gpl = pd.read_csv(
-        os.path.join(datapath, "gpl/gpl.cd"),
+        os.path.join(celex_path, "gpl/gpl.cd"),
         sep="\\",
         header=None,
         dtype=str,
@@ -343,7 +343,7 @@ def main():
     #   (6M tokens, 5.4M from written, and 0.6M from spoken texts).
 
     gfl = pd.read_csv(
-        os.path.join(datapath, "gfl/gfl.cd"),
+        os.path.join(celex_path, "gfl/gfl.cd"),
         sep="\\",
         header=None,
         dtype=str,
@@ -389,6 +389,9 @@ def main():
 
     # final check: drop records with any missing fields except for `nom_pl`
     gmspflw = gmspflw.dropna(subset=list(set(gmspflw.columns) - {"nom_pl"}))
+
+    # set lemma as index
+    gmspflw = gmspflw.set_index("lemma")
 
 
     # 15. Save the final table as TSV.
