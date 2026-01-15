@@ -7,6 +7,7 @@
 # 3. Personal competence in Python, hence, faster development cycle and more reliable code.
 
 import os
+import re
 import pandas as pd
 from phonecodes import phonecodes
 
@@ -43,7 +44,8 @@ def main():
 
     # To summarize:
     # 1. Lemma.                             `gml.cd`
-    # 2. Morphological information.         POS & gender: `gsl.cd` (POS alternatively: `gml.cd`), paradigm: `gmw.cd` (derived)
+    # 2. Morphological information.         POS: `gml.cd` (derived, alternatively: `gsl.cd`),
+    #                                       gender: `gsl.cd` , paradigm: `gmw.cd` (derived)
     # 3. Morphemic structure.               `gml.cd`
     # 4. Derivational information.          `gml.cd`
     # 5. Phonological information.          `gpl.cd`
@@ -55,25 +57,26 @@ def main():
     os.makedirs(outpath, exist_ok=True)
 
     # We will proceed as follows:
-    # 1. Parse `gml.cd` (no filtering yet).
-    # 2. Parse `gsl.cd` (no filtering yet).
-    # 3. Join `gml.cd` and `gsl.cd` on lemma id.
-    # 4. Filter the joint table for non-compound nouns.
-    # 5. Parse `gmw.cd` (no filtering yet).
+    # 1. Parse `gml.cd`.
+    # 2. Filter `gml.cd` for non-derivative nouns.
+    # 3. Parse `gsl.cd`.
+    # 4. Join `gml.cd` and `gsl.cd` on lemma id.
+    # 5. Parse `gmw.cd`.
     # 6. Filter `gmw.cd` for GenSg and NomPl forms of the nouns
     #   in the filtered joint table from step 4.
     # 7. Join the filtered `gmw.cd` table to the filtered
     #   joint table from step 4 on lemma id.
-    # 8. Parse `gpl.cd` (no filtering yet).
+    # 8. Parse `gpl.cd`.
     # 9. Filter `gpl.cd` for phonological and syllabic information
     #   of the nouns in the table from step 7. Convert phonological
     #   and notations into SAMPA.
     # 10. Join the filtered `gpl.cd` table to the table from step 7 on lemma id.
-    # 11. Parse `gfl.cd` (no filtering yet).
+    # 11. Parse `gfl.cd`.
     # 12. Filter `gfl.cd` for frequency information of the nouns
     #   in the table from step 10.
     # 13. Join the filtered `gfl.cd` table to the table from step 10 on lemma id.
     # 14. Filter out lemmas with frequency below a certain threshold.
+    #   Conduct orthographic transformations (umlauts, lowering).
     # 15. Save the final table as TSV.
 
     # Note: intermediate tables are to be filtered at each step
@@ -86,22 +89,25 @@ def main():
     # The following columns are relevant:
     # * Column 1: Lemma id.
     # * Column 2: Lemma.
-    # * !Column 4 (disregarded): specifies the compositional status of the lemma (simlex, derivative, compound);
+    # * !Column 4 (disregarded): Specifies the compositional status of the lemma (simlex, derivative, compound);
     #   disregarded since it assigns both derivatives and compounds as 'complex' (C),
     #   while we only want to exclude compounds but non simple derivatives. Instead, we will infer the POS from
     #   the derivational information in Column (see below).
-    # * Columns 9: Morphemic structure. If both columns 9 and 24 are given, they correspond to different 
+    # * !Columns 9 (disregarded): Morphemic structure. If both columns 9 and 24 are given, they correspond to different 
     #   possible analyses of the morphemic structure (primary in column 9, secondary in column 24.,
-    #   in which case we will choose the primary analysis in column 9.
-    # * Column 10: Morphemic schema. As opposed to the morphemic structure in column 9, this column
+    #   in which case we will choose the primary analysis in column 9. Disregarded since for derivatives,
+    #   it provides only the last-step morphemic structure (e.g. `abbau` instead of `ab-bau` for 'Abbau').
+    #   Instead, we will infer morphemic structure from column 14 (see below).
+    # * !Column 10 (disregarded): Morphemic schema. As opposed to the morphemic structure in column 9, this column
     #   provides a more abstract schema of the morphemic structure and maps morphemes from there
     #   to their types: stem/affix, if stem: noun/verb/adj/etc. Since we only need non-compound nouns,
     #   we will filter out all entries that have more than one stem in this column (stem markers are capitalized).
     #   Note though that we will not filter out entries that do not have a noun stem in their morphemic schema,
     #   since there are nouns derived from e.g. verbs or adjectives: e.g. 'Tiefe' has code `Ax` (Adj stem + affix).
-    # * !Columns 14 (disregarded): POS and derivational information. Disregarded since this information can be
-    #   retrieved more easily from other sources: POS from `gsl.cd`, derivational information from morphemic structure.
-    # * !Column 19 (disregarded): code for the inflectional class of the noun. Disregarded because:
+    #   Disregarded since it is linked to the morphemic structure from column 9, hence, to a partial analysis.
+    #   Instead, we will infer morphemic schema from column 14 (see below).
+    # * Columns 14: POS and derivational information. Will be used to infer morphemic structure and morphemic schema.
+    # * !Column 19 (disregarded): Code for the inflectional class of the noun. Disregarded because:
     #   1. we couldn't find the documentation about the codes in the CELEX guide, and
     #   2. for some nouns the code is missing.
     #   Hence, we will extracting the GenSg and NomPl forms directly from `gmw.cd`.
@@ -111,8 +117,8 @@ def main():
         sep="\\",
         header=None,
         dtype=str,
-        usecols=[0, 1, 8, 9],
-        names=["id", "lemma", "morphemic_structure", "morphemic_schema"],
+        usecols=[0, 1, 13],
+        names=["id", "lemma", "drvt_history"],
         index_col="id",
         keep_default_na=False,
         na_values=[""]  # prevent N+Adj morphemic schemas from being read as NaN
@@ -121,20 +127,65 @@ def main():
     # drop records with any missing fields
     gml = gml.dropna()
 
-    # filter out one-character lemmas and two-character lemmas except for
-    # 'Ei', 'Öl', 'As' (they are otherwise letter designations or interjections)
-    gml = gml[gml["lemma"].str.len() > 1]
+    # infer morphemic structure and morphemic schema from column 14
+    def parse_morphemic_structure_schema(drv_steps: str) -> tuple:
+
+        morphemic_structure = []
+        morphemic_schema = ""
+
+        # Derivational history is recursively built as H = (H1, H2, ...)[POS],
+        # where each Hi is also of form H1 = (H11, H21, ...)[POS].
+        # However, since we are not interested (for now) in specific derivational steps
+        # and their hierarchy, we only need to extract the high-level POS
+        # and all low-level <morpheme-type> information.
+        pos = re.search(r"\[(?P<pos>[A-Z|.]+)\]$", drv_steps).group("pos")
+        for match in re.finditer(r"\((?P<m>[^()]+)\)\[(?P<t>[A-Z|.]+)\]", drv_steps):
+            morpheme = match.group("m")
+            m_type = match.group("t")
+            m_type = "x" if "|" in m_type else m_type  # affixes ("x") are marked as "Xout|.Xin"
+            morphemic_structure.append(morpheme)
+            morphemic_schema += m_type
+
+        return "-".join(morphemic_structure), morphemic_schema, pos
+    
+    gml["morphemic_structure"], gml["morphemic_schema"], gml["pos"] = zip(
+            *gml["drvt_history"].apply(
+                lambda x: parse_morphemic_structure_schema(x)
+        )
+    )
+
+    # we can now drop the original `drvt_history` column
+    gml = gml.drop(columns=["drvt_history"])
+
+
+    # 2. Filter `gml.cd` for non-derivative nouns.
+
+    # drop non-noun records
+    gml = gml[gml["pos"] == "N"]
+    # now we can drop the 'pos' column since we now have nouns only
+    gml = gml.drop(columns=["pos"])
+
+    # next, filter out all records that have more than
+    # one stem in their morphemic schema; allow only
+    # A(dj), V(erb), N(oun) stems and affixes (x)
+    gml = gml[
+        gml["morphemic_schema"].apply(
+            lambda x: re.match(r"^x*[AVN]x*$", x, flags=re.IGNORECASE) is not None
+        )
+    ]
+
+    # filter out one- and two-character lemmas except for
+    # 'Ei', 'Öl', 'As' (they are otherwise letter names or interjections)
     gml = gml[((gml["lemma"].str.len() > 2) | (gml["lemma"].isin(["Ei", "Öl", "As"])))]
 
 
-    # 2. Next, we parse `gsl.cd`. For reference, see the CELEX documentation
+    # 3. Next, we parse `gsl.cd`. For reference, see the CELEX documentation
     # (5-87, 5-88) and `gsl/README`.
 
     # The following columns are relevant:
     # * Column 1: Lemma id.
-    # * !Column 2: Lemma (disregarded): disregarded since we already
-    #   have the lemmas from `gml.cd`.
-    # * Column 4: POS.
+    # * !Column 4 (disregarded): POS. Disregarded since we
+    #   already infer POS from `gml.cd`.
     # * Column 5: Gender.
 
     gsl = pd.read_csv(
@@ -142,8 +193,8 @@ def main():
         sep="\\",
         header=None,
         dtype=str,
-        usecols=[0, 3, 4],
-        names=["id", "pos", "gender"],
+        usecols=[0, 4],
+        names=["id", "gender"],
         index_col="id"
     )
 
@@ -151,26 +202,10 @@ def main():
     gsl = gsl.dropna()
 
 
-    # 3. We join `gml.cd` and `gsl.cd` on lemma id.
+    # 4. We join `gml.cd` and `gsl.cd` on lemma id.
     gmsl = gml.join(gsl, how="inner")
 
-
-    # 4. We filter the joint table for non-compound nouns.
-
-    # first, drop all records with pos other than '1'
-    # (corresponds to nouns in CELEX, see documentation 5-87)
-    gmsl = gmsl[gmsl["pos"] == "1"]
-
-    # next, filter out all records that have more than
-    # one stem in their morphemic schema; allow only
-    # A(dj), V(erb), N(oun) stems
-    gmsl = gmsl[
-        gmsl["morphemic_schema"].apply(
-            lambda x: sum(1 for ch in x if ch in "AVN")
-        ) == 1
-    ]
-
-    # also, remove records with fluctuating gender
+    # remove records with fluctuating gender
     # (it has more than one gender code in the 'gender' column,
     # see CELEX documentation 5-88)
     gmsl = gmsl[
@@ -178,9 +213,6 @@ def main():
             lambda x: len(x)
         ) == 1
     ]
-
-    # now we can drop the 'pos' column since we have filtered for nouns only
-    gmsl = gmsl.drop(columns=["pos"])
 
     # we can also convert the gender codes to more readable values
     # (see CELEX documentation 5-88)
@@ -230,7 +262,7 @@ def main():
         columns="paradigm_code",
         values="wordform",
         aggfunc="first"
-    ).rename(columns={"gS": "GenSg", "nP": "NomPl"})
+    ).rename(columns={"gS": "gen_sg", "nP": "nom_pl"})
 
 
     # 7. We join the filtered `gmw.cd` table to the filtered
@@ -243,7 +275,7 @@ def main():
     # can be missing for some nouns (e.g. mass or abstract nouns);
     # in particular, CELEX does not provide NomPl forms for many nouns
     # ending in -keit or -heit.
-    gmslw = gmslw.dropna(subset=["GenSg"])
+    gmslw = gmslw.dropna(subset=["gen_sg"])
 
 
     # 8. Parse `gpl.cd`. For reference, see the CELEX documentation
@@ -251,7 +283,7 @@ def main():
 
     # The following columns are relevant:
     # * Column 1: Lemma id.
-    # * Column 4: phonetic transcription of the lemma in DISC notation,
+    # * Column 4: Phonetic transcription of the lemma in DISC notation,
     #   including syllable boundaries and stress marker. Since the latter
     #   are included, we do not need to parse syllabic structure separately.
 
@@ -302,13 +334,12 @@ def main():
     gmsplw = gmslw.join(gpl, how="inner")
 
     
-    
     # 11. Parse `gfl.cd`. For reference, see the CELEX documentation
     # (5-98) and `gfl/README`.
 
     # The following columns are relevant:
     # * Column 1: Lemma id.
-    # * Column 7: raw count (all wordforms of a lemma) in Mannheim corpus
+    # * Column 7: Raw count (all wordforms of a lemma) in Mannheim corpus
     #   (6M tokens, 5.4M from written, and 0.6M from spoken texts).
 
     gfl = pd.read_csv(
@@ -336,8 +367,28 @@ def main():
 
 
     # 14. Filter out lemmas with frequency below a certain threshold.
+    # Conduct orthographic transformations.
+
+    # freq check
     freq_threshold = 5
     gmspflw = gmspflw[gmspflw["freq"].astype(int) >= freq_threshold]
+
+    # lower and apply orthographic transformations of umlauts;
+    # return Nonefor missing Pl forms
+    umlambda = lambda x: \
+        None if pd.isna(x) else \
+        x.replace("ae", "ä").   \
+        replace("oe", "ö").     \
+        replace("ue", "ü").     \
+        lower()
+    
+    target_columns = ["lemma", "morphemic_structure", "gen_sg", "nom_pl"]
+    gmspflw[target_columns] = gmspflw[target_columns].apply(
+        lambda col: col.apply(umlambda)
+    )
+
+    # final check: drop records with any missing fields except for `nom_pl`
+    gmspflw = gmspflw.dropna(subset=list(set(gmspflw.columns) - {"nom_pl"}))
 
 
     # 15. Save the final table as TSV.
