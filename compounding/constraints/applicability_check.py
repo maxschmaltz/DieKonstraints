@@ -110,3 +110,16 @@ def pl__0_0_smpx_mn_el_en_s_is_applicable(compound: Compound):
 
 def pl__0_0_smpx_mn_el_en_s_applies(compound: Compound):
 	return _has_linker(compound, "s")
+
+
+# p2l:decl_cl:pl:#s-0
+#
+# Nouns forming the plural with -s regularly attach a zero linker.
+
+def pl__s_0_is_applicable(compound: Compound):
+	return (
+		_is_plural(compound.stems[0].morph, "s")
+	)
+
+def pl__s_0_applies(compound: Compound):
+	return _has_no_linker(compound)

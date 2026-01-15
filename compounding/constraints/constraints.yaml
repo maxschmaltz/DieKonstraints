@@ -448,7 +448,7 @@ constraints:
       coverage: NA
 
       examples_pro: [balkon_möbel, hotel_kette, bob_bahn]
-      examples_contra: []
+      examples_contra: [uhu_+s_nest]
 
       evidence:
 
@@ -476,7 +476,8 @@ constraints:
             pages: [229]
             summary: s-plural nouns never attach -s-.
       
-      footnotes: {}
+      footnotes:
+          "1": "The given counterexample uhu_+s_nest originating from [wegener_2003:433] could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
 
 
 
