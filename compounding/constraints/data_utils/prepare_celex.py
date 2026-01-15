@@ -167,10 +167,13 @@ def main():
 
     # next, filter out all records that have more than
     # one stem in their morphemic schema; allow only
-    # A(dj), V(erb), N(oun) stems and affixes (x)
+    # A(dj), V(erb), N(oun) stems and affixes (x);
+    # additionally, allow lexicalized F(lexion) which
+    # are in fact deverbatives (Essen, Abfahrt, etc.)
+    # and deadjectives (Arme etc.)
     gml = gml[
         gml["morphemic_schema"].apply(
-            lambda x: re.match(r"^x*[AVN]x*$", x, flags=re.IGNORECASE) is not None
+            lambda x: re.match(r"^x*[AVNF]x*$", x, flags=re.IGNORECASE) is not None
         )
     ]
 

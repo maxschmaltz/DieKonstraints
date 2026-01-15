@@ -20,7 +20,7 @@ def main():
         sep="\t",
         dtype=str,
         header=0,
-        index_col="id"
+        index_col="lemma"
     )
 
     # load GecoDB
@@ -45,7 +45,7 @@ def main():
         lambda x: x.split("_")[0]
     )
 
-    gecodb_v05 = gecodb_v05[gecodb_v05["n1_lemma"].isin(celex["lemma"])]
+    gecodb_v05 = gecodb_v05[gecodb_v05["n1_lemma"].isin(celex.index)]
 
     
     # 2. Lesser transformations
