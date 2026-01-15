@@ -1,28 +1,35 @@
-"""
-Module for parsing the DECOW16 compound dataset.
-"""
+# This code is taken and modified from the original DEKOR repository:
+# https://github.com/maxschmaltz/DEKOR/blob/main/test/test_gecodb_parser.py.
+# Note that the original code was simplified significantly and modified
+# to adjust for the new research setting:
+# 1. No deletion linkers are taken under consideration, so specifying
+# 	linker type became irrelevant for the current research.
+#	Instead, a linker can be described as explicit/zero (inferrable directly
+# 	by its allomorph realization) and whether it adds an umlaut (
+# 	stored as a property of the `Linker` object).
+# 2. Allomorphy operations that were only relevant for n-gram models,
+#	are removed. Instead, both stems and linkers store their abstract morph
+# 	and concrete allomorph realizations directly.
+# 3. A few variable name changes for higher linguistic accuracy.
+
 
 import re
 from dataclasses import dataclass, field
-from typing import Tuple, List, Optional, Union, Literal
+from typing import Tuple, List, Optional, Union
 
 
 DE = "[a-zäöüß]*"   # German alphabet
-LINK_TYPES = {  # (legacy)
-	# links are in parentheses so that when the
-	# raw compound is split, links are returns as well
-	"addition_umlaut": f"(_\+={DE}_)",  # gast_+=e_buch = Gästebuch, mutter_+=_rente = Mütterrente
-	"addition": f"(_\+{DE}_)",          # bund_+es_land = Bundesland
-	"zero": "(_)"              # zeit_punkt = Zeitpunkt
-}
-LINK_PATTERN = '|'.join(LINK_TYPES.values())    # any link
+LINKER_PATTERN = "|".join([
+	f"(_\+={DE}_)",
+	f"(_\+{DE}_)",
+	"(_)"
+])    # match any linker
 UMLAUTS = {
-	'au': 'äu',
-	'a': 'ä',
-	'o': 'ö',
-	'u': 'ü'
+	"au": "äu",
+	"a": "ä",
+	"o": "ö",
+	"u": "ü"
 }
-UMLAUTS_REVERSED = {v: k for k, v in UMLAUTS.items()}
 
 
 @dataclass
@@ -31,98 +38,149 @@ class Stem:
 	"""
 	A stem component of a `Compound`.
 
-	Attributes
+	Parameters
 	----------
-	component : `str`
-		morpheme representation of the component
-
-	realization : `str`, optional
-		concrete realization of the component; if not given, equals to `component`
+	morph : `str`
+		abstract morpheme representation of the component
 
 	span : `Tuple[int]`
-		span of the component realization in the `Compound` lemma
+		span of the `allomorph` in the `Compound` lemma
+
+	Attributes
+	----------
+	allomorph : `str`
+		concrete realization of the morpheme;
+		after initialization, equals to `morph`;
+		is to modify later if needed; the only case when
+		`allomorph` is different from `morph` is when
+		the stem undergoes umlauting
 
 	Example
 	-------
 	>>> compound = Compound("gast_+=e_buch")
-	>>> compound.components[0].component
+	>>> compound.components[0].morph
 	"gast"
-	>>> compound.components[0].realization
+	>>> compound.components[0].allomorph
 	"gäst"
 	>>> compound.components[0].span
 	(0, 4)
 	"""
 
-	component: str = field(compare=True)
-	realization: Optional[str] = field(compare=True, default=None)
+	morph: str = field(compare=True)
 	span: Tuple[int] = field(compare=True, kw_only=True)
-	# further features
+
+	# added later
+	allomorph: Optional[str] = field(compare=True, init=False)
 
 	def __post_init__(self) -> None:
-		if not self.realization:
-			self.realization = self.component
+		self.allomorph = self.morph
 
 	def __repr__(self) -> str:
-		return self.component
+		return self.morph
+	
+	def __len__(self) -> int:
+		return len(self.morph)
 
 
 @dataclass
-class Link:
+class Linker:
 
 	"""
-	A link component of a `Compound`.
+	A linker component of a `Compound`.
 
-	Attributes
+	Parameters
 	----------
-	component : `str`
-		decodb representation of the component, e.g. "_+er_"
+	gecodb : `str`
+		gecodb representation of the component, e.g. "_+n_"
 
-	realization : `str`, optional
-		concrete realization of the component, e.g. "er"; if not given, equals to an empty string
+	allomorph : `str`, optional
+		concrete realization of the component, e.g. "n";
+		since linkers appear in compounds as allomorphs and not morph,
+		this attribute (and not `morph`) is always defined for
+		explicit linkers (as opposed to stems that appear as morphs
+		and not allomorphs in compounds);
+		if not provided, equals to empty string
 
 	span : `Tuple[int]`
 		span of the component in the `Compound` lemma
 
-	type : `str`
-		type of the link according to the COW dataset
+	Attributes
+	----------
+	morph : `str`
+		abstract morpheme representation of the component;
+		restored automatically after initialization;
+		the only two cases when `morph` is different 
+		from `allomorph` are _+n_ (morph "en", allomorph "n")
+		and _+ns_ (morph "ens", allomorph "ns");
+		we do not consider _+s_ and _+es_ allomorphic
+
+	adds_umlaut : `bool`
+		whether the linker adds an umlaut to the preceding stem;
+		added automatically after initialization
 
 	Example
 	-------
-	>>> compound = Compound("mutter_+=_rente")
-	>>> compound.components[1].component
-	"_+=_"
-	>>> compound.components[1].realization
-	""
+	>>> compound = Compound("blume_+n_strauß")
+	>>> compound.components[1].gecodb
+	"_+n_"
+	>>> compound.components[1].morph
+	"en"
+	>>> compound.components[1].allomorph
+	"n"
 	>>> compound.components[1].span
+	(5, 6)
+	>>> compound.components[1].adds_umlaut
+	False
+
+
+	>>> compound = Compound("mutter_+=_zentrum")
+	>>> compound.linkers[0].gecodb
+	"_+=_"
+	>>> compound.linkers[0].morph
+	""
+	>>> compound.linkers[0].allomorph
+	""
+	>>> compound.linkers[0].span
 	(6, 6)
-	>>> compound.components[1].type
-	"addition_umlaut"
+	>>> compound.linkers[0].adds_umlaut
+	True
 	"""
 
-	component: str = field(compare=True)
-	realization: Optional[str] = field(compare=True, default=None)
+	gecodb: str = field(compare=True)
+	# even though allomorph is derivable from gecodb,
+	# we derive it outside for easier span calculation
+	# (otherwise an additional `start` parameter would be needed
+	# or the spans would need to be calculated later)
+	# and store it here for easier access
+	allomorph: Optional[str] = field(compare=True, kw_only=True, default="")
 	span: Tuple[int] = field(compare=True, kw_only=True)
-	type: Literal["addition_umlaut", "addition", "zero"] = field(compare=True, kw_only=True)
-	# further features
+
+	# added later
+	morph: Optional[str] = field(compare=True, init=False)
+	adds_umlaut: bool = field(compare=True, init=False)
 
 	def __post_init__(self) -> None:
-		if not self.realization:
-			self.realization = ""
+		if not self.allomorph:
+			self.allomorph = ""
+		# set `morph`
+		self.morph = "e" + self.allomorph if self.gecodb in ["_+n_", "_+ns_"] else self.allomorph
+		# set `adds_umlaut`
+		self.adds_umlaut = "=" in self.gecodb
 
 	def __repr__(self) -> str:
-		return self.component
+		return self.gecodb
 
 
 @dataclass
 class Compound:
 
 	"""
-	Class for representation of a COW compound entry.
+	Class for representation of a DeCowDB compound entry.
 
 	Parameters
 	----------
-	raw : `str`
-		COW dataset entry to analyze
+	gecodb : `str`
+		DeCowDB dataset entry to analyze
 
 	Attributes
 	----------
@@ -132,151 +190,112 @@ class Compound:
 	stems : `List[Stem]`
 		list of the stems of the compound
 
-	links : `List[Link]`
-		list of the links of the compound
+	linkers : `List[Linker]`
+		list of the linkers of the compound
 		
-	components : `List[Union[Stem, Link]]`
-		list of the stems and the links of the compound, sorted by span
+	components : `List[Union[Stem, Linker]]`
+		list of the stems and the linkers of the compound, sorted by span
 
 	Example
 	-------
 	>>> compound = Compound("gast_+=e_buch")
-	>>> compound.raw
+	>>> compound.gecodb
 	"gast_+=e_buch"
 	>>> compound.lemma
 	"gästebuch"
 	>>> compound.components
-	["gast", "_+=e", "buch"]
+	["gast", "_+=e_", "buch"]
 	"""
 
-	raw: str = field(compare=True)
+	gecodb: str = field(compare=True)
+
+	# added later
 	lemma: str = field(compare=True, init=False)
 	stems: List[Stem] = field(compare=False, init=False)
-	links: List[Link] = field(compare=False, init=False)
-	components: List[Union[Stem, Link]] = field(compare=True, init=False)
+	linkers: List[Linker] = field(compare=False, init=False)
+	components: List[Union[Stem, Linker]] = field(compare=True, init=False)
 
 	def __post_init__(self) -> None:
-		self._analyze(self.raw) # defines .stems, .links, .components, .lemma
-
-	def _get_stem_obj(self, component: str) -> Stem:
-		stem = Stem(
-			component=component,
-			# realization is just as the component at first, will be modified later if needed
-			span=(self.j, self.j + len(component)),
-		)
-		self.j += len(component)
-		return stem
-	
-	def _get_link_info(self, link: str) -> Tuple[str]:
-
-		"""
-		Determines realization and type of the link.
-
-		Parameters
-		----------
-		link : `str`
-			string to analyze
-
-		Returns
-		-------
-		`Tuple[str]`
-			the link itself, it's realization, and it's type
-		"""
-
-		for link_type, pattern in LINK_TYPES.items():
-			match = re.match(
-				pattern.replace(DE, f'(?P<r>{DE})'), # add parenthesis to pattern to capture links under name "r"
-				link
-			)
-			if match:
-				# match will return 3 spans: the span of the whole match,
-				# the span of the first capturing group that we use to return
-				# the links when splitting a raw compound (same as the whole match),
-				# and the last span is the realization of the component
-				# that we capture in (DE)
-				realization = match.groupdict().get("r", "")  # in zero, there is no group "r"
-				return link, realization, link_type
-
-	def _get_link_obj(self, component: str) -> Link:
-		component, realization, link_type = self._get_link_info(component)
-		link = Link(
-			component=component,
-			realization=realization,
-			span=(self.j, self.j + len(realization)),
-			type=link_type
-		)
-		self.j += len(realization)
-		return link
-	
-	def _perform_umlaut(self, string: str) -> str:
-
-		"""
-		Performs rightmost (!) umlaut, like "altstadt" --> "altstädt".
-
-		Parameters
-		----------
-		string : `str`
-			string to perform umlaut over
-
-		Returns
-		-------
-		`str`
-			string after performing umlaut (input string if not applicable)
-		"""
-
-		match = re.search("(au|a|o|u)[^aou]+$", string)
-		if match:
-			# the whole suffix containing the vowel
-			suffix_before_umlaut = match.group(0)
-			# the vowel itself
-			umlaut = match.group(1)
-			# perform umlaut in the suffix
-			suffix_after_umlaut = re.sub(
-				umlaut,
-				UMLAUTS[umlaut],
-				suffix_before_umlaut
-			)
-			# adjust realization: perform umlaut
-			string = re.sub(
-				f'{suffix_before_umlaut}$',
-				suffix_after_umlaut,
-				string
-			)
-		return string
-	
-	def _fuse_link(self, link: Link) -> None:
-		# build the lemma by fusing currently processed part with incoming links;
-		# that includes, for example, umlaut and deletion processing, zero and so on;
-		# adjust previous stem
-		previous_stem = self.stems[-1]
-		if link.type == "addition_umlaut":
-			# search for the closest to the link "umlautable" vowel;
-			# will return 2 matches (if finds anything):
-			# the whole suffix with umlaut, and the vowel itself (in the capturing group)
-			previous_stem.realization = self._perform_umlaut(previous_stem.component)
-
-	def _analyze(self, raw: str) -> None:
-		raw = raw.lower()
+		self.gecodb = self.gecodb.lower()
 		self.stems = []
-		self.links = []
-		self.j = 0  # global scope of index to be available from anywhere in the class
-		# split by links; capturing groups will store the links
-		components = re.split(LINK_PATTERN, raw)
+		self.linkers = []
+		self._analyze() # defines .stems, .linkers, .components, .lemma
+
+	def _analyze(self) -> None:
+
+		j = 0
+
+		# split by linkers; capturing groups will store the linkers
+		components = re.split(LINKER_PATTERN, self.gecodb)
 		for component in components:
-			if not component: continue  # `None` from capturing group occasionally occurs
-			if not '_' in component:    # stem
-				stem = self._get_stem_obj(component)
-				self.stems.append(stem)
-			else:
-				link = self._get_link_obj(component)
-				self._fuse_link(link) # adjust previous stem if needed
-				self.links.append(link)
-		del self.j
-		self.components = sorted(self.stems + self.links, key=lambda c: c.span) # sort by span => order of appearance
-		self.lemma = ''.join([component.realization for component in self.components])
+
+			if not component:
+				continue  # `None` from capturing group occasionally occurs
+
+			if not "_" in component:    # stem
+
+				self.stems.append(
+					Stem(
+						morph=component,
+						# allomorph will be modified later if needed
+						span=(j, j := j + len(component))
+					)
+				)
+
+			else:	# linker
+
+				if component == "_":
+					# zero linker
+					linker = Linker(
+						gecodb=component,
+						span=(j, j)
+					)
+
+				else:	# explicit linker
+
+					# capture linker under name "r"
+					match = re.match(r"_\+=?(?P<r>!DE!)_".replace("!DE!", DE), component)
+					allomorph = match.groupdict().get("r", "")
+
+					linker = Linker(
+						gecodb=component,
+						allomorph=allomorph,
+						span=(j, j := j + len(allomorph))
+					)
+
+					if linker.adds_umlaut: # adjust previous stem if needed
+						
+						prev_stem = self.stems[-1]
+						# find rightmost "umlautable" vowel before the end
+						match = re.search("(au|a|o|u)[^aou]+$", prev_stem.morph)
+						if match:
+
+							# the whole substring containing the vowel
+							substr_before_umlaut = match.group(0)
+							# the vowel itself
+							umlaut = match.group(1)
+							# perform umlaut in the substring
+							substr_after_umlaut = re.sub(
+								umlaut,
+								UMLAUTS[umlaut],
+								substr_before_umlaut
+							)
+
+							# adjust realization: perform umlaut
+							prev_stem.allomorph = re.sub(
+								f"{substr_before_umlaut}$",
+								substr_after_umlaut,
+								prev_stem.morph
+							)
+
+				self.linkers.append(linker)
+
+		# sort by span => order of appearance
+		self.components = sorted(self.stems + self.linkers, key=lambda c: c.span)
+		self.lemma = "".join([component.allomorph for component in self.components])
 
 	def __len__(self) -> int:
 		return len(self.components)
 
 	def __repr__(self) -> str:
-		return f"{self.lemma} <-- {self.raw}"
+		return f"{self.lemma} <-- {self.gecodb}"
