@@ -6,6 +6,8 @@ import os
 import pandas as pd
 import yaml
 
+# import compounding.constraints.applicability_check.applicability_checkers as applicability_checkers
+
 
 def main():
     
@@ -33,7 +35,12 @@ def main():
     with open("compounding/constraints/constraints.yaml", encoding="utf-8") as f:
         constraints = list(yaml.safe_load_all(f))[-1]["constraints"]
 
-    pass
+    for constraint in constraints.keys():
+        
+        func_name = constraint.replace("-", "_")    \
+                              .replace(":", "__")   \
+                              .replace("|", "_")
+        pass
 
 
     # For checking the applicability and application of constraints,
