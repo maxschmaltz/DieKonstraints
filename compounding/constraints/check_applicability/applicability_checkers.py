@@ -64,6 +64,17 @@ def _is_zero_plural(lemma: str) -> bool:
 	return _is_plural(lemma)
 
 
+# Helper function for derivational class checks
+
+def _is_simplex(lemma: str) -> bool:
+	lemma_info = celex.loc[lemma]
+	return lemma_info["morphemic_structure"].count("-") == 0
+
+def _is_derived(lemma: str) -> bool:
+	# for better readability
+	return not _is_simplex(lemma)
+
+
 # Helper functions for phonetic checks
 
 def _ends_with(lemma: str, endings: str | list[str]) -> bool:
@@ -77,6 +88,7 @@ def _ends_with(lemma: str, endings: str | list[str]) -> bool:
 def _ends_with_schwa(lemma: str) -> bool:
 	# for better readability
 	return _ends_with(lemma, "@")
+
 
 
 
@@ -104,7 +116,8 @@ def def_0_applies(compound: Compound):
 
 def plur_0_smpx_mn_is_applicable(compound: Compound):
 	return (
-		_is_zero_plural(compound.stems[0].morph)
+		_is_simplex(compound.stems[0].morph)
+		and _is_zero_plural(compound.stems[0].morph)
 		and _ends_with(compound.stems[0].morph, ["@l", "@n"])
 	)
 
@@ -117,9 +130,7 @@ def plur_0_smpx_mn_applies(compound: Compound):
 # Nouns forming the plural with -s regularly attach a zero linker.
 
 def plur_s_is_applicable(compound: Compound):
-	return (
-		_is_plural(compound.stems[0].morph, "s")
-	)
+	return _is_plural(compound.stems[0].morph, "s")
 
 def plur_s_applies(compound: Compound):
 	return _has_no_linker(compound)
