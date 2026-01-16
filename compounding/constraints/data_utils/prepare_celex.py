@@ -396,6 +396,9 @@ def main():
     # set lemma as index
     gmspflw = gmspflw.set_index("lemma")
 
+    # remove doplicates
+    gmspflw = gmspflw[~gmspflw.index.duplicated(keep="first")]
+
 
     # 15. Save the final table as TSV.
     gmspflw.to_csv(
