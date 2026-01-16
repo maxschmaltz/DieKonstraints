@@ -174,7 +174,7 @@ class Linker:
 def perform_umlaut(morph: str) -> str:
 
 	# find rightmost "umlautable" vowel before the end
-	match = re.search("(au|a|o|u)[^aou]+$", morph)
+	match = re.search("(?<![auoeiyäöü])(au|a|o|u)[^aou]+$", morph)
 	if match:
 
 		# the whole substring containing the vowel
