@@ -12,7 +12,6 @@ def main():
 
     gecodb_path = "resources/GeCoDB/gecodb_v05.tsv"
     outpath = "resources/custom/compounding/intermediate_data"
-    os.makedirs(outpath, exist_ok=True)
 
     # load prepared CELEX nouns
     celex = pd.read_csv(
