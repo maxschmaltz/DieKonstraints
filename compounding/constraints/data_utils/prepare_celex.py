@@ -378,12 +378,18 @@ def main():
 
     # lower and apply orthographic transformations of umlauts;
     # return Nonefor missing Pl forms
-    umlambda = lambda x: \
-        None if pd.isna(x) else \
-        x.replace("ae", "ä").   \
-        replace("oe", "ö").     \
-        replace("ue", "ü").     \
-        lower()
+    def umlambda(x: str) -> str:
+        
+        if pd.isna(x):
+            return None
+        
+        x = x.lower()
+
+        x = re.sub("(?<![aeiouy])ae", "ä", x)
+        x = re.sub("(?<![aeiouy])oe", "ö", x)
+        x = re.sub("(?<![aeiouy])ue", "ü", x)
+        
+        return x
     
     target_columns = ["lemma", "morphemic_structure", "gen_sg", "nom_pl"]
     gmspflw[target_columns] = gmspflw[target_columns].apply(
