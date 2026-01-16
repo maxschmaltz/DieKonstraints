@@ -102,13 +102,13 @@ def def_0_applies(compound: Compound):
 # Simplex masculine and neuter nouns ending with -el or -en
 # that form the plural with a zero ending attach -s- in majority of cases.
 
-def pl__0_0_smpx_mn_el_en_s_is_applicable(compound: Compound):
+def plur_0_smpx_mn_is_applicable(compound: Compound):
 	return (
 		_is_zero_plural(compound.stems[0].morph)
 		and _ends_with(compound.stems[0].morph, ["@l", "@n"])
 	)
 
-def pl__0_0_smpx_mn_el_en_s_applies(compound: Compound):
+def plur_0_smpx_mn_applies(compound: Compound):
 	return _has_linker(compound, "s")
 
 
@@ -116,10 +116,10 @@ def pl__0_0_smpx_mn_el_en_s_applies(compound: Compound):
 #
 # Nouns forming the plural with -s regularly attach a zero linker.
 
-def pl__s_0_is_applicable(compound: Compound):
+def plur_s_is_applicable(compound: Compound):
 	return (
 		_is_plural(compound.stems[0].morph, "s")
 	)
 
-def pl__s_0_applies(compound: Compound):
+def plur_s_applies(compound: Compound):
 	return _has_no_linker(compound)
