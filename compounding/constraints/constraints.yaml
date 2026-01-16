@@ -131,12 +131,12 @@ topology:
 
 
                             - p2l:decl_cl:pl:#0-0:
-                                summary: Simplex masculine and neuter nouns ending with -el or -en that form the plural with a zero ending attach a zero linker in majority of cases. Derivatives forming the plural with a zero ending -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker regularly unless they are a deverbative, in which case they always attach -s-.
+                                summary: Nouns forming the plural with a zero ending -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker regularly unless they are a deverbative, in which case they always attach -s-.
                                 children:
 
-                                    - p2l:drv:sfx:0_pl_sfx-0 # EXTERNAL
+                                    - p2l:decl_cl:pl:#0-0|def-0
 
-                                    - p2l:decl_cl:pl:#0-0|smpx_mn_#el$/#en$-s
+                                    - p2l:drv:sfx:0_pl_sfx-0 # EXTERNAL
 
                                     - p2l:drv:sfx:deverb_#en$-s   # EXTERNAL
 
@@ -442,22 +442,22 @@ constraints:
 
     #     1.1.1. Constraints that map plural schemes of compounds to their most probable linkers.
 
-    p2l:decl_cl:pl:#0-0|smpx_mn_#el$/#en$-s:
-      summary: Simplex masculine and neuter nouns ending with -el or -en that form the plural with a zero ending attach -s- in majority of cases.
+    p2l:decl_cl:pl:#0-0|def-0:
+      summary: Nouns forming the plural with a zero ending attach a zero linker regularly.
       type: [morphological]
 
-      func_alias: plur_0_smpx_mn
+      func_alias: plur_0
       regularity: NA
       coverage: NA
 
-      examples_pro: [orden_+s_bruder, teufel_+s_werk, frieden_+s_angebot]
-      examples_contra: [schlitten_fahrt, wagen_rad]
+      examples_pro: [schlitten_fahrt, gürtel_schnalle, brötchen_geber]
+      examples_contra: [orden_+s_bruder, teufel_+s_werk, frieden_+s_angebot]
 
       evidence:
 
           - ref: ortner_müller-bollhagen_1991
-            pages: [82, 88, 106]
-            summary: Simplex M and N ending in -en or -el that form the plural with a zero ending attach -s- in majority of cases.
+            pages: [106]
+            summary: Nouns that form the plural with a zero ending attach a zero linker regularly (about 90% of cases).
 
       footnotes: {}
 
@@ -865,7 +865,7 @@ constraints:
     #    1.2.1. Constraints that map derivational suffixes of compounds to most probable linkers.
 
     p2l:drv:sfx:0_pl_sfx-0:
-      summary: Derivatives forming the plural with a zero ending -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- regularly attach a zero linking element.
+      summary: Derivatives with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- regularly attach a zero linking element.
       type: [derivational]
 
       func_alias: sfx_0_pl_0
@@ -879,7 +879,7 @@ constraints:
 
           - ref: ortner_müller-bollhagen_1991
             pages: [56, 82, 106]
-            summary: Derivatives forming the plural with a zero ending -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly.
+            summary: Derivatives [forming the plural with a zero ending] -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly.
 
       footnotes: {}
 
