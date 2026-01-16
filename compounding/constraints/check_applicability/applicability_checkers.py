@@ -68,7 +68,7 @@ def _is_zero_plural(lemma: str) -> bool:
 
 def _is_simplex(lemma: str) -> bool:
 	lemma_info = celex.loc[lemma]
-	return lemma_info["morphemic_structure"].count("-") == 0
+	return lemma_info["morphemic_schema"] == "N"
 
 def _is_derived(lemma: str) -> bool:
 	# for better readability
@@ -91,7 +91,6 @@ def _ends_with_schwa(lemma: str) -> bool:
 
 
 
-
 # Functions for applicability checks
 
 # def-0
@@ -109,20 +108,15 @@ def def_0_applies(compound: Compound):
 
 
 
-# p2l:decl_cl:pl:#0-0|smpx_mn_#el$/#en$-s
+# p2l:decl_cl:pl:#0-0|def-0
 #
-# Simplex masculine and neuter nouns ending with -el or -en
-# that form the plural with a zero ending attach -s- in majority of cases.
+# Nouns forming the plural with a zero ending attach a zero linker regularly.
 
-def plur_0_smpx_mn_is_applicable(compound: Compound):
-	return (
-		_is_simplex(compound.stems[0].morph)
-		and _is_zero_plural(compound.stems[0].morph)
-		and _ends_with(compound.stems[0].morph, ["@l", "@n"])
-	)
+def plur_0_is_applicable(compound: Compound):
+	return _is_zero_plural(compound.stems[0].morph)
 
-def plur_0_smpx_mn_applies(compound: Compound):
-	return _has_linker(compound, "s")
+def plur_0_applies(compound: Compound):
+	return _has_no_linker(compound)
 
 
 # p2l:decl_cl:pl:#s-0
