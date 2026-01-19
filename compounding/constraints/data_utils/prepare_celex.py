@@ -128,7 +128,7 @@ def main():
     gml = gml.dropna()
 
     # infer morphemic structure and morphemic schema from column 14
-    def parse_morphemic_structure_schema(drv_steps: str) -> tuple:
+    def _parse_morphemic_structure_schema(drv_steps: str) -> tuple:
 
         morphemic_structure = []
         morphemic_schema = ""
@@ -142,6 +142,9 @@ def main():
         for match in re.finditer(r"\((?P<m>[^()]+)\)\[(?P<t>[A-Z|.]+)\]", drv_steps):
             morpheme = match.group("m")
             m_type = match.group("t")
+            if not morpheme or not m_type:
+                # return None if anything is missing (e.g. `((Berg)[N],(mann)[])[N]`)
+                return None, None, None
             m_type = "x" if "|" in m_type else m_type  # affixes ("x") are marked as "Xout|.Xin"
             morphemic_structure.append(morpheme)
             morphemic_schema += m_type
@@ -150,9 +153,12 @@ def main():
     
     gml["morphemic_structure"], gml["morphemic_schema"], gml["pos"] = zip(
             *gml["drvt_history"].apply(
-                lambda x: parse_morphemic_structure_schema(x)
+                lambda x: _parse_morphemic_structure_schema(x)
         )
     )
+
+    # drop records with any missing fields repeatedly
+    gml = gml.dropna()
 
     # we can now drop the original `drvt_history` column
     gml = gml.drop(columns=["drvt_history"])
@@ -227,6 +233,10 @@ def main():
 
     # The following columns are relevant:
     # * Column 2: Wordform.
+    # * Column 3: Wordform count in Mannheim corpus (6M tokens);
+    #   not needed per se, but will be used to resolve conflicts
+    #   if the same wordform has multiple variants: 
+    #   e.g. 'Mann' has variants 'Mannen' (wc: 5) vs 'Männer' (wc: 989).
     # * Column 4: Lemma id.
     # * Column 5: Paradigm codes (to identify GenSg and NomPl forms).
 
@@ -235,8 +245,8 @@ def main():
         sep="\\",
         header=None,
         dtype=str,
-        usecols=[1, 3, 4],
-        names=["wordform", "id", "paradigm_code"],
+        usecols=[1, 2, 3, 4],
+        names=["wordform", "freq", "id", "paradigm_code"],
         index_col="id"
     )
 
@@ -259,14 +269,42 @@ def main():
     # keep only GenSg and NomPl forms
     gmw = gmw[gmw["paradigm_code"].isin(["gS", "nP"])]
 
-    # pivot the table to have separate columns for GenSg and NomPl forms
-    gmw = gmw.pivot_table(
-        index=gmw.index,
-        columns="paradigm_code",
-        values="wordform",
-        aggfunc="first"
-    ).rename(columns={"gS": "gen_sg", "nP": "nom_pl"})
+    def _choose_higher_freq(group: pd.Series) -> str:
+        if len(group) == 1:
+            return group
+        # if multiple variants exist, choose the one(s)
+        # with higher frequency: all the variants that
+        # have at least 50% of the winner's frequency
+        group["freq"] = group["freq"].astype(int) + 1   # add-1 smoothing
+        group["freq"] = group["freq"] / group["freq"].max()
+        group = group[group["freq"] >= 0.5]
+        # if still multiple variants,
+        # concatenate them with a slash
+        return group.groupby(level=0).agg({
+            "wordform": lambda x: "/".join(x),
+            "freq": "first",  # or "max", "mean", etc.
+            "paradigm_code": "first"
+        })
+    
+    # consolidate coexisting GenSg and NomPl forms
+    # by their frequency; process consolidation separately
+    # to avoid confusion when gS and nP are identical
+    gmw_gs = gmw[gmw["paradigm_code"] == "gS"]
+    gmw_gs_consolidated = gmw_gs.groupby(level=0)   \
+                                .apply(_choose_higher_freq) \
+                                .reset_index(level=1, drop=True)    \
+                                .rename(columns={"wordform": "gen_sg"})
 
+    gmw_np = gmw[gmw["paradigm_code"] == "nP"]
+    gmw_np_consolidated = gmw_np.groupby(level=0)   \
+                                .apply(_choose_higher_freq) \
+                                .reset_index(level=1, drop=True)    \
+                                .rename(columns={"wordform": "nom_pl"})
+    
+    # join GenSg and NomPl forms into one table with two respective columns
+    gmw = gmw_gs_consolidated["gen_sg"].to_frame()  \
+                                       .join(gmw_np_consolidated["nom_pl"], how="inner")
+ 
 
     # 7. We join the filtered `gmw.cd` table to the filtered
     # joint table from step 4 on lemma id. For that, we need to
