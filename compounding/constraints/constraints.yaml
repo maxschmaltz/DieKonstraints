@@ -865,7 +865,7 @@ constraints:
     #    1.2.1. Constraints that map derivational suffixes of compounds to most probable linkers.
 
     p2l:drv:sfx:0_pl_sfx-0:
-      summary: Derivatives with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- regularly attach a zero linking element.
+      summary: Derivatives with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein regularly attach a zero linking element.
       type: [derivational]
 
       func_alias: sfx_0_pl_0
