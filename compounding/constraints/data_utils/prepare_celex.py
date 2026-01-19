@@ -301,9 +301,10 @@ def main():
                                 .reset_index(level=1, drop=True)    \
                                 .rename(columns={"wordform": "nom_pl"})
     
-    # join GenSg and NomPl forms into one table with two respective columns
+    # join GenSg and NomPl forms into one table with two respective columns;
+    # join by left since missing plural forms are allowed
     gmw = gmw_gs_consolidated["gen_sg"].to_frame()  \
-                                       .join(gmw_np_consolidated["nom_pl"], how="inner")
+                                       .join(gmw_np_consolidated["nom_pl"], how="left")
  
 
     # 7. We join the filtered `gmw.cd` table to the filtered
