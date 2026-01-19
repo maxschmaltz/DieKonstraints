@@ -529,7 +529,7 @@ constraints:
       summary: Nouns forming the plural with -e non-regularly attach -e- when the second constituent forces a plural or collective meaning of this noun.
       type: [morphological, semantic]
 
-      func_alias: plur_s_pl
+      func_alias: plur_e_pl
       regularity: NA
       coverage: NA
 

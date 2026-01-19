@@ -119,6 +119,7 @@ def plur_0_applies(compound: Compound):
 	return _has_no_linker(compound)
 
 
+
 # p2l:decl_cl:pl:#s-0
 #
 # Nouns forming the plural with -s regularly attach a zero linker.
@@ -128,3 +129,28 @@ def plur_s_is_applicable(compound: Compound):
 
 def plur_s_applies(compound: Compound):
 	return _has_no_linker(compound)
+
+
+
+# p2l:decl_cl:pl:#e-0|def-0
+#
+# Nouns forming the plural with -e mostly have a zero linker.
+
+def plur_e_is_applicable(compound: Compound):
+	return _is_plural(compound.stems[0].morph, "e")
+
+def plur_e_applies(compound: Compound):
+	return _has_no_linker(compound)
+
+
+# p2l:decl_cl:pl:#e-0|pl_interpr-e
+#
+# Nouns forming the plural with -e non-regularly attach -e- when
+# the second constituent forces a plural or collective meaning of this noun.
+# TODO
+
+
+# p2l:decl_cl:pl:#e-0|msyl_anim-e
+#
+# Monosyllabic e-plural nouns designating animals non-regularly attach -e-.
+# TODO
