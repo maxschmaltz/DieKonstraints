@@ -52,7 +52,7 @@ def _is_of_plural(
 		return False
 	lemma_info = celex.loc[lemma]
 	if (
-		_ends_with_schwa(lemma)
+		_ends_with_phon_schwa(lemma)
 		and plural_marker == "en"
 	):	# adjust for schwa at the end
 		plural_marker = "n"
@@ -108,7 +108,7 @@ def _is_derived(lemma: str) -> bool:
 
 # Helper functions for phonetic checks
 
-def _ends_with(lemma: str, endings: str | list[str]) -> bool:
+def _ends_with_phon(lemma: str, endings: str | list[str]) -> bool:
 	if isinstance(endings, str):
 		endings = [endings]
 	lemma_info = celex.loc[lemma]
@@ -116,9 +116,9 @@ def _ends_with(lemma: str, endings: str | list[str]) -> bool:
 		lemma_info["phonetic_transcription"].endswith(ending) for ending in endings
 	)
 
-def _ends_with_schwa(lemma: str) -> bool:
+def _ends_with_phon_schwa(lemma: str) -> bool:
 	# for better readability
-	return _ends_with(lemma, "@")
+	return _ends_with_phon(lemma, "@")
 
 
 
