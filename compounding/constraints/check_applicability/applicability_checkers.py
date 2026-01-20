@@ -42,7 +42,7 @@ def _has_no_linker(compound: Compound) -> bool:
 
 # Helper functions for morphological checks
 
-def _is_plural(
+def _is_of_plural(
 	lemma: str,
 	plural_marker: Optional[Literal["", "s", "en", "e", "er"]]="",
 	adds_umlaut: Optional[bool]=False
@@ -64,9 +64,9 @@ def _is_plural(
 		for pl_var in pl_vars
 	)
 
-def _is_zero_plural(lemma: str) -> bool:
+def _is_of_zero_plural(lemma: str) -> bool:
 	# for better readability
-	return _is_plural(lemma)
+	return _is_of_plural(lemma)
 
 
 def _is_of_genitive(lemma: str, genitive_marker: Literal["", "s"]) -> bool:
@@ -91,7 +91,7 @@ def _is_mixed(lemma: str) -> bool:
 			or _is_of_gender(lemma, "n")
 		)
 		and _is_of_genitive(lemma, "s")
-		and _is_plural(lemma, "en")
+		and _is_of_plural(lemma, "en")
 	)
 
 
@@ -144,7 +144,7 @@ def def_0_applies(compound: Compound):
 # Nouns forming the plural with a zero ending attach a zero linker regularly.
 
 def plur_0_is_applicable(compound: Compound):
-	return _is_zero_plural(compound.stems[0].morph)
+	return _is_of_zero_plural(compound.stems[0].morph)
 
 def plur_0_applies(compound: Compound):
 	return _has_no_linker(compound)
@@ -156,7 +156,7 @@ def plur_0_applies(compound: Compound):
 # Nouns forming the plural with -s regularly attach a zero linker.
 
 def plur_s_is_applicable(compound: Compound):
-	return _is_plural(compound.stems[0].morph, "s")
+	return _is_of_plural(compound.stems[0].morph, "s")
 
 def plur_s_applies(compound: Compound):
 	return _has_no_linker(compound)
@@ -168,7 +168,7 @@ def plur_s_applies(compound: Compound):
 # Nouns forming the plural with -e mostly have a zero linker.
 
 def plur_e_is_applicable(compound: Compound):
-	return _is_plural(compound.stems[0].morph, "e")
+	return _is_of_plural(compound.stems[0].morph, "e")
 
 def plur_e_applies(compound: Compound):
 	return _has_no_linker(compound)
@@ -195,7 +195,7 @@ def plur_e_applies(compound: Compound):
 # Another linkers can also be rarely adopted by these nouns.
 
 def plur_er_is_applicable(compound: Compound):
-	return _is_plural(compound.stems[0].morph, "er", adds_umlaut=True)
+	return _is_of_plural(compound.stems[0].morph, "er", adds_umlaut=True)
 
 def plur_er_applies(compound: Compound):
 	return (
@@ -244,7 +244,7 @@ def plur_er_applies(compound: Compound):
 # mostly have a zero linker.
 
 def plur_e_uml_is_applicable(compound: Compound):
-	return _is_plural(compound.stems[0].morph, "e", adds_umlaut=True)
+	return _is_of_plural(compound.stems[0].morph, "e", adds_umlaut=True)
 
 def plur_e_uml_applies(compound: Compound):
 	return _has_no_linker(compound)
@@ -265,7 +265,7 @@ def plur_e_uml_applies(compound: Compound):
 # mostly have a zero linker.
 
 def plur_0_uml_is_applicable(compound: Compound):
-	return _is_plural(compound.stems[0].morph, "", adds_umlaut=True)
+	return _is_of_plural(compound.stems[0].morph, "", adds_umlaut=True)
 
 def plur_0_uml_applies(compound: Compound):
 	return _has_no_linker(compound)
