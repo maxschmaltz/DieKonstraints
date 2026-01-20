@@ -113,7 +113,7 @@ topology:
 
 
     - p2l:
-
+    
         summary: Constraints and clusters of constraints that map properties of compounds to most probable linkers.
         children:
 
@@ -380,7 +380,7 @@ topology:
 
 constraints:
 
-    - def-0:
+    def-0:
       
         summary: The majority of compounds have a zero linker. Zero linker is default for German compounds.
         type: [default]
@@ -443,7 +443,7 @@ constraints:
 
     #     1.1.1. Constraints that map plural schemes of compounds to their most probable linkers.
 
-    - p2l:decl_cl:pl:#0-0|def-0:
+    p2l:decl_cl:pl:#0-0|def-0:
 
         summary: Nouns forming the plural with a zero ending attach a zero linker regularly.
         type: [morphological]
@@ -465,7 +465,7 @@ constraints:
 
 
 
-    - p2l:decl_cl:pl:#s-0:
+    p2l:decl_cl:pl:#s-0:
     
         summary: Nouns forming the plural with -s regularly attach a zero linker.
         type: [morphological]
@@ -508,7 +508,7 @@ constraints:
 
 
 
-    - p2l:decl_cl:pl:#e-0|def-0:
+    p2l:decl_cl:pl:#e-0|def-0:
     
         summary: Nouns forming the plural with -e mostly have a zero linker.
         type: [morphological]
@@ -529,7 +529,7 @@ constraints:
         footnotes: {}
 
 
-    - p2l:decl_cl:pl:#e-0|pl_interpr-e:
+    p2l:decl_cl:pl:#e-0|pl_interpr-e:
     
         summary: Nouns forming the plural with -e non-regularly attach -e- when the second constituent forces a plural or collective meaning of this noun.
         type: [morphological, semantic]
@@ -555,7 +555,7 @@ constraints:
             "1": This finding is not very reliable. Most of the entries in the dataset were nouns designating animals -- that, as pointed out in the literature, tendentially attach -e- with no respect to the plural meaning (see `p2l:decl_cl:pl:#e-0|msyl_anim-e`). Furthermore, the sample contained noise such as 'Arzt' which is a e=plural noun. Thus, making a single conclusion about all occurrences from different classes adopting -e- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -e- after non-animal designations was most probably positive as well.
 
 
-    - p2l:decl_cl:pl:#e-0|msyl_anim-e:
+    p2l:decl_cl:pl:#e-0|msyl_anim-e:
     
         summary: Monosyllabic e-plural nouns designating animals non-regularly attach -e-.
         type: [morphological, semantic]
@@ -585,7 +585,7 @@ constraints:
 
 
 
-    - p2l:decl_cl:pl:#er-0/er|def-0/er:
+    p2l:decl_cl:pl:#er-0/er|def-0/er:
     
         summary: Nouns forming the plural with -er (with or without umlaut) mostly attach a zero linker or =er= in different cases. Another linkers can also be rarely adopted by these nouns.
         type: [morphological]
@@ -611,7 +611,7 @@ constraints:
             "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or =er=.
 
 
-    - p2l:decl_cl:pl:#er-0/er|!pl_interpr-0:
+    p2l:decl_cl:pl:#er-0/er|!pl_interpr-0:
     
         summary: Nouns forming the plural with -er (with or without umlaut) attach a zero linker in majority of cases when the second constituent forces a singular meaning of this noun.
         type: [morphological, semantic]
@@ -638,7 +638,7 @@ constraints:
             "2": Note that non-N+N compounds are included in this statistics.
 
 
-    - p2l:decl_cl:pl:#er-0/er|mass-interpr-0:
+    p2l:decl_cl:pl:#er-0/er|mass-interpr-0:
     
         summary: Nouns forming the plural with -er (with or without umlaut) tend (with counterexamples) to attach a zero linker when the second constituent forces a mass meaning of this noun.
         type: [morphological, semantic]
@@ -660,7 +660,7 @@ constraints:
             "1": "Generalization taken from [nübling_szczepaniak_2013:81]."
 
 
-    - p2l:decl_cl:pl:#er-0/er|pl_interpr-er:
+    p2l:decl_cl:pl:#er-0/er|pl_interpr-er:
     
         summary: Nouns forming the plural with -er (with or without umlaut) attach =er= more likely when the second constituent forces a plural or collective meaning of this noun (with counterexamples), in which case these nouns indicate concrete, countable entities.
         type: [morphological, semantic]
@@ -693,7 +693,7 @@ constraints:
         footnotes: {}
     
 
-    - p2l:decl_cl:pl:#er-0/er|anim-er:
+    p2l:decl_cl:pl:#er-0/er|anim-er:
     
         summary: Nouns forming the plural with -er (with or without umlaut) that designate persons and animals may attach =er= also with singular interpretation.
         type: [morphological, semantic]
@@ -720,7 +720,7 @@ constraints:
 
 
 
-    - p2l:decl_cl:pl:#e_uml-0|def-0:
+    p2l:decl_cl:pl:#e_uml-0|def-0:
     
         summary: Nouns forming the plural with -e and umlaut mostly have a zero linker.
         type: [morphological]
@@ -741,7 +741,7 @@ constraints:
         footnotes: {}
 
 
-    - p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml:
+    p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml:
     
         summary: Nouns forming the plural with -e and umlaut non-regularly attach -e- with umlaut when the second constituent forces a plural or collective meaning of this noun.
         type: [morphological, semantic]
@@ -767,7 +767,7 @@ constraints:
 
 
 
-    - p2l:decl_cl:pl:#0_uml-0|def-0:
+    p2l:decl_cl:pl:#0_uml-0|def-0:
     
         summary: Nouns forming the plural with a zero ending and umlaut mostly have a zero linker.
         type: [morphological]
@@ -788,7 +788,7 @@ constraints:
         footnotes: {}
 
 
-    - p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml:
+    p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml:
     
         summary: Nouns forming the plural with a zero ending and umlaut may non-regularly attach a zero linker with umlaut when the second constituent forces a plural or collective meaning of this noun.
         type: [morphological, semantic]
@@ -810,7 +810,7 @@ constraints:
 
     #     1.1.2. Constraints for mixed nouns.
 
-    - p2l:decl_cl:mixed-0/s/en|def-0/s/en:
+    p2l:decl_cl:mixed-0/s/en|def-0/s/en:
       
         summary: Mixed masculine and neuter nouns can attach -s-, a zero linker, or -(e)n-.
         type: [morphological]
@@ -851,7 +851,7 @@ constraints:
             "4": Since from the whole class of strong and mixed M and N taking -s- and -es- mentioned in the paper we only consider the subclass of mixed M and N taking -s- here, the evidence is to be considered indirect. The rest of the claim about strong M and N consideres such a broad class that we disregard it in this iteration.
 
 
-    - p2l:decl_cl:mixed-0/s/en|pl_interpr-en:
+    p2l:decl_cl:mixed-0/s/en|pl_interpr-en:
     
         summary: Mixed masculine and neuter nouns can attach attach -(e)n- more likely when the second constituent forces a plural or collective meaning of this noun. However, there are counterexamples where -(e)n- is attached even when no plural reading is possible.
         type: [morphological, semantic]
@@ -881,7 +881,7 @@ constraints:
 
     #    1.2.1. Constraints that map derivational suffixes of compounds to most probable linkers.
 
-    - p2l:drv:sfx:0_pl_sfx-0:
+    p2l:drv:sfx:0_pl_sfx-0:
     
         summary: Derivatives with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein regularly attach a zero linking element.
         type: [derivational]
@@ -891,7 +891,7 @@ constraints:
         coverage: NA
 
         examples_pro: [reiter_schwert, gürtel_schnalle, brötchen_geber]
-        examples_contra: [reiter_+s_mann, leben_+s_mittel]
+        examples_contra: [reiter_+s_mann]
 
         evidence:
 
@@ -903,7 +903,7 @@ constraints:
 
 
 
-    - p2l:drv:sfx:!0_pl_sfx-0:
+    p2l:drv:sfx:!0_pl_sfx-0:
     
         summary: Nouns with suffixes -bold, -nis, -rich, -at, -al, -ik, also stressed -ei, -ie, -ur usually attach a zero linker.
         type: [derivational]
@@ -913,7 +913,7 @@ constraints:
         coverage: NA
 
         examples_pro: [erlaubnis_schein, kultur_wissenschaft, kosmetik_industrie]
-        examples_contra: []
+        examples_contra: [kultur_+en_folge, melodie_+n_reigen]
 
         evidence:
 
@@ -925,7 +925,7 @@ constraints:
 
 
 
-    - p2l:drv:sfx:sfx-s|def-s:
+    p2l:drv:sfx:sfx-s|def-s:
     
         summary: Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -tum, -um, -ion, -(i)tät regularly attach -s-.
         type: [derivational]
@@ -999,7 +999,7 @@ constraints:
             "5": Level of regularity not mentioned.
 
 
-    - p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en:
+    p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en:
     
         summary: Nouns with suffix -(i)tät prefer -en- when the second constituent forces a plural or collective meaning of this noun.
         type: [derivational, semantic]
@@ -1021,7 +1021,7 @@ constraints:
 
 
 
-    - p2l:drv:sfx:deverb_#en$-s:
+    p2l:drv:sfx:deverb_#en$-s:
     
         summary: -s- occurs regularly in deverbatives ending in -en.
         type: [derivational]
@@ -1054,7 +1054,7 @@ constraints:
 
 
 
-    - p2l:drv:sfx:F_#in$-en:
+    p2l:drv:sfx:F_#in$-en:
     
         summary: Derivative feminine nouns with suffix -in always attach -en-. (The suffix -in adjusts orthographically in this case and becomes an -inn.)
         type: [derivational]
@@ -1078,7 +1078,7 @@ constraints:
 
     #    1.2.2. Constraint for prexied deverbatives.
 
-    - p2l:drv:prx_deverb-s:
+    p2l:drv:prx_deverb-s:
     
         summary: There is a strong tendency to adopt -s- after prefixed deverbatives, especially when the prefix is stressed.
         type: [derivational]
@@ -1135,7 +1135,7 @@ constraints:
 
     # 1.3. Constraints that map final phoneme(s) of compounds to most probable linkers.
 
-    - p2l:phon_fin:sibilant$-0:
+    p2l:phon_fin:sibilant$-0:
     
         summary: Nouns ending in a sibilant or a consonant cluster including [s] mostly adopt a zero linker.
         type: [phonological]
@@ -1162,7 +1162,7 @@ constraints:
 
 
 
-    - p2l:phon_fin:cmpx_syl$-0:
+    p2l:phon_fin:cmpx_syl$-0:
     
         summary: -s- may occur after a complex syllable boundary.
         type: [phonological]
@@ -1185,7 +1185,7 @@ constraints:
 
 
 
-    - p2l:phon_fin:vow$-0:
+    p2l:phon_fin:vow$-0:
     
         summary: Nouns ending in a full vowel always adopt a zero linker.
         type: [phonological]
@@ -1212,7 +1212,7 @@ constraints:
 
 
 
-    - p2l:phon_fin:F_stem_#t$-s:
+    p2l:phon_fin:F_stem_#t$-s:
     
         summary: Feminine nouns ending with a [t] often attach an -s- if the [t] is part of the stem (not of a suffix).
         type: [morphological, phonological]
@@ -1238,7 +1238,7 @@ constraints:
 
 
 
-    - p2l:phon_fin:schwa$-en|def-en:
+    p2l:phon_fin:schwa$-en|def-en:
     
         summary: Nouns ending in schwa regularly adopt -n-.
         type: [phonological]
@@ -1284,7 +1284,7 @@ constraints:
             "1": The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `p2l:sem:tech_term-0` is stronger than `p2l:phon_fin:schwa$-en|def-en` and thus -- since these are technical terms -- it blocks the application of `p2l:phon_fin:schwa$-en|def-en` in these cases.
 
 
-    - p2l:phon_fin:schwa$-en|deadj-0/en:
+    p2l:phon_fin:schwa$-en|deadj-0/en:
     
         summary: With deadjective feminine nouns with a schwa suffix, -n- and zero linkers are about equally possible.
         type: [derivational]
@@ -1315,7 +1315,7 @@ constraints:
             "2": "Both the pro-example and the counterexample there are deadjective F: härte_fall tiefe_+n_meter, which are both in line with the overall constraint."
 
 
-    - p2l:phon_fin:schwa$-en|deverb-0:
+    p2l:phon_fin:schwa$-en|deverb-0:
     
         summary: Deverbal feminine nouns with the schwa suffix mostly attach a zero linker.
         type: [derivational]
@@ -1337,7 +1337,7 @@ constraints:
             "1": "Evidence from [fuhrhop_kürschner_2015:573] and [kürschner_2005:112] are disregarded here as, even though not explicitly stated, those concern deadjectives (see footnotes from `p2l:phon_fin:schwa$-en|deverb-0`)."
 
 
-    - p2l:phon_fin:schwa$-en|deverb_pl_interpr-en:
+    p2l:phon_fin:schwa$-en|deverb_pl_interpr-en:
     
         summary: Deverbal feminine nouns with the schwa suffix can attach an -n- when the second constituent forces a plural or collective reading.
         type: [derivational, semantic]
@@ -1360,7 +1360,7 @@ constraints:
 
 
 
-    - p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s:
+    p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s:
     
         summary: Consonant-final weak feminine nouns with a singular meaning mostly adopt a zero linker or -s-.
         type: [morphological, phonological, semantic]
@@ -1393,7 +1393,7 @@ constraints:
         footnotes: {}
 
 
-    - p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en:
+    p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en:
     
         summary: Consonant-final weak feminine attach -en- more likely (especially final-stressed incl. monosyllabic ones) when the second constituent forces a plural or collective meaning of this noun (with counterexamples).
         type: [morphological, phonological, semantic]
@@ -1437,7 +1437,7 @@ constraints:
 
     #   1.4.1. Constraints that map compound types to most probable linkers.
 
-    - p2l:sem:comp_type:copula-0:
+    p2l:sem:comp_type:copula-0:
     
         summary: Copulative compounds regularly attach a zero linker.
         type: [semantic]
@@ -1469,7 +1469,7 @@ constraints:
 
 
 
-    - p2l:sem:comp_type:arg-s:
+    p2l:sem:comp_type:arg-s:
     
         summary: "-s- may sometimes, with many doubtful cases, mark argumental compounds: those where the second constituent still contains a high degree of verbiness and the first constituent of which constitutes their argument."
         type: [semantic]
@@ -1493,7 +1493,7 @@ constraints:
 
     #  1.4.2. Other semantic constraints.
 
-    - p2l:sem:tech_term-0:
+    p2l:sem:tech_term-0:
     
         summary: In technical terminology (economics, law, medicine, etc.), compounds are often missing a linking element (even in cases where it would be obligatory in non-technical context).
         type: [semantic]
@@ -1524,7 +1524,7 @@ constraints:
 
 
 
-    - p2l:sem:2const_anim/pers-s:
+    p2l:sem:2const_anim/pers-s:
     
         summary: Compounds with the second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' can insert -s- if the compound designates a person, even when the first constituent would otherwise attach a zero linker.
         type: [lexical, semantic]
@@ -1552,7 +1552,7 @@ constraints:
 
     # 1.5. Constraints that describe general irregular tendencies.
 
-    - p2l:tend:cmpx_morph-s|def-s:
+    p2l:tend:cmpx_morph-s|def-s:
     
         summary: The acceptability of -s- irregularly grows when the first constituent is morphologically complex (any form of derivation).
         type: [derivational]
@@ -1587,7 +1587,7 @@ constraints:
 
 
 
-    - p2l:tend:cmpx_phon-s|def-s:
+    p2l:tend:cmpx_phon-s|def-s:
     
         summary: "The acceptability of -s- irregularly grows when the first constituent is phonologically complex: non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc."
         type: [phonological]
@@ -1619,7 +1619,7 @@ constraints:
 
 
 
-    - p2l:tend:sonority-!s:
+    p2l:tend:sonority-!s:
     
         summary: "The probability of -s- decreases with increasing sonority of the final segment of the first constituent: it is more frequent after plosives, infrequent after nasals and liquids, and it never occurs after a full vowel."
         type: [phonological]
@@ -1660,7 +1660,7 @@ constraints:
 
 
 
-    - p2l:tend:pl_interpr-pl_marker|def-pl_marker:
+    p2l:tend:pl_interpr-pl_marker|def-pl_marker:
       
         summary: Linkers identical to the plural ending can be associated with plural meaning.
         type: [semantic]
@@ -1693,7 +1693,7 @@ constraints:
 
     # 2. Constraints that restrict properties of compounds appearing with certain linkers.
 
-    - l2p:s|smpx_mn:
+    l2p:s|smpx_mn:
       
         summary: In simplexes, -s- occurs only in few masculine and neuter nouns except for a few cases.
         type: [morphological]
@@ -1725,7 +1725,7 @@ constraints:
             "3": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `l2p:es`, we modify it to -s- here.
 
 
-    - l2p:s|smpx_high_freq:
+    l2p:s|smpx_high_freq:
     
         summary: Many simplexes with an -s- are high frequent tokens.
         type: [lexical]
@@ -1746,7 +1746,7 @@ constraints:
         footnotes: {}
 
 
-      - l2p:s|f:
+    l2p:s|f:
       
         summary: -s- can occur with F only if it is a morphological complex and/or polysyllabic F.
         type: [morphological, derivational, phonological]
@@ -1774,7 +1774,7 @@ constraints:
 
 
 
-    - l2p:n:
+    l2p:n:
     
         summary: Nouns ending in schwa is the only class of words that can attach the allomorph -n- of the en-linker.
         type: [phonological]
@@ -1801,7 +1801,7 @@ constraints:
 
 
 
-    - l2p:en|par:
+    l2p:en|par:
       
         summary: Only nouns forming the plural with -(e)n can attach -(e)n- as a linking element.
         type: [morphological]
@@ -1838,7 +1838,7 @@ constraints:
         footnotes: {}
 
 
-    - l2p:en|non_par_m:
+    l2p:en|non_par_m:
     
         summary: There are a few monosyllabic masculine nouns designating male persons, animals, astronomic objects, months that attach -(e)n- even though they do not form the plural with -(e)n.
         type: [lexical]
@@ -1864,7 +1864,7 @@ constraints:
             "1": "Even though not explicitly stated, all the examples provided there are monosyllabic masculine nouns designating anumals: 'Hahn', 'Storch', 'Schwan'."
 
 
-    - l2p:en|non_par_n_pl_interpr:
+    l2p:en|non_par_n_pl_interpr:
     
         summary: There are polysyllabic foreign N with final stress (mostly ending with -at and -ment) that adopt -en-, in which case they necessarily express plurality.
         type: [lexical, semantic]
@@ -1886,7 +1886,7 @@ constraints:
             "1": "Evidence from [nübling_szczepaniak_2013:79,80] is disregarded here as, even though not explicitly stated, it concerns only monosyllabic M."
     
 
-    - l2p:e:
+    l2p:e:
     
         summary: e-plural nouns with stressed last syllable is the only class of words that can attach -e-.
         type: [morphological]
@@ -1922,7 +1922,7 @@ constraints:
 
    
 
-    - l2p:er:
+    l2p:er:
     
         summary: er-plural nouns (these are few words, mostly N and some M, mostly simplices and never loanwords) is the only class of words that can attach =er=.
         type: [morphological]
@@ -1961,7 +1961,7 @@ constraints:
 
 
 
-    - l2p:e_uml:
+    l2p:e_uml:
     
         summary: Nouns forming the plural with -e and umlaut is the only class of words that can attach -e- with umlaut.
         type: [morphological]
@@ -1989,7 +1989,7 @@ constraints:
 
 
 
-    - l2p:es:
+    l2p:es:
     
         summary: -es- occurs exclusively after a row  of one-syllable M and N that form a genitive with -(e)s- (about 30-40 nouns) and is isolated. These nouns can, however, also attach other linkers.
         type: [lexical]
@@ -2031,7 +2031,7 @@ constraints:
 
 
 
-    - l2p:ens:
+    l2p:ens:
     
         summary: -(e)ns- only occurs after a few masculine nouns and a single neuter noun not necessarily forming a genitive with -(e)ns- and is completely isolated. These nouns can, however, also attach other linkers.
         type: [lexical]
@@ -2061,7 +2061,7 @@ constraints:
 
 
 
-    - l2p:0_uml:
+    l2p:0_uml:
     
         summary: Nouns forming the plural with a zero ending and umlaut is the only class of words that can attach a zero linker with umlaut.
         type: [morphological]
