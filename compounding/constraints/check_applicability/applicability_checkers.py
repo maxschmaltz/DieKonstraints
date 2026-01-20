@@ -45,7 +45,8 @@ def _has_no_linker(compound: Compound) -> bool:
 def _is_of_plural(
 	lemma: str,
 	plural_marker: Optional[Literal["", "s", "en", "e", "er"]]="",
-	adds_umlaut: Optional[bool]=False
+	adds_umlaut: Optional[bool]=False,
+	dupl: Optional[bool]=False
 ) -> pd.Series:
 	if plural_marker == "er" and not adds_umlaut:
 		# -er- always adds umlaut if possible
@@ -56,6 +57,10 @@ def _is_of_plural(
 		and plural_marker == "en"
 	):	# adjust for schwa at the end
 		plural_marker = "n"
+	if dupl:
+		# for cases like 'Ergebnis' -> 'Ergebnisse',
+		# 'Freundin' -> 'Freundinnen'
+		lemma = lemma + lemma[-1]
 	if adds_umlaut:
 		lemma = perform_umlaut(lemma)
 	pl_vars = lemma_info["nom_pl"].split("/")
@@ -67,6 +72,11 @@ def _is_of_plural(
 def _is_of_zero_plural(lemma: str) -> bool:
 	# for better readability
 	return _is_of_plural(lemma)
+
+
+def _has_no_plural(lemma: str) -> bool:
+	lemma_info = celex.loc[lemma]
+	return pd.isna(lemma_info["nom_pl"])
 
 
 def _is_of_genitive(lemma: str, genitive_marker: Literal["", "s"]) -> bool:
@@ -106,6 +116,14 @@ def _is_derived(lemma: str) -> bool:
 	return not _is_simplex(lemma)
 
 
+def _ends_with_sfx(lemma: str, suffixes: str | list[str]) -> bool:
+	if isinstance(suffixes, str):
+		suffixes = [suffixes]
+	lemma_info = celex.loc[lemma]
+	return any(
+		lemma_info["morphemic_structure"].endswith(f"-{sfx}") for sfx in suffixes
+	)
+
 # Helper functions for phonetic checks
 
 def _ends_with_phon(lemma: str, endings: str | list[str]) -> bool:
@@ -132,7 +150,6 @@ def _ends_with_phon_schwa(lemma: str) -> bool:
 def def_0_is_applicable(compound: Compound):
 	# applicable by default
 	return True
-
 
 def def_0_applies(compound: Compound):
 	return _has_no_linker(compound)
@@ -309,16 +326,58 @@ def mixed_mn_applies(compound: Compound):
 # p2l:drv:sfx:0_pl_sfx-0
 #
 # Derivatives with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein
+# that build the plural form with a zero ending
 # regularly attach a zero linking element.
-# TODO
+
+def sfx_pl_0_is_applicable(compound: Compound):
+	return (
+		_ends_with_sfx(
+			compound.stems[0].morph,
+			["er", "ler", "ner", "el", "sel", "chen", "lein"]
+		)
+		and _is_of_zero_plural(compound.stems[0].morph)
+	)
+
+def sfx_pl_0_applies(compound: Compound):
+	return _has_no_linker(compound)
 
 
 
-# p2l:drv:sfx:!0_pl_sfx-0
+# p2l:drv:sfx:e_pl_sfx-0
 #
-# Nouns with suffixes -bold, -nis, -rich, -at, -al, -ik, 
-# also stressed -ei, -ie, -ur usually attach a zero linker.
-# TODO
+# Nouns with suffixes -bold, -nis, -rich, -at, -al
+# that build the plural form with -e regularly attach a zero linker.
+
+def sfx_pl_e_is_applicable(compound: Compound):
+	return (
+		(
+			_ends_with_sfx(
+				compound.stems[0].morph,
+				["bold", "rich", "at", "al"]
+			)
+			and (
+				# for cases like 'Personal'
+				_has_no_plural(compound.stems[0].morph)
+				or _is_of_plural(compound.stems[0].morph, "e")
+			)
+		)
+		or (
+			_ends_with_sfx(
+				compound.stems[0].morph,
+				"nis"
+			)
+			and (
+				# for cases like 'Unverständnis'
+				_has_no_plural(compound.stems[0].morph)
+				# nouns in -nis duplicate 's' in plural: '-nisse'
+				or _is_of_plural(compound.stems[0].morph, "e", dupl=True)
+			)
+		)
+	)
+
+
+def sfx_pl_e_applies(compound: Compound):
+	return _has_no_linker(compound)
 
 
 
@@ -378,6 +437,14 @@ def mixed_mn_applies(compound: Compound):
 # p2l:phon_fin:vow$-0
 #
 # Nouns ending in a full vowel always adopt a zero linker.
+# TODO
+
+
+
+# p2l:phon_fin:F_#stressed_phon$-0
+#
+# Feminine nouns endings with stressed -ei, -ie, -ur,
+# also -ik [1] usually attach a zero linker.
 # TODO
 
 
