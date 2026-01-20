@@ -215,7 +215,7 @@ topology:
 
                             - p2l:drv:sfx:0_pl_sfx-0
 
-                            - p2l:drv:sfx:!0_pl_sfx-0
+                            - p2l:drv:sfx:e_pl_sfx-0
 
                             - p2l:drv:sfx:sfx-s:
                                 summary: Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling regularly, and nouns with suffixes -(t)um, -ion tendentially attach -s-. Suffix -(i)tät also regularly attaches -s- unless there is a plural interpretation, in which case -en- is preferred.
@@ -242,6 +242,8 @@ topology:
                       - p2l:phon_fin:cmpx_syl$-0
 
                       - p2l:phon_fin:vow$-0
+
+                      - p2l:phon_fin:F_#stressed_phon$-0
 
                       - p2l:phon_fin:F_stem_#t$-s
 
@@ -883,10 +885,10 @@ constraints:
 
     p2l:drv:sfx:0_pl_sfx-0:
     
-        summary: Derivatives with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein regularly attach a zero linking element.
+        summary: Derivatives with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein that build the plural form with a zero ending regularly attach a zero linking element.
         type: [derivational]
 
-        func_alias: sfx_0_pl_0
+        func_alias: sfx_pl_0
         regularity: NA
         coverage: NA
 
@@ -897,29 +899,29 @@ constraints:
 
             - ref: ortner_müller-bollhagen_1991
               pages: [56, 82, 106]
-              summary: Derivatives [forming the plural with a zero ending] -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly.
+              summary: Derivatives forming the plural with a zero ending -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly.
 
         footnotes: {}
 
 
 
-    p2l:drv:sfx:!0_pl_sfx-0:
+    p2l:drv:sfx:e_pl_sfx-0:
     
-        summary: Nouns with suffixes -bold, -nis, -rich, -at, -al, -ik, also stressed -ei, -ie, -ur usually attach a zero linker.
+        summary: Nouns with suffixes -bold, -nis, -rich, -at, -al that build the plural form with -e regularly attach a zero linker.
         type: [derivational]
 
-        func_alias: sfx_0
+        func_alias: sfx_pl_e
         regularity: NA
         coverage: NA
 
-        examples_pro: [erlaubnis_schein, kultur_wissenschaft, kosmetik_industrie]
-        examples_contra: [kultur_+en_folge, melodie_+n_reigen]
+        examples_pro: [erlaubnis_schein, format_vorlage, personal_ausweis]
+        examples_contra: [radikal_+e_fänger]
 
         evidence:
 
             - ref: ortner_müller-bollhagen_1991
               pages: [83, 107]
-              summary: Nouns with suffixes -bold, -nis, -rich, -at, -al, -ik, also stressed -ei, -ie, -ur usually attach a zero linker.
+              summary: Nouns with suffixes -bold, -nis, -rich, -at, -al that build the plural form with -e regularly attach a zero linker [1].
 
         footnotes: {}
 
@@ -1210,6 +1212,26 @@ constraints:
         footnotes:
             "1": "The given counterexample uhu_+s_nest originating from [wegener_2003:433] could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
 
+
+    p2l:phon_fin:F_#stressed_phon$-0:
+    
+        summary: Feminine nouns endings with stressed -ei, -ie, -ur, also -ik [1] usually attach a zero linker.
+        type: [derivational]
+
+        func_alias: stressed_phon_fin
+        regularity: NA
+        coverage: NA
+
+        examples_pro: [kosmetik_industrie, architektur_büro, metzgerei_produkt]
+        examples_contra: [kultur_+en_folge, melodie_+n_reigen]
+
+        evidence:
+
+            - ref: ortner_müller-bollhagen_1991
+              pages: [107]
+              summary: F endings with stressed -ei, -ie, -ur, also -ik [1] usually attach a zero linker.
+
+        footnotes: {}
 
 
     p2l:phon_fin:F_stem_#t$-s:
