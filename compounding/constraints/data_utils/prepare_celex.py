@@ -10,6 +10,7 @@ import os
 import re
 import pandas as pd
 from phonecodes import phonecodes
+from itertools import product
 
 
 def main():
@@ -75,8 +76,9 @@ def main():
     # 12. Filter `gfl.cd` for frequency information of the nouns
     #   in the table from step 10.
     # 13. Join the filtered `gfl.cd` table to the table from step 10 on lemma id.
-    # 14. Filter out lemmas with frequency below a certain threshold.
-    #   Conduct orthographic transformations (umlauts, lowering).
+    # 14. Final processing: filter out lemmas with frequency below a certain threshold,
+    #   filter out weak masculine nouns,
+    #   conduct orthographic transformations (umlauts, lowering) etc.
     # 15. Save the final table as TSV.
 
     # Note: intermediate tables are to be filtered at each step
@@ -408,12 +410,29 @@ def main():
     gmspflw = gmsplw.join(gfl, how="inner")
 
 
-    # 14. Filter out lemmas with frequency below a certain threshold.
-    # Conduct orthographic transformations.
+    # 14. Final processing: filter out lemmas with frequency below a certain threshold,
+    # filter out weak masculine nouns,
+    # conduct orthographic transformations (umlauts, lowering) etc.
 
     # freq check
     freq_threshold = 5
     gmspflw = gmspflw[gmspflw["freq"].astype(int) >= freq_threshold]
+
+    # filter out weak masculine nouns
+    # (those that form their GenSg and NomPl with -n or -en suffix)
+    def _is_weak_masculine(row: pd.Series) -> bool:
+        if row["gender"] != "m":
+            return False
+        lemma = row["lemma"]
+        gen_vars = row["gen_sg"].split("/")
+        plur_vars = row["nom_pl"].split("/") if pd.notna(row["nom_pl"]) else []
+        marker = "n" if row["phonetic_transcription"][-1] == "@" else "en"
+        return any(
+            (gen_var == lemma + marker and plur_var == lemma + marker)
+            for gen_var, plur_var in product(gen_vars, plur_vars)
+        )
+    
+    gmspflw = gmspflw[~gmspflw.apply(_is_weak_masculine, axis=1)]
 
     # lower and apply orthographic transformations of umlauts;
     # return Nonefor missing Pl forms
