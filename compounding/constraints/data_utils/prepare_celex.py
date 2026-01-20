@@ -139,7 +139,7 @@ def main():
         # and their hierarchy, we only need to extract the high-level POS
         # and all low-level <morpheme-type> information.
         pos = re.search(r"\[(?P<pos>[A-Z|.]+)\]$", drv_steps).group("pos")
-        for match in re.finditer(r"\((?P<m>[^()]+)\)\[(?P<t>[A-Z|.]+)\]", drv_steps):
+        for match in re.finditer(r"\((?P<m>[^()]+)\)\[(?P<t>[A-Za-z|.]+)\]", drv_steps):
             morpheme = match.group("m")
             m_type = match.group("t")
             if not morpheme or not m_type:
