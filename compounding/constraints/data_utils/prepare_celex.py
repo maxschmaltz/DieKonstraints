@@ -228,6 +228,19 @@ def main():
             row["morphemic_structure"] + f"-{marker}",
             row["morphemic_schema"] + "x"
         )
+    
+    def _unparse_adjective(row: pd.Series) -> tuple[str, str]:
+        pass
+
+    def _unparse_unspecified(gml_id: int) -> tuple[str, str]:
+        try:
+            orig_info = gml.loc[gml_id]
+            if orig_info["pos"] == "V":
+                return _unparse_verb(orig_info)
+            else:   # elif orig_info["pos"] == "A":
+                return _unparse_adjective(orig_info)
+        except KeyError:
+            return None, None
 
     def _unparse_lexicalized_flexion(
         row: pd.Series,
@@ -266,14 +279,16 @@ def main():
                     # e.g. 'abgewogen' for 'abwägen' and 'abwiegen'
                     # and 'bedacht' for 'bedenken' and 'bedachen')
                     # TODO: resolve by semantic semelarity?
-                    return None, None
+                    if len(gml.loc[lex_f_forms.index.values]["pos"].isin(["V", "A"])) != 1:
+                        return None, None
+                    else:
+                        orig_id = lex_f_forms[
+                            gml.loc[lex_f_forms.index.values]["pos"].isin(["V", "A"])
+                        ].index[0].item()
+                        return _unparse_unspecified(orig_id)
                 else:
                     orig_id = lex_f_forms.index[0].item()
-                    orig_info = gml.loc[orig_id]
-                    if orig_info["pos"] == "V":
-                        return _unparse_verb(orig_info)
-                    else:   # elif orig_info["pos"] == "A":
-                        pass
+                    return _unparse_unspecified(orig_id)
             else:   # elif lex_f_info["pos"] == "N":
                 # there are two variants for Noun lexicalized (F)lexion stems in CELEX:
                 # adjectives in weak deadjectival nouns (as 'arm' in 'Arme')
