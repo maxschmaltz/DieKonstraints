@@ -1,5 +1,6 @@
 import pandas as pd
-from typing import Optional
+from itertools import product
+from typing import Optional, Literal
 
 from compounding.constraints.data_utils.gecodb_compound_parser import (
     Compound,
@@ -36,13 +37,14 @@ def _has_no_linker(compound: Compound) -> bool:
 	return _has_linker(compound)
 
 
+
 # Helper functions for property checks
 
-# Helper functions for plural checks
+# Helper functions for morphological checks
 
 def _is_plural(
 	lemma: str,
-	plural_marker: Optional[str]="",
+	plural_marker: Optional[Literal["", "s", "en", "e", "er"]]="",
 	adds_umlaut: Optional[bool]=False
 ) -> pd.Series:
 	if plural_marker == "er" and not adds_umlaut:
@@ -57,12 +59,40 @@ def _is_plural(
 	if adds_umlaut:
 		lemma = perform_umlaut(lemma)
 	pl_vars = lemma_info["nom_pl"].split("/")
-	return any(pl_var == lemma + plural_marker for pl_var in pl_vars)
-
+	return any(
+		pl_var == lemma + plural_marker
+		for pl_var in pl_vars
+	)
 
 def _is_zero_plural(lemma: str) -> bool:
 	# for better readability
 	return _is_plural(lemma)
+
+
+def _is_of_genitive(lemma: str, genitive_marker: Literal["", "s"]) -> bool:
+	lemma_info = celex.loc[lemma]
+	gen_vars = lemma_info["gen_sg"].split("/")
+	genitive_marker_vars = ["s", "es"] if genitive_marker == "s" else [""]
+	return any(
+		gen_var == lemma + genitive_marker
+		for gen_var, genitive_marker in product(gen_vars, genitive_marker_vars)
+	)
+
+
+def _is_of_gender(lemma: str, gender: Literal["m", "f", "n"]) -> bool:
+	lemma_info = celex.loc[lemma]
+	return lemma_info["gender"] == gender
+
+
+def _is_mixed(lemma: str) -> bool:
+	return (
+		(
+			_is_of_gender(lemma, "m")
+			or _is_of_gender(lemma, "n")
+		)
+		and _is_of_genitive(lemma, "s")
+		and _is_plural(lemma, "en")
+	)
 
 
 # Helper function for derivational class checks
@@ -163,6 +193,7 @@ def plur_e_applies(compound: Compound):
 # Nouns forming the plural with -er (with or without umlaut)
 # mostly attach a zero linker or =er= in different cases.
 # Another linkers can also be rarely adopted by these nouns.
+
 def plur_er_is_applicable(compound: Compound):
 	return _is_plural(compound.stems[0].morph, "er", adds_umlaut=True)
 
@@ -211,7 +242,12 @@ def plur_er_applies(compound: Compound):
 #
 # Nouns forming the plural with -e and umlaut 
 # mostly have a zero linker.
-# TODO
+
+def plur_e_uml_is_applicable(compound: Compound):
+	return _is_plural(compound.stems[0].morph, "e", adds_umlaut=True)
+
+def plur_e_uml_applies(compound: Compound):
+	return _has_no_linker(compound)
 
 
 # p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml
@@ -227,7 +263,12 @@ def plur_er_applies(compound: Compound):
 #
 # Nouns forming the plural with a zero ending and umlaut 
 # mostly have a zero linker.
-# TODO
+
+def plur_0_uml_is_applicable(compound: Compound):
+	return _is_plural(compound.stems[0].morph, "", adds_umlaut=True)
+
+def plur_0_uml_applies(compound: Compound):
+	return _has_no_linker(compound)
 
 
 # p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml
@@ -243,7 +284,16 @@ def plur_er_applies(compound: Compound):
 #
 # Mixed masculine and neuter nouns can attach -s-, 
 # a zero linker, or -(e)n-.
-# TODO
+
+def mixed_mn_is_applicable(compound: Compound):
+	return _is_mixed(compound.stems[0].morph)
+
+def mixed_mn_applies(compound: Compound):
+	return (
+		_has_no_linker(compound)
+		or _has_linker(compound, linker_morph="s")
+		or _has_linker(compound, linker_morph="en")
+	)
 
 
 # p2l:decl_cl:mixed-0/s/en|pl_interpr-en
