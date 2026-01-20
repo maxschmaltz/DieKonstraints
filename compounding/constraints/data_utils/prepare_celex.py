@@ -59,14 +59,17 @@ def main():
 
     # We will proceed as follows:
     # 1. Parse `gml.cd`.
-    # 2. Filter `gml.cd` for non-derivative nouns.
-    # 3. Parse `gsl.cd`.
-    # 4. Join `gml.cd` and `gsl.cd` on lemma id.
-    # 5. Parse `gmw.cd`.
+    # 2. Parse `gmw.cd`. Here, it will be needed to
+    # unparse lexicalized F(lexion) stems in `gml.cd` 
+    # but later we will also extract GenSg and NomPl forms from here
+    # (see step 6).
+    # 3. Filter `gml.cd` for non-derivative nouns.
+    # 4. Parse `gsl.cd`.
+    # 5. Join `gml.cd` and `gsl.cd` on lemma id.
     # 6. Filter `gmw.cd` for GenSg and NomPl forms of the nouns
-    #   in the filtered joint table from step 4.
+    #   in the filtered joint table from step 5.
     # 7. Join the filtered `gmw.cd` table to the filtered
-    #   joint table from step 4 on lemma id.
+    #   joint table from step 6 on lemma id.
     # 8. Parse `gpl.cd`.
     # 9. Filter `gpl.cd` for phonological and syllabic information
     #   of the nouns in the table from step 7. Convert phonological
@@ -166,72 +169,10 @@ def main():
     gml = gml.drop(columns=["drvt_history"])
 
 
-    # 2. Filter `gml.cd` for non-derivative nouns.
-
-    # drop non-noun records
-    gml = gml[gml["pos"] == "N"]
-    # now we can drop the 'pos' column since we now have nouns only
-    gml = gml.drop(columns=["pos"])
-
-    # next, filter out all records that have more than
-    # one stem in their morphemic schema; allow only
-    # A(dj), V(erb), N(oun) stems and affixes (x);
-    # additionally, allow lexicalized F(lexion) which
-    # are in fact deverbatives (Essen, Abfahrt, etc.)
-    # and deadjectives (Arme etc.)
-    gml = gml[
-        gml["morphemic_schema"].apply(
-            lambda x: re.match(r"^x*[AVNF]x*$", x, flags=re.IGNORECASE) is not None
-        )
-    ]
-
-    # filter out one- and two-character lemmas except for
-    # 'Ei', 'Öl', 'As' (they are otherwise letter names or interjections)
-    gml = gml[((gml["lemma"].str.len() > 2) | (gml["lemma"].isin(["Ei", "Öl", "As"])))]
-
-
-    # 3. Next, we parse `gsl.cd`. For reference, see the CELEX documentation
-    # (5-87, 5-88) and `gsl/README`.
-
-    # The following columns are relevant:
-    # * Column 1: Lemma id.
-    # * !Column 4 (disregarded): POS. Disregarded since we
-    #   already infer POS from `gml.cd`.
-    # * Column 5: Gender.
-
-    gsl = pd.read_csv(
-        os.path.join(celex_path, "gsl/gsl.cd"),
-        sep="\\",
-        header=None,
-        dtype=str,
-        usecols=[0, 4],
-        names=["id", "gender"],
-        index_col="id"
-    )
-
-    # drop records with any missing fields
-    gsl = gsl.dropna()
-
-
-    # 4. We join `gml.cd` and `gsl.cd` on lemma id.
-    gmsl = gml.join(gsl, how="inner")
-
-    # remove records with fluctuating gender
-    # (it has more than one gender code in the 'gender' column,
-    # see CELEX documentation 5-88)
-    gmsl = gmsl[
-        gmsl["gender"].apply(
-            lambda x: len(x)
-        ) == 1
-    ]
-
-    # we can also convert the gender codes to more readable values
-    # (see CELEX documentation 5-88)
-    gmsl["gender"] = gmsl["gender"].map({"1": "m", "2": "f", "3": "n"})
-
-
-    # 5. Next, we parse `gmw.cd`. For reference, see the CELEX documentation
-    # (5-83) and `gmw/README`.
+    # 2. Next, we parse `gmw.cd`. For reference, see the CELEX documentation
+    # (5-83) and `gmw/README`. As of now, it will be needed to
+    # unparse lexicalized F(lexion) stems in `gml.cd` 
+    # but later we will also extract GenSg and NomPl forms from here.
 
     # The following columns are relevant:
     # * Column 2: Wordform.
@@ -256,8 +197,149 @@ def main():
     gmw = gmw.dropna()
 
 
+    # 3. Filter `gml.cd` for non-c nouns.
+
+    # first, filter out all records that have more than
+    # one stem in their morphemic schema; allow only
+    # A(dj), V(erb), N(oun) stems and affixes (x);
+    # additionally, allow lexicalized F(lexion) which
+    # are in fact deverbatives (Essen, Abfahrt, etc.)
+    # and deadjectives (Arme etc.)
+    gml = gml[
+        gml["morphemic_schema"].apply(
+            lambda x: re.match(r"^x*[AVNF]x*$", x, flags=re.IGNORECASE) is not None
+        )
+    ]
+
+    # now, lexicalized F(lexion) stems are stored in CELEX
+    # with no analysis: they are underspecified by their
+    # derivational history (deverbal or deadjectival) and
+    # morphemic structure (e.g. no prefixes are indicated);
+    # because of that, we need to unparse them separately
+    # based on their respective lemmas
+    def _unparse_verb(row: pd.Series) -> tuple[str, str]:
+        # deverbative, return verb's morphemic structure/schema
+        # plus -en/-n suffix since CELEX does not include it
+        if row["lemma"] in ["sein", "tun"]: # irregular
+            marker = "-n"
+        else:
+            marker = re.search(r"(e?n)$", row["lemma"]).group(1)
+        return (
+            row["morphemic_structure"] + f"-{marker}",
+            row["morphemic_schema"] + "x"
+        )
+
+    def _unparse_lexicalized_flexion(
+        row: pd.Series,
+        gml: pd.DataFrame,
+        gmw: pd.DataFrame
+    ) -> tuple[str, str]:
+        # filter for nouns later, as of now we need V and A for unparsing
+        if row["pos"] != "N" or "F" not in row["morphemic_schema"]:
+            return row["morphemic_structure"], row["morphemic_schema"]
+        # first, identify the F itself
+        lex_f = row["morphemic_structure"].split("-")[row["morphemic_schema"].index("F")]
+        # now look up and analyze
+        lex_f_entries = gml[gml["lemma"] == lex_f]
+        if not len(lex_f_entries):
+            pass
+        if len(lex_f_entries) == 1:
+            lex_f_info = lex_f_entries.iloc[0]
+            if lex_f_info["pos"] == "V":
+                return _unparse_verb(lex_f_info)
+            elif lex_f_info["pos"] == "A":
+                # there are two variants for Adj lexicalized (F)lexion stems in CELEX:
+                # Partizipien (as 'angelegen' in 'Angelegenheit')
+                # or adjective forms (as 'besser' in 'Besserung');
+                # both variants can be found in `gmw.cd` as separate wordforms:
+                # pA is the code for Partizipien, TODO is the code for adjective forms;
+                # from where we will be able to extract the original verbal/adjective stem
+                lex_f_forms = gmw[
+                    (gmw["wordform"] == lex_f)
+                    & gmw["paradigm_code"].apply(
+                        lambda x: ("pA" in x) or ("TODO" in x)
+                    )
+                ]
+                if (not len(lex_f_forms)) or len(lex_f_forms) > 1:
+                    # underanalysis or ambiguity, both unreliable
+                    # (latter; only a few cases found,
+                    # e.g. 'abgewogen' for 'abwägen' and 'abwiegen'
+                    # and 'bedacht' for 'bedenken' and 'bedachen')
+                    # TODO: resolve by semantic semelarity?
+                    return None, None
+                else:
+                    orig_id = lex_f_forms.index[0].item()
+                    orig_info = gml.loc[orig_id]
+                    if orig_info["pos"] == "V":
+                        return _unparse_verb(orig_info)
+                    else:   # elif orig_info["pos"] == "A":
+                        pass
+            else:   # elif lex_f_info["pos"] == "N":
+                # there are two variants for Noun lexicalized (F)lexion stems in CELEX:
+                # adjectives in weak deadjectival nouns (as 'arm' in 'Arme')
+                # or lexicalized deverbals such (as 'Fahrt' in 'Abfahrt')
+                pass
+                
+        else:
+            pass
+
+    gml[["morphemic_structure", "morphemic_schema"]] = gml.apply(
+        # pass gml and gmw for lookups
+        lambda row: _unparse_lexicalized_flexion(row, gml, gmw),
+        axis=1
+    )
+
+    # drop records with any missing fields repeatedly
+    gml = gml.dropna()
+
+    # drop non-noun records
+    gml = gml[gml["pos"] == "N"]
+    # now we can drop the 'pos' column since we now have nouns only
+    gml = gml.drop(columns=["pos"])
+
+
+    # 4. Next, we parse `gsl.cd`. For reference, see the CELEX documentation
+    # (5-87, 5-88) and `gsl/README`.
+
+    # The following columns are relevant:
+    # * Column 1: Lemma id.
+    # * !Column 4 (disregarded): POS. Disregarded since we
+    #   already infer POS from `gml.cd`.
+    # * Column 5: Gender.
+
+    gsl = pd.read_csv(
+        os.path.join(celex_path, "gsl/gsl.cd"),
+        sep="\\",
+        header=None,
+        dtype=str,
+        usecols=[0, 4],
+        names=["id", "gender"],
+        index_col="id"
+    )
+
+    # drop records with any missing fields
+    gsl = gsl.dropna()
+
+
+    # 5. We join `gml.cd` and `gsl.cd` on lemma id.
+    gmsl = gml.join(gsl, how="inner")
+
+    # remove records with fluctuating gender
+    # (it has more than one gender code in the 'gender' column,
+    # see CELEX documentation 5-88)
+    gmsl = gmsl[
+        gmsl["gender"].apply(
+            lambda x: len(x)
+        ) == 1
+    ]
+
+    # we can also convert the gender codes to more readable values
+    # (see CELEX documentation 5-88)
+    gmsl["gender"] = gmsl["gender"].map({"1": "m", "2": "f", "3": "n"})
+
+
     # 6. We filter `gmw.cd` for GenSg and NomPl forms of the nouns
-    # in the filtered joint table from step 4.
+    # in the filtered joint table from step 5.
 
     # remove wordforms of lemmas that are not in `gmsl`
     gmw = gmw[gmw.index.isin(gmsl.index.values)]
@@ -310,7 +392,7 @@ def main():
  
 
     # 7. We join the filtered `gmw.cd` table to the filtered
-    # joint table from step 4 on lemma id. For that, we need to
+    # joint table from step 6 on lemma id. For that, we need to
     # take each record in `gmsl` and attach the corresponding
     # GenSg and NomPl forms from `gmw`.
     gmslw = gmsl.join(gmw, how="inner")
@@ -454,13 +536,17 @@ def main():
         lambda col: col.apply(umlambda)
     )
 
+    # filter out one- and two-character lemmas except for
+    # 'Ei', 'Öl', 'As' (they are otherwise letter names or interjections)
+    gml = gml[((gml["lemma"].str.len() > 2) | (gml["lemma"].isin(["Ei", "Öl", "As"])))]
+
     # final check: drop records with any missing fields except for `nom_pl`
     gmspflw = gmspflw.dropna(subset=list(set(gmspflw.columns) - {"nom_pl"}))
 
     # set lemma as index
     gmspflw = gmspflw.set_index("lemma")
 
-    # remove doplicates
+    # remove duplicates
     gmspflw = gmspflw[~gmspflw.index.duplicated(keep="first")]
 
 
