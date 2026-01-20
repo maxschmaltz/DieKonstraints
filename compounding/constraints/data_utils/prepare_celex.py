@@ -265,12 +265,12 @@ def main():
                 # Partizipien (as 'angelegen' in 'Angelegenheit')
                 # or adjective forms (as 'besser' in 'Besserung');
                 # both variants can be found in `gmw.cd` as separate wordforms:
-                # pA is the code for Partizipien, TODO is the code for adjective forms;
+                # `pA` is the code for Partizipien, `c0` is the code for adjective forms;
                 # from where we will be able to extract the original verbal/adjective stem
                 lex_f_forms = gmw[
                     (gmw["wordform"] == lex_f)
                     & gmw["paradigm_code"].apply(
-                        lambda x: ("pA" in x) or ("TODO" in x)
+                        lambda x: ("pA" in x) or ("c0" in x)
                     )
                 ]
                 if (not len(lex_f_forms)) or len(lex_f_forms) > 1:
