@@ -80,6 +80,7 @@ def _has_no_plural(lemma: str) -> bool:
 
 
 def _is_of_genitive(lemma: str, genitive_marker: Literal["", "s"]) -> bool:
+	# no -en genitive since all weak masculine nouns are filtered out
 	lemma_info = celex.loc[lemma]
 	gen_vars = lemma_info["gen_sg"].split("/")
 	genitive_marker_vars = ["s", "es"] if genitive_marker == "s" else [""]
@@ -385,7 +386,19 @@ def sfx_pl_e_applies(compound: Compound):
 #
 # Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, 
 # -ing, -ling, -tum, -um, -ion, -(i)tät regularly attach -s-.
-# TODO
+
+def sfx_s_is_applicable(compound: Compound):
+	return _ends_with_sfx(
+		compound.stems[0].morph,
+		[
+			"keit", "igkeit", "heit", "schaft", "ung", "sal",
+			"ing", "ling", "tum", "um", "ion", "tät", "ität"
+		]
+	)
+
+
+def sfx_s_applies(compound: Compound):
+	return _has_linker(compound, linker_morph="s")
 
 
 # p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en
