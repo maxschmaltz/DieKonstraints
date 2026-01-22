@@ -212,6 +212,9 @@ def main():
         )
     ]
 
+    # explicitly add lemma column for lookups later;
+    gmw = gmw.join(gml["lemma"], on="id", how="inner")
+
     # Now, lexicalized F(lexion) stems are stored in CELEX
     # with no analysis: they are underspecified by their
     # derivational history (deverbal or deadjectival) and
@@ -219,14 +222,16 @@ def main():
     # because of that, we need to unparse them separately
     # based on their respective lemmas.
 
-    def _unparse_verb(row: pd.Series) -> tuple[str, str]:
+    def _unparse_verb(row: pd.Series, cache: dict) -> tuple[str, str]:
         # verb, return verb's morphemic structure/schema
         # plus -en suffix since CELEX does not include it;
         # here, we don't actually care about allomorphy
-        return (
-            row["morphemic_structure"] + "en",
+        output = (
+            row["morphemic_structure"] + "-en",
             row["morphemic_schema"] + "x"
         )
+        cache[row["lemma"]] = output
+        return output
         
     def _unparse_participle(
         f_lemma: str,
@@ -270,44 +275,55 @@ def main():
             )
     
     def _unparse_adjective(
-        f_lemma: str,
         row: pd.Series,
-        wform_code: Literal["c0", "u0"]
+        wform_code: Literal["c0", "u0"],
     ) -> tuple[str, str]:
-        pass
+        marker = "-er" if wform_code == "c0" else "-st"
+        return (
+            row["morphemic_structure"] + marker,
+            row["morphemic_schema"] + "x"
+        )
 
-    def _unparse_unspecified(
+    def _unparse_adj_like(
         f_lemma: str,
         gml_id: int,
-        wform_code: Literal["pA", "pE", "c0", "u0"]
+        wform_code: Literal["pA", "pE", "c0", "u0"],
+        cache: dict
     ) -> tuple[str, str]:
         try:
             orig_info = gml.loc[gml_id]
             if orig_info["pos"] == "V":
-                return _unparse_participle(f_lemma, orig_info, wform_code)
+                output = _unparse_participle(f_lemma, orig_info, wform_code)
             else:   # elif orig_info["pos"] == "A":
-                return _unparse_adjective(f_lemma, orig_info, wform_code)
+                output = _unparse_adjective(orig_info, wform_code)
         except KeyError:
-            return None, None
+            output = None, None
+        # modify in place
+        cache[f_lemma] = output
+        return output
 
     def _unparse_lexicalized_flexion(
         row: pd.Series,
         gml: pd.DataFrame,
-        gmw: pd.DataFrame
+        gmw: pd.DataFrame,
+        cache: dict
     ) -> tuple[str, str]:
         # filter for nouns later, as of now we need V and A for unparsing
         if row["pos"] != "N" or "F" not in row["morphemic_schema"]:
             return row["morphemic_structure"], row["morphemic_schema"]
         # first, identify the F itself
         lex_f = row["morphemic_structure"].split("-")[row["morphemic_schema"].index("F")]
-        # now look up and analyze
+        # if in cache, return cached value
+        if lex_f in cache:
+            return cache[lex_f]
+        # otherwise, look up, analyze, and cache;
         lex_f_entries = gml[gml["lemma"] == lex_f]
         if not len(lex_f_entries):
             pass
         elif len(lex_f_entries) == 1:
             lex_f_info = lex_f_entries.iloc[0]
             if lex_f_info["pos"] == "V":
-                return _unparse_verb(lex_f_info)
+                return _unparse_verb(lex_f_info, cache)
             elif lex_f_info["pos"] == "A":
                 # There are a few variants for Adj lexicalized (F)lexion stems in CELEX:
                 # * Partizip II (as 'angelegen' in 'Angelegenheit'): code `pA`
@@ -336,7 +352,7 @@ def main():
                             gml.loc[lex_f_forms.index.values]["pos"].isin(["V", "A"])
                         ].index[0].item()
                         wform_code = lex_f_forms.iloc[0]["paradigm_code"]
-                        return _unparse_unspecified(lex_f, orig_id, wform_code)
+                        return _unparse_adj_like(lex_f, orig_id, wform_code, cache)
                 else:
                     wform_codes = lex_f_forms.iloc[0]["paradigm_code"]
                     wform_codes = re.findall(r"(pA|pE|c0|u0)", wform_codes)
@@ -345,7 +361,7 @@ def main():
                         return None, None
                     orig_id = lex_f_forms.index[0].item()
                     wform_code = wform_codes[0]
-                    return _unparse_unspecified(lex_f, orig_id, wform_code)
+                    return _unparse_adj_like(lex_f, orig_id, wform_code, cache)
             else:   # elif lex_f_info["pos"] == "N":
                 # there are two variants for Noun lexicalized (F)lexion stems in CELEX:
                 # adjectives in weak deadjectival nouns (as 'arm' in 'Arme')
@@ -354,9 +370,10 @@ def main():
         else:
             pass
 
+    _parsing_cache = {}
     gml[["morphemic_structure", "morphemic_schema"]] = gml.apply(
         # pass gml and gmw for lookups
-        lambda row: _unparse_lexicalized_flexion(row, gml, gmw),
+        lambda row: _unparse_lexicalized_flexion(row, gml, gmw, _parsing_cache),
         axis=1
     )
 
