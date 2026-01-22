@@ -11,6 +11,7 @@ import re
 import pandas as pd
 from phonecodes import phonecodes
 from itertools import product
+from typing import Literal
 
 
 def main():
@@ -211,34 +212,81 @@ def main():
         )
     ]
 
-    # now, lexicalized F(lexion) stems are stored in CELEX
+    # Now, lexicalized F(lexion) stems are stored in CELEX
     # with no analysis: they are underspecified by their
     # derivational history (deverbal or deadjectival) and
     # morphemic structure (e.g. no prefixes are indicated);
     # because of that, we need to unparse them separately
-    # based on their respective lemmas
+    # based on their respective lemmas.
+
     def _unparse_verb(row: pd.Series) -> tuple[str, str]:
-        # deverbative, return verb's morphemic structure/schema
-        # plus -en/-n suffix since CELEX does not include it
-        if row["lemma"] in ["sein", "tun"]: # irregular
-            marker = "-n"
-        else:
-            marker = re.search(r"(e?n)$", row["lemma"]).group(1)
+        # verb, return verb's morphemic structure/schema
+        # plus -en suffix since CELEX does not include it;
+        # here, we don't actually care about allomorphy
         return (
-            row["morphemic_structure"] + f"-{marker}",
+            row["morphemic_structure"] + "en",
             row["morphemic_schema"] + "x"
         )
+        
+    def _unparse_participle(
+        f_lemma: str,
+        row: pd.Series,
+        wform_code: Literal["pA", "pE"]
+    ) -> tuple[str, str]:
+        if wform_code == "pA":
+            # Partizip II, return verb's morphemic structure/schema
+            # plus PII -t/-en suffix (CELEX does not include the inf -en)
+            # and PII ge- prefix if applicable;
+            # here, we don't actually care about allomorphy
+            add_prefix = "ge" in f_lemma and "ge-" not in row["morphemic_structure"]
+            part_marker = "-t" if f_lemma.endswith("t") else "-en"
+            if add_prefix:
+                # place ge- right before verbal stem:
+                # 'ge-mach', 'ein-ge-stell', 'her-vor-ge-bring';
+                # note though that inaccuracies might occur
+                # due to occasional incorrect morphemic structures in CELEX,
+                # e.g. 'angestrengt' is analyzed as 'anstreng' instead of 'an-streng'
+                # so the output of this function will be 'ge-anstreng-t' instead of 'an-ge-streng-t'
+                morphemes = row["morphemic_structure"].split("-")
+                morphemes.insert(-1, "ge")
+                morph_struct = "-".join(morphemes)
+                # even if there are other prefixes, morphemic schema
+                # code all of them as 'x'
+                morph_schema = "x" + row["morphemic_schema"]
+            else:
+                morph_struct = row["morphemic_structure"]
+                morph_schema = row["morphemic_schema"]
+            return (
+                morph_struct + part_marker,
+                morph_schema + "x"
+            )
+        else:   # elif wform_code == "pE":
+            # Partizip I, return verb's morphemic structure/schema
+            # plus PI -end suffix (CELEX does not include the inf -en);
+            # here, we don't actually care about allomorphy
+            return (
+                row["morphemic_structure"] + "-end",
+                row["morphemic_schema"] + "x"
+            )
     
-    def _unparse_adjective(row: pd.Series) -> tuple[str, str]:
+    def _unparse_adjective(
+        f_lemma: str,
+        row: pd.Series,
+        wform_code: Literal["c0", "u0"]
+    ) -> tuple[str, str]:
         pass
 
-    def _unparse_unspecified(gml_id: int) -> tuple[str, str]:
+    def _unparse_unspecified(
+        f_lemma: str,
+        gml_id: int,
+        wform_code: Literal["pA", "pE", "c0", "u0"]
+    ) -> tuple[str, str]:
         try:
             orig_info = gml.loc[gml_id]
             if orig_info["pos"] == "V":
-                return _unparse_verb(orig_info)
+                return _unparse_participle(f_lemma, orig_info, wform_code)
             else:   # elif orig_info["pos"] == "A":
-                return _unparse_adjective(orig_info)
+                return _unparse_adjective(f_lemma, orig_info, wform_code)
         except KeyError:
             return None, None
 
@@ -256,21 +304,22 @@ def main():
         lex_f_entries = gml[gml["lemma"] == lex_f]
         if not len(lex_f_entries):
             pass
-        if len(lex_f_entries) == 1:
+        elif len(lex_f_entries) == 1:
             lex_f_info = lex_f_entries.iloc[0]
             if lex_f_info["pos"] == "V":
                 return _unparse_verb(lex_f_info)
             elif lex_f_info["pos"] == "A":
-                # there are two variants for Adj lexicalized (F)lexion stems in CELEX:
-                # Partizipien (as 'angelegen' in 'Angelegenheit')
-                # or adjective forms (as 'besser' in 'Besserung');
-                # both variants can be found in `gmw.cd` as separate wordforms:
-                # `pA` is the code for Partizipien, `c0` is the code for adjective forms;
-                # from where we will be able to extract the original verbal/adjective stem
+                # There are a few variants for Adj lexicalized (F)lexion stems in CELEX:
+                # * Partizip II (as 'angelegen' in 'Angelegenheit'): code `pA`
+                # * Partizip I (as 'liegend' in 'Liegenschaft'): code `pE`
+                # * Comparative adjective forms (as 'besser' in 'Besserung'): code `c0`
+                # * Superlative adjective forms (as 'best' in 'Beste'): code `u0`
+                # All variants can be found in `gmw.cd` as separate wordforms,
+                # and from where we will be able to extract the original verbal/adjective stem
                 lex_f_forms = gmw[
                     (gmw["wordform"] == lex_f)
                     & gmw["paradigm_code"].apply(
-                        lambda x: ("pA" in x) or ("c0" in x)
+                        lambda x: bool({"pA", "pE", "c0", "u0"} & set(x.split(",")))
                     )
                 ]
                 if (not len(lex_f_forms)) or len(lex_f_forms) > 1:
@@ -278,23 +327,30 @@ def main():
                     # (latter; only a few cases found,
                     # e.g. 'abgewogen' for 'abwägen' and 'abwiegen'
                     # and 'bedacht' for 'bedenken' and 'bedachen')
-                    # TODO: resolve by semantic semelarity?
+                    # TODO: resolve by semantic similarity?
                     if len(gml.loc[lex_f_forms.index.values]["pos"].isin(["V", "A"])) != 1:
                         return None, None
                     else:
+                        # never actually gets here
                         orig_id = lex_f_forms[
                             gml.loc[lex_f_forms.index.values]["pos"].isin(["V", "A"])
                         ].index[0].item()
-                        return _unparse_unspecified(orig_id)
+                        wform_code = lex_f_forms.iloc[0]["paradigm_code"]
+                        return _unparse_unspecified(lex_f, orig_id, wform_code)
                 else:
+                    wform_codes = lex_f_forms.iloc[0]["paradigm_code"]
+                    wform_codes = re.findall(r"(pA|pE|c0|u0)", wform_codes)
+                    if len(wform_codes) > 1:
+                        # ambiguity, unreliable
+                        return None, None
                     orig_id = lex_f_forms.index[0].item()
-                    return _unparse_unspecified(orig_id)
+                    wform_code = wform_codes[0]
+                    return _unparse_unspecified(lex_f, orig_id, wform_code)
             else:   # elif lex_f_info["pos"] == "N":
                 # there are two variants for Noun lexicalized (F)lexion stems in CELEX:
                 # adjectives in weak deadjectival nouns (as 'arm' in 'Arme')
                 # or lexicalized deverbals such (as 'Fahrt' in 'Abfahrt')
                 pass
-                
         else:
             pass
 
