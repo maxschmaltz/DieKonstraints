@@ -11,7 +11,7 @@ import re
 import pandas as pd
 from phonecodes import phonecodes
 from itertools import product
-from typing import Literal
+from typing import Literal, Optional
 
 
 def main():
@@ -133,6 +133,17 @@ def main():
     # drop records with any missing fields
     gml = gml.dropna()
 
+    # # Since in GeCoDB, we can only rely on lemma string representations
+    # # (and not lemma ids) when retrieving any infos from CELEX,
+    # # we should drop all duplicate lemmas here to avoid ambiguities later on.
+    # # There are four occasions when duplicate lemmas arise in `gml.cd`:
+    # # that said, if an ambiguity arises, we don't want to just drop one of the entries
+    # # randomly, but rather drop all ambiguous entries altogether except for
+    # # the cases when the same lemma has multiple analyses one of which is
+    # # lexicalized analysis (see below); hence, we first identify all lemmas
+    # # that have multiple analyses, then for those that have one 
+    # gml = gml[~gml["lemma"].duplicated(keep=False)]
+
     # infer morphemic structure and morphemic schema from column 14
     def _parse_morphemic_structure_schema(drv_steps: str) -> tuple:
 
@@ -157,6 +168,8 @@ def main():
 
         return "-".join(morphemic_structure), morphemic_schema, pos
     
+    # We will filter for nouns later, for now we need 
+    # all the analyses to be able to unparse lexicalized F(lexion) stems.
     gml["morphemic_structure"], gml["morphemic_schema"], gml["pos"] = zip(
             *gml["drvt_history"].apply(
                 lambda x: _parse_morphemic_structure_schema(x)
@@ -198,22 +211,27 @@ def main():
     gmw = gmw.dropna()
 
 
-    # 3. Filter `gml.cd` for non-c nouns.
+    # 3. Filter `gml.cd` for non-complex nouns.
 
-    # first, filter out all records that have more than
+    # First, filter out all records that have more than
     # one stem in their morphemic schema; allow only
-    # A(dj), V(erb), N(oun) stems and affixes (x);
-    # additionally, allow lexicalized F(lexion) which
-    # are in fact deverbatives (Essen, Abfahrt, etc.)
-    # and deadjectives (Arme etc.)
+    # A(dj), V(erb), N(oun) stems and affixes (x) as well as
+    # P(reposition)s, which are in fact affixes as in 'mit-Glied'
+    # or 'durch-Schnitt', and adverbs (B), for which the same holds,
+    # e.g. 'fort-setzen' or 'hinter-bleiben'.
+    # Additionally, allow lexicalized F(lexion) which
+    # are in fact deverbatives ('Essen', 'Abfahrt', etc.)
+    # and deadjectives ('Arme' etc.)
+    # and R(oot)s which are in fact morphoids
+    # (mostly of Greek and Latin origin) such as 
+    # 'amortis' in 'Amortisation' or 'simul' in 'Simulator'.
+    # For more information on the codes, see
+    # the CELEX documentation (5-63).
     gml = gml[
         gml["morphemic_schema"].apply(
-            lambda x: re.match(r"^x*[AVNF]x*$", x, flags=re.IGNORECASE) is not None
+            lambda x: re.match(r"^[xPB]*[AVNFR][xPB]*$", x) is not None
         )
     ]
-
-    # explicitly add lemma column for lookups later;
-    gmw = gmw.join(gml["lemma"], on="id", how="inner")
 
     # Now, lexicalized F(lexion) stems are stored in CELEX
     # with no analysis: they are underspecified by their
@@ -222,16 +240,14 @@ def main():
     # because of that, we need to unparse them separately
     # based on their respective lemmas.
 
-    def _unparse_verb(row: pd.Series, cache: dict) -> tuple[str, str]:
-        # verb, return verb's morphemic structure/schema
-        # plus -en suffix since CELEX does not include it;
-        # here, we don't actually care about allomorphy
-        output = (
-            row["morphemic_structure"] + "-en",
-            row["morphemic_schema"] + "x"
-        )
-        cache[row["lemma"]] = output
-        return output
+    # explicitly add lemma column for lookups later
+    gmw = gmw.join(gml["lemma"], on="id", how="inner")
+
+    
+
+
+
+
         
     def _unparse_participle(
         f_lemma: str,
@@ -301,6 +317,101 @@ def main():
         # modify in place
         cache[f_lemma] = output
         return output
+    
+
+
+    def _unparse_simple(row: pd.Series) -> tuple[str, str]:
+        return row["morphemic_structure"], row["morphemic_schema"]
+    
+    def _unparse_inf(row: pd.Series) -> tuple[str, str]:
+        # add infinitive suffix -en for infinitives
+        # as CELEX does not include it
+        morph_struct, morph_schema = _unparse_simple(row)
+        return (
+            morph_struct + "-en",
+            morph_schema + "x"
+        )
+
+    def _unparse_deverb(row: pd.Series) -> tuple[str, str]:
+        morph_struct, morph_schema = _unparse_simple(row)
+        pass
+
+    def _unparse_p2(row: pd.Series) -> tuple[str, str]:
+        morph_struct, morph_schema = _unparse_simple(row)
+        pass
+
+    def _unparse_p1(row: pd.Series) -> tuple[str, str]:
+        morph_struct, morph_schema = _unparse_simple(row)
+        pass
+
+    def _unparse_adj(row: pd.Series) -> tuple[str, str]:
+        morph_struct, morph_schema = _unparse_simple(row)
+        pass
+
+    def _unparse_cmpr(row: pd.Series) -> tuple[str, str]:
+        morph_struct, morph_schema = _unparse_simple(row)
+        pass
+
+    def _unparse_sprl(row: pd.Series) -> tuple[str, str]:
+        morph_struct, morph_schema = _unparse_simple(row)
+        pass
+
+    def _unparse_and_postprocess(
+        lemma: str,
+        gml: pd.DataFrame,
+        cache: dict,
+        postprocess: Optional[Literal["", "inf", "deverb", "p2", "p1", "adj", "cmpr", "sprl"]]="",
+        **postprocessing_kwargs
+    ) -> tuple:
+        # if in cache, return cached value,
+        # otherwise, look up, analyze, and cache
+        if lemma in cache:
+            return cache[lemma]
+        # Since in morphemic structures of CELEX entries,
+        # stems are specified without their respective lemma ids,
+        # we can only rely on lemmas themselves to look up these stems.
+        # Thus, both no entries and multiple entries for the same lemma
+        # are unreliable for us. The only difference is though,
+        # that if there are no lemmas for a lexicalized stem,
+        # there is still a chance to unparse it by looking it up
+        # as a wordform and not as a lemma (scenario 2) whereas 
+        # if there are multiple lemmas for the same lexicalized stem,
+        # there is no way to disambiguate them (scenario 0).
+        lex_f_entries = gml[
+            (gml["lemma"] == lemma) &
+            (gml["morphemic_schema"] != "F")
+        ]
+        if not len(lex_f_entries):
+            # route for scenario 2
+            return False, True # (not found, try as wordform)
+        elif len(lex_f_entries) == 1:
+            lex_f_info = lex_f_entries.iloc[0]
+            match postprocess:
+                case "inf":
+                    pass
+                case "deverb":
+                    pass
+                case "p2":
+                    pass
+                case "p1":
+                    pass
+                case "adj":
+                    pass
+                case "cmpr":
+                    pass
+                case "sprl":
+                    pass
+                case _:
+                    if lex_f_info["pos"] == "V":
+                        output = _unparse_inf(lex_f_info)
+                    else:
+                        output = _unparse_simple(lex_f_info)
+            return output
+        else:
+            return False, False # (ambiguous, do not try)
+    
+
+
 
     def _unparse_lexicalized_flexion(
         row: pd.Series,
@@ -308,67 +419,273 @@ def main():
         gmw: pd.DataFrame,
         cache: dict
     ) -> tuple[str, str]:
-        # filter for nouns later, as of now we need V and A for unparsing
+        
+        # The variety of analyses of lexicalized F(lexion) stems in CELEX
+        # is rather large, complicated, and unsystematic. Here, we provide
+        # an empirical description of the observations that we will be
+        # using to unparse them.
+        #
+        # There are four scenarios:
+        # 0. Lexicalized F(lexion) noun is
+        #   present `gml.cd` but multiple non-F analyses are provided.
+        #   Impossible to disambiguate, unreliable, skip.
+        # 1. Best case scenario: lexicalized F(lexion) noun is
+        #   present as a separate lemma in `gml.cd`,
+        #   and its full analysis is provided,
+        #   e.g. 'Abzug' is analyzed as 'ab-zieh xV'.
+        #   In this case we just take the morphemic structure/schema.
+        #   Note though that in these cases the stems may be
+        #   underanalyzed (e.g. 'Zugang' is analyzed as 'zugang N'),
+        #   but in these cases that is the only available analysis.
+        #   We unfortunately cannot identify such cases systematically,
+        #   so we just take whatever analysis is provided. 
+        # 2. No analysis is provided in `gml.cd` but `gmw.cd`
+        #   contains a pointer to the original verb/adjective stem
+        #   as well as its specific inflected form
+        #   (NB! in this case the wordform in `gmw.cd` is lowercase),
+        #   e.g. 'Abfahrt' is analyzed as 'Abfahrt F' in `gml.cd`,
+        #   while `gmw.cd` has 'abfahrt 2PIE abfahren';
+        #   e.g. 'Bekannte' is analyzed as 'Bekannte F' in `gml.cd`,
+        #   while `gmw.cd` has 'bekannte o4 bekannt'.
+        #   In this case, we look up the morphemic structure/schema
+        #   of the original stem and modify it according to its specific
+        #   inflected form (e.g. add suffix -er for comparatives).
+        # 3. No analysis is provided in `gml.cd` and `gmw.cd`
+        #   contains no or multiple analyses. Unreliable, skip.
+
+        # first, all non-F entries are returned as is
         if row["pos"] != "N" or "F" not in row["morphemic_schema"]:
             return row["morphemic_structure"], row["morphemic_schema"]
-        # first, identify the F itself
+        
+        # identify the F itself
         lex_f = row["morphemic_structure"].split("-")[row["morphemic_schema"].index("F")]
-        # if in cache, return cached value
-        if lex_f in cache:
-            return cache[lex_f]
-        # otherwise, look up, analyze, and cache;
-        lex_f_entries = gml[gml["lemma"] == lex_f]
-        if not len(lex_f_entries):
-            pass
-        elif len(lex_f_entries) == 1:
-            lex_f_info = lex_f_entries.iloc[0]
-            if lex_f_info["pos"] == "V":
-                return _unparse_verb(lex_f_info, cache)
-            elif lex_f_info["pos"] == "A":
-                # There are a few variants for Adj lexicalized (F)lexion stems in CELEX:
-                # * Partizip II (as 'angelegen' in 'Angelegenheit'): code `pA`
-                # * Partizip I (as 'liegend' in 'Liegenschaft'): code `pE`
-                # * Comparative adjective forms (as 'besser' in 'Besserung'): code `c0`
-                # * Superlative adjective forms (as 'best' in 'Beste'): code `u0`
-                # All variants can be found in `gmw.cd` as separate wordforms,
-                # and from where we will be able to extract the original verbal/adjective stem
-                lex_f_forms = gmw[
-                    (gmw["wordform"] == lex_f)
-                    & gmw["paradigm_code"].apply(
-                        lambda x: bool({"pA", "pE", "c0", "u0"} & set(x.split(",")))
-                    )
-                ]
-                if (not len(lex_f_forms)) or len(lex_f_forms) > 1:
-                    # underanalysis or ambiguity, both unreliable
-                    # (latter; only a few cases found,
-                    # e.g. 'abgewogen' for 'abwägen' and 'abwiegen'
-                    # and 'bedacht' for 'bedenken' and 'bedachen')
-                    # TODO: resolve by semantic similarity?
-                    if len(gml.loc[lex_f_forms.index.values]["pos"].isin(["V", "A"])) != 1:
-                        return None, None
-                    else:
-                        # never actually gets here
-                        orig_id = lex_f_forms[
-                            gml.loc[lex_f_forms.index.values]["pos"].isin(["V", "A"])
-                        ].index[0].item()
-                        wform_code = lex_f_forms.iloc[0]["paradigm_code"]
-                        return _unparse_adj_like(lex_f, orig_id, wform_code, cache)
+        
+        # try for scenario 1: lexicalized F(lexion) noun is
+        #   present as a separate lemma in `gml.cd`,
+        #   and its full analysis is provided
+        morph_struct, morph_scheme = _unparse_and_postprocess(lex_f, gml, cache)
+        
+        # it worked, scenario 1
+        if morph_struct:
+            output = (morph_struct, morph_scheme)
+        
+        # scenario 0: ambiguous analyses found
+        elif (not morph_struct) and (not morph_scheme):
+            output = (None, None)
+
+        else:   # try for scenario 2
+
+            # For scenario 2, CELEX is not very consistent either;
+            # however, it is possible un unravel the structure
+            # of most of the stems based on their inflected form codes
+            # (see more in the CELEX documentation, 5-84).
+            # we have fornd the following possibilities for scenario 2:
+            #
+            # 1. Deverbal nouns:
+            #
+            #   1.1. Converted deverbals: have a code `i` and (almost)
+            #       always are also followed by codes `13PIE` and `13PKE`:
+            #       plural indicative or conjunctive of 1 or 3 person:
+            #       'glauben', 'kommen' etc.
+            #       In principal, they should not eventually be analyzed
+            #       here as most (if not all) of them have a full analysis
+            #       in `gml.cd` (scenario 1); however, we add a fallback
+            #       here just in case: we return the verb's morphemic
+            #       structure/schema plus -en infinitive (alternatively: conversion)
+            #       suffix as CELEX does not include it.
+            #
+            #   1.2. Deverbal non-derivate nouns; for some reason, CELEX
+            #       wants to analyze such stems as verbal forms and so
+            #       they are recognizable by corresponding verbform codes:
+            #       'abfahrt' `2PIE`, 'abschnitt' `13SIA`,
+            #       'bedarf' `1SIE,3SIE` (why not `13SIE`?),
+            #       'beitritt' `3SIE`, 'umfrage' and 'vorhersage' `1SIE,13SKE`,
+            #       'wasche' `1SIE,13SKE,rS`, and much more. In this case,
+            #       we look up the morphemic structure/schema of the 
+            #       original verb stem and return it plus whatever
+            #       explicit suffix is used (e.g. 0 for 'Abfahrt',
+            #       -e for 'wasche', etc.).
+            #
+            # 2. Participles:
+            #
+            #   2.1. Partizip II forms: have code `pA`:
+            #       e.g. 'abgeklaert', 'versandt' etc.;
+            #       in case of strong verbs whose PII form
+            #       is identical to their infinitive, are followed
+            #       by `13PIE`, `13PKE`, and `i` codes:
+            #       'entkommen', 'erlesen'.
+            #       In this case, we look up the morphemic structure/schema
+            #       of the original verb stem and modify it
+            #       to add PII suffix -t/-en and PII prefix ge- if applicable.
+            #       In the latter case, they are indistinguishable
+            #       from converted deverbals (see 1.1 above)
+            #       and must have a full analysis in `gml.cd`.
+            #       Even if otherwise, no additional fallback 
+            #       is required since the general unparsing function
+            #       for participles already handles this case.
+            #
+            #   2.2. Partizip I forms: have code `pE`:
+            #       e.g. 'stehend', 'laufend' etc.
+            #       In this case, we look up the morphemic structure/schema
+            #       of the original verb stem and modify it
+            #       to add PI suffix -end.
+            #
+            # 3. Deadjectival nouns:
+            #
+            #   3.1. Weak deadjectival nouns: have code `oN`, where
+            #       N is a digit coding the inflexional suffix:
+            #       e.g. 'kitzelig' `o0`, 'arme' `o4`, 'liegendem' `o7` etc.
+            #       Both adjectives and any participles can
+            #       be the base of such nouns. In first case,
+            #       we look up the morphemic structure/schema
+            #       of the original adjective stem and modify it
+            #       inflextional suffix with respect to the `oN` code (mostly -e).
+            #       In second case, we need to pass the participle
+            #       through the participle unparsing function. 
+            #
+            #   3.2. Comparative adjective forms: have code `cN`, where
+            #       N is a digit (mostly 0) coding the inflexional suffix:
+            #       e.g. 'besser' `c0`, 'kritischere' `c4`, 'exklusiverem' `c7` etc.
+            #       In this case, we look up the morphemic structure/schema
+            #       of the original adjective stem and modify it
+            #       to add comparative suffix -er and inflextional suffix
+            #       with respect to the `cN` code (mostly zero).
+            #
+            #   3.3. Superlative adjective forms: have code `uN`, where
+            #       N is a digit (mostly 0) coding the inflexional suffix:
+            #       e.g. 'best' `u0`, 'bestimmtste' `u4`, 'suessestem' `u7` etc.
+            #       In this case, we look up the morphemic structure/schema
+            #       of the original adjective stem and modify it
+            #       to add comparative suffix -st and inflextional suffix
+            #       with respect to the `uN` code (mostly zero).
+
+            lex_f_forms = gmw[gmw["wordform"] == lex_f.lower()]
+
+            # scenario 3: no analyses found
+            if not len(lex_f_forms):
+                output = (None, None)
+            
+            # scenario 2: analyses found
+            elif len(lex_f) == 1: # simple case: only one analysis found
+
+                # match the codes to the scenarios above
+                lemma = lex_f_forms.iloc[0]["lemma"]
+                par_codes = lex_f_forms.iloc[0]["paradigm_code"].split(",")
+
+                # 1.1. Converted deverbals
+                if "i" in par_codes:
+                    # no changes needed
+                    output = _unparse_and_postprocess(lemma, gml, cache, postprocess="inf")
+
+                # # 1.2. Deverbal non-derivate nouns
+                # elif False:
+
+                #     pass
+
+                # 2.1. Partizip II
+                elif "pA" in par_codes:
+                    # add PII suffix -t/-en and PII prefix ge- if applicable
+                    output = _unparse_and_postprocess(lemma, gml, cache, postprocess="p2")
+
+                # 2.2. Partizip I
+                elif "pE" in par_codes:
+                    # add PI suffix -end
+                    output = _unparse_and_postprocess(lemma, gml, cache, postprocess="p1")
+
+                # # 3.1. Weak deadjectival nouns
+                # elif re.search(r"^o\d$", par_codes[0]):
+
+                #     pass
+
+                # # 3.2. Comparative adjective forms
+                # elif re.search(r"^c\d$", par_codes[0]):
+
+                #     pass
+
+                # # 3.3. Superlative adjective forms
+                # elif re.search(r"^u\d$", par_codes[0]):
+
+                #     pass
+
+                # scenario 3: no known/relevant analysis found
                 else:
-                    wform_codes = lex_f_forms.iloc[0]["paradigm_code"]
-                    wform_codes = re.findall(r"(pA|pE|c0|u0)", wform_codes)
-                    if len(wform_codes) > 1:
-                        # ambiguity, unreliable
-                        return None, None
-                    orig_id = lex_f_forms.index[0].item()
-                    wform_code = wform_codes[0]
-                    return _unparse_adj_like(lex_f, orig_id, wform_code, cache)
-            else:   # elif lex_f_info["pos"] == "N":
-                # there are two variants for Noun lexicalized (F)lexion stems in CELEX:
-                # adjectives in weak deadjectival nouns (as 'arm' in 'Arme')
-                # or lexicalized deverbals such (as 'Fahrt' in 'Abfahrt')
+                    cache[lex_f] = (None, None)
+                    return None, None
+                
+                # it worked, scenario 1
+                if morph_struct:
+                    return morph_struct, morph_scheme
+                
+                # scenario 0: ambiguous analyses found
+                elif (not morph_struct) and (not morph_scheme):
+                    cache[lex_f] = (None, None)
+                    return None, None
+
+
+
+            else:
+
                 pass
-        else:
-            pass
+
+            # cache[lex_f] = output
+
+        
+        
+        
+        
+
+
+
+
+
+        #     lex_f_info = lex_f_entries.iloc[0]
+        #     if lex_f_info["pos"] == "V":
+        #         return _unparse_verb(lex_f_info, cache)
+        #     elif lex_f_info["pos"] == "A":
+        #         # There are a few variants for Adj lexicalized (F)lexion stems in CELEX:
+        #         # * Partizip II (as 'angelegen' in 'Angelegenheit'): code `pA`
+        #         # * Partizip I (as 'liegend' in 'Liegenschaft'): code `pE`
+        #         # * Comparative adjective forms (as 'besser' in 'Besserung'): code `c0`
+        #         # * Superlative adjective forms (as 'best' in 'Beste'): code `u0`
+        #         # All variants can be found in `gmw.cd` as separate wordforms,
+        #         # and from where we will be able to extract the original verbal/adjective stem
+        #         lex_f_forms = gmw[
+        #             (gmw["wordform"] == lex_f)
+        #             & gmw["paradigm_code"].apply(
+        #                 lambda x: bool({"pA", "pE", "c0", "u0"} & set(x.split(",")))
+        #             )
+        #         ]
+        #         if (not len(lex_f_forms)) or len(lex_f_forms) > 1:
+        #             # underanalysis or ambiguity, both unreliable
+        #             # (latter; only a few cases found,
+        #             # e.g. 'abgewogen' for 'abwägen' and 'abwiegen'
+        #             # and 'bedacht' for 'bedenken' and 'bedachen')
+        #             # TODO: resolve by semantic similarity?
+        #             if len(gml.loc[lex_f_forms.index.values]["pos"].isin(["V", "A"])) != 1:
+        #                 return None, None
+        #             else:
+        #                 # never actually gets here
+        #                 orig_id = lex_f_forms[
+        #                     gml.loc[lex_f_forms.index.values]["pos"].isin(["V", "A"])
+        #                 ].index[0].item()
+        #                 wform_code = lex_f_forms.iloc[0]["paradigm_code"]
+        #                 return _unparse_adj_like(lex_f, orig_id, wform_code, cache)
+        #         else:
+        #             wform_codes = lex_f_forms.iloc[0]["paradigm_code"]
+        #             wform_codes = re.findall(r"(pA|pE|c0|u0)", wform_codes)
+        #             if len(wform_codes) > 1:
+        #                 # ambiguity, unreliable
+        #                 return None, None
+        #             orig_id = lex_f_forms.index[0].item()
+        #             wform_code = wform_codes[0]
+        #             return _unparse_adj_like(lex_f, orig_id, wform_code, cache)
+        #     else:   # elif lex_f_info["pos"] == "N":
+        #         # there are two variants for Noun lexicalized (F)lexion stems in CELEX:
+        #         # adjectives in weak deadjectival nouns (as 'arm' in 'Arme')
+        #         # or lexicalized deverbals such (as 'Fahrt' in 'Abfahrt')
+        #         pass
+        # else:
+        #     pass
 
     _parsing_cache = {}
     gml[["morphemic_structure", "morphemic_schema"]] = gml.apply(
@@ -377,7 +694,7 @@ def main():
         axis=1
     )
 
-    # drop records with any missing fields repeatedly
+    # drop records with any missing fields after
     gml = gml.dropna()
 
     # drop non-noun records
@@ -405,7 +722,8 @@ def main():
         index_col="id"
     )
 
-    # drop records with any missing fields
+    # drop records with any missing fields and remove duplicates
+    gsl = gsl[~gsl.index.duplicated(keep="first")]
     gsl = gsl.dropna()
 
 
@@ -633,9 +951,6 @@ def main():
 
     # set lemma as index
     gmspflw = gmspflw.set_index("lemma")
-
-    # remove duplicates
-    gmspflw = gmspflw[~gmspflw.index.duplicated(keep="first")]
 
 
     # 15. Save the final table as TSV.
