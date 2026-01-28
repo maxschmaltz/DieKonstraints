@@ -1236,7 +1236,12 @@ def main():
 
     # filter out one- and two-character lemmas except for
     # 'Ei', 'Öl', 'As' (they are otherwise letter names or interjections)
-    gml = gml[((gml["lemma"].str.len() > 2) | (gml["lemma"].isin(["Ei", "Öl", "As"])))]
+    gmspflw = (
+        gmspflw[
+            (gmspflw["lemma"].str.len() > 2) |
+            (gmspflw["lemma"].isin(["ei", "öl", "as"]))
+        ]
+    )
 
     # final check: drop records with any missing fields except for `nom_pl`
     gmspflw = gmspflw.dropna(subset=list(set(gmspflw.columns) - {"nom_pl"}))
