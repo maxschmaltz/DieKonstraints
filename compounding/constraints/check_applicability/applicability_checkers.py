@@ -92,7 +92,7 @@ def _is_of_genitive(lemma: str, genitive_marker: Literal["", "s"]) -> bool:
 
 def _is_of_gender(lemma: str, gender: Literal["m", "f", "n"]) -> bool:
 	lemma_info = celex.loc[lemma]
-	return lemma_info["gender"] == gender
+	return gender in lemma_info["gender"]
 
 
 def _is_mixed(lemma: str) -> bool:
