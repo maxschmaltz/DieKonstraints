@@ -1153,7 +1153,8 @@ def main():
             "disc",
             "ipa",
             language="deu"
-        # for some reason maps German ʁ as r
+        # for some reason maps German ʁ as r,
+        # ignore cases before consonants like He[ɐ̯]bst
         ).replace("r", "ʁ")
     )
 
