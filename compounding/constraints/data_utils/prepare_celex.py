@@ -1043,18 +1043,11 @@ def main():
     # 5. We join `gml.cd` and `gsl.cd` on lemma id.
     gmsl = gml.join(gsl, how="inner")
 
-    # remove records with fluctuating gender
-    # (it has more than one gender code in the 'gender' column,
-    # see CELEX documentation 5-88)
-    gmsl = gmsl[
-        gmsl["gender"].apply(
-            lambda x: len(x)
-        ) == 1
-    ]
-
     # we can also convert the gender codes to more readable values
     # (see CELEX documentation 5-88)
-    gmsl["gender"] = gmsl["gender"].map({"1": "m", "2": "f", "3": "n"})
+    gmsl["gender"] = gmsl["gender"].map(
+        lambda x: "".join([{"1": "m", "2": "f", "3": "n"}[c] for c in x])
+    )
 
 
     # 6. We filter `gmw.cd` for GenSg and NomPl forms of the nouns
