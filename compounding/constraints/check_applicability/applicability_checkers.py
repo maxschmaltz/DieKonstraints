@@ -1,3 +1,4 @@
+import re
 import pandas as pd
 from itertools import product
 from typing import Optional, Literal
@@ -60,7 +61,7 @@ def _is_of_plural(
 	if dupl:
 		# for cases like 'Ergebnis' -> 'Ergebnisse',
 		# 'Freundin' -> 'Freundinnen'
-		lemma = lemma + lemma[-1]
+		lemma += lemma[-1]
 	if adds_umlaut:
 		lemma = perform_umlaut(lemma)
 	pl_vars = lemma_info["nom_pl"].split("/")
@@ -436,7 +437,20 @@ def sfx_deverb_en_applies(compound: Compound):
 #
 # Derivative feminine nouns with suffix -in always attach -en-. 
 # (The suffix -in adjusts orthographically in this case and becomes an -inn.)
-# TODO
+
+def sfx_F_in_en_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
+	# since -in becomes -inn before -en, adjust for that
+	# as in case the constraint applies, 
+	# lemmas like 'Lehrerinn' will be coming
+	n1 = re.sub(f"{n1[-1]}{{2}}$", n1[-1], n1)
+	return (
+		_is_of_gender(n1, "f")
+		and _ends_with_sfx(n1, "in")
+	)
+
+def sfx_F_in_en_applies(compound: Compound):
+	return _has_linker(compound, linker_morph="en")
 
 
 

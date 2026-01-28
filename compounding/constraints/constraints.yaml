@@ -1065,7 +1065,7 @@ constraints:
         regularity: NA
         coverage: NA
 
-        examples_pro: [lehrehrinn_+en_mentalität, freundinn_+en_gruppe, schülerinn_+en_rat]
+        examples_pro: [lehrerinn_+en_mentalität, freundinn_+en_gruppe, schülerinn_+en_rat]
         examples_contra: [königin_mutter]
 
         evidence:
