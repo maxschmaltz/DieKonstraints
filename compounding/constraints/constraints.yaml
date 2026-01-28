@@ -1082,7 +1082,7 @@ constraints:
 
     p2l:drv:prx_deverb-s:
     
-        summary: There is a strong tendency to adopt -s- after prefixed deverbatives, especially when the prefix is stressed.
+        summary: There is a strong tendency to adopt -s- after prefixed deverbatives.
         type: [derivational]
 
         func_alias: prx_deverb

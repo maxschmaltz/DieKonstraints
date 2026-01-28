@@ -127,6 +127,13 @@ def _is_deadjective(lemma: str) -> bool:
 	return "A" in lemma_info["morphemic_schema"]
 
 
+def _is_prefixed(lemma: str) -> bool:
+	lemma_info = celex.loc[lemma]
+	# Affi(x)es: 'Ab-fahrt', 'Be-darf'
+	# P(reposition)s: 'mit-Glied', 'durch-Schnitt'
+	# Adverbs (B): 'fort-Schritt', 'hinter-Grund'
+	return lemma_info["morphemic_schema"][0] in ["x", "P", "B"]
+
 def _ends_with_sfx(lemma: str, suffixes: str | list[str]) -> bool:
 	if isinstance(suffixes, str):
 		suffixes = [suffixes]
@@ -456,9 +463,16 @@ def sfx_F_in_en_applies(compound: Compound):
 
 # p2l:drv:prx_deverb-s
 #
-# There is a strong tendency to adopt -s- after prefixed deverbatives, 
-# especially when the prefix is stressed.
-# TODO
+# There is a strong tendency to adopt -s- after prefixed deverbatives.
+
+def prx_deverb_is_applicable(compound: Compound):
+	return (
+		_is_deverbal(compound.stems[0].morph)
+		and _is_prefixed(compound.stems[0].morph)
+	)
+
+def prx_deverb_applies(compound: Compound):
+	return _has_linker(compound, linker_morph="s")
 
 
 
