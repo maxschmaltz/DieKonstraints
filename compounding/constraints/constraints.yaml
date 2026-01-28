@@ -239,11 +239,11 @@ topology:
 
                       - p2l:phon_fin:sibilant$-0
 
-                      - p2l:phon_fin:cmpx_syl$-0
-
                       - p2l:phon_fin:vow$-0
 
                       - p2l:phon_fin:F_#stressed_phon$-0
+
+                      - p2l:phon_fin:cmpx_syl$-s
 
                       - p2l:phon_fin:F_stem_#t$-s
 
@@ -1163,30 +1163,6 @@ constraints:
             "1": Evidence for `p2l:phon_fin:sibilant$-0` > `p2l:drv:prx_deverb-s`.
 
 
-
-    p2l:phon_fin:cmpx_syl$-0:
-    
-        summary: -s- may occur after a complex syllable boundary.
-        type: [phonological]
-
-        func_alias: cmpx_syl_fin
-        regularity: NA
-        coverage: NA
-
-        examples_pro: [weihnacht_+s_baum, geschäft_+s_führer, geburt_+s_tag]
-        examples_contra: [herbst_anfang, milch_kaffee, markt_platz]
-
-        evidence:
-
-            - ref: kürschner_2010
-              pages: [22]
-              summary: -s- may occur [1] after a complex syllable boundary.
-
-        footnotes:
-            "1": Level of regularity not mentioned.
-
-
-
     p2l:phon_fin:vow$-0:
     
         summary: Nouns ending in a full vowel always adopt a zero linker.
@@ -1232,6 +1208,28 @@ constraints:
               summary: F endings with stressed -ei, -ie, -ur, also -ik [1] usually attach a zero linker.
 
         footnotes: {}
+
+
+    p2l:phon_fin:cmpx_syl$-s:
+    
+        summary: -s- may occur after a complex syllable boundary.
+        type: [phonological]
+
+        func_alias: cmpx_syl_fin
+        regularity: NA
+        coverage: NA
+
+        examples_pro: [weihnacht_+s_baum, geschäft_+s_führer, geburt_+s_tag]
+        examples_contra: [herbst_anfang, milch_kaffee, markt_platz]
+
+        evidence:
+
+            - ref: kürschner_2010
+              pages: [22]
+              summary: -s- may occur [1] after a complex syllable boundary.
+
+        footnotes:
+            "1": Level of regularity not mentioned.
 
 
     p2l:phon_fin:F_stem_#t$-s:

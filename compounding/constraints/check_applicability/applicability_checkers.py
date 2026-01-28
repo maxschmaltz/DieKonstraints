@@ -1,5 +1,7 @@
 import re
 import pandas as pd
+from ipapy import UNICODE_TO_IPA
+from ipapy.ipachar import IPAChar
 from itertools import product
 from typing import Optional, Literal
 
@@ -145,17 +147,65 @@ def _ends_with_sfx(lemma: str, suffixes: str | list[str]) -> bool:
 
 # Helper functions for phonetic checks
 
+def _get_ipa_obj(string: str) -> list[str]:
+	# cannot use `IPAString` here because of
+	# version incompatibilities: `ipapy` 
+	# calls `MutableSequence` from `collections` instead of
+	# `collections.abc` in Python 3.10+;
+	# otherwise, this solution is identical and works fine
+	return [UNICODE_TO_IPA[c] for c in string]
+
+def _phone_has_property(phone: str, property: str | list[str]) -> bool:
+	if isinstance(property, str):
+		property = [property]
+	# can be vowel/consonant,
+	# voiced/voiceless, manner, place,
+	# backness, height, rounded/unrounded
+	ipa: IPAChar = _get_ipa_obj(phone)
+	return all(
+		prop in ipa[0].descriptors for prop in property
+	)
+
+def _is_vowel(phone: str) -> bool:
+	# for better readability;
+	# alternatively:
+	# ipa = _get_ipa_obj(phone)
+	# return ipa[0].is_vowel
+	return _phone_has_property(phone, "vowel")
+
+def _is_consonant(phone: str) -> bool:
+	# for better readability
+	# alternatively:
+	# ipa = _get_ipa_obj(phone)
+	# return ipa[0].is_consonant
+	return _phone_has_property(phone, "consonant")
+
+def _get_last_cons_cluster(lemma: str) -> str:
+	lemma_info = celex.loc[lemma]
+	ipa = _get_ipa_obj(lemma_info["phonetic_transcription"])
+	is_vowels = [_phone.is_vowel for _phone in ipa]
+	last_vowel_idx = is_vowels[::-1].index(True)
+	if last_vowel_idx == 0:
+		return ""
+	last_cons_cluster = ipa[-last_vowel_idx:]
+	return "".join([str(phone) for phone in last_cons_cluster])
+
+
+def _get_transcription(lemma: str) -> str:
+	lemma_info = celex.loc[lemma]
+	return lemma_info["phonetic_transcription"]
+
 def _ends_with_phon(lemma: str, endings: str | list[str]) -> bool:
 	if isinstance(endings, str):
 		endings = [endings]
 	lemma_info = celex.loc[lemma]
 	return any(
-		lemma_info["phonetic_transcription"].endswith(ending) for ending in endings
+		_get_transcription(lemma).endswith(ending) for ending in endings
 	)
 
 def _ends_with_phon_schwa(lemma: str) -> bool:
 	# for better readability
-	return _ends_with_phon(lemma, "@")
+	return _ends_with_phon(lemma, "ə")
 
 
 
@@ -446,14 +496,14 @@ def sfx_deverb_en_applies(compound: Compound):
 # (The suffix -in adjusts orthographically in this case and becomes an -inn.)
 
 def sfx_F_in_en_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	lemma = compound.stems[0].morph
 	# since -in becomes -inn before -en, adjust for that
 	# as in case the constraint applies, 
 	# lemmas like 'Lehrerinn' will be coming
-	n1 = re.sub(f"{n1[-1]}{{2}}$", n1[-1], n1)
+	lemma = re.sub(f"{lemma[-1]}{{2}}$", lemma[-1], lemma)
 	return (
-		_is_of_gender(n1, "f")
-		and _ends_with_sfx(n1, "in")
+		_is_of_gender(lemma, "f")
+		and _ends_with_sfx(lemma, "in")
 	)
 
 def sfx_F_in_en_applies(compound: Compound):
@@ -480,21 +530,33 @@ def prx_deverb_applies(compound: Compound):
 #
 # Nouns ending in a sibilant or a consonant cluster including [s] 
 # mostly adopt a zero linker.
-# TODO
 
+def sibilant_fin_is_applicable(compound: Compound):
+	cons_cluster = _get_last_cons_cluster(compound.stems[0].morph)
+	return (
+		cons_cluster
+		and (
+			_phone_has_property(cons_cluster[-1], "sibilant-fricative")
+			or "s" in cons_cluster
+		)
+	)
 
-
-# p2l:phon_fin:cmpx_syl$-0
-#
-# -s- may occur after a complex syllable boundary.
-# TODO
+def sibilant_fin_applies(compound: Compound):
+	return _has_no_linker(compound)
 
 
 
 # p2l:phon_fin:vow$-0
 #
 # Nouns ending in a full vowel always adopt a zero linker.
-# TODO
+
+def vow_fin_is_applicable(compound: Compound):
+	lemma = compound.stems[0].morph
+	last_phone = _get_transcription(lemma)[-1]
+	return _is_vowel(last_phone) and not _ends_with_phon_schwa(lemma)
+
+def vow_fin_applies(compound: Compound):
+	return _has_no_linker(compound)
 
 
 
@@ -502,6 +564,13 @@ def prx_deverb_applies(compound: Compound):
 #
 # Feminine nouns endings with stressed -ei, -ie, -ur,
 # also -ik [1] usually attach a zero linker.
+# TODO
+
+
+
+# p2l:phon_fin:cmpx_syl$-s
+#
+# -s- may occur after a complex syllable boundary.
 # TODO
 
 
