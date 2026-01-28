@@ -1153,9 +1153,8 @@ def main():
             "disc",
             "ipa",
             language="deu"
-        # replace double quotes with asterisk for stress marker
-        # for better TSV readability
-        )#.replace('"', "*")
+        # for some reason maps German ʁ as r
+        ).replace("r", "ʁ")
     )
 
 
