@@ -1031,7 +1031,7 @@ constraints:
         coverage: NA
 
         func_alias: sfx_deverb_en
-        examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, schlaf_+en_zeit]
+        examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
         examples_contra: []
 
         evidence:
@@ -1493,21 +1493,21 @@ constraints:
 
     p2l:sem:comp_type:arg-s:
     
-        summary: "-s- may sometimes, with many doubtful cases, mark argumental compounds: those where the second constituent still contains a high degree of verbiness and the first constituent of which constitutes their argument."
+        summary: "-s- may sometimes, with many doubtful cases, mark argumental compounds: those where the second constituent still contains a high degree of verbiness and the first constituent of which constitutes their argument. The second constituent is then usually an agent designation, an -ung formation etc."
         type: [semantic]
 
         func_alias: argument
         regularity: NA
         coverage: NA
 
-        examples_pro: [gewicht_+s_heber, krieg_+s_führung]
+        examples_pro: [gewicht_+s_heber, krieg_+s_führung, unternehmen_+s_beratung]
         examples_contra: [gewicht_heber, krieg_führung]
 
         evidence:
 
             - ref: nübling_szczepaniak_2013
               pages: [79]
-              summary: "-s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument, with many doubtful cases [1]."
+              summary: "-s- marks the nominal status of deverbal second constituents, where the second member still contains a high degree of verbiness and the first constituent of which constitutes their argument, with many doubtful cases [1]. The second constituent is then usually an agent designation, an -ung formation etc."
 
         footnotes:
             "1": "As in: cases where both variants coexist. Search in COSMAS II does not reveal a clear preference: for example gewicht_heber (~11k) > gewicht_+s_heber (~50) but krieg_+s_führung (~19k) > krieg_führung (~7k)."
