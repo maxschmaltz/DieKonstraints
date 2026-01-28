@@ -1267,14 +1267,14 @@ def main():
     # randomly, but rather drop all ambiguous entries altogether.
     # The reason for that is that most of such duplicates have different
     # morphologic paradigms (e.g. 'Band' -- 'Bande' and 'Band' -- 'Bands',
-    # 'Bank' -- 'Bänke' and 'Bank' -- 'Banks', etc.), so running
-    # morphologic constraints against such entries would be unreliable.
-    # Otherwise, even in cases where the duplicates have the same
-    # morphologic paradigm, semantic constraints would still be unreliable.
-    # Further examples comprise mostly verbs ('überlegen' -- 'überlegt' and
-    # 'überlegen' -- 'übergelegt', etc.) that are irrelevant for our noun database.
+    # 'Bank' -- 'Bänke' and 'Bank' -- 'Banken', also 'Steuer', 'Leiter' etc.),
+    # so running both semantic and morphologic constraints against such entries
+    # would be unreliable.
+    # Otherwise, in rare cases where the duplicates have all the same
+    # properties, we keep one of them ('Mutter', 'Hahn', 'Gesicht').
     # TODO: disambiguate by semantic similarity?
-    gmspflw = gmspflw[~gmspflw["lemma"].duplicated(keep=False)]
+    gmspflw = gmspflw[~gmspflw.duplicated(keep="first")]    # all fields
+    gmspflw = gmspflw[~gmspflw["lemma"].duplicated(keep=False)] # lemma only
 
     # set lemma as index
     gmspflw = gmspflw.set_index("lemma")
