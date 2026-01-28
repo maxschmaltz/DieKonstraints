@@ -74,7 +74,7 @@ def main():
     # 8. Parse `gpl.cd`.
     # 9. Filter `gpl.cd` for phonological and syllabic information
     #   of the nouns in the table from step 7. Convert phonological
-    #   and notations into SAMPA.
+    #   and notations into IPA.
     # 10. Join the filtered `gpl.cd` table to the table from step 7 on lemma id.
     # 11. Parse `gfl.cd`.
     # 12. Filter `gfl.cd` for frequency information of the nouns
@@ -1146,25 +1146,16 @@ def main():
     # remove phonetic transcriptions of lemmas that are not in `gmslw`
     gpl = gpl[gpl.index.isin(gmslw.index.values)]
 
-    # convert CELEX DISC notation into SAMPA (X-SAMPA used)
+    # convert CELEX DISC notation into IPA
     gpl = gpl["phonetic_transcription"].apply(
         lambda x: phonecodes.convert(
-            # phonecodes cannot convert directly from disc to xsampa,
-            # so we convert via ipa
-            phonecodes.convert(
-                x,
-                "disc",
-                "ipa",
-                language="deu"
-            ),
+            x,
+            "disc",
             "ipa",
-            "xsampa",
-            # for 'xsampa',
-            # specifying a language is optional and ignored by the code,
-            # since X-SAMPA is language agnostic
+            language="deu"
         # replace double quotes with asterisk for stress marker
         # for better TSV readability
-        ).replace('"', "*")
+        )#.replace('"', "*")
     )
 
 
