@@ -600,8 +600,22 @@ def main():
         f_lemma: str
     ):
         
-        if f_lemma in cache:
-            return cache[f_lemma]
+        base_lemma = row["lemma"]
+        bf_lemmas = f"{base_lemma}|{f_lemma}"
+        # not using only F lemma here because in case of lexicalized
+        # flexion duplicates, its base lemma coincides
+        # with the F lemma and so when the correct duplicate
+        # comes, None will be found in cache even though 
+        # this time the base lemma is correct:
+        # e.g. 'besser' `o0` has base lemma 'besser' (lexicalized 
+        # duplicate), so correct analysis 'besser' `c0` 'gut'
+        # also returs None if we use F lemma here;
+        # using only base lemma is not reliable either
+        # since there might be multiple F lemmas
+        # derived from the same base lemma;
+        # hence, we use both base and F lemmas here
+        if bf_lemmas in cache:
+            return cache[bf_lemmas]
         
         # For scenario 2, CELEX is not very consistent either;
         # however, it is possible un unravel the structure
@@ -844,7 +858,7 @@ def main():
         else:
             output = (None, None)
 
-        cache[f_lemma] = output
+        cache[bf_lemmas] = output
         return output
 
     def _resolve_lexicalized_flexions(
@@ -935,7 +949,7 @@ def main():
                 # most of the cases with multiple analyses
                 # is due to the fact that many participles
                 # exist both as `pA` and as its
-                # lexicalized verrsion as a deadjectival `oX`;
+                # lexicalized version as a deadjectival `oX`;
                 # however, in order to make the processing
                 # here simpler and more robust, we will
                 # just unparse each of the analyses separately
@@ -950,9 +964,13 @@ def main():
                     morph_struct, morph_schema = _resolve_lexicalized_flexion(
                         f_lemma_info, gml, cache, f_lemma
                     )
-                    # either None, None, or actual values
-                    morph_structs.add(morph_struct)
-                    morph_schemas.add(morph_schema)
+                    # either None, None, or actual values;
+                    # ignoring None since most of lexicalized versions `oX`
+                    # will returns Nones (e.g. 'besser' `o0` vs 'besser' `c0`
+                    # or 'abgeklärt' `o0` vs 'abgeklärt' `pA`)
+                    if morph_struct and morph_schema:
+                        morph_structs.add(morph_struct)
+                        morph_schemas.add(morph_schema)
 
                 if len(morph_structs) == 1 and len(morph_schemas) == 1:
                     output = (
@@ -960,6 +978,9 @@ def main():
                         morph_schemas.pop()
                     )
                 else:
+                    # abiguous, unreliable, skip
+                    # e.g. 'abgewogen' is PII for both
+                    # 'abwiegen' and 'abwägen'
                     output = (None, None)
 
         # finally, we need to replace the F in the
