@@ -117,6 +117,15 @@ def _is_derived(lemma: str) -> bool:
 	return not _is_simplex(lemma)
 
 
+def _is_deverbal(lemma: str) -> bool:
+	lemma_info = celex.loc[lemma]
+	return "V" in lemma_info["morphemic_schema"]
+
+def _is_deadjective(lemma: str) -> bool:
+	lemma_info = celex.loc[lemma]
+	return "A" in lemma_info["morphemic_schema"]
+
+
 def _ends_with_sfx(lemma: str, suffixes: str | list[str]) -> bool:
 	if isinstance(suffixes, str):
 		suffixes = [suffixes]
@@ -124,6 +133,7 @@ def _ends_with_sfx(lemma: str, suffixes: str | list[str]) -> bool:
 	return any(
 		lemma_info["morphemic_structure"].endswith(f"-{sfx}") for sfx in suffixes
 	)
+
 
 # Helper functions for phonetic checks
 
@@ -376,7 +386,6 @@ def sfx_pl_e_is_applicable(compound: Compound):
 		)
 	)
 
-
 def sfx_pl_e_applies(compound: Compound):
 	return _has_no_linker(compound)
 
@@ -396,7 +405,6 @@ def sfx_s_is_applicable(compound: Compound):
 		]
 	)
 
-
 def sfx_s_applies(compound: Compound):
 	return _has_linker(compound, linker_morph="s")
 
@@ -410,9 +418,17 @@ def sfx_s_applies(compound: Compound):
 
 
 # p2l:drv:sfx:deverb_#en$-s
-#
+
 # -s- occurs regularly in deverbatives ending in -en.
-# TODO
+
+def sfx_deverb_en_is_applicable(compound: Compound):
+	return (
+		_is_deverbal(compound.stems[0].morph)
+		and _ends_with_sfx(compound.stems[0].morph, "en")
+	)
+
+def sfx_deverb_en_applies(compound: Compound):
+	return _has_linker(compound, linker_morph="s")
 
 
 
