@@ -240,6 +240,7 @@ def main():
         # as CELEX does not include it
         morph_struct, morph_schema = _unparse_simple(row)
         return (
+            # here, we don't actually care about allomorphy
             morph_struct + "-en",
             morph_schema + "x"
         )
@@ -254,7 +255,6 @@ def main():
         par_codes_str: str
     ) -> tuple[str, str]:
         
-        morph_struct, morph_schema = _unparse_simple(row)
         # here, there are several possibilities for
         # derivational suffixes based on the paradigm codes;
         # note that errors are possible due to underanalyses,
@@ -262,7 +262,9 @@ def main():
         # hence, 'reformier-te' instead of 'reformier-t-e', because
         # its correct analysis 'reformierte' `o4` is previously
         # removed because it points to a record in `gml.cd` with missing fields
-
+        
+        morph_struct, morph_schema = _unparse_simple(row)
+        
         if _test_vcodes(["1SIE", "[13]{1,2}SKE", "rS"], par_codes_str):
             # 1PersSg of present tense indicative, ImpSg,
             # and 1/3PersSg of subjunctive present get -e suffix
@@ -403,11 +405,36 @@ def main():
             return None, None  # unrecognized paradigm codes
         
         return (
+            # here, we don't actually care about allomorphy
             morph_struct + marker,
             morph_schema + "x" * marker.count("-")
         )
 
-    def _unparse_p2(row: pd.Series, f_lemma: str) -> tuple[str, str]:
+    def _get_adj_flexion(inflect_code: str) -> str:
+        # carried out into a separate function
+        # because it is shared between
+        # deadjectives and lexicalized participles
+        # such as 'abgeordnet-e'
+        match inflect_code:
+            case "0":
+                return ""
+            case "4":
+                return "-e"
+            case "5":
+                return "-en"
+            case "6":
+                return "-er"
+            case "7":
+                return "-em"
+            case ["8", "9"]:
+                return "-s"
+        return ""
+            
+    def _unparse_p2(
+        row: pd.Series,
+        f_lemma: str,
+        inflect_code: Optional[str]="0"
+    ) -> tuple[str, str]:
         morph_struct, morph_schema = _unparse_simple(row)
         # Partizip II, return verb's morphemic structure/schema
         # plus PII -t/-en suffix (CELEX does not include the inf -en)
@@ -437,38 +464,46 @@ def main():
             # even if there are other prefixes, morphemic schema
             # encodes all of them as 'x'
             morph_schema = "x" + morph_schema
+        inflect_marker = _get_adj_flexion(inflect_code)
         return (
-            morph_struct + part_marker,
-            morph_schema + "x"
+            morph_struct + part_marker + inflect_marker,
+            morph_schema + "x" + "x" * bool(inflect_marker)
         )
 
-    def _unparse_p1(row: pd.Series) -> tuple[str, str]:
+    def _unparse_p1(
+        row: pd.Series,
+        inflect_code: Optional[str]="0"
+    ) -> tuple[str, str]:
         morph_struct, morph_schema = _unparse_simple(row)
+        inflect_marker = _get_adj_flexion(inflect_code)
         return (
-            morph_struct + "-end",
-            morph_schema + "x"
+            # here, we don't actually care about allomorphy
+            morph_struct + "-end" + inflect_marker,
+            morph_schema + "x" + "x" * bool(inflect_marker)
         )
 
-    def _unparse_adj(row: pd.Series) -> tuple[str, str]:
+    def _unparse_deadj(row: pd.Series, par_code: str) -> tuple[str, str]:
         morph_struct, morph_schema = _unparse_simple(row)
-        pass
-
-    def _unparse_cmpr(row: pd.Series) -> tuple[str, str]:
-        morph_struct, morph_schema = _unparse_simple(row)
-        pass
-
-    def _unparse_sprl(row: pd.Series) -> tuple[str, str]:
-        morph_struct, morph_schema = _unparse_simple(row)
-        pass
+        comp_degree, inflect_code = par_code
+        comparative_marker = (
+            "" if comp_degree == "o" else
+            "-er" if comp_degree == "c" else "-st"
+        )
+        inflect_marker = _get_adj_flexion(inflect_code)
+        # here, we don't actually care about allomorphy
+        return (
+            morph_struct + comparative_marker + inflect_marker,
+            morph_schema + "x" * (
+                comparative_marker + inflect_marker
+            ).count("-")
+        )
 
     _unparsers = {
         "inf": _unparse_inf,
         "deverb": _unparse_deverb,
         "p2": _unparse_p2,
         "p1": _unparse_p1,
-        "adj": _unparse_adj,
-        "cmpr": _unparse_cmpr,
-        "sprl": _unparse_sprl
+        "deadj": _unparse_deadj
     }
 
     def _unparse_and_postprocess(
@@ -489,7 +524,7 @@ def main():
         return output
 
     def _maybe_unparse_and_postprocess(
-        lemma: str,
+        base_lemma: str,
         gml: pd.DataFrame,
         cache: dict,
         postprocess: Optional[Literal["", "inf", "deverb", "p2", "p1", "adj", "cmpr", "sprl"]]="",
@@ -497,8 +532,8 @@ def main():
     ) -> tuple:
         # if in cache, return cached value,
         # otherwise, look up, analyze, and cache
-        if lemma in cache:
-            return cache[lemma]
+        if base_lemma in cache:
+            return cache[base_lemma]
         # Since in morphemic structures of CELEX entries,
         # stems are specified without their respective lemma ids,
         # we can only rely on lemmas themselves to look up these stems.
@@ -509,18 +544,18 @@ def main():
         # as a wordform and not as a lemma (scenario 2) whereas 
         # if there are multiple lemmas for the same lexicalized stem,
         # there is no way to disambiguate them (scenario 0).
-        lex_f_entries = gml[
-            (gml["lemma"] == lemma) &
+        f_lemma_entries = gml[
+            (gml["lemma"] == base_lemma) &
             # we ignore lexicalized lemmas as they 
             # are always underspecified
             (gml["morphemic_schema"] != "F")
         ]
-        if not len(lex_f_entries):
+        if not len(f_lemma_entries):
             # route for scenario 2
             return False, True # (not found, try as wordform)
-        elif len(lex_f_entries) == 1:
+        elif len(f_lemma_entries) == 1:
             return _unparse_and_postprocess(
-                lex_f_entries.iloc[0],
+                f_lemma_entries.iloc[0],
                 postprocess=postprocess,
                 **postprocessing_kwargs
             )
@@ -543,20 +578,276 @@ def main():
             # morphemic properties respectively yield omonimous
             # derivates will be dealt with at the final filtering stage.
             if (
-                len(pd.unique(lex_f_entries["morphemic_structure"])) == 1
-                and len(pd.unique(lex_f_entries["morphemic_schema"])) == 1
+                len(pd.unique(f_lemma_entries["morphemic_structure"])) == 1
+                and len(pd.unique(f_lemma_entries["morphemic_schema"])) == 1
             ):
                 # might have joint the condition with the previous one
                 # but for readability kept it separate
-                return _unparse_and_postprocess(
-                    lex_f_entries.iloc[0],
+                output = _unparse_and_postprocess(
+                    f_lemma_entries.iloc[0],
                     postprocess=postprocess,
                     **postprocessing_kwargs
                 )
+                cache[base_lemma] = output
+                return output
             else:
                 return False, False # (ambiguous, do not try)
-
+            
     def _resolve_lexicalized_flexion(
+        row: pd.Series,
+        gml: pd.DataFrame,
+        cache: dict,
+        f_lemma: str
+    ):
+        
+        if f_lemma in cache:
+            return cache[f_lemma]
+        
+        # For scenario 2, CELEX is not very consistent either;
+        # however, it is possible un unravel the structure
+        # of most of the stems based on their inflected form codes
+        # (see more in the CELEX documentation, 5-84).
+        # we have fornd the following possibilities for scenario 2:
+        #
+        # 1. Deverbal nouns:
+        #
+        #   1.1. Converted deverbals: have a code `i` and (almost)
+        #       always are also followed by codes `13PIE` and `13PKE`:
+        #       plural indicative or conjunctive of 1 or 3 person:
+        #       'glauben', 'kommen' etc.
+        #       In principal, they should not eventually be analyzed
+        #       here as most (if not all) of them have a full analysis
+        #       in `gml.cd` (scenario 1); however, we add a fallback
+        #       here just in case: we return the verb's morphemic
+        #       structure/schema plus -en infinitive (alternatively: conversion)
+        #       suffix as CELEX does not include it.
+        #
+        #   1.2. Derived deverbals; for some reason, CELEX
+        #       wants to analyze such stems as verbal forms and so
+        #       they are recognizable by corresponding verbform codes:
+        #       'abfahrt' `2PIE`, 'abschnitt' `13SIA`,
+        #       'bedarf' `1SIE,3SIE` (why not `13SIE`?),
+        #       'beitritt' `3SIE`, 'umfrage' and 'vorhersage' `1SIE,13SKE`,
+        #       'wasche' `1SIE,13SKE,rS`, and much more. In this case,
+        #       we look up the morphemic structure/schema of the 
+        #       original verb stem and return it plus whatever
+        #       explicit suffix is used (e.g. 0 for 'Abfahrt',
+        #       -e for 'wasche', etc.).
+        #
+        # 2. Participles:
+        #
+        #   2.1. Partizip II forms: have code `pA`:
+        #       e.g. 'abgeklaert', 'versandt' etc.;
+        #       in case of strong verbs whose PII form
+        #       is identical to their infinitive, are followed
+        #       by `13PIE`, `13PKE`, and `i` codes:
+        #       'entkommen', 'erlesen'.
+        #       In this case, we look up the morphemic structure/schema
+        #       of the original verb stem and modify it
+        #       to add PII suffix -t/-en and PII prefix ge- if applicable.
+        #       In the latter case, they are indistinguishable
+        #       from converted deverbals (see 1.1 above)
+        #       and must have a full analysis in `gml.cd`.
+        #       Even if otherwise, no additional fallback 
+        #       is required since the general unparsing function
+        #       for participles already handles this case.
+        #
+        #   2.2. Partizip I forms: have code `pE`:
+        #       e.g. 'stehend', 'laufend' etc.
+        #       In this case, we look up the morphemic structure/schema
+        #       of the original verb stem and modify it
+        #       to add PI suffix -end.
+        #
+        # 3. Deadjectival nouns:
+        #
+        #   3.1. Weak deadjectival nouns: have code `oN`, where
+        #       N is a digit coding the inflexional suffix:
+        #       e.g. 'kitzelig' `o0`, 'arme' `o4`, 'liegendem' `o7` etc.
+        #       Both adjectives and any participles can
+        #       be the base of such nouns. In first case,
+        #       we look up the morphemic structure/schema
+        #       of the original adjective stem and modify it
+        #       inflextional suffix with respect to the `oN` code (mostly -e).
+        #       In second case, we need to pass the participle
+        #       through the participle unparsing function. 
+        #
+        #   3.2. Comparative adjective forms: have code `cN`, where
+        #       N is a digit (mostly 0) coding the inflexional suffix:
+        #       e.g. 'besser' `c0`, 'kritischere' `c4`, 'exklusiverem' `c7` etc.
+        #       In this case, we look up the morphemic structure/schema
+        #       of the original adjective stem and modify it
+        #       to add comparative suffix -er and inflextional suffix
+        #       with respect to the `cN` code (mostly zero).
+        #
+        #   3.3. Superlative adjective forms: have code `uN`, where
+        #       N is a digit (mostly 0) coding the inflexional suffix:
+        #       e.g. 'best' `u0`, 'bestimmtste' `u4`, 'suessestem' `u7` etc.
+        #       In this case, we look up the morphemic structure/schema
+        #       of the original adjective stem and modify it
+        #       to add comparative suffix -st and inflextional suffix
+        #       with respect to the `uN` code (mostly zero).
+        #
+        # From verbal forms, infinitives, pA, and pE are the simplest to unparse
+        # since they only have one-two scenarios to unparse each;
+        # derived deverbals deverbals are much more complicated since
+        # there are many different verb forms that can be bases
+        # for such nouns and their respective suffixes.
+        # In cases of syncretism between the two groups
+        # (e.g. 'belächelt' `3SIE,2PIE,2PKE,rP,pA`),
+        # it is much more efficient to unparse it by scenario
+        # of the first group rather that by scenario of derived deverbals.
+        # Moreover, there is a fact that forces us to unparse
+        # those even after deadjectival forms.
+        # Almost all PIIs exist in `gwd.cd` as `pA` of a verb and
+        # as a `o0` of the PII itself; it becomes critical
+        # when the `oX` form of a PII coincides with one of the derived
+        # deverbals. In this case, if we process the latter before deadjectivals,
+        # we will get an incorrect morphemic structure/schema of a deverbal
+        # rather than the correct one of a PII. For example,
+        # 'reformierte' exists as 'reformierte' `o4` that lead us to
+        # 'reformiert' `o0` that leads us to 'reformiert' `3SIE,2PIE,rP,pA`
+        # which results in correct `re-form-ier-t-e xRxxx`. Instead,
+        # if we processed derived deverbals first, we would first catch
+        # 'reformierte' as 'reformiert' `13SIA,13SKA`, which would result
+        # in incorrect `re-form-ier-te xRxx`.
+        # 
+        # Deadjectival nouns are otherwise mostly straightforward since
+        # they appear independently (no mixture of verbal and adjectival
+        # codes is observed) and there are only two cases of
+        # syncretism: `06,c0` and `o0,o4` for adjectives ending with -e.
+        # However, there is one edge case that forces us
+        # to process weak deadjectival nouns before verbal forms.
+        #
+        # Thus, we will first try to unparse verbal forms
+        # as infinitives, pA, or pE if possible, then
+        # move to deadjectivals, and finally
+        # try to unparse derived deverbals.
+
+        # match the codes to the scenarios above
+        lemma = row["lemma"]
+        par_codes_str = row["paradigm_code"]
+        par_codes = par_codes_str.split(",")
+
+        args = (lemma, gml, cache)
+
+        # 1.1. Converted deverbals
+        # if there are other codes besides `i`, they are ignored
+        # since the form can already be unparsed as infinitive
+        if "i" in par_codes:
+            # no changes needed
+            morph_struct, morph_schema = _maybe_unparse_and_postprocess(
+                *args, postprocess="inf"
+            )
+
+        # 2.1. Partizip II
+        # if there are other codes besides `pA`, they are ignored
+        # since the form can already be unparsed as PII
+        elif "pA" in par_codes:
+            # add PII suffix -t/-en and PII prefix ge- if applicable
+            morph_struct, morph_schema = _maybe_unparse_and_postprocess(
+                *args, postprocess="p2", f_lemma=f_lemma
+            )
+
+        # 2.2. Partizip I
+        # pE always appears alone
+        elif "pE" in par_codes:
+            # add PI suffix -end
+            morph_struct, morph_schema = _maybe_unparse_and_postprocess(
+                *args, postprocess="p1"
+            )
+
+        # # 3.1. Weak deadjectival nouns
+        # # 3.2. Comparative adjective forms
+        # # 3.3. Superlative adjective forms
+        elif re.search(r"[ocu]\d", par_codes_str):
+            # in rare cases of syncretism
+            # (`o0,o4` and `c0,06`),
+            # it is in both cases easier to process
+            # the first: `x0`
+            par_code = par_codes[0]
+            # for deadjectivals, we have two cases:
+            # either these are real adjectives,
+            # or participles used as adjectives,
+            # in which case theses are duplicate entries
+            # identical to the corresponding PII/PI forms
+            # but marked as deadjectivals (e.g.
+            # there is 'abgeklärt' `pA` and `o0`, same holds
+            # for many of PIIs/PIs).
+            # Because of that, we will first check if there is
+            # an identical PII/PI form and if yes, we will
+            # parse it insdead. Otherwise, we will parse
+            # it as an adjective.
+            possible_p2_forms = gmw[
+                (gmw["wordform"] == lemma.lower())
+                & (gmw["paradigm_code"].str.contains("pA"))
+            ]
+            possible_p1_forms = gmw[
+                (gmw["wordform"] == lemma.lower())
+                & (gmw["paradigm_code"].str.contains("pE"))
+            ]
+            if len(possible_p2_forms) == 1:
+                # found the identical PII form,
+                # parse it instead
+                ident_p2_lemma = possible_p2_forms.iloc[0]["lemma"]
+                # parse as PII
+                morph_struct, morph_schema = _maybe_unparse_and_postprocess(
+                    # in this case, the adjective stores the participle
+                    # as its lemma as it's lexicalized
+                    ident_p2_lemma, gml, cache, postprocess="p2",
+                    f_lemma=lemma, inflect_code=par_code[1]
+                )
+            elif len(possible_p1_forms) == 1:
+                # found the identical PI form,
+                # parse it instead
+                ident_p1_lemma = possible_p1_forms.iloc[0]["lemma"]
+                # parse as PI
+                morph_struct, morph_schema = _maybe_unparse_and_postprocess(
+                    # in this case, the adjective stores the participle
+                    # as its lemma as it's lexicalized
+                    ident_p1_lemma, gml, cache, postprocess="p1",
+                    inflect_code=par_code[1]
+                )
+            else:
+                # add inflexional suffix if applicable, e.g. -e for 'abgeornete'
+                morph_struct, morph_schema = _maybe_unparse_and_postprocess(
+                    *args, postprocess="deadj", par_code=par_code
+                )
+
+        # 1.2. Derived deverbals
+        # NB! must be checked the last (explanation above);
+        # can consist of several codes,
+        # each of them being either personal form:
+        # person(s) (1/2/3) + number (S/P) + mood (I/K) + tense (E/A),
+        # or imperative form: (r) + number (S/P)
+        elif re.search(r"[123]{1,3}[SP][IK][EA]|(r[SP])", par_codes_str):
+            # add derivative suffix if applicable, e.g. -e for 'Wasche'
+            morph_struct, morph_schema = _maybe_unparse_and_postprocess(
+                *args, postprocess="deverb", f_lemma=f_lemma, par_codes_str=par_codes_str
+            )
+
+        # scenario 3: no known/relevant analysis found
+        else:
+            morph_struct, morph_schema = None, None
+        
+        # now check for successful unparsing since
+        # `_maybe_unparse_and_postprocess` might return
+        # `(False, X)` if no or ambiguous analyses found,
+        # e.g. `(False, True)` for `abgefeimt`;
+        # in this case, both no and ambiguous analyses
+        # lead to skipping the entry
+        # (as opposed to initial lemma lookup where
+        # we could try to look it up as a wordform)
+        if morph_struct:
+            output = (morph_struct, morph_schema)
+        
+        # scenario 3/0: none/ambiguous analyses found
+        else:
+            output = (None, None)
+
+        cache[f_lemma] = output
+        return output
+
+    def _resolve_lexicalized_flexions(
         row: pd.Series,
         gml: pd.DataFrame,
         gmw: pd.DataFrame,
@@ -596,260 +887,103 @@ def main():
         # 3. No analysis is provided in `gml.cd` and `gmw.cd`
         #   contains no or multiple analyses. Unreliable, skip.
 
+        orig_morph_struct = row["morphemic_structure"]
+        orig_morph_schema = row["morphemic_schema"]
+
         # first, all non-F entries are returned as is
-        if row["pos"] != "N" or "F" not in row["morphemic_schema"]:
-            return row["morphemic_structure"], row["morphemic_schema"]
+        if row["pos"] != "N" or "F" not in orig_morph_schema:
+            return orig_morph_struct, orig_morph_schema
         
         # identify the F itself
-        lex_f = row["morphemic_structure"].split("-")[row["morphemic_schema"].index("F")]
+        orig_morphemes = orig_morph_struct.split("-")
+        f_lemma_ind = orig_morph_schema.index("F")
+        f_lemma = orig_morphemes[f_lemma_ind]
         
         # try for scenario 1: lexicalized F(lexion) noun is
         #   present as a separate lemma in `gml.cd`,
         #   and its full analysis is provided
-        morph_struct, morph_scheme = _maybe_unparse_and_postprocess(lex_f, gml, cache)
+        morph_struct, morph_schema = _maybe_unparse_and_postprocess(f_lemma, gml, cache)
         
         # it worked, scenario 1
         if morph_struct:
-            output = (morph_struct, morph_scheme)
+            output = (morph_struct, morph_schema)
         
         # scenario 0: ambiguous analyses found
-        elif (not morph_struct) and (not morph_scheme):
+        elif (not morph_struct) and (not morph_schema):
             output = (None, None)
 
-        else:   # try for scenario 2
+        # try for scenario 2
+        else:
 
-            # For scenario 2, CELEX is not very consistent either;
-            # however, it is possible un unravel the structure
-            # of most of the stems based on their inflected form codes
-            # (see more in the CELEX documentation, 5-84).
-            # we have fornd the following possibilities for scenario 2:
-            #
-            # 1. Deverbal nouns:
-            #
-            #   1.1. Converted deverbals: have a code `i` and (almost)
-            #       always are also followed by codes `13PIE` and `13PKE`:
-            #       plural indicative or conjunctive of 1 or 3 person:
-            #       'glauben', 'kommen' etc.
-            #       In principal, they should not eventually be analyzed
-            #       here as most (if not all) of them have a full analysis
-            #       in `gml.cd` (scenario 1); however, we add a fallback
-            #       here just in case: we return the verb's morphemic
-            #       structure/schema plus -en infinitive (alternatively: conversion)
-            #       suffix as CELEX does not include it.
-            #
-            #   1.2. Derived deverbals; for some reason, CELEX
-            #       wants to analyze such stems as verbal forms and so
-            #       they are recognizable by corresponding verbform codes:
-            #       'abfahrt' `2PIE`, 'abschnitt' `13SIA`,
-            #       'bedarf' `1SIE,3SIE` (why not `13SIE`?),
-            #       'beitritt' `3SIE`, 'umfrage' and 'vorhersage' `1SIE,13SKE`,
-            #       'wasche' `1SIE,13SKE,rS`, and much more. In this case,
-            #       we look up the morphemic structure/schema of the 
-            #       original verb stem and return it plus whatever
-            #       explicit suffix is used (e.g. 0 for 'Abfahrt',
-            #       -e for 'wasche', etc.).
-            #
-            # 2. Participles:
-            #
-            #   2.1. Partizip II forms: have code `pA`:
-            #       e.g. 'abgeklaert', 'versandt' etc.;
-            #       in case of strong verbs whose PII form
-            #       is identical to their infinitive, are followed
-            #       by `13PIE`, `13PKE`, and `i` codes:
-            #       'entkommen', 'erlesen'.
-            #       In this case, we look up the morphemic structure/schema
-            #       of the original verb stem and modify it
-            #       to add PII suffix -t/-en and PII prefix ge- if applicable.
-            #       In the latter case, they are indistinguishable
-            #       from converted deverbals (see 1.1 above)
-            #       and must have a full analysis in `gml.cd`.
-            #       Even if otherwise, no additional fallback 
-            #       is required since the general unparsing function
-            #       for participles already handles this case.
-            #
-            #   2.2. Partizip I forms: have code `pE`:
-            #       e.g. 'stehend', 'laufend' etc.
-            #       In this case, we look up the morphemic structure/schema
-            #       of the original verb stem and modify it
-            #       to add PI suffix -end.
-            #
-            # 3. Deadjectival nouns:
-            #
-            #   3.1. Weak deadjectival nouns: have code `oN`, where
-            #       N is a digit coding the inflexional suffix:
-            #       e.g. 'kitzelig' `o0`, 'arme' `o4`, 'liegendem' `o7` etc.
-            #       Both adjectives and any participles can
-            #       be the base of such nouns. In first case,
-            #       we look up the morphemic structure/schema
-            #       of the original adjective stem and modify it
-            #       inflextional suffix with respect to the `oN` code (mostly -e).
-            #       In second case, we need to pass the participle
-            #       through the participle unparsing function. 
-            #
-            #   3.2. Comparative adjective forms: have code `cN`, where
-            #       N is a digit (mostly 0) coding the inflexional suffix:
-            #       e.g. 'besser' `c0`, 'kritischere' `c4`, 'exklusiverem' `c7` etc.
-            #       In this case, we look up the morphemic structure/schema
-            #       of the original adjective stem and modify it
-            #       to add comparative suffix -er and inflextional suffix
-            #       with respect to the `cN` code (mostly zero).
-            #
-            #   3.3. Superlative adjective forms: have code `uN`, where
-            #       N is a digit (mostly 0) coding the inflexional suffix:
-            #       e.g. 'best' `u0`, 'bestimmtste' `u4`, 'suessestem' `u7` etc.
-            #       In this case, we look up the morphemic structure/schema
-            #       of the original adjective stem and modify it
-            #       to add comparative suffix -st and inflextional suffix
-            #       with respect to the `uN` code (mostly zero).
-            #
-            # From verbal forms, infinitives, pA, and pE are the simplest to unparse
-            # since they only have one-two scenarios to unparse each;
-            # derived deverbals deverbals are much more complicated since
-            # there are many different verb forms that can be bases
-            # for such nouns and their respective suffixes.
-            # In cases of syncretism between the two groups
-            # (e.g. 'belächelt' `3SIE,2PIE,2PKE,rP,pA`),
-            # it is much more efficient to unparse it by scenario
-            # of the first group rather that by scenario of derived deverbals.
-            # Moreover, there is a fact that forces us to unparse
-            # those even after deadjectival forms.
-            # Almost all PIIs exist in `gwd.cd` as `pA` of a verb and
-            # as a `o0` of the PII itself; it becomes critical
-            # when the `oX` form of a PII coincides with one of the derived
-            # deverbals. In this case, if we process the latter before deadjectivals,
-            # we will get an incorrect morphemic structure/schema of a deverbal
-            # rather than the correct one of a PII. For example,
-            # 'reformierte' exists as 'reformierte' `o4` that lead us to
-            # 'reformiert' `o0` that leads us to 'reformiert' `3SIE,2PIE,rP,pA`
-            # which results in correct `re-form-ier-t-e xRxxx`. Instead,
-            # if we processed derived deverbals first, we would first catch
-            # 'reformierte' as 'reformiert' `13SIA,13SKA`, which would result
-            # in incorrect `re-form-ier-te xRxx`.
-            # 
-            # Deadjectival nouns are otherwise mostly straightforward since
-            # they appear independently (no mixture of verbal and adjectival
-            # codes is observed) and there are only two cases of
-            # syncretism: `06,c0` and `o0,o4` for adjectives ending with -e.
-            # However, there is one edge case that forces us
-            # to process weak deadjectival nouns before verbal forms.
-            #
-            # Thus, we will first try to unparse verbal forms
-            # as infinitives, pA, or pE if possible, then
-            # move to deadjectivals, and finally
-            # try to unparse derived deverbals.
-
-            lex_f_forms = gmw[gmw["wordform"] == lex_f.lower()]
+            f_lemma = f_lemma.lower()
+            f_lemma_forms = gmw[gmw["wordform"] == f_lemma]
 
             # scenario 3: no analyses found
-            if not len(lex_f_forms):
+            if not len(f_lemma_forms):
                 output = (None, None)
             
             # scenario 2: analyses found
-            elif len(lex_f_forms) == 1: # simple case: only one analysis found
+            elif len(f_lemma_forms) == 1: # simple case: only one analysis found
 
-                # match the codes to the scenarios above
-                lemma = lex_f_forms.iloc[0]["lemma"]
-                par_codes_str = lex_f_forms.iloc[0]["paradigm_code"]
-                par_codes = par_codes_str.split(",")
-
-                args = (lemma, gml, cache)
-
-                # 1.1. Converted deverbals
-                # if there are other codes besides `i`, they are ignored
-                # since the form can already be unparsed as infinitive
-                if "i" in par_codes:
-                    # no changes needed
-                    morph_struct, morph_schema = _maybe_unparse_and_postprocess(
-                        *args, postprocess="inf"
-                    )
-
-                # 2.1. Partizip II
-                # if there are other codes besides `pA`, they are ignored
-                # since the form can already be unparsed as PII
-                elif "pA" in par_codes:
-                    # add PII suffix -t/-en and PII prefix ge- if applicable
-                    morph_struct, morph_schema = _maybe_unparse_and_postprocess(
-                        *args, postprocess="p2", f_lemma=lex_f
-                    )
-
-                # 2.2. Partizip I
-                # pE always appears alone
-                elif "pE" in par_codes:
-                    # add PI suffix -end
-                    morph_struct, morph_schema = _maybe_unparse_and_postprocess(
-                        *args, postprocess="p1"
-                    )
-
-                # # 3.1. Weak deadjectival nouns
-                # elif re.search(r"^o\d$", par_codes[0]):
-
-                #     pass
-
-                # # 3.2. Comparative adjective forms
-                # elif re.search(r"^c\d$", par_codes[0]):
-
-                #     pass
-
-                # # 3.3. Superlative adjective forms
-                # elif re.search(r"^u\d$", par_codes[0]):
-
-                #     pass
-
-                # 1.2. Derived deverbals
-                # NB! must be checked the last (explanation above);
-                # can consist of several codes,
-                # each of them being either personal form:
-                # person(s) (1/2/3) + number (S/P) + mood (I/K) + tense (E/A),
-                # or imperative form: (r) + number (S/P)
-                elif re.search(r"[123]{1,3}[SP][IK][EA]|(r[SP])", par_codes_str):
-                    # add derivative suffix if applicable, e.g. -e for 'Wasche'
-                    morph_struct, morph_schema = _maybe_unparse_and_postprocess(
-                        *args, postprocess="deverb", f_lemma=lex_f, par_codes_str=par_codes_str
-                    )
-
-                # scenario 3: no known/relevant analysis found
-                else:
-                    morph_struct, morph_schema = None, None
-                
-                # now check for successful unparsing since
-                # `_maybe_unparse_and_postprocess` might return
-                # `(False, X)` if no or ambiguous analyses found,
-                # e.g. `(False, True)` for `abgefeimt`;
-                # in this case, both no and ambiguous analyses
-                # lead to skipping the entry
-                # (as opposed to initial lemma lookup where
-                # we could try to look it up as a wordform)
-                if morph_struct:
-                    output = (morph_struct, morph_schema)
-                
-                # scenario 3/0: none/ambiguous analyses found
-                else:
-                    output = (None, None)
-
-
+                f_lemma_info = f_lemma_forms.iloc[0]
+                output = _resolve_lexicalized_flexion(
+                    f_lemma_info, gml, cache, f_lemma
+                )
 
             else:
 
-                # TODO
-                output = (None, None)
+                # most of the cases with multiple analyses
+                # is due to the fact that many participles
+                # exist both as `pA` and as its
+                # lexicalized verrsion as a deadjectival `oX`;
+                # however, in order to make the processing
+                # here simpler and more robust, we will
+                # just unparse each of the analyses separately
+                # and check if they all lead to the same output;
+                # if yes, we take that output, otherwise skip;
+                # it will also not be too much slower since
+                # in case of the duplicates, the second time around
+                # will be found in the cache
+                morph_structs = set()
+                morph_schemas = set()
+                for _, f_lemma_info in f_lemma_forms.iterrows():
+                    morph_struct, morph_schema = _resolve_lexicalized_flexion(
+                        f_lemma_info, gml, cache, f_lemma
+                    )
+                    # either None, None, or actual values
+                    morph_structs.add(morph_struct)
+                    morph_schemas.add(morph_schema)
 
-                pass
+                if len(morph_structs) == 1 and len(morph_schemas) == 1:
+                    output = (
+                        morph_structs.pop(),
+                        morph_schemas.pop()
+                    )
+                else:
+                    output = (None, None)
 
-
-
-
-
-            cache[lex_f] = output
-
-            # insert it insdead of F
-            pass
-
+        # finally, we need to replace the F in the
+        # morphemic structure/schema of the original entry
+        # with the resolved values if non Nones
+        if output == (None, None):
+            return None, None
+        
+        else:
+            morph_struct, morph_schema = output
+            # replace F with resolved values
+            orig_morphemes[f_lemma_ind] = morph_struct # to be concatenated back
+            new_morph_struct = "-".join(orig_morphemes)
+            # always 1 F can be present
+            new_morph_schema = orig_morph_schema.replace("F", morph_schema)
+            return new_morph_struct, new_morph_schema
 
     _parsing_cache = {}
-    gml[["morphemic_structure", "morphemic_schema"]] = gml.apply(
-        # pass gml and gmw for lookups
-        lambda row: _resolve_lexicalized_flexion(row, gml, gmw, _parsing_cache),
-        axis=1
+    gml["morphemic_structure"], gml["morphemic_schema"] = zip(
+        *gml.apply(
+            # pass gml and gmw for lookups
+            lambda row: _resolve_lexicalized_flexions(row, gml, gmw, _parsing_cache),
+            axis=1
+        )
     )
 
     # drop records with any missing fields after
