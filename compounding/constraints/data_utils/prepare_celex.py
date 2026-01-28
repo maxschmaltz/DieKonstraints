@@ -1155,7 +1155,10 @@ def main():
             language="deu"
         # for some reason maps German ʁ as r,
         # ignore cases before consonants like He[ɐ̯]bst
-        ).replace("r", "ʁ")
+        ).replace("r", "ʁ") \
+        # irrelevant for the constraints
+        # but requires more complex processing
+        .replace("ː", "")
     )
 
 
