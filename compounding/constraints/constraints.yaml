@@ -891,7 +891,7 @@ constraints:
         coverage: NA
 
         examples_pro: [reiter_schwert, gürtel_schnalle, brötchen_geber]
-        examples_contra: [reiter_+s_mann]
+        examples_contra: [alter_+s_abstand, reiter_+s_mann]
 
         evidence:
 
@@ -1946,7 +1946,7 @@ constraints:
 
     l2p:er:
     
-        summary: er-plural nouns (these are few words, mostly N and some M, mostly simplices and never loanwords) is the only class of words that can attach =er=.
+        summary: er-plural nouns is the only class of words that can attach =er=.
         type: [morphological]
 
         func_alias: er_par
@@ -1976,10 +1976,10 @@ constraints:
 
             - ref: ortner_müller-bollhagen_1991
               pages: [98]
-              summary: =er= is always paradigmatic and attaches mostly to N and to some M, mostly simplices, no loanwords.
+              summary: =er= is always paradigmatic [and attaches mostly to N and to some M, mostly simplices, no loanwords].
               
         footnotes:
-            "1": "[kürschner_2010:18] also mentions: '-er- occurs only after nouns with the stressed last syllable'; however, to the best of our knowledge, this always holds for er-plural nouns and, hence, for the nouns in question since =er= is always paradigmatic."
+            "1": "[kürschner_2010:18] also mentions: '-er- occurs only after nouns with the stressed last syllable'; however, to the best of our knowledge, this always holds for er-plural nouns and, hence, for the nouns in question, since =er= is always paradigmatic."
 
 
 
@@ -1988,7 +1988,7 @@ constraints:
         summary: Nouns forming the plural with -e and umlaut is the only class of words that can attach -e- with umlaut.
         type: [morphological]
 
-        func_alias: e_ulm_par
+        func_alias: e_uml_par
         regularity: NA
         coverage: NA
 

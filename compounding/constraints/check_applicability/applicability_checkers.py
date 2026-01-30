@@ -252,6 +252,13 @@ def _is_last_syl_stressed(lemma: str) -> bool:
 		or _is_monosyllabic(lemma)
 	)
 
+# Helper for frequency check
+
+def _get_frequency(lemma: str) -> int:
+	lemma_info = celex.loc[lemma]
+	return int(lemma_info["freq"])
+
+
 
 # Functions for applicability checks
 
@@ -449,7 +456,11 @@ def sfx_pl_0_is_applicable(compound: Compound):
 			n1,
 			["er", "ler", "ner", "el", "sel", "chen", "lein"]
 		)
-		and _is_of_zero_plural(n1)
+		and (
+			# for cases like 'Alter'
+			_has_no_plural(n1)
+			or _is_of_zero_plural(n1)
+		)
 	)
 
 def sfx_pl_0_applies(compound: Compound):
@@ -894,19 +905,56 @@ def sonority_applies(compound: Compound):
 #
 # In simplexes, -s- occurs only in few masculine and neuter nouns 
 # except for a few cases.
-# TODO
+
+def s_smpx_is_applicable(compound: Compound):
+	return (
+		_has_linker(compound, linker_morph="s")
+		and _is_simplex(compound.stems[0].morph)
+	)
+
+def s_smpx_applies(compound: Compound):
+	n1 = compound.stems[0].morph
+	# simplex condition already checked in applicability
+	return (
+		_is_of_gender(n1, "m")
+		or _is_of_gender(n1, "n")
+	)
 
 
 # l2p:s|smpx_high_freq
 #
 # Many simplexes with an -s- are high frequent tokens.
-# TODO
+
+def s_freq_is_applicable(compound: Compound):
+	return (
+		_has_linker(compound, linker_morph="s")
+		and _is_simplex(compound.stems[0].morph)
+	)
+
+def s_freq_applies(compound: Compound):
+	# arbitrary measure for "high" frequency;
+	# DeReKo is an enormous corpus so
+	# "frequent" on its scales is measured
+	# in millions (e.g. 'Land' has freq ~8.9M)
+	return _get_frequency(compound.stems[0].morph) > 500_000
 
 
 # l2p:s|f
 #
-# -s- can occur with F only if it is a morphological complex and/or polysyllabic F.
-# TODO
+# -s- can occur with F only if it is a morphologically complex and/or polysyllabic F.
+
+def s_f_cmpx_is_applicable(compound: Compound):
+	return (
+		_has_linker(compound, linker_morph="s")
+		and _is_of_gender(compound.stems[0].morph, "f")
+	)
+
+def s_f_cmpx_applies(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_is_derived(n1)	# at least one additional morpheme
+		or not _is_monosyllabic(n1)
+	)
 
 
 
@@ -914,14 +962,28 @@ def sonority_applies(compound: Compound):
 #
 # Nouns ending in schwa is the only class of words that 
 # can attach the allomorph -n- of the en-linker.
-# TODO
+
+def n_schwa_is_applicable(compound: Compound):
+	return (
+		_has_linker(compound, linker_morph="en")
+		and compound.linkers[0].allomorph == "n"
+	)
+
+def n_schwa_applies(compound: Compound):
+	return _ends_with_phon_schwa(compound.stems[0].morph)
 
 
 
 # l2p:en|par
 #
 # Only nouns forming the plural with -(e)n can attach -(e)n- as a linking element.
-# TODO
+
+def en_par_is_applicable(compound: Compound):
+	# general restriction
+	return _has_linker(compound, linker_morph="en")
+
+def en_par_applies(compound: Compound):
+	return _is_of_plural(compound.stems[0].morph, "en")
 
 
 # l2p:en|non_par_m
@@ -945,16 +1007,29 @@ def sonority_applies(compound: Compound):
 #
 # e-plural nouns with stressed last syllable is the only class of words 
 # that can attach -e-.
-# TODO
+
+def e_par_is_applicable(compound: Compound):
+	return _has_linker(compound, linker_morph="e")
+
+def e_par_applies(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_is_of_plural(n1, "e")
+		and _is_last_syl_stressed(n1)
+	)
 
 
 
 # l2p:er
 #
-# er-plural nouns (these are few words, mostly N and some M, 
-# mostly simplices and never loanwords) is the only class of words 
+# er-plural nouns is the only class of words 
 # that can attach =er=.
-# TODO
+
+def er_par_is_applicable(compound: Compound):
+	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
+
+def er_par_applies(compound: Compound):
+	return _is_of_plural(compound.stems[0].morph, "er", adds_umlaut=True)
 
 
 
@@ -962,7 +1037,12 @@ def sonority_applies(compound: Compound):
 #
 # Nouns forming the plural with -e and umlaut is the only class of words 
 # that can attach -e- with umlaut.
-# TODO
+
+def e_uml_par_is_applicable(compound: Compound):
+	return _has_linker(compound, linker_morph="e", adds_umlaut=True)
+
+def e_uml_par_applies(compound: Compound):
+	return _is_of_plural(compound.stems[0].morph, "e", adds_umlaut=True)
 
 
 
@@ -988,4 +1068,9 @@ def sonority_applies(compound: Compound):
 #
 # Nouns forming the plural with a zero ending and umlaut is the only class of words 
 # that can attach a zero linker with umlaut.
-# TODO
+
+def zero_uml_par_is_applicable(compound: Compound):
+	return _has_linker(compound, linker_morph="", adds_umlaut=True)
+
+def zero_uml_par_applies(compound: Compound):
+	return _is_of_plural(compound.stems[0].morph, "", adds_umlaut=True)
