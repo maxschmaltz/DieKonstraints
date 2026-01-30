@@ -1,8 +1,12 @@
 import os
-import requests
+import asyncio
+import aiohttp
+import pandas as pd
+from tqdm.asyncio import tqdm_asyncio
 from dotenv import load_dotenv
 
 load_dotenv()
+
 
 # DeReKo is the biggest corpus of contemporary German language,
 # hosted at the Institut für Deutsche Sprache (IDS) in Mannheim, Germany:
@@ -67,7 +71,10 @@ headers = {
 }
 
 
-def dereko_count(lemma: str) -> int:
+async def _get_dereko_count(
+    session: aiohttp.ClientSession, 
+    semaphore: asyncio.Semaphore,
+    lemma: str) -> int:
 
     # docu available under
     # https://korap.ids-mannheim.de/api/v1.0/openapi/
@@ -100,9 +107,83 @@ def dereko_count(lemma: str) -> int:
         "show-snippet": "false"
     }
 
-    response = requests.get(url, headers=headers, params=params)
-    if response.status_code == 200:
-        data = response.json()
-        return data.get("meta", {}).get("totalResults", -1)
+    async with semaphore:  # limit concurrent requests
+        try:
+            async with session.get(
+                url,
+                headers=headers,
+                params=params,
+                timeout=aiohttp.ClientTimeout(total=30)
+            ) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    count = data.get("meta", {}).get("totalResults", -1)
+                    return count
+                else:
+                    return -1
+        except:
+            return -1
+        
+
+async def get_dereko_count(
+    session: aiohttp.ClientSession,
+    semaphore: asyncio.Semaphore,
+    lemma: str,
+    freq_df: pd.DataFrame
+) -> int:
+    if lemma in freq_df.index:
+        return freq_df.loc[lemma, "freq"]
     else:
-        return -1
+        count = await _get_dereko_count(session, semaphore, lemma)
+        # append to freq_df
+        freq_df.loc[lemma] = count
+        return count
+    
+
+async def get_dereko_counts(lemmas: list[str]) -> list[int]:
+
+    # since querying DeReKo can be time-consuming and resource-intensive,
+    # we cache the frequency counts in a separate TSV file shared with GeCoDB compounds;
+    # moreover, to remain consistent with the count retrieval, we replace
+    # original GeCoDB compound frequencies with the ones obtained
+    # under the same procedure as for CELEX nouns, so we offload the frequency
+    # retrieval to this separate module
+
+    outpath = "resources/custom/compounding/intermediate_data"
+    os.makedirs(outpath, exist_ok=True)
+
+    freq_path = os.path.join(outpath, "dereko_de_geq70_counts.tsv")
+
+    if os.path.exists(freq_path):
+        freq_df = pd.read_csv(
+            freq_path,
+            sep="\t",
+            header=0,
+            index_col="entry",  # both lemmas and compounds
+            dtype={"entry": str, "freq": int}
+        )
+    else:
+        # empty freq df
+        freq_df = pd.DataFrame(columns=["entry", "freq"]).set_index("entry")
+
+    max_requests = 25  
+    semaphore = asyncio.Semaphore(max_requests)  # limit concurrent requests
+    connector = aiohttp.TCPConnector(limit=max_requests, limit_per_host=max_requests)
+    
+    async with aiohttp.ClientSession(connector=connector) as session:
+        tasks = [
+            get_dereko_count(session, semaphore, lemma, freq_df) 
+            for lemma in lemmas
+        ]
+        
+        freqs = await tqdm_asyncio.gather(*tasks, desc="Fetching frequencies from KorAP")
+
+    freq_df.to_csv(
+        freq_path,
+        sep="\t",
+        header=True,
+        index=True,
+        index_label="entry"
+    )
+
+    return freqs

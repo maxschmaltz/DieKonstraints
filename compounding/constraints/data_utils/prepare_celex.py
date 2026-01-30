@@ -7,11 +7,16 @@
 # 3. Personal competence in Python, hence, faster development cycle and more reliable code.
 
 import os
+import asyncio
+import aiohttp
 import re
 import pandas as pd
 from phonecodes import phonecodes
 from itertools import product
+from tqdm.asyncio import tqdm
 from typing import Literal, Optional
+
+from dereko_search import get_dereko_counts
 
 
 def main():
@@ -41,7 +46,8 @@ def main():
     #   them to the lemmas in `gml.cd` via lemma ids.
     # 4. `gpl.cd`: 'German Phonology, Lemmas'. This file contains phonological and syllabic information
     #   for the lemmas.
-    # 5. `gfl.cd`: 'German Frequency, Lemmas'. This file contains frequency information for the lemmas.
+    # 5. !`gfl.cd` (disregarded): 'German Frequency, Lemmas'. This file contains frequency information for the lemmas.
+    #   Disregarded since the frequency information turned out to be outdated and unreliable, see below.
 
 
     # To summarize:
@@ -52,7 +58,7 @@ def main():
     # 4. Derivational information.          `gml.cd`
     # 5. Phonological information.          `gpl.cd`
     # 6. Syllabic structure.                `gpl.cd`
-    # 7. Frequency information.             `gfl.cd`
+    # 7. Frequency information.             !`gfl.cd` (disregarded)
 
     celex_path = "resources/Celex/german"
     outpath = "resources/custom/compounding/intermediate_data"
@@ -76,14 +82,11 @@ def main():
     #   of the nouns in the table from step 7. Convert phonological
     #   and notations into IPA.
     # 10. Join the filtered `gpl.cd` table to the table from step 7 on lemma id.
-    # 11. Parse `gfl.cd`.
-    # 12. Filter `gfl.cd` for frequency information of the nouns
-    #   in the table from step 10.
-    # 13. Join the filtered `gfl.cd` table to the table from step 10 on lemma id.
-    # 14. Final processing: filter out lemmas with frequency below a certain threshold,
+    # 11. Query frequency information for the lemmas in the table from step 10.
+    # 12. Final processing: filter out lemmas with frequency below a certain threshold,
     #   filter out weak masculine nouns,
     #   conduct orthographic transformations (umlauts, lowering) etc.
-    # 15. Save the final table as TSV.
+    # 13. Save the final table as TSV.
 
     # Note: intermediate tables are to be filtered at each step
     # by suitable criteria.
@@ -118,6 +121,8 @@ def main():
     #   2. for some nouns the code is missing.
     #   Hence, we will extracting the GenSg and NomPl forms directly from `gmw.cd`.
 
+    print("Parsing morphological info of lemmas")
+
     gml = pd.read_csv(
         os.path.join(celex_path, "gml/gml.cd"),
         sep="\\",
@@ -134,7 +139,7 @@ def main():
     gml = gml.dropna()
 
     # infer morphemic structure and morphemic schema from column 14
-    def _parse_morphemic_structure_schema(drv_steps: str) -> tuple:
+    def _parse_morphemic_structure_schema(drv_steps: str, pbar: tqdm) -> tuple:
 
         morphemic_structure = []
         morphemic_schema = ""
@@ -155,15 +160,17 @@ def main():
             morphemic_structure.append(morpheme)
             morphemic_schema += m_type
 
+        pbar.update(1)
         return "-".join(morphemic_structure), morphemic_schema, pos
     
     # We will filter for nouns later, for now we need 
     # all the analyses to be able to unparse lexicalized F(lexion) stems.
-    gml["morphemic_structure"], gml["morphemic_schema"], gml["pos"] = zip(
-            *gml["drvt_history"].apply(
-                lambda x: _parse_morphemic_structure_schema(x)
+    with tqdm(total=len(gml), desc="Parsing morphemic structure and schema") as pbar:
+        gml["morphemic_structure"], gml["morphemic_schema"], gml["pos"] = zip(
+                *gml["drvt_history"].apply(
+                    lambda x: _parse_morphemic_structure_schema(x, pbar)
+            )
         )
-    )
 
     # drop records with any missing fields repeatedly
     gml = gml.dropna()
@@ -185,6 +192,8 @@ def main():
     #   e.g. 'Mann' has variants 'Mannen' (wc: 5) vs 'Männer' (wc: 989).
     # * Column 4: Lemma id.
     # * Column 5: Paradigm codes (to identify GenSg and NomPl forms).
+
+    print("Parsing wordforms of lemmas")
 
     gmw = pd.read_csv(
         os.path.join(celex_path, "gmw/gmw.cd"),
@@ -865,7 +874,8 @@ def main():
         row: pd.Series,
         gml: pd.DataFrame,
         gmw: pd.DataFrame,
-        cache: dict
+        cache: dict,
+        pbar: tqdm
     ) -> tuple[str, str]:
         
         # The variety of analyses of lexicalized F(lexion) stems in CELEX
@@ -906,6 +916,7 @@ def main():
 
         # first, all non-F entries are returned as is
         if row["pos"] != "N" or "F" not in orig_morph_schema:
+            pbar.update(1)
             return orig_morph_struct, orig_morph_schema
         
         # identify the F itself
@@ -983,6 +994,8 @@ def main():
                     # 'abwiegen' and 'abwägen'
                     output = (None, None)
 
+        pbar.update(1)
+
         # finally, we need to replace the F in the
         # morphemic structure/schema of the original entry
         # with the resolved values if non Nones
@@ -999,13 +1012,16 @@ def main():
             return new_morph_struct, new_morph_schema
 
     _parsing_cache = {}
-    gml["morphemic_structure"], gml["morphemic_schema"] = zip(
-        *gml.apply(
-            # pass gml and gmw for lookups
-            lambda row: _resolve_lexicalized_flexions(row, gml, gmw, _parsing_cache),
-            axis=1
+    with tqdm(total=len(gml), desc="Resolving lexicalized flexions") as pbar:
+        gml["morphemic_structure"], gml["morphemic_schema"] = zip(
+            *gml.apply(
+                # pass gml and gmw for lookups
+                lambda row: _resolve_lexicalized_flexions(
+                    row, gml, gmw, _parsing_cache, pbar
+                ),
+                axis=1
+            )
         )
-    )
 
     # drop records with any missing fields after
     gml = gml.dropna()
@@ -1024,6 +1040,8 @@ def main():
     # * !Column 4 (disregarded): POS. Disregarded since we
     #   already infer POS from `gml.cd`.
     # * Column 5: Gender.
+
+    print("Parsing syntactic info of lemmas")
 
     gsl = pd.read_csv(
         os.path.join(celex_path, "gsl/gsl.cd"),
@@ -1052,6 +1070,8 @@ def main():
 
     # 6. We filter `gmw.cd` for GenSg and NomPl forms of the nouns
     # in the filtered joint table from step 5.
+
+    print("Filtering GenSg and NomPl forms of lemmas")
 
     # remove wordforms of lemmas that are not in `gmsl`
     gmw = gmw[gmw.index.isin(gmsl.index.values)]
@@ -1125,6 +1145,8 @@ def main():
     #   including syllable boundaries and stress marker. Since the latter
     #   are included, we do not need to parse syllabic structure separately.
 
+    print("Parsing phonetic transcriptions of lemmas")
+
     gpl = pd.read_csv(
         os.path.join(celex_path, "gpl/gpl.cd"),
         sep="\\",
@@ -1165,45 +1187,100 @@ def main():
     # 10. We join the filtered `gpl.cd` table to the table from step 7 on lemma id.
     gmsplw = gmslw.join(gpl, how="inner")
 
+
+    # 11. Get frequency counts from KorAP API
+
+    # CELEX contains lemma counts in Mannheim corpus in `gfl.cd`,
+    # and those were used in the previous version of this script:
+
+        # >>> # 11. Parse `gfl.cd`. For reference, see the CELEX documentation
+        # >>> # (5-98) and `gfl/README`.
+
+        # >>> # The following columns are relevant:
+        # >>> # * Column 1: Lemma id.
+        # >>> # * Column 7: Raw count (all wordforms of a lemma) in Mannheim corpus
+        # >>> #   (6M tokens, 5.4M from written, and 0.6M from spoken texts).
+
+        # >>> gfl = pd.read_csv(
+        # >>>     os.path.join(celex_path, "gfl/gfl.cd"),
+        # >>>     sep="\\",
+        # >>>     header=None,
+        # >>>     dtype=str,
+        # >>>     usecols=[0, 6],
+        # >>>     names=["id", "freq"],
+        # >>>     index_col="id"
+        # >>> )
+
+        # >>> # drop records with any missing fields
+        # >>> gfl = gfl.dropna()
+
+
+        # >>> # 12. We filter `gfl.cd` for frequency information of the nouns
+        # >>> # in the table from step 10.
+
+        # >>> gfl = gfl[gfl.index.isin(gmsplw.index.values)]
+
+
+        # >>> # 13. We join the filtered `gfl.cd` table to the table from step 10 on lemma id.
+        # >>> gmspflw = gmsplw.join(gfl, how="inner")
+
+    # However, CELEX frequency counts in `gfl.cd` turned out to be unreliable
+    # and to not match at all the actual counts obtained by searching in Mannheim corpus,
+    # which may be due to the fact that CELEX was compiled in the 1990s
+    # and the corpus content has changed drastically since then.
+    # E.g 'Bäckerei' have 0 and 'Uhu' -- 2 freq in `gfl.cd`,
+    # while in the corpus they (lemmas) are very frequent: 156k, 17k respectively
+    # (via KorAP in all German corpora after 1970s with the query lang Poliqarp).
+    # So instead using `gfl.cd`, we will be querying the frequencies directly from
+    # the Mannheim corpus via KorAP API: https://korap.ids-mannheim.de/.
+        
+    # since we want to be running our function asynchronously,
+    # we don't use `apply` here
+
+    # before searching, we need to process the lemmas in order to 
+    # avoid zero counts due to orthographic mismatches;
+    # capitalize and apply orthographic transformations of umlauts
+    def umlambda(x: str, capitalize: bool) -> str:
+        
+        if pd.isna(x):  # missing Pl forms
+            return None
+        
+        x = x.lower()
+
+        x = re.sub("(?<![aeiouy])ae", "ä", x)
+        x = re.sub("(?<![aeiouy])oe", "ö", x)
+        x = re.sub("(?<![aeiouy])ue", "ü", x)
+
+        if capitalize:
+            x = x.capitalize()
+        
+        return x
     
-    # 11. Parse `gfl.cd`. For reference, see the CELEX documentation
-    # (5-98) and `gfl/README`.
-
-    # The following columns are relevant:
-    # * Column 1: Lemma id.
-    # * Column 7: Raw count (all wordforms of a lemma) in Mannheim corpus
-    #   (6M tokens, 5.4M from written, and 0.6M from spoken texts).
-
-    gfl = pd.read_csv(
-        os.path.join(celex_path, "gfl/gfl.cd"),
-        sep="\\",
-        header=None,
-        dtype=str,
-        usecols=[0, 6],
-        names=["id", "freq"],
-        index_col="id"
+    target_columns = ["morphemic_structure", "gen_sg", "nom_pl"]
+    gmsplw[target_columns] = gmsplw[target_columns].apply(
+        lambda col: col.apply(umlambda, capitalize=False)
+    )
+    gmsplw["lemma"] = gmsplw["lemma"].apply(
+        lambda x: umlambda(x, capitalize=True)
     )
 
-    # drop records with any missing fields
-    gfl = gfl.dropna()
+    lemmas = gmsplw["lemma"].tolist()
+    freqs = asyncio.run(get_dereko_counts(lemmas))
+    gmsplw["freq"] = freqs
+    gmspflw = gmsplw    # rename for consistency with previous version
+
+    # now can lower lemmas back
+    gmspflw["lemma"] = gmspflw["lemma"].str.lower()
 
 
-    # 12. We filter `gfl.cd` for frequency information of the nouns
-    # in the table from step 10.
-
-    gfl = gfl[gfl.index.isin(gmsplw.index.values)]
-
-
-    # 13. We join the filtered `gfl.cd` table to the table from step 10 on lemma id.
-    gmspflw = gmsplw.join(gfl, how="inner")
-
-
-    # 14. Final processing: filter out lemmas with frequency below a certain threshold,
+    # 12. Final processing: filter out lemmas with frequency below a certain threshold,
     # filter out weak masculine nouns,
     # conduct orthographic transformations (umlauts, lowering) etc.
 
+    print("Final filtering and processing of lemmas")
+
     # freq check
-    freq_threshold = 5
+    freq_threshold = 10
     gmspflw = gmspflw[gmspflw["freq"].astype(int) >= freq_threshold]
 
     # filter out weak masculine nouns
@@ -1221,26 +1298,6 @@ def main():
         )
     
     gmspflw = gmspflw[~gmspflw.apply(_is_weak_masculine, axis=1)]
-
-    # lower and apply orthographic transformations of umlauts;
-    # return Nonefor missing Pl forms
-    def umlambda(x: str) -> str:
-        
-        if pd.isna(x):
-            return None
-        
-        x = x.lower()
-
-        x = re.sub("(?<![aeiouy])ae", "ä", x)
-        x = re.sub("(?<![aeiouy])oe", "ö", x)
-        x = re.sub("(?<![aeiouy])ue", "ü", x)
-        
-        return x
-    
-    target_columns = ["lemma", "morphemic_structure", "gen_sg", "nom_pl"]
-    gmspflw[target_columns] = gmspflw[target_columns].apply(
-        lambda col: col.apply(umlambda)
-    )
 
     # filter out one- and two-character lemmas except for
     # 'Ei', 'Öl', 'As' (they are otherwise letter names or interjections)
@@ -1274,7 +1331,9 @@ def main():
     gmspflw = gmspflw.set_index("lemma")
 
 
-    # 15. Save the final table as TSV.
+    print("Saving final table")
+
+    # 13. Save the final table as TSV.
     gmspflw.to_csv(
         os.path.join(outpath, "celex_nouns.tsv"),
         sep="\t",
