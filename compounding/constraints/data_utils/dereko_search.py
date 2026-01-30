@@ -74,7 +74,8 @@ headers = {
 async def _get_dereko_count(
     session: aiohttp.ClientSession, 
     semaphore: asyncio.Semaphore,
-    lemma: str) -> int:
+    lemma: str
+) -> int:
 
     # docu available under
     # https://korap.ids-mannheim.de/api/v1.0/openapi/
@@ -107,8 +108,8 @@ async def _get_dereko_count(
         "show-snippet": "false"
     }
 
-    async with semaphore:  # limit concurrent requests
-        try:
+    try:
+        async with semaphore:  # limit concurrent requests
             async with session.get(
                 url,
                 headers=headers,
@@ -118,11 +119,22 @@ async def _get_dereko_count(
                 if response.status == 200:
                     data = await response.json()
                     count = data.get("meta", {}).get("totalResults", -1)
-                    return count
                 else:
                     return -1
-        except:
-            return -1
+        # release semaphore;
+        # special case with eszett,
+        # which is encoded as ss in CELEX
+        if count == 0 and "ss" in lemma:
+            sz_lemma = lemma.replace("ss", "ß")
+            sz_count = await _get_dereko_count(
+                session, semaphore, sz_lemma
+            )
+            if sz_count > 0:
+                # it means that the lemma ß is correct
+                return sz_count + 0.3   # signalize of the replacement
+        return count
+    except:
+        return -1
         
 
 async def get_dereko_count(
@@ -160,7 +172,8 @@ async def get_dereko_counts(lemmas: list[str]) -> list[int]:
             sep="\t",
             header=0,
             index_col="entry",  # both lemmas and compounds
-            dtype={"entry": str, "freq": int}
+            # to be able to store decimal part for 'ß' cases
+            dtype={"entry": str, "freq": float}
         )
     else:
         # empty freq df

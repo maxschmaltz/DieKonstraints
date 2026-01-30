@@ -1279,9 +1279,26 @@ def main():
 
     print("Final filtering and processing of lemmas")
 
+    # for lemmas with eszett, which are encoded as 'ss' in CELEX,
+    # the frequency search returns a 0.3 decimal part
+    # to indicate that the original lemma contained 'ß';
+    # we need to remove those decimal parts and conduct
+    # the orthographic transformation back to 'ß'
+    sz_entries = gmspflw[(round(gmspflw["freq"] % 1, 1)) == 0.3]
+    target_columns = ["lemma", "morphemic_structure", "gen_sg", "nom_pl"]
+    sz_entries[target_columns] = sz_entries[target_columns].apply(
+        lambda col: col.apply(
+            lambda x: x.replace("ss", "ß") if pd.notna(x) else None
+        )
+    )
+    gmspflw.update(sz_entries)
+
+    # remove the decimal parts from frequencies
+    gmspflw["freq"] = gmspflw["freq"].astype(int)
+
     # freq check
     freq_threshold = 10
-    gmspflw = gmspflw[gmspflw["freq"].astype(int) >= freq_threshold]
+    gmspflw = gmspflw[gmspflw["freq"] >= freq_threshold]
 
     # filter out weak masculine nouns
     # (those that form their GenSg and NomPl with -n or -en suffix)
