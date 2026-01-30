@@ -43,6 +43,9 @@ def _has_no_linker(compound: Compound) -> bool:
 
 # Helper functions for property checks
 
+# TODO: add all this checks to Stem class in order
+# to avoid re-accessing properties multiple times?
+
 # Helper functions for morphological checks
 
 def _is_of_plural(
@@ -111,9 +114,17 @@ def _is_mixed(lemma: str) -> bool:
 
 # Helper function for derivational class checks
 
-def _is_simplex(lemma: str) -> bool:
+def _get_morphemic_schema(lemma: str) -> str:
 	lemma_info = celex.loc[lemma]
-	return lemma_info["morphemic_schema"] == "N"
+	return lemma_info["morphemic_schema"]
+
+def _is_simplex(lemma: str) -> bool:
+	# simplex = only one morpheme; cases of conversion
+	# are marked as derived in CELEX, e.g. 'Leb-en';
+	# also, in some cases CELEX marks simplex nouns
+	# as converted "non-derivationally",
+	# e.g. 'Arbeit' `V` or 'Laut' `A`
+	return len(_get_morphemic_schema(lemma)) == 1
 
 def _is_derived(lemma: str) -> bool:
 	# for better readability
@@ -207,6 +218,39 @@ def _ends_with_phon_schwa(lemma: str) -> bool:
 	# for better readability
 	return _ends_with_phon(lemma, "ə")
 
+def _get_syllables(lemma: str) -> list[str]:
+	phon_transcr = _get_transcription(lemma)
+	syllables = phon_transcr.split(".")
+	return syllables
+
+def _has_n_syllables(lemma: str, n_syllables: int) -> bool:
+	syllables = _get_syllables(lemma)
+	return len(syllables) == n_syllables
+
+def _is_monosyllabic(lemma: str) -> bool:
+	# for better readability
+	return _has_n_syllables(lemma, 1)
+
+def _is_syl_stressed(lemma: str, syl_idx: int) -> bool:
+	syllables = _get_syllables(lemma)
+	return (
+		syl_idx < len(syllables)
+		and syllables[syl_idx].startswith("ˈ")
+	)
+
+def _is_trochaic(lemma: str) -> bool:
+	# trochaic = Xx
+	return (
+		_has_n_syllables(lemma, 2)
+		and _is_syl_stressed(lemma, 0)
+	)
+
+def _is_last_syl_stressed(lemma: str) -> bool:
+	# for better readability
+	return (
+		_is_syl_stressed(lemma, -1)
+		or _is_monosyllabic(lemma)
+	)
 
 
 # Functions for applicability checks
@@ -399,12 +443,13 @@ def mixed_mn_applies(compound: Compound):
 # regularly attach a zero linking element.
 
 def sfx_pl_0_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
 	return (
 		_ends_with_sfx(
-			compound.stems[0].morph,
+			n1,
 			["er", "ler", "ner", "el", "sel", "chen", "lein"]
 		)
-		and _is_of_zero_plural(compound.stems[0].morph)
+		and _is_of_zero_plural(n1)
 	)
 
 def sfx_pl_0_applies(compound: Compound):
@@ -418,28 +463,23 @@ def sfx_pl_0_applies(compound: Compound):
 # that build the plural form with -e regularly attach a zero linker.
 
 def sfx_pl_e_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
 	return (
 		(
-			_ends_with_sfx(
-				compound.stems[0].morph,
-				["bold", "rich", "at", "al"]
-			)
+			_ends_with_sfx(n1, ["bold", "rich", "at", "al"])
 			and (
 				# for cases like 'Personal'
-				_has_no_plural(compound.stems[0].morph)
-				or _is_of_plural(compound.stems[0].morph, "e")
+				_has_no_plural(n1)
+				or _is_of_plural(n1, "e")
 			)
 		)
 		or (
-			_ends_with_sfx(
-				compound.stems[0].morph,
-				"nis"
-			)
+			_ends_with_sfx(n1, "nis")
 			and (
 				# for cases like 'Unverständnis'
-				_has_no_plural(compound.stems[0].morph)
+				_has_no_plural(n1)
 				# nouns in -nis duplicate 's' in plural: '-nisse'
-				or _is_of_plural(compound.stems[0].morph, "e", dupl=True)
+				or _is_of_plural(n1, "e", dupl=True)
 			)
 		)
 	)
@@ -459,7 +499,9 @@ def sfx_s_is_applicable(compound: Compound):
 		compound.stems[0].morph,
 		[
 			"keit", "igkeit", "heit", "schaft", "ung", "sal",
-			"ing", "ling", "tum", "um", "ion", "tät", "ität"
+			"ing", "ling", "tum", "um", "ion",
+			# in CELEX: qualit-ät, ?, aktiv-ität, spontan-eität
+			"ät", "tät", "ität", "eität"
 		]
 	)
 
@@ -480,9 +522,10 @@ def sfx_s_applies(compound: Compound):
 # -s- occurs regularly in deverbatives ending in -en.
 
 def sfx_deverb_en_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
 	return (
-		_is_deverbal(compound.stems[0].morph)
-		and _ends_with_sfx(compound.stems[0].morph, "en")
+		_is_deverbal(n1)
+		and _ends_with_sfx(n1, "en")
 	)
 
 def sfx_deverb_en_applies(compound: Compound):
@@ -496,14 +539,14 @@ def sfx_deverb_en_applies(compound: Compound):
 # (The suffix -in adjusts orthographically in this case and becomes an -inn.)
 
 def sfx_F_in_en_is_applicable(compound: Compound):
-	lemma = compound.stems[0].morph
+	n1 = compound.stems[0].morph
 	# since -in becomes -inn before -en, adjust for that
 	# as in case the constraint applies, 
-	# lemmas like 'Lehrerinn' will be coming
-	lemma = re.sub(f"{lemma[-1]}{{2}}$", lemma[-1], lemma)
+	# n1s like 'Lehrerinn' will be coming
+	n1 = re.sub(f"{n1[-1]}{{2}}$", n1[-1], n1)
 	return (
-		_is_of_gender(lemma, "f")
-		and _ends_with_sfx(lemma, "in")
+		_is_of_gender(n1, "f")
+		and _ends_with_sfx(n1, "in")
 	)
 
 def sfx_F_in_en_applies(compound: Compound):
@@ -516,9 +559,10 @@ def sfx_F_in_en_applies(compound: Compound):
 # There is a strong tendency to adopt -s- after prefixed deverbatives.
 
 def prx_deverb_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
 	return (
-		_is_deverbal(compound.stems[0].morph)
-		and _is_prefixed(compound.stems[0].morph)
+		_is_deverbal(n1)
+		and _is_prefixed(n1)
 	)
 
 def prx_deverb_applies(compound: Compound):
@@ -551,9 +595,9 @@ def sibilant_fin_applies(compound: Compound):
 # Nouns ending in a full vowel always adopt a zero linker.
 
 def vow_fin_is_applicable(compound: Compound):
-	lemma = compound.stems[0].morph
-	last_phone = _get_transcription(lemma)[-1]
-	return _is_vowel(last_phone) and not _ends_with_phon_schwa(lemma)
+	n1 = compound.stems[0].morph
+	last_phone = _get_transcription(n1)[-1]
+	return _is_vowel(last_phone) and not _ends_with_phon_schwa(n1)
 
 def vow_fin_applies(compound: Compound):
 	return _has_no_linker(compound)
@@ -563,15 +607,34 @@ def vow_fin_applies(compound: Compound):
 # p2l:phon_fin:F_#stressed_phon$-0
 #
 # Feminine nouns endings with stressed -ei, -ie, -ur,
-# also -ik [1] usually attach a zero linker.
-# TODO
+# also those with -ik usually attach a zero linker.
 
+def stressed_phon_fin_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_is_of_gender(n1, "f")
+		and (
+			(
+				# stressed 'ei', 'ie', 'ur', 'ik'
+				(
+					# overchecking but safe
+					n1.endswith("ei") and _ends_with_phon(n1, "ai")
+					or n1.endswith("ie") and _ends_with_phon(n1, "i")
+					or n1.endswith("ur") and _ends_with_phon(n1, "uʁ")
+					# NB! the constraint applies
+					# only to nouns in -ik but not to those in -ig!
+					or n1.endswith("ik") and _ends_with_phon(n1, "ik")
+				)
+				and _is_last_syl_stressed(n1)
+			)
+			# unstressed 'ik'
+			or _ends_with_phon(n1, "ɪk")
+		)
 
+	)
 
-# p2l:phon_fin:cmpx_syl$-s
-#
-# -s- may occur after a complex syllable boundary.
-# TODO
+def stressed_phon_fin_applies(compound: Compound):
+	return _has_no_linker(compound)
 
 
 
@@ -579,27 +642,72 @@ def vow_fin_applies(compound: Compound):
 #
 # Feminine nouns ending with a [t] often attach an -s- 
 # if the [t] is part of the stem (not of a suffix).
-# TODO
+
+def f_t_fin_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_is_of_gender(n1, "f")
+		and _ends_with_phon(n1, "t")
+		and not _ends_with_sfx(
+			n1,
+			# all German feminine suffixes ending with [t]
+			[
+				"heit", "keit", "igkeit", "schaft", "falt",
+				# in CELEX: qualit-ät, ?, aktiv-ität, spontan-eität
+				"ät", "tät", "ität", "eität"				
+			]
+		)
+	)
+
+def f_t_fin_applies(compound: Compound):
+	return _has_linker(compound, linker_morph="s")
 
 
 
 # p2l:phon_fin:schwa$-en|def-en
 #
 # Nouns ending in schwa regularly adopt -n-.
-# TODO
+
+def schwa_fin_is_applicable(compound: Compound):
+	return _ends_with_phon_schwa(compound.stems[0].morph)
+
+def schwa_fin_applies(compound: Compound):
+	return _has_linker(compound, linker_morph="en")
 
 
 # p2l:phon_fin:schwa$-en|deadj-0/en
 #
-# With deadjective feminine nouns with a schwa suffix, -n- 
-# and zero linkers are about equally possible.
-# TODO
+# With deadjective feminine nouns with a schwa suffix,
+# -n- and zero linkers are about equally possible.
+
+def schwa_fin_deadj_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_ends_with_phon_schwa(n1)
+		and _is_deadjective(n1)
+	)
+
+def schwa_fin_deadj_applies(compound: Compound):
+	return (
+		_has_no_linker(compound)
+		or _has_linker(compound, linker_morph="en")
+	)
 
 
 # p2l:phon_fin:schwa$-en|deverb-0
 #
-# Deverbal feminine nouns with the schwa suffix mostly attach a zero linker.
-# TODO
+# Deverbal feminine nouns with the schwa suffix
+# mostly attach a zero linker.
+
+def schwa_fin_deverb_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_ends_with_phon_schwa(n1)
+		and _is_deverbal(n1)
+	)
+
+def schwa_fin_deverb_applies(compound: Compound):
+	return _has_no_linker(compound)
 
 
 # p2l:phon_fin:schwa$-en|deverb_pl_interpr-en
@@ -656,7 +764,15 @@ def vow_fin_applies(compound: Compound):
 # Compounds with the second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 
 # 'Gattin', 'Witwe' can insert -s- if the compound designates a person, 
 # even when the first constituent would otherwise attach a zero linker.
-# TODO
+
+# def sec_const_anims_is_applicable(compound: Compound):
+# 	n2 = compound.stems[1].morph.lower()
+# 	return n2 in [
+# 		"mann", "frau", "leute", "tochter", "gattin", "witwe"
+# 	]
+
+# def sec_const_anim_applies(compound: Compound):
+# 	return _has_linker(compound, linker_morph="s")
 
 
 
@@ -664,7 +780,23 @@ def vow_fin_applies(compound: Compound):
 #
 # The acceptability of -s- irregularly grows when the first constituent 
 # is morphologically complex (any form of derivation).
-# TODO
+
+def cmpx_morph_is_applicable(compound: Compound):
+	# universal tendency
+	return True
+
+def cmpx_morph_applies(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		(
+			_is_simplex(n1)
+			and not _has_linker(compound, linker_morph="s")
+		)
+		or (
+			_is_derived(n1)
+			and _has_linker(compound, linker_morph="s")
+		)
+	)
 
 
 
@@ -673,16 +805,81 @@ def vow_fin_applies(compound: Compound):
 # The acceptability of -s- irregularly grows when the first constituent 
 # is phonologically complex: non-trochaic form, words with unstressed prefixes, 
 # words with stressed or semi-stressed suffixes etc.
-# TODO
+
+def cmpx_phon_is_applicable(compound: Compound):
+	# universal tendency
+	return True
+
+def cmpx_phon_applies(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		(
+			# even though [nübling_szczepaniak_2013:78] claims
+			# that the ideal is a trochee with a schwa at the end,
+			# we, following [fuhrhop_kürschner_2015:572], expand
+			# the definition of phonologically good words
+			# with monosyllabic words and trochaic words
+			# with full vowel at the end;
+			# the cases of unstressed prefixes and stressed suffixes
+			# do not have to be checked separately here
+			# since they corrupt the trochaic pattern anyway
+			_is_trochaic(n1)
+			and not _has_linker(compound, linker_morph="s")
+		)
+		or (
+			not _is_trochaic(n1)
+			and _has_linker(compound, linker_morph="s")
+		)
+	)
 
 
 
 # p2l:tend:sonority-!s
 #
-# The probability of -s- decreases with increasing sonority of the 
+# The probability of -s- in simplices decreases with increasing sonority of the 
 # final segment of the first constituent: it is more frequent after plosives, 
 # infrequent after nasals and liquids, and it never occurs after a full vowel.
-# TODO
+
+def sonority_is_applicable(compound: Compound):
+	# even though universal tendency, none of the sources explicitly
+	# mention the effect of the constraint on the occurrence of -s- after fricatives
+	n1 = compound.stems[0].morph
+	last_phone = _get_transcription(n1)[-1]
+	return (
+		_is_simplex(n1)
+		and (
+			_is_vowel(last_phone)
+			or any (
+				_phone_has_property(last_phone, prop)
+				for prop in [
+					"uvular", "lateral-approximant", # liquids
+					"nasal", "plosive"
+				]
+			)
+		)
+	)
+
+def sonority_applies(compound: Compound):
+	last_phone = _get_transcription(compound.stems[0].morph)[-1]
+	return (
+		(
+			(
+				_is_vowel(last_phone)
+				# liquids
+				or (
+					_phone_has_property(last_phone, ["uvular"])
+					or _phone_has_property(last_phone, ["lateral-approximant"])	# [l]
+				)
+				# nasals
+				or _phone_has_property(last_phone, ["nasal"])
+			)
+			and not _has_linker(compound, linker_morph="s")
+		)
+		or (
+			_phone_has_property(last_phone, ["plosive"])
+			and _has_linker(compound, linker_morph="s")
+		)
+	)
 
 
 
