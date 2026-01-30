@@ -218,7 +218,7 @@ topology:
                             - p2l:drv:sfx:e_pl_sfx-0
 
                             - p2l:drv:sfx:sfx-s:
-                                summary: Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling regularly, and nouns with suffixes -(t)um, -ion tendentially attach -s-. Suffix -(i)tät also regularly attaches -s- unless there is a plural interpretation, in which case -en- is preferred.
+                                summary: Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -(t)um, -ion regularly attach -s-. Suffix -ität (and its allomorphs) also regularly attaches -s- unless there is a plural interpretation, in which case -en- is preferred.
                                 children:
 
                                     - p2l:drv:sfx:sfx-s|def-s
@@ -242,8 +242,6 @@ topology:
                       - p2l:phon_fin:vow$-0
 
                       - p2l:phon_fin:F_#stressed_phon$-0
-
-                      - p2l:phon_fin:cmpx_syl$-s
 
                       - p2l:phon_fin:F_stem_#t$-s
 
@@ -347,7 +345,7 @@ topology:
         children:
 
             - l2p:s:
-                summary: In simplexes, -s- occurs only in masculine and neuter nouns except for a few cases, and many of them are high frequent tokens. -s- can also occur with feminine nouns only if it is a morphological complex and/or polysyllabic feminine noun.
+                summary: In simplices, -s- occurs only in masculine and neuter nouns except for a few cases, and many of them are high frequent tokens. -s- can also occur with feminine nouns only if it is a morphological complex and/or polysyllabic feminine noun.
                 children:
 
                     - l2p:s|smpx_mn
@@ -929,7 +927,7 @@ constraints:
 
     p2l:drv:sfx:sfx-s|def-s:
     
-        summary: Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -tum, -um, -ion, -(i)tät regularly attach -s-.
+        summary: Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -tum, -um, -ion, -ität (and its allomorphs) regularly attach -s-.
         type: [derivational]
 
         func_alias: sfx_s
@@ -1003,7 +1001,7 @@ constraints:
 
     p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en:
     
-        summary: Nouns with suffix -(i)tät prefer -en- when the second constituent forces a plural or collective meaning of this noun.
+        summary: Nouns with suffix -ität (and its allomorphs) prefer -en- when the second constituent forces a plural or collective meaning of this noun.
         type: [derivational, semantic]
 
         func_alias: sfx_itaet_pl
@@ -1104,11 +1102,11 @@ constraints:
 
             - ref: kürschner_2005
               pages: [107]
-              summary: Prefixed nouns adopt -s- more frequently than the corresponding simplexes (67.5% vs 28.8%).
+              summary: Prefixed nouns adopt -s- more frequently than the corresponding simplices (67.5% vs 28.8%).
             
             - ref: kürschner_2010
               pages: [21]
-              summary: Many simplexes that don't attach -s-, do so after prefixation.
+              summary: Many simplices that don't attach -s-, do so after prefixation.
 
             - ref: kopf_2017
               pages: [190]
@@ -1159,8 +1157,13 @@ constraints:
               pages: [89, 109]
               summary: Most nouns ending with [s], [ʃ], [ts], or [st] adopt a zero linker. In particular, prefixed deverbative M attach an -s- regularly [unless they end with a sibilant or [ts] [1]].
 
+            - ref: wegener_2005
+              pages: [181]
+              summary: Corpus research showed that nouns ending in [st] had no occurrences of -s-.
+
         footnotes:
             "1": Evidence for `p2l:phon_fin:sibilant$-0` > `p2l:drv:prx_deverb-s`.
+
 
 
     p2l:phon_fin:vow$-0:
@@ -1172,7 +1175,7 @@ constraints:
         regularity: NA
         coverage: NA
 
-        examples_pro: [auto_bahn, uhu_paar, gummi_bär]
+        examples_pro: [auto_bahn, uhu_paar, kuh_milch, gummi_bär]
         examples_contra: [uhu_+s_nest]
 
         evidence:
@@ -1189,47 +1192,27 @@ constraints:
             "1": "The given counterexample uhu_+s_nest originating from [wegener_2003:433] could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
 
 
+
     p2l:phon_fin:F_#stressed_phon$-0:
     
-        summary: Feminine nouns endings with stressed -ei, -ie, -ur, also -ik [1] usually attach a zero linker.
+        summary: Feminine nouns endings with stressed -ei, -ie, -ur, also those with -ik usually attach a zero linker.
         type: [derivational]
 
         func_alias: stressed_phon_fin
         regularity: NA
         coverage: NA
 
-        examples_pro: [kosmetik_industrie, architektur_büro, metzgerei_produkt]
+        examples_pro: [kosmetik_industrie, akustik_paneele, architektur_büro, metzgerei_produkt]
         examples_contra: [kultur_+en_folge, melodie_+n_reigen]
 
         evidence:
 
             - ref: ortner_müller-bollhagen_1991
               pages: [107]
-              summary: F endings with stressed -ei, -ie, -ur, also -ik [1] usually attach a zero linker.
+              summary: F endings with stressed -ei, -ie, -ur, also those with -ik usually attach a zero linker.
 
         footnotes: {}
 
-
-    p2l:phon_fin:cmpx_syl$-s:
-    
-        summary: -s- may occur after a complex syllable boundary.
-        type: [phonological]
-
-        func_alias: cmpx_syl_fin
-        regularity: NA
-        coverage: NA
-
-        examples_pro: [weihnacht_+s_baum, geschäft_+s_führer, geburt_+s_tag]
-        examples_contra: [herbst_anfang, milch_kaffee, markt_platz]
-
-        evidence:
-
-            - ref: kürschner_2010
-              pages: [22]
-              summary: -s- may occur [1] after a complex syllable boundary.
-
-        footnotes:
-            "1": Level of regularity not mentioned.
 
 
     p2l:phon_fin:F_stem_#t$-s:
@@ -1313,7 +1296,7 @@ constraints:
         regularity: NA
         coverage: NA
 
-        examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter]
+        examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
         examples_contra: []
 
         evidence:
@@ -1539,8 +1522,12 @@ constraints:
               pages: [20]
               summary: In compounds that have a doubful -s- and that are used both in common and specialized language, technical terms usually omit the -s- while the common language keeps it.
 
+            - ref: wegener_2005
+              pages: [177]
+              summary: "[If 'Herz' is used in a medical context, it adopts a zero linker. [1]]."
+
         footnotes:
-            "1": This finding is provided as an example of the constraint.
+            "1": This findings are provided as examples of the constraint.
 
 
 
@@ -1582,7 +1569,7 @@ constraints:
         coverage: NA
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, anspruch_+s_haltung, eintrag_+s_frist]
-        examples_contra: [minderheit_+en_recht, anruf_beantworter, überfall_kommando]
+        examples_contra: [ort_+s_amt, krieg_+s_ende, anruf_beantworter, minderheit_+en_recht]
 
         evidence:
 
@@ -1609,7 +1596,7 @@ constraints:
 
     p2l:tend:cmpx_phon-s|def-s:
     
-        summary: "The acceptability of -s- irregularly grows when the first constituent is phonologically complex: non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc."
+        summary: "The acceptability of -s- irregularly grows when the first constituent is phonologically complex: polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc."
         type: [phonological]
 
         func_alias: cmpx_phon
@@ -1623,7 +1610,7 @@ constraints:
 
             - ref: fuhrhop_kürschner_2015
               pages: [572]
-              summary: The probability of -s- increases if the first element is prosodically complex.
+              summary: The probability of -s- increases if the first element is prosodically complex. Phonologically good words are monosyllabic or trochaic bisyllabic words. Bisyllabic non-trochaic words, polysyllabic words, words with suffixes that bear a (secondary) stress are bad phonological words.
 
             - ref: nübling_szczepaniak_2008
               pages: [10, 21, 22]
@@ -1631,25 +1618,25 @@ constraints:
 
             - ref: nübling_szczepaniak_2013
               pages: [78]
-              summary: The greater the distance of the word to the phonological ideal, the more probable the occurrence of -s-.
+              summary: The greater the distance of the word to the phonological ideal (trochee with schwa in the second syllable), the more probable the occurrence of -s-.
 
         footnotes:
             "1": These results are also mentioned in literature review in [kürschner_2010:24], however, without an explicit estimation of the claim's validity.
-            "2": Many cases of phonological complexity are bound to morphological complexity of the constituents (see `p2l:drv:sfx:sfx-s|def-s`, `p2l:drv:prx_deverb-s`). NB! Only a few of the corresponding pieces of evidence claim that these derivational processes increase the probability of -s- particularly because of the bad phonological structures of the derivates.
+            "2": Many cases of phonological complexity are bound to morphological complexity of the constituents -- [fuhrhop_kürschner_2015:572] -- (see `p2l:drv:sfx:sfx-s|def-s`, `p2l:drv:prx_deverb-s`). NB! Only a few of the corresponding pieces of evidence claim that these derivational processes increase the probability of -s- particularly because of the bad phonological structures of the derivates.
 
 
 
     p2l:tend:sonority-!s:
     
-        summary: "The probability of -s- decreases with increasing sonority of the final segment of the first constituent: it is more frequent after plosives, infrequent after nasals and liquids, and it never occurs after a full vowel."
+        summary: "The probability of -s- in simplices decreases with increasing sonority of the final segment of the first constituent: it is more frequent after plosives, infrequent after nasals and liquids, and it never occurs after a full vowel."
         type: [phonological]
 
         func_alias: sonority
         regularity: NA
         coverage: NA
 
-        examples_pro: [ort_+s_tarif, arbeit_+s_tag, himmel_reich, uhu_paar]
-        examples_contra: [arbeit_geber, heil_+s_lehre, uhu_+s_nest]
+        examples_pro: [ort_+s_tarif, glück_+s_rad, himmel_reich, uhu_paar]
+        examples_contra: [arbeit_geber, staub_sauger, heil_+s_lehre, uhu_+s_nest]
 
         evidence:
 
@@ -1663,7 +1650,7 @@ constraints:
 
             - ref: nübling_szczepaniak_2008
               pages: [7, 17]
-              summary: "The probability of -s- decreases with increasing sonority of the final segment of the first constituent: it occurs after plosives in about 15-20% and after nasals and liquids in only about 1.8-4.7% of cases, and it never occurs after a full vowel [1]."
+              summary: "The probability of -s- decreases with increasing sonority of the final segment of the first constituent: it occurs after plosives in about 15-20% and after sonorants in only about 1.8-4.7% of cases, and it never occurs after a full vowel [1]."
 
             - ref: schäfer_pankratz_2018
               pages: [9]
@@ -1671,12 +1658,19 @@ constraints:
 
             - ref: wegener_2003
               pages: [434]
-              summary: In simpices, -s- occurs more often after plosives, much rarer after nasals and liquids. Furthermore, -s- never occurs after a full vowel [1, 2] (except for uhu_+s_nest [3]).
+              summary: -s- never occurs after a full vowel [1] (except for uhu_+s_nest [2]).
+
+            - ref: wegener_2005
+              pages: [180, 181, 182]
+              summary:  "In a simplex, the less the sonority of its code segment, the more probable -s-. It therefore mostly occurs after plosives, much rarer after nasals and liquids, and (whenever possible) never after a full vowel. Corpus data: ~17% after plosives, ~3% after nasals and liquids [3], no occurrences after full vowels [and [st] [4]]."
+
 
         footnotes:
             "1": "For more on nouns ending with full vowels see `p2l:phon_fin:vow$-0`."
-            "2": 'The given passage is taken from the literature review from [kürschner_2010:24] where different works of Wegener were considered. Thus, there is a chance that Wegener made this claim not in this particular paper.'
-            "3": "The given counterexample uhu_+s_nest could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
+            "2": "The given counterexample uhu_+s_nest could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it.",
+            "3": Recalculated across groups of codas, for individual percentages see table in [wegener_2005:181].
+            "4": See more in `phon_fin:fricative$-0`.
+            "5": None of the sources explicitly mention the effect of the constraint on the occurrence of -s- after fricatives. For a particular case with sibilants, see `p2l:phon_fin:sibilant$-0`. 
 
 
 
@@ -1706,6 +1700,10 @@ constraints:
               pages: [20]
               summary: Linkers identical to the plural ending can be [2] associated with plural meaning.
 
+            - ref: wegener_2005
+              pages: [173]
+              summary: First constituents of compounds often occur with a linker identical to the plural ending when no plural or collective meaning is intended [1].
+
         footnotes:
             "1": The irreguarity of this constraint is quite high, which is supported by the fact this evidence contradicts its definition.
             "2": Level of regularity not mentioned.
@@ -1715,7 +1713,7 @@ constraints:
 
     l2p:s|smpx_mn:
       
-        summary: In simplexes, -s- occurs only in few masculine and neuter nouns except for a few cases.
+        summary: In simplices, -s- occurs only in few masculine and neuter nouns except for a few cases.
         type: [morphological]
 
         func_alias: s_smpx
@@ -1729,7 +1727,7 @@ constraints:
 
             - ref: kürschner_2010
               pages: [23]
-              summary: In simplexes, -s- occurs only in M and N except for a few cases.
+              summary: In simplices, -s- occurs only in M and N except for a few cases.
 
             - ref: nübling_szczepaniak_2013
               pages: [79]
@@ -1740,14 +1738,14 @@ constraints:
               summary: Simplex M and N often [2] take -s- [3].
 
         footnotes:
-            "1": All monosyllabic M and N are simplexes. This evidence is however partial since it does not mention polysyllabic M and N that may also attach -s- (könig_+s_haus).
+            "1": All monosyllabic M and N are simplices. This evidence is however partial since it does not mention polysyllabic M and N that may also attach -s- (könig_+s_haus).
             "2": Level of regularity not mentioned.
             "3": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `l2p:es`, we modify it to -s- here.
 
 
     l2p:s|smpx_high_freq:
     
-        summary: Many simplexes with an -s- are high frequent tokens.
+        summary: Many simplices with an -s- are high frequent tokens.
         type: [lexical]
 
         func_alias: s_freq
@@ -1761,7 +1759,7 @@ constraints:
 
             - ref: kürschner_2010
               pages: [25]
-              summary: Many simplexes with an -s- are high frequent tokens.
+              summary: Many simplices with an -s- are high frequent tokens.
 
         footnotes: {}
 
@@ -1815,6 +1813,10 @@ constraints:
             - ref: nübling_szczepaniak_2013
               pages: [84]
               summary: -n- [1] is strictly bound to weak nouns (inflectional class).
+
+            - ref: wegener_2005
+              pages: [179]
+              summary: -n- appears only after schwa.
 
         footnotes:
             "1": "Original text makes that claim for both allomorphs: '-(e)n-'."
@@ -1934,7 +1936,7 @@ constraints:
 
             - ref: ortner_müller-bollhagen_1991
               pages: [102]
-              summary: -e- is always paradigmatic, occurs mostly after simplexes and never after loanwords.
+              summary: -e- is always paradigmatic, occurs mostly after simplices and never after loanwords.
 
         footnotes:
             "1": The last claim explains why nouns like 'Teppich' do not attach -e- (teppich_boden).
@@ -1974,7 +1976,7 @@ constraints:
 
             - ref: ortner_müller-bollhagen_1991
               pages: [98]
-              summary: =er= is always paradigmatic and attaches mostly to N and to some M, mostly simplexes, no loanwords.
+              summary: =er= is always paradigmatic and attaches mostly to N and to some M, mostly simplices, no loanwords.
               
         footnotes:
             "1": "[kürschner_2010:18] also mentions: '-er- occurs only after nouns with the stressed last syllable'; however, to the best of our knowledge, this always holds for er-plural nouns and, hence, for the nouns in question since =er= is always paradigmatic."
@@ -2047,7 +2049,7 @@ constraints:
             "1": "[kürschner_2010:18] also mentions: '-es- occurs only after nouns with the stressed last syllable', which, however, always holds for the nouns in question since they are all monosyllabic."
             "2": Level of regularity not mentioned.
             "3": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -s- is handled separately in `l2p:s`, we modify it to -es- here.
-            "4": Since the original text claimed simplex M and N often adopt -es- or (!) -s-, this evidence is to be considered indirect since simplexes taking -s- -- that may be polysyllabic (e.g. könig_+s_haus) -- are also included in this evidence. However, the 30-40 nouns taking -es- are all monosyllabic, hence, simplexes, so the evidence is still relevant.
+            "4": Since the original text claimed simplex M and N often adopt -es- or (!) -s-, this evidence is to be considered indirect since simplices taking -s- -- that may be polysyllabic (e.g. könig_+s_haus) -- are also included in this evidence. However, the 30-40 nouns taking -es- are all monosyllabic, hence, simplices, so the evidence is still relevant.
 
 
 
