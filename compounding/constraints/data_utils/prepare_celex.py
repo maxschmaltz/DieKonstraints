@@ -1265,7 +1265,7 @@ def main():
     )
 
     lemmas = gmsplw["lemma"].tolist()
-    freqs = asyncio.run(get_dereko_counts(lemmas))
+    freqs = asyncio.run(get_dereko_counts(lemmas, resolve_sz=True))
     gmsplw["freq"] = freqs
     gmspflw = gmsplw    # rename for consistency with previous version
 

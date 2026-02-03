@@ -4,6 +4,7 @@ import aiohttp
 import pandas as pd
 from tqdm.asyncio import tqdm_asyncio
 from dotenv import load_dotenv
+from typing import Optional
 
 load_dotenv()
 
@@ -74,7 +75,8 @@ headers = {
 async def _get_dereko_count(
     session: aiohttp.ClientSession, 
     semaphore: asyncio.Semaphore,
-    lemma: str
+    lemma: str,
+    resolve_sz: Optional[bool]=False
 ) -> int:
 
     # docu available under
@@ -124,7 +126,7 @@ async def _get_dereko_count(
         # release semaphore;
         # special case with eszett,
         # which is encoded as ss in CELEX
-        if count == 0 and "ss" in lemma:
+        if resolve_sz and count == 0 and "ss" in lemma:
             sz_lemma = lemma.replace("ss", "ß")
             sz_count = await _get_dereko_count(
                 session, semaphore, sz_lemma
@@ -141,18 +143,24 @@ async def get_dereko_count(
     session: aiohttp.ClientSession,
     semaphore: asyncio.Semaphore,
     lemma: str,
-    freq_df: pd.DataFrame
+    freq_df: pd.DataFrame,
+    resolve_sz: Optional[bool]=False
 ) -> int:
     if lemma in freq_df.index:
         return freq_df.loc[lemma, "freq"]
     else:
-        count = await _get_dereko_count(session, semaphore, lemma)
+        count = await _get_dereko_count(
+            session, semaphore, lemma, resolve_sz=resolve_sz
+        )
         # append to freq_df
         freq_df.loc[lemma] = count
         return count
     
 
-async def get_dereko_counts(lemmas: list[str]) -> list[int]:
+async def get_dereko_counts(
+    lemmas: list[str],
+    resolve_sz: Optional[bool]=False
+) -> list[int]:
 
     # since querying DeReKo can be time-consuming and resource-intensive,
     # we cache the frequency counts in a separate TSV file shared with GeCoDB compounds;
@@ -185,7 +193,9 @@ async def get_dereko_counts(lemmas: list[str]) -> list[int]:
     
     async with aiohttp.ClientSession(connector=connector) as session:
         tasks = [
-            get_dereko_count(session, semaphore, lemma, freq_df) 
+            get_dereko_count(
+                session, semaphore, lemma, freq_df, resolve_sz=resolve_sz
+            )
             for lemma in lemmas
         ]
         
