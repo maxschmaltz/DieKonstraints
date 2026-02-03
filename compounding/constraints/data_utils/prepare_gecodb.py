@@ -131,6 +131,7 @@ def main():
     gecodb_v05["n1_freq"] = gecodb_v05["n1_freq"].astype(int)
     gecodb_v05["n1_prod"] = gecodb_v05["n1_prod"].astype(int)
     gecodb_v05["n1_mass_freq"] = gecodb_v05["n1_mass_freq"].astype(int)
+    gecodb_v05["n2_freq"] = gecodb_v05["n2_freq"].astype(int)
 
     # make reasonable ordering
     gecodb_v05 = gecodb_v05[
