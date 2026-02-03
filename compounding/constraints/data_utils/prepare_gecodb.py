@@ -13,11 +13,13 @@ def main():
 
     # In preparing GecoDB, we need to to the follwoing:
     # 1. Filter out all the compounds whose N1 are not present in CELEX
+    #   and those with modifier frequency < 10
     # 2. Filter out compounds with deletion linkers
     # 3. Get counts for the compounds from DeReKo using the same procedure
     #    as for CELEX nouns (done in dereko_search.py) to remain consistent
     # 4. Recalculate productivities of N1s
-    #   (since many compounds have been removed).
+    #   (since many compounds have been removed), keep
+    #   compounds with modifier productivity >= 10
     # 5. Perform a few lesser transformations.
     # 6. Save the prepared GecoDB to a new TSV file.
 
@@ -37,17 +39,20 @@ def main():
     gecodb_v05 = pd.read_csv(
         gecodb_path,
         sep="\t",
-        dtype=str,
+        dtype={
+            "comp": str,
+            "n1_prod": int
+        },
         header=None,
-        usecols=[0],
-        # names=["comp", "comp_freq", "n1_freq"]
-        # since all the properties of the compounds
-        # will be recomputed, no need to load frequencies here
-        names=["comp"]
+        # since freqs of the compounds
+        # will be recomputed, no need to load them here
+        usecols=[0, 2],
+        names=["comp", "n1_prod"]
     )
 
 
-    # 1. Remove all N1 that are not in CELEX
+    # 1. Remove all N1 that are not in CELEX and those
+    # who build < 10 compounds
 
     # first, get N1 lemmas; since each linker starts with a "_"
     # and N1s in GeCoDB are always stored as lemmas
@@ -61,6 +66,10 @@ def main():
 
     gecodb_v05 = gecodb_v05[gecodb_v05["n1_lemma"].isin(celex.index)]
 
+    # then, remove N1s with productivity < 10
+    gecodb_v05 = gecodb_v05[gecodb_v05["n1_prod"] >= 10]
+
+    # transfer n1 frequencies from celex
     gecodb_v05["n1_freq"] = gecodb_v05["n1_lemma"].apply(
         lambda x: celex.loc[x, "freq"]
     )
