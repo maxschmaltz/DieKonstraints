@@ -11,17 +11,17 @@ from dereko_search import get_dereko_counts
 
 def main():
 
-    # In preparing GecoDB, we need to to the follwoing:
-    # 1. Filter out all the compounds whose N1 are not present in CELEX
-    #   and those with modifier frequency < 10
+    # In preparing GeCoDB, we need to to the following:
+    # 1. Filter out all the compounds whose constituents 
+    #   are not present in CELEX and those whose modifier frequency < 10
     # 2. Filter out compounds with deletion linkers
     # 3. Get counts for the compounds from DeReKo using the same procedure
-    #    as for CELEX nouns (done in dereko_search.py) to remain consistent
+    #   as for CELEX nouns (done in dereko_search.py) to remain consistent
     # 4. Recalculate productivities of N1s
     #   (since many compounds have been removed), keep
     #   compounds with modifier productivity >= 10
     # 5. Perform a few lesser transformations.
-    # 6. Save the prepared GecoDB to a new TSV file.
+    # 6. Save the prepared GeCoDB to a new TSV file.
 
     gecodb_path = "resources/GeCoDB/gecodb_v05.tsv"
     outpath = "resources/custom/compounding/intermediate_data"
@@ -35,7 +35,7 @@ def main():
         index_col="lemma"
     )
 
-    # load GecoDB
+    # load GeCoDB
     gecodb_v05 = pd.read_csv(
         gecodb_path,
         sep="\t",
@@ -47,46 +47,53 @@ def main():
         # since freqs of the compounds
         # will be recomputed, no need to load them here
         usecols=[0, 2],
-        names=["comp", "n1_prod"]
+        names=["comp_gecodb", "n1_prod"]
     )
 
 
-    # 1. Remove all N1 that are not in CELEX and those
-    # who build < 10 compounds
+    # 1. Remove all compounds whose constituents are not in CELEX
 
-    # first, get N1 lemmas; since each linker starts with a "_"
-    # and N1s in GeCoDB are always stored as lemmas
-    # (no umlauting or deletion even if applicable),
-    # we can simply split by "_" and take the first element,
-    # no full analysis needed
+    # first, get N1 and N2 lemmas; since we will be needing both
+    # N1, N2, and compound lemmas, we analyze compounds
 
-    gecodb_v05["n1_lemma"] = gecodb_v05["comp"].apply(
-        lambda x: x.split("_")[0]
+    gecodb_v05["comp_lemma"], gecodb_v05["n1_lemma"], gecodb_v05["n2_lemma"] = zip(
+        *gecodb_v05["comp_gecodb"].apply(
+            lambda x: (
+                (c := Compound(x)).lemma.capitalize(), c.stems[0].morph, c.stems[1].morph
+            )
+        )
     )
 
-    gecodb_v05 = gecodb_v05[gecodb_v05["n1_lemma"].isin(celex.index)]
+    # keep only those compounds whose N1 and N2 lemmas are in CELEX
+    # and those whose modifiers build < 10 compounds
+    gecodb_v05 = gecodb_v05[
+        (gecodb_v05["n1_lemma"].isin(celex.index))
+        & (gecodb_v05["n2_lemma"].isin(celex.index))
+    ]
 
-    # then, remove N1s with productivity < 10
-    gecodb_v05 = gecodb_v05[gecodb_v05["n1_prod"] >= 10]
-
-    # transfer n1 frequencies from celex
+    # transfer N1, N2 frequencies from CELEX
     gecodb_v05["n1_freq"] = gecodb_v05["n1_lemma"].apply(
         lambda x: celex.loc[x, "freq"]
     )
+    gecodb_v05["n2_freq"] = gecodb_v05["n2_lemma"].apply(
+        lambda x: celex.loc[x, "freq"]
+    )
+
+    # then, remove N1s with productivity < 10
+    gecodb_v05 = gecodb_v05[gecodb_v05["n1_prod"] >= 10]
 
     
     # 2. Remove compounds with deletion linkers
 
     # remove all compounds with deletion linkers
-    gecodb_v05 = gecodb_v05[~gecodb_v05["comp"].str.contains("-e")]
+    gecodb_v05 = gecodb_v05[~gecodb_v05["comp_gecodb"].str.contains("-e")]
 
 
     # 3. Get DeReKo counts for the compounds and drop
     #   those below frequency threshold
-    lemmas = [
-        Compound(comp).lemma.capitalize()
-        for comp in gecodb_v05["comp"].to_list()
-    ]
+    
+    lemmas = gecodb_v05["comp_lemma"].tolist()
+
     # run in batches to enforce regular caching
     freqs = []
     batch_size = 2500
@@ -98,6 +105,8 @@ def main():
 
 
     # 4. Recalculate productivities of N1s
+    # and remove compounds with N1 productivity < 10
+
     for lemma in gecodb_v05["n1_lemma"].unique():
         # productivity: how many compounds there are with this N1
         n1_mask = gecodb_v05["n1_lemma"] == lemma
@@ -107,12 +116,15 @@ def main():
         n1_mass_freq = gecodb_v05.loc[n1_mask, "comp_freq"].sum()
         gecodb_v05.loc[n1_mask, "n1_mass_freq"] = n1_mass_freq
 
+    # remove compounds with productivity < 10
+    gecodb_v05 = gecodb_v05[gecodb_v05["n1_prod"] >= 10]
+
 
     # 5. Lesser transformations
 
     # replace all _+er_ with _+=er_ (since the -er- linker always 
     # puts an umlaut on the stem if possible)
-    gecodb_v05["comp"] = gecodb_v05["comp"].str.replace("_+er_", "_+=er_")
+    gecodb_v05["comp_gecodb"] = gecodb_v05["comp_gecodb"].str.replace("_+er_", "_+=er_")
 
     # save freqs as integers
     gecodb_v05["comp_freq"] = gecodb_v05["comp_freq"].astype(int)
@@ -122,14 +134,18 @@ def main():
 
     # make reasonable ordering
     gecodb_v05 = gecodb_v05[
-        ["comp", "comp_freq", "n1_lemma", "n1_freq", "n1_prod", "n1_mass_freq"]
+        [
+            "comp_gecodb", "comp_lemma", "comp_freq",
+            "n1_lemma", "n1_freq", "n1_prod", "n1_mass_freq",
+            "n2_lemma", "n2_freq"
+        ]
     ]
 
     # set compound as index
-    gecodb_v05 = gecodb_v05.set_index("comp")
+    gecodb_v05 = gecodb_v05.set_index("comp_gecodb")
 
 
-    # 6. Save the prepared GecoDB
+    # 6. Save the prepared GeCoDB
     gecodb_v05.to_csv(
         os.path.join(outpath, "gecodb_v06.tsv"),
         sep="\t",
