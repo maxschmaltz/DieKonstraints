@@ -89,7 +89,7 @@ def main():
     ]
     # run in batches to enforce regular caching
     freqs = []
-    batch_size = 10000
+    batch_size = 2500
     for batch_start in range(0, len(lemmas), batch_size):
         batch = lemmas[batch_start:batch_start + batch_size]
         batch_freqs = asyncio.run(get_dereko_counts(batch))
