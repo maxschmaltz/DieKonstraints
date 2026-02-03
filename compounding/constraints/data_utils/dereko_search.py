@@ -179,7 +179,7 @@ async def get_dereko_counts(lemmas: list[str]) -> list[int]:
         # empty freq df
         freq_df = pd.DataFrame(columns=["entry", "freq"]).set_index("entry")
 
-    max_requests = 25  
+    max_requests = 50  
     semaphore = asyncio.Semaphore(max_requests)  # limit concurrent requests
     connector = aiohttp.TCPConnector(limit=max_requests, limit_per_host=max_requests)
     
