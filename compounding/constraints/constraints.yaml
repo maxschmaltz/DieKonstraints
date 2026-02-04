@@ -558,7 +558,7 @@ constraints:
     p2l:decl_cl:pl:#e-0|msyl_anim-e:
     
         summary: Monosyllabic e-plural nouns designating animals non-regularly attach -e-.
-        type: [morphological, semantic]
+        type: [morphological, phonological, semantic]
 
         func_alias: plur_e_anim
         regularity: NA
