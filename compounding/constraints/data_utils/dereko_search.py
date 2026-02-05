@@ -137,25 +137,7 @@ async def _get_dereko_count(
         return count
     except:
         return -1
-        
 
-async def get_dereko_count(
-    session: aiohttp.ClientSession,
-    semaphore: asyncio.Semaphore,
-    lemma: str,
-    freq_df: pd.DataFrame,
-    resolve_sz: Optional[bool]=False
-) -> int:
-    if lemma in freq_df.index:
-        return freq_df.loc[lemma, "freq"]
-    else:
-        count = await _get_dereko_count(
-            session, semaphore, lemma, resolve_sz=resolve_sz
-        )
-        # append to freq_df
-        freq_df.loc[lemma] = count
-        return count
-    
 
 async def get_dereko_counts(
     lemmas: list[str],
@@ -187,20 +169,29 @@ async def get_dereko_counts(
         # empty freq df
         freq_df = pd.DataFrame(columns=["entry", "freq"]).set_index("entry")
 
-    max_requests = 25  
-    semaphore = asyncio.Semaphore(max_requests)  # limit concurrent requests
-    connector = aiohttp.TCPConnector(limit=max_requests, limit_per_host=max_requests)
-    
-    async with aiohttp.ClientSession(connector=connector) as session:
-        tasks = [
-            get_dereko_count(
-                session, semaphore, lemma, freq_df, resolve_sz=resolve_sz
-            )
-            for lemma in lemmas
-        ]
-        
-        freqs = await tqdm_asyncio.gather(*tasks, desc="Fetching frequencies from KorAP")
+    uncached_entries = list(set(lemmas) - set(freq_df.index))
 
+    if uncached_entries:
+
+        max_requests = 25  
+        semaphore = asyncio.Semaphore(max_requests)  # limit concurrent requests
+        connector = aiohttp.TCPConnector(limit=max_requests, limit_per_host=max_requests)
+        
+        async with aiohttp.ClientSession(connector=connector) as session:
+            tasks = [
+                _get_dereko_count(
+                    session, semaphore, lemma, resolve_sz=resolve_sz
+                )
+                for lemma in uncached_entries
+            ]
+            
+            freqs = await tqdm_asyncio.gather(*tasks, desc="Fetching uncached frequencies from KorAP")
+
+        freq_df[uncached_entries] = freqs
+
+    all_freqs = freq_df.loc[lemmas, "freq"].tolist()
+
+    # freq_df.sort_index(inplace=True)
     freq_df.to_csv(
         freq_path,
         sep="\t",
@@ -209,4 +200,4 @@ async def get_dereko_counts(
         index_label="entry"
     )
 
-    return freqs
+    return all_freqs
