@@ -187,7 +187,11 @@ async def get_dereko_counts(
             
             freqs = await tqdm_asyncio.gather(*tasks, desc="Fetching uncached frequencies from KorAP")
 
-        freq_df[uncached_entries] = freqs
+        freqs = pd.DataFrame({
+            "entry": uncached_entries,
+            "freq": freqs
+        }).set_index("entry")
+        freq_df = pd.concat([freq_df, freqs])
 
     all_freqs = freq_df.loc[lemmas, "freq"].tolist()
 
