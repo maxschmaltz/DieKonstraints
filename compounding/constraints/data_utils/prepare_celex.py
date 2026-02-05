@@ -1297,7 +1297,7 @@ def main():
     gmspflw["freq"] = gmspflw["freq"].astype(int)
 
     # freq check
-    freq_threshold = 10
+    freq_threshold = 50
     gmspflw = gmspflw[gmspflw["freq"] >= freq_threshold]
 
     # filter out weak masculine nouns
