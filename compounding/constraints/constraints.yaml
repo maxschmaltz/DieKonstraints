@@ -957,7 +957,7 @@ constraints:
 
             - ref: kürschner_2005
               pages: [107, 115]
-              summary: Suffixes -heit, -keit, -ling, -ung, -schaft always require -s- [2, 3]. The probability of -s- increases [5] after suffixes -tum, -ion, -tät.
+              summary: Nouns with suffixes -heit, -keit, -ling, -ung, -schaft, -tum, -ion, -tät build compounds with -s- [2, 3].
 
             - ref: kürschner_2010
               pages: [20, 21]
@@ -1356,7 +1356,7 @@ constraints:
       
             - ref: ortner_müller-bollhagen_1991
               pages: [93]
-              summary: Deverbative F ending in schwa suffix can attach an -n- when the first constituent has a plural reading [1].
+              summary: Deverbative F ending in schwa suffix tend to attach an -n- when the first constituent has a plural reading [1].
 
         footnotes:
             "1": "A further claim was made in the paper: 'Finally, further F ending in schwa can adopt an -n- if they denote a concrete countable, even if no plural meaning occurs'. However, these cases simply fall into the cases of F ending in a non-suffix schwa and are only a subset thereof."
@@ -1667,7 +1667,7 @@ constraints:
 
         footnotes:
             "1": "For more on nouns ending with full vowels see `p2l:phon_fin:vow$-0`."
-            "2": "The given counterexample uhu_+s_nest could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it.",
+            "2": "The given counterexample uhu_+s_nest could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
             "3": Recalculated across groups of codas, for individual percentages see table in [wegener_2005:181].
             "4": See more in `phon_fin:fricative$-0`.
             "5": None of the sources explicitly mention the effect of the constraint on the occurrence of -s- after fricatives. For a particular case with sibilants, see `p2l:phon_fin:sibilant$-0`. 
