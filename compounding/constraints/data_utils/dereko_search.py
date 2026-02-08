@@ -1,8 +1,10 @@
 import os
 import asyncio
 import aiohttp
+import requests
 import pandas as pd
 from tqdm.asyncio import tqdm_asyncio
+from tqdm import tqdm
 from dotenv import load_dotenv
 from typing import Optional
 
@@ -72,7 +74,7 @@ headers = {
 }
 
 
-async def _get_dereko_count(
+async def _aget_dereko_count(
     session: aiohttp.ClientSession, 
     semaphore: asyncio.Semaphore,
     lemma: str,
@@ -128,7 +130,7 @@ async def _get_dereko_count(
         # which is encoded as ss in CELEX
         if resolve_sz and count == 0 and "ss" in lemma:
             sz_lemma = lemma.replace("ss", "ß")
-            sz_count = await _get_dereko_count(
+            sz_count = await _aget_dereko_count(
                 session, semaphore, sz_lemma
             )
             if sz_count > 0:
@@ -137,9 +139,9 @@ async def _get_dereko_count(
         return count
     except:
         return -1
+    
 
-
-async def get_dereko_counts(
+async def aget_dereko_counts(
     lemmas: list[str],
     resolve_sz: Optional[bool]=False
 ) -> list[int]:
@@ -173,13 +175,13 @@ async def get_dereko_counts(
 
     if uncached_entries:
 
-        max_requests = 25  
+        max_requests = 25
         semaphore = asyncio.Semaphore(max_requests)  # limit concurrent requests
         connector = aiohttp.TCPConnector(limit=max_requests, limit_per_host=max_requests)
         
         async with aiohttp.ClientSession(connector=connector) as session:
             tasks = [
-                _get_dereko_count(
+                _aget_dereko_count(
                     session, semaphore, lemma, resolve_sz=resolve_sz
                 )
                 for lemma in uncached_entries
@@ -192,6 +194,125 @@ async def get_dereko_counts(
             "freq": freqs
         }).set_index("entry")
         freq_df = pd.concat([freq_df, freqs])
+
+    all_freqs = freq_df.loc[lemmas, "freq"].tolist()
+
+    # freq_df.sort_index(inplace=True)
+    freq_df.to_csv(
+        freq_path,
+        sep="\t",
+        header=True,
+        index=True,
+        index_label="entry"
+    )
+
+    return all_freqs
+
+
+
+def _get_dereko_count(
+    lemma: str,
+    resolve_sz: Optional[bool]=False
+) -> int:
+
+    # docu available under
+    # https://korap.ids-mannheim.de/api/v1.0/openapi/
+    # https://korap.ids-mannheim.de (Hilfe -> API)
+    params = {
+        # see https://korap.ids-mannheim.de (Hilfe -> Anfragesprachen -> Poliqarp+)
+        # (alternatively https://korap.ids-mannheim.de/doc/ql/poliqarp-plus?embedded=True)
+        "q": f"[base={lemma}]",   # lemma
+        "ql": "poliqarp",
+        "cq": (
+            # all open- and close-source corpora (closed are 
+            # available via authorization); this expression is composed automatically
+            # by the KorAP web interface after authorization
+            "(availability=/CC.*/ | availability=/ACA.*/ | availability=/QAO-NC/) "
+            # only German corpora (Austrian, Luxembourish and Swiss excluded
+            # to avoid catching regionalisms)
+            "& referTo corp-d "
+            # entries after 1970 to avoid historical language
+            "& creationDate since 1970"
+        ),
+        # don't show anything so we can get faster response
+        "context": "1-token,1-token",
+        "engine": "lucene",
+        "count": "0",
+        "page": "1",
+        "offset": "0",
+        "cutoff": "false",
+        "access-rewrite-disabled": "false",
+        "show-tokens": "false",
+        "show-snippet": "false"
+    }
+
+    try:
+        response = requests.get(
+            url,
+            headers=headers,
+            params=params,
+            timeout=30
+        )
+        if response.status == 200:
+            data = response.json()
+            count = data.get("meta", {}).get("totalResults", -1)
+        else:
+            return -1
+        # special case with eszett,
+        # which is encoded as ss in CELEX
+        if resolve_sz and count == 0 and "ss" in lemma:
+            sz_lemma = lemma.replace("ss", "ß")
+            sz_count = _get_dereko_count(
+                sz_lemma
+            )
+            if sz_count > 0:
+                # it means that the lemma ß is correct
+                return sz_count + 0.3   # signalize of the replacement
+        return count
+    except:
+        return -1
+
+
+def get_dereko_counts(
+    lemmas: list[str],
+    resolve_sz: Optional[bool]=False
+) -> list[int]:
+
+    # since querying DeReKo can be time-consuming and resource-intensive,
+    # we cache the frequency counts in a separate TSV file shared with GeCoDB compounds;
+    # moreover, to remain consistent with the count retrieval, we replace
+    # original GeCoDB compound frequencies with the ones obtained
+    # under the same procedure as for CELEX nouns, so we offload the frequency
+    # retrieval to this separate module
+
+    outpath = "resources/custom/compounding/intermediate_data"
+    os.makedirs(outpath, exist_ok=True)
+
+    freq_path = os.path.join(outpath, "dereko_de_geq70_counts.tsv")
+
+    if os.path.exists(freq_path):
+        freq_df = pd.read_csv(
+            freq_path,
+            sep="\t",
+            header=0,
+            index_col="entry",  # both lemmas and compounds
+            # to be able to store decimal part for 'ß' cases
+            dtype={"entry": str, "freq": float}
+        )
+    else:
+        # empty freq df
+        freq_df = pd.DataFrame(columns=["entry", "freq"]).set_index("entry")
+
+    uncached_entries = list(set(lemmas) - set(freq_df.index))
+
+    if uncached_entries:
+
+        for lemma in tqdm(uncached_entries, desc="Fetching uncached frequencies from KorAP"):
+            count = _get_dereko_count(lemma, resolve_sz=resolve_sz)
+            if count == -1:
+                print("Aborting frequency retrieval due to an error with KorAP API.")
+                break
+            freq_df.loc[lemma, "freq"] = count
 
     all_freqs = freq_df.loc[lemmas, "freq"].tolist()
 
