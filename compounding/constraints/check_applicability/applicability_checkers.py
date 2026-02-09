@@ -825,9 +825,9 @@ def cmpx_phon_applies(compound: Compound):
 	n1 = compound.stems[0].morph
 	return (
 		(
-			# even though [nübling_szczepaniak_2013:78] claims
+			# even though [nuebling_szczepaniak_2013:78] claims
 			# that the ideal is a trochee with a schwa at the end,
-			# we, following [fuhrhop_kürschner_2015:572], expand
+			# we, following [fuhrhop_kuerschner_2015:572], expand
 			# the definition of phonologically good words
 			# with monosyllabic words and trochaic words
 			# with full vowel at the end;
