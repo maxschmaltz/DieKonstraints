@@ -1102,7 +1102,7 @@ constraints:
 
             - ref: kürschner_2005
               pages: [107]
-              summary: Prefixed nouns adopt -s- more frequently than the corresponding simplices (67.5% vs 28.8%).
+              summary: Prefixed nouns adopt -s- more frequently than the corresponding simplices. After prefixed verbs, -s- occurs in 67.5%, and zero linker in 28.8% of cases.
             
             - ref: kürschner_2010
               pages: [21]
@@ -1114,12 +1114,11 @@ constraints:
 
             - ref: nübling_szczepaniak_2008
               pages: [18, 19]
-              summary: Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [4, 5].
+              summary: Dererbatives with unstressed prefixes attach -s- in 85%, and with stressed prefixes in 36% of cases [4, 5].
 
             - ref: nübling_szczepaniak_2013
               pages: [78]
-              summary: Dererbatives with stressed prefixes attach -s- in 85%, and with unstressed prefixes in 36% of cases [4, 5].
-
+              summary: Dererbatives with unstressed prefixes attach -s- in 85%, and with stressed prefixes in 36% of cases [4, 5].
             - ref: ortner_müller-bollhagen_1991
               pages: [89]
               summary: Prefixed deverbative M attach an -s- regularly unless they end with a sibilant or [ts] [6].
@@ -1128,7 +1127,7 @@ constraints:
             "1": All the examples provided in this source have stressed prefixes.
             "2": "Explanation: -s- is used to mark a morphological boundary after a morphologically complex constituent."
             "3": Level of regularity not mentioned.
-            "4": "The results of [nübling_szczepaniak_2008] (provided again in [nübling_szczepaniak_2013]) are based on a corpus study but are however subject to questions because of the methodology used. First of all, only 21 nouns with unstressed and 19 nouns with stressed prefixes were considered for further combinations, which is a very small sample. Even though the number of resulting compounds was very large, the fact that the same nouns tend to occur with the same linkers discards the representativeness of the large sample size. Furthermore, many of the prefixed nouns were derivates from the same verb (e.g. 'Ansicht', 'Aufsicht', 'Übersicht') which again reduces the diversity of the sample. Furthermore, no specific examples were provided in the paper, whereas further literature suggest several counterexamples to the claim about derivatives with stressed prefixes. Hence, we believe the absolute numbers provided in [nübling_szczepaniak_2008] might not be very reliable. However, these findings may suggest a general trend that prefixed deverbatives with unstressed prefixes tend to attach -s- more often than those with stressed prefixes: verfall_+s_datum vs überfall_kommando."
+            "4": "The results of [nübling_szczepaniak_2008] (provided again in [nübling_szczepaniak_2013]) are based on a corpus study but are however subject to questions because of the methodology used. First of all, only 21 nouns with unstressed and 19 nouns with stressed prefixes were considered for further combinations, which is a very small sample. Even though the number of resulting compounds was very large, the fact that the same nouns tend to occur with the same linkers discards the representativeness of the large sample size. Furthermore, many of the prefixed nouns were derivates from the same verb (e.g. 'Ansicht', 'Aufsicht', 'Übersicht') which again reduces the diversity of the sample. Furthermore, no specific examples were provided in the paper, whereas further literature suggest several counterexamples to the claim about derivatives with stressed prefixes. Hence, we believe the absolute numbers provided in [nübling_szczepaniak_2008] might not be very reliable."
             "5": "Explanation: unstressed prefixes form phonologically bad words. -s- is therefore used to mark the boundary of the phonological word starting with such a suffix."
             "6": Evidence for `p2l:phon_fin:sibilant$-0` > `p2l:drv:prx_deverb-s`.
     
