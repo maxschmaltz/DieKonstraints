@@ -2,7 +2,7 @@
 
 
 import os
-import asyncio
+# import asyncio
 import pandas as pd
 
 from gecodb_compound_parser import Compound
@@ -99,7 +99,11 @@ def main():
     batch_size = 2500
     for batch_start in range(0, len(lemmas), batch_size):
         batch = lemmas[batch_start:batch_start + batch_size]
-        # batch_freqs = asyncio.run(aget_dereko_counts(batch))
+        # Note: after receiving a Meldung from IDS Mannheim support team,
+        # we learned that our async requests were causing issues on their servers,
+        # and so we provide a synchronous alternative below.
+        # Previously:
+        #   >>> batch_freqs = asyncio.run(aget_dereko_counts(batch))
         batch_freqs = get_dereko_counts(batch)
         freqs.extend(batch_freqs)
     gecodb_v05["comp_freq"] = freqs

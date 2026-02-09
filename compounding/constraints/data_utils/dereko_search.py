@@ -209,6 +209,9 @@ async def aget_dereko_counts(
     return all_freqs
 
 
+# Note: after receiving a Meldung from IDS Mannheim support team,
+# we learned that our async requests were causing issues on their servers,
+# and so we provide a synchronous alternative below.
 
 def _get_dereko_count(
     lemma: str,
@@ -253,7 +256,7 @@ def _get_dereko_count(
             params=params,
             timeout=30
         )
-        if response.status == 200:
+        if response.status_code == 200:
             data = response.json()
             count = data.get("meta", {}).get("totalResults", -1)
         else:
@@ -301,7 +304,7 @@ def get_dereko_counts(
         )
     else:
         # empty freq df
-        freq_df = pd.DataFrame(columns=["entry", "freq"]).set_index("entry")
+        freq_df = pd.DataFrame(columns=["entry", "freq"]).set_index("entry")        
 
     uncached_entries = list(set(lemmas) - set(freq_df.index))
 
@@ -311,10 +314,12 @@ def get_dereko_counts(
             count = _get_dereko_count(lemma, resolve_sz=resolve_sz)
             if count == -1:
                 print("Aborting frequency retrieval due to an error with KorAP API.")
+                # this will lead to an error when fetching all freqs,
+                # which is the desired behavior here
+                # since the recommendation from IDS Mannheim support team
+                # is to stop querying for some time in case of errors
                 break
             freq_df.loc[lemma, "freq"] = count
-
-    all_freqs = freq_df.loc[lemmas, "freq"].tolist()
 
     # freq_df.sort_index(inplace=True)
     freq_df.to_csv(
@@ -324,5 +329,7 @@ def get_dereko_counts(
         index=True,
         index_label="entry"
     )
+
+    all_freqs = freq_df.loc[lemmas, "freq"].tolist()
 
     return all_freqs
