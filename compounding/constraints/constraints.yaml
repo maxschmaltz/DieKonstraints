@@ -1347,7 +1347,7 @@ constraints:
     p2l:phon_fin:F_#stressed_phon$-0:
     
         summary: Feminine nouns endings with stressed -ei, -ie, -ur, also those with -ik usually attach a zero linker.
-        type: [derivational]
+        type: [morphological, phonological]
 
         func_alias: stressed_phon_fin
         regularity: NA
@@ -1659,7 +1659,7 @@ constraints:
     p2l:sem:tech_term-0:
     
         summary: In technical terminology (economics, law, medicine, etc.), compounds are often missing a linking element (even in cases where it would be obligatory in non-technical context).
-        type: [semantic]
+        type: [lexical, semantic]
 
         func_alias: tech_term
         regularity: NA
@@ -1749,7 +1749,7 @@ constraints:
 
             - ref: kuerschner_2010
               pages: [19, 22]
-              summary: The probability of -s- grows with the morphologic complexity of the noun, but it is not regular in German.
+              summary: The probability of -s- grows with the morphological complexity of the noun, but it is not regular in German.
 
         footnotes:
             "1": "Originally: 'derivational and compositional'. For reasons for excluding complex first constituents see notes."
@@ -2034,7 +2034,7 @@ constraints:
     l2p:en|non_par_m:
     
         summary: There are a few monosyllabic masculine nouns designating male persons, animals, astronomic objects, months that attach -(e)n- even though they do not form the plural with -(e)n.
-        type: [lexical]
+        type: [lexical, morphological, semantic]
 
         func_alias: en_non_par_m
         regularity: NA
@@ -2060,8 +2060,8 @@ constraints:
     # 49
     l2p:en|non_par_n_pl_interpr:
     
-        summary: There are polysyllabic foreign N with final stress (mostly ending with -at and -ment) that adopt -en-, in which case they necessarily express plurality.
-        type: [lexical, semantic]
+        summary: There are polysyllabic foreign neuter nouns with final stress (mostly ending with -at and -ment) that adopt -en-, in which case they necessarily express plurality.
+        type: [lexical, morphological, semantic]
 
         func_alias: en_non_par_n_pl
         regularity: NA
@@ -2189,8 +2189,8 @@ constraints:
     # 53
     l2p:es:
     
-        summary: -es- occurs exclusively after a row  of one-syllable M and N that form a genitive with -(e)s- (about 30-40 nouns) and is isolated. These nouns can, however, also attach other linkers.
-        type: [lexical]
+        summary: -es- occurs exclusively after a row of one-syllable M and N that form a genitive with -(e)s- (about 30-40 nouns) and is isolated. These nouns can, however, also attach other linkers.
+        type: [lexical, morphological]
 
         func_alias: es_isol
         regularity: NA
