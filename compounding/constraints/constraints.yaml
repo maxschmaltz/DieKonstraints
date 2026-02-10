@@ -140,6 +140,8 @@ topology:
 
                                     - p2l:drv:sfx:deverb_#en$-s   # EXTERNAL
 
+                            # 3
+                            - p2l:decl_cl:pl:#s-0
 
                             - p2l:decl_cl:pl:#e-0:
                                 summary: Nouns forming the plural with -e mostly have a zero linker. In case of plural or collective meaning, they may also non-regularly attach -e-. Monosyllabic e-plural nouns designating animals may also non-regularly attach -e-. e-plural nouns is the only class of words that can attach this linker.
