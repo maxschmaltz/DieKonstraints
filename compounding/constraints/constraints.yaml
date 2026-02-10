@@ -10,7 +10,7 @@ readme: |
 
     For each constraint, its linguistic type, regularity, coverage, examples pro and contra, and evidence from the literature are provided.
     
-    Note that constraint clusters are designed such that more general constraints in them overlap with more specific constraints, so that the latter override the former for certain inputs. This is done on purpose to be able to inspect the behavior of LLMs when operating with conflicting constraints. From linguistic point of view, the more general constraints might be slightly inaccurate since edge cases are omitted there on purpose to enforce overlapping. For example, the general constraint for schwa-final nouns (`p2l:phon_fin:schwa$-en|def-en`) reads 'Nouns ending in schwa regularly adopt -n-.' whereas there are in fact some exceptions not mentioned. The exceptions are then captured in more specific constraints of the same cluster (e.g. `p2l:phon_fin:schwa$-en|deverb-0`: 'Deverbal feminine nouns with the schwa suffix mostly attach a zero linker.'), so that the LLM has to choose between the general and the specific constraint when presented with a noun to which both are applicable (deverbal feminine noun ending in schwa in this case, e.g. 'Tiefe'). For linguistically accurate descriptions in such cases, refer to the descriptions of the parent constraint clusters, e.g. `p2l:phon_fin:schwa$-en` reads 'Nouns ending in schwa regularly adopt -n- if the schwa is not a suffix. If the schwa is a suffix of a deadjective feminine noun, ...'.
+    Note that constraint clusters are designed such that more general constraints in them overlap with more specific constraints, so that the latter override the former for certain inputs. This is done on purpose to be able to inspect the behavior of LLMs when operating with conflicting constraints. From linguistic point of view, the more general constraints might be slightly inaccurate since edge cases are omitted there on purpose to enforce overlapping. For example, the general constraint for schwa-final nouns (`p2l:phon_fin:schwa$-en`) reads 'Nouns ending in schwa regularly adopt -n-.' whereas there are in fact some exceptions not mentioned. The exceptions are then captured in more specific constraints of the same cluster (e.g. `p2l:drv:deverb_schwa$-0|def-0`: 'Deverbal feminine nouns with the schwa suffix mostly attach a zero linker.'), so that the LLM has to choose between the general and the specific constraint when presented with a noun to which both are applicable (deverbal feminine noun ending in schwa in this case, e.g. 'Tiefe'). For linguistically accurate descriptions in such cases, refer to the descriptions of the parent constraint clusters, e.g. `p2l:phon_fin:schwa$-en` reads 'Nouns ending in schwa regularly adopt -n- if the schwa is not a suffix. If the schwa is a suffix of a deadjective feminine noun, ...'.
 
     Both the constraints, the constraint clusters, and their topological structure are given in Part 3 below. Part 2 contains the glossary of abbreviations and linker designations used in the document.
 
@@ -276,7 +276,7 @@ topology:
                         summary: Nouns ending in schwa regularly adopt -n- if the schwa is not a suffix. If the schwa is a suffix of a deadjective feminine noun, -n- and zero linkers are about equally possible. Deverbal feminine nouns with the schwa suffix mostly attach a zero linker but can attach an -n- when the first constituent has a plural reading. Nouns ending in schwa is the only class of words that can attach the allomorph -n- of the en-linker.
                         children:
 
-                            - p2l:phon_fin:schwa$-en|def-en
+                            - p2l:phon_fin:schwa$-en
 
                             - p2l:drv:deadj_schwa$-0/en # EXTERNAL
 
@@ -370,7 +370,7 @@ topology:
 
                             - p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en    # EXTERNAL
 
-                            - p2l:phon_fin:schwa$-en|deverb_pl_interpr-en  # EXTERNAL
+                            - p2l:drv:deverb_schwa$-0|pl_interpr-en  # EXTERNAL
 
                             - p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en  # EXTERNAL
 
@@ -1009,7 +1009,7 @@ constraints:
               summary: Deverbative F ending in schwa suffix mostly have a zero linker.
 
         footnotes:
-            "1": "Evidence from [fuhrhop_kürschner_2015:573] and [kürschner_2005:112] are disregarded here as, even though not explicitly stated, those concern deadjectives (see footnotes from `p2l:phon_fin:schwa$-en|deverb-0`)."
+            "1": "Evidence from [fuhrhop_kürschner_2015:573] and [kürschner_2005:112] are disregarded here as, even though not explicitly stated, those concern deadjectives (see footnotes from `p2l:drv:deverb_schwa$-0|def-0`)."
 
 
     # 21
@@ -1396,7 +1396,7 @@ constraints:
 
 
     # 32
-    p2l:phon_fin:schwa$-en|def-en:
+    p2l:phon_fin:schwa$-en:
     
         summary: Nouns ending in schwa regularly adopt -n-.
         type: [phonological]
@@ -1439,82 +1439,7 @@ constraints:
               summary: F ending in schwa virtually always occur with -n-.
 
         footnotes:
-            "1": The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `p2l:sem:tech_term-0` is stronger than `p2l:phon_fin:schwa$-en|def-en` and thus -- since these are technical terms -- it blocks the application of `p2l:phon_fin:schwa$-en|def-en` in these cases.
-
-
-    p2l:phon_fin:schwa$-en|deadj-0/en:
-    
-        summary: With deadjective feminine nouns with a schwa suffix, -n- and zero linkers are about equally possible.
-        type: [derivational]
-
-        func_alias: schwa_fin_deadj
-        regularity: NA
-        coverage: NA
-
-        examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
-        examples_contra: []
-
-        evidence:
-
-            - ref: fuhrhop_kuerschner_2015
-              pages: [573]
-              summary: If schwa is a suffix of F [1], it adopts a zero linker.
-
-            - ref: kuerschner_2005
-              pages: [112]
-              summary: The claim that F ending in schwa always attach a zero linker is not supported by the empirical data, but it should be marked as a tendency [2].
-
-            - ref: ortner_mueller-bollhagen_1991
-              pages: [93]
-              summary: Deadjective F ending in a schwa suffix have a zero linker or -n- in about the same number of cases.
-
-        footnotes:
-            "1": "Even though not explicitly stated, the examples provided there are deadjective F: frische_behälter, schwäche_anfall."
-            "2": "Both the pro-example and the counterexample there are deadjective F: härte_fall tiefe_+n_meter, which are both in line with the overall constraint."
-
-
-    p2l:phon_fin:schwa$-en|deverb-0:
-    
-        summary: Deverbal feminine nouns with the schwa suffix mostly attach a zero linker.
-        type: [derivational]
-
-        func_alias: schwa_fin_deverb
-        regularity: NA
-        coverage: NA
-
-        examples_pro: [abgabe_soll, sorge_pflicht, lage_plan]
-        examples_contra: [abgabe_+n_ordnung, anzeige_+n_blatt, lüge_+n_detektor]
-
-        evidence:
-
-            - ref: ortner_mueller-bollhagen_1991
-              pages: [93]
-              summary: Deverbative F ending in schwa suffix mostly have a zero linker.
-
-        footnotes:
-            "1": "Evidence from [fuhrhop_kuerschner_2015:573] and [kuerschner_2005:112] are disregarded here as, even though not explicitly stated, those concern deadjectives (see footnotes from `p2l:phon_fin:schwa$-en|deverb-0`)."
-
-
-    p2l:phon_fin:schwa$-en|deverb_pl_interpr-en:
-    
-        summary: Deverbal feminine nouns with the schwa suffix can attach an -n- when the second constituent forces a plural or collective reading.
-        type: [derivational, semantic]
-
-        func_alias: schwa_fin_deverb_pl
-        regularity: NA
-        coverage: NA
-
-        examples_pro: [abgabe_+n_ordnung, anzeige_+n_blatt, lüge_+n_detektor]
-        examples_contra: [einnahme_buch, anzeige_tafel]
-
-        evidence:
-      
-            - ref: ortner_mueller-bollhagen_1991
-              pages: [93]
-              summary: Deverbative F ending in schwa suffix tend to attach an -n- when the first constituent has a plural reading [1].
-
-        footnotes:
-            "1": "A further claim was made in the paper: 'Finally, further F ending in schwa can adopt an -n- if they denote a concrete countable, even if no plural meaning occurs'. However, these cases simply fall into the cases of F ending in a non-suffix schwa and are only a subset thereof."
+            "1": The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `p2l:sem:tech_term-0` is stronger than `p2l:phon_fin:schwa$-en` and thus -- since these are technical terms -- it blocks the application of `p2l:phon_fin:schwa$-en` in these cases.
 
 
 

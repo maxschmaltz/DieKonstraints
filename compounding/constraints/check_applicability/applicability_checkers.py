@@ -719,7 +719,7 @@ def f_t_fin_applies(compound: Compound):
 
 
 
-# p2l:phon_fin:schwa$-en|def-en
+# p2l:phon_fin:schwa$-en
 #
 # Nouns ending in schwa regularly adopt -n-.
 
