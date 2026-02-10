@@ -500,6 +500,50 @@ def sfx_pl_e_applies(compound: Compound):
 
 
 
+# p2l:drv:deverb_schwa$-0|def-0
+#
+# Deverbal feminine nouns with the schwa suffix
+# mostly attach a zero linker.
+
+def schwa_fin_deverb_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_ends_with_phon_schwa(n1)
+		and _is_deverbal(n1)
+	)
+
+def schwa_fin_deverb_applies(compound: Compound):
+	return _has_no_linker(compound)
+
+
+# p2l:drv:deverb_schwa$-0|pl_interpr-en
+#
+# Deverbal feminine nouns with the schwa suffix can attach an -n- 
+# when the second constituent forces a plural or collective reading.
+# TODO
+
+
+
+# p2l:drv:deadj_schwa$-0/en
+#
+# With deadjective feminine nouns with a schwa suffix,
+# -n- and zero linkers are about equally possible.
+
+def schwa_fin_deadj_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_ends_with_phon_schwa(n1)
+		and _is_deadjective(n1)
+	)
+
+def schwa_fin_deadj_applies(compound: Compound):
+	return (
+		_has_no_linker(compound)
+		or _has_linker(compound, linker_morph="en")
+	)
+
+
+
 # p2l:drv:sfx:sfx-s|def-s
 #
 # Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, 
@@ -684,48 +728,6 @@ def schwa_fin_is_applicable(compound: Compound):
 
 def schwa_fin_applies(compound: Compound):
 	return _has_linker(compound, linker_morph="en")
-
-
-# p2l:phon_fin:schwa$-en|deadj-0/en
-#
-# With deadjective feminine nouns with a schwa suffix,
-# -n- and zero linkers are about equally possible.
-
-def schwa_fin_deadj_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
-	return (
-		_ends_with_phon_schwa(n1)
-		and _is_deadjective(n1)
-	)
-
-def schwa_fin_deadj_applies(compound: Compound):
-	return (
-		_has_no_linker(compound)
-		or _has_linker(compound, linker_morph="en")
-	)
-
-
-# p2l:phon_fin:schwa$-en|deverb-0
-#
-# Deverbal feminine nouns with the schwa suffix
-# mostly attach a zero linker.
-
-def schwa_fin_deverb_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
-	return (
-		_ends_with_phon_schwa(n1)
-		and _is_deverbal(n1)
-	)
-
-def schwa_fin_deverb_applies(compound: Compound):
-	return _has_no_linker(compound)
-
-
-# p2l:phon_fin:schwa$-en|deverb_pl_interpr-en
-#
-# Deverbal feminine nouns with the schwa suffix can attach an -n- 
-# when the second constituent forces a plural or collective reading.
-# TODO
 
 
 
