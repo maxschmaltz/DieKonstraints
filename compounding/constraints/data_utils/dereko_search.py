@@ -70,6 +70,8 @@ headers = {
     #   at https://korap.ids-mannheim.de/settings/oauth
     # 2. Authorize at https://korap.ids-mannheim.de/api/v1.0/openapi/
     # 3. Set the obtained auth code in the .env file as KORAP_AUTH_CODE
+    # 4. IMPORTANT! The code seems to reset every 24h or something,
+    #   make sure to update timely to avoid errors with the API requests
     "Authorization": f"Bearer {os.getenv('KORAP_AUTH_CODE')}"
 }
 
@@ -321,14 +323,14 @@ def get_dereko_counts(
                 break
             freq_df.loc[lemma, "freq"] = count
 
-    # freq_df.sort_index(inplace=True)
-    freq_df.to_csv(
-        freq_path,
-        sep="\t",
-        header=True,
-        index=True,
-        index_label="entry"
-    )
+        # freq_df.sort_index(inplace=True)
+        freq_df.to_csv(
+            freq_path,
+            sep="\t",
+            header=True,
+            index=True,
+            index_label="entry"
+        )
 
     all_freqs = freq_df.loc[lemmas, "freq"].tolist()
 
