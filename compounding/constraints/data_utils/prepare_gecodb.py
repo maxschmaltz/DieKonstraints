@@ -115,11 +115,17 @@ def main():
         progress_bar.update(1)
     gecodb_v05["comp_freq"] = freqs
 
+    # freq check
+    # lower freq for compounds as they are generally
+    # more loose and free to produce
+    freq_threshold = 5
+    gecodb_v05 = gecodb_v05[gecodb_v05["comp_freq"] >= freq_threshold]
+
 
     # 4. Recalculate productivities of N1s
     # and remove compounds with N1 productivity < 10
 
-    for lemma in gecodb_v05["n1_lemma"].unique():
+    for lemma in tqdm(gecodb_v05["n1_lemma"].unique(), desc="Calculating N1 prod"):
         # productivity: how many compounds there are with this N1
         n1_mask = gecodb_v05["n1_lemma"] == lemma
         n1_prod = n1_mask.sum()
@@ -129,7 +135,8 @@ def main():
         gecodb_v05.loc[n1_mask, "n1_mass_freq"] = n1_mass_freq
 
     # remove compounds with productivity < 10
-    gecodb_v05 = gecodb_v05[gecodb_v05["n1_prod"] >= 10]
+    n1_prod_threshold = 10
+    gecodb_v05 = gecodb_v05[gecodb_v05["n1_prod"] >= n1_prod_threshold]
 
 
     # 5. Lesser transformations
