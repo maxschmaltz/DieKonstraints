@@ -323,7 +323,7 @@ def get_dereko_counts(
                 break
             freq_df.loc[lemma, "freq"] = count
 
-        # freq_df.sort_index(inplace=True)
+        freq_df.sort_index(inplace=True)
         freq_df.to_csv(
             freq_path,
             sep="\t",
