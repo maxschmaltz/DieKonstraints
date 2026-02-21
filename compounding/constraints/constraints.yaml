@@ -432,8 +432,8 @@ constraints:
         type: [default]
 
         func_alias: def_0
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [land_kreis, haus_tür, stadt_mauer]
         examples_contra: [land_+es_regierung, haus_+=er_block, stadt_+=e_tag]
@@ -496,8 +496,8 @@ constraints:
         type: [morphological]
 
         func_alias: plur_0
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [schlitten_fahrt, gürtel_schnalle, brötchen_geber]
         examples_contra: [orden_+s_bruder, teufel_+s_werk, frieden_+s_angebot]
@@ -519,8 +519,8 @@ constraints:
         type: [morphological]
 
         func_alias: plur_s
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [balkon_möbel, hotel_kette, bob_bahn]
         examples_contra: [uhu_+s_nest]
@@ -563,8 +563,8 @@ constraints:
         type: [morphological]
 
         func_alias: plur_e
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [tisch_decke, projekt_gruppe, pilz_sammler]
         examples_contra: [tag_+e_gericht, projekt_+e_macherei, hund_+e_leine]
@@ -585,8 +585,8 @@ constraints:
         type: [morphological, semantic]
 
         func_alias: plur_e_pl
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [projekt_+e_macherei, tag_+e_buch, punkt_+e_stand]
         examples_contra: [pilz_sammler, brot_korb, jahr_zehnt, tag_+e_lohn]
@@ -612,8 +612,8 @@ constraints:
         type: [morphological, phonological, semantic]
 
         func_alias: plur_e_anim
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [hund_+e_leine, swein_+e_stall, pferd_+e_wagen]
         examples_contra: [hund_+s_stern, schwein_kram, schaff_stall]
@@ -643,8 +643,8 @@ constraints:
         type: [morphological]
 
         func_alias: plur_er
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [buch_deckel, buch_+=er_regal, kind_+=er_jacke]
         examples_contra: [kind_+es_alter, mann_+s_volk]
@@ -670,8 +670,8 @@ constraints:
         type: [morphological, semantic]
 
         func_alias: plur_er_sg
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [buch_deckel, grab_stein, blatt_fläche]
         examples_contra: [mann_+=er_herz, kind_+=er_bild]
@@ -698,8 +698,8 @@ constraints:
         type: [morphological, semantic]
 
         func_alias: plur_er_mass
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [glas_auge, kraut_salat, horn_haut]
         examples_contra: []
@@ -721,8 +721,8 @@ constraints:
         type: [morphological, semantic]
 
         func_alias: plur_er_pl
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [buch_+=er_regal, grab_+=er_feld, kraut_+=er_frau]
         examples_contra: [buch_handel, bild_band, kind_+=er_jacke, mann_+=er_herz]
@@ -755,8 +755,8 @@ constraints:
         type: [morphological, semantic]
 
         func_alias: plur_er_anim
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [kind_+=er_jacke, huhn_+=er_ei, rind_+=er_brust]
         examples_contra: []
@@ -783,8 +783,8 @@ constraints:
         type: [morphological]
 
         func_alias: plur_e_uml
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [hand_fläche, frucht_joghurt, arzt_praxis]
         examples_contra: [hand_+=e_druck, arzt_+=e_streik]
@@ -805,8 +805,8 @@ constraints:
         type: [morphological, semantic]
 
         func_alias: plur_e_uml_pl
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
         examples_contra: [baum_gruppe, zug_verkehr]
@@ -832,8 +832,8 @@ constraints:
         type: [morphological]
 
         func_alias: plur_0_uml
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [apfel_baum, kloster_kirche, mutter_sprache]
         examples_contra: [bruder_+=_gemeinde, mutter_+=_zentrum]
@@ -853,8 +853,8 @@ constraints:
         summary: Nouns forming the plural with a zero ending and umlaut may non-regularly attach a zero linker with umlaut when the second constituent forces a plural or collective meaning of this noun.
         type: [morphological, semantic]
         func_alias: plur_0_uml_pl
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
         examples_contra: [vogel_futter]
@@ -877,8 +877,8 @@ constraints:
         type: [morphological]
 
         func_alias: mixed_mn
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
         examples_contra: []
@@ -919,8 +919,8 @@ constraints:
         type: [morphological, semantic]
 
         func_alias: mixed_mn_pl
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [staat_+en_bund, bett_+en_zahl, strahl_+en_belastung]
         examples_contra: [motor_+en_geräusch, professor_+en_titel, auge_+n_lied, interesse_+n_bereich]
@@ -950,8 +950,8 @@ constraints:
         type: [derivational]
 
         func_alias: sfx_pl_0
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [reiter_schwert, gürtel_schnalle, brötchen_geber]
         examples_contra: [alter_+s_abstand, reiter_+s_mann]
@@ -973,8 +973,8 @@ constraints:
         type: [derivational]
 
         func_alias: sfx_pl_e
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [erlaubnis_schein, format_vorlage, personal_ausweis]
         examples_contra: [radikal_+e_fänger]
@@ -996,8 +996,8 @@ constraints:
         type: [derivational]
 
         func_alias: schwa_fin_deverb
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [abgabe_soll, sorge_pflicht, lage_plan]
         examples_contra: [abgabe_+n_ordnung, anzeige_+n_blatt, lüge_+n_detektor]
@@ -1019,8 +1019,8 @@ constraints:
         type: [derivational, semantic]
 
         func_alias: schwa_fin_deverb_pl
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [abgabe_+n_ordnung, anzeige_+n_blatt, lüge_+n_detektor]
         examples_contra: [einnahme_buch, anzeige_tafel]
@@ -1043,8 +1043,8 @@ constraints:
         type: [derivational]
 
         func_alias: schwa_fin_deadj
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
         examples_contra: []
@@ -1076,8 +1076,8 @@ constraints:
         type: [derivational]
 
         func_alias: sfx_s
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, schicksal_+s_drama, rarität_+s_wert, eigentum_+s_recht]
         examples_contra: [minderheit_+en_recht]
@@ -1151,8 +1151,8 @@ constraints:
         type: [derivational, semantic]
 
         func_alias: sfx_itaet_pl
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [rarität_+en_sammlung, kuriosität_+en_händler, aktualitäten_+en_kino]
         examples_contra: []
@@ -1172,8 +1172,8 @@ constraints:
     
         summary: -s- occurs regularly in deverbatives ending in -en.
         type: [derivational]
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         func_alias: sfx_deverb_en
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
@@ -1208,8 +1208,8 @@ constraints:
         type: [derivational]
 
         func_alias: sfx_F_in_en
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [lehrerinn_+en_mentalität, freundinn_+en_gruppe, schülerinn_+en_rat]
         examples_contra: [königin_mutter]
@@ -1233,8 +1233,8 @@ constraints:
         type: [derivational]
 
         func_alias: prx_deverb
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [anspruch_+s_haltung, eintrag_+s_frist, bedarf_+s_fall, verfall_+s_datum]
         examples_contra: [anruf_beantworter, überfall_kommando, bestand_teil]
@@ -1290,8 +1290,8 @@ constraints:
         type: [phonological]
 
         func_alias: sibilant_fin
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [gefäß_system, fisch_öl, notiz_buch, herbst_anfang]
         examples_contra: []
@@ -1322,8 +1322,8 @@ constraints:
         type: [phonological]
 
         func_alias: vow_fin
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [auto_bahn, uhu_paar, kuh_milch, gummi_bär]
         examples_contra: [uhu_+s_nest]
@@ -1350,8 +1350,8 @@ constraints:
         type: [morphological, phonological]
 
         func_alias: stressed_phon_fin
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [kosmetik_industrie, akustik_paneele, architektur_büro, metzgerei_produkt]
         examples_contra: [kultur_+en_folge, melodie_+n_reigen]
@@ -1375,8 +1375,8 @@ constraints:
         type: [morphological, phonological]
 
         func_alias: f_t_fin
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [arbeit_+s_tag, heirat_+s_antrag, zukunft_+s_angst]
         examples_contra: [arbeit_geber, schuld_gefühl, sicht_schutz]
@@ -1402,8 +1402,8 @@ constraints:
         type: [phonological]
 
         func_alias: schwa_fin
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
         examples_contra: [fläche_maß, sorge_pflicht, gebäude_komplex]
@@ -1450,8 +1450,8 @@ constraints:
         type: [morphological, phonological, semantic]
 
         func_alias: f_cons_fin_sg
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [schrift_führer, geburt_+s_tag, burg_anlage]
         examples_contra: [burg_+en_blick, frau_+en_bild]
@@ -1484,8 +1484,8 @@ constraints:
         type: [morphological, phonological, semantic]
 
         func_alias: f_cons_fin_pl
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [schrift_+en_verzeichnis, geburt_+en_kontrolle, burg_+en_land]
         examples_contra: []
@@ -1529,8 +1529,8 @@ constraints:
         type: [semantic]
 
         func_alias: copula
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [dichter_componist, bett_sofa, königin_mutter]
         examples_contra: []
@@ -1562,8 +1562,8 @@ constraints:
         type: [semantic]
 
         func_alias: argument
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [gewicht_+s_heber, krieg_+s_führung, unternehmen_+s_beratung]
         examples_contra: [gewicht_heber, krieg_führung]
@@ -1587,8 +1587,8 @@ constraints:
         type: [lexical, semantic]
 
         func_alias: tech_term
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [erbschaft_steuer, herz_schlagen, schaden_ersatz]
         examples_contra: [schaden_+s_ersatz]
@@ -1623,8 +1623,8 @@ constraints:
         type: [lexical, semantic]
 
         func_alias: sec_const_anim
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [reiter_+s_mann, lehrer_+s_tochter, bäcker_+s_leute]
         examples_contra: []
@@ -1652,8 +1652,8 @@ constraints:
         type: [derivational]
 
         func_alias: cmpx_morph
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, anspruch_+s_haltung, eintrag_+s_frist]
         examples_contra: [ort_+s_amt, krieg_+s_ende, anruf_beantworter, minderheit_+en_recht]
@@ -1688,8 +1688,8 @@ constraints:
         type: [phonological]
 
         func_alias: cmpx_phon
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
         examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
@@ -1721,8 +1721,8 @@ constraints:
         type: [phonological]
 
         func_alias: sonority
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [ort_+s_tarif, glück_+s_rad, himmel_reich, uhu_paar]
         examples_contra: [arbeit_geber, staub_sauger, heil_+s_lehre, uhu_+s_nest]
@@ -1770,8 +1770,8 @@ constraints:
         type: [semantic]
 
         func_alias: pl_interpr
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [punkt_+e_stand, buch_+=er_regal, staat_+en_bund, burg_+en_land, mutter_+=_zentrum]
         examples_contra: [pilz_sammler, buch_handel, motor_+en_geräusch, burg_+en_blick, vogel_futter]
@@ -1808,8 +1808,8 @@ constraints:
         type: [morphological]
 
         func_alias: s_smpx
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [zwang_+s_jacke, ort_+s_angabe, könig_+s_haus]
         examples_contra: [arbeit_+s_amt, heirat_+s_antrag, liebe_+s_brief]
@@ -1841,8 +1841,8 @@ constraints:
         type: [lexical]
 
         func_alias: s_freq
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [volk_+s_brauch, amt_+s_anwalt, staat_+s_amt]
         examples_contra: []
@@ -1863,8 +1863,8 @@ constraints:
         type: [morphological, derivational, phonological]
 
         func_alias: s_f_cmpx
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
         examples_contra: [acht_+s_erklärung]
@@ -1892,8 +1892,8 @@ constraints:
         type: [phonological]
 
         func_alias: n_schwa
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
         examples_contra: []
@@ -1924,8 +1924,8 @@ constraints:
         type: [morphological]
 
         func_alias: en_par
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [blume_+n_topf, katze_+n_fell, frau_+en_hand]
         examples_contra: [hahn_+en_kamm, mond_+en_schein, instrument_+en_bau]
@@ -1962,8 +1962,8 @@ constraints:
         type: [lexical, morphological, semantic]
 
         func_alias: en_non_par_m
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [hahn_+en_kamm, mond_+en_schein, stern_+en_himmel, mai_+en_nacht]
         examples_contra: [mond_aufgang, stern_bild, mai_baum]
@@ -1989,8 +1989,8 @@ constraints:
         type: [lexical, morphological, semantic]
 
         func_alias: en_non_par_n_pl
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [instrument_+en_bau, dokument_+en_sammlung]
         examples_contra: [zertifikat_system]
@@ -2012,8 +2012,8 @@ constraints:
         type: [morphological]
 
         func_alias: e_par
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
         examples_contra: [herz_+e_leid]
@@ -2049,8 +2049,8 @@ constraints:
         type: [morphological]
 
         func_alias: er_par
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
         examples_contra: []
@@ -2089,8 +2089,8 @@ constraints:
         type: [morphological]
 
         func_alias: e_uml_par
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
         examples_contra: []
@@ -2118,8 +2118,8 @@ constraints:
         type: [lexical, morphological]
 
         func_alias: es_isol
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, land_+es_regierung]
         examples_contra: [kind_+er_garten, land_kreis, tag_blatt]
@@ -2161,8 +2161,8 @@ constraints:
         type: [lexical]
 
         func_alias: ens_isol
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [schmerz_+ens_geld, name_+ens_tag, herz_+ens_angst]
         examples_contra: [schmerz_grenze, name_+n_buch, herz_leiden]
@@ -2192,8 +2192,8 @@ constraints:
         type: [morphological]
 
         func_alias: zero_uml_par
-        regularity: NA
         coverage: NA
+        regularity: NA
 
         examples_pro: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
         examples_contra: []
