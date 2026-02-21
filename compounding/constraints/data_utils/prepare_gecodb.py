@@ -2,8 +2,10 @@
 
 
 import os
+import math
 # import asyncio
 import pandas as pd
+from tqdm import tqdm
 
 from gecodb_compound_parser import Compound
 from dereko_search import get_dereko_counts
@@ -97,6 +99,10 @@ def main():
     # run in batches to enforce regular caching
     freqs = []
     batch_size = 2500
+    progress_bar = tqdm(
+        total=math.ceil(len(lemmas) / batch_size),
+        desc="Retrieving KorAP frequencies in batches"
+    )
     for batch_start in range(0, len(lemmas), batch_size):
         batch = lemmas[batch_start:batch_start + batch_size]
         # Note: after receiving a Meldung from IDS Mannheim support team,
@@ -106,6 +112,7 @@ def main():
         #   >>> batch_freqs = asyncio.run(aget_dereko_counts(batch))
         batch_freqs = get_dereko_counts(batch)
         freqs.extend(batch_freqs)
+        progress_bar.update(1)
     gecodb_v05["comp_freq"] = freqs
 
 
