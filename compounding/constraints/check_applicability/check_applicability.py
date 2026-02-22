@@ -179,7 +179,7 @@ def main():
         **csv_kwargs
     )
     zip_name = os.path.splitext(appl_index_path)[0] + ".zip"
-    with zipfile.ZipFile(zip_name, "w") as z:
+    with zipfile.ZipFile(zip_name, "w", compression=zipfile.ZIP_DEFLATED) as z:
         z.write(appl_index_path, os.path.basename(appl_index_path))
         
     constr_statistics.to_csv(
