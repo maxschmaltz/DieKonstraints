@@ -7,8 +7,7 @@
 # 3. Personal competence in Python, hence, faster development cycle and more reliable code.
 
 import os
-import asyncio
-import aiohttp
+# import asyncio
 import re
 import pandas as pd
 from phonecodes import phonecodes
@@ -1180,7 +1179,9 @@ def main():
         ).replace("r", "ʁ") \
         # irrelevant for the constraints
         # but requires more complex processing
-        .replace("ː", "")
+        .replace("ː", "")   \
+        # fix systematic mistake with ö
+        .replace("/", "ø")
     )
 
 
@@ -1265,7 +1266,8 @@ def main():
     )
 
     lemmas = gmsplw["lemma"].tolist()
-    freqs = asyncio.run(get_dereko_counts(lemmas, resolve_sz=True))
+    # freqs = asyncio.run(get_dereko_counts(lemmas, resolve_sz=True))
+    freqs = get_dereko_counts(lemmas, resolve_sz=True)  # switch to async
     gmsplw["freq"] = freqs
     gmspflw = gmsplw    # rename for consistency with previous version
 
