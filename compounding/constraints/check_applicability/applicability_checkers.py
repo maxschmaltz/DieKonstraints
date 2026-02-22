@@ -58,6 +58,8 @@ def _is_of_plural(
 		# -er- always adds umlaut if possible
 		return False
 	lemma_info = celex.loc[lemma]
+	if pd.isna(lemma_info["nom_pl"]):
+		return False	# has no plural
 	if (
 		_ends_with_phon_schwa(lemma)
 		and plural_marker == "en"
@@ -68,7 +70,14 @@ def _is_of_plural(
 		# 'Freundin' -> 'Freundinnen'
 		lemma += lemma[-1]
 	if adds_umlaut:
-		lemma = perform_umlaut(lemma)
+		# TODO: extract stem (e.g. Vorbild)
+		lemma_uml = perform_umlaut(lemma)
+		if (
+			plural_marker != "er"	# allowed to have no uml
+			and lemma == lemma_uml	# cannot be umlauted
+		):
+			return False
+		lemma = lemma_uml
 	pl_vars = lemma_info["nom_pl"].split("/")
 	return any(
 		pl_var == lemma + plural_marker
@@ -598,11 +607,14 @@ def sfx_F_in_en_is_applicable(compound: Compound):
 	# since -in becomes -inn before -en, adjust for that
 	# as in case the constraint applies, 
 	# n1s like 'Lehrerinn' will be coming
-	n1 = re.sub(f"{n1[-1]}{{2}}$", n1[-1], n1)
-	return (
-		_is_of_gender(n1, "f")
-		and _ends_with_sfx(n1, "in")
-	)
+	n1 = re.sub(f"inn$", "in", n1)
+	try:
+		return (
+			_is_of_gender(n1, "f")
+			and _ends_with_sfx(n1, "in")
+		)
+	except KeyError:
+		return False	# for cases like Sinn - sin
 
 def sfx_F_in_en_applies(compound: Compound):
 	return _has_linker(compound, linker_morph="en")
@@ -633,7 +645,7 @@ def prx_deverb_applies(compound: Compound):
 def sibilant_fin_is_applicable(compound: Compound):
 	cons_cluster = _get_last_cons_cluster(compound.stems[0].morph)
 	return (
-		cons_cluster
+		bool(cons_cluster)
 		and (
 			_phone_has_property(cons_cluster[-1], "sibilant-fricative")
 			or "s" in cons_cluster
@@ -651,8 +663,15 @@ def sibilant_fin_applies(compound: Compound):
 
 def vow_fin_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
-	last_phone = _get_transcription(n1)[-1]
-	return _is_vowel(last_phone) and not _ends_with_phon_schwa(n1)
+	phon_transcription = _get_transcription(n1)
+	last_phone = phon_transcription[-1]
+	last_bo_phone = phon_transcription[-2]
+	return (
+		_is_vowel(last_phone)
+		# avoid diphthongs
+		and not _is_vowel(last_bo_phone)
+		and not _ends_with_phon_schwa(n1)
+	)
 
 def vow_fin_applies(compound: Compound):
 	return _has_no_linker(compound)
@@ -836,7 +855,10 @@ def cmpx_phon_applies(compound: Compound):
 			# the cases of unstressed prefixes and stressed suffixes
 			# do not have to be checked separately here
 			# since they corrupt the trochaic pattern anyway
-			_is_trochaic(n1)
+			(
+				_is_monosyllabic(n1)
+				or _is_trochaic(n1)
+			)
 			and not _has_linker(compound, linker_morph="s")
 		)
 		or (

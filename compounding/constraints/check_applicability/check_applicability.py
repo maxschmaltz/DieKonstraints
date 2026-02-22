@@ -3,12 +3,14 @@
 
 
 import os
+import zipfile
 import pandas as pd
 import yaml
 from tqdm import tqdm
 
-from compounding.constraints.data_utils.gecodb_compound_parser import Compound
-import compounding.constraints.check_applicability.applicability_checkers as applicability_checkers
+# python -m compounding.constraints.check_applicability.check_applicability
+from ..data_utils.gecodb_compound_parser import Compound
+from . import applicability_checkers
 
 
 def main():
@@ -16,22 +18,13 @@ def main():
     inpath = "resources/custom/compounding/intermediate_data"
     outpath = "resources/custom/compounding/applicability_statistics"
 
-    # load prepared CELEX nouns
-    celex = pd.read_csv(
-        os.path.join(inpath, "celex_nouns.tsv"),
-        sep="\t",
-        dtype=str,
-        header=0,
-        index_col="lemma"
-    )
-
-    # load GecoDB
+    # load GeCoDB
     gecodb_v06 = pd.read_csv(
         os.path.join(inpath, "gecodb_v06.tsv"),
         sep="\t",
         dtype=str,
         header=0,
-        index_col="comp"
+        index_col="comp_gecodb"
     )
 
     # load constraints
@@ -39,78 +32,54 @@ def main():
         constraints: dict = list(yaml.safe_load_all(f))[-1]["constraints"]
         constr_ids = list(constraints.keys())
 
-    # load indices as well as statistics if available
-    applicability_cache_path = os.path.join(outpath, "applicability_cache.tsv")
-    if os.path.exists(applicability_cache_path):
-        applicability_cache = pd.read_csv(
-            applicability_cache_path,
-            sep="\t",
-            dtype=str,
-            header=0,
-            index_col="lemma"
-        )
-    else:
-        applicability_cache = pd.DataFrame(
-            index=celex.index,
-            columns=constr_ids
-        )
-
-    applicability_index_path = os.path.join(outpath, "applicability_index.tsv")
-    if os.path.exists(applicability_index_path):
-        applicability_index = pd.read_csv(
-            applicability_index_path,
-            sep="\t",
-            dtype=str,
-            header=0,
-            index_col="comp"
-        )
-    else:
-        applicability_index = pd.DataFrame(
-            index=gecodb_v06.index,
-            columns=[
-                c for constr_id in constr_ids
-                for c in [
-                    constr_id + "_is_applicable",
-                    constr_id + "_applies"
-                ]
+    # initialize indices; since the operations are symbolic and therefore
+    # very fast, we do not create any cache or anything;
+    # in case of any changes, the whole thing should be rerun and rebuilt
+    # to ensure no outdated infos
+    appl_index = pd.DataFrame(
+        index=gecodb_v06.index,
+        columns=[
+            c for constr_id in constr_ids
+            for c in [
+                constr_id + "_is_applicable",
+                constr_id + "_applies"
             ]
-        )
+        ]
+    )
 
-    constraints_statistics_path = os.path.join(outpath, "constraints_statistics.tsv")
-    if os.path.exists(constraints_statistics_path):
-        constraints_statistics = pd.read_csv(
-            constraints_statistics_path,
-            sep="\t",
-            dtype=str,
-            header=0,
-            index_col="constr_id"
-        )
-    else:
-        constraints_statistics = pd.DataFrame(
-            index=pd.Series(constr_ids, name="constr_id"),
-            columns=[
-                "coverage_comp",
-                "coverage_comp_n",
-                "coverage_lemma",
-                "coverage_lemma_n",
-                "regularity_comp",
-                "regularity_comp_n"
-            ]
-        )
+    constr_statistics = pd.DataFrame(
+        index=pd.Series(constr_ids, name="constr_id"),
+        columns=[
+            "cvg_type",
+            "cvg_type_abs",
+            "cvg_token",
+            "cvg_token_abs",
+            "reg_type",
+            "reg_type_abs",
+            "reg_token",
+            "reg_token_abs",
+        ]
+    )
 
-    n_comp = len(gecodb_v06)
-    
+    type_comp = len(gecodb_v06)
+    token_comp = gecodb_v06["comp_freq"].astype(int).sum()
 
     # For checking the coverage and regularity of constraints,
     # we follow the algorithm:
     # 1. For each compound in GeCoDB for each constraint,
-    #   1.1. Check whether the constraint is applicable to its N1. Cache results.
-    #   1.2. If applicable, check whether the constraint actually applies.
+    #   1.1. Check whether the constraint is potentially applicable to the compound.
+    #   Cache results for further compounds with the same N1 (most of the constraints
+    #   target N1).
+    #   1.2. If applicable, check whether the constraint actually applies. Otherwise NA.
     # 2. Calculate statistics:
-    #   2.1. Coverage for compounds: proportion of compounds for which the constraint is applicable.
-    #   2.2. Coverage for lemmas: number of lemmas for which the constraint is applicable.
-    #   2.3. Regularity: proportion of compounds for which the constraint applies
-    #       among those for which it is applicable.
+    #   2.1. Type coverage: proportion of the number of compounds for which the
+    #   constraint is potentially applicable and the total number of the compounds.
+    #   2.2. Token coverages: proportion of the sums of word counts of the covered compounds
+    #   and of all compounds.
+    #   2.3. Type regularity: proportion of number of the compounds to which
+    #   the constraint applies to the number of the covered compounds
+    #   2.4. Token regularity: proportion of the sums of word counts of compounds
+    #   for which the constraint applies and those for which it is potentially applicable.
     # 3. Save results.
 
     for c_id, constraint in constraints.items():
@@ -129,15 +98,6 @@ def main():
                 func_name + "_applies"
             )
 
-            # # if had been run, skip
-            # if applicability_index[c_id + "_is_applicable"].notna().all():
-            #     continue
-
-            # reset columns
-            applicability_index[c_id + "_is_applicable"] = pd.NA
-            applicability_index[c_id + "_applies"] = pd.NA
-
-
             pbar = tqdm(gecodb_v06.index, desc=f"Running {c_id}")
 
             def _run_constraint(comp: str) -> tuple[bool, bool]:
@@ -145,30 +105,20 @@ def main():
                 # parse compound
                 comp: Compound = Compound(comp)
 
-                # 1.1. Check whether the constraint is applicable to its N1.
-
-                # check for applicability in cache
-                # TODO: p2l:sem:2const_anim/pers-s?
-                lemma = comp.stems[0].morph
-                cache_entry = applicability_cache.loc[lemma, c_id]
-                if pd.isna(cache_entry):
-                    is_applicable = is_applicable_func(comp)
-                    applicability_cache.loc[lemma, c_id] = is_applicable
-                else:
-                    is_applicable = cache_entry
+                # 1.1. Check whether the constraint is applicable.
+                is_applicable = is_applicable_func(comp)
 
                 # 1.2. If applicable, check whether the constraint actually applies.
-
                 if is_applicable:
                     applies = is_applied_func(comp)
                 else:
-                    applies = False
+                    applies = None
 
                 pbar.update(1)
                 return is_applicable, applies
                 
-            applicability_index[c_id + "_is_applicable"], applicability_index[c_id + "_applies"] = zip(
-                *applicability_index.index.to_series().apply(
+            appl_index[c_id + "_is_applicable"], appl_index[c_id + "_applies"] = zip(
+                *appl_index.index.to_series().apply(
                     lambda x: _run_constraint(x)
                 )
             )
@@ -178,41 +128,36 @@ def main():
 
             # 2. Calculate statistics
 
-            # 2.1. Coverage for compounds: proportion of compounds for which the constraint is applicable.
+            # 2.1. Type coverage: proportion of the number of compounds for which the
+            # constraint is potentially applicable to the total number of the compounds.
+            # 2.2. Token coverages: proportion of the sums of word counts of the covered compounds
+            # and of all compounds.
 
-            coverage_comp_n = applicability_index[c_id + "_is_applicable"].sum().item()
-            coverage_comp = round(coverage_comp_n / n_comp, 4)
-
-            # 2.2. Coverage for lemmas: number of lemmas for which the constraint is applicable.
+            cvg_type_abs = appl_index[c_id + "_is_applicable"].sum()    # n covered
+            cvg_type = round(cvg_type_abs / type_comp, 3)   # n covered / n all
             
-            coverage_lemma_n = applicability_cache[c_id].sum()  # why not .item()?
-            # not all of the lemmas may have been checked because
-            # not all of them occur as N1 in GeCoDB
-            n_lemmas = applicability_cache[c_id].notna().sum().item()
-            coverage_lemma = round(coverage_lemma_n / n_lemmas, 4)
+            applicable_comps = gecodb_v06[appl_index[c_id + "_is_applicable"]]
+            cvg_token_abs = applicable_comps["comp_freq"].astype(int).sum()
+            cvg_token = round(cvg_token_abs / token_comp, 3)    # freq covered / freq all
+
+            # 2.3. Type regularity: proportion of number of the compounds to which
+            # the constraint applies to the number of the covered compounds.
+            # 2.4. Token regularity: proportion of the sums of word counts of compounds
+            # for which the constraint applies and those for which it is potentially applicable.
+
+            reg_type_abs = appl_index[c_id + "_applies"].sum()  # n conform
+            reg_type = round(reg_type_abs / cvg_type_abs, 3)    # n conform / n covered
             
-            # 2.3. Regularity: proportion of compounds for which the constraint applies
-            #   among those for which it is applicable.
+            applied_comps = gecodb_v06[appl_index[c_id + "_applies"].notna() & appl_index[c_id + "_applies"]]
+            reg_token_abs = applied_comps["comp_freq"].astype(int).sum()
+            reg_token = round(reg_token_abs / cvg_token_abs, 3) # freq conform / freq covered
 
-            # find applicable compounds
-            applicable_comps = applicability_index[applicability_index[c_id + "_is_applicable"]]
-            n_applicable_comps = len(applicable_comps)
-            if n_applicable_comps > 0:
-                regularity_comp_n = applicable_comps[c_id + "_applies"].sum().item()
-                regularity_comp = round(regularity_comp_n / n_applicable_comps, 4)
-            else:
-                regularity_comp = "NA"
-
-            # record statistics
-            constraints_statistics.loc[c_id, :] = [
-                coverage_comp,
-                coverage_comp_n,
-                coverage_lemma,
-                coverage_lemma_n,
-                regularity_comp,
-                regularity_comp_n
+            constr_statistics.loc[c_id, :] = [
+                cvg_type, cvg_type_abs,
+                cvg_token, cvg_token_abs,
+                reg_type, reg_type_abs,
+                reg_token, reg_token_abs
             ]
-
 
         else:
 
@@ -228,9 +173,19 @@ def main():
         "index": True
     }
 
-    applicability_cache.to_csv(applicability_cache_path, **csv_kwargs)
-    applicability_index.to_csv(applicability_index_path, **csv_kwargs)
-    constraints_statistics.to_csv(constraints_statistics_path, **csv_kwargs)
+    appl_index_path = os.path.join(outpath, "appl_index.tsv")
+    appl_index.to_csv(
+        appl_index_path,
+        **csv_kwargs
+    )
+    zip_name = os.path.splitext(appl_index_path)[0] + ".zip"
+    with zipfile.ZipFile(zip_name, "w") as z:
+        z.write(appl_index_path, os.path.basename(appl_index_path))
+        
+    constr_statistics.to_csv(
+        os.path.join(outpath, "constr_statistics.tsv"),
+        **csv_kwargs
+    )
 
 
 if __name__ == "__main__":
