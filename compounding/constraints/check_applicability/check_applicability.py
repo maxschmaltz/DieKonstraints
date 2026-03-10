@@ -32,9 +32,6 @@ def main():
         constraints: dict = list(yaml.safe_load_all(f))[-1]["constraints"]
         constr_ids = list(constraints.keys())
 
-
-        constraints = {"p2l:drv:sfx:F_#in$-en": constraints["p2l:drv:sfx:F_#in$-en"]}
-
     # initialize indices; since the operations are symbolic and therefore
     # very fast, we do not create any cache or anything;
     # in case of any changes, the whole thing should be rerun and rebuilt
