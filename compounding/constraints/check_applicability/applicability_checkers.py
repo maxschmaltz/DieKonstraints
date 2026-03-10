@@ -128,12 +128,7 @@ def _get_morphemic_schema(lemma: str) -> str:
 	return lemma_info["morphemic_schema"]
 
 def _is_simplex(lemma: str) -> bool:
-	# simplex = only one morpheme; cases of conversion
-	# are marked as derived in CELEX, e.g. 'Leb-en';
-	# also, in some cases CELEX marks simplex nouns
-	# as converted "non-derivationally",
-	# e.g. 'Arbeit' `V` or 'Laut' `A`
-	return len(_get_morphemic_schema(lemma)) == 1
+	return _get_morphemic_schema(lemma) == "N"
 
 def _is_derived(lemma: str) -> bool:
 	# for better readability
@@ -564,8 +559,10 @@ def sfx_s_is_applicable(compound: Compound):
 		[
 			"keit", "igkeit", "heit", "schaft", "ung", "sal",
 			"ing", "ling", "tum", "um", "ion",
-			# in CELEX: qualit-ät, ?, aktiv-ität, spontan-eität
-			"ät", "tät", "ität", "eität"
+			# in CELEX: absorb-tion (added manually), design-ation
+			"tion", "ation",
+			# in CELEX: qualit-ät, ?, aktiv-ität, spontan-eität, plast-izität
+			"ät", "tät", "ität", "eität", "izität"
 		]
 	)
 
@@ -959,8 +956,8 @@ def s_freq_applies(compound: Compound):
 	# arbitrary measure for "high" frequency;
 	# DeReKo is an enormous corpus so
 	# "frequent" on its scales is measured
-	# in millions (e.g. 'Land' has freq ~8.9M)
-	return _get_frequency(compound.stems[0].morph) > 500_000
+	# in hundreds of thousands (e.g. 'Land' has freq ~8.9M)
+	return _get_frequency(compound.stems[0].morph) > 100_000
 
 
 # l2p:s|f
