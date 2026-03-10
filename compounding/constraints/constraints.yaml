@@ -411,7 +411,7 @@ topology:
 
             # 32
             - l2p:en:
-                summary: "All nouns that constitute first constituents that attach -(e)n- are build the plural form with -(e)n, with a few idiosyncratic exceptions. The exceptions are: 1) masculine monosyllabic designations of male persons, animals, astronomic objects, months; 2) polysyllabic foreign neuter nouns that have a stressed final syllable (and mostly end in with -at and -ment) that exhibit a plural or a collective meaning within the compound."
+                summary: "All nouns that constitute first constituents that attach -(e)n- are build the plural form with -(e)n, with a few idiosyncratic exceptions. The exceptions are: 1) masculine monosyllabic designations of male persons, animals, astronomic objects, months; 2) polysyllabic foreign neuter nouns that have a stressed final syllable (and mostly end in with -at and -ment) that exhibit a plural meaning within the compound."
                 children:
 
                     - l2p:en|par
@@ -2348,7 +2348,7 @@ constraints:
     # 48
     l2p:en|non_par_n_pl_interpr:
     
-        summary: All neuter nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are polysyllabic foreign nouns that have a stressed final syllable (and mostly end in -at and -ment) that exhibit a plural or a collective meaning within the compound.
+        summary: All neuter nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are polysyllabic foreign nouns that have a stressed final syllable (and mostly end in -at and -ment) that exhibit a plural meaning within the compound.
         ling_info_type: [lexical, morphological, semantic]
         appl_item: n1+linker
 
@@ -2631,7 +2631,7 @@ constraints:
     # 55
     l2p:pl_marker:
       
-        summary: Linkers that are identical to the plural ending of the first constituent in a given compound are tendentially associated with a plural or meaning of this first constituent within the compound.
+        summary: Linkers that are identical to the plural ending of the first constituent in a given compound are tendentially associated with a plural meaning of this first constituent within the compound.
         ling_info_type: [morphological, semantic]
         appl_item: n1+linker
 

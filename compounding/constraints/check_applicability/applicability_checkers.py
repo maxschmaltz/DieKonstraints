@@ -282,7 +282,9 @@ def def_0_applies(compound: Compound):
 
 # p2l:decl_cl:pl:#0-0|def-0
 #
-# Nouns forming the plural with a zero ending attach a zero linker regularly.
+# First constituents that are constituted by nouns that build
+# the plural form with a zero ending
+# attach a zero linker almost regularly.
 
 def plur_0_is_applicable(compound: Compound):
 	return _is_of_zero_plural(compound.stems[0].morph)
@@ -294,7 +296,8 @@ def plur_0_applies(compound: Compound):
 
 # p2l:decl_cl:pl:#s-0
 #
-# Nouns forming the plural with -s regularly attach a zero linker.
+# First constituents that are constituted by nouns that build
+# the plural form with -s attach a zero linker regularly.
 
 def plur_s_is_applicable(compound: Compound):
 	return _is_of_plural(compound.stems[0].morph, "s")
@@ -306,7 +309,8 @@ def plur_s_applies(compound: Compound):
 
 # p2l:decl_cl:pl:#e-0|def-0
 #
-# Nouns forming the plural with -e mostly have a zero linker.
+# First constituents that are constituted by nouns that build
+# the plural form with -e mostly have a zero linker.
 
 def plur_e_is_applicable(compound: Compound):
 	return _is_of_plural(compound.stems[0].morph, "e")
@@ -317,23 +321,27 @@ def plur_e_applies(compound: Compound):
 
 # p2l:decl_cl:pl:#e-0|pl_interpr-e
 #
-# Nouns forming the plural with -e non-regularly attach -e- when
-# the second constituent forces a plural or collective meaning of this noun.
+# First constituents that are constituted by nouns that build
+# the plural form with -e attach -e- irregularly in compounds
+# in which the second constituent forces
+# a plural meaning of the given first constituent.
 # TODO
 
 
 # p2l:decl_cl:pl:#e-0|msyl_anim-e
 #
-# Monosyllabic e-plural nouns designating animals non-regularly attach -e-.
+# First constituents that are constituted by
+# monosyllabic animal designations that build
+# the plural form with -e attach -e- irregularly.
 # TODO
 
 
 
 # p2l:decl_cl:pl:#er-0/er|def-0/er
 #
-# Nouns forming the plural with -er (with or without umlaut)
-# mostly attach a zero linker or =er= in different cases.
-# Another linkers can also be rarely adopted by these nouns.
+# First constituents that are constituted by nouns that build
+# the plural form with -er (with or without umlaut)
+# mostly attach a zero linker or -"er-.
 
 def plur_er_is_applicable(compound: Compound):
 	return _is_of_plural(compound.stems[0].morph, "er", adds_umlaut=True)
@@ -347,42 +355,50 @@ def plur_er_applies(compound: Compound):
 
 # p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 #
-# Nouns forming the plural with -er (with or without umlaut) 
-# attach a zero linker in majority of cases when the second 
-# constituent forces a singular meaning of this noun.
+# First constituents that are constituted by nouns that build
+# the plural form with -er (with or without umlaut)
+# attach a zero linker in majority of compounds
+# in which the second constituent forces
+# a singular meaning of the given first constituent.
 # TODO
 
 
 # p2l:decl_cl:pl:#er-0/er|mass-interpr-0
 #
-# Nouns forming the plural with -er (with or without umlaut) 
-# tend (with counterexamples) to attach a zero linker 
-# when the second constituent forces a mass meaning of this noun.
+# First constituents that are constituted by nouns that build
+# the plural form with -er (with or without umlaut)
+# tend to attach a zero linker in compounds
+# in which the second constituent forces
+# a mass meaning of the given first constituent.
 # TODO
 
 
 # p2l:decl_cl:pl:#er-0/er|pl_interpr-er
 #
-# Nouns forming the plural with -er (with or without umlaut) 
-# attach =er= more likely when the second constituent 
-# forces a plural or collective meaning of this noun (with counterexamples), 
-# in which case these nouns indicate concrete, countable entities.
+# First constituents that are constituted by nouns that build
+# the plural form with -er (with or without umlaut)
+# attach -"er- more likely in compounds
+# in which the second constituent forces
+# a plural meaning of the given first constituent.
 # TODO
 
 
 # p2l:decl_cl:pl:#er-0/er|anim-er
 #
-# Nouns forming the plural with -er (with or without umlaut) 
-# that designate persons and animals may attach =er= 
-# also with singular interpretation.
+# First constituents that are constituted by
+# person and animal designations that build
+# the plural form with -er (with or without umlaut)
+# may attach -"er- regardless of the
+# singular/pluralinterpretation of
+# the given first constituent within the compound.
 # TODO
 
 
 
 # p2l:decl_cl:pl:#e_uml-0|def-0
 #
-# Nouns forming the plural with -e and umlaut 
-# mostly have a zero linker.
+# First constituents that are constituted by nouns that build
+# the plural form with -e and umlaut mostly have a zero linker.
 
 def plur_e_uml_is_applicable(compound: Compound):
 	return _is_of_plural(compound.stems[0].morph, "e", adds_umlaut=True)
@@ -393,17 +409,18 @@ def plur_e_uml_applies(compound: Compound):
 
 # p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml
 #
-# Nouns forming the plural with -e and umlaut non-regularly 
-# attach -e- with umlaut when the second constituent 
-# forces a plural or collective meaning of this noun.
+# First constituents that are constituted by nouns that build
+# the plural form with -e and umlaut attach -"e- irregularly in compounds
+# in which the second constituent forces
+# a plural meaning of the given first constituent.
 # TODO
 
 
 
 # p2l:decl_cl:pl:#0_uml-0|def-0
 #
-# Nouns forming the plural with a zero ending and umlaut 
-# mostly have a zero linker.
+# First constituents that are constituted by nouns that build
+# the plural form with a zero ending and umlaut mostly have a zero linker.
 
 def plur_0_uml_is_applicable(compound: Compound):
 	return _is_of_plural(compound.stems[0].morph, "", adds_umlaut=True)
@@ -414,17 +431,20 @@ def plur_0_uml_applies(compound: Compound):
 
 # p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml
 #
-# Nouns forming the plural with a zero ending and umlaut 
-# may non-regularly attach a zero linker with umlaut when 
-# the second constituent forces a plural or collective meaning of this noun.
+# First constituents that are constituted by nouns that build
+# the plural form with a zero ending and umlaut attach
+# a zero linker with umlaut irregularly in compounds
+# in which the second constituent forces
+# a plural meaning of the given first constituent.
 # TODO
 
 
 
 # p2l:decl_cl:mixed-0/s/en|def-0/s/en
 #
-# Mixed masculine and neuter nouns can attach -s-, 
-# a zero linker, or -(e)n-.
+# First constituents that are constituted by
+# mixed masculine and neuter nouns
+# almost always attach -s-, a zero linker, or -(e)n-.
 
 def mixed_mn_is_applicable(compound: Compound):
 	return _is_mixed(compound.stems[0].morph)
@@ -439,19 +459,19 @@ def mixed_mn_applies(compound: Compound):
 
 # p2l:decl_cl:mixed-0/s/en|pl_interpr-en
 #
-# Mixed masculine and neuter nouns can attach attach -(e)n- more likely 
-# when the second constituent forces a plural or collective meaning 
-# of this noun. However, there are counterexamples 
-# where -(e)n- is attached even when no plural reading is possible.
+# First constituents that are constituted by
+# mixed masculine and neuter nouns attach -(e)n-more likely in compounds
+# in which the second constituent forces
+# a plural meaning of the given first constituent.
 # TODO
 
 
 
 # p2l:drv:sfx:0_pl_sfx-0
 #
-# Derivatives with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein
-# that build the plural form with a zero ending
-# regularly attach a zero linking element.
+# First constituents that are constituted by derived nouns with suffixes
+# -er, -ler, -ner, -el, -sel, -chen, -lein that build the plural form
+# with a zero ending attach a zero linking element regularly.
 
 def sfx_pl_0_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
@@ -474,8 +494,9 @@ def sfx_pl_0_applies(compound: Compound):
 
 # p2l:drv:sfx:e_pl_sfx-0
 #
-# Nouns with suffixes -bold, -nis, -rich, -at, -al
-# that build the plural form with -e regularly attach a zero linker.
+# First constituents that are constituted by derived nouns with suffixes
+# -bold, -nis, -rich, -at, -al that build
+# the plural form with -e attach a zero linker regularly.
 
 def sfx_pl_e_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
@@ -506,8 +527,8 @@ def sfx_pl_e_applies(compound: Compound):
 
 # p2l:drv:deverb_schwa$-0|def-0
 #
-# Deverbal feminine nouns with the schwa suffix
-# mostly attach a zero linker.
+# First constituents that are constituted by deverbal feminine nouns
+# with a schwa suffix mostly attach a zero linker.
 
 def schwa_fin_deverb_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
@@ -522,16 +543,18 @@ def schwa_fin_deverb_applies(compound: Compound):
 
 # p2l:drv:deverb_schwa$-0|pl_interpr-en
 #
-# Deverbal feminine nouns with the schwa suffix can attach an -n- 
-# when the second constituent forces a plural or collective reading.
+# First constituents that are constituted by deverbal feminine nouns
+# with a schwa suffix tend to attach -n- in compoundsin which the second
+# constituent forces a plural reading of the given first constituent.
 # TODO
 
 
 
 # p2l:drv:deadj_schwa$-0/en
 #
-# With deadjective feminine nouns with a schwa suffix,
-# -n- and zero linkers are about equally possible.
+# First constituents that are constituted by deadjectival feminine nouns
+# with a schwa suffix almost always attach -n- or a zero linker.
+# Each of the two linkers is preferred in about the same number of cases.
 
 def schwa_fin_deadj_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
@@ -550,8 +573,9 @@ def schwa_fin_deadj_applies(compound: Compound):
 
 # p2l:drv:sfx:sfx-s|def-s
 #
-# Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, 
-# -ing, -ling, -tum, -um, -ion, -(i)tät regularly attach -s-.
+# First constituents that are constituted by derived nouns with suffixes
+# -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -tum, -um, -ion,
+# also -ität and its allomorphs attach -s- regularly.
 
 def sfx_s_is_applicable(compound: Compound):
 	return _ends_with_sfx(
@@ -572,15 +596,17 @@ def sfx_s_applies(compound: Compound):
 
 # p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en
 #
-# Nouns with suffix -(i)tät prefer -en- when the second constituent 
-# forces a plural or collective meaning of this noun.
+# First constituents that are constituted by derived nouns with suffix
+# -ität and its allomorphs prefer -en- in compounds in which the second
+# constituent forces a plural meaning of the given first constituent.
 # TODO
 
 
 
 # p2l:drv:sfx:deverb_#en$-s
 
-# -s- occurs regularly in deverbatives ending in -en.
+# First constituents that are constituted by deverbal nouns
+# that end in suffix -en attach -s- regularly.
 
 def sfx_deverb_en_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
@@ -596,8 +622,9 @@ def sfx_deverb_en_applies(compound: Compound):
 
 # p2l:drv:sfx:F_#in$-en
 #
-# Derivative feminine nouns with suffix -in always attach -en-. 
-# (The suffix -in adjusts orthographically in this case and becomes an -inn.)
+# First constituents that are constituted by derived feminine nouns
+# with suffix -in always attach -en-.
+# (The suffix -in adjusts orthographically in this case and becomes -inn.)
 
 def sfx_F_in_en_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
@@ -620,7 +647,8 @@ def sfx_F_in_en_applies(compound: Compound):
 
 # p2l:drv:prx_deverb-s
 #
-# There is a strong tendency to adopt -s- after prefixed deverbatives.
+# First constituents that are constituted by prefixed deverbal nouns
+# exhibit a strong tendency to attach -s-.
 
 def prx_deverb_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
@@ -636,8 +664,8 @@ def prx_deverb_applies(compound: Compound):
 
 # p2l:phon_fin:sibilant$-0
 #
-# Nouns ending in a sibilant or a consonant cluster including [s] 
-# mostly adopt a zero linker.
+# First constituents that are constituted by nouns that endin a sibilant
+# or in a consonant cluster including [s] mostly adopt a zero linker.
 
 def sibilant_fin_is_applicable(compound: Compound):
 	cons_cluster = _get_last_cons_cluster(compound.stems[0].morph)
@@ -656,7 +684,8 @@ def sibilant_fin_applies(compound: Compound):
 
 # p2l:phon_fin:vow$-0
 #
-# Nouns ending in a full vowel always adopt a zero linker.
+# First constituents that are constituted by nouns that end
+# in a full vowel always adopt a zero linker.
 
 def vow_fin_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
@@ -677,8 +706,9 @@ def vow_fin_applies(compound: Compound):
 
 # p2l:phon_fin:F_#stressed_phon$-0
 #
-# Feminine nouns endings with stressed -ei, -ie, -ur,
-# also those with -ik usually attach a zero linker.
+# First constituents that are constituted by feminine nouns that end 
+# with stressed -ei, -ie, -ur, also stressed or unstressed -ik
+# usually attach a zero linker.
 
 def stressed_phon_fin_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
@@ -711,7 +741,8 @@ def stressed_phon_fin_applies(compound: Compound):
 
 # p2l:phon_fin:F_stem_#t$-s
 #
-# Feminine nouns ending with a [t] often attach an -s- 
+# First constituents that are constituted by feminine nouns
+# that end with [t] often attach -s-
 # if the [t] is part of the stem (not of a suffix).
 
 def f_t_fin_is_applicable(compound: Compound):
@@ -737,7 +768,8 @@ def f_t_fin_applies(compound: Compound):
 
 # p2l:phon_fin:schwa$-en
 #
-# Nouns ending in schwa regularly adopt -n-.
+# First constituents that are constituted by nouns
+# that end in schwa adopt -n- regularly.
 
 def schwa_fin_is_applicable(compound: Compound):
 	return _ends_with_phon_schwa(compound.stems[0].morph)
@@ -749,50 +781,60 @@ def schwa_fin_applies(compound: Compound):
 
 # p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
 #
-# Consonant-final weak feminine nouns with a singular meaning 
-# mostly adopt a zero linker or -s-.
+# First constituents that are constituted by
+# consonant-final weak feminine nouns mostly adopt a zero linker or -s- 
+# in compounds in which the second constituent forces
+# a singular meaning of the given first constituent.
 # TODO
 
 
 # p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
 #
-# Consonant-final weak feminine attach -en- more likely (especially 
-# final-stressed incl. monosyllabic ones) when the second constituent 
-# forces a plural or collective meaning of this noun (with counterexamples).
+# First constituents that are constituted by
+# consonant-final weak feminine nouns --- especially final-stressed
+# incl. monosyllabic ones --- attach -en- more likely in compounds
+# in which the second constituent forces
+# a plural meaning of the given first constituent.
 # TODO
 
 
 
 # p2l:sem:comp_type:copula-0
 #
-# Copulative compounds regularly attach a zero linker.
+# Copulative compounds insert a zero linker regularly.
+# By copulative compounds are understood compounds in which
+# the two constituents do not exhibit a clear modifier-head relation.
 # TODO
 
 
 
 # p2l:sem:comp_type:arg-s
 #
-# -s- may sometimes, with many doubtful cases, mark argumental compounds: 
-# those where the second constituent still contains a high degree 
-# of verbiness and the first constituent of which constitutes their argument.
+# Argumental compounds are sometimes marked by -s-.
+# By argumental compounds are understood compounds in which
+# the second constituent still contains a high degree of verbiness
+# and the first constituent of which constitutes their argument.
+# The second constituent is such compounds is usually
+# an agent designation, an -ung formation etc.
 # TODO
 
 
 
 # p2l:sem:tech_term-0
 #
-# In technical terminology (economics, law, medicine, etc.), compounds 
-# are often missing a linking element 
-# (even in cases where it would be obligatory in non-technical context).
+# Compounds belonging to technical terminology (economics, law,
+# medicine, etc.) are often missing an explicit linking element
+# (even in cases where it would be obligatory in a non-technical context).
 # TODO
 
 
 
 # p2l:sem:2const_anim/pers-s
 #
-# Compounds with the second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 
-# 'Gattin', 'Witwe' can insert -s- if the compound designates a person, 
-# even when the first constituent would otherwise attach a zero linker.
+# Compounds with second constituents 'Mann', 'Frau', 'Leute',
+# 'Tochter', 'Gattin', 'Witwe' tend to insert -s-
+# if the compound designates a person
+# (even if the first constituent would otherwise attach a zero linker).
 
 # def sec_const_anims_is_applicable(compound: Compound):
 # 	n2 = compound.stems[1].morph.lower()
@@ -807,8 +849,9 @@ def schwa_fin_applies(compound: Compound):
 
 # p2l:tend:cmpx_morph-s|def-s
 #
-# The acceptability of -s- irregularly grows when the first constituent 
-# is morphologically complex (any form of derivation).
+# The probability of -s- grows irregularly with the
+# morphological complexity of the first constituent
+# (any form of derivation).
 
 def cmpx_morph_is_applicable(compound: Compound):
 	# universal tendency
@@ -831,8 +874,11 @@ def cmpx_morph_applies(compound: Compound):
 
 # p2l:tend:cmpx_phon-s|def-s
 #
-# The acceptability of -s- irregularly grows when the first constituent 
-# is phonologically complex: non-trochaic form, words with unstressed prefixes, 
+# The probability of -s- grows irregularly with the
+# phonological complexity of the first constituent.
+# By phonologically complex words are understood
+# words with polysyllable non-trochaic form,
+# words with unstressed prefixes,
 # words with stressed or semi-stressed suffixes etc.
 
 def cmpx_phon_is_applicable(compound: Compound):
@@ -868,9 +914,11 @@ def cmpx_phon_applies(compound: Compound):
 
 # p2l:tend:sonority-!s
 #
-# The probability of -s- in simplices decreases with increasing sonority of the 
-# final segment of the first constituent: it is more frequent after plosives, 
-# infrequent after nasals and liquids, and it never occurs after a full vowel.
+# The probability of -s- in compounds with simplex first constituents
+# tends to decrease with the increasing sonority of the final segment
+# of the first constituent. -s- is thus more frequent after plosives,
+# infrequent after nasals and liquids,
+# and it never occurs after a full vowel.
 
 def sonority_is_applicable(compound: Compound):
 	# even though universal tendency, none of the sources explicitly
@@ -915,17 +963,11 @@ def sonority_applies(compound: Compound):
 
 
 
-# p2l:tend:pl_interpr-pl_marker|def-pl_marker
-#
-# Linkers identical to the plural ending can be associated with plural meaning.
-# TODO
-
-
-
 # l2p:s|smpx_mn
 #
-# In simplexes, -s- occurs only in few masculine and neuter nouns 
-# except for a few cases.
+# All except for a few simplex nouns that constitute first constituents
+# that attach -s- belong to a small fixed group
+# of masculine and neuter nouns.
 
 def s_smpx_is_applicable(compound: Compound):
 	return (
@@ -944,7 +986,8 @@ def s_smpx_applies(compound: Compound):
 
 # l2p:s|smpx_high_freq
 #
-# Many simplexes with an -s- are high frequent tokens.
+# Many simplex nouns that constitute first constituents
+# that attach -s- have a high token frequency.
 
 def s_freq_is_applicable(compound: Compound):
 	return (
@@ -962,7 +1005,8 @@ def s_freq_applies(compound: Compound):
 
 # l2p:s|f
 #
-# -s- can occur with F only if it is a morphologically complex and/or polysyllabic F.
+# Almost all feminine nouns that constitute first constituents
+# that attach -s- are morphologically complex and/or polysyllabic.
 
 def s_f_cmpx_is_applicable(compound: Compound):
 	return (
@@ -981,8 +1025,8 @@ def s_f_cmpx_applies(compound: Compound):
 
 # l2p:n
 #
-# Nouns ending in schwa is the only class of words that 
-# can attach the allomorph -n- of the en-linker.
+# All nouns that constitute first constituents
+# that attach the -n- allomorph of the -en- linker end in schwa.
 
 def n_schwa_is_applicable(compound: Compound):
 	return (
@@ -997,7 +1041,8 @@ def n_schwa_applies(compound: Compound):
 
 # l2p:en|par
 #
-# Only nouns forming the plural with -(e)n can attach -(e)n- as a linking element.
+# All nouns that constitute first constituents
+# that attach -(e)n- are build the plural form with -(e)n.
 
 def en_par_is_applicable(compound: Compound):
 	# general restriction
@@ -1009,25 +1054,28 @@ def en_par_applies(compound: Compound):
 
 # l2p:en|non_par_m
 #
-# There are a few monosyllabic masculine nouns designating male persons, 
-# animals, astronomic objects, months that attach -(e)n- 
-# even though they do not form the plural with -(e)n.
+# All masculine nouns that do not build the plural form with -(e)n
+# that constitute first constituents that attach -(e)n-
+# are monosyllabic designations of male persons, animals,
+# astronomic objects, months.
 # TODO
 
 
 # l2p:en|non_par_n_pl_interpr
 #
-# There are polysyllabic foreign N with final stress 
-# (mostly ending with -at and -ment) that adopt -en-,
-# in which case they necessarily express plurality.
+# All neuter nouns that do not build the plural form with -(e)n
+# that constitute first constituents that attach -(e)n-
+# are polysyllabic foreign nouns that have a stressed final syllable
+# (and mostly end in -at and -ment) that exhibit
+# a plural meaning within the compound.
 # TODO
 
 
 
 # l2p:e
 #
-# e-plural nouns with stressed last syllable is the only class of words 
-# that can attach -e-.
+# All nouns that constitute first constituents that attach -e-
+# have a stressed last syllable and build the plural form with -e.
 
 def e_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="e")
@@ -1043,8 +1091,9 @@ def e_par_applies(compound: Compound):
 
 # l2p:er
 #
-# er-plural nouns is the only class of words 
-# that can attach =er=.
+# All nouns that constitute first constituents
+# that attach -"er- build the plural form with -er
+# (with or without umlaut).
 
 def er_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
@@ -1056,8 +1105,8 @@ def er_par_applies(compound: Compound):
 
 # l2p:e_uml
 #
-# Nouns forming the plural with -e and umlaut is the only class of words 
-# that can attach -e- with umlaut.
+# All nouns that constitute first constituents that attach -"e-
+# build the plural form with -e and umlaut.
 
 def e_uml_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="e", adds_umlaut=True)
@@ -1069,29 +1118,39 @@ def e_uml_par_applies(compound: Compound):
 
 # l2p:es
 #
-# -es- occurs exclusively after a row  of one-syllable M and N 
-# that form a genitive with -(e)s- (about 30-40 nouns) and is isolated. 
-# These nouns can, however, also attach other linkers.
+# All nouns that constitute first constituents that attach -es-
+# belong to a fixed row of one-syllable masculine and neuter nouns
+# and build the genitive form with -(e)s-. -es- is thus isolated.
 # TODO
 
 
 
 # l2p:ens
 #
-# -(e)ns- only occurs after a few masculine nouns and a single neuter noun 
-# not necessarily forming a genitive with -(e)ns- and is completely isolated. 
-# These nouns can, however, also attach other linkers.
+# All nouns that constitute first constituents that attach -(e)ns-
+# belong to a fixed group of a few masculine nouns and a single neuter noun
+# and have different genitive endings. -(e)ns- is thus isolated.
 # TODO
 
 
 
 # l2p:0_uml
 #
-# Nouns forming the plural with a zero ending and umlaut is the only class of words 
-# that can attach a zero linker with umlaut.
+# All nouns that constitute first constituents that attach a zero linker
+# with umlaut build the plural form with a zero ending and umlaut.
 
 def zero_uml_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="", adds_umlaut=True)
 
 def zero_uml_par_applies(compound: Compound):
 	return _is_of_plural(compound.stems[0].morph, "", adds_umlaut=True)
+
+
+
+# p2l:tend:pl_interpr-pl_marker|def-pl_marker
+#
+# Linkers that are identical to the plural ending
+# of the first constituent in a given compound
+# are tendentially associated with
+# a plural meaning of this first constituent within the compound.
+# TODO
