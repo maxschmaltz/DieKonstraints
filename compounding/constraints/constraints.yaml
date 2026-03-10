@@ -384,36 +384,13 @@ topology:
                     # 29
                     - p2l:tend:sonority-!s
 
-                    # 30
-                    - p2l:tend:pl_interpr-pl_marker:
-                        summary: Linkers identical to the plural ending can be associated with plural meaning.
-                        children:
-
-                            - p2l:tend:pl_interpr-pl_marker|def-pl_marker
-
-                            - p2l:decl_cl:pl:#e-0|pl_interpr-e   # EXTERNAL
-
-                            - p2l:decl_cl:pl:#er-0/er|pl_interpr-er    # EXTERNAL
-
-                            - p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml   # EXTERNAL
-
-                            - p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml   # EXTERNAL
-
-                            - p2l:decl_cl:mixed-0/s/en|pl_interpr-en   # EXTERNAL
-
-                            - p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en    # EXTERNAL
-
-                            - p2l:drv:deverb_schwa$-0|pl_interpr-en  # EXTERNAL
-
-                            - p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en  # EXTERNAL
-
 
     - l2p:
     
         summary: Constraints that restrict properties of compounds appearing with certain linkers.
         children:
 
-            # 31
+            # 30
             - l2p:s:
                 summary: In simplices, -s- occurs only in masculine and neuter nouns except for a few cases, and many of them are high frequent tokens. -s- can also occur with feminine nouns only if it is a morphological complex and/or polysyllabic feminine noun.
                 children:
@@ -424,10 +401,10 @@ topology:
 
                     - l2p:s|f
 
-            # 32
+            # 31
             - l2p:n
 
-            # 33
+            # 32
             - l2p:en:
                 summary: Only nouns forming the plural with -(e)n can attach -(e)n- as a linking element with a very few idiosyncratic exceptions where -(e)n- occurs after nouns not forming the plural with -(e)n. The exceptions are 1) a few monosyllabic masculine nouns designating male persons, animals, astronomic objects, months, and 2) polysyllabic foreign neuter nouns with final stress (mostly ending with -at and -ment) that adopt -en- only when they express plurality.
                 children:
@@ -438,23 +415,26 @@ topology:
 
                     - l2p:en|non_par_n_pl_interpr
 
-            # 34
+            # 33
             - l2p:e          
 
-            # 35
+            # 34
             - l2p:er
 
-            # 36
+            # 35
             - l2p:e_uml
 
-            # 37
+            # 36
             - l2p:es
 
-            # 38
+            # 37
             - l2p:ens
 
-            # 39
+            # 38
             - l2p:0_uml
+
+            # 39
+            - l2p:pl_marker
 
 constraints:
 
@@ -2086,52 +2066,9 @@ constraints:
 
 
 
-    # 42
-    p2l:tend:pl_interpr-pl_marker|def-pl_marker:
-      
-        summary: Linkers identical to the plural ending of the first constituents are tendentially associated with a plural or a collective meaning of this first constituent within the compound.
-        type: [semantic]
-
-        func_alias: pl_interpr
-
-        quantifier: tendentially
-        coverage:
-            type: NA
-            token: NA
-        regularity:
-            type: NA
-            token: NA
-        support_level: NA
-
-        examples_pro: [punkt_+e_stand, buch_+=er_regal, staat_+en_bund, burg_+en_land, mutter_+=_zentrum]
-        examples_contra: [pilz_sammler, buch_handel, motor_+en_geräusch, burg_+en_blick, vogel_futter]
-
-        evidence:
-
-            - ref: krott_etal_2007
-              pages: [3]
-              summary: When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning [1].
-
-            - ref: schaefer_2018
-              pages: [230, 231]
-              summary: Linkers identical to the plural ending are tendentially associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element.
-
-            - ref: schluecker_2023
-              pages: [20]
-              summary: Linkers identical to the plural ending can be [2] associated with plural meaning.
-
-            - ref: wegener_2005
-              pages: [173]
-              summary: First constituents of compounds often occur with a linker identical to the plural ending when no plural or collective meaning is intended [1].
-
-        footnotes:
-            "1": The irreguarity of this constraint is quite high, which is supported by the fact this evidence contradicts its definition.
-            "2": Level of regularity not mentioned.
-
-
     # 2. Constraints that restrict properties of compounds appearing with certain linkers.
 
-    # 43
+    # 42
     l2p:s|smpx_mn:
       
         summary: All except for a few simplex first constituents that attach -s- belong to a group constituted by a few masculine and neuter nouns.
@@ -2172,7 +2109,7 @@ constraints:
             "4": Due to a partially unreliable simplex vs derivative analysis in CELEX, the obtained results are discarded as unreliable.
 
 
-    # 44
+    # 43
     l2p:s|smpx_high_freq:
     
         summary: Many simplex first constituents that attach -s- are high frequent tokens.
@@ -2202,7 +2139,7 @@ constraints:
             "1": Due to a partially unreliable simplex vs derivative analysis in CELEX, the obtained results are discarded as unreliable.
 
 
-    # 45
+    # 44
     l2p:s|f:
       
         summary: Almost all feminine first constituents that attach -s- are morphologically complex and/or polysyllabic.
@@ -2238,7 +2175,7 @@ constraints:
 
 
 
-    # 46
+    # 45
     l2p:n:
     
         summary: All first constituents that attach the -n- allomorph of the -en- linker are nouns ending in schwa.
@@ -2277,7 +2214,7 @@ constraints:
 
 
 
-    # 47
+    # 46
     l2p:en|par:
       
         summary: All first constituents that attach -(e)n- are nouns building the plural form with -(e)n.
@@ -2322,7 +2259,7 @@ constraints:
         footnotes: {}
 
 
-    # 48
+    # 47
     l2p:en|non_par_m:
     
         summary: All masculine first constituents not building the plural form with -(e)n that attach -(e)n- are monosyllabic designations of male persons, animals, astronomic objects, months.
@@ -2356,7 +2293,7 @@ constraints:
             "1": "Even though not explicitly stated, all the examples provided there are monosyllabic masculine nouns designating anumals: 'Hahn', 'Storch', 'Schwan'."
 
 
-    # 49
+    # 48
     l2p:en|non_par_n_pl_interpr:
     
         summary: All neuter first constituents not building the plural form with -(e)n that attach -(e)n- are polysyllabic foreign nouns with final stress (mostly ending with -at and -ment) that exhibit a plural or a collective meaning within the compound.
@@ -2386,7 +2323,7 @@ constraints:
             "1": "Evidence from [nuebling_szczepaniak_2013:79,80] is disregarded here as, even though not explicitly stated, it concerns only monosyllabic M."
     
 
-    # 50
+    # 49
     l2p:e:
     
         summary: All first constituents that attach -e- are nouns with last stressed syllable building the plural form with -e.
@@ -2430,7 +2367,7 @@ constraints:
 
    
 
-    # 51
+    # 50
     l2p:er:
     
         summary: All first constituents that attach -\"er- are nouns building the plural form with -er (with or without umlaut).
@@ -2477,7 +2414,7 @@ constraints:
 
 
 
-    # 52
+    # 51
     l2p:e_uml:
     
         summary: All first constituents that attach -\"e- are nouns building the plural form with -e and umlaut.
@@ -2513,7 +2450,7 @@ constraints:
 
 
 
-    # 53
+    # 52
     l2p:es:
     
         summary: -es- occurs exclusively after first constituents belonging to a row (about 30-40 nouns) of one-syllable masculine and neuter nouns building the genitive form with -(e)s-, and is isolated.
@@ -2563,7 +2500,7 @@ constraints:
 
 
 
-    # 54
+    # 53
     l2p:ens:
     
         summary: -(e)ns- occurs exclusively after first constituents belonging to a group constituted by a few masculine nouns and a single neuter noun with different genitive endings, and is completely isolated.
@@ -2601,7 +2538,7 @@ constraints:
 
 
 
-    # 55
+    # 54
     l2p:0_uml:
     
         summary: All first constituents that attach a zero linker with umlaut are nouns forming the plural with a zero ending and umlaut.
@@ -2629,3 +2566,48 @@ constraints:
 
         footnotes:
             "1": Which implicitly points out that further overt markers ([-\"er-, -e-, -\"e-,] =) are always paradigmatic.
+
+
+
+    # 55
+    l2p:pl_marker:
+      
+        summary: Linkers that are identical to the plural ending of the first constituent in a given compound are tendentially associated with a plural or meaning of this first constituent within the compound.
+        ling_info_type: [morphological, semantic]
+        appl_item_type: n1+linker
+
+        func_alias: pl_interpr
+
+        quantifier: tendentially
+        coverage:
+            type: NA
+            token: NA
+        regularity:
+            type: NA
+            token: NA
+        support_level: NA
+
+        examples_pro: [punkt_+e_stand, buch_+=er_regal, staat_+en_bund, burg_+en_land, mutter_+=_zentrum]
+        examples_contra: [motor_+en_geräusch, burg_+en_blick, kind_+=er_jacke, hund_+e_leine,   pilz_sammler, buch_handel, vogel_futter]
+
+        evidence:
+
+            - ref: krott_etal_2007
+              pages: [3]
+              summary: When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning [1].
+
+            - ref: schaefer_2018
+              pages: [230, 231]
+              summary: Linkers identical to the plural ending are tendentially associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element.
+
+            - ref: schluecker_2023
+              pages: [20]
+              summary: Linkers identical to the plural ending can be [2] associated with plural meaning.
+
+            - ref: wegener_2005
+              pages: [173]
+              summary: First constituents of compounds often occur with a linker identical to the plural ending when no plural meaning is intended [1].
+
+        footnotes:
+            "1": The irreguarity of this constraint is quite high, which is supported by the fact this evidence contradicts its definition.
+            "2": Level of regularity not mentioned.
