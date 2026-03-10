@@ -2074,7 +2074,7 @@ constraints:
         support_level: supported
 
         examples_pro: [ort_+s_tarif, glück_+s_rad, himmel_reich, uhu_paar]
-        examples_contra: [arbeit_geber, staub_sauger, heil_+s_lehre, uhu_+s_nest]
+        examples_contra: [arbeit_geber, dieb_stahl, himmel_+s_bahn, uhu_+s_nest]
 
         evidence:
 
