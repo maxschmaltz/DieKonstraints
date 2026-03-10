@@ -73,11 +73,11 @@ notes:
 
     - "Since we consider only N+N compounds, we exclude constraints targeting complex first constituents. These are: 1) -s- occurs more frequently with complex first constituents compared to the corresponding simplex and sometimes replaces the default simplex linker ([koliopoulou_2014:61], [kuerschner_2005:108,110,111,112], [ortner_mueller-bollhagen_1991:85]), 2) the more complex the first part of a compound, the more probable the occurrence of a linking element ([nuebling_szczepaniak_2008:9]); 3) -s- can signalize the head boundary ([kuerschner_2005:112], [kuerschner_2010:22], [nuebling_szczepaniak_2008:8], [wegener_2005:180,184]); 4) the probability of -s- after a compound is comparable to that after derivatives with stressed prefixes and is about 27-37% ([nuebling_szczepaniak_2008:21], [nuebling_szczepaniak_2013:78], for criticism on these statistics see footnote 3 of `p2l:drv:prx_deverb-s`). More on the structure marking function of -s- in compounds with three constituents see https://doi.org/10.1177/00238309040470010401."
 
-    - "The following fact is disregarded from the constraints despite its restraining nature: syllabic linkers attach only to final-stressed (including monosyllabic), and non-syllabic -- only to polysyllabic non-final-stressed nouns, which aids in forming/maintainign trochees: rule for -(e)n-, -es-, -e-, -\"e-, -\"er-, -(e)ns-, tendency for -s- (more on that in [kopf_2017:195], [kuerschner_2010:17], [nuebling_szczepaniak_2008:7,17], [nuebling_szczepaniak_2013:79], [schluecker_2023:19], [wegener_2003:446], [wegener_2005:178]). The reason for disregarding this fact is its determinacy by other constraints: 1) none of these linkers can appear after a full vowel (see `p2l:phon_fin:vow$-0`), hence, they may appear either after a schwa, or after a consonant; 2) allomorphs of -(e)n-, -(e)ns- are distributed regularly depending on whether the noun ends with a schwa: thus, -n- and -ns- will appear only after schwa, otherwise -en-, -ens- (see constraints dealing with these linkers) (exception: F on -in (see `p2l:drv:sfx:F_#in$-en`), but there German avoids final -inn); 3) -e-, -\"e-, -\"er- are paradigmatic (see corresponding `l2p` constraints), and all e-plural, e=plural, er=plural nouns are consonant-final; 4) -es- appears only after a row of monosyllabic nouns (see `l2p:es`); 5) there are only a few monosyllabic nouns attaching an -s- (see `l2p:s|smpx_mn`). Thus, this fact rather summarizes the outcomes governed by other constraints but does not govern anything itself. Thus, it cannot bring any additional filter on any noun since it will always give the same output as the corresponding constraints provided above."
+    - "The following fact is disregarded from the constraints despite its restraining nature: syllabic linkers attach only to final-stressed (including monosyllabic), and non-syllabic -- only to polysyllabic non-final-stressed nouns, which aids in forming/maintainign trochees: rule for -(e)n-, -es-, -e-, -"e-, -"er-, -(e)ns-, tendency for -s- (more on that in [kopf_2017:195], [kuerschner_2010:17], [nuebling_szczepaniak_2008:7,17], [nuebling_szczepaniak_2013:79], [schluecker_2023:19], [wegener_2003:446], [wegener_2005:178]). The reason for disregarding this fact is its determinacy by other constraints: 1) none of these linkers can appear after a full vowel (see `p2l:phon_fin:vow$-0`), hence, they may appear either after a schwa, or after a consonant; 2) allomorphs of -(e)n-, -(e)ns- are distributed regularly depending on whether the noun ends with a schwa: thus, -n- and -ns- will appear only after schwa, otherwise -en-, -ens- (see constraints dealing with these linkers) (exception: F on -in (see `p2l:drv:sfx:F_#in$-en`), but there German avoids final -inn); 3) -e-, -"e-, -"er- are paradigmatic (see corresponding `l2p` constraints), and all e-plural, e=plural, er=plural nouns are consonant-final; 4) -es- appears only after a row of monosyllabic nouns (see `l2p:es`); 5) there are only a few monosyllabic nouns attaching an -s- (see `l2p:s|smpx_mn`). Thus, this fact rather summarizes the outcomes governed by other constraints but does not govern anything itself. Thus, it cannot bring any additional filter on any noun since it will always give the same output as the corresponding constraints provided above."
 
     - "Despite the findings from [krott_etal_2007] concerning analogical effects are promising, we disregard them as well from this iteration. These are: 1) there is a significant left bias for choosing a link (-en-, -s- and zero linker were investigated), that is, a noun tending to usually choose -x- will more probably also choose -x- in novel compounds [krott_etal_2007:7,9]; 2) apart from the left bias, gender was a significantly predictive feature for -en- and zero linker, and inflectional class -- on -s- and zero linker [krott_etal_2007:9]. The reason for excluding this findings is that we believe these analogical effects are an accumulative product of acquisition and (subconscious) application of all compounding constraints present in German. Such, it cannot be a constraint itself and is rather a combined account of the investigated constraints."
 
-    - In the constraints that draw on the singular/plural meaning of the first constituents (such as ``, `` etc.), the definitions are generally given as "First constituents that ... attach -x- in compounds in which the second constituent forces a singular/plural meaning of this first constituent". For such constraints, we may sometimes add counterexamples where -x- is attached when the opposite meaning of the first constituent is forced by the second constituent (e.g. -\"er- with a singular meaning). Strictly speaking, these are no real counterexamples to this constraints, since they do not say anything about this opposite meaning. Such counterexamples are added purely for a better illustrativity of the irregularity of singular/plural meaning effect and are separated by a tab from the real counterexamples.
+    - In the constraints that draw on the singular/plural meaning of the first constituents (such as ``, `` etc.), the definitions are generally given as "First constituents that ... attach -x- in compounds in which the second constituent forces a singular/plural meaning of this first constituent". For such constraints, we may sometimes add counterexamples where -x- is attached when the opposite meaning of the first constituent is forced by the second constituent (e.g. -"er- with a singular meaning). Strictly speaking, these are no real counterexamples to this constraints, since they do not say anything about this opposite meaning. Such counterexamples are added purely for a better illustrativity of the irregularity of singular/plural meaning effect and are separated by a tab from the real counterexamples.
 
     - We adhere to the framework that assigns to affixes a scheme defining the morphological and semantic properties of the input for derivation and its result. Thus, even if the morphological class of an input of a derivational constraint is restricted, we do not claim this constraint to also have a morphological character since we assume this morphological information is embedded in the affix. For example, we categorize `p2l:drv:sfx:F_#in$-en` or `p2l:drv:sfx:0_pl_sfx-0` as purely derivational constraint as this exact suffix -in takes certain Xs as the input and always produces an F with certain semantic properties, or suffixes -er, -el etc. always produce zero-plural nouns.
 
@@ -159,18 +159,18 @@ topology:
 
             - p2l:decl_cl:
 
-                summary: Clusters of constraints that map declination classes of compounds to most probable linkers.
+                summary: Clusters of constraints that map declination classes of compounds to the most probable linkers.
                 children:
 
 
                     - p2l:decl_cl:pl:
 
-                        summary: Clusters of constraints that map plural schemes of compounds to their most probable linkers.
+                        summary: Clusters of constraints that map plural formation schemes of compounds to the most probable linkers.
                         children:
 
                             # 2
                             - p2l:decl_cl:pl:#0-0:
-                                summary: Nouns forming the plural with a zero ending -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly. Derivatives with suffix -en also attach a zero linker regularly unless they are a deverbal, in which case they always attach -s-.
+                                summary: First constituents that are constituted by nouns that build the plural form with a zero ending --- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein --- attach a zero linking element almost regularly. However, first constituents that are constituted by deverbal nouns that end in suffix -en (which build the plural form with a zero ending) attach -s- regularly.
                                 children:
 
                                     - p2l:decl_cl:pl:#0-0|def-0
@@ -184,7 +184,7 @@ topology:
 
                             # 4
                             - p2l:decl_cl:pl:#e-0:
-                                summary: Nouns forming the plural with -e mostly have a zero linker. In case of plural meaning, they may also irregularly attach -e-. Monosyllabic e-plural nouns designating animals may also irregularly attach -e-. e-plural nouns is the only class of words that can attach this linker.
+                                summary: First constituents that are constituted by nouns that build the plural form with -e mostly have a zero linker. In compounds in which the second constituent forces a plural meaning of the given first constituent, they also attach -e- irregularly. Those that are constituted by monosyllabic animal designations that build the plural form with -e also attach -e- irregularly. Nouns that have a stressed last syllable and build the plural form with -e is the only class of nouns that can constitute first constituent that attach this linker.
                                 children:
 
                                     - p2l:decl_cl:pl:#e-0|def-0
@@ -197,7 +197,7 @@ topology:
 
                             # 5
                             - p2l:decl_cl:pl:#er-0/er:
-                                summary: Nouns forming the plural with -er (with or without umlaut) mostly attach a zero linker or -\"er- in different cases. Another linkers can also be rarely adopted by these nouns. -\"er- is more probable (with counterexamples) when a plural meaning is present, in which case these nouns indicate concrete, countable entities, otherwise a zero linker is more probable. For person and animal designations though, -\"er- is not necessarily associated with a plural meaning. When having a mass meaning, these nouns tend (with counterexamples) to attach a zero linker. er-plural nouns (these are mostly N and some M, mostly simplices and never loanwords) is the only class of words that can attach this linker.
+                                summary: First constituents that are constituted by nouns that build the plural form with -er (with or without umlaut) mostly attach a zero linker or -"er-. A zero linker is attached after them in majority of compounds in which the second constituent forces a singular or a mass meaning of the given first constituent, and -"er- tends to be attached after them in compounds in which the second constituent forces a plural meaning of the given first constituent. However, those that are constituted by person and animal designations that build the plural form with -er (with or without umlaut) may attach -"er- regardless of the singular/plural interpretation of the given first constituent within the compound. Nouns that build the plural form with -er (with or without umlaut) is the only class of nouns that can constitute first constituent that attach this linker.
                                 children:
 
                                     - p2l:decl_cl:pl:#er-0/er|def-0/er
@@ -214,7 +214,7 @@ topology:
 
                             # 6
                             - p2l:decl_cl:pl:#e_uml-0:
-                                  summary: Nouns forming the plural with -e and umlaut mostly have a zero linker. In case of plural meaning they may also irregularly attach -\"e-. Nouns forming the plural with -e and umlaut is the only class of words that can attach this linker.
+                                  summary: First constituents that are constituted by nouns that build the plural form with -e and umlaut mostly have a zero linker. In compounds in which the second constituent forces a plural meaning of the given first constituent, they also attach -"e- irregularly. Nouns that build the plural form with -e and umlaut is the only class of nouns that can constitute first constituent that attach this linker.
                                   children:
 
                                       - p2l:decl_cl:pl:#e_uml-0|def-0
@@ -225,7 +225,7 @@ topology:
 
                             # 7
                             - p2l:decl_cl:pl:#0_uml-0:
-                                summary: Nouns forming the plural with a zero ending and umlaut mostly have a zero linker. In case of plural meaning they may also irregularly attach a zero linker with umlaut. Nouns forming the plural with a zero ending and umlaut is the only class of words that can attach this linker.
+                                summary: First constituents that are constituted by nouns that build the plural form with a zero ending and umlaut mostly have a zero linker. In compounds in which the second constituent forces a plural meaning of the given first constituent, they also attach a zero linker with umlaut irregularly. Nouns that build the plural form with a zero ending and umlaut is the only class of nouns that can constitute first constituent that attach this linker.
                                 children:
 
                                     - p2l:decl_cl:pl:#0_uml-0|def-0
@@ -237,7 +237,7 @@ topology:
                     # 8
                     - p2l:decl_cl:mixed-0/s/en:
 
-                          summary: Mixed masculine and neuter nouns can attach -s-, a zero linker, or -(e)n-. The latter may be associated with a plural meaning (with counterexamples).
+                          summary: First constituents that are constituted by mixed masculine and neuter nouns almost always attach -s-, a zero linker, or -(e)n-. In compounds in which the second constituent forces a plural meaning of the given first constituent, they are more likely to attach -(e)n-.
                           children:
 
                               - p2l:decl_cl:mixed-0/s/en|def-0/s/en
@@ -247,12 +247,12 @@ topology:
 
             - p2l:drv:
 
-                summary: Clusters of constraints that map derivational classes of compounds to most probable linkers.
+                summary: Clusters of constraints that map derivational classes of compounds to the most probable linkers.
                 children:
 
                     - p2l:drv:sfx:
 
-                        summary: Clusters of constraints that map derivational suffixes of compounds to most probable linkers.
+                        summary: Clusters of constraints that map derivational suffixes of compounds to the most probable linkers.
                         children:
 
                             # 9
@@ -263,7 +263,7 @@ topology:
 
                             # 11
                             - p2l:drv:deverb_schwa$-0:
-                                  summary: Deverbal feminine nouns with a schwa suffix mostly attach a zero linker but can attach an -n- when the first constituent has a plural reading.
+                                  summary: First constituents that are constituted by deverbal feminine nouns with a schwa suffix mostly attach a zero linker. In compounds in which the second constituent forces a plural meaning of the given first constituent, they tend to attach -n-.
                                   children:
 
                                     - p2l:drv:deverb_schwa$-0|def-0
@@ -275,7 +275,7 @@ topology:
 
                             # 13
                             - p2l:drv:sfx:sfx-s:
-                                summary: Nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -(t)um, -ion regularly attach -s-. Suffix -ität (and its allomorphs) also regularly attaches -s- unless there is a plural interpretation, in which case -en- is preferred.
+                                summary: First constituents that are constituted by derived nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -tum, -um, -ion, also -ität and its allomorphs attach -s- regularly. For the latter, -en- is preferred in compounds in which the second constituent forces a plural meaning of the given first constituent.
                                 children:
 
                                     - p2l:drv:sfx:sfx-s|def-s
@@ -294,7 +294,7 @@ topology:
 
             - p2l:phon_fin:
 
-                summary: Clusters of constraints that map final phoneme(s) of compounds to most probable linkers.
+                summary: Clusters of constraints that map final phoneme(s) of compounds to the most probable linkers.
                 children:
 
                     # 17
@@ -311,7 +311,7 @@ topology:
 
                     # 21
                     - p2l:phon_fin:schwa$-en:
-                        summary: Nouns ending in schwa regularly adopt -n- if the schwa is not a suffix. If the schwa is a suffix of a deadjectival feminine noun, -n- and zero linkers are about equally possible. Deverbal feminine nouns with a schwa suffix mostly attach a zero linker but can attach an -n- when the first constituent has a plural reading. Nouns ending in schwa is the only class of words that can attach the allomorph -n- of the en-linker.
+                        summary: First constituents that are constituted by nouns that end in schwa adopt -n- regularly. If the schwa is a deverbal suffix of such a noun and this noun is feminine, a zero linker is mostly attached except in compounds in which the second constituent forces a plural reading of the given first constituent, in which case -n- tends to be attached. If the schwa is a deadjectival suffix of such a noun and the noun is feminine, -n- or a zero linker are preferred in about the same number of cases. Nouns that end in schwa is the only class of nouns that can constitute first constituent that attach this linker.
                         children:
 
                             - p2l:phon_fin:schwa$-en
@@ -326,7 +326,7 @@ topology:
 
                     # 22
                     - p2l:phon_fin:weak_F_cons$-0/s/en:
-                        summary: "Consonant-final weak feminine nouns mostly adopt -en-, a zero linker, or -s- tendentially depending by singular/plural meaning: if the second constituent forces the first constituent to take a collective or plural meaning, -en- is more likely (especially with final-stressed incl. monosyllabic feminine nouns), otherwise mostly a zero linker or -s- is chosen."
+                        summary: First constituents that are constituted by consonant-final weak feminine nouns mostly adopt a zero linker or -s- in compounds in which the second constituent forces a singular meaning of the given first constituent. In compounds in which the second constituent forces a plural meaning of the given first constituent --- especially if the latter is final-stressed incl. monosyllabic ---, they attach -en- more likely.
                         children:
 
                             - p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
@@ -336,12 +336,12 @@ topology:
 
             - p2l:sem:
 
-                summary: Clusters of constraints that map semantic properties of compounds/first constituents to most probable linkers.
+                summary: Clusters of constraints that map semantic properties of compounds or its constituents to the most probable linkers.
                 children:
 
                     - p2l:sem:comp_type:
 
-                        summary: Clusters of constraints that map compound types to most probable linkers.
+                        summary: Clusters of constraints that map compound types to the most probable linkers.
                         children:
 
                             # 23
@@ -364,7 +364,7 @@ topology:
 
                     # 27
                     - p2l:tend:cmpx_morph-s:
-                        summary: The acceptability of -s- irregularly grows when the first constituent is morphologically complex (any form of derivation).
+                        summary: The probability of -s- grows irregularly with the morphological complexity of the first constituent (any form of derivation).
                         children:
 
                             - p2l:tend:cmpx_morph-s|def-s
@@ -377,7 +377,7 @@ topology:
 
                     # 28
                     - p2l:tend:cmpx_phon-s:
-                        summary: "The acceptability of -s- irregularly grows when the first constituent is phonologically complex: non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc."
+                        summary: The probability of -s- grows irregularly with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
                         children:
 
                             - p2l:tend:cmpx_phon-s|def-s
@@ -392,12 +392,12 @@ topology:
 
     - l2p:
     
-        summary: Constraints that restrict properties of compounds appearing with certain linkers.
+        summary: Constraints that restrict properties of first constituents attaching certain linkers.
         children:
 
             # 30
             - l2p:s:
-                summary: In simplices, -s- occurs only in masculine and neuter nouns except for a few cases, and many of them are high frequent tokens. -s- can also occur with feminine nouns only if it is a morphological complex and/or polysyllabic feminine noun.
+                summary: All except for a few simplex nouns that constitute first constituents that attach -s- belong to a small fixed group of masculine and neuter nouns, and many of them have a high token frequency. Almost all feminine nouns that constitute first constituents that attach -s- are morphologically complex and/or polysyllabic.
                 children:
 
                     - l2p:s|smpx_mn
@@ -411,7 +411,7 @@ topology:
 
             # 32
             - l2p:en:
-                summary: Only nouns forming the plural with -(e)n can attach -(e)n- as a linking element with a very few idiosyncratic exceptions where -(e)n- occurs after nouns not forming the plural with -(e)n. The exceptions are 1) a few monosyllabic masculine nouns designating male persons, animals, astronomic objects, months, and 2) polysyllabic foreign neuter nouns with final stress (mostly ending with -at and -ment) that adopt -en- only when they express plurality.
+                summary: "All nouns that constitute first constituents that attach -(e)n- are build the plural form with -(e)n, with a few idiosyncratic exceptions. The exceptions are: 1) masculine monosyllabic designations of male persons, animals, astronomic objects, months; 2) polysyllabic foreign neuter nouns that have a stressed final syllable (and mostly end in with -at and -ment) that exhibit a plural or a collective meaning within the compound."
                 children:
 
                     - l2p:en|par
@@ -705,7 +705,7 @@ constraints:
     # 7
     p2l:decl_cl:pl:#er-0/er|def-0/er:
     
-        summary: First constituents that are constituted by nouns that build the plural form with -er (with or without umlaut) mostly attach a zero linker or -\"er-.
+        summary: First constituents that are constituted by nouns that build the plural form with -er (with or without umlaut) mostly attach a zero linker or -"er-.
         ling_info_type: [morphological]
         appl_item_type: n1
 
@@ -727,14 +727,14 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [229]
-              summary: er-plural nouns tend to choose -\"er- [when a plural meaning is present], otherwise a zero linker [1].
+              summary: er-plural nouns tend to choose -"er- [when a plural meaning is present], otherwise a zero linker [1].
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [99]
-              summary: Most er-plural nouns attach both -\"er- or a zero linker in different cases.
+              summary: Most er-plural nouns attach both -"er- or a zero linker in different cases.
 
         footnotes:
-            "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or -\"er-.
+            "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or -"er-.
 
 
     # 8
@@ -769,7 +769,7 @@ constraints:
               summary: 80% er-plural nouns having a singular meaning choose a zero linker [2].
               
         footnotes:
-            "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or -\"er-.
+            "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or -"er-.
             "2": Note that non-N+N compounds are included in this statistics.
 
 
@@ -807,7 +807,7 @@ constraints:
     # 10
     p2l:decl_cl:pl:#er-0/er|pl_interpr-er:
     
-        summary: First constituents that are constituted by nouns that build the plural form with -er (with or without umlaut) attach -\"er- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
+        summary: First constituents that are constituted by nouns that build the plural form with -er (with or without umlaut) attach -"er- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item_type: n1
 
@@ -829,19 +829,19 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [229]
-              summary: er-plural nouns tend to choose -\"er- when a plural meaning is present.
+              summary: er-plural nouns tend to choose -"er- when a plural meaning is present.
 
             - ref: nuebling_szczepaniak_2013
               pages: [80, 81]
-              summary: -\"er- is often associated with plural meaning, with many counterexamples.
+              summary: -"er- is often associated with plural meaning, with many counterexamples.
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [99]
-              summary: er-plural often attach -\"er- to signalize plural meaning, in which case they indicate concrete, countable entities.
+              summary: er-plural often attach -"er- to signalize plural meaning, in which case they indicate concrete, countable entities.
 
             - ref: schaefer_pankratz_2018
               pages: [29]
-              summary: -\"er- with no umlauting exhibits moderate, and -\"er- with umlauting exhibits significantly strong effect on plural reading.
+              summary: -"er- with no umlauting exhibits moderate, and -"er- with umlauting exhibits significantly strong effect on plural reading.
               
         footnotes: {}
     
@@ -849,7 +849,7 @@ constraints:
     # 11
     p2l:decl_cl:pl:#er-0/er|anim-er:
     
-        summary: First constituents that are constituted by person and animal designations that build the plural form with -er (with or without umlaut) may attach -\"er- regardless of the singular/plural interpretation of the given first constituent within the compound.
+        summary: First constituents that are constituted by person and animal designations that build the plural form with -er (with or without umlaut) may attach -"er- regardless of the singular/plural interpretation of the given first constituent within the compound.
         ling_info_type: [morphological, semantic]
         appl_item_type: n1
 
@@ -871,11 +871,11 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [229]
-              summary: For er-plural nouns designating persons and animals, -\"er- is not necessarily associated with a plural meaning.
+              summary: For er-plural nouns designating persons and animals, -"er- is not necessarily associated with a plural meaning.
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [98]
-              summary: Some examples exhibit that -\"er- is not always associated with a plural meaning [1].
+              summary: Some examples exhibit that -"er- is not always associated with a plural meaning [1].
               
         footnotes:
             "1": "Even though not explicitly stated, counterexamples for the plural meaning given in [ortner_mueller-bollhagen_1991:98] confirm the hypothesis from [eisenberg_2013:229] that for person and animal designations, -\"er- is not necessarily associated with a plural meaning: huhn_+=er_keule, kind_+=er_jacke, rind_+=er_brust."
@@ -915,7 +915,7 @@ constraints:
     # 13
     p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml:
     
-        summary: First constituents that are constituted by nouns that build the plural form with -e and umlaut attach -\"e- irregularly in compounds in which the second constituent forces a plural meaning of the given first constituent.
+        summary: First constituents that are constituted by nouns that build the plural form with -e and umlaut attach -"e- irregularly in compounds in which the second constituent forces a plural meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item_type: n1
 
@@ -937,11 +937,11 @@ constraints:
 
             - ref: nuebling_szczepaniak_2013
               pages: [81]
-              summary: In compounds with -\"e-, plural interpretation occurs in most cases.
+              summary: In compounds with -"e-, plural interpretation occurs in most cases.
 
             - ref: schaefer_pankratz_2018
               pages: [29]
-              summary: -\"e- exhibits moderate effect on plural reading.
+              summary: -"e- exhibits moderate effect on plural reading.
 
         footnotes: {}
 
@@ -2348,7 +2348,7 @@ constraints:
     # 48
     l2p:en|non_par_n_pl_interpr:
     
-        summary: All neuter nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are polysyllabic foreign nouns with final stress (mostly ending with -at and -ment) that exhibit a plural or a collective meaning within the compound.
+        summary: All neuter nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are polysyllabic foreign nouns that have a stressed final syllable (and mostly end in -at and -ment) that exhibit a plural or a collective meaning within the compound.
         ling_info_type: [lexical, morphological, semantic]
         appl_item_type: n1+linker
 
@@ -2417,14 +2417,14 @@ constraints:
 
         footnotes:
             "1": The last claim explains why nouns like 'Teppich' do not attach -e- (teppich_boden).
-            "2": Which implicitly points out that further overt markers ([-\"er-,] -e-[, -\"e-, =]) are always paradigmatic.        
+            "2": Which implicitly points out that further overt markers ([-"er-,] -e-[, -"e-, =]) are always paradigmatic.        
 
    
 
     # 50
     l2p:er:
     
-        summary: All nouns that constitute first constituents that attach -\"er- build the plural form with -er (with or without umlaut).
+        summary: All nouns that constitute first constituents that attach -"er- build the plural form with -er (with or without umlaut).
         ling_info_type: [morphological]
         appl_item_type: n1+linker
 
@@ -2446,23 +2446,23 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [229]
-              summary: -\"er- occurs only in er-plural nouns.
+              summary: -"er- occurs only in er-plural nouns.
 
             - ref: kuerschner_2010
               pages: [9, 11]
-              summary: -\"er- only attaches to nouns forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N [1].
+              summary: -"er- only attaches to nouns forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N [1].
 
             - ref: nuebling_szczepaniak_2008
               pages: [3]
-              summary: -\"er- is always paradigmatic.
+              summary: -"er- is always paradigmatic.
 
             - ref: nuebling_szczepaniak_2013
               pages: [80, 81]
-              summary: -\"er- is always paradigmatic.
+              summary: -"er- is always paradigmatic.
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [98]
-              summary: -\"er- is always paradigmatic [and attaches mostly to N and to some M, mostly simplices, no loanwords].
+              summary: -"er- is always paradigmatic [and attaches mostly to N and to some M, mostly simplices, no loanwords].
               
         footnotes:
             "1": "[kuerschner_2010:18] also mentions: '-er- occurs only after nouns with the stressed last syllable'; however, to the best of our knowledge, this always holds for er-plural nouns and, hence, for the nouns in question, since -\"er- is always paradigmatic."
@@ -2472,7 +2472,7 @@ constraints:
     # 51
     l2p:e_uml:
     
-        summary: All nouns that constitute first constituents that attach -\"e- build the plural form with -e and umlaut.
+        summary: All nouns that constitute first constituents that attach -"e- build the plural form with -e and umlaut.
         ling_info_type: [morphological]
         appl_item_type: n1+linker
 
@@ -2494,7 +2494,7 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [228]
-              summary: -\"e- occurs in some [1] e=plural nouns.
+              summary: -"e- occurs in some [1] e=plural nouns.
 
             - ref: nuebling_szczepaniak_2008
               pages: [5]
@@ -2502,7 +2502,7 @@ constraints:
 
         footnotes:
             "1": Level of regularity not mentioned.
-            "2": Which implicitly points out that further overt markers ([-\"er-, -e-,] -\"e-[, =]) are always paradigmatic.
+            "2": Which implicitly points out that further overt markers ([-"er-, -e-,] -"e-[, =]) are always paradigmatic.
 
 
 
@@ -2624,7 +2624,7 @@ constraints:
               summary: "In German, there are only two cases of non-paradigmatic linkers: -en- aften non-human M, and -s- after F [1]."
 
         footnotes:
-            "1": Which implicitly points out that further overt markers ([-\"er-, -e-, -\"e-,] =) are always paradigmatic.
+            "1": Which implicitly points out that further overt markers ([-"er-, -e-, -"e-,] =) are always paradigmatic.
 
 
 
