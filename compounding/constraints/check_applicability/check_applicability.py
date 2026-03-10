@@ -225,6 +225,11 @@ def main():
                     reg_item, reg_type
                 ]
 
+            else:
+
+                # stays NA
+                print(f"No covered items/compounds found for {c_id}.\n")
+
         else:
 
             # stays NA
