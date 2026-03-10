@@ -104,7 +104,7 @@ def main():
 
         if hasattr(applicability_checkers, func_name + "_is_applicable"):
 
-            item_type = constraint["appl_item_type"]
+            appl_item = constraint["appl_item"]
             
             is_applicable_func = getattr(
                 applicability_checkers,
@@ -118,7 +118,7 @@ def main():
 
             pbar = tqdm(gecodb_v06.index, desc=f"Running {c_id}")
 
-            def _run_constraint(comp: str, item_type: str) -> tuple[str, bool, bool]:
+            def _run_constraint(comp: str, appl_item: str) -> tuple[str, bool, bool]:
 
                 # parse compound
                 comp: Compound = Compound(comp)
@@ -142,7 +142,7 @@ def main():
                 #   of the whole compounds matters, such as `p2l:sem:comp_type:copula-0`.
                 
                 # in this iteration, it will always be N1 or N1 + linker
-                match item_type:
+                match appl_item:
                     case "n1":
                         item = comp.stems[0].morph
                     case "n1+linker":
@@ -170,7 +170,7 @@ def main():
                 appl_index[c_id + "_applies"]
             ) = zip(
                 *appl_index.index.to_series().apply(
-                    lambda x: _run_constraint(x, item_type)
+                    lambda x: _run_constraint(x, appl_item)
                 )
             )
 
@@ -194,9 +194,9 @@ def main():
                 #   2.2. Item coverage: proportion of the number of items (mostly N1) for which the
                 #   constraint is potentially applicable and the total number of the items.
 
-                # for constraints with the application item type "compound",
+                # for constraints with the application item "compound",
                 # item and type measures are effectively the same thing
-                if item_type == "compound":
+                if appl_item == "compound":
 
                     cvg_item = copy.copy(cvg_type)
 
@@ -234,9 +234,9 @@ def main():
                 #   to which the constraint applies that are constituted by the covered item to the
                 #   total number of compounds that are constituted by the covered item, for each item.
 
-                # for constraints with the application item type "compound",
+                # for constraints with the application item "compound",
                 # item and type measures are effectively the same thing
-                if item_type == "compound":
+                if appl_item == "compound":
 
                     reg_item = copy.copy(reg_type)
                     print(f"Calculating statistics for {c_id}: done\n") # unify with tqdm below
