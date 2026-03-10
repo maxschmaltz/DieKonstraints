@@ -33,8 +33,7 @@ def main():
         constr_ids = list(constraints.keys())
 
 
-
-        constraints = {key: constraints[key] for key in constr_ids[1:4]}
+        constraints = {"p2l:drv:sfx:F_#in$-en": constraints["p2l:drv:sfx:F_#in$-en"]}
 
     # initialize indices; since the operations are symbolic and therefore
     # very fast, we do not create any cache or anything;
@@ -170,57 +169,64 @@ def main():
                 ~appl_index[[c_id + "_item", c_id + "_is_applicable"]
             ].duplicated(keep="first")]
             cvg_item_abs = appl_index_item[c_id + "_is_applicable"].sum()    # n items covered
-            cvg_item = round(cvg_item_abs / n_items, 3) # n items covered / n all items 
 
-            #   2.2. Type coverage: proportion of the number of compounds for which the
-            #   constraint is potentially applicable and the total number of the compounds.
+            # there is 1 constraint in this iteration for which no applicable
+            # items (hence, compounds) are found in the dataset;
+            # might also be the case for further constraints added in the future
+            if cvg_item_abs:
 
-            cvg_type_abs = appl_index[c_id + "_is_applicable"].sum()    # n comps covered
-            cvg_type = round(cvg_type_abs / n_comps, 3)   # n comps covered / n all comps
-            
-            #   DISCARDED. Token coverage: proportion of the sums of word counts of the covered compounds
-            #   and of all compounds.
-            # >>> applicable_comps = gecodb_v06[appl_index[c_id + "_is_applicable"]]
-            # >>> cvg_token_abs = applicable_comps["comp_freq"].astype(int).sum()
-            # >>> cvg_token = round(cvg_token_abs / token_comp, 3)    # freq covered / freq all
+                cvg_item = round(cvg_item_abs / n_items, 3) # n items covered / n all items 
+
+                #   2.2. Type coverage: proportion of the number of compounds for which the
+                #   constraint is potentially applicable and the total number of the compounds.
+
+                cvg_type_abs = appl_index[c_id + "_is_applicable"].sum()    # n comps covered
+                cvg_type = round(cvg_type_abs / n_comps, 3)   # n comps covered / n all comps
+                
+                #   DISCARDED. Token coverage: proportion of the sums of word counts of the covered compounds
+                #   and of all compounds.
+                # >>> applicable_comps = gecodb_v06[appl_index[c_id + "_is_applicable"]]
+                # >>> cvg_token_abs = applicable_comps["comp_freq"].astype(int).sum()
+                # >>> cvg_token = round(cvg_token_abs / token_comp, 3)    # freq covered / freq all
 
 
-            #   2.3. Item regularity: the average over the proportions of number of the compounds
-            #   to which the constraint applies that are constituted by the covered item to the
-            #   total number of compounds that are constituted by the covered item, for each item.
+                #   2.3. Item regularity: the average over the proportions of number of the compounds
+                #   to which the constraint applies that are constituted by the covered item to the
+                #   total number of compounds that are constituted by the covered item, for each item.
 
-            item_regs = []
-            # this loop is the only place where it takes some noticeable
-            # time to calculate results, so we generalize and use this desc for the whole computation
-            for item in tqdm(items, desc=f"Calculating statistics for {c_id}"):
-                # TODO: optimize (with matrix application?)
-                # skip compounds built with items not covered by the constraint
-                # since we removed duplicates, there will be exactly one record for the item
-                if not appl_index_item[appl_index_item[c_id + "_item"] == item].iloc[0][c_id + "_is_applicable"]:
-                    continue
-                bw_item = appl_index[appl_index[c_id + "_item"] == item]    # bw = built with
-                n_bw_item = len(bw_item)    # n bw item
-                reg_bw_item_abs = bw_item[c_id + "_applies"].sum()  # n bw item conform
-                reg_bw_item = round(reg_bw_item_abs / n_bw_item, 3) # n bw item conform / n bw item covered
-                item_regs.append(reg_bw_item)
-            reg_item = round(pd.array(item_regs).mean().item(), 3)   # avg over (n bw item conform / n bw item covered)s
+                item_regs = []
+                # this loop is the only place where it takes some noticeable
+                # time to calculate results, so we generalize and use this desc for the whole computation
+                for item in tqdm(items, desc=f"Calculating statistics for {c_id}"):
+                    # TODO: optimize (with matrix application?)
+                    # skip compounds built with items not covered by the constraint
+                    # since we removed duplicates, there will be exactly one record for the item
+                    if not appl_index_item[appl_index_item[c_id + "_item"] == item].iloc[0][c_id + "_is_applicable"]:
+                        continue
+                    bw_item = appl_index[appl_index[c_id + "_item"] == item]    # bw = built with
+                    n_bw_item = len(bw_item)    # n bw item
+                    reg_bw_item_abs = bw_item[c_id + "_applies"].sum()  # n bw item conform
+                    reg_bw_item = round(reg_bw_item_abs / n_bw_item, 3) # n bw item conform / n bw item covered
+                    item_regs.append(reg_bw_item)
+                reg_item = round(pd.array(item_regs).mean().item(), 3)   # avg over (n bw item conform / n bw item covered)s
+                print()
 
-            #   2.4. Type regularity: proportion of number of the compounds to which
-            #   the constraint applies to the number of the covered compounds
+                #   2.4. Type regularity: proportion of number of the compounds to which
+                #   the constraint applies to the number of the covered compounds
 
-            reg_type_abs = appl_index[c_id + "_applies"].sum()  # n conform
-            reg_type = round(reg_type_abs / cvg_type_abs, 3)    # n conform / n covered
-            
-            #   DISCARDED. Token regularity: proportion of the sums of word counts of compounds
-            #   for which the constraint applies and those for which it is potentially applicable.
-            # >>> applied_comps = gecodb_v06[appl_index[c_id + "_applies"].notna() & appl_index[c_id + "_applies"]]
-            # >>> reg_token_abs = applied_comps["comp_freq"].astype(int).sum()
-            # >>> reg_token = round(reg_token_abs / cvg_token_abs, 3) # freq conform / freq covered
+                reg_type_abs = appl_index[c_id + "_applies"].sum()  # n conform
+                reg_type = round(reg_type_abs / cvg_type_abs, 3)    # n conform / n covered
+                
+                #   DISCARDED. Token regularity: proportion of the sums of word counts of compounds
+                #   for which the constraint applies and those for which it is potentially applicable.
+                # >>> applied_comps = gecodb_v06[appl_index[c_id + "_applies"].notna() & appl_index[c_id + "_applies"]]
+                # >>> reg_token_abs = applied_comps["comp_freq"].astype(int).sum()
+                # >>> reg_token = round(reg_token_abs / cvg_token_abs, 3) # freq conform / freq covered
 
-            constr_statistics.loc[c_id, :] = [
-                cvg_item, cvg_type,
-                reg_item, reg_type
-            ]
+                constr_statistics.loc[c_id, :] = [
+                    cvg_item, cvg_type,
+                    reg_item, reg_type
+                ]
 
         else:
 
