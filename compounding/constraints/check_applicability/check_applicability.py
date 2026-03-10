@@ -6,6 +6,7 @@ import os
 import zipfile
 import pandas as pd
 import yaml
+import copy
 from tqdm import tqdm
 
 # python -m compounding.constraints.check_applicability.check_applicability
@@ -76,11 +77,13 @@ def main():
     #   target N1).
     #   1.3. If applicable, check whether the constraint actually applies. Otherwise NA.
     # 2. Calculate statistics:
-    #   2.1. Item coverage: proportion of the number of items (mostly N1) for which the
-    #   constraint is potentially applicable and the total number of the items.
-    #   2.2. Type coverage: proportion of the number of compounds for which the
+    #   2.1. Type coverage: proportion of the number of compounds for which the
     #   constraint is potentially applicable and the total number of the compounds.
-    #   2.3. Item regularity: the average over the proportions of number of the compounds
+    #   2.2. Item coverage: proportion of the number of items (mostly N1) for which the
+    #   constraint is potentially applicable and the total number of the items.
+    #   2.3. Type regularity: proportion of number of the compounds to which
+    #   the constraint applies to the number of the covered compounds
+    #   2.4. Item regularity: the average over the proportions of number of the compounds
     #   to which the constraint applies that are constituted by the covered item to the
     #   total number of compounds that are constituted by the covered item, for each item.
     #   This methodology basically estimates the type regularity within each item (mostly N1)
@@ -89,8 +92,6 @@ def main():
     #   in type regularity. E.g. in `p2l:drv:deadj_schwa$-0/en`, 555 out of 4214 compounds
     #   were constituted by a single N1 'Liebe' and deviated from the constraint; thus,
     #   even though only one single item was deviating, the type regularity sinked to 0.868.
-    #   2.4. Type regularity: proportion of number of the compounds to which
-    #   the constraint applies to the number of the covered compounds
     #   DISCARDED. Token coverage: proportion of the sums of word counts of the covered compounds
     #   and of all compounds.
     #   DISCARDED. Token regularity: proportion of the sums of word counts of compounds
@@ -102,6 +103,8 @@ def main():
         func_name = constraint["func_alias"]
 
         if hasattr(applicability_checkers, func_name + "_is_applicable"):
+
+            item_type = constraint["appl_item_type"]
             
             is_applicable_func = getattr(
                 applicability_checkers,
@@ -115,15 +118,39 @@ def main():
 
             pbar = tqdm(gecodb_v06.index, desc=f"Running {c_id}")
 
-            def _run_constraint(comp: str) -> tuple[bool, bool]:
+            def _run_constraint(comp: str, item_type: str) -> tuple[str, bool, bool]:
 
                 # parse compound
                 comp: Compound = Compound(comp)
 
-                # 1.1. Define the application item of the compound. In this iteration,
-                # it will always be the N1.
-                # TODO. adjust for N2 or the whole compound
-                item = comp.stems[0].morph
+                # 1.1. Define the application item of the compound.
+                # There are a few possibilities:
+                #   * N1. This will be the case for the majority of the constraints.
+                #   * N1 + linker. This is for the L2P constraints, where
+                #   one N1 may or may not attach the target linker in different compounds,
+                #   and then only the cases when it does attach it matter; for example,
+                #   if we consider compounds `mutter_sprache` and `mutter_+=_zentrum`,
+                #   N1 'mutter' will become the application item for
+                #   `p2l:decl_cl:pl:#0_uml-0|def-0` but only that case of 'mutter'
+                #   that does attach a `_+=_` will be the item of application
+                #   for `l2p:0_uml`. This derives directly from the definitions
+                #   of these constraints:
+                #   "... nouns that build the plural form with a zero ending and umlaut"
+                #   vs "... nouns ... that attach a zero linker with umlaut"
+                #   * N2. For `p2l:sem:2const_anim/pers-s`.
+                #   * The whole compound. This is for the cases when the semantic type
+                #   of the whole compounds matters, such as `p2l:sem:comp_type:copula-0`.
+                
+                # in this iteration, it will always be N1 or N1 + linker
+                match item_type:
+                    case "n1":
+                        item = comp.stems[0].morph
+                    case "n1+linker":
+                        item = comp.stems[0].morph + comp.linkers[0].gecodb
+                    case "n2":
+                        item = comp.stems[1].morph
+                    case "compound":
+                        item = comp.gecodb
 
                 # 1.2. Check whether the constraint is applicable.
                 is_applicable = is_applicable_func(comp)
@@ -143,7 +170,7 @@ def main():
                 appl_index[c_id + "_applies"]
             ) = zip(
                 *appl_index.index.to_series().apply(
-                    lambda x: _run_constraint(x)
+                    lambda x: _run_constraint(x, item_type)
                 )
             )
 
@@ -152,33 +179,42 @@ def main():
 
             # 2. Calculate statistics
 
-            #   2.1. Item coverage: proportion of the number of items (mostly N1) for which the
-            #   constraint is potentially applicable and the total number of the items.
+            #   2.1. Type coverage: proportion of the number of compounds for which the
+            #   constraint is potentially applicable and the total number of the compounds.
 
-            # recalculated in each compound to account for N1 / N2 / compound possibilities
-            items = appl_index[c_id + "_item"].unique().tolist()
-            n_items = len(items)
-            # since we are talking about potential applicability here, it cannot be
-            # True in one compound and False in another compound with the same item;
-            # we therefore can remove item duplicates and will get potential applicability
-            # booleans for each single item
-            appl_index_item = appl_index[
-                ~appl_index[[c_id + "_item", c_id + "_is_applicable"]
-            ].duplicated(keep="first")]
-            cvg_item_abs = appl_index_item[c_id + "_is_applicable"].sum()    # n items covered
+            cvg_type_abs = appl_index[c_id + "_is_applicable"].sum()    # n comps covered
 
             # there is 1 constraint in this iteration for which no applicable
-            # items (hence, compounds) are found in the dataset;
+            # compounds (hence, items) were found in the dataset;
             # might also be the case for further constraints added in the future
-            if cvg_item_abs:
+            if cvg_type_abs:
 
-                cvg_item = round(cvg_item_abs / n_items, 3) # n items covered / n all items 
-
-                #   2.2. Type coverage: proportion of the number of compounds for which the
-                #   constraint is potentially applicable and the total number of the compounds.
-
-                cvg_type_abs = appl_index[c_id + "_is_applicable"].sum()    # n comps covered
                 cvg_type = round(cvg_type_abs / n_comps, 3)   # n comps covered / n all comps
+
+                #   2.2. Item coverage: proportion of the number of items (mostly N1) for which the
+                #   constraint is potentially applicable and the total number of the items.
+
+                # for constraints with the application item type "compound",
+                # item and type measures are effectively the same thing
+                if item_type == "compound":
+
+                    cvg_item = copy.copy(cvg_type)
+
+                else:
+                    
+                    # recalculated in each compound to account for N1 / N1+linker / N2 possibilities
+                    items = appl_index[c_id + "_item"].unique().tolist()
+                    n_items = len(items)
+                    # since we are talking about potential applicability here, it cannot be
+                    # True in one compound and False in another compound for the same item;
+                    # we therefore can remove item duplicates and will get potential applicability
+                    # booleans for each single item
+                    appl_index_item = appl_index[
+                        ~appl_index[[c_id + "_item", c_id + "_is_applicable"]
+                    ].duplicated(keep="first")]
+                    cvg_item_abs = appl_index_item[c_id + "_is_applicable"].sum()    # n items covered
+
+                    cvg_item = round(cvg_item_abs / n_items, 3) # n items covered / n all items 
                 
                 #   DISCARDED. Token coverage: proportion of the sums of word counts of the covered compounds
                 #   and of all compounds.
@@ -187,32 +223,45 @@ def main():
                 # >>> cvg_token = round(cvg_token_abs / token_comp, 3)    # freq covered / freq all
 
 
-                #   2.3. Item regularity: the average over the proportions of number of the compounds
-                #   to which the constraint applies that are constituted by the covered item to the
-                #   total number of compounds that are constituted by the covered item, for each item.
-
-                item_regs = []
-                # this loop is the only place where it takes some noticeable
-                # time to calculate results, so we generalize and use this desc for the whole computation
-                for item in tqdm(items, desc=f"Calculating statistics for {c_id}"):
-                    # TODO: optimize (with matrix application?)
-                    # skip compounds built with items not covered by the constraint
-                    # since we removed duplicates, there will be exactly one record for the item
-                    if not appl_index_item[appl_index_item[c_id + "_item"] == item].iloc[0][c_id + "_is_applicable"]:
-                        continue
-                    bw_item = appl_index[appl_index[c_id + "_item"] == item]    # bw = built with
-                    n_bw_item = len(bw_item)    # n bw item
-                    reg_bw_item_abs = bw_item[c_id + "_applies"].sum()  # n bw item conform
-                    reg_bw_item = round(reg_bw_item_abs / n_bw_item, 3) # n bw item conform / n bw item covered
-                    item_regs.append(reg_bw_item)
-                reg_item = round(pd.array(item_regs).mean().item(), 3)   # avg over (n bw item conform / n bw item covered)s
-                print()
-
-                #   2.4. Type regularity: proportion of number of the compounds to which
+                #   2.3. Type regularity: proportion of number of the compounds to which
                 #   the constraint applies to the number of the covered compounds
 
                 reg_type_abs = appl_index[c_id + "_applies"].sum()  # n conform
                 reg_type = round(reg_type_abs / cvg_type_abs, 3)    # n conform / n covered
+
+
+                #   2.4. Item regularity: the average over the proportions of number of the compounds
+                #   to which the constraint applies that are constituted by the covered item to the
+                #   total number of compounds that are constituted by the covered item, for each item.
+
+                # for constraints with the application item type "compound",
+                # item and type measures are effectively the same thing
+                if item_type == "compound":
+
+                    reg_item = copy.copy(reg_type)
+                    print(f"Calculating statistics for {c_id}: done\n") # unify with tqdm below
+
+                else:
+
+                    item_regs = []
+                    # this loop is the only place where it takes some noticeable
+                    # time to calculate results, so we generalize and use this desc for the whole computation
+                    for item in tqdm(items, desc=f"Calculating statistics for {c_id}"):
+                        # TODO: optimize (with matrix application?)
+                        # skip compounds built with items not covered by the constraint
+                        # since we removed duplicates, there will be exactly one record for the item
+                        if not appl_index_item[appl_index_item[c_id + "_item"] == item].iloc[0][c_id + "_is_applicable"]:
+                            continue
+                        # TODO: makes not much sense for l2p constraints because an N1 that takes
+                        # the target link is all the same in all bw item compounds
+                        bw_item = appl_index[appl_index[c_id + "_item"] == item]    # bw = built with
+                        n_bw_item = len(bw_item)    # n bw item
+                        reg_bw_item_abs = bw_item[c_id + "_applies"].sum()  # n bw item conform
+                        reg_bw_item = round(reg_bw_item_abs / n_bw_item, 3) # n bw item conform / n bw item covered
+                        item_regs.append(reg_bw_item)
+                    reg_item = round(pd.array(item_regs).mean().item(), 3)   # avg over (n bw item conform / n bw item covered)s
+                    print()
+
                 
                 #   DISCARDED. Token regularity: proportion of the sums of word counts of compounds
                 #   for which the constraint applies and those for which it is potentially applicable.
@@ -221,6 +270,9 @@ def main():
                 # >>> reg_token = round(reg_token_abs / cvg_token_abs, 3) # freq conform / freq covered
 
                 constr_statistics.loc[c_id, :] = [
+                    # even though the item variant is calculated
+                    # after the type variant, we give the prevalence
+                    # to the former
                     cvg_item, cvg_type,
                     reg_item, reg_type
                 ]
