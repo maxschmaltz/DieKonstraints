@@ -17,13 +17,14 @@ def main():
     # 1. Filter out all the compounds whose constituents 
     #   are not present in CELEX and those whose modifier frequency < 10
     # 2. Filter out compounds with deletion linkers
-    # 3. Get counts for the compounds from DeReKo using the same procedure
+    # 3. Remove occasional duplicates
+    # 4. Get counts for the compounds from DeReKo using the same procedure
     #   as for CELEX nouns (done in dereko_search.py) to remain consistent
-    # 4. Recalculate productivities of N1s
+    # 5. Recalculate productivities of N1s
     #   (since many compounds have been removed), keep
     #   compounds with modifier productivity >= 10
-    # 5. Perform a few lesser transformations.
-    # 6. Save the prepared GeCoDB to a new TSV file.
+    # 6. Perform a few lesser transformations.
+    # 7. Save the prepared GeCoDB to a new TSV file.
 
     gecodb_path = "resources/GeCoDB/gecodb_v05.tsv"
     outpath = "resources/custom/compounding/intermediate_data"
@@ -87,12 +88,15 @@ def main():
     
     # 2. Remove compounds with deletion linkers
 
-    # remove all compounds with deletion linkers
     gecodb_v05 = gecodb_v05[~gecodb_v05["comp_gecodb"].str.contains("-e")]
 
 
-    # 3. Get DeReKo counts for the compounds and drop
-    #   those below frequency threshold
+    # 3. Remove occasional duplicates
+    gecodb_v05 = gecodb_v05[~gecodb_v05.duplicated(keep="first")]
+
+
+    # 4. Get DeReKo counts for the compounds and drop
+    # those below frequency threshold
     
     lemmas = gecodb_v05["comp_lemma"].tolist()
 
@@ -122,7 +126,7 @@ def main():
     gecodb_v05 = gecodb_v05[gecodb_v05["comp_freq"] >= freq_threshold]
 
 
-    # 4. Recalculate productivities of N1s
+    # 5. Recalculate productivities of N1s
     # and remove compounds with N1 productivity < 10
 
     for lemma in tqdm(gecodb_v05["n1_lemma"].unique(), desc="Calculating N1 prod"):
@@ -139,7 +143,7 @@ def main():
     gecodb_v05 = gecodb_v05[gecodb_v05["n1_prod"] >= n1_prod_threshold]
 
 
-    # 5. Lesser transformations
+    # 6. Lesser transformations
 
     # replace all _+er_ with _+=er_ (since the -er- linker always 
     # puts an umlaut on the stem if possible)
@@ -165,7 +169,7 @@ def main():
     gecodb_v05 = gecodb_v05.set_index("comp_gecodb")
 
 
-    # 6. Save the prepared GeCoDB
+    # 7. Save the prepared GeCoDB
     gecodb_v05.to_csv(
         os.path.join(outpath, "gecodb_v06.tsv"),
         sep="\t",
