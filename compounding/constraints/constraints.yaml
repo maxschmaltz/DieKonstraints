@@ -1632,8 +1632,8 @@ constraints:
     # 31
     p2l:phon_fin:F_stem_#t$-s:
     
-        summary: First constituents that are constituted by feminine nouns that end with [t] often attach -s- if the [t] is part of the stem (not of a suffix).
-        ling_info_type: [morphological, phonological]
+        summary: First constituents that are constituted by polysyllabic feminine nouns that end with [t] often attach -s- if the [t] is not part of a suffix -(ig)keit, -heit, -schaft, or -ität or its allomorphs.
+        ling_info_type: [morphological, derivational, phonological]
         appl_item: n1
 
         func_alias: f_t_fin

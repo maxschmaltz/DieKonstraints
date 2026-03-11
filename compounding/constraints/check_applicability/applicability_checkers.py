@@ -741,20 +741,20 @@ def stressed_phon_fin_applies(compound: Compound):
 
 # p2l:phon_fin:F_stem_#t$-s
 #
-# First constituents that are constituted by feminine nouns
-# that end with [t] often attach -s-
-# if the [t] is part of the stem (not of a suffix).
+# First constituents that are constituted by polysyllabic feminine nouns
+# that end with [t] often attach -s- if the [t] is not part of a suffix
+# -(ig)keit, -heit, -schaft, or -ität or its allomorphs.
 
 def f_t_fin_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
 	return (
 		_is_of_gender(n1, "f")
+		and not _is_monosyllabic(n1)
 		and _ends_with_phon(n1, "t")
 		and not _ends_with_sfx(
 			n1,
-			# all German feminine suffixes ending with [t]
 			[
-				"heit", "keit", "igkeit", "schaft", "falt",
+				"heit", "keit", "igkeit", "schaft",
 				# in CELEX: qualit-ät, ?, aktiv-ität, spontan-eität
 				"ät", "tät", "ität", "eität"				
 			]
