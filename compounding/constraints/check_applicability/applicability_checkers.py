@@ -60,11 +60,11 @@ def _is_of_plural(
 	lemma_info = celex.loc[lemma]
 	if pd.isna(lemma_info["nom_pl"]):
 		return False	# has no plural
-	if (
-		_ends_with_phon_schwa(lemma)
-		and plural_marker == "en"
-	):	# adjust for schwa at the end
-		plural_marker = "n"
+	pl_ms = (
+		# adopt for cases with schwa, er, el etc.
+		["n", "en"] if plural_marker == "en"
+		else [plural_marker]
+	)
 	if dupl:
 		# for cases like 'Ergebnis' -> 'Ergebnisse',
 		# 'Freundin' -> 'Freundinnen'
@@ -72,6 +72,8 @@ def _is_of_plural(
 	if adds_umlaut:
 		# TODO: extract stem (e.g. Vorbild)
 		lemma_uml = perform_umlaut(lemma)
+		# this is to avoid cases like
+		# Stern, _+=e_ ---> True
 		if (
 			plural_marker != "er"	# allowed to have no uml
 			and lemma == lemma_uml	# cannot be umlauted
@@ -80,8 +82,8 @@ def _is_of_plural(
 		lemma = lemma_uml
 	pl_vars = lemma_info["nom_pl"].split("/")
 	return any(
-		pl_var == lemma + plural_marker
-		for pl_var in pl_vars
+		pl_var == lemma + pl_m
+		for pl_var, pl_m in product(pl_vars, pl_ms)
 	)
 
 def _is_of_zero_plural(lemma: str) -> bool:
@@ -719,17 +721,17 @@ def stressed_phon_fin_is_applicable(compound: Compound):
 				# stressed 'ei', 'ie', 'ur', 'ik'
 				(
 					# overchecking but safe
-					n1.endswith("ei") and _ends_with_phon(n1, "ai")
-					or n1.endswith("ie") and _ends_with_phon(n1, "i")
-					or n1.endswith("ur") and _ends_with_phon(n1, "uʁ")
+					(n1.endswith("ei") and _ends_with_phon(n1, "ai"))
+					or (n1.endswith("ie") and _ends_with_phon(n1, "i"))
+					or (n1.endswith("ur") and _ends_with_phon(n1, "uʁ"))
 					# NB! the constraint applies
 					# only to nouns in -ik but not to those in -ig!
-					or n1.endswith("ik") and _ends_with_phon(n1, "ik")
+					or (n1.endswith("ik") and _ends_with_phon(n1, "ik"))
 				)
 				and _is_last_syl_stressed(n1)
 			)
 			# unstressed 'ik'
-			or _ends_with_phon(n1, "ɪk")
+			or (n1.endswith("ik") and _ends_with_phon(n1, "ɪk"))
 		)
 
 	)
@@ -1029,9 +1031,26 @@ def s_f_cmpx_applies(compound: Compound):
 # that attach the -n- allomorph of the -en- linker end in schwa.
 
 def n_schwa_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
 	return (
 		_has_linker(compound, linker_morph="en")
 		and compound.linkers[0].allomorph == "n"
+		# this is to exclude the special case for nouns
+		# ending in a stressed [i:] (-ie) or in a stressed [e:] (-ee)
+		# such as such as 'Melodie', 'Kategorie, 'Idee', 'Kaffee';
+		# in cases like 'melodie_+n_folge' or 'idee_+n_austausch',
+		# even though orphographically they have -n-, it is phonologically
+		# an -en-: Melod[I:] vs Melod[Ien]folge, Id[E:] vs Id[Een]austausch
+		# which becomes -n- just to avoid a confusing vocal cluster such
+		# as *Melodieenfolge, *Ideeenaustausch
+		and not (
+			(
+				# overchecking but safe
+				(n1.endswith("ee") and _ends_with_phon(n1, "e"))
+				or (n1.endswith("ie") and _ends_with_phon(n1, "i"))
+			)
+			and _is_last_syl_stressed(n1)
+		)
 	)
 
 def n_schwa_applies(compound: Compound):
@@ -1042,7 +1061,7 @@ def n_schwa_applies(compound: Compound):
 # l2p:en|par
 #
 # All nouns that constitute first constituents
-# that attach -(e)n- are build the plural form with -(e)n.
+# that attach -(e)n- belong are weak nouns.
 
 def en_par_is_applicable(compound: Compound):
 	# general restriction
