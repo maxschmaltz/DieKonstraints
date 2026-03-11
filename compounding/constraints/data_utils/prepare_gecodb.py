@@ -122,7 +122,7 @@ def main():
     # freq check
     # lower freq for compounds as they are generally
     # more loose and free to produce
-    freq_threshold = 5
+    freq_threshold = 20
     gecodb_v05 = gecodb_v05[gecodb_v05["comp_freq"] >= freq_threshold]
 
 
