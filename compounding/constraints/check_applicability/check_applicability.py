@@ -52,16 +52,16 @@ def main():
     constr_statistics = pd.DataFrame(
         index=pd.Series(constr_ids, name="constr_id"),
         columns=[
-            "cvg_type_item",
-            "cvg_type_comp",
+            "n_appl_items",
+            "quantifier",   # for convenience
+            "cvg_item",
+            "cvg_type",
             # "cvg_type_abs",   # can be calculated
             # "cvg_token",      # no meaningful connection type/token was found
-            # "cvg_token_abs",
-            "reg_type_item",
-            "reg_type_comp",
+            "reg_item",
+            "reg_type",
             # "reg_type_abs",
             # "reg_token",      # can be found in <outpath>/constr_statistics_legacy.tsv
-            # "reg_token_abs",
         ]
     )
 
@@ -199,6 +199,7 @@ def main():
                 if appl_item == "compound":
 
                     cvg_item = copy.copy(cvg_type)
+                    n_items = copy.copy(n_comps)
 
                 else:
                     
@@ -273,6 +274,8 @@ def main():
                     # even though the item variant is calculated
                     # after the type variant, we give the prevalence
                     # to the former
+                    n_items,
+                    constraint["quantifier"],
                     cvg_item, cvg_type,
                     reg_item, reg_type
                 ]
