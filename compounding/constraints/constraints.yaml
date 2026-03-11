@@ -457,8 +457,8 @@ constraints:
             type: 1.0
             token: 1.0
         regularity:
-            item: 0.573
-            type: 0.605
+            item: 0.572
+            type: 0.572
         support_level: supported
 
         examples_pro: [land_kreis, haus_tür, stadt_mauer]
@@ -526,11 +526,11 @@ constraints:
 
         quantifier: almost regularly
         coverage:
-            item: 0.123
-            type: 0.101
+            item: 0.145
+            type: 0.124
         regularity:
-            item: 0.91
-            type: 0.793
+            item: 0.956
+            type: 0.91
         support_level: supported
 
         examples_pro: [schlitten_fahrt, gürtel_schnalle, brötchen_geber]
@@ -557,11 +557,11 @@ constraints:
 
         quantifier: regularly
         coverage:
-            item: 0.032
+            item: 0.034
             type: 0.032
         regularity:
-            item: 0.955
-            type: 0.974
+            item: 0.959
+            type: 0.955
         support_level: partially supported
 
         examples_pro: [balkon_möbel, hotel_kette, bob_bahn]
@@ -609,11 +609,11 @@ constraints:
 
         quantifier: mostly
         coverage:
-            item: 0.182
-            type: 0.195
+            item: 0.155
+            type: 0.182
         regularity:
-            item: 0.691
-            type: 0.686
+            item: 0.767
+            type: 0.692
         support_level: supported
 
         examples_pro: [tisch_decke, projekt_gruppe, pilz_sammler]
@@ -639,11 +639,11 @@ constraints:
 
         quantifier: irregularly
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [projekt_+e_macherei, tag_+e_buch, punkt_+e_stand]
@@ -674,11 +674,11 @@ constraints:
 
         quantifier: irregularly
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [hund_+e_leine, swein_+e_stall, pferd_+e_wagen]
@@ -713,11 +713,11 @@ constraints:
 
         quantifier: mostly
         coverage:
-            item: 0.056
-            type: 0.099
+            item: 0.016
+            type: 0.055
         regularity:
-            item: 0.864
-            type: 0.766
+            item: 0.819
+            type: 0.866
         support_level: supported
 
         examples_pro: [buch_deckel, buch_+=er_regal, kind_+=er_jacke]
@@ -748,11 +748,11 @@ constraints:
 
         quantifier: majority
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [buch_deckel, grab_stein, blatt_fläche]
@@ -784,11 +784,11 @@ constraints:
 
         quantifier: tend
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [glas_auge, kraut_salat, horn_haut]
@@ -815,11 +815,11 @@ constraints:
 
         quantifier: more likely
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [buch_+=er_regal, grab_+=er_feld, kraut_+=er_frau]
@@ -857,11 +857,11 @@ constraints:
 
         quantifier: may
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [kind_+=er_jacke, huhn_+=er_ei, rind_+=er_brust]
@@ -893,11 +893,11 @@ constraints:
 
         quantifier: mostly
         coverage:
-            item: 0.109
-            type: 0.134
+            item: 0.077
+            type: 0.108
         regularity:
-            item: 0.755
-            type: 0.793
+            item: 0.715
+            type: 0.753
         support_level: supported
 
         examples_pro: [hand_fläche, frucht_joghurt, arzt_praxis]
@@ -923,11 +923,11 @@ constraints:
 
         quantifier: irregularly
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
@@ -958,11 +958,11 @@ constraints:
 
         quantifier: mostly
         coverage:
-            item: 0.012
-            type: 0.01
+            item: 0.006
+            type: 0.014
         regularity:
-            item: 0.955
-            type: 0.956
+            item: 0.944
+            type: 0.963
         support_level: supported
 
         examples_pro: [apfel_baum, kloster_kirche, mutter_sprache]
@@ -987,11 +987,11 @@ constraints:
 
         quantifier: irregularly
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
@@ -1019,11 +1019,11 @@ constraints:
 
         quantifier: almost always
         coverage:
-            item: 0.012
-            type: 0.014
+            item: 0.013
+            type: 0.012
         regularity:
-            item: 0.996
-            type: 0.99
+            item: 0.997
+            type: 0.995
         support_level: supported
 
         examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
@@ -1070,11 +1070,11 @@ constraints:
 
         quantifier: more likely
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [staat_+en_bund, bett_+en_zahl, strahl_+en_belastung]
@@ -1109,12 +1109,12 @@ constraints:
 
         quantifier: regularly
         coverage:
-            item: 0.045
-            type: 0.029
+            item: 0.071
+            type: 0.045
         regularity:
-            item: 0.968
-            type: 0.906
-        support_level: partially supported
+            item: 0.983
+            type: 0.967
+        support_level: supported
 
         examples_pro: [reiter_schwert, gürtel_schnalle, brötchen_geber]
         examples_contra: [alter_+s_abstand, reiter_+s_mann]
@@ -1140,11 +1140,11 @@ constraints:
 
         quantifier: regularly
         coverage:
-            item: 0.005
-            type: 0.003
+            item: 0.008
+            type: 0.005
         regularity:
-            item: 0.859
-            type: 0.941
+            item: 0.678
+            type: 0.86
         support_level: not supported
 
         examples_pro: [erlaubnis_schein, format_vorlage, personal_ausweis]
@@ -1154,9 +1154,11 @@ constraints:
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [83, 107]
-              summary: Nouns with suffixes -bold, -nis, -rich, -at, -al that build the plural form with -e regularly attach a zero linker.
+              summary: Nouns with suffixes -bold, -nis, -rich [1], -at, -al that build the plural form with -e regularly attach a zero linker.
 
-        footnotes: {}
+        footnotes:
+            "1": The passage from [ortner_mueller-bollhagen_1991:83] also adds suffix -ei to this list but this case is eventually handled by `p2l:phon_fin:F_#stressed_phon$-0`.
+            "2": "There is a discrepancy about this constraint in [ortner_mueller-bollhagen_1991]: [ortner_mueller-bollhagen_1991:83] says that nouns with suffixes -bold, -nis, -rich [1] **usually** attach a zero linker, while in [ortner_mueller-bollhagen_1991:107] nouns with these three suffixes plus -at, -al are claimed to attach a zero linker **regularly**. We pick the strongest claim for the validation and find that it is not supported while the more moderate **usually** would have been."
 
 
 
@@ -1171,11 +1173,11 @@ constraints:
 
         quantifier: mostly
         coverage:
-            item: 0.028
-            type: 0.022
+            item: 0.027
+            type: 0.028
         regularity:
-            item: 0.575
-            type: 0.734
+            item: 0.581
+            type: 0.574
         support_level: supported
 
         examples_pro: [abgabe_soll, sorge_pflicht, lage_plan]
@@ -1202,11 +1204,11 @@ constraints:
 
         quantifier: tend
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [abgabe_+n_ordnung, anzeige_+n_blatt, lüge_+n_detektor]
@@ -1234,12 +1236,12 @@ constraints:
 
         quantifier: almost always
         coverage:
-            item: 0.01
-            type: 0.009
+            item: 0.009
+            type: 0.01
         regularity:
-            item: 0.868
-            type: 0.904
-        support_level: not supported
+            item: 0.975
+            type: 0.867
+        support_level: supported
 
         examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
         examples_contra: []
@@ -1276,12 +1278,12 @@ constraints:
 
         quantifier: regularly
         coverage:
-            item: 0.144
-            type: 0.109
+            item: 0.232
+            type: 0.165
         regularity:
-            item: 0.98
-            type: 0.986
-        support_level: supported
+            item: 0.977
+            type: 0.978
+        support_level: partially supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, schicksal_+s_drama, rarität_+s_wert, eigentum_+s_recht]
         examples_contra: [minderheit_+en_recht]
@@ -1359,11 +1361,11 @@ constraints:
 
         quantifier: prefer
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [rarität_+en_sammlung, kuriosität_+en_händler, aktualitäten_+en_kino]
@@ -1388,12 +1390,12 @@ constraints:
 
         quantifier: regularly
         coverage:
-            item: 0.008
-            type: 0.011
+            item: 0.005
+            type: 0.009
         regularity:
-            item: 0.913
-            type: 0.986
-        support_level: partially supported
+            item: 0.774
+            type: 0.911
+        support_level: not supported
 
         func_alias: sfx_deverb_en
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
@@ -1432,11 +1434,11 @@ constraints:
 
         quantifier: always
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [lehrerinn_+en_mentalität, freundinn_+en_gruppe, schülerinn_+en_rat]
@@ -1458,20 +1460,20 @@ constraints:
     # 27
     p2l:drv:prx_deverb-s:
     
-        summary: First constituents that are constituted by prefixed deverbal nouns exhibit a strong tendency to attach -s-.
+        summary: First constituents that are constituted by prefixed deverbal nouns exhibit a tendency to attach -s-.
         ling_info_type: [derivational]
         appl_item: n1
 
         func_alias: prx_deverb
 
-        quantifier: strong tendency
+        quantifier: tendency
         coverage:
-            item: 0.12
-            type: 0.098
+            item: 0.161
+            type: 0.125
         regularity:
-            item: 0.647
-            type: 0.721
-        support_level: partially supported
+            item: 0.634
+            type: 0.653
+        support_level: supported
 
         examples_pro: [anspruch_+s_haltung, eintrag_+s_frist, bedarf_+s_fall, verfall_+s_datum]
         examples_contra: [anruf_beantworter, überfall_kommando, bestand_teil]
@@ -1505,6 +1507,7 @@ constraints:
             - ref: nuebling_szczepaniak_2013
               pages: [78]
               summary: Dererbatives with unstressed prefixes attach -s- in 85%, and with stressed prefixes in 36% of cases [4, 5].
+
             - ref: ortner_mueller-bollhagen_1991
               pages: [89]
               summary: Prefixed deverbal M attach an -s- regularly unless they end with a sibilant or [ts] [6].
@@ -1531,11 +1534,11 @@ constraints:
 
         quantifier: mostly
         coverage:
-            item: 0.097
-            type: 0.095
+            item: 0.081
+            type: 0.097
         regularity:
-            item: 0.951
-            type: 0.969
+            item: 0.971
+            type: 0.951
         support_level: supported
 
         examples_pro: [gefäß_system, fisch_öl, notiz_buch, herbst_anfang]
@@ -1571,11 +1574,11 @@ constraints:
 
         quantifier: always
         coverage:
-            item: 0.035
-            type: 0.028
+            item: 0.039
+            type: 0.035
         regularity:
-            item: 0.971
-            type: 0.991
+            item: 0.964
+            type: 0.97
         support_level: partially supported
 
         examples_pro: [auto_bahn, uhu_paar, kuh_milch, gummi_bär]
@@ -1607,11 +1610,11 @@ constraints:
 
         quantifier: usually
         coverage:
-            item: 0.032
-            type: 0.029
+            item: 0.031
+            type: 0.032
         regularity:
-            item: 0.965
-            type: 0.979
+            item: 0.95
+            type: 0.965
         support_level: supported
 
         examples_pro: [kosmetik_industrie, akustik_paneele, architektur_büro, metzgerei_produkt]
@@ -1640,27 +1643,28 @@ constraints:
 
         quantifier: often
         coverage:
-            item: 0.046
-            type: 0.092
+            item: 0.013
+            type: 0.015
         regularity:
-            item: 0.165
-            type: 0.258
-        support_level: not supported
+            item: 0.513
+            type: 0.47
+        support_level: partially supported
 
         examples_pro: [arbeit_+s_tag, heirat_+s_antrag, zukunft_+s_angst]
-        examples_contra: [arbeit_geber, schuld_gefühl, sicht_schutz]
+        examples_contra: [arbeit_geber]
 
         evidence:
 
             - ref: nuebling_szczepaniak_2013
               pages: [77]
-              summary: F ending with [t] often attach an -s- if the [t] is part of the stem (not of a suffix).
+              summary: F ending with [t] often attach an -s- if the [t] is part of the stem (not of a suffix) [1].
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [74, 75]
               summary: -s- occurs regularly after polysyllabic F ending with [t].
 
-        footnotes: {}
+        footnotes:
+            "1": "Even though [nuebling_szczepaniak_2013:77] does not mention explicitly that the F should be polysyllabic, the examples provided there are all polysyllabic: 'Arbeit', 'Heirat', 'Anstalt', 'Vorsicht' etc."
 
 
 
@@ -1675,11 +1679,11 @@ constraints:
 
         quantifier: regularly
         coverage:
-            item: 0.152
-            type: 0.12
+            item: 0.172
+            type: 0.152
         regularity:
-            item: 0.727
-            type: 0.626
+            item: 0.753
+            type: 0.727
         support_level: not supported
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
@@ -1731,11 +1735,11 @@ constraints:
 
         quantifier: mostly
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [schrift_führer, geburt_+s_tag, burg_anlage]
@@ -1773,11 +1777,11 @@ constraints:
 
         quantifier: more likely
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [schrift_+en_verzeichnis, geburt_+en_kontrolle, burg_+en_land]
@@ -1826,11 +1830,11 @@ constraints:
 
         quantifier: regularly
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [dichter_componist, bett_sofa, königin_mutter]
@@ -1867,11 +1871,11 @@ constraints:
 
         quantifier: sometimes
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [gewicht_+s_heber, krieg_+s_führung, unternehmen_+s_beratung]
@@ -1900,11 +1904,11 @@ constraints:
 
         quantifier: often
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [erbschaft_steuer, herz_schlagen, schaden_ersatz]
@@ -1944,11 +1948,11 @@ constraints:
 
         quantifier: tend
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [reiter_+s_mann, lehrer_+s_tochter, bäcker_+s_leute]
@@ -1984,8 +1988,8 @@ constraints:
             type: 1.0
             token: 1.0
         regularity:
-            item: 0.806
-            type: 0.821
+            item: 0.732
+            type: 0.763
         support_level: supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, anspruch_+s_haltung, eintrag_+s_frist]
@@ -2028,8 +2032,8 @@ constraints:
             type: 1.0
             token: 1.0
         regularity:
-            item: 0.76
-            type: 0.787
+            item: 0.717
+            type: 0.759
         support_level: supported
 
         examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
@@ -2066,11 +2070,11 @@ constraints:
 
         quantifier: tends
         coverage:
-            item: 0.542
-            type: 0.609
+            item: 0.414
+            type: 0.493
         regularity:
-            item: 0.697
-            type: 0.599
+            item: 0.8
+            type: 0.724
         support_level: supported
 
         examples_pro: [ort_+s_tarif, glück_+s_rad, himmel_reich, uhu_paar]
@@ -2125,12 +2129,12 @@ constraints:
 
         quantifier: all except for a few
         coverage:
-            type: NA
-            token: NA
+            type: 0.056
+            token: 0.032
         regularity:
-            type: NA
-            token: NA
-        support_level: NA
+            item: 0.983
+            type: 0.919
+        support_level: supported
 
         examples_pro: [zwang_+s_jacke, ort_+s_angabe, könig_+s_haus]
         examples_contra: [arbeit_+s_amt, heirat_+s_antrag, liebe_+s_brief]
@@ -2153,7 +2157,6 @@ constraints:
             "1": All monosyllabic M and N are simplices. This evidence is however partial since it does not mention polysyllabic M and N that may also attach -s- (könig_+s_haus).
             "2": Level of regularity not mentioned.
             "3": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `l2p:es`, we modify it to -s- here.
-            "4": Due to a partially unreliable simplex vs derivative analysis in CELEX, the obtained results are discarded as unreliable.
 
 
     # 43
@@ -2167,12 +2170,12 @@ constraints:
 
         quantifier: many
         coverage:
-            type: NA
-            token: NA
+            item: 0.056
+            type: 0.032
         regularity:
-            type: NA
-            token: NA
-        support_level: NA
+            item: 0.595
+            type: 0.903
+        support_level: partially supported
 
         examples_pro: [volk_+s_brauch, amt_+s_anwalt, staat_+s_amt]
         examples_contra: []
@@ -2198,10 +2201,10 @@ constraints:
 
         quantifier: almost all
         coverage:
-            item: 0.164
-            type: 0.138
+            item: 0.169
+            type: 0.165
         regularity:
-            type: 1.0
+            type: 0.999
             token: 1.0
         support_level: supported
 
@@ -2235,11 +2238,11 @@ constraints:
 
         quantifier: all
         coverage:
-            item: 0.113
-            type: 0.076
+            item: 0.115
+            type: 0.113
         regularity:
-            item: 0.978
-            type: 0.986
+            item: 0.93
+            type: 0.978
         support_level: partially supported
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
@@ -2275,11 +2278,11 @@ constraints:
 
         quantifier: all
         coverage:
-            item: 0.13
-            type: 0.088
+            item: 0.141
+            type: 0.13
         regularity:
-            item: 0.966
-            type: 0.982
+            item: 0.92
+            type: 0.966
         support_level: partially supported
 
         examples_pro: [blume_+n_topf, katze_+n_fell, frau_+en_hand]
@@ -2321,11 +2324,11 @@ constraints:
 
         quantifier: all
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [hahn_+en_kamm, mond_+en_schein, stern_+en_himmel, mai_+en_nacht]
@@ -2356,11 +2359,11 @@ constraints:
 
         quantifier: all
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [instrument_+en_bau, dokument_+en_sammlung]
@@ -2387,11 +2390,11 @@ constraints:
 
         quantifier: all
         coverage:
-            item: 0.008
-            type: 0.005
+            item: 0.023
+            type: 0.008
         regularity:
-            item: 0.976
-            type: 0.993
+            item: 0.923
+            type: 0.976
         support_level: partially supported
 
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
@@ -2432,12 +2435,12 @@ constraints:
 
         quantifier: all
         coverage:
-            item: 0.014
-            type: 0.012
+            item: 0.009
+            type: 0.014
         regularity:
-            item: 0.999
-            token: 1.0
-        support_level: supported
+            item: 0.942
+            token: 0.999
+        support_level: partially supported
 
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
         examples_contra: []
@@ -2480,11 +2483,11 @@ constraints:
 
         quantifier: all
         coverage:
-            item: 0.003
-            type: 0.002
+            item: 0.012
+            type: 0.003
         regularity:
-            item: 0.999
-            token: 1.0
+            item: 0.986
+            token: 0.999
         support_level: supported
 
         examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
@@ -2517,11 +2520,11 @@ constraints:
 
         quantifier: exclusively
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, land_+es_regierung]
@@ -2568,11 +2571,11 @@ constraints:
 
         quantifier: exclusively
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [schmerz_+ens_geld, name_+ens_tag, herz_+ens_angst]
@@ -2607,12 +2610,12 @@ constraints:
 
         quantifier: all
         coverage:
-            item: 0.0
+            item: 0.003
             type: 0.0
         regularity:
-            item: 0.99
-            type: 0.998
-        support_level: supported
+            item: 0.947
+            type: 0.995
+        support_level: partially supported
 
         examples_pro: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
         examples_contra: []
@@ -2639,11 +2642,11 @@ constraints:
 
         quantifier: tendentially
         coverage:
+            item: NA
             type: NA
-            token: NA
         regularity:
+            item: NA
             type: NA
-            token: NA
         support_level: NA
 
         examples_pro: [punkt_+e_stand, buch_+=er_regal, staat_+en_bund, burg_+en_land, mutter_+=_zentrum]

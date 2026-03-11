@@ -42,7 +42,7 @@ def main():
         columns=[
             c for constr_id in constr_ids
             for c in [
-                constr_id + "_item",    # N1 / [TODO: N2 / compound]
+                constr_id + "_item",    # N1 / N1 + linker / N2 / compound
                 constr_id + "_is_applicable",
                 constr_id + "_applies"
             ]
