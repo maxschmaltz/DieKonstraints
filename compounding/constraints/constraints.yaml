@@ -108,6 +108,8 @@ glossary:
     f: feminine noun
     freq: frequency
     interpr: interpretation
+    isol: isolated
+    loan: loanword
     m: masculine noun
     morph: morphological
     msyl: monosyllabic
@@ -122,6 +124,7 @@ glossary:
     sem: semantics of the compound/first constituent
     sfx: (derivational) suffix
     smpx: simplex noun
+    syl: syllable
     tech: technical
     tend: tendency
     uml: umlaut
@@ -412,7 +415,7 @@ topology:
 
             # 32
             - l2p:en:
-                summary: "All nouns that constitute first constituents that attach -(e)n- are build the plural form with -(e)n, with a few idiosyncratic exceptions. The exceptions are: 1) masculine monosyllabic designations of male persons, animals, astronomic objects, months; 2) polysyllabic foreign neuter nouns that have a stressed final syllable (and mostly end in with -at and -ment) that exhibit a plural meaning within the compound."
+                summary: "All nouns that constitute first constituents that attach -(e)n- build the plural form with -(e)n, with a few idiosyncratic exceptions. The exceptions are: 1) masculine monosyllabic designations of male persons, animals, astronomic objects, months; 2) polysyllabic foreign neuter nouns that have a stressed final syllable (and mostly end in with -at and -ment) that exhibit a plural meaning within the compound."
                 children:
 
                     - l2p:en|par
@@ -422,16 +425,42 @@ topology:
                     - l2p:en|non_par_n_pl_interpr
 
             # 33
-            - l2p:e          
+            - l2p:e:
+                summary: All nouns that constitute first constituents that attach -e- build the plural form with -e, have a stressed last syllable, are mostly simpices and never loanwords. 
+                children:
+
+                    - l2p:e|par
+
+                    - l2p:e|#stressed_syl
+
+                    - l2p:e|smpx
+
+                    - l2p:e|!loan
 
             # 34
-            - l2p:er
+            - l2p:er:
+                summary: All nouns that constitute first constituents that attach -"er- build the plural form with -er (with or withou umlaut), have a stressed last syllable, are mostly simpices and never loanwords. 
+                children:
+
+                    - l2p:er|par
+
+                    - l2p:er|#stressed_syl
+
+                    - l2p:er|smpx
+
+                    - l2p:er|!loan
 
             # 35
             - l2p:e_uml
 
             # 36
-            - l2p:es
+            - l2p:es:
+                summary: All nouns that constitute first constituents that attach -es- belong to a fixed row of monosyllabic masculine and neuter nouns and build the genitive form with -(e)s-. -es- is thus isolated.
+                children:
+
+                    - l2p:es|isol
+
+                    - l2p:es|mono_syl
 
             # 37
             - l2p:ens
@@ -569,7 +598,7 @@ constraints:
         support_level: partially supported
 
         examples_pro: [balkon_möbel, hotel_kette, bob_bahn]
-        examples_contra: [uhu_+s_nest]
+        examples_contra: [uhu_+s_nest, deck_+s_balken, interim_+s_phase, karneval_+s_kostüm]
 
         evidence:
 
@@ -1168,7 +1197,7 @@ constraints:
         support_level: not supported
 
         examples_pro: [erlaubnis_schein, format_vorlage, personal_ausweis]
-        examples_contra: [radikal_+e_fänger]
+        examples_contra: [radikal_+e_fänger, internat_+s_leitung]
 
         evidence:
 
@@ -1310,7 +1339,7 @@ constraints:
         support_level: partially supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, schicksal_+s_drama, rarität_+s_wert, eigentum_+s_recht]
-        examples_contra: [minderheit_+en_recht]
+        examples_contra: [minderheit_+en_recht, kuriosität_+en_museum, nationalität_+en_kampf]
 
         evidence:
 
@@ -1425,7 +1454,7 @@ constraints:
 
         func_alias: sfx_deverb_en
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
-        examples_contra: []
+        examples_contra: [essen_portion, ]
 
         evidence:
 
@@ -1720,7 +1749,7 @@ constraints:
         support_level: not supported
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
-        examples_contra: [fläche_maß, sorge_pflicht, gebäude_komplex]
+        examples_contra: [fläche_maß, sorge_pflicht, gebäude_komplex, gedanke_+ns_turm]
 
         evidence:
 
@@ -1783,7 +1812,7 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [229]
-              summary: One-syllable F sometimes adopt [-en-, sometimes] a zero linker. It is possible that there is a tendency to choose by singular[/plural] meaning.
+              summary: Monosyllabic F sometimes adopt [-en-, sometimes] a zero linker. It is possible that there is a tendency to choose by singular[/plural] meaning.
 
             - ref: krott_etal_2007
               pages: [3]
@@ -1826,7 +1855,7 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [229]
-              summary: One-syllable F sometimes adopt -en-[, sometimes a zero linker]. It is possible that there is a tendency to choose by [singular/]plural meaning.
+              summary: Monosyllabic F sometimes adopt -en-[, sometimes a zero linker]. It is possible that there is a tendency to choose by [singular/]plural meaning.
 
             - ref: nuebling_szczepaniak_2008
               pages: [3]
@@ -1934,7 +1963,7 @@ constraints:
     p2l:sem:tech_term-0:
     
         summary: Compounds belonging to technical terminology (economics, law, medicine, etc.) are often missing an explicit linking element (even in cases where it would be obligatory in a non-technical context).
-        ling_info_type: [lexical, semantic]
+        ling_info_type: [lexical]
         appl_item: compound
         n_appl_items: 419759
 
@@ -2292,7 +2321,7 @@ constraints:
         support_level: partially supported
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
-        examples_contra: []
+        examples_contra: [oper_+n_haus, elster_+n_nest]
 
         evidence:
 
@@ -2316,7 +2345,7 @@ constraints:
     # 46
     l2p:en|par:
       
-        summary: All nouns that constitute first constituents that attach -(e)n- are build the plural form with -(e)n.
+        summary: All nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
         ling_info_type: [morphological]
         appl_item: n1+linker
         n_appl_items: 6100
@@ -2364,7 +2393,7 @@ constraints:
     l2p:en|non_par_m:
     
         summary: All masculine nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are monosyllabic designations of male persons, animals, astronomic objects, months.
-        ling_info_type: [lexical, morphological, semantic]
+        ling_info_type: [morphological, lexical, semantic]
         appl_item: n1+linker
         n_appl_items: 6100
 
@@ -2400,7 +2429,7 @@ constraints:
     l2p:en|non_par_n_pl_interpr:
     
         summary: All neuter nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are polysyllabic foreign nouns that have a stressed final syllable (and mostly end in -at and -ment) that exhibit a plural meaning within the compound.
-        ling_info_type: [lexical, morphological, semantic]
+        ling_info_type: [morphological, phonological, lexical, semantic]
         appl_item: n1+linker
         n_appl_items: 6100
 
@@ -2429,9 +2458,9 @@ constraints:
     
 
     # 49
-    l2p:e:
+    l2p:e|par:
     
-        summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable and build the plural form with -e.
+        summary: All nouns that constitute first constituents that attach -e- build the plural form with -e.
         ling_info_type: [morphological]
         appl_item: n1+linker
         n_appl_items: 6100
@@ -2454,7 +2483,7 @@ constraints:
 
             - ref: kuerschner_2010
               pages: [9, 18]
-              summary: -e- is always paradigmatic and occurs only after nouns with stressed last syllable [1].
+              summary: -e- is always paradigmatic [and occurs only after nouns with stressed last syllable, most of which are simplex] [1].
 
             - ref: nuebling_szczepaniak_2008
               pages: [5]
@@ -2466,16 +2495,124 @@ constraints:
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [102]
-              summary: -e- is always paradigmatic, occurs mostly after simplices and never after loanwords.
+              summary: -e- is always paradigmatic, occurs mostly after simplices [and never after loanwords] [3, 4].
 
         footnotes:
-            "1": The last claim explains why nouns like 'Teppich' do not attach -e- (teppich_boden).
-            "2": Which implicitly points out that further overt markers ([-"er-,] -e-[, -"e-, =]) are always paradigmatic.        
+            "1": The last claim explains why -e- does not occur after nouns like 'Teppich' (teppich_boden vs *teppich_+e_boden).
+            "2": Which implicitly points out that further overt markers ([-"er-,] -e-[, -"e-, =]) are always paradigmatic.
+            "3": The last claim explains why -e- does not occur after nouns like 'Dokument' (dokument_+en_bearbeitung vs *dokument_+e_bearbeitung).
+            "4": TODO in the next iteration; the reason to not exclude the whole constraint because of incapability to implement this check is that it plays a minor role
+
+
+    # 50
+    l2p:e|#stressed_syl:
+    
+        summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable.
+        ling_info_type: [phonological]
+        appl_item: n1+linker
+        n_appl_items: 6100
+
+        func_alias: e_last_syl
+
+        quantifier: all
+        coverage:
+            item: 0.023
+            type: 0.008
+        regularity:
+            item: 0.923
+            type: 0.976
+        support_level: partially supported
+
+        examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
+        examples_contra: [anhalt_+e_stelle]
+
+        evidence:
+
+            - ref: kuerschner_2010
+              pages: [9, 18]
+              summary: -e- [is always paradigmatic and] occurs only after nouns with stressed last syllable, [most of which are simplex] [1].
+
+        footnotes:
+            "1": The last claim explains why -e- does not occur after nouns like 'Teppich' (teppich_boden vs *teppich_+e_boden).
+
+
+    # 51
+    l2p:e|smpx:
+    
+        summary: Most nouns that constitute first constituents that attach -e- are simplex.
+        ling_info_type: [derivational]
+        appl_item: n1+linker
+        n_appl_items: 6100
+
+        func_alias: e_smpx
+
+        quantifier: most
+        coverage:
+            item: 0.023
+            type: 0.008
+        regularity:
+            item: 0.923
+            type: 0.976
+        support_level: partially supported
+
+        examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
+        examples_contra: [anhalt_+e_stelle]
+
+        evidence:
+
+            - ref: kuerschner_2010
+              pages: [9, 18]
+              summary: \[-e- is always paradigmatic and occurs only after nouns with stressed last syllable], most of which are simplex [1].
+
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [102]
+              summary: -e- [is always paradigmatic,] occurs mostly after simplices [and never after loanwords] [2].
+
+        footnotes:
+            "1": The last claim explains why -e- does not occur after nouns like 'Teppich' (teppich_boden vs *teppich_+e_boden).
+            "2": The last claim explains why -e- does not occur after nouns like 'Dokument' (dokument_+en_bearbeitung vs *dokument_+e_bearbeitung).
+
+
+    # 52
+    l2p:e|!loan:
+    
+        summary: All nouns that constitute first constituents that attach -e- are native (none are loanwords).
+        ling_info_type: [lexical]
+        appl_item: n1+linker
+        n_appl_items: 6100
+
+        func_alias: e_non_loan
+
+        quantifier: all
+        coverage:
+            item: NA
+            type: NA
+        regularity:
+            item: NA
+            type: NA
+        support_level: NA
+
+        examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
+        examples_contra: []
+
+        evidence:
+
+            - ref: kuerschner_2010
+              pages: [9, 18]
+              summary: \[-e- is always paradigmatic and occurs only after nouns with stressed last syllable], most of which are simplex [1].
+
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [102]
+              summary: -e- [is always paradigmatic,] occurs mostly after simplices [and never after loanwords] [2].
+
+        footnotes:
+            "1": The last claim explains why -e- does not occur after nouns like 'Teppich' (teppich_boden vs *teppich_+e_boden).
+            "2": The last claim explains why -e- does not occur after nouns like 'Dokument' (dokument_+en_bearbeitung vs *dokument_+e_bearbeitung).
 
    
 
-    # 50
-    l2p:er:
+    # 53
+    l2p:er|par:
     
         summary: All nouns that constitute first constituents that attach -"er- build the plural form with -er (with or without umlaut).
         ling_info_type: [morphological]
@@ -2503,8 +2640,8 @@ constraints:
               summary: -"er- occurs only in er-plural nouns.
 
             - ref: kuerschner_2010
-              pages: [9, 11]
-              summary: -"er- only attaches to nouns forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N [1].
+              pages: [9, 11, 18]
+              summary: -"er- only attaches to nouns [with a stressed last syllable] forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N.
 
             - ref: nuebling_szczepaniak_2008
               pages: [3]
@@ -2518,12 +2655,108 @@ constraints:
               pages: [98]
               summary: -"er- is always paradigmatic [and attaches mostly to N and to some M, mostly simplices, no loanwords].
               
-        footnotes:
-            "1": "[kuerschner_2010:18] also mentions: '-er- occurs only after nouns with the stressed last syllable'; however, to the best of our knowledge, this always holds for er-plural nouns and, hence, for the nouns in question, since -\"er- is always paradigmatic."
+        footnotes: {}
+
+
+    # 54
+    l2p:er|#stressed_syl:
+    
+        summary: All nouns that constitute first constituents that attach -"er- have a stressed last syllable.
+        ling_info_type: [phonological]
+        appl_item: n1+linker
+        n_appl_items: 6100
+
+        func_alias: er_last_syl
+
+        quantifier: all
+        coverage:
+            item: 0.009
+            type: 0.014
+        regularity:
+            item: 0.942
+            token: 0.999
+        support_level: partially supported
+
+        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
+        examples_contra: []
+
+        evidence:
+
+            - ref: eisenberg_2013
+              pages: [229]
+              summary: -"er- occurs only in er-plural nouns.
+
+            - ref: kuerschner_2010
+              pages: [9, 11]
+              summary: -"er- only attaches to nouns with a stressed last syllable [forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N].
+              
+        footnotes: {}
+
+
+    # 55
+    l2p:er|smpx:
+    
+        summary: Most nouns that constitute first constituents that attach -"er- are simplex.
+        ling_info_type: [derivational]
+        appl_item: n1+linker
+        n_appl_items: 6100
+
+        func_alias: er_smpx
+
+        quantifier: most
+        coverage:
+            item: 0.009
+            type: 0.014
+        regularity:
+            item: 0.942
+            token: 0.999
+        support_level: partially supported
+
+        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
+        examples_contra: []
+
+        evidence:
+
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [98]
+              summary: -"er- [is always paradigmatic and] attaches [mostly to N and to some M,] mostly simplices, [no loanwords].
+              
+        footnotes: {}
+
+
+    # 56
+    l2p:er|!loan:
+    
+        summary: All nouns that constitute first constituents that attach -"er- are native (none are loanwords).
+        ling_info_type: [lexical]
+        appl_item: n1+linker
+        n_appl_items: 6100
+
+        func_alias: er_non_loan
+
+        quantifier: all
+        coverage:
+            item: NA
+            type: NA
+        regularity:
+            item: NA
+            type: NA
+        support_level: NA
+
+        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
+        examples_contra: []
+
+        evidence:
+
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [98]
+              summary: -"er- [is always paradigmatic and] attaches [mostly] to [N and to some M, mostly simplices,] no loanwords.
+              
+        footnotes: {}
 
 
 
-    # 51
+    # 57
     l2p:e_uml:
     
         summary: All nouns that constitute first constituents that attach -"e- build the plural form with -e and umlaut.
@@ -2561,17 +2794,17 @@ constraints:
 
 
 
-    # 52
-    l2p:es:
+    # 58
+    l2p:es|isol:
     
-        summary: All nouns that constitute first constituents that attach -es- belong to a fixed row of one-syllable masculine and neuter nouns and build the genitive form with -(e)s-. -es- is thus isolated.
+        summary: All nouns that constitute first constituents that attach -es- belong to a fixed row of masculine and neuter nouns and build the genitive form with -(e)s-. -es- is thus isolated.
         ling_info_type: [lexical, morphological]
         appl_item: n1+linker
         n_appl_items: 6100
 
         func_alias: es_isol
 
-        quantifier: exclusively
+        quantifier: all
         coverage:
             item: NA
             type: NA
@@ -2590,8 +2823,8 @@ constraints:
               summary: -es- occurs in a row of s-genitiv M and N and is isolated.
 
             - ref: kuerschner_2010
-              pages: [11]
-              summary: -es- is found in a few one-syllable M and N [1].
+              pages: [11, 18]
+              summary: -es- is found in a few [monosyllabic (hence, with a stressed last syllable)] M and N.
 
             - ref: nuebling_szczepaniak_2008
               pages: [3, 7]
@@ -2603,17 +2836,47 @@ constraints:
 
             - ref: schaefer_pankratz_2018
               pages: [8]
-              summary: Simplex M and N often [2] take -es- [3, 4].
+              summary: Simplex M and N often [1] take -es- [2, 3].
 
         footnotes:
-            "1": "[kuerschner_2010:18] also mentions: '-es- occurs only after nouns with the stressed last syllable', which, however, always holds for the nouns in question since they are all monosyllabic."
-            "2": Level of regularity not mentioned.
-            "3": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -s- is handled separately in `l2p:s`, we modify it to -es- here.
-            "4": Since the original text claimed simplex M and N often adopt -es- or (!) -s-, this evidence is to be considered indirect since simplices taking -s- -- that may be polysyllabic (e.g. könig_+s_haus) -- are also included in this evidence. However, the 30-40 nouns taking -es- are all monosyllabic, hence, simplices, so the evidence is still relevant.
+            "1": Level of regularity not mentioned.
+            "2": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -s- is handled separately in `l2p:s`, we modify it to -es- here.
+            "3": Since the original text claimed simplex M and N often adopt -es- or (!) -s-, this evidence is to be considered indirect since simplices taking -s- -- that may be polysyllabic (e.g. könig_+s_haus) -- are also included in this evidence. However, the 30-40 nouns taking -es- are all monosyllabic, hence, simplices, so the evidence is still relevant.
+
+
+    # 59
+    l2p:es|mono_syl:
+    
+        summary: All nouns that constitute first constituents that attach -es- are monosyllabic.
+        ling_info_type: [phonological]
+        appl_item: n1+linker
+        n_appl_items: 6100
+
+        func_alias: es_monosyl
+
+        quantifier: all
+        coverage:
+            item: NA
+            type: NA
+        regularity:
+            item: NA
+            type: NA
+        support_level: NA
+
+        examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, land_+es_regierung]
+        examples_contra: []
+
+        evidence:
+
+            - ref: kuerschner_2010
+              pages: [11, 18]
+              summary: -es- is found in a few monosyllabic (hence, with a stressed last syllable) M and N [1].
+
+        footnotes: {}
 
 
 
-    # 53
+    # 60
     l2p:ens:
     
         summary: All nouns that constitute first constituents that attach -(e)ns- belong to a fixed group of a few masculine nouns and a single neuter noun and have different genitive endings. -(e)ns- is thus isolated.
@@ -2623,7 +2886,7 @@ constraints:
 
         func_alias: ens_isol
 
-        quantifier: exclusively
+        quantifier: all
         coverage:
             item: NA
             type: NA
@@ -2653,7 +2916,7 @@ constraints:
 
 
 
-    # 54
+    # 61
     l2p:0_uml:
     
         summary: All nouns that constitute first constituents that attach a zero linker with umlaut build the plural form with a zero ending and umlaut.
@@ -2686,7 +2949,7 @@ constraints:
 
 
 
-    # 55
+    # 62
     l2p:pl_marker:
       
         summary: Linkers that are identical to the plural ending of the first constituent in a given compound are tendentially associated with a plural meaning of this first constituent within the compound.
