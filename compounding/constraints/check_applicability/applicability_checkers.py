@@ -58,7 +58,7 @@ def _is_of_plural(
 		# -er- always adds umlaut if possible
 		return False
 	lemma_info = celex.loc[lemma]
-	if pd.isna(lemma_info["nom_pl"]):
+	if _has_no_plural(lemma):
 		return False	# has no plural
 	pl_ms = (
 		# adopt for cases with schwa, er, el etc.
@@ -70,12 +70,19 @@ def _is_of_plural(
 		# 'Freundin' -> 'Freundinnen'
 		lemma += lemma[-1]
 	if adds_umlaut:
-		# TODO: extract stem (e.g. Vorbild)
-		lemma_uml = perform_umlaut(lemma)
+		# extract stem for cases like (e.g. Vorbild)
+		s_idx, _ = re.search(
+			"[NAV]",
+			lemma_info["morphemic_schema"]
+		).span()
+		morphemes = lemma_info["morphemic_structure"].split("-")
+		stem_uml = perform_umlaut(morphemes[s_idx])
+		morphemes[s_idx] = stem_uml
+		lemma_uml = "".join(morphemes)
 		# this is to avoid cases like
 		# Stern, _+=e_ ---> True
 		if (
-			plural_marker != "er"	# allowed to have no uml
+			plural_marker != "er"	# er is allowed to have no uml
 			and lemma == lemma_uml	# cannot be umlauted
 		):
 			return False
@@ -125,12 +132,9 @@ def _is_mixed(lemma: str) -> bool:
 
 # Helper function for derivational class checks
 
-def _get_morphemic_schema(lemma: str) -> str:
-	lemma_info = celex.loc[lemma]
-	return lemma_info["morphemic_schema"]
-
 def _is_simplex(lemma: str) -> bool:
-	return _get_morphemic_schema(lemma) == "N"
+	lemma_info = celex.loc[lemma]
+	return lemma_info["morphemic_schema"] == "N"
 
 def _is_derived(lemma: str) -> bool:
 	# for better readability
