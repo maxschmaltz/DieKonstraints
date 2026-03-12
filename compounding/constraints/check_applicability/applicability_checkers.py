@@ -70,15 +70,18 @@ def _is_of_plural(
 		# 'Freundin' -> 'Freundinnen'
 		lemma += lemma[-1]
 	if adds_umlaut:
-		# extract stem for cases like (e.g. Vorbild)
+		# during result analysis, we identified some cases in which
+		# "umlautable" prefixes were erroneously
+		# umlauted ('Vorbild', 'Abstand')
 		s_idx, _ = re.search(
-			"[NAV]",
+			"[NAVR]",
 			lemma_info["morphemic_schema"]
 		).span()
 		morphemes = lemma_info["morphemic_structure"].split("-")
-		stem_uml = perform_umlaut(morphemes[s_idx])
-		morphemes[s_idx] = stem_uml
-		lemma_uml = "".join(morphemes)
+		prefixes = "".join(morphemes[:s_idx])
+		lemma_no_prefix = re.sub(rf"^{prefixes}", "", lemma)
+		lemma_no_prefix_uml = perform_umlaut(lemma_no_prefix)
+		lemma_uml = prefixes + lemma_no_prefix_uml
 		# this is to avoid cases like
 		# Stern, _+=e_ ---> True
 		if (
