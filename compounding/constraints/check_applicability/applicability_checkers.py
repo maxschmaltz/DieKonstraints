@@ -244,6 +244,10 @@ def _is_monosyllabic(lemma: str) -> bool:
 	# for better readability
 	return _has_n_syllables(lemma, 1)
 
+def _is_polysyllabic(lemma: str) -> bool:
+	# for better readability
+	return not _is_monosyllabic(lemma)
+
 def _is_syl_stressed(lemma: str, syl_idx: int) -> bool:
 	syllables = _get_syllables(lemma)
 	return (
@@ -758,7 +762,7 @@ def f_t_fin_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
 	return (
 		_is_of_gender(n1, "f")
-		and not _is_monosyllabic(n1)
+		and _is_polysyllabic(n1)
 		and _ends_with_phon(n1, "t")
 		and not _ends_with_sfx(
 			n1,
@@ -1012,10 +1016,10 @@ def s_freq_applies(compound: Compound):
 	return _get_frequency(compound.stems[0].morph) > 100_000
 
 
-# l2p:s|f
+# l2p:s|f_cmpx
 #
 # Almost all feminine nouns that constitute first constituents
-# that attach -s- are morphologically complex and/or polysyllabic.
+# that attach -s- are morphologically complex.
 
 def s_f_cmpx_is_applicable(compound: Compound):
 	return (
@@ -1024,11 +1028,22 @@ def s_f_cmpx_is_applicable(compound: Compound):
 	)
 
 def s_f_cmpx_applies(compound: Compound):
-	n1 = compound.stems[0].morph
+	return _is_derived(compound.stems[0].morph)
+
+
+# l2p:s|f_poly_syl
+#
+# Almost all feminine nouns that constitute first constituents
+# that attach -s- are polysyllabic.
+
+def s_f_polysyl_is_applicable(compound: Compound):
 	return (
-		_is_derived(n1)	# at least one additional morpheme
-		or not _is_monosyllabic(n1)
+		_has_linker(compound, linker_morph="s")
+		and _is_of_gender(compound.stems[0].morph, "f")
 	)
+
+def s_f_polysyl_applies(compound: Compound):
+	return _is_polysyllabic(compound.stems[0].morph)
 
 
 
