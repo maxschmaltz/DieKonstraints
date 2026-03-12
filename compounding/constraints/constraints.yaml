@@ -408,7 +408,9 @@ topology:
 
                     - l2p:s|smpx_high_freq
 
-                    - l2p:s|f
+                    - l2p:s|f_cmpx
+
+                    - l2p:s|f_poly_syl
 
             # 31
             - l2p:n
@@ -2264,10 +2266,10 @@ constraints:
 
 
     # 44
-    l2p:s|f:
+    l2p:s|f_cmpx:
       
-        summary: Almost all feminine nouns that constitute first constituents that attach -s- are morphologically complex and/or polysyllabic.
-        ling_info_type: [morphological, derivational, phonological]
+        summary: Almost all feminine nouns that constitute first constituents that attach -s- are morphologically complex.
+        ling_info_type: [morphological, derivational]
         appl_item: n1+linker
         n_appl_items: 6100
 
@@ -2283,25 +2285,52 @@ constraints:
         support_level: supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
-        examples_contra: [acht_+s_erklärung]
+        examples_contra: []
 
         evidence:
 
             - ref: kuerschner_2010
               pages: [23, 24]
-              summary: In F, -s- occurs only with morphological complexity [1].
-
-            - ref: ortner_mueller-bollhagen_1991
-              pages: [73]
-              summary: Almost all F with -s- are polysyllabic [2].
+              summary: By and large, in F, -s- occurs only with morphological complexity [1].
 
         footnotes:
-            "1": "[kuerschner_2010:23] notes that simplex F adopting -s- are mostly early derivates ('hauptsächlich handelt es sich um frühere Derivate')."
-            "2": Examples with schwa-deletion (such as hilf_+s_bereitschaft) aside.
-
+            "1": "[kuerschner_2010:23] notes that simplex F adopting -s- are mostly early derivatives ('hauptsächlich handelt es sich um frühere Derivate')."
 
 
     # 45
+    l2p:s|f_poly_syl:
+      
+        summary: Almost all feminine nouns that constitute first constituents that attach -s- are polysyllabic.
+        ling_info_type: [morphological, derivational, phonological]
+        appl_item: n1+linker
+        n_appl_items: 6100
+
+        func_alias: s_f_polysyl
+
+        quantifier: almost all
+        coverage:
+            item: 0.169
+            type: 0.165
+        regularity:
+            type: 0.999
+            token: 1.0
+        support_level: supported
+
+        examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
+        examples_contra: [acht_+s_erklärung]
+
+        evidence:
+
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [73]
+              summary: Almost all F with -s- are polysyllabic [1].
+
+        footnotes:
+            "1": Examples with schwa-deletion (such as hilf_+s_bereitschaft) aside.
+
+
+
+    # 46
     l2p:n:
     
         summary: All nouns that constitute first constituents that attach the -n- allomorph of the -en- linker end in schwa.
@@ -2342,8 +2371,7 @@ constraints:
 
 
 
-    # 46
-    l2p:en|par:
+    # 47
       
         summary: All nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
         ling_info_type: [morphological]
@@ -2389,7 +2417,7 @@ constraints:
         footnotes: {}
 
 
-    # 47
+    # 48
     l2p:en|non_par_m:
     
         summary: All masculine nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are monosyllabic designations of male persons, animals, astronomic objects, months.
@@ -2425,7 +2453,7 @@ constraints:
             "1": "Even though not explicitly stated, all the examples provided there are monosyllabic masculine nouns designating anumals: 'Hahn', 'Storch', 'Schwan'."
 
 
-    # 48
+    # 49
     l2p:en|non_par_n_pl_interpr:
     
         summary: All neuter nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are polysyllabic foreign nouns that have a stressed final syllable (and mostly end in -at and -ment) that exhibit a plural meaning within the compound.
@@ -2457,7 +2485,7 @@ constraints:
             "1": "Evidence from [nuebling_szczepaniak_2013:79,80] is disregarded here as, even though not explicitly stated, it concerns only monosyllabic M."
     
 
-    # 49
+    # 50
     l2p:e|par:
     
         summary: All nouns that constitute first constituents that attach -e- build the plural form with -e.
@@ -2504,7 +2532,7 @@ constraints:
             "4": TODO in the next iteration; the reason to not exclude the whole constraint because of incapability to implement this check is that it plays a minor role
 
 
-    # 50
+    # 51
     l2p:e|#stressed_syl:
     
         summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable.
@@ -2536,7 +2564,7 @@ constraints:
             "1": The last claim explains why -e- does not occur after nouns like 'Teppich' (teppich_boden vs *teppich_+e_boden).
 
 
-    # 51
+    # 52
     l2p:e|smpx:
     
         summary: Most nouns that constitute first constituents that attach -e- are simplex.
@@ -2573,7 +2601,7 @@ constraints:
             "2": The last claim explains why -e- does not occur after nouns like 'Dokument' (dokument_+en_bearbeitung vs *dokument_+e_bearbeitung).
 
 
-    # 52
+    # 53
     l2p:e|!loan:
     
         summary: All nouns that constitute first constituents that attach -e- are native (none are loanwords).
@@ -2607,7 +2635,7 @@ constraints:
 
    
 
-    # 53
+    # 54
     l2p:er|par:
     
         summary: All nouns that constitute first constituents that attach -"er- build the plural form with -er (with or without umlaut).
@@ -2654,7 +2682,7 @@ constraints:
         footnotes: {}
 
 
-    # 54
+    # 55
     l2p:er|#stressed_syl:
     
         summary: All nouns that constitute first constituents that attach -"er- have a stressed last syllable.
@@ -2685,7 +2713,7 @@ constraints:
         footnotes: {}
 
 
-    # 55
+    # 56
     l2p:er|smpx:
     
         summary: Most nouns that constitute first constituents that attach -"er- are simplex.
@@ -2716,7 +2744,7 @@ constraints:
         footnotes: {}
 
 
-    # 56
+    # 57
     l2p:er|!loan:
     
         summary: All nouns that constitute first constituents that attach -"er- are native (none are loanwords).
@@ -2748,7 +2776,7 @@ constraints:
 
 
 
-    # 57
+    # 58
     l2p:e_uml:
     
         summary: All nouns that constitute first constituents that attach -"e- build the plural form with -e and umlaut.
@@ -2786,7 +2814,7 @@ constraints:
 
 
 
-    # 58
+    # 59
     l2p:es|isol:
     
         summary: All nouns that constitute first constituents that attach -es- belong to a fixed row of masculine and neuter nouns and build the genitive form with -(e)s-. -es- is thus isolated.
@@ -2836,7 +2864,7 @@ constraints:
             "3": Since the original text claimed simplex M and N often adopt -es- or (!) -s-, this evidence is to be considered indirect since simplices taking -s- -- that may be polysyllabic (e.g. könig_+s_haus) -- are also included in this evidence. However, the 30-40 nouns taking -es- are all monosyllabic, hence, simplices, so the evidence is still relevant.
 
 
-    # 59
+    # 60
     l2p:es|mono_syl:
     
         summary: All nouns that constitute first constituents that attach -es- are monosyllabic.
@@ -2869,7 +2897,7 @@ constraints:
 
 
 
-    # 60
+    # 61
     l2p:ens:
     
         summary: All nouns that constitute first constituents that attach -(e)ns- belong to a fixed group of a few masculine nouns and a single neuter noun and have different genitive endings. -(e)ns- is thus isolated.
@@ -2909,7 +2937,7 @@ constraints:
 
 
 
-    # 61
+    # 62
     l2p:0_uml:
     
         summary: All nouns that constitute first constituents that attach a zero linker with umlaut build the plural form with a zero ending and umlaut.
@@ -2942,7 +2970,7 @@ constraints:
 
 
 
-    # 62
+    # 63
     l2p:pl_marker:
       
         summary: Linkers that are identical to the plural ending of the first constituent in a given compound are tendentially associated with a plural meaning of this first constituent within the compound.
