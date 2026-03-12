@@ -2597,10 +2597,6 @@ constraints:
 
         evidence:
 
-            - ref: kuerschner_2010
-              pages: [9, 18]
-              summary: \[-e- is always paradigmatic and occurs only after nouns with stressed last syllable], most of which are simplex [1].
-
             - ref: ortner_mueller-bollhagen_1991
               pages: [102]
               summary: -e- [is always paradigmatic,] occurs mostly after simplices [and never after loanwords] [2].
@@ -2681,10 +2677,6 @@ constraints:
         examples_contra: []
 
         evidence:
-
-            - ref: eisenberg_2013
-              pages: [229]
-              summary: -"er- occurs only in er-plural nouns.
 
             - ref: kuerschner_2010
               pages: [9, 11]
@@ -2870,9 +2862,10 @@ constraints:
 
             - ref: kuerschner_2010
               pages: [11, 18]
-              summary: -es- is found in a few monosyllabic (hence, with a stressed last syllable) M and N [1].
+              summary: -es- is found in a few monosyllabic M and N [1].
 
-        footnotes: {}
+        footnotes:
+            "1": Hence, with a stressed last syllable as stated in [kuerschner_2010:18].
 
 
 

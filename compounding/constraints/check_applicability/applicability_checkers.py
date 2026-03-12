@@ -1091,34 +1091,89 @@ def en_par_applies(compound: Compound):
 
 
 
-# l2p:e
+# l2p:e|par
 #
 # All nouns that constitute first constituents that attach -e-
-# have a stressed last syllable and build the plural form with -e.
+# build the plural form with -e.
 
 def e_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="e")
 
 def e_par_applies(compound: Compound):
-	n1 = compound.stems[0].morph
-	return (
-		_is_of_plural(n1, "e")
-		and _is_last_syl_stressed(n1)
-	)
+	return _is_of_plural(compound.stems[0].morph, "e")
 
 
-
-# l2p:er
+# l2p:e|#stressed_syl
 #
-# All nouns that constitute first constituents
-# that attach -"er- build the plural form with -er
-# (with or without umlaut).
+# All nouns that constitute first constituents that attach -e-
+# have a stressed last syllable.
+
+def e_last_syl_is_applicable(compound: Compound):
+	return _has_linker(compound, linker_morph="e")
+
+def e_last_syl_applies(compound: Compound):
+	return _is_last_syl_stressed(compound.stems[0].morph)
+
+
+# l2p:e|smpx
+#
+# Most nouns that constitute first constituents that attach -e- are simplex.
+
+def e_smpx_is_applicable(compound: Compound):
+	return _has_linker(compound, linker_morph="e")
+
+def e_smpx_applies(compound: Compound):
+	return _is_simplex(compound.stems[0].morph)
+
+
+# l2p:e|!loan:
+#
+# All nouns that constitute first constituents that attach -e-
+# are native (none are loanwords).
+# TODO
+
+
+
+# l2p:er|par
+#
+# All nouns that constitute first constituents that attach -"er-
+# build the plural form with -er (with or without umlaut).
 
 def er_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
 
 def er_par_applies(compound: Compound):
 	return _is_of_plural(compound.stems[0].morph, "er", adds_umlaut=True)
+
+
+# l2p:er|#stressed_syl
+#
+# All nouns that constitute first constituents that attach -"er-
+# have a stressed last syllable.
+
+def er_last_syl_is_applicable(compound: Compound):
+	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
+
+def er_last_syl_applies(compound: Compound):
+	return _is_last_syl_stressed(compound.stems[0].morph)
+
+
+# l2p:er|smpx
+#
+# Most nouns that constitute first constituents that attach -"er- are simplex.
+
+def er_smpx_is_applicable(compound: Compound):
+	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
+
+def er_smpx_applies(compound: Compound):
+	return _is_simplex(compound.stems[0].morph)
+
+
+# l2p:er|!loan
+#
+# All nouns that constitute first constituents that attach -"er-
+# are native (none are loanwords).
+# TODO
 
 
 
@@ -1135,12 +1190,23 @@ def e_uml_par_applies(compound: Compound):
 
 
 
-# l2p:es
+# l2p:es|isol
 #
-# All nouns that constitute first constituents that attach -es-
-# belong to a fixed row of one-syllable masculine and neuter nouns
-# and build the genitive form with -(e)s-. -es- is thus isolated.
+# All nouns that constitute first constituents that attach -es- belong
+# to a fixed row of masculine and neuter nouns and
+# build the genitive form with -(e)s-. -es- is thus isolated.
 # TODO
+
+
+# l2p:es|mono_syl
+#
+# All nouns that constitute first constituents that attach -es- are monosyllabic.
+
+def es_monosyl_is_applicable(compound: Compound):
+	return _has_linker(compound, linker_morph="es")
+
+def es_monosyl_applies(compound: Compound):
+	return _is_monosyllabic(compound.stems[0].morph)
 
 
 
