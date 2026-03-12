@@ -2285,7 +2285,7 @@ constraints:
         support_level: supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
-        examples_contra: []
+        examples_contra: [arbeit_+s_tag, heirat_+s_antrag]
 
         evidence:
 
@@ -2317,7 +2317,7 @@ constraints:
         support_level: supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
-        examples_contra: [acht_+s_erklärung]
+        examples_contra: []
 
         evidence:
 
@@ -2372,6 +2372,7 @@ constraints:
 
 
     # 47
+    l2p:en|par:
       
         summary: All nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
         ling_info_type: [morphological]
