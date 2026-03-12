@@ -11,6 +11,17 @@ from gecodb_compound_parser import Compound
 from dereko_search import get_dereko_counts
 
 
+def calculate_n1_prod(gecodb: pd.DataFrame) -> None:
+    for lemma in tqdm(gecodb["n1_lemma"].unique(), desc="Calculating N1 prod"):
+        # productivity: how many compounds there are with this N1
+        n1_mask = gecodb["n1_lemma"] == lemma
+        n1_prod = n1_mask.sum()
+        gecodb.loc[n1_mask, "n1_prod"] = n1_prod
+        # mass frequency: sum of frequencies of all compounds with this N1
+        n1_mass_freq = gecodb.loc[n1_mask, "comp_freq"].sum()
+        gecodb.loc[n1_mask, "n1_mass_freq"] = n1_mass_freq
+
+
 def main():
 
     # In preparing GeCoDB, we need to to the following:
@@ -129,16 +140,7 @@ def main():
     # 5. Recalculate productivities of N1s
     # and remove compounds with N1 productivity < 10
 
-    for lemma in tqdm(gecodb_v05["n1_lemma"].unique(), desc="Calculating N1 prod"):
-        # productivity: how many compounds there are with this N1
-        n1_mask = gecodb_v05["n1_lemma"] == lemma
-        n1_prod = n1_mask.sum()
-        gecodb_v05.loc[n1_mask, "n1_prod"] = n1_prod
-        # mass frequency: sum of frequencies of all compounds with this N1
-        n1_mass_freq = gecodb_v05.loc[n1_mask, "comp_freq"].sum()
-        gecodb_v05.loc[n1_mask, "n1_mass_freq"] = n1_mass_freq
-
-    # remove compounds with productivity < 10
+    calculate_n1_prod(gecodb_v05)   # in place
     n1_prod_threshold = 10
     gecodb_v05 = gecodb_v05[gecodb_v05["n1_prod"] >= n1_prod_threshold]
 
