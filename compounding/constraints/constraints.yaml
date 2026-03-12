@@ -760,7 +760,7 @@ constraints:
         support_level: supported
 
         examples_pro: [buch_deckel, buch_+=er_regal, kind_+=er_jacke]
-        examples_contra: [kind_+es_alter, mann_+s_volk]
+        examples_contra: [kind_+es_alter, mann_+s_volk, rind_fleisch]
 
         evidence:
 
@@ -945,7 +945,7 @@ constraints:
         support_level: supported
 
         examples_pro: [hand_fläche, frucht_joghurt, arzt_praxis]
-        examples_contra: [hand_+=e_druck, arzt_+=e_streik]
+        examples_contra: [hand_+=e_druck, arzt_+=e_streik, frucht_+=e_tee]
 
         evidence:
 
@@ -1012,7 +1012,7 @@ constraints:
         support_level: supported
 
         examples_pro: [apfel_baum, kloster_kirche, mutter_sprache]
-        examples_contra: [bruder_+=_gemeinde, mutter_+=_zentrum]
+        examples_contra: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
 
         evidence:
 
@@ -1075,7 +1075,7 @@ constraints:
         support_level: supported
 
         examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
-        examples_contra: []
+        examples_contra: [schmerz_+ens_schrei]
 
         evidence:
 
@@ -1199,7 +1199,7 @@ constraints:
         support_level: not supported
 
         examples_pro: [erlaubnis_schein, format_vorlage, personal_ausweis]
-        examples_contra: [radikal_+e_fänger, internat_+s_leitung]
+        examples_contra: [radikal_+e_fänger, internat_+s_leitung, magistrat_+s_verfassung	]
 
         evidence:
 
@@ -1298,7 +1298,7 @@ constraints:
         support_level: supported
 
         examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
-        examples_contra: []
+        examples_contra: [liebe_+s_brief]
 
         evidence:
 
@@ -1456,7 +1456,7 @@ constraints:
 
         func_alias: sfx_deverb_en
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
-        examples_contra: [essen_portion, ]
+        examples_contra: [essen_portion]
 
         evidence:
 
@@ -1602,7 +1602,7 @@ constraints:
         support_level: supported
 
         examples_pro: [gefäß_system, fisch_öl, notiz_buch, herbst_anfang]
-        examples_contra: []
+        examples_contra: [gast_+=e_buch, geist_+=er_haus]
 
         evidence:
 
@@ -1643,7 +1643,7 @@ constraints:
         support_level: partially supported
 
         examples_pro: [auto_bahn, uhu_paar, kuh_milch, gummi_bär]
-        examples_contra: [uhu_+s_nest]
+        examples_contra: [uhu_+s_nest, idee_+n_liste, kalorie_+n_wert, schuh_+e_kauf]
 
         evidence:
 
@@ -1680,7 +1680,7 @@ constraints:
         support_level: supported
 
         examples_pro: [kosmetik_industrie, akustik_paneele, architektur_büro, metzgerei_produkt]
-        examples_contra: [kultur_+en_folge, melodie_+n_reigen]
+        examples_contra: [kultur_+en_folge, melodie_+n_reigen, partei_+en_staat]
 
         evidence:
 
@@ -1714,7 +1714,7 @@ constraints:
         support_level: partially supported
 
         examples_pro: [arbeit_+s_tag, heirat_+s_antrag, zukunft_+s_angst]
-        examples_contra: [arbeit_geber]
+        examples_contra: [arbeit_geber, jugend_alter, umwelt_schutz]
 
         evidence:
 
@@ -1851,7 +1851,7 @@ constraints:
         support_level: NA
 
         examples_pro: [schrift_+en_verzeichnis, geburt_+en_kontrolle, burg_+en_land]
-        examples_contra: []
+        examples_contra: [  burg_+en_blick]
 
         evidence:
 
@@ -2253,7 +2253,7 @@ constraints:
         support_level: partially supported
 
         examples_pro: [volk_+s_brauch, amt_+s_anwalt, staat_+s_amt]
-        examples_contra: []
+        examples_contra: [fasching_+s_foto, gral_+s_sage, konvent_+s_sitzung]
 
         evidence:
 
@@ -2438,7 +2438,7 @@ constraints:
         support_level: NA
 
         examples_pro: [hahn_+en_kamm, mond_+en_schein, stern_+en_himmel, mai_+en_nacht]
-        examples_contra: [mond_aufgang, stern_bild, mai_baum]
+        examples_contra: [  mond_aufgang, stern_bild, mai_baum]
 
         evidence:
 
@@ -2506,7 +2506,7 @@ constraints:
         support_level: partially supported
 
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
-        examples_contra: [herz_+e_leid]
+        examples_contra: [herz_+e_leid, maus_+e_zahn]
 
         evidence:
 
@@ -2703,7 +2703,7 @@ constraints:
         support_level: partially supported
 
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
-        examples_contra: []
+        examples_contra: [mitglied_+=er_liste, vorbild_+=er_sammlung]
 
         evidence:
 
@@ -2734,7 +2734,7 @@ constraints:
         support_level: partially supported
 
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
-        examples_contra: []
+        examples_contra: [mitglied_+=er_liste, vorbild_+=er_sammlung]
 
         evidence:
 
@@ -2885,7 +2885,7 @@ constraints:
         support_level: NA
 
         examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, land_+es_regierung]
-        examples_contra: []
+        examples_contra: [gesetz_+es_änderung, vorjahr_+es_winner, bestand_+es_aufnahme]
 
         evidence:
 
