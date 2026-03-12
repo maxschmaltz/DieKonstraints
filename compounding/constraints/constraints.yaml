@@ -1230,7 +1230,7 @@ constraints:
         regularity:
             item: 0.579
             type: 0.592
-        support_level: supported
+        support_level: partially supported
 
         examples_pro: [abgabe_soll, sorge_pflicht, lage_plan]
         examples_contra: [abgabe_+n_ordnung, anzeige_+n_blatt, lüge_+n_detektor]
