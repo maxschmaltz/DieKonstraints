@@ -295,12 +295,28 @@ def def_0_applies(compound: Compound):
 
 # p2l:decl_cl:pl:#0-0|def-0
 #
-# First constituents that are constituted by nouns that build
-# the plural form with a zero ending
+# First constituents that are constituted
+# by simplex masculine or neuter nouns
+# that build the plural form with a zero ending
+# and simplex or complex feminine nouns
+# that build the plural form with a zero ending
 # attach a zero linker almost regularly.
 
 def plur_0_is_applicable(compound: Compound):
-	return _is_of_zero_plural(compound.stems[0].morph)
+	n1 = compound.stems[0].morph
+	return (
+		(
+			(
+				# smpx m/n
+				not _is_of_gender(n1, "f")
+				and _is_simplex(n1)
+			)
+			# smpx/cmpx f
+			or _is_of_gender(n1, "f")
+		)
+		# 0-pl
+		and _is_of_zero_plural(n1)
+	)
 
 def plur_0_applies(compound: Compound):
 	return _has_no_linker(compound)

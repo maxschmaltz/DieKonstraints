@@ -492,7 +492,7 @@ constraints:
         regularity:
             item: 0.578
             type: 0.578
-        support_level: supported
+        support_level: partially supported
 
         examples_pro: [land_kreis, haus_tür, stadt_mauer]
         examples_contra: [land_+es_regierung, haus_+=er_block, stadt_+=e_tag]
@@ -551,8 +551,8 @@ constraints:
     # 2
     p2l:decl_cl:pl:#0-0|def-0:
 
-        summary: First constituents that are constituted by nouns that build the plural form with a zero ending attach a zero linker almost regularly.
-        ling_info_type: [morphological]
+        summary: First constituents that are constituted by simplex masculine or neuter nouns that build the plural form with a zero ending and simplex or complex feminine nouns that build the plural form with a zero ending attach a zero linker almost regularly.
+        ling_info_type: [morphological, derivational]
         appl_item: n1
         n_appl_items: 3613
 
@@ -560,21 +560,21 @@ constraints:
 
         quantifier: almost regularly
         coverage:
-            item: 0.148
-            type: 0.123
+            item: 0.067
+            type: 0.066
         regularity:
-            item: 0.953
-            type: 0.908
+            item: 0.954
+            type: 0.936
         support_level: supported
 
-        examples_pro: [schlitten_fahrt, gürtel_schnalle, brötchen_geber]
+        examples_pro: [schlitten_fahrt, wagen_rad, ufer_promenade]
         examples_contra: [orden_+s_bruder, teufel_+s_werk, frieden_+s_angebot]
 
         evidence:
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [106]
-              summary: Nouns that form the plural with a zero ending attach a zero linker regularly (about 90% of cases).
+              summary: Simplex M and N that form the plural with a zero ending attach a zero linker in about 90% of cases. Null-plural F attach a zero linker in about 85% of cases.
 
         footnotes: {}
 
@@ -1173,7 +1173,7 @@ constraints:
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [56, 82, 106]
-              summary: Derivatives forming the plural with a zero ending -- especially those with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly.
+              summary: Derivatives forming the plural with a zero ending that are built with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein -- attach a zero linking element regularly.
 
         footnotes: {}
 
@@ -2680,8 +2680,7 @@ constraints:
               pages: [98]
               summary: -"er- is always paradigmatic [and attaches mostly to N and to some M, mostly simplices, no loanwords].
               
-        footnotes:
-            "1": "Even though the item regularity value is 0.001 below the 'supported' threshold, they are all constitued by occurrences with the first constituent 'Altertum' that does not have a plural form; however, if it did, it would necessarily be 'Altertümer' because of its suffix, as in 'Eigentümer', 'Herzogtümer', etc."
+        footnotes: {}
 
 
     # 55
