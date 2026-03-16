@@ -16,7 +16,9 @@ correction_suggestions:
         orig_quantifier: regularly
         item_regularity: 0.97
         orig_support_level: partially supported
+
         corrected_quantifier: almost all
+        resulting_support_level: supported
 
         examples_pro: [balkon_möbel, hotel_kette, bob_bahn]
         examples_contra: [deck_+s_balken, interim_+s_phase, karneval_+s_kostüm]
@@ -35,6 +37,7 @@ correction_suggestions:
         orig_support_level: supported
 
         corrected_quantifier: regularly
+        resulting_support_level: supported
 
         examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
         examples_contra: [schmerz_+ens_schrei]
@@ -53,8 +56,8 @@ correction_suggestions:
         orig_support_level: not supported
 
         corrected_quantifier: regularly
-        resulting_item_regularity: NA
-        resulting_support_level: NA
+        resulting_item_regularity: 1.0
+        resulting_support_level: supported
 
         examples_pro: [erlaubnis_schein, radikal_operation, personal_ausweis]
         examples_contra: [radikal_+e_fänger]
@@ -73,8 +76,8 @@ correction_suggestions:
         orig_support_level: not supported
 
         corrected_quantifier: mostly
-        resulting_item_regularity: NA
-        resulting_support_level: NA
+        resulting_item_regularity: 0.797
+        resulting_support_level: supported
 
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
         examples_contra: [essen_portion, leben_geschäft, husten_tropfen, beben_gebiet]
@@ -93,6 +96,7 @@ correction_suggestions:
         orig_support_level: supported
 
         corrected_quantifier: almost regularly
+        resulting_support_level: supported
 
         examples_pro: [gefäß_system, fisch_öl, notiz_buch, herbst_anfang]
         examples_contra: [gast_+=e_buch, geist_+=er_haus]
@@ -111,8 +115,8 @@ correction_suggestions:
         orig_support_level: partially supported
 
         corrected_quantifier: regularly
-        resulting_item_regularity: NA
-        resulting_support_level: NA
+        resulting_item_regularity: 0.993
+        resulting_support_level: supported
 
         examples_pro: [auto_bahn, uhu_paar, kuh_milch, gummi_bär]
         examples_contra: [uhu_+s_nest, schuh_+e_kauf]
@@ -131,6 +135,7 @@ correction_suggestions:
         orig_support_level: partially supported
 
         corrected_quantifier: sometimes
+        resulting_support_level: supported
 
         examples_pro: [arbeit_+s_tag, heirat_+s_antrag, zukunft_+s_angst]
         examples_contra: [arbeit_geber, jugend_alter, umwelt_schutz]
@@ -140,17 +145,16 @@ correction_suggestions:
     p2l:phon_fin:schwa$-en:
     
         orig_summary: First constituents that are constituted by nouns that end in schwa adopt -n- regularly.
-        correction: First constituents that are constituted by [simplex] nouns that end in schwa adopt -n- regularly.
+        correction: First constituents that are constituted by nouns that end in schwa mostly adopt -n-.
 
-        rerun: true
+        rerun: false
 
         orig_quantifier: regularly
         orig_item_regularity: 0.752
         orig_support_level: not supported
 
-        corrected_quantifier: regularly
-        resulting_item_regularity: NA
-        resulting_support_level: NA
+        corrected_quantifier: mostly
+        resulting_support_level: supported
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
         examples_contra: [gebäude_komplex]
@@ -165,10 +169,11 @@ correction_suggestions:
         rerun: false
 
         orig_quantifier: almost all
-        item_regularity:
+        item_regularity: 0.999
         orig_support_level: supported
 
         corrected_quantifier: all
+        resulting_support_level: supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
         examples_contra: []
@@ -187,8 +192,8 @@ correction_suggestions:
         orig_support_level: partially supported
 
         corrected_quantifier: all
-        resulting_item_regularity: NA
-        resulting_support_level: NA
+        resulting_item_regularity: 0.988
+        resulting_support_level: supported
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
         examples_contra: []
@@ -206,7 +211,8 @@ correction_suggestions:
         item_regularity: 0.971
         orig_support_level: partially supported
 
-        corrected_quantifier: almost
+        corrected_quantifier: almost all
+        resulting_support_level: supported
 
         examples_pro: [blume_+n_topf, katze_+n_fell, frau_+en_hand]
         examples_contra: [hahn_+en_kamm, mond_+en_schein, instrument_+en_bau]
@@ -225,8 +231,8 @@ correction_suggestions:
         orig_support_level: partially supported
 
         corrected_quantifier: all
-        resulting_item_regularity: NA
-        resulting_support_level: NA
+        resulting_item_regularity: 1.0
+        resulting_support_level: supported
 
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
         examples_contra: [anhalt_+e_stelle]
@@ -245,8 +251,8 @@ correction_suggestions:
         orig_support_level: partially supported
 
         corrected_quantifier: all
-        resulting_item_regularity: NA
-        resulting_support_level: NA
+        resulting_item_regularity: 0.979
+        resulting_support_level: supported
 
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
         examples_contra: []
@@ -265,8 +271,8 @@ correction_suggestions:
         orig_support_level: partially supported
 
         corrected_quantifier: all
-        resulting_item_regularity: NA
-        resulting_support_level: NA
+        resulting_item_regularity: 0.983
+        resulting_support_level: supported
 
         examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, vorjahr_+es_winner, bestand_+es_aufnahme]
         examples_contra: [gesetz_+es_änderung]
