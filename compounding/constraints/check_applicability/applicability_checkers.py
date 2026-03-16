@@ -1475,7 +1475,7 @@ def e_last_syl_applies_corr(compound: Compound):
 		_is_last_syl_stressed(n1)
 		or (
 			_is_prefixed(n1)
-			and (n1_no_pr := _remove_prefixes(n1)[0]) in celex.index
+			and (n1_no_pr := _remove_prefixes(n1)[1]) in celex.index
 			and _is_last_syl_stressed(n1_no_pr)
 		)
 	)
@@ -1497,7 +1497,7 @@ def er_last_syl_applies_corr(compound: Compound):
 		_is_last_syl_stressed(n1)
 		or (
 			_is_prefixed(n1)
-			and (n1_no_pr := _remove_prefixes(n1)[0]) in celex.index
+			and (n1_no_pr := _remove_prefixes(n1)[1]) in celex.index
 			and _is_last_syl_stressed(n1_no_pr)
 		)
 	)
