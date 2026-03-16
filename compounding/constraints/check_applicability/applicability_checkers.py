@@ -11,13 +11,22 @@ from compounding.constraints.data_utils.gecodb_compound_parser import (
     perform_umlaut
 )
 
-# load prepared CELEX nouns
+# load prepared CELEX nouns and GeCoDB
 celex = pd.read_csv(
 	"resources/custom/compounding/intermediate_data/celex_nouns.tsv",
 	sep="\t",
 	dtype=str,
 	header=0,
 	index_col="lemma"
+)
+
+# load GeCoDB
+gecodb_v06 = pd.read_csv(
+	"resources/custom/compounding/intermediate_data/gecodb_v06.tsv",
+	sep="\t",
+	dtype=str,
+	header=0,
+	index_col="comp_gecodb"
 )
 
 
@@ -48,6 +57,17 @@ def _has_no_linker(compound: Compound) -> bool:
 
 # Helper functions for morphological checks
 
+def _remove_prefixes(lemma: str) -> str:
+	lemma_info = celex.loc[lemma]
+	s_idx, _ = re.search(
+		"[NAVR]",
+		lemma_info["morphemic_schema"]
+	).span()
+	morphemes = lemma_info["morphemic_structure"].split("-")
+	prefixes = "".join(morphemes[:s_idx])
+	lemma_no_prefix = re.sub(rf"^{prefixes}", "", lemma)
+	return prefixes, lemma_no_prefix
+
 def _is_of_plural(
 	lemma: str,
 	plural_marker: Optional[Literal["", "s", "en", "e", "er"]]="",
@@ -73,13 +93,7 @@ def _is_of_plural(
 		# during result analysis, we identified some cases in which
 		# "umlautable" prefixes were erroneously
 		# umlauted ('Vorbild', 'Abstand')
-		s_idx, _ = re.search(
-			"[NAVR]",
-			lemma_info["morphemic_schema"]
-		).span()
-		morphemes = lemma_info["morphemic_structure"].split("-")
-		prefixes = "".join(morphemes[:s_idx])
-		lemma_no_prefix = re.sub(rf"^{prefixes}", "", lemma)
+		prefixes, lemma_no_prefix = _remove_prefixes(lemma)
 		lemma_no_prefix_uml = perform_umlaut(lemma_no_prefix)
 		lemma_uml = prefixes + lemma_no_prefix_uml
 		# this is to avoid cases like
@@ -1277,3 +1291,234 @@ def zero_uml_par_applies(compound: Compound):
 # are tendentially associated with
 # a plural meaning of this first constituent within the compound.
 # TODO
+
+
+
+# Functions for applicability checks for correction suggestions
+
+# p2l:drv:sfx:e_pl_sfx-0
+#
+# First constituents that are constituted by derived nouns with suffixes 
+# -bold, -nis, -rich, -al that build 
+# the plural form with -e attach a zero linker regularly.
+
+def sfx_pl_e_is_applicable_corr(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		(
+			_ends_with_sfx(n1, ["bold", "rich", "al"])
+			and (
+				# for cases like 'Personal'
+				_has_no_plural(n1)
+				or _is_of_plural(n1, "e")
+			)
+		)
+		or (
+			_ends_with_sfx(n1, "nis")
+			and (
+				# for cases like 'Unverständnis'
+				_has_no_plural(n1)
+				# nouns in -nis duplicate 's' in plural: '-nisse'
+				or _is_of_plural(n1, "e", dupl=True)
+			)
+		)
+	)
+
+def sfx_pl_e_applies_corr(compound: Compound):
+	return _has_no_linker(compound)
+
+
+
+# p2l:drv:sfx:deverb_#en$-s
+
+# First constituents that are constituted by deverbal nouns that end
+# in suffix -en [mostly] attach -s-. 
+# [Zero linker variants with a significantly lower frequency may occur.]
+
+def sfx_deverb_en_is_applicable_corr(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_is_deverbal(n1)
+		and _ends_with_sfx(n1, "en")
+	)
+
+def sfx_deverb_en_applies_corr(compound: Compound):
+	return (
+		_has_linker(compound, linker_morph="s")
+		or (
+			_has_no_linker(compound)
+			and (
+				(
+					s_var := compound.stems[0].morph
+					+ "_+s_" + compound.stems[1].morph
+				)
+				in gecodb_v06.index
+			) and (
+				(
+					int(gecodb_v06.loc[s_var, "comp_freq"])
+					/ int(gecodb_v06.loc[compound.gecodb, "comp_freq"])
+				) >= 3	# at least 3 times less frequent
+			)
+		)
+	)
+
+
+
+# p2l:phon_fin:vow$-0
+#
+# First constituents that are constituted by nouns that end
+# in a full vowel adopt a zero linker [regularly 
+# unless this noun is a loanword that ends 
+# with a stressed long [i] (-ie) or a stressed long [e] (-ee)].
+
+def vow_fin_is_applicable_corr(compound: Compound):
+	n1 = compound.stems[0].morph
+	phon_transcription = _get_transcription(n1)
+	last_phone = phon_transcription[-1]
+	last_bo_phone = phon_transcription[-2]
+	return (
+		_is_vowel(last_phone)
+		# avoid diphthongs
+		and not _is_vowel(last_bo_phone)
+		and not _ends_with_phon_schwa(n1)
+		and not (
+			last_phone == "i"					# i
+			and _is_consonant(last_bo_phone)	# Ci
+			and _is_last_syl_stressed(n1)		# 'X*Ci
+			and n1.endswith("ie")
+		)
+	 and not (
+			last_phone == "e"					# e
+			and _is_consonant(last_bo_phone)	# Ce
+			and _is_last_syl_stressed(n1)		# 'X*Ce
+			and n1.endswith("ee")
+		)
+	)
+
+def vow_fin_applies_corr(compound: Compound):
+	return _has_no_linker(compound)
+
+
+
+# p2l:phon_fin:schwa$-en
+#
+# First constituents that are constituted by [simplex] nouns 
+# that end in schwa adopt -n- regularly.
+
+def schwa_fin_is_applicable_corr(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_is_simplex(n1)
+		and _ends_with_phon_schwa(n1)
+	)
+
+def schwa_fin_applies_corr(compound: Compound):
+	return _has_linker(compound, linker_morph="en")
+
+
+
+
+# l2p:n
+#
+# All nouns that constitute first constituents 
+# that attach the -n- allomorph of the -en- linker 
+# end in schwa [or in [ɐ] (unstressed -er)].
+
+def n_schwa_is_applicable_corr(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_has_linker(compound, linker_morph="en")
+		and compound.linkers[0].allomorph == "n"
+		# this is to exclude the special case for nouns
+		# ending in a stressed [i:] (-ie) or in a stressed [e:] (-ee)
+		# such as such as 'Melodie', 'Kategorie, 'Idee', 'Kaffee';
+		# in cases like 'melodie_+n_folge' or 'idee_+n_austausch',
+		# even though orphographically they have -n-, it is phonologically
+		# an -en-: Melod[I:] vs Melod[Ien]folge, Id[E:] vs Id[Een]austausch
+		# which becomes -n- just to avoid a confusing vocal cluster such
+		# as *Melodieenfolge, *Ideeenaustausch
+		and not (
+			(
+				# overchecking but safe
+				(n1.endswith("ee") and _ends_with_phon(n1, "e"))
+				or (n1.endswith("ie") and _ends_with_phon(n1, "i"))
+			)
+			and _is_last_syl_stressed(n1)
+		)
+	)
+
+def n_schwa_applies_corr(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_ends_with_phon_schwa(n1)
+		or (
+			n1.endswith("er")
+			# [ɐ] is realized as [əʁ] in CELEX-nouns
+			and _ends_with_phon(n1, "əʁ")
+		)
+	)
+
+
+
+# l2p:e|#stressed_syl
+#
+# All nouns that constitute first constituents that attach -e- 
+# have a stressed last syllable 
+# [or are derived of those with a stressed prefix].
+
+def e_last_syl_is_applicable_corr(compound: Compound):
+	return _has_linker(compound, linker_morph="e")
+
+def e_last_syl_applies_corr(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_is_last_syl_stressed(n1)
+		or (
+			_is_prefixed(n1)
+			and (n1_no_pr := _remove_prefixes(n1)[0]) in celex.index
+			and _is_last_syl_stressed(n1_no_pr)
+		)
+	)
+
+
+
+# l2p:er|#stressed_syl
+#
+# All nouns that constitute first constituents that attach -"er- 
+# have a stressed last syllable 
+# [or are derived of those with a stressed prefix].
+
+def er_last_syl_is_applicable_corr(compound: Compound):
+	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
+
+def er_last_syl_applies_corr(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_is_last_syl_stressed(n1)
+		or (
+			_is_prefixed(n1)
+			and (n1_no_pr := _remove_prefixes(n1)[0]) in celex.index
+			and _is_last_syl_stressed(n1_no_pr)
+		)
+	)
+
+
+
+# l2p:es|mono_syl
+#
+# All nouns that constitute first constituents that attach -es- are monosyllabic
+# [or are derived of those with a prefix].
+
+def es_monosyl_is_applicable_corr(compound: Compound):
+	return _has_linker(compound, linker_morph="es")
+
+def es_monosyl_applies_corr(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_is_monosyllabic(n1)
+		or (
+			_is_prefixed(n1)
+			and (n1_no_pr := _remove_prefixes(n1)[1]) in celex.index
+			and _is_monosyllabic(n1_no_pr)
+		)
+	)

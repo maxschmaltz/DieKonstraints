@@ -1,0 +1,272 @@
+readme: This document contains our suggestion to the formulation of constraints that partially / not supported by the empirical data. Besides, corrections for "positively unsupported" constraints are given; these are constraints that are more regular than stated in the literature. For each correction suggestion, the original and the proposed corrected definitions are given. The difference between the original and the suggested definitions is marked with square brackets. The examples and counterexamples are given for the corrected version. For more infos on reading constraint ids, for notes, glossary, topology, and for evidence on constraints and for their further properties see `constraints.yaml`.
+
+---
+
+
+correction_suggestions:
+
+    # 3
+    p2l:decl_cl:pl:#s-0:
+    
+        orig_summary: First constituents that are constituted by nouns that build the plural form with -s attach a zero linker [regularly].
+        correction: \[Almost all] first constituents that are constituted by nouns that build the plural form with -s attach a zero linker.
+
+        rerun: false
+
+        orig_quantifier: regularly
+        item_regularity: 0.97
+        orig_support_level: partially supported
+        corrected_quantifier: almost all
+
+        examples_pro: [balkon_möbel, hotel_kette, bob_bahn]
+        examples_contra: [deck_+s_balken, interim_+s_phase, karneval_+s_kostüm]
+
+
+    # 16
+    p2l:decl_cl:mixed-0/s/en|def-0/s/en:
+      
+        orig_summary: First constituents that are constituted by mixed masculine and neuter nouns [almost always] attach -s-, a zero linker, or -(e)n-.
+        correction: First constituents that are constituted by mixed masculine and neuter nouns [regularly] attach -s-, a zero linker, or -(e)n-.
+
+        rerun: false
+
+        orig_quantifier: almost always
+        item_regularity: 0.997
+        orig_support_level: supported
+
+        corrected_quantifier: regularly
+
+        examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
+        examples_contra: [schmerz_+ens_schrei]
+
+
+    # 19
+    p2l:drv:sfx:e_pl_sfx-0:
+    
+        orig_summary: First constituents that are constituted by derived nouns with suffixes -bold, -nis, -rich, [-at,] -al that build the plural form with -e attach a zero linker regularly.
+        correction: First constituents that are constituted by derived nouns with suffixes -bold, -nis, -rich, -al that build the plural form with -e attach a zero linker regularly.
+
+        rerun: true
+
+        orig_quantifier: regularly
+        orig_item_regularity: 0.747
+        orig_support_level: not supported
+
+        corrected_quantifier: regularly
+        resulting_item_regularity: NA
+        resulting_support_level: NA
+
+        examples_pro: [erlaubnis_schein, radikal_operation, personal_ausweis]
+        examples_contra: [radikal_+e_fänger]
+
+
+    # 25
+    p2l:drv:sfx:deverb_#en$-s:
+    
+        orig_summary: First constituents that are constituted by deverbal nouns that end in suffix -en attach -s- [regularly].
+        correction: First constituents that are constituted by deverbal nouns that end in suffix -en [mostly] attach -s-. [Zero linker variants with a significantly lower frequency may occur.]
+
+        rerun: true
+
+        orig_quantifier: regularly
+        orig_item_regularity: 0.773
+        orig_support_level: not supported
+
+        corrected_quantifier: mostly
+        resulting_item_regularity: NA
+        resulting_support_level: NA
+
+        examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
+        examples_contra: [essen_portion, leben_geschäft, husten_tropfen, beben_gebiet]
+
+
+    # 28
+    p2l:phon_fin:sibilant$-0:
+    
+        orig_summary: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] [mostly] adopt a zero linker.
+        correction: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] adopt a zero linker [almost regularly].
+
+        rerun: false
+
+        orig_quantifier: mostly
+        item_regularity: 0.97
+        orig_support_level: supported
+
+        corrected_quantifier: almost regularly
+
+        examples_pro: [gefäß_system, fisch_öl, notiz_buch, herbst_anfang]
+        examples_contra: [gast_+=e_buch, geist_+=er_haus]
+
+
+    # 29
+    p2l:phon_fin:vow$-0:
+    
+        orig_summary: First constituents that are constituted by nouns that end in a full vowel [always] adopt a zero linker.
+        correction: First constituents that are constituted by nouns that end in a full vowel adopt a zero linker [regularly unless this noun is a loanword that ends with a stressed long [i] (-ie) or a stressed long [e] (-ee)].
+
+        rerun: true
+
+        orig_quantifier: always
+        orig_item_regularity: 0.968
+        orig_support_level: partially supported
+
+        corrected_quantifier: regularly
+        resulting_item_regularity: NA
+        resulting_support_level: NA
+
+        examples_pro: [auto_bahn, uhu_paar, kuh_milch, gummi_bär]
+        examples_contra: [uhu_+s_nest, schuh_+e_kauf]
+
+
+    # 31
+    p2l:phon_fin:F_stem_#t$-s:
+    
+        orig_summary: First constituents that are constituted by polysyllabic feminine nouns that end with [t] [often] attach -s- if the [t] is not part of a suffix -(ig)keit, -heit, -schaft, or -ität or its allomorphs.
+        correction: First constituents that are constituted by polysyllabic feminine nouns that end with [t] [sometimes] attach -s- if the [t] is not part of a suffix -(ig)keit, -heit, -schaft, or -ität or its allomorphs.
+
+        rerun: false
+
+        orig_quantifier: often
+        item_regularity: 0.505
+        orig_support_level: partially supported
+
+        corrected_quantifier: sometimes
+
+        examples_pro: [arbeit_+s_tag, heirat_+s_antrag, zukunft_+s_angst]
+        examples_contra: [arbeit_geber, jugend_alter, umwelt_schutz]
+
+
+    # 32
+    p2l:phon_fin:schwa$-en:
+    
+        orig_summary: First constituents that are constituted by nouns that end in schwa adopt -n- regularly.
+        correction: First constituents that are constituted by [simplex] nouns that end in schwa adopt -n- regularly.
+
+        rerun: true
+
+        orig_quantifier: regularly
+        orig_item_regularity: 0.752
+        orig_support_level: not supported
+
+        corrected_quantifier: regularly
+        resulting_item_regularity: NA
+        resulting_support_level: NA
+
+        examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
+        examples_contra: [gebäude_komplex]
+
+
+    # 45
+    l2p:s|f_poly_syl:
+      
+        orig_summary: \[Almost] all feminine nouns that constitute first constituents that attach -s- are polysyllabic.
+        correction: All feminine nouns that constitute first constituents that attach -s- are polysyllabic.
+        
+        rerun: false
+
+        orig_quantifier: almost all
+        item_regularity:
+        orig_support_level: supported
+
+        corrected_quantifier: all
+
+        examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
+        examples_contra: []
+
+
+    # 46
+    l2p:n:
+    
+        orig_summary: All nouns that constitute first constituents that attach the -n- allomorph of the -en- linker end in schwa.
+        correction: All nouns that constitute first constituents that attach the -n- allomorph of the -en- linker end in schwa [or in [ɐ] (unstressed -er)].
+        
+        rerun: true
+
+        orig_quantifier: all
+        orig_item_regularity: 0.959
+        orig_support_level: partially supported
+
+        corrected_quantifier: all
+        resulting_item_regularity: NA
+        resulting_support_level: NA
+
+        examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
+        examples_contra: []
+
+
+    # 47
+    l2p:en|par:
+      
+        orig_summary: \[All] nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
+        correction: \[Almost all] nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
+        
+        rerun: false
+
+        orig_quantifier: all
+        item_regularity: 0.971
+        orig_support_level: partially supported
+
+        corrected_quantifier: almost
+
+        examples_pro: [blume_+n_topf, katze_+n_fell, frau_+en_hand]
+        examples_contra: [hahn_+en_kamm, mond_+en_schein, instrument_+en_bau]
+
+
+    # 51
+    l2p:e|#stressed_syl:
+    
+        orig_summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable.
+        correction: All nouns that constitute first constituents that attach -e- have a stressed last syllable [or are derived of those with a stressed prefix].
+        
+        rerun: true
+
+        orig_quantifier: all
+        orig_item_regularity: 0.973
+        orig_support_level: partially supported
+
+        corrected_quantifier: all
+        resulting_item_regularity: NA
+        resulting_support_level: NA
+
+        examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
+        examples_contra: [anhalt_+e_stelle]
+
+
+    # 55
+    l2p:er|#stressed_syl:
+    
+        orig_summary: All nouns that constitute first constituents that attach -"er- have a stressed last syllable.
+        correction: All nouns that constitute first constituents that attach -"er- have a stressed last syllable [or are derived of those with a stressed prefix].
+
+        rerun: true
+
+        orig_quantifier: all
+        orig_item_regularity: 0.938
+        orig_support_level: partially supported
+
+        corrected_quantifier: all
+        resulting_item_regularity: NA
+        resulting_support_level: NA
+
+        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
+        examples_contra: []
+
+
+    # 60
+    l2p:es|mono_syl:
+    
+        orig_summary: All nouns that constitute first constituents that attach -es- are monosyllabic.
+        correction: All nouns that constitute first constituents that attach -es- are monosyllabic [or are derived of those with a prefix].
+        
+        rerun: true
+
+        orig_quantifier: all
+        orig_item_regularity: 0.914
+        orig_support_level: partially supported
+
+        corrected_quantifier: all
+        resulting_item_regularity: NA
+        resulting_support_level: NA
+
+        examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, vorjahr_+es_winner, bestand_+es_aufnahme]
+        examples_contra: [gesetz_+es_änderung]
