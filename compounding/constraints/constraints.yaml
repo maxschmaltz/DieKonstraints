@@ -52,7 +52,7 @@ readme: |
     * The constraints were classified by the type of linguistic information they exploit, based on the definitions
     * The constraints were clustered by classes of nouns to which they apply; namely, constraints targeting the same class or constraints in hypo-/hypernymy relations were clustered together
     * The clustered were organized hierarchically by the type of their application, partially overlapping with the linguistic classification
-    * After conducting the corpus experiments, type and token coverage and regularity were added manually; these are to be found in `resources/custom/compounding/applicability_statistics/constr_statistics.tsv`. The reason for manual adding was to keep the meaningful indent/space organization of the present YAML.
+    * After conducting the corpus experiments, item and type coverage and regularity were added manually; these are to be found in `resources/custom/compounding/applicability_statistics/constr_statistics.tsv`. The reason for manual adding was to keep the meaningful indent/space organization of the present YAML.
     * The quantifiers from the constraint definitions were extracted for a more convenient comparison of the claims in the literature and the empirical data, hence, an easier estimation of the empirical support of the said claims (see `compounding/constraints/check_applicability/inspect.ipynb`, section 3).
     * Finally, the verdicts about the support level of the constraints were made. Since the definitions are mostly vague, the decisions were based on commonsense judgments. For the support level, we concentrated on the type variant of the measures since we focused on the linguistic side of the question (not speaker usage). We distinguished 4 levels of support:
         * Supported. Full or very close correspondence between the quantifier and the empirical data. Examples: "regular" vs 0.99, "mostly" vs 0.75.
@@ -473,6 +473,7 @@ topology:
             # 39
             - l2p:pl_marker
 
+
 constraints:
 
     # 1
@@ -487,12 +488,12 @@ constraints:
 
         quantifier: majority
         coverage:
+            item: 1.0
             type: 1.0
-            token: 1.0
         regularity:
             item: 0.578
             type: 0.578
-        support_level: partially supported
+        support_level: supported
 
         examples_pro: [land_kreis, haus_tür, stadt_mauer]
         examples_contra: [land_+es_regierung, haus_+=er_block, stadt_+=e_tag]
@@ -995,14 +996,14 @@ constraints:
     # 14
     p2l:decl_cl:pl:#0_uml-0|def-0:
     
-        summary: First constituents that are constituted by nouns that build the plural form with a zero ending and umlaut mostly have a zero linker.
+        summary: First constituents that are constituted by nouns that build the plural form with a zero ending and umlaut almost always have a zero linker.
         ling_info_type: [morphological]
         appl_item: n1
         n_appl_items: 3613
 
         func_alias: plur_0_uml
 
-        quantifier: mostly
+        quantifier: almost always
         coverage:
             item: 0.007
             type: 0.016
@@ -1230,7 +1231,7 @@ constraints:
         regularity:
             item: 0.579
             type: 0.592
-        support_level: partially supported
+        support_level: supported
 
         examples_pro: [abgabe_soll, sorge_pflicht, lage_plan]
         examples_contra: [abgabe_+n_ordnung, anzeige_+n_blatt, lüge_+n_detektor]
@@ -1445,6 +1446,8 @@ constraints:
         appl_item: n1
         n_appl_items: 3613
 
+        func_alias: sfx_deverb_en
+
         quantifier: regularly
         coverage:
             item: 0.005
@@ -1454,30 +1457,8 @@ constraints:
             type: 0.926
         support_level: not supported
 
-        func_alias: sfx_deverb_en
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
-        examples_contra: [essen_portion]
-
-        evidence:
-
-            - ref: eisenberg_2013
-              pages: [230]
-              summary: -s- occurs by a rule in deverbals ending in -en.
-            
-            - ref: kuerschner_2005
-              pages: [107]
-              summary: deverbals ending in -en build compounds with -s-.
-            
-            - ref: nuebling_szczepaniak_2013
-              pages: [78]
-              summary: deverbals ending in -en always attach -s-.
-            
-            - ref: ortner_mueller-bollhagen_1991
-              pages: [89]
-              summary: deverbal N with suffix -en regularly attach -s-.
-
-        footnotes: {}
-
+        examples_contra: [essen_portion, leben_geschäft, husten_tropfen, beben_gebiet]
 
 
     # 26
@@ -2056,8 +2037,8 @@ constraints:
 
         quantifier: irregularly
         coverage:
+            item: 1.0
             type: 1.0
-            token: 1.0
         regularity:
             item: 0.735
             type: 0.766
@@ -2101,8 +2082,8 @@ constraints:
 
         quantifier: irregularly
         coverage:
+            item: 1.0
             type: 1.0
-            token: 1.0
         regularity:
             item: 0.723
             type: 0.761
@@ -2194,17 +2175,17 @@ constraints:
     # 42
     l2p:s|smpx_mn:
       
-        summary: All except for a few simplex nouns that constitute first constituents that attach -s- belong to a small fixed group of masculine and neuter nouns.
+        summary: Almost all simplex nouns that constitute first constituents that attach -s- belong to a small fixed group of masculine and neuter nouns.
         ling_info_type: [morphological]
         appl_item: n1+linker
         n_appl_items: 4868
 
         func_alias: s_smpx
 
-        quantifier: all except for a few
+        quantifier: almost all
         coverage:
-            type: 0.05
-            token: 0.033
+            item: 0.05
+            type: 0.033
         regularity:
             item: 0.988
             type: 0.915
@@ -2261,14 +2242,13 @@ constraints:
               pages: [25]
               summary: Many simplices with an -s- have a high token frequency.
 
-        footnotes:
-            "1": Due to a partially unreliable simplex vs derivative analysis in CELEX, the obtained results are discarded as unreliable.
+        footnotes: {}
 
 
     # 44
     l2p:s|f_cmpx:
       
-        summary: Almost all feminine nouns that constitute first constituents that attach -s- are morphologically complex.
+        summary: All feminine nouns that constitute first constituents that attach -s- are morphologically complex.
         ling_info_type: [morphological, derivational]
         appl_item: n1+linker
         n_appl_items: 4868
@@ -2280,11 +2260,11 @@ constraints:
             item: 0.163
             type: 0.159
         regularity:
-            type: 0.996
-            token: 0.983
+            item: 0.996
+            type: 0.983
         support_level: supported
 
-        examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
+        examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, liebe_+s_brief]
         examples_contra: [arbeit_+s_tag, heirat_+s_antrag]
 
         evidence:
@@ -2312,8 +2292,8 @@ constraints:
             item: 0.163
             type: 0.159
         regularity:
-            type: 0.999
-            token: 1.0
+            item: 0.999
+            type: 1.0
         support_level: supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
@@ -2347,7 +2327,7 @@ constraints:
         regularity:
             item: 0.959
             type: 0.985
-        support_level: partially supported
+        support_level: not supported
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
         examples_contra: [oper_+n_haus, elster_+n_nest]
@@ -2652,7 +2632,7 @@ constraints:
             type: 0.015
         regularity:
             item: 0.979
-            token: 0.999
+            type: 0.999
         support_level: supported
 
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
@@ -2699,7 +2679,7 @@ constraints:
             type: 0.015
         regularity:
             item: 0.938
-            token: 0.96
+            type: 0.96
         support_level: partially supported
 
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
@@ -2730,7 +2710,7 @@ constraints:
             type: 0.015
         regularity:
             item: 0.875
-            token: 0.935
+            type: 0.935
         support_level: supported
 
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
@@ -2793,7 +2773,7 @@ constraints:
             type: 0.003
         regularity:
             item: 1.0
-            token: 1.0
+            type: 1.0
         support_level: supported
 
         examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
