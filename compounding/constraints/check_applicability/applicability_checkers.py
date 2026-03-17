@@ -809,15 +809,31 @@ def f_t_fin_applies(compound: Compound):
 
 
 
-# p2l:phon_fin:schwa$-en
+# p2l:phon_fin:schwa$-en|def-en
 #
-# First constituents that are constituted by nouns
-# that end in schwa adopt -n- regularly.
+# First constituents that are constituted by nouns 
+# that end in schwa mostly adopt -n-.
 
 def schwa_fin_is_applicable(compound: Compound):
 	return _ends_with_phon_schwa(compound.stems[0].morph)
 
 def schwa_fin_applies(compound: Compound):
+	return _has_linker(compound, linker_morph="en")
+
+
+# p2l:phon_fin:schwa$-en|f-en
+#
+# First constituents that are constituted by feminine nouns 
+# that end in schwa adopt -n- regularly.
+
+def schwa_fin_f_is_applicable(compound: Compound):
+	n1 = compound.stems[0].morph
+	return (
+		_is_of_gender(n1, "f")
+		and _ends_with_phon_schwa(n1)
+	)
+
+def schwa_fin_f_applies(compound: Compound):
 	return _has_linker(compound, linker_morph="en")
 
 
@@ -1402,19 +1418,19 @@ def vow_fin_applies_corr(compound: Compound):
 
 # p2l:phon_fin:schwa$-en
 #
-# First constituents that are constituted by [simplex] nouns 
-# that end in schwa adopt -n- regularly.
+# [Almost all] first constituents that are constituted 
+# by [simplex] feminine nouns that end in schwa adopt -n-.
 
-def schwa_fin_is_applicable_corr(compound: Compound):
+def schwa_fin_f_is_applicable_corr(compound: Compound):
 	n1 = compound.stems[0].morph
 	return (
 		_is_simplex(n1)
+		and _is_of_gender(n1, "f")
 		and _ends_with_phon_schwa(n1)
 	)
 
-def schwa_fin_applies_corr(compound: Compound):
+def schwa_fin_f_applies_corr(compound: Compound):
 	return _has_linker(compound, linker_morph="en")
-
 
 
 

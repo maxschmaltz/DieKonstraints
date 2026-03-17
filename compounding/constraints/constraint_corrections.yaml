@@ -62,6 +62,25 @@ correction_suggestions:
         examples_pro: [erlaubnis_schein, radikal_operation, personal_ausweis]
         examples_contra: [radikal_+e_fänger]
 
+    
+    # 22
+    p2l:drv:deadj_schwa$-0/en:
+    
+        orig_summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix [almost] always attach -n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
+        correction: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix always attach -n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
+        
+        rerun: false
+
+        orig_quantifier: almost always
+        orig_item_regularity: 0.97
+        orig_support_level: supported
+        
+        corrected_quantifier: always
+        resulting_support_level: supported
+
+        examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
+        examples_contra: [liebe_+s_brief]
+
 
     # 25
     p2l:drv:sfx:deverb_#en$-s:
@@ -141,23 +160,47 @@ correction_suggestions:
         examples_contra: [arbeit_geber, jugend_alter, umwelt_schutz]
 
 
-    # 32
-    p2l:phon_fin:schwa$-en:
+    # # 33
+    # p2l:phon_fin:schwa$-en|f-en:
     
-        orig_summary: First constituents that are constituted by nouns that end in schwa adopt -n- regularly.
-        correction: First constituents that are constituted by nouns that end in schwa mostly adopt -n-.
+    #     orig_summary: First constituents that are constituted by feminine nouns that end in schwa adopt -n- [regularly].
+    #     correction: First constituents that are constituted by [simplex] feminine nouns that end in schwa [mostly] adopt -n-.
+
+    #     rerun: true
+
+    #     orig_quantifier: regularly
+    #     orig_item_regularity: 0.765
+    #     orig_support_level: not supported
+
+    #     corrected_quantifier: mostly
+    #     resulting_item_regularity: 0.868
+    #     resulting_support_level: supported
+
+    #     examples_pro: [biene_+n_zucht, suppe_+n_schüssel, blume_+n_strauß]
+    #     examples_contra: [messe_besucher, kohle_faden, hygiene_artikel]
+
+    # DISCARDED:
+    # p2l:phon_fin:schwa$-en|f-en	3614	mostly	0.115	0.093	0.868	0.867
+    # No point of providing a separate constraint for feminine nouns.
+
+
+    # 33
+    p2l:phon_fin:schwa$-en|f-en:
+    
+        orig_summary: First constituents that are constituted by [feminine] nouns that end in schwa adopt -n- [regularly].
+        correction: <MERGE with p2l:phon_fin:schwa$-en|def-en> First constituents that are constituted by nouns that end in schwa mostly adopt -n-.
 
         rerun: false
 
         orig_quantifier: regularly
-        orig_item_regularity: 0.752
+        orig_item_regularity: 0.765
         orig_support_level: not supported
 
         corrected_quantifier: mostly
         resulting_support_level: supported
 
-        examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
-        examples_contra: [gebäude_komplex]
+        examples_pro: [biene_+n_zucht, suppe_+n_schüssel, blume_+n_strauß]
+        examples_contra: [messe_besucher, kohle_faden, hygiene_artikel]
 
 
     # 45

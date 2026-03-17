@@ -10,7 +10,7 @@ readme: |
 
     For each constraint, its linguistic type, regularity, coverage, examples pro and contra, and evidence from the literature are provided.
     
-    Note that constraint clusters are designed such that more general constraints in them overlap with more specific constraints, so that the latter override the former for certain inputs. This is done on purpose to be able to inspect the behavior of LLMs when operating with conflicting constraints. From linguistic point of view, the more general constraints might be slightly inaccurate since edge cases are omitted there on purpose to enforce overlapping. For example, the general constraint for schwa-final nouns (`p2l:phon_fin:schwa$-en`) reads 'Nouns ending in schwa regularly adopt -n-.' whereas there are in fact some exceptions not mentioned. The exceptions are then captured in more specific constraints of the same cluster (e.g. `p2l:drv:deverb_schwa$-0|def-0`: 'Deverbal feminine nouns with a schwa suffix mostly attach a zero linker.'), so that the LLM has to choose between the general and the specific constraint when presented with a noun to which both are applicable (deverbal feminine noun ending in schwa in this case, e.g. 'Tiefe'). For linguistically accurate descriptions in such cases, refer to the descriptions of the parent constraint clusters, e.g. `p2l:phon_fin:schwa$-en` reads 'Nouns ending in schwa regularly adopt -n- if the schwa is not a suffix. If the schwa is a suffix of a deadjectival feminine noun, ...'.
+    Note that constraint clusters are designed such that more general constraints in them overlap with more specific constraints, so that the latter override the former for certain inputs. This is done on purpose to be able to inspect the behavior of LLMs when operating with conflicting constraints. From linguistic point of view, the more general constraints might be slightly inaccurate since edge cases are omitted there on purpose to enforce overlapping. For example, the general constraint for schwa-final nouns (`p2l:phon_fin:schwa$-en|f-en`) reads 'First constituents that are constituted by feminine nouns that end in schwa adopt -n- regularly.' whereas there are in fact some exceptions not mentioned. The exceptions are then captured in more specific constraints of the same cluster (e.g. `p2l:drv:deverb_schwa$-0|def-0`: 'First constituents that are constituted by deverbal feminine nouns with a schwa suffix mostly attach a zero linker.'), so that the LLM has to choose between the general and the specific constraint when presented with a noun to which both are applicable (deverbal feminine noun ending in schwa in this case, e.g. 'Tiefe'). For linguistically accurate descriptions in such cases, refer to the descriptions of the parent constraint clusters, e.g. `p2l:phon_fin:schwa$-en` reads '... feminine nouns that end in schwa do so regularly except for the following cases. If ...'.
 
     Both the constraints, the constraint clusters, and their topological structure are given in Part 3 below. Part 2 contains the glossary of abbreviations and linker designations used in the document.
 
@@ -65,6 +65,7 @@ readme: |
         * N2. For `p2l:sem:2const_anim/pers-s`.
         * The whole compound. This is for the cases when the semantic type of the whole compounds matters, such as `p2l:sem:comp_type:copula-0`.
     * Add counts of application items of each type.
+    * Detalized a few constraints.
 
 
 
@@ -315,10 +316,12 @@ topology:
 
                     # 21
                     - p2l:phon_fin:schwa$-en:
-                        summary: First constituents that are constituted by nouns that end in schwa adopt -n- regularly. If the schwa is a deverbal suffix of such a noun and this noun is feminine, a zero linker is mostly attached except in compounds in which the second constituent forces a plural reading of the given first constituent, in which case -n- tends to be attached. If the schwa is a deadjectival suffix of such a noun and the noun is feminine, -n- or a zero linker are preferred in about the same number of cases. Nouns that end in schwa is the only class of nouns that can constitute first constituent that attach this linker.
+                        summary: First constituents that are constituted by nouns that end in schwa mostly adopt -n-. Those constituted by feminine nouns that end in schwa do so regularly except for the following cases. If the schwa is a deverbal suffix of such a noun and this noun is feminine, a zero linker is mostly attached except in compounds in which the second constituent forces a plural reading of the given first constituent, in which case -n- tends to be attached. If the schwa is a deadjectival suffix of such a noun and the noun is feminine, -n- or a zero linker are preferred in about the same number of cases. Nouns that end in schwa is the only class of nouns that can constitute first constituent that attach this linker.
                         children:
 
-                            - p2l:phon_fin:schwa$-en
+                            - p2l:phon_fin:schwa$-en|def-en
+
+                            - p2l:phon_fin:schwa$-en|f-en
 
                             - p2l:drv:deadj_schwa$-0/en # EXTERNAL
 
@@ -1711,28 +1714,63 @@ constraints:
             "1": "Even though [nuebling_szczepaniak_2013:77] does not mention explicitly that the F should be polysyllabic, the examples provided there are all polysyllabic: 'Arbeit', 'Heirat', 'Anstalt', 'Vorsicht' etc."
 
 
-
-    # 32
-    p2l:phon_fin:schwa$-en:
     
-        summary: First constituents that are constituted by nouns that end in schwa adopt -n- regularly.
+    # 32
+    p2l:phon_fin:schwa$-en|def-en:
+    
+        summary: First constituents that are constituted by nouns that end in schwa mostly adopt -n-.
         ling_info_type: [phonological]
         appl_item: n1
         n_appl_items: 3613
 
         func_alias: schwa_fin
 
-        quantifier: regularly
+        quantifier: mostly
         coverage:
             item: 0.172
             type: 0.149
         regularity:
             item: 0.752
             type: 0.72
-        support_level: not supported
+        support_level: supported
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
         examples_contra: [fläche_maß, sorge_pflicht, gebäude_komplex, gedanke_+ns_turm]
+
+        evidence:
+
+            - ref: kuerschner_2010
+              pages: [18]
+              summary: Most of the words ending with a schwa adopt -n-.
+
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [83, 92]
+              summary: Nouns ending in schwa mostly adopt -n- ([especially weak F]).
+
+        footnotes: {}
+
+
+    # 33
+    p2l:phon_fin:schwa$-en|f-en:
+    
+        summary: First constituents that are constituted by feminine nouns that end in schwa adopt -n- regularly.
+        ling_info_type: [morphological, phonological]
+        appl_item: n1
+        n_appl_items: 3613
+
+        func_alias: schwa_fin_f
+
+        quantifier: regularly
+        coverage:
+            item: 0.156
+            type: 0.133
+        regularity:
+            item: 0.765
+            type: 0.744
+        support_level: not supported
+
+        examples_pro: [biene_+n_zucht, suppe_+n_schüssel, tiefe_+n_meter]
+        examples_contra: [fläche_maß, sorge_pflicht]
 
         evidence:
 
@@ -1748,10 +1786,6 @@ constraints:
               pages: [3]
               summary: F ending in schwa adopt -n- productively.
 
-            - ref: kuerschner_2010
-              pages: [18]
-              summary: Most of the words ending with a schwa adopt -n-.
-
             - ref: libben_etal_2009
               pages: [151, 157]
               summary: F ending in schwa almost always attach an -n- with a very few exceptions [1].
@@ -1765,11 +1799,11 @@ constraints:
               summary: F ending in schwa virtually always occur with -n-.
 
         footnotes:
-            "1": The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `p2l:sem:tech_term-0` is stronger than `p2l:phon_fin:schwa$-en` and thus -- since these are technical terms -- it blocks the application of `p2l:phon_fin:schwa$-en` in these cases.
+            "1": The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `p2l:sem:tech_term-0` is stronger than `p2l:phon_fin:f_schwa$-en` and thus -- since these are technical terms -- it blocks the application of `p2l:phon_fin:f_schwa$-en` in these cases.
 
 
 
-    # 33
+    # 34
     p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s:
     
         summary: First constituents that are constituted by consonant-final weak feminine nouns mostly adopt a zero linker or -s- in compounds in which the second constituent forces a singular meaning of the given first constituent.
@@ -1812,7 +1846,7 @@ constraints:
         footnotes: {}
 
 
-    # 34
+    # 35
     p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en:
     
         summary: First constituents that are constituted by consonant-final weak feminine nouns --- especially final-stressed incl. monosyllabic ones --- attach -en- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
@@ -1866,7 +1900,7 @@ constraints:
 
     #   1.4.1. Constraints that map compound types to most probable linkers.
 
-    # 35
+    # 36
     p2l:sem:comp_type:copula-0:
     
         summary: Copulative compounds insert a zero linker regularly. By copulative compounds are understood compounds in which the two constituents do not exhibit a clear modifier-head relation.
@@ -1908,7 +1942,7 @@ constraints:
 
 
 
-    # 36
+    # 37
     p2l:sem:comp_type:arg-s:
     
         summary: Argumental compounds are sometimes marked by -s-. By argumental compounds are understood compounds in which the second constituent still contains a high degree of verbiness and the first constituent of which constitutes their argument. The second constituent is such compounds is usually an agent designation, an -ung formation etc.
@@ -1942,7 +1976,7 @@ constraints:
 
     #  1.4.2. Other semantic constraints.
 
-    # 37
+    # 38
     p2l:sem:tech_term-0:
     
         summary: Compounds belonging to technical terminology (economics, law, medicine, etc.) are often missing an explicit linking element (even in cases where it would be obligatory in a non-technical context).
@@ -1987,7 +2021,7 @@ constraints:
 
 
 
-    # 38
+    # 39
     p2l:sem:2const_anim/pers-s:
     
         summary: Compounds with second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' tend to insert -s- if the compound designates a person (even if the first constituent would otherwise attach a zero linker).
@@ -2025,7 +2059,7 @@ constraints:
 
     # 1.5. Constraints that describe general irregular tendencies.
 
-    # 39
+    # 40
     p2l:tend:cmpx_morph-s|def-s:
     
         summary: The probability of -s- grows irregularly with the morphological complexity of the first constituent (any form of derivation).
@@ -2070,7 +2104,7 @@ constraints:
 
 
 
-    # 40
+    # 41
     p2l:tend:cmpx_phon-s|def-s:
     
         summary: The probability of -s- grows irregularly with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
@@ -2112,7 +2146,7 @@ constraints:
 
 
 
-    # 41
+    # 42
     p2l:tend:sonority-!s:
     
         summary: The probability of -s- in compounds with simplex first constituents tends to decrease with the increasing sonority of the final segment of the first constituent. -s- is thus more frequent after plosives, infrequent after nasals and liquids, and it never occurs after a full vowel.
@@ -2172,7 +2206,7 @@ constraints:
 
     # 2. Constraints that restrict properties of compounds appearing with certain linkers.
 
-    # 42
+    # 43
     l2p:s|smpx_mn:
       
         summary: Almost all simplex nouns that constitute first constituents that attach -s- belong to a small fixed group of masculine and neuter nouns.
@@ -2214,7 +2248,7 @@ constraints:
             "3": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `l2p:es`, we modify it to -s- here.
 
 
-    # 43
+    # 44
     l2p:s|smpx_high_freq:
     
         summary: Many simplex nouns that constitute first constituents that attach -s- have a high token frequency.
@@ -2245,7 +2279,7 @@ constraints:
         footnotes: {}
 
 
-    # 44
+    # 45
     l2p:s|f_cmpx:
       
         summary: All feminine nouns that constitute first constituents that attach -s- are morphologically complex.
@@ -2277,7 +2311,7 @@ constraints:
             "1": "[kuerschner_2010:23] notes that simplex F adopting -s- are mostly early derivatives ('hauptsächlich handelt es sich um frühere Derivate')."
 
 
-    # 45
+    # 46
     l2p:s|f_poly_syl:
       
         summary: Almost all feminine nouns that constitute first constituents that attach -s- are polysyllabic.
@@ -2310,7 +2344,7 @@ constraints:
 
 
 
-    # 46
+    # 47
     l2p:n:
     
         summary: All nouns that constitute first constituents that attach the -n- allomorph of the -en- linker end in schwa.
@@ -2327,7 +2361,7 @@ constraints:
         regularity:
             item: 0.959
             type: 0.985
-        support_level: not supported
+        support_level: partially supported
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
         examples_contra: [oper_+n_haus, elster_+n_nest]
@@ -2351,7 +2385,7 @@ constraints:
 
 
 
-    # 47
+    # 48
     l2p:en|par:
       
         summary: All nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
@@ -2398,7 +2432,7 @@ constraints:
         footnotes: {}
 
 
-    # 48
+    # 49
     l2p:en|non_par_m:
     
         summary: All masculine nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are monosyllabic designations of male persons, animals, astronomic objects, months.
@@ -2434,7 +2468,7 @@ constraints:
             "1": "Even though not explicitly stated, all the examples provided there are monosyllabic masculine nouns designating anumals: 'Hahn', 'Storch', 'Schwan'."
 
 
-    # 49
+    # 50
     l2p:en|non_par_n_pl_interpr:
     
         summary: All neuter nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are polysyllabic foreign nouns that have a stressed final syllable that exhibit a plural meaning within the compound.
@@ -2466,7 +2500,7 @@ constraints:
             "1": "Evidence from [nuebling_szczepaniak_2013:79,80] is disregarded here as, even though not explicitly stated, it concerns only monosyllabic M."
     
 
-    # 50
+    # 51
     l2p:e|par:
     
         summary: All nouns that constitute first constituents that attach -e- build the plural form with -e.
@@ -2513,7 +2547,7 @@ constraints:
             "4": TODO in the next iteration; the reason to not exclude the whole constraint because of incapability to implement this check is that it plays a minor role
 
 
-    # 51
+    # 52
     l2p:e|#stressed_syl:
     
         summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable.
@@ -2545,7 +2579,7 @@ constraints:
             "1": The last claim explains why -e- does not occur after nouns like 'Teppich' (teppich_boden vs *teppich_+e_boden).
 
 
-    # 52
+    # 53
     l2p:e|smpx:
     
         summary: Most nouns that constitute first constituents that attach -e- are simplex.
@@ -2582,7 +2616,7 @@ constraints:
             "2": The last claim explains why -e- does not occur after nouns like 'Dokument' (dokument_+en_bearbeitung vs *dokument_+e_bearbeitung).
 
 
-    # 53
+    # 54
     l2p:e|!loan:
     
         summary: All nouns that constitute first constituents that attach -e- are native (none are loanwords).
@@ -2616,7 +2650,7 @@ constraints:
 
    
 
-    # 54
+    # 55
     l2p:er|par:
     
         summary: All nouns that constitute first constituents that attach -"er- build the plural form with -er (with or without umlaut).
@@ -2663,7 +2697,7 @@ constraints:
         footnotes: {}
 
 
-    # 55
+    # 56
     l2p:er|#stressed_syl:
     
         summary: All nouns that constitute first constituents that attach -"er- have a stressed last syllable.
@@ -2694,7 +2728,7 @@ constraints:
         footnotes: {}
 
 
-    # 56
+    # 57
     l2p:er|smpx:
     
         summary: Most nouns that constitute first constituents that attach -"er- are simplex.
@@ -2725,7 +2759,7 @@ constraints:
         footnotes: {}
 
 
-    # 57
+    # 58
     l2p:er|!loan:
     
         summary: All nouns that constitute first constituents that attach -"er- are native (none are loanwords).
@@ -2757,7 +2791,7 @@ constraints:
 
 
 
-    # 58
+    # 59
     l2p:e_uml:
     
         summary: All nouns that constitute first constituents that attach -"e- build the plural form with -e and umlaut.
@@ -2795,7 +2829,7 @@ constraints:
 
 
 
-    # 59
+    # 60
     l2p:es|isol:
     
         summary: All nouns that constitute first constituents that attach -es- belong to a fixed row of masculine and neuter nouns and build the genitive form with -(e)s-. -es- is thus isolated.
@@ -2845,7 +2879,7 @@ constraints:
             "3": Since the original text claimed simplex M and N often adopt -es- or (!) -s-, this evidence is to be considered indirect since simplices taking -s- -- that may be polysyllabic (e.g. könig_+s_haus) -- are also included in this evidence. However, the 30-40 nouns taking -es- are all monosyllabic, hence, simplices, so the evidence is still relevant.
 
 
-    # 60
+    # 61
     l2p:es|mono_syl:
     
         summary: All nouns that constitute first constituents that attach -es- are monosyllabic.
@@ -2878,7 +2912,7 @@ constraints:
 
 
 
-    # 61
+    # 62
     l2p:ens:
     
         summary: All nouns that constitute first constituents that attach -(e)ns- belong to a fixed group of a few masculine nouns and a single neuter noun and have different genitive endings. -(e)ns- is thus isolated.
@@ -2918,7 +2952,7 @@ constraints:
 
 
 
-    # 62
+    # 63
     l2p:0_uml:
     
         summary: All nouns that constitute first constituents that attach a zero linker with umlaut build the plural form with a zero ending and umlaut.
@@ -2951,7 +2985,7 @@ constraints:
 
 
 
-    # 63
+    # 64
     l2p:pl_marker:
       
         summary: Linkers that are identical to the plural ending of the first constituent in a given compound are tendentially associated with a plural meaning of this first constituent within the compound.
