@@ -2124,7 +2124,7 @@ constraints:
 
         quantifier: tends
         coverage:
-            item: 0.432
+            item: 0.431
             type: 0.498
         regularity:
             item: 0.796
@@ -2185,7 +2185,7 @@ constraints:
         quantifier: almost all
         coverage:
             item: 0.05
-            type: 0.033
+            type: 0.032
         regularity:
             item: 0.988
             type: 0.915
@@ -2227,9 +2227,9 @@ constraints:
         quantifier: many
         coverage:
             item: 0.05
-            type: 0.033
+            type: 0.032
         regularity:
-            item: 0.65
+            item: 0.649
             type: 0.914
         support_level: supported
 
@@ -2560,8 +2560,8 @@ constraints:
             item: 0.023
             type: 0.008
         regularity:
-            item: 0.739
-            type: 0.784
+            item: 0.73
+            type: 0.783
         support_level: supported
 
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
