@@ -75,7 +75,7 @@ def _is_of_plural(
 	dupl: Optional[bool]=False
 ) -> pd.Series:
 	if plural_marker == "er" and not adds_umlaut:
-		# -er- always adds umlaut if possible
+		# -("")er- always adds umlaut if possible
 		return False
 	lemma_info = celex.loc[lemma]
 	if _has_no_plural(lemma):
@@ -383,8 +383,8 @@ def plur_e_applies(compound: Compound):
 # p2l:decl_cl:pl:#er-0/er|def-0/er
 #
 # First constituents that are constituted by nouns that build
-# the plural form with -er (with or without umlaut)
-# mostly attach a zero linker or -"er-.
+# the plural form with -(")er
+# mostly attach a zero linker or -(")er-.
 
 def plur_er_is_applicable(compound: Compound):
 	return _is_of_plural(compound.stems[0].morph, "er", adds_umlaut=True)
@@ -399,7 +399,7 @@ def plur_er_applies(compound: Compound):
 # p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 #
 # First constituents that are constituted by nouns that build
-# the plural form with -er (with or without umlaut)
+# the plural form with -(")er
 # attach a zero linker in majority of compounds
 # in which the second constituent forces
 # a singular meaning of the given first constituent.
@@ -409,7 +409,7 @@ def plur_er_applies(compound: Compound):
 # p2l:decl_cl:pl:#er-0/er|mass-interpr-0
 #
 # First constituents that are constituted by nouns that build
-# the plural form with -er (with or without umlaut)
+# the plural form with -(")er
 # tend to attach a zero linker in compounds
 # in which the second constituent forces
 # a mass meaning of the given first constituent.
@@ -419,8 +419,8 @@ def plur_er_applies(compound: Compound):
 # p2l:decl_cl:pl:#er-0/er|pl_interpr-er
 #
 # First constituents that are constituted by nouns that build
-# the plural form with -er (with or without umlaut)
-# attach -"er- more likely in compounds
+# the plural form with -(")er
+# attach -(")er- more likely in compounds
 # in which the second constituent forces
 # a plural meaning of the given first constituent.
 # TODO
@@ -430,8 +430,8 @@ def plur_er_applies(compound: Compound):
 #
 # First constituents that are constituted by
 # person and animal designations that build
-# the plural form with -er (with or without umlaut)
-# may attach -"er- regardless of the
+# the plural form with -(")er
+# may attach -(")er- regardless of the
 # singular/pluralinterpretation of
 # the given first constituent within the compound.
 # TODO
@@ -1204,8 +1204,8 @@ def e_smpx_applies(compound: Compound):
 
 # l2p:er|par
 #
-# All nouns that constitute first constituents that attach -"er-
-# build the plural form with -er (with or without umlaut).
+# All nouns that constitute first constituents that attach -(")er-
+# build the plural form with -(")er.
 
 def er_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
@@ -1216,7 +1216,7 @@ def er_par_applies(compound: Compound):
 
 # l2p:er|#stressed_syl
 #
-# All nouns that constitute first constituents that attach -"er-
+# All nouns that constitute first constituents that attach -(")er-
 # have a stressed last syllable.
 
 def er_last_syl_is_applicable(compound: Compound):
@@ -1228,7 +1228,7 @@ def er_last_syl_applies(compound: Compound):
 
 # l2p:er|smpx
 #
-# Most nouns that constitute first constituents that attach -"er- are simplex.
+# Most nouns that constitute first constituents that attach -(")er- are simplex.
 
 def er_smpx_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
@@ -1239,7 +1239,7 @@ def er_smpx_applies(compound: Compound):
 
 # l2p:er|!loan
 #
-# All nouns that constitute first constituents that attach -"er-
+# All nouns that constitute first constituents that attach -(")er-
 # are native (none are loanwords).
 # TODO
 
@@ -1500,7 +1500,7 @@ def e_last_syl_applies_corr(compound: Compound):
 
 # l2p:er|#stressed_syl
 #
-# All nouns that constitute first constituents that attach -"er- 
+# All nouns that constitute first constituents that attach -(")er- 
 # have a stressed last syllable 
 # [or are derived of those with a stressed prefix].
 

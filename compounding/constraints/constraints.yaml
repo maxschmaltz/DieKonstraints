@@ -79,7 +79,7 @@ notes:
 
     - "Despite the findings from [krott_etal_2007] concerning analogical effects are promising, we disregard them as well from this iteration. These are: 1) there is a significant left bias for choosing a link (-en-, -s- and zero linker were investigated), that is, a noun tending to usually choose -x- will more probably also choose -x- in novel compounds [krott_etal_2007:7,9]; 2) apart from the left bias, gender was a significantly predictive feature for -en- and zero linker, and inflectional class -- on -s- and zero linker [krott_etal_2007:9]. The reason for excluding this findings is that we believe these analogical effects are an accumulative product of acquisition and (subconscious) application of all compounding constraints present in German. Such, it cannot be a constraint itself and is rather a combined account of the investigated constraints."
 
-    - In the constraints that draw on the singular/plural meaning of the first constituents (such as ``, `` etc.), the definitions are generally given as "First constituents that ... attach -x- in compounds in which the second constituent forces a singular/plural meaning of this first constituent". For such constraints, we may sometimes add counterexamples where -x- is attached when the opposite meaning of the first constituent is forced by the second constituent (e.g. -"er- with a singular meaning). Strictly speaking, these are no real counterexamples to this constraints, since they do not say anything about this opposite meaning. Such counterexamples are added purely for a better illustrativity of the irregularity of singular/plural meaning effect and are separated by a tab from the real counterexamples.
+    - In the constraints that draw on the singular/plural meaning of the first constituents (such as ``, `` etc.), the definitions are generally given as "First constituents that ... attach -x- in compounds in which the second constituent forces a singular/plural meaning of this first constituent". For such constraints, we may sometimes add counterexamples where -x- is attached when the opposite meaning of the first constituent is forced by the second constituent (e.g. -(")er- with a singular meaning). Strictly speaking, these are no real counterexamples to this constraints, since they do not say anything about this opposite meaning. Such counterexamples are added purely for a better illustrativity of the irregularity of singular/plural meaning effect and are separated by a tab from the real counterexamples.
 
     - We adhere to the framework that assigns to affixes a scheme defining the morphological and semantic properties of the input for derivation and its result. Thus, even if the morphological class of an input of a derivational constraint is restricted, we do not claim this constraint to also have a morphological character since we assume this morphological information is embedded in the affix. For example, we categorize `p2l:drv:sfx:F_#in$-en` or `p2l:drv:sfx:0_pl_sfx-0` as purely derivational constraint as this exact suffix -in takes certain Xs as the input and always produces an F with certain semantic properties, or suffixes -er, -el etc. always produce zero-plural nouns.
 
@@ -202,7 +202,7 @@ topology:
 
                             # 5
                             - p2l:decl_cl:pl:#er-0/er:
-                                summary: First constituents that are constituted by nouns that build the plural form with -er (with or without umlaut) mostly attach a zero linker or -"er-. A zero linker is attached after them in majority of compounds in which the second constituent forces a singular or a mass meaning of the given first constituent, and -"er- tends to be attached after them in compounds in which the second constituent forces a plural meaning of the given first constituent. However, those that are constituted by person and animal designations that build the plural form with -er (with or without umlaut) may attach -"er- regardless of the singular/plural interpretation of the given first constituent within the compound. Nouns that build the plural form with -er (with or without umlaut) is the only class of nouns that can constitute first constituent that attach this linker.
+                                summary: First constituents that are constituted by nouns that build the plural form with -(")er mostly attach a zero linker or -(")er-. A zero linker is attached after them in majority of compounds in which the second constituent forces a singular or a mass meaning of the given first constituent, and -(")er- tends to be attached after them in compounds in which the second constituent forces a plural meaning of the given first constituent. However, those that are constituted by person and animal designations that build the plural form with -(")er may attach -(")er- regardless of the singular/plural interpretation of the given first constituent within the compound. Nouns that build the plural form with -(")er is the only class of nouns that can constitute first constituent that attach this linker.
                                 children:
 
                                     - p2l:decl_cl:pl:#er-0/er|def-0/er
@@ -444,7 +444,7 @@ topology:
 
             # 34
             - l2p:er:
-                summary: All nouns that constitute first constituents that attach -"er- build the plural form with -er (with or withou umlaut), have a stressed last syllable, are mostly simpices and never loanwords. 
+                summary: All nouns that constitute first constituents that attach -(")er- build the plural form with -(")er, have a stressed last syllable, are mostly simpices and never loanwords. 
                 children:
 
                     - l2p:er|par
@@ -747,7 +747,7 @@ constraints:
     # 7
     p2l:decl_cl:pl:#er-0/er|def-0/er:
     
-        summary: First constituents that are constituted by nouns that build the plural form with -er (with or without umlaut) mostly attach a zero linker or -"er-.
+        summary: First constituents that are constituted by nouns that build the plural form with -(")er mostly attach a zero linker or -(")er-.
         ling_info_type: [morphological]
         appl_item: n1
         n_appl_items: 3613
@@ -770,20 +770,20 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [229]
-              summary: er-plural nouns tend to choose -"er- [when a plural meaning is present], otherwise a zero linker [1].
+              summary: er-plural nouns tend to choose -(")er- [when a plural meaning is present], otherwise a zero linker [1].
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [99]
-              summary: Most er-plural nouns attach both -"er- or a zero linker in different cases.
+              summary: Most er-plural nouns attach both -(")er- or a zero linker in different cases.
 
         footnotes:
-            "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or -"er-.
+            "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or -(")er-.
 
 
     # 8
     p2l:decl_cl:pl:#er-0/er|!pl_interpr-0:
     
-        summary: First constituents that are constituted by nouns that build the plural form with -er (with or without umlaut) attach a zero linker in majority of compounds in which the second constituent forces a singular meaning of the given first constituent.
+        summary: First constituents that are constituted by nouns that build the plural form with -(")er attach a zero linker in majority of compounds in which the second constituent forces a singular meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item: n1
         n_appl_items: 3613
@@ -806,21 +806,21 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [229]
-              summary: Nouns forming the plural with -er (with or without umlaut) tend to choose a zero linker [1] when no plural meaning is present.
+              summary: Nouns forming the plural with -(")er tend to choose a zero linker [1] when no plural meaning is present.
               
             - ref: ortner_mueller-bollhagen_1991
               pages: [99, 108]
               summary: 80% er-plural nouns having a singular meaning choose a zero linker [2].
               
         footnotes:
-            "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or -"er-.
+            "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or -(")er-.
             "2": Note that non-N+N compounds are included in this statistics.
 
 
     # 9
     p2l:decl_cl:pl:#er-0/er|mass-interpr-0:
     
-        summary: First constituents that are constituted by nouns that build the plural form with -er (with or without umlaut) tend to attach a zero linker in compounds in which the second constituent forces a mass meaning of the given first constituent.
+        summary: First constituents that are constituted by nouns that build the plural form with -(")er tend to attach a zero linker in compounds in which the second constituent forces a mass meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item: n1
         n_appl_items: 3613
@@ -852,7 +852,7 @@ constraints:
     # 10
     p2l:decl_cl:pl:#er-0/er|pl_interpr-er:
     
-        summary: First constituents that are constituted by nouns that build the plural form with -er (with or without umlaut) attach -"er- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
+        summary: First constituents that are constituted by nouns that build the plural form with -(")er attach -(")er- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item: n1
         n_appl_items: 3613
@@ -875,19 +875,19 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [229]
-              summary: er-plural nouns tend to choose -"er- when a plural meaning is present.
+              summary: er-plural nouns tend to choose -(")er- when a plural meaning is present.
 
             - ref: nuebling_szczepaniak_2013
               pages: [80, 81]
-              summary: -"er- is often associated with plural meaning, with many counterexamples.
+              summary: -(")er- is often associated with plural meaning, with many counterexamples.
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [99]
-              summary: er-plural often attach -"er- to signalize plural meaning, in which case they indicate concrete, countable entities.
+              summary: er-plural often attach -(")er- to signalize plural meaning, in which case they indicate concrete, countable entities.
 
             - ref: schaefer_pankratz_2018
               pages: [29]
-              summary: -"er- with no umlauting exhibits moderate, and -"er- with umlauting exhibits significantly strong effect on plural reading.
+              summary: -(")er- with no umlauting exhibits moderate, and -(")er- with umlauting exhibits significantly strong effect on plural reading.
               
         footnotes: {}
     
@@ -895,7 +895,7 @@ constraints:
     # 11
     p2l:decl_cl:pl:#er-0/er|anim-er:
     
-        summary: First constituents that are constituted by person and animal designations that build the plural form with -er (with or without umlaut) may attach -"er- regardless of the singular/plural interpretation of the given first constituent within the compound.
+        summary: First constituents that are constituted by person and animal designations that build the plural form with -(")er may attach -(")er- regardless of the singular/plural interpretation of the given first constituent within the compound.
         ling_info_type: [morphological, semantic]
         appl_item: n1
         n_appl_items: 3613
@@ -918,11 +918,11 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [229]
-              summary: For er-plural nouns designating persons and animals, -"er- is not necessarily associated with a plural meaning.
+              summary: For er-plural nouns designating persons and animals, -(")er- is not necessarily associated with a plural meaning.
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [98]
-              summary: Some examples exhibit that -"er- is not always associated with a plural meaning [1].
+              summary: Some examples exhibit that -(")er- is not always associated with a plural meaning [1].
               
         footnotes:
             "1": "Even though not explicitly stated, counterexamples for the plural meaning given in [ortner_mueller-bollhagen_1991:98] confirm the hypothesis from [eisenberg_2013:229] that for person and animal designations, -\"er- is not necessarily associated with a plural meaning: huhn_+=er_keule, kind_+=er_jacke, rind_+=er_brust."
@@ -2542,7 +2542,7 @@ constraints:
 
         footnotes:
             "1": The last claim explains why -e- does not occur after nouns like 'Teppich' (teppich_boden vs *teppich_+e_boden).
-            "2": Which implicitly points out that further overt markers ([-"er-,] -e-[, -"e-, =]) are always paradigmatic.
+            "2": Which implicitly points out that further overt markers ([-(")er-,] -e-[, -"e-, =]) are always paradigmatic.
             "3": The last claim explains why -e- does not occur after nouns like 'Dokument' (dokument_+en_bearbeitung vs *dokument_+e_bearbeitung).
             "4": TODO in the next iteration; the reason to not exclude the whole constraint because of incapability to implement this check is that it plays a minor role
 
@@ -2653,7 +2653,7 @@ constraints:
     # 55
     l2p:er|par:
     
-        summary: All nouns that constitute first constituents that attach -"er- build the plural form with -er (with or without umlaut).
+        summary: All nouns that constitute first constituents that attach -(")er- build the plural form with -(")er.
         ling_info_type: [morphological]
         appl_item: n1+linker
         n_appl_items: 4868
@@ -2676,23 +2676,23 @@ constraints:
 
             - ref: eisenberg_2013
               pages: [229]
-              summary: -"er- occurs only in er-plural nouns.
+              summary: -(")er- occurs only in er-plural nouns.
 
             - ref: kuerschner_2010
               pages: [9, 11, 18]
-              summary: -"er- only attaches to nouns [with a stressed last syllable] forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N.
+              summary: -(")er- only attaches to nouns [with a stressed last syllable] forming the plural with -(")er and is found in a few er-plural M and N.
 
             - ref: nuebling_szczepaniak_2008
               pages: [3]
-              summary: -"er- is always paradigmatic.
+              summary: -(")er- is always paradigmatic.
 
             - ref: nuebling_szczepaniak_2013
               pages: [80, 81]
-              summary: -"er- is always paradigmatic.
+              summary: -(")er- is always paradigmatic.
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [98]
-              summary: -"er- is always paradigmatic [and attaches mostly to N and to some M, mostly simplices, no loanwords].
+              summary: -(")er- is always paradigmatic [and attaches mostly to N and to some M, mostly simplices, no loanwords].
               
         footnotes: {}
 
@@ -2700,7 +2700,7 @@ constraints:
     # 56
     l2p:er|#stressed_syl:
     
-        summary: All nouns that constitute first constituents that attach -"er- have a stressed last syllable.
+        summary: All nouns that constitute first constituents that attach -(")er- have a stressed last syllable.
         ling_info_type: [phonological]
         appl_item: n1+linker
         n_appl_items: 4868
@@ -2723,7 +2723,7 @@ constraints:
 
             - ref: kuerschner_2010
               pages: [9, 11]
-              summary: -"er- only attaches to nouns with a stressed last syllable [forming the plural with -er (with or without umlaut) and is found in a few er-plural M and N].
+              summary: -(")er- only attaches to nouns with a stressed last syllable [forming the plural with -(")er and is found in a few er-plural M and N].
               
         footnotes: {}
 
@@ -2731,7 +2731,7 @@ constraints:
     # 57
     l2p:er|smpx:
     
-        summary: Most nouns that constitute first constituents that attach -"er- are simplex.
+        summary: Most nouns that constitute first constituents that attach -(")er- are simplex.
         ling_info_type: [derivational]
         appl_item: n1+linker
         n_appl_items: 4868
@@ -2754,7 +2754,7 @@ constraints:
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [98]
-              summary: -"er- [is always paradigmatic and] attaches [mostly to N and to some M,] mostly simplices, [no loanwords].
+              summary: -(")er- [is always paradigmatic and] attaches [mostly to N and to some M,] mostly simplices, [no loanwords].
               
         footnotes: {}
 
@@ -2762,7 +2762,7 @@ constraints:
     # 58
     l2p:er|!loan:
     
-        summary: All nouns that constitute first constituents that attach -"er- are native (none are loanwords).
+        summary: All nouns that constitute first constituents that attach -(")er- are native (none are loanwords).
         ling_info_type: [lexical]
         appl_item: n1+linker
         n_appl_items: 4868
@@ -2785,7 +2785,7 @@ constraints:
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [98]
-              summary: -"er- [is always paradigmatic and] attaches [mostly] to [N and to some M, mostly simplices,] no loanwords.
+              summary: -(")er- [is always paradigmatic and] attaches [mostly] to [N and to some M, mostly simplices,] no loanwords.
               
         footnotes: {}
 
@@ -2825,7 +2825,7 @@ constraints:
 
         footnotes:
             "1": Level of regularity not mentioned.
-            "2": Which implicitly points out that further overt markers ([-"er-, -e-,] -"e-[, =]) are always paradigmatic.
+            "2": Which implicitly points out that further overt markers ([-(")er-, -e-,] -"e-[, =]) are always paradigmatic.
 
 
 
@@ -2981,7 +2981,7 @@ constraints:
               summary: "In German, there are only two cases of non-paradigmatic linkers: -en- aften non-human M, and -s- after F [1]."
 
         footnotes:
-            "1": Which implicitly points out that further overt markers ([-"er-, -e-, -"e-,] =) are always paradigmatic.
+            "1": Which implicitly points out that further overt markers ([-(")er-, -e-, -"e-,] =) are always paradigmatic.
 
 
 

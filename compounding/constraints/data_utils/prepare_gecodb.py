@@ -147,7 +147,7 @@ def main():
 
     # 6. Lesser transformations
 
-    # replace all _+er_ with _+=er_ (since the -er- linker always 
+    # replace all _+er_ with _+=er_ (since the -(")er- linker always 
     # puts an umlaut on the stem if possible)
     gecodb_v05["comp_gecodb"] = gecodb_v05["comp_gecodb"].str.replace("_+er_", "_+=er_")
 

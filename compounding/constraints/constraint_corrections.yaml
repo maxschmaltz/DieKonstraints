@@ -284,8 +284,8 @@ correction_suggestions:
     # 55
     l2p:er|#stressed_syl:
     
-        orig_summary: All nouns that constitute first constituents that attach -"er- have a stressed last syllable.
-        correction: All nouns that constitute first constituents that attach -"er- have a stressed last syllable [or are derived of those with a stressed prefix].
+        orig_summary: All nouns that constitute first constituents that attach -(")er have a stressed last syllable.
+        correction: All nouns that constitute first constituents that attach -(")er have a stressed last syllable [or are derived of those with a stressed prefix].
 
         rerun: true
 
