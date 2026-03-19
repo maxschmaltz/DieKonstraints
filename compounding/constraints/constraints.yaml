@@ -2047,7 +2047,7 @@ constraints:
 
             - ref: nuebling_szczepaniak_2008
               pages: [11]
-              summary: There is an observable tendency to insert -s- before a stem designating a person
+              summary: There is an observable tendency to insert -s- before a stem designating a person.
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [56]
@@ -2347,7 +2347,7 @@ constraints:
     # 47
     l2p:n:
     
-        summary: All nouns that constitute first constituents that attach the -n- allomorph of the -en- linker end in schwa.
+        summary: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa.
         ling_info_type: [phonological]
         appl_item: n1+linker
         n_appl_items: 4868
@@ -2388,7 +2388,7 @@ constraints:
     # 48
     l2p:en|par:
       
-        summary: All nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
+        summary: All nouns that constitute first constituents that attach -(e)n- belong to weak nouns.
         ling_info_type: [morphological]
         appl_item: n1+linker
         n_appl_items: 4868
