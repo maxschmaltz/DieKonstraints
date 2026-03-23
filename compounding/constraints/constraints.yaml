@@ -75,7 +75,7 @@ notes:
 
     - "Since we consider only N+N compounds, we exclude constraints targeting complex first constituents. These are: 1) -s- occurs more frequently with complex first constituents compared to the corresponding simplex and sometimes replaces the default simplex linker ([koliopoulou_2014:61], [kuerschner_2005:108,110,111,112], [ortner_mueller-bollhagen_1991:85]), 2) the more complex the first part of a compound, the more probable the occurrence of a linking element ([nuebling_szczepaniak_2008:9]); 3) -s- can signalize the head boundary ([kuerschner_2005:112], [kuerschner_2010:22], [nuebling_szczepaniak_2008:8], [wegener_2005:180,184]); 4) the probability of -s- after a compound is comparable to that after derivatives with stressed prefixes and is about 27-37% ([nuebling_szczepaniak_2008:21], [nuebling_szczepaniak_2013:78], for criticism on these statistics see footnote 3 of `p2l:drv:prx_deverb-s`). More on the structure marking function of -s- in compounds with three constituents see https://doi.org/10.1177/00238309040470010401."
 
-    - "The following fact is disregarded from the constraints despite its restraining nature: syllabic linkers attach only to final-stressed (including monosyllabic), and non-syllabic -- only to polysyllabic non-final-stressed nouns, which aids in forming/maintainign trochees: rule for -(e)n-, -es-, -e-, -\"e-, -\"er-, -(e)ns-, tendency for -s- (more on that in [kopf_2017:195], [kuerschner_2010:17], [nuebling_szczepaniak_2008:7,17], [nuebling_szczepaniak_2013:79], [schluecker_2023:19], [wegener_2003:446], [wegener_2005:178]). The reason for disregarding this fact is its determinacy by other constraints: 1) none of these linkers can appear after a full vowel (see `p2l:phon_fin:vow$-0`), hence, they may appear either after a schwa, or after a consonant; 2) allomorphs of -(e)n-, -(e)ns- are distributed regularly depending on whether the noun ends with a schwa: thus, -n- and -ns- will appear only after schwa, otherwise -en-, -ens- (see constraints dealing with these linkers) (exception: F on -in (see `p2l:drv:sfx:F_#in$-en`), but there German avoids final -inn); 3) -e-, -\"e-, -\"er- are paradigmatic (see corresponding `l2p` constraints), and all e-plural, e=plural, er=plural nouns are consonant-final; 4) -es- appears only after a row of monosyllabic nouns (see `l2p:es`); 5) there are only a few monosyllabic nouns attaching an -s- (see `l2p:s|smpx_mn`). Thus, this fact rather summarizes the outcomes governed by other constraints but does not govern anything itself. Thus, it cannot bring any additional filter on any noun since it will always give the same output as the corresponding constraints provided above."
+    - "The following fact is disregarded from the constraints despite its restraining nature: syllabic linkers attach only to final-stressed (including monosyllabic), and non-syllabic -- only to polysyllabic non-final-stressed nouns, which aids in forming/maintaining trochees: rule for -(e)n-, -es-, -e-, -\"e-, -\"er-, -(e)ns-, tendency for -s- (more on that in [kopf_2017:195], [kuerschner_2010:17], [nuebling_szczepaniak_2008:7,17], [nuebling_szczepaniak_2013:79], [schluecker_2023:19], [wegener_2003:446], [wegener_2005:178]). The reason for disregarding this fact is its determinacy by other constraints: 1) none of these linkers can appear after a full vowel (see `p2l:phon_fin:vow$-0`), hence, they may appear either after a schwa, or after a consonant; 2) allomorphs of -(e)n-, -(e)ns- are distributed regularly depending on whether the noun ends with a schwa: thus, -n- and -ns- will appear only after schwa, otherwise -en-, -ens- (see constraints dealing with these linkers); 3) -e-, -\"e-, -\"er- are paradigmatic (see corresponding `l2p` constraints), and all e-plural, e=plural, er=plural nouns are consonant-final; 4) -es- appears only after a row of monosyllabic nouns (see `l2p:es`); 5) there are only a few monosyllabic nouns attaching an -s- (see `l2p:s|smpx_mn`). Thus, this fact rather summarizes the outcomes governed by other constraints but does not govern anything itself. Thus, it cannot bring any additional filter on any noun since it will always give the same output as the corresponding constraints provided above."
 
     - "Despite the findings from [krott_etal_2007] concerning analogical effects are promising, we disregard them as well from this iteration. These are: 1) there is a significant left bias for choosing a link (-en-, -s- and zero linker were investigated), that is, a noun tending to usually choose -x- will more probably also choose -x- in novel compounds [krott_etal_2007:7,9]; 2) apart from the left bias, gender was a significantly predictive feature for -en- and zero linker, and inflectional class -- on -s- and zero linker [krott_etal_2007:9]. The reason for excluding this findings is that we believe these analogical effects are an accumulative product of acquisition and (subconscious) application of all compounding constraints present in German. Such, it cannot be a constraint itself and is rather a combined account of the investigated constraints."
 
@@ -268,7 +268,7 @@ topology:
 
                             # 11
                             - p2l:drv:deverb_schwa$-0:
-                                  summary: First constituents that are constituted by deverbal feminine nouns with a schwa suffix mostly attach a zero linker. In compounds in which the second constituent forces a plural meaning of the given first constituent, they tend to attach -n-.
+                                  summary: First constituents that are constituted by deverbal feminine nouns with a schwa suffix mostly attach a zero linker. In compounds in which the second constituent forces a plural meaning of the given first constituent, they tend to attach -(e)n-.
                                   children:
 
                                     - p2l:drv:deverb_schwa$-0|def-0
@@ -316,7 +316,7 @@ topology:
 
                     # 21
                     - p2l:phon_fin:schwa$-en:
-                        summary: First constituents that are constituted by nouns that end in schwa mostly adopt -n-. Those constituted by feminine nouns that end in schwa do so regularly except for the following cases. If the schwa is a deverbal suffix of such a noun and this noun is feminine, a zero linker is mostly attached except in compounds in which the second constituent forces a plural reading of the given first constituent, in which case -n- tends to be attached. If the schwa is a deadjectival suffix of such a noun and the noun is feminine, -n- or a zero linker are preferred in about the same number of cases. Nouns that end in schwa is the only class of nouns that can constitute first constituent that attach this linker.
+                        summary: First constituents that are constituted by nouns that end in schwa mostly adopt -(e)n-. Those constituted by feminine nouns that end in schwa do so regularly except for the following cases. If the schwa is a deverbal suffix of such a noun and this noun is feminine, a zero linker is mostly attached except in compounds in which the second constituent forces a plural reading of the given first constituent, in which case -(e)n- tends to be attached. If the schwa is a deadjectival suffix of such a noun and the noun is feminine, -(e)n- or a zero linker are preferred in about the same number of cases. Nouns that end in schwa is the only class of nouns that can constitute first constituent that attach this linker.
                         children:
 
                             - p2l:phon_fin:schwa$-en|def-en
@@ -1252,7 +1252,7 @@ constraints:
     # 21
     p2l:drv:deverb_schwa$-0|pl_interpr-en:
     
-        summary: First constituents that are constituted by deverbal feminine nouns with a schwa suffix tend to attach -n- in compounds in which the second constituent forces a plural reading of the given first constituent.
+        summary: First constituents that are constituted by deverbal feminine nouns with a schwa suffix tend to attach -(e)n- in compounds in which the second constituent forces a plural reading of the given first constituent.
         ling_info_type: [derivational, semantic]
         appl_item: n1
         n_appl_items: 3613
@@ -1285,7 +1285,7 @@ constraints:
     # 22
     p2l:drv:deadj_schwa$-0/en:
     
-        summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix almost always attach -n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
+        summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix almost always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
         ling_info_type: [derivational]
         appl_item: n1
         n_appl_items: 3613
@@ -1718,7 +1718,7 @@ constraints:
     # 32
     p2l:phon_fin:schwa$-en|def-en:
     
-        summary: First constituents that are constituted by nouns that end in schwa mostly adopt -n-.
+        summary: First constituents that are constituted by nouns that end in schwa mostly adopt -(e)n-.
         ling_info_type: [phonological]
         appl_item: n1
         n_appl_items: 3613
@@ -1753,7 +1753,7 @@ constraints:
     # 33
     p2l:phon_fin:schwa$-en|f-en:
     
-        summary: First constituents that are constituted by feminine nouns that end in schwa adopt -n- regularly.
+        summary: First constituents that are constituted by feminine nouns that end in schwa adopt -(e)n- regularly.
         ling_info_type: [morphological, phonological]
         appl_item: n1
         n_appl_items: 3613
