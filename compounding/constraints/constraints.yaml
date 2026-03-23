@@ -10,7 +10,7 @@ readme: |
 
     For each constraint, its linguistic type, regularity, coverage, examples pro and contra, and evidence from the literature are provided.
     
-    Note that constraint clusters are designed such that more general constraints in them overlap with more specific constraints, so that the latter override the former for certain inputs. This is done on purpose to be able to inspect the behavior of LLMs when operating with conflicting constraints. From linguistic point of view, the more general constraints might be slightly inaccurate since edge cases are omitted there on purpose to enforce overlapping. For example, the general constraint for schwa-final nouns (`p2l:phon_fin:schwa$-en|f-en`) reads 'First constituents that are constituted by feminine nouns that end in schwa adopt -n- regularly.' whereas there are in fact some exceptions not mentioned. The exceptions are then captured in more specific constraints of the same cluster (e.g. `p2l:drv:deverb_schwa$-0|def-0`: 'First constituents that are constituted by deverbal feminine nouns with a schwa suffix mostly attach a zero linker.'), so that the LLM has to choose between the general and the specific constraint when presented with a noun to which both are applicable (deverbal feminine noun ending in schwa in this case, e.g. 'Tiefe'). For linguistically accurate descriptions in such cases, refer to the descriptions of the parent constraint clusters, e.g. `p2l:phon_fin:schwa$-en` reads '... feminine nouns that end in schwa do so regularly except for the following cases. If ...'.
+    Note that constraint clusters are designed such that more general constraints in them overlap with more specific constraints, so that the latter override the former for certain inputs. This is done on purpose to be able to inspect the behavior of LLMs when operating with conflicting constraints. From linguistic point of view, the more general constraints might be slightly inaccurate since edge cases are omitted there on purpose to enforce overlapping. For example, the general constraint for schwa-final nouns (`p2l:phon_fin:schwa$-en|f-en`) reads 'First constituents that are constituted by feminine nouns that end in schwa adopt -(e)n- regularly.' whereas there are in fact some exceptions not mentioned. The exceptions are then captured in more specific constraints of the same cluster (e.g. `p2l:drv:deverb_schwa$-0|def-0`: 'First constituents that are constituted by deverbal feminine nouns with a schwa suffix mostly attach a zero linker.'), so that the LLM has to choose between the general and the specific constraint when presented with a noun to which both are applicable (deverbal feminine noun ending in schwa in this case, e.g. 'Tiefe'). For linguistically accurate descriptions in such cases, refer to the descriptions of the parent constraint clusters, e.g. `p2l:phon_fin:schwa$-en` reads '... feminine nouns that end in schwa do so regularly except for the following cases. If ...'.
 
     Both the constraints, the constraint clusters, and their topological structure are given in Part 3 below. Part 2 contains the glossary of abbreviations and linker designations used in the document.
 
@@ -2024,10 +2024,10 @@ constraints:
     # 39
     p2l:sem:2const_anim/pers-s:
     
-        summary: Compounds with second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' tend to insert -s- if the compound designates a person (even if the first constituent would otherwise attach a zero linker).
-        ling_info_type: [lexical, semantic]
-        appl_item: n2
-        n_appl_items: 7210
+        summary: Compounds whose first constituent designates a person and whose second constituent is one of 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', or 'Witwe' tend to insert tend to insert -s-.
+        ling_info_type: [semantic, lexical]
+        appl_item: compound
+        n_appl_items: 282767
 
         func_alias: sec_const_anim
 
@@ -2047,14 +2047,16 @@ constraints:
 
             - ref: nuebling_szczepaniak_2008
               pages: [11]
-              summary: There is an observable tendency to insert -s- before a stem designating a person.
+              summary: There is an observable tendency to insert -s- before a stem designating a person [1].
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [56]
-              summary: Compounds with the second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' can insert -s- [1], if the compound designates a person, even when the first constituent would otherwise attach a zero linker.
+              summary: Compounds with the second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' can insert -s- [2] regardless of the type of the first constituent if it (first constituent) designates a person, [even when the first constituent would otherwise attach a zero linker [3]].
 
         footnotes:
-            "1": Original text makes that claim for both -s- and -es-. However, no examples of the constrains with -es- could be found. Furthermore, considering that this source holds -s- and -es- as allomorphs of the same linker, the original claim may be interpreted as applying formally to "-(e)s-" but factually to -s-.
+            "1": The list of such second constituents is not provided in the paper, but the examples given there include only 'Frau' and 'Gattin' so we stick to the more detailed list provided in [ortner_mueller-bollhagen_1991:56].
+            "2": Original text makes that claim for both -s- and -es-. However, no examples of the constrains with -es- could be found. Furthermore, considering that this source holds -s- and -es- as allomorphs of the same linker, the original claim may be interpreted as applying formally to "-(e)s-" but factually to -s-.
+            "3": Evidence for an increased strength of `p2l:sem:2const_anim/pers-s`.
 
 
     # 1.5. Constraints that describe general irregular tendencies.
