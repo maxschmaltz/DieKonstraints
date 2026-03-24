@@ -701,7 +701,7 @@ constraints:
               summary: -e- exhibits insignificant effect on plural reading [1].
 
         footnotes:
-            "1": This finding is not very reliable. Most of the entries in the dataset were nouns designating animals -- that, as pointed out in the literature, tendentially attach -e- with no respect to the plural meaning (see `p2l:decl_cl:pl:#e-0|msyl_anim-e`). Furthermore, the sample contained noise such as 'Arzt' which is a e=plural noun. Thus, making a single conclusion about all occurrences from different classes adopting -e- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -e- after non-animal designations was most probably positive as well.
+            "1": This finding is not very reliable. Most of the entries in the dataset were nouns designating animals -- that, as pointed out in the literature, tend to attach -e- with no respect to the plural meaning (see `p2l:decl_cl:pl:#e-0|msyl_anim-e`). Furthermore, the sample contained noise such as 'Arzt' which is a e=plural noun. Thus, making a single conclusion about all occurrences from different classes adopting -e- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -e- after non-animal designations was most probably positive as well.
 
 
     # 6
@@ -2990,14 +2990,14 @@ constraints:
     # 64
     l2p:pl_marker:
       
-        summary: Linkers that are identical to the plural ending of the first constituent in a given compound are tendentially associated with a plural meaning of this first constituent within the compound.
+        summary: Linkers that are identical to the plural ending of the first constituent in a given compound tend to be associated with a plural meaning of this first constituent within the compound.
         ling_info_type: [morphological, semantic]
         appl_item: n1+linker
         n_appl_items: 4868
 
         func_alias: pl_interpr
 
-        quantifier: tendentially
+        quantifier: tend
         coverage:
             item: NA
             type: NA
@@ -3017,7 +3017,7 @@ constraints:
 
             - ref: schaefer_2018
               pages: [230, 231]
-              summary: Linkers identical to the plural ending are tendentially associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element.
+              summary: Linkers identical to the plural ending tend to be associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element.
 
             - ref: schluecker_2023
               pages: [20]
