@@ -1304,7 +1304,7 @@ def zero_uml_par_applies(compound: Compound):
 #
 # Linkers that are identical to the plural ending
 # of the first constituent in a given compound
-# are tendentially associated with
+# tend to be associated with
 # a plural meaning of this first constituent within the compound.
 # TODO
 
