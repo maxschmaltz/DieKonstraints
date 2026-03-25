@@ -1463,6 +1463,26 @@ constraints:
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
         examples_contra: [essen_portion, leben_geschäft, husten_tropfen, beben_gebiet]
 
+        evidence:
+
+            - ref: eisenberg_2013
+              pages: [230]
+              summary: -s- occurs by a rule in deverbals ending in -en.
+            
+            - ref: kuerschner_2005
+              pages: [107]
+              summary: Deverbals ending in -en build compounds with -s-.
+            
+            - ref: nuebling_szczepaniak_2013
+              pages: [78]
+              summary: Deverbals ending in -en always attach -s-.
+            
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [89]
+              summary: Deverbal N with suffix -en regularly attach -s-.
+
+        footnotes: {}
+
 
     # 26
     p2l:drv:sfx:F_#in$-en:
@@ -2158,7 +2178,7 @@ constraints:
 
         func_alias: sonority
 
-        quantifier: tends
+        quantifier: tend
         coverage:
             item: 0.431
             type: 0.498
