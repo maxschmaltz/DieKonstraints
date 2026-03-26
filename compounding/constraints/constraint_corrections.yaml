@@ -14,7 +14,7 @@ correction_suggestions:
         rerun: false
 
         orig_quantifier: regularly
-        item_regularity: 0.97
+        orig_item_regularity: 0.97
         orig_support_level: partially supported
 
         corrected_quantifier: almost all
@@ -33,7 +33,7 @@ correction_suggestions:
         rerun: false
 
         orig_quantifier: almost always
-        item_regularity: 0.997
+        orig_item_regularity: 0.997
         orig_support_level: supported
 
         corrected_quantifier: regularly
@@ -66,8 +66,8 @@ correction_suggestions:
     # 22
     p2l:drv:deadj_schwa$-0/en:
     
-        orig_summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix [almost] always attach -n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
-        correction: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix always attach -n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
+        orig_summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix [almost] always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
+        correction: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
         
         rerun: false
 
@@ -111,7 +111,7 @@ correction_suggestions:
         rerun: false
 
         orig_quantifier: mostly
-        item_regularity: 0.97
+        orig_item_regularity: 0.97
         orig_support_level: supported
 
         corrected_quantifier: almost regularly
@@ -150,7 +150,7 @@ correction_suggestions:
         rerun: false
 
         orig_quantifier: often
-        item_regularity: 0.505
+        orig_item_regularity: 0.505
         orig_support_level: partially supported
 
         corrected_quantifier: sometimes
@@ -203,6 +203,44 @@ correction_suggestions:
         examples_contra: [messe_besucher, kohle_faden, hygiene_artikel]
 
 
+    # 40
+    p2l:tend:cmpx_morph-s|def-s:
+    
+        orig_summary: The probability of -s- [grows irregularly] with the morphological complexity of the first constituent (any form of derivation).
+        correction: The probability of -s- [exhibits a tendency to grow] with the morphological complexity of the first constituent (any form of derivation).
+        
+        rerun: false
+
+        orig_quantifier: irregularly
+        orig_item_regularity: 0.735
+        orig_support_level: supported
+
+        corrected_quantifier: tendency
+        resulting_support_level: supported
+
+        examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
+        examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
+
+
+    # 41
+    p2l:tend:cmpx_phon-s|def-s:
+    
+        orig_summary: The probability of -s- [grows irregularly] with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
+        correction: The probability of -s- [exhibits a tendency to grow] with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
+
+        rerun: false
+
+        orig_quantifier: irregularly
+        orig_item_regularity: 0.723
+        orig_support_level: supported
+
+        corrected_quantifier: tendency
+        resulting_support_level: supported
+
+        examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
+        examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
+
+
     # 45
     l2p:s|f_poly_syl:
       
@@ -212,7 +250,7 @@ correction_suggestions:
         rerun: false
 
         orig_quantifier: almost all
-        item_regularity: 0.999
+        orig_item_regularity: 0.999
         orig_support_level: supported
 
         corrected_quantifier: all
@@ -225,8 +263,8 @@ correction_suggestions:
     # 46
     l2p:n:
     
-        orig_summary: All nouns that constitute first constituents that attach the -n- allomorph of the -en- linker end in schwa.
-        correction: All nouns that constitute first constituents that attach the -n- allomorph of the -en- linker end in schwa [or in [ɐ] (unstressed -er)].
+        orig_summary: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa.
+        correction: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa [or in [ɐ] (unstressed -er)].
         
         rerun: true
 
@@ -251,7 +289,7 @@ correction_suggestions:
         rerun: false
 
         orig_quantifier: all
-        item_regularity: 0.971
+        orig_item_regularity: 0.971
         orig_support_level: partially supported
 
         corrected_quantifier: almost all

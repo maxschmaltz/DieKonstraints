@@ -202,7 +202,7 @@ topology:
 
                             # 5
                             - p2l:decl_cl:pl:#er-0/er:
-                                summary: First constituents that are constituted by nouns that build the plural form with -(")er mostly attach a zero linker or -(")er-. A zero linker is attached after them in majority of compounds in which the second constituent forces a singular or a mass meaning of the given first constituent, and -(")er- tends to be attached after them in compounds in which the second constituent forces a plural meaning of the given first constituent. However, those that are constituted by person and animal designations that build the plural form with -(")er may attach -(")er- regardless of the singular/plural interpretation of the given first constituent within the compound. Nouns that build the plural form with -(")er is the only class of nouns that can constitute first constituent that attach this linker.
+                                summary: First constituents that are constituted by nouns that build the plural form with -(")er mostly attach a zero linker or -(")er-. A zero linker is attached after them in a majority of compounds in which the second constituent forces a singular or a mass meaning of the given first constituent, and -(")er- tends to be attached after them in compounds in which the second constituent forces a plural meaning of the given first constituent. However, those that are constituted by person and animal designations that build the plural form with -(")er may attach -(")er- regardless of the singular/plural interpretation of the given first constituent within the compound. Nouns that build the plural form with -(")er is the only class of nouns that can constitute first constituent that attach this linker.
                                 children:
 
                                     - p2l:decl_cl:pl:#er-0/er|def-0/er
@@ -783,7 +783,7 @@ constraints:
     # 8
     p2l:decl_cl:pl:#er-0/er|!pl_interpr-0:
     
-        summary: First constituents that are constituted by nouns that build the plural form with -(")er attach a zero linker in majority of compounds in which the second constituent forces a singular meaning of the given first constituent.
+        summary: First constituents that are constituted by nouns that build the plural form with -(")er attach a zero linker in a majority of compounds in which the second constituent forces a singular meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item: n1
         n_appl_items: 3613
@@ -1412,7 +1412,7 @@ constraints:
     # 24
     p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en:
     
-        summary: First constituents that are constituted by derived nouns with suffix -ität and its allomorphs prefer -en- in compounds in which the second constituent forces a plural meaning of the given first constituent.
+        summary: First constituents that are constituted by derived nouns with suffix -ität and its allomorphs prefer -(e)n- in compounds in which the second constituent forces a plural meaning of the given first constituent.
         ling_info_type: [derivational, semantic]
         appl_item: n1
         n_appl_items: 3613
@@ -1487,7 +1487,7 @@ constraints:
     # 26
     p2l:drv:sfx:F_#in$-en:
     
-        summary: First constituents that are constituted by derived feminine nouns with suffix -in always attach -en-. (The suffix -in adjusts orthographically in this case and becomes -inn.)
+        summary: First constituents that are constituted by derived feminine nouns with suffix -in always attach -(e)n-. (The suffix -in adjusts orthographically in this case and becomes -inn.)
         ling_info_type: [derivational]
         appl_item: n1
         n_appl_items: 3613
@@ -1869,7 +1869,7 @@ constraints:
     # 35
     p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en:
     
-        summary: First constituents that are constituted by consonant-final weak feminine nouns --- especially final-stressed incl. monosyllabic ones --- attach -en- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
+        summary: First constituents that are constituted by consonant-final weak feminine nouns --- especially final-stressed incl. monosyllabic ones --- attach -(e)n- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
         ling_info_type: [morphological, phonological, semantic]
         appl_item: n1
         n_appl_items: 3613
@@ -1999,7 +1999,7 @@ constraints:
     # 38
     p2l:sem:tech_term-0:
     
-        summary: Compounds belonging to technical terminology (economics, law, medicine, etc.) are often missing an explicit linking element (even in cases where it would be obligatory in a non-technical context).
+        summary: Compounds belonging to technical terminology (economics, law, medicine, etc.) are often missing an explicit linking element.
         ling_info_type: [lexical]
         appl_item: compound
         n_appl_items: 282767
@@ -2044,7 +2044,7 @@ constraints:
     # 39
     p2l:sem:2const_anim/pers-s:
     
-        summary: Compounds whose first constituent designates a person and whose second constituent is one of 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', or 'Witwe' tend to insert tend to insert -s-.
+        summary: Compounds whose first constituent designates a person and whose second constituent is one of 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', or 'Witwe' tend to insert -s-.
         ling_info_type: [semantic, lexical]
         appl_item: compound
         n_appl_items: 282767
@@ -2953,7 +2953,7 @@ constraints:
             type: NA
         support_level: NA
 
-        examples_pro: [schmerz_+ens_geld, name_+ens_tag, herz_+ens_angst]
+        examples_pro: [schmerz_+ens_geld, name_+ns_tag, herz_+ens_angst]
         examples_contra: []
 
         evidence:
