@@ -1,0 +1,9 @@
+aiohttp
+scikit-learn
+ipapy
+pandas
+phonecodes
+python-dotenv
+PyYAML
+requests
+tqdm
