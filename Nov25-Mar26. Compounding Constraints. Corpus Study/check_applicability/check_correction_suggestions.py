@@ -11,8 +11,8 @@ import yaml
 import copy
 from tqdm import tqdm
 
-# python -m compounding.constraints.check_applicability.check_correction_suggestions
-from ..data_utils.gecodb_compound_parser import Compound
+# python -m check_applicability.check_correction_suggestions
+from data_utils.gecodb_compound_parser import Compound
 from . import applicability_checkers
 
 
@@ -20,8 +20,8 @@ def main():
     
     gecodb_path = "resources/developed/gecodb_v06.tsv"
     constr_path = "constraints.yaml"
-    outpath = "out/applicability_statistics"
-    # os.makedirs(outpath, exist_ok=True)
+    outdir = "out/applicability_statistics"
+    # os.makedirs(outdir, exist_ok=True)
 
     # load GeCoDB
     gecodb_v06 = pd.read_csv(
@@ -306,7 +306,7 @@ def main():
         "index": True
     }
 
-    appl_index_path = os.path.join(outpath, "appl_index_corr.tsv")
+    appl_index_path = os.path.join(outdir, "appl_index_corr.tsv")
     appl_index.to_csv(
         appl_index_path,
         **csv_kwargs
@@ -317,7 +317,7 @@ def main():
     os.remove(appl_index_path)
         
     constr_statistics.to_csv(
-        os.path.join(outpath, "constr_statistics_corr.tsv"),
+        os.path.join(outdir, "constr_statistics_corr.tsv"),
         **csv_kwargs
     )
 

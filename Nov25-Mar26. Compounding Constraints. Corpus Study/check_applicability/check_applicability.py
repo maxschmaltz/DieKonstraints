@@ -9,8 +9,8 @@ import yaml
 import copy
 from tqdm import tqdm
 
-# python -m compounding.constraints.check_applicability.check_applicability
-from ..data_utils.gecodb_compound_parser import Compound
+# python -m check_applicability.check_applicability
+from data_utils.gecodb_compound_parser import Compound
 from . import applicability_checkers
 
 
