@@ -1,1 +1,4 @@
-/resources
+resources/*
+!resources/developed/
+!resources/developed/**
+resources/developed/celex_nouns.tsv

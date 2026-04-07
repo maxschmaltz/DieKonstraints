@@ -41,16 +41,16 @@ coverage.xml
 .pytest_cache/
 
 # Virtual environments
-venv/
-ENV/
-env/
+**venv/
+**ENV/
+**env/
 
 # IDE - VS Code
 .vscode/
 *.code-workspace
 
 # Mac
-.DS_Store
+**.DS_Store
 .AppleDouble
 .LSOverride
 *.swp
@@ -58,5 +58,4 @@ env/
 *~
 
 # Environment variables
-.env
-.env.local
+**.env**

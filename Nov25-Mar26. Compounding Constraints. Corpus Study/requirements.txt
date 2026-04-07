@@ -1,9 +1,10 @@
 aiohttp
-scikit-learn
 ipapy
+matplotlib
 pandas
 phonecodes
 python-dotenv
 PyYAML
 requests
+scikit-learn
 tqdm
