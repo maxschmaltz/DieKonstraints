@@ -37,12 +37,13 @@ def main():
     # 6. Perform a few lesser transformations.
     # 7. Save the prepared GeCoDB to a new TSV file.
 
-    gecodb_path = "resources/GeCoDB/gecodb_v05.tsv"
-    outpath = "resources/custom/compounding/intermediate_data"
+    gecodb_path = "resources/DeCOW16AX-comps/decow16ax_comps.tsv"
+    celex_path = "resources/developed/celex_nouns.tsv"
+    outpath = "resources/developed/gecodb_v06.tsv"
 
     # load prepared CELEX nouns
     celex = pd.read_csv(
-        os.path.join(outpath, "celex_nouns.tsv"),
+        celex_path,
         sep="\t",
         dtype=str,
         header=0,
@@ -173,7 +174,7 @@ def main():
 
     # 7. Save the prepared GeCoDB
     gecodb_v05.to_csv(
-        os.path.join(outpath, "gecodb_v06.tsv"),
+        outpath,
         sep="\t",
         index=True,
         header=True

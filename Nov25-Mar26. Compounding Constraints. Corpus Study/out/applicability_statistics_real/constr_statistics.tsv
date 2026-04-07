@@ -1,0 +1,65 @@
+constr_id	n_appl_items	quantifier	cvg_item	cvg_type	reg_item	reg_type
+def-0	282767	majority	1.0	1.0	0.578	0.578
+p2l:decl_cl:pl:#0-0|def-0	3614	almost regularly	0.067	0.066	0.954	0.936
+p2l:decl_cl:pl:#s-0	3614	regularly	0.035	0.033	0.97	0.957
+p2l:decl_cl:pl:#e-0|def-0	3614	mostly	0.159	0.184	0.762	0.689
+p2l:decl_cl:pl:#e-0|pl_interpr-e						
+p2l:decl_cl:pl:#e-0|msyl_anim-e						
+p2l:decl_cl:pl:#er-0/er|def-0/er	3614	mostly	0.019	0.058	0.833	0.868
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0						
+p2l:decl_cl:pl:#er-0/er|mass-interpr-0						
+p2l:decl_cl:pl:#er-0/er|pl_interpr-er						
+p2l:decl_cl:pl:#er-0/er|anim-er						
+p2l:decl_cl:pl:#e_uml-0|def-0	3614	mostly	0.08	0.111	0.722	0.756
+p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml						
+p2l:decl_cl:pl:#0_uml-0|def-0	3614	almost always	0.007	0.016	0.946	0.967
+p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml						
+p2l:decl_cl:mixed-0/s/en|def-0/s/en	3614	almost always	0.013	0.013	0.997	0.996
+p2l:decl_cl:mixed-0/s/en|pl_interpr-en						
+p2l:drv:sfx:0_pl_sfx-0	3614	regularly	0.071	0.045	0.983	0.968
+p2l:drv:sfx:e_pl_sfx-0	3614	regularly	0.007	0.005	0.747	0.873
+p2l:drv:deverb_schwa$-0|def-0	3614	mostly	0.028	0.028	0.579	0.592
+p2l:drv:deverb_schwa$-0|pl_interpr-en						
+p2l:drv:deadj_schwa$-0/en	3614	almost always	0.009	0.01	0.97	0.852
+p2l:drv:sfx:sfx-s|def-s	3614	regularly	0.215	0.158	0.98	0.985
+p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en						
+p2l:drv:sfx:deverb_#en$-s	3614	regularly	0.005	0.009	0.773	0.926
+p2l:drv:sfx:F_#in$-en						
+p2l:drv:prx_deverb-s	3614	tendency	0.159	0.122	0.641	0.659
+p2l:phon_fin:sibilant$-0	3614	mostly	0.083	0.1	0.97	0.953
+p2l:phon_fin:vow$-0	3614	always	0.041	0.036	0.968	0.976
+p2l:phon_fin:F_#stressed_phon$-0	3614	usually	0.03	0.033	0.95	0.969
+p2l:phon_fin:F_stem_#t$-s	3614	often	0.013	0.016	0.505	0.463
+p2l:phon_fin:schwa$-en|def-en	3614	mostly	0.172	0.149	0.752	0.72
+p2l:phon_fin:schwa$-en|f-en	3614	regularly	0.156	0.133	0.765	0.744
+p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s						
+p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en						
+p2l:sem:comp_type:copula-0						
+p2l:sem:comp_type:arg-s						
+p2l:sem:tech_term-0						
+p2l:sem:2const_anim/pers-s						
+p2l:tend:cmpx_morph-s|def-s	3614	irregularly	1.0	1.0	0.735	0.766
+p2l:tend:cmpx_phon-s|def-s	3614	irregularly	1.0	1.0	0.723	0.761
+p2l:tend:sonority-!s	3614	tends	0.431	0.498	0.796	0.717
+l2p:s|smpx_mn	4870	almost all	0.05	0.032	0.988	0.915
+l2p:s|smpx_high_freq	4870	many	0.05	0.032	0.649	0.914
+l2p:s|f_cmpx	4870	almost all	0.163	0.159	0.996	0.983
+l2p:s|f_poly_syl	4870	almost all	0.163	0.159	0.999	1.0
+l2p:n	4870	all	0.116	0.109	0.959	0.985
+l2p:en|par	4870	all	0.143	0.127	0.971	0.986
+l2p:en|non_par_m						
+l2p:en|non_par_n_pl_interpr						
+l2p:e|par	4870	all	0.023	0.008	0.982	0.994
+l2p:e|#stressed_syl	4870	all	0.023	0.008	0.973	0.992
+l2p:e|smpx	4870	most	0.023	0.008	0.73	0.783
+l2p:e|!loan						
+l2p:er|par	4870	all	0.01	0.015	0.979	0.999
+l2p:er|#stressed_syl	4870	all	0.01	0.015	0.938	0.96
+l2p:er|smpx	4870	most	0.01	0.015	0.875	0.935
+l2p:er|!loan						
+l2p:e_uml	4870	all	0.011	0.003	1.0	1.0
+l2p:es|isol						
+l2p:es|mono_syl	4870	all	0.012	0.011	0.914	0.9
+l2p:ens						
+l2p:0_uml	4870	all	0.003	0.0	1.0	1.0
+l2p:pl_marker						

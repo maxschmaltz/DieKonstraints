@@ -5,15 +5,19 @@ from ipapy.ipachar import IPAChar
 from itertools import product
 from typing import Optional, Literal
 
-from compounding.constraints.data_utils.gecodb_compound_parser import (
+from data_utils.gecodb_compound_parser import (
     Compound,
 	Linker,
     perform_umlaut
 )
 
+
+celex_path = "resources/developed/celex_nouns.tsv"
+gecodb_path = "resources/developed/gecodb_v06.tsv"
+
 # load prepared CELEX nouns and GeCoDB
 celex = pd.read_csv(
-	"resources/custom/compounding/intermediate_data/celex_nouns.tsv",
+	celex_path,
 	sep="\t",
 	dtype=str,
 	header=0,
@@ -22,7 +26,7 @@ celex = pd.read_csv(
 
 # load GeCoDB
 gecodb_v06 = pd.read_csv(
-	"resources/custom/compounding/intermediate_data/gecodb_v06.tsv",
+	gecodb_path,
 	sep="\t",
 	dtype=str,
 	header=0,

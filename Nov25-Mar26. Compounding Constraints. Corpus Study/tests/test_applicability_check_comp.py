@@ -1,8 +1,8 @@
 import unittest
 
-from compounding.constraints.data_utils.gecodb_compound_parser import Compound
-from compounding.constraints.check_applicability.applicability_checkers import *
-from compounding.constraints.check_applicability.applicability_checkers import (
+from data_utils.gecodb_compound_parser import Compound
+from check_applicability.applicability_checkers import *
+from check_applicability.applicability_checkers import (
     _has_linker,
     _has_no_linker,
     _is_of_plural,

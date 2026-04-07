@@ -1,0 +1,493 @@
+% LREC 2026 Example; 
+% LREC Is now using templates similar to the ACL ones. 
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[review]{lrec2026} % this is the new style
+% the 'review' option anonymizes the paper following submission guideline
+% the 'final' option produces the camera ready version (non anonymized)
+% default version is 'final', so use review option for submission
+
+\usepackage{natbib}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{float}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, positioning}
+\usepackage{bm}
+
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+
+% \usepackage{url}
+\usepackage{hyperref}
+
+\usepackage{listings}
+\lstdefinestyle{pythonlike}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{teal},
+    showstringspaces=false,
+    frame=single,
+    tabsize=2,
+    captionpos=b
+}
+
+
+\newcommand{\zeroLinker}{\ensuremath{\boldsymbol{\varnothing}}}
+
+\newcommand{\compEx}[7]{%
+    #1 '\textit{#2}' + #4 '\textit{#5}'
+    $\rightarrow$
+    \if\relax\detokenize{#6}\relax
+      #1%
+    \else
+      #6%
+    \fi
+    \if\relax\detokenize{#3}\relax
+      \zeroLinker%
+    \else
+      \textbf{#3}%
+    \fi
+    \MakeLowercase{#4} '\textit{#7}'%
+}
+
+
+\newcommand{\mquad}{\hspace{0.5em}} 
+
+\definecolor{lightgrey}{gray}{0.9}   % light
+\definecolor{midgrey}{gray}{0.80}     % moderate
+
+
+\title{Linking Elements in German Nominal Compounds: A Large-Scale Corpus Study on Constraint Applicability}
+
+\name{Author1, Author2, Author3} 
+
+\address{Affiliation1, Affiliation2, Affiliation3 \\
+         Address1, Address2, Address3 \\
+         author1@xxx.yy, author2@zzz.edu, author3@hhh.com\\
+         \{author1, author5, author9\}@abc.org\\}
+
+
+\abstract{
+N+N compounds is the largest and the most productive class of compounds in German. A significant number of N+N compounds insert a so-called linking element from a large inventory. The linker choice is notoriously irregular; instead of rules, it is governed by a set of constraints that can only limit this choice based on morphological, phonological, sometimes semantic and lexical properties of the first constituent. While these constraints are extensively researched and well-documented, no large-scale corpus study has ever been reported on the subject of their empirical application. The present work aims at filling in this gap by conducting an extensive corpus study on potential and actual applicability of 31 constraints collected from the relevant literature over $\sim$425k N+N compounds. The study both confirms most of evidence from previous literature and suggests novel evidence on German nominal compounding. It additionally highlights the importance of structured linguistic data for large-scale empirical studies.\\ \newline \Keywords{compounding, constraint, corpus study, German morphology} }
+
+ 
+\begin{document}
+
+\maketitleabstract
+
+
+%%% INTRO %%%
+
+\section{Introduction}
+\label{sec:intro}
+
+Compounding is a process of word formation broadly defined as concatenation of two constituents with or without adding a linking element (also called linker) in between: \compEx{Buch}{book}{}{Deckel}{cover}{}{book cover} but \compEx{Buch}{book}{er}{Regal}{shelf}{B\textbf{ü}ch}{bookshelf}. The first consituent becomes the modifier, and the second the head of the resulting composite. In German, compounding is highly productive: thus, \citet{baroni_etal_2003} report that in the APA newswire corpus (28M+ tokens), 47\% of lemmata are compounds. Biconstituent nominal (N+N) compounds in German form the largest class of compounds (\citealp[53]{ortner_mueller-bollhagen_1991}; \citealp{scherer_2012}; \citealp{schluecker_2023}). A sizable number of such compounds inserts an explicit linking element between the constituents. While German features "an unusually high number of different linking elements" \citep{schaefer_pankratz_2018}, only one of them is grammatically correct for a given compound\footnote{Except for a few hundreds of so-called doubtful cases when two variants coexist in language, see \citep{nuebling_szczepaniak_2013}.}. What makes the phenomenon notoriously complicated is the fact that it is often arbitrary which exact linker from the extensive inventory is the correct one. This choice is non-deterministic and cannot be predicted confidently from any properties of the constituents alone. On the contrary, it is governed by a large set of (irregular) \textit{constraints} that can only limit this choice based on morphological, phonological, sometimes semantic and even lexical properties of the first constituent (\citealp[227]{eisenberg_2013}; \citealp{kuerschner_2005}; \citealp{libben_etal_2009}; \citealp{schaefer_pankratz_2018}); the second constituent is argued to have no effect on linker choice\footnote{See exceptions in section \ref{sec:constr}.} (\citealp{kuerschner_2005}; \citealp[56]{ortner_mueller-bollhagen_1991}).
+
+Constraints on nominal compounding\footnote{To clarify: by 'nominal compounding constraints', we mean constraints on choice of the linking element in N+N compounds.} in German have been extensively researched and well-documented in linguistic literature over the last decades. Their irregularity and diversity is well-known and generally agreed upon. And yet, despite the high productivity of nominal compounding in German and the high complexity of the corresponding constraint space, no \textit{large-scale} corpus study has ever been reported on the subject of \textit{empirical} constraint application.
+
+Our study serves an initial attempt to investigate the empirical application of nominal compounding constraints in German quantitatively. More specifically, we focus on their \textit{coverage} and \textit{regularity}. By the coverage of a constraint, we mean the share of the compounds that satisfy the morphological, phonological etc. conditions for this constraint to be applicable. In our terminology, such compounds are also referred to as compounds \textit{covered} by this constraint, and the constraint is called \textit{potentially applicable} to such compounds. The regularity of a constraint is then the share of the compounds covered by this constraint that actually conform to it. In line with the introduced terminology, we call a constraint \textit{actually applicable} to the compounds that conform to it, or simply say it \textit{applies} to them. See Figure~\ref{fig_reg_cov} for a schematic illustration of the difference between potential and actual applicability. The formal definition of coverage and regularity follows in section~\ref{sec:formal}.
+
+We compute the coverage and the regularity of the constraints programmatically over a modification of a compound dataset originating from \citeplanguageresource{gecodb}. Access to \textit{strictly structured} linguistic data becomes a prerequisite for automated computation: only strict structure can enable a uniform and reliable programmatic access to the target linguistic properties as defined by constraint applicability conditions. CELEX2 \citeplanguageresource{celex2} becomes the natural choice for us: this lexical database stores various linguistic information about its entries in a table-like format perfectly suitable for automated processing.
+
+The present study makes two contributions to the developments in German nominal compounding studies: 1. Constraints on linker choice in German N+N compounds are collected from a number of relevant scientific sources, summarized and classified. 2. A corpus study is conducted on the matter of empirical application of the collected constraints\footnote{Excluding semantic constraints, see more in section \ref{sec:exp}.}. The coverage and the regularity of the constraints are reported.
+
+The combined effect of these two contributions results in a systematic constraint space with fixed type (morphological, phonological, etc.), coverage, and regularity. This development is relevant not only to descriptive studies in theoretical linguistics on German morphology. Given the high productivity of nominal compounding in German, the constraint space may be referred to as a knowledge base/graph in the task of novel compound generation with LLMs. In its turn, the task of compound generation may be useful for evaluating linguistic competencies and reasoning abilities of LLMs. From a more practical perspective, reference to this constraint space may increase the quality of generated compound datasets.
+
+The paper is structured as follows. Section~\ref{sec:comps} summarizes principles of German nominal compounding. Section~\ref{sec:back} gives an overview over previous works concerning German nominal compounding (in particular, compounding constraints). Section~\ref{sec:corp} introduces the methodology and the course of our corpus study. Finally, the results of the study are discussed and summarized in sections~\ref{sec:res} and~\ref{sec:outro}.
+
+
+\begin{figure}[!ht]
+
+\begin{tcolorbox}
+
+    % Latex positions text blobs and figures themselves vertically unevenly.
+    % Commented out below are margins that produce visually spaceless positioning
+    % between the elements. From there, we add 0.9em after constraint subscribtion
+    % and 1.8em after the figures.
+
+    \begin{center}
+    
+    Constraint \texttt{ex1}:
+    
+    'Nouns of the $\square$ class as first constituents \underline{tend} to attach -\textit{x}- (regardless of the class of the second constituent).'
+    
+    % \vspace{-1.7em}
+    \vspace{-0.5em}
+    
+    \includegraphics[width=\columnwidth]{figures/figure_cov_reg1.png}
+    
+    % % \vspace{-4em}
+    % \vspace{-2.2em}
+
+    
+    % Constraint \texttt{ex2}:
+    
+    % 'Nouns of the $\triangle$ class as first constituents attach -\textit{a}- \underline{regularly} (regardless of the class of the second constituent).'
+    
+    % % \vspace{-1.8em}
+    % \vspace{-0.9em}
+    
+    % \includegraphics[width=\columnwidth]{figures/figure_cov_reg2.png}
+
+    % % \vspace{-4.8em}
+    \vspace{-1.5em}
+    
+    \end{center}
+
+% \vspace{0.5em}
+
+% The following holds:
+
+% \vspace{0.5em}
+
+% $N$ --- set of all N+N componds
+
+% \vspace{0.25em}
+
+% $A^{\bm{?}}_{\mathrm{C}}$ --- set of compounds to which constraint $\mathrm{C}$ is potentially applicable;
+
+% \vspace{0.25em}
+
+% $A^{\checkmark}_{\mathrm{C}}$ --- set of compounds to which constraint $\mathrm{C}$ applies;
+
+% \vspace{0.25em}
+
+% $\mathrm{Cvg}(\mathrm{C}) = \frac{|A^{\bm{?}}_{\mathrm{C}}|}{|N|}$ --- coverage of constraint $\mathrm{C}$;
+
+% \vspace{0.25em}
+
+% $\mathrm{Reg}(\mathrm{C}) = \frac{|A^{\checkmark}_{\mathrm{C}}|}{|A^{\bm{?}}_{\mathrm{C}}|}$ --- regularity of constraint $\mathrm{C}$.
+
+\vspace{-1.8em}
+
+Each data point on the scheme represents a compound consisting of two constituents (one of the three shapes, representing different abstract classes of nouns), and a symbolic linker. By the definition of \texttt{ex1}, it is potentially applicable to any noun of the $\square$ class as first constituent; these are marked with a tick. The constraint is actually applicable to a covered compound if it inserts the -\textit{x}- linker, in which case the linker is also marked with a tick.
+
+In sum, $A^{\bm{?}}_{\mathrm{C}}$ represents the set of compounds to which \texttt{ex1} is potentially applicable, and $A^{\checkmark}_{\mathrm{C}}$ --- to which it is actually applicable.
+
+\end{tcolorbox}
+
+\caption{Schematic illustration of potential and actual applicability of a dummy constraint \texttt{ex1}.}
+
+% The upper figure demonstrates \texttt{ex1}: a constraint with a high coverage but a moderate regularity. The lower figure exhibits a regular \texttt{ex2} with a low coverage.
+
+\label{fig_reg_cov}
+\end{figure}
+
+
+%%% COMPOUNDING %%%
+
+\section{On Nominal Compounding in German}
+\label{sec:comps}
+
+N+N compounds is the largest and the most productive class of German compounds. We consider solely N+N compounds for two reasons. Firstly, while the share of compounds with more than two constituents in German is non-negligible (\citealp[297]{augst_1975} finds $\sim$10\%, \citealp[13-30]{ortner_mueller-bollhagen_1991} $\sim$13.3\% compounds composed of three and more constituents), compounds of any complexity can be recursively decomposed into biconstituent substructures. This is due to the fact that compounding in German conforms to binary recursion (\citealp[219]{eisenberg_2013}; \citealp[226-227]{schaefer_2018}). Besides, there are only a couple of constraints specifically targeting complex first constituents; the rest address non-compound nouns. The second reason to concentrate on N+N compounds is the fact that this is the class where the explicit linking elements occur most often \citep{schluecker_2023}.
+
+
+\subsection{Linking Elements}
+\label{sec:linkers}
+
+The inventory of linking elements in German includes zero linker -{\zeroLinker}-, the following explicit linkers: -\textit{s}-, -\textit{es}-\footnote{-\textit{s}- and -\textit{es}- are not notated as -\textit{(e)s}- as they are not allomorphic (-\textit{es}- is isolated, see \citealp[229]{eisenberg_2013}; \citealp{kuerschner_2010}), in contrast to -\textit{(e)n}- and -\textit{(e)ns}-.}, -\textit{(e)n}-, -\textit{e}-, -\textit{"e}-\footnote{\textit{"} signals that the linker triggers umlauting of the stem vowel of the first constituent.}, -\textit{"er}-, -\textit{"}-, -\textit{(e)ns}-, and a number of idiosyncratic linkers for loanwords. The latter --- as well as linkers causing deletion of final stem segment(s) --- are disregarded in the current study due to their insignificant frequency.
+
+The frequency distribution of the investigated linkers is exceptionally skewed. Being the default case for N+N compounds in German\footnote{This is also the case for the other compounds types in German.}, -{\zeroLinker}- takes up $\sim$60-73\% of all compounds by different estimations. It is then followed by -\textit{s}- and -\textit{es}- with shared\footnote{While we separate -\textit{s}- from -\textit{es}-, we provide their combined percentage following the source works from which we took these empirical estimations.} $\sim$14-24\% and -(e)n- with $\sim$9-13\%. All other linkers considered in the study barely reach $\sim$3\% combined. For specific estimations, see \citealt{krott_etal_2007}; \citet[54]{ortner_mueller-bollhagen_1991}; \citet[229]{schaefer_2018}.
+
+The correct linker is very often not inferrable with certainty from any properties of the first constituent. The arbitrariness of choice may be so high that some nouns can attach different linkers in different compounds, e.g. Land '\textit{state}' + Kreis 'district' / Regierung 'government' / Spiel 'match' $\rightarrow$ Land{\zeroLinker}kreis '\textit{regional district}' / Land{\textbf{es}}regierung '\textit{regional government}' / L\textbf{ä}nd{\textbf{er}}spiel '\textit{international match}'. \citet[134]{augst_1975} provides the following statistics: in a corpus of roughly 4k compounds, 9.3\% of entries has records with two different linkers and almost 1\% of entries --- with three or four different linkers. Rather than predict the correct linking element for a given noun, one can only limit the group of acceptable linkers, guided by a set of (irregular) constraints.
+
+
+\subsection{Constraints on Linker Choice}
+\label{sec:constr}
+
+Constraints on nominal compounding in German are defined over linguistic information of the first constituent exclusively. \citet[56]{ortner_mueller-bollhagen_1991} document the single case when the second constituent defines the linking element. They argue that compounds with second constituents 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', 'Witwe' can insert -\textit{s}- if the compound designates a person, even when the first constituent would otherwise attach \zeroLinker e.g. \compEx{Reiter}{rider}{s}{Mann}{man}{}{horseman}. Going further, \citet[227]{eisenberg_2013} suggests that sometimes, not the first constituent in particular but semantic relation between the two constituents in general may play a definitive role in linker choice. This claim is supported by evidence provided by \citet{koliopoulou_2014}, also \citet{neef_borgwaldt_2012}, that both argue that copulative compounds\footnote{Copulative compounds are generally defined as compounds in which the two constituents do not exhibit a clear modifier-head relation.} regularly occur with \zeroLinker, as in \compEx{Dichter}{poet}{}{Komponist}{composer}{}{poet-composer}. Similarly, \cite{nuebling_szczepaniak_2013} find that -\textit{s}- can sometimes mark argumental compounds\footnote{The second constituent of an argumental compound still contains a high degree of verbiness, the argument of which is constituted by the first constituent.}, as exemplified by \compEx{Gewicht}{weight}{s}{Heber}{lifter}{}{weightlifter}.
+
+The rest of constraints refer solely to the properties of the first constituents and are based on various types of linguistic information. In the literature are documented morphological, derivational\footnote{To the best of our knowledge, this term is not well-established. By derivational constraints we mean those that target classes of nouns with specific derivational structure, e.g. nouns with specific affixes, nouns derived from verbs, etc.}, phonological, semantic, mixed constraints (see examples C1-C4 collected from \citealp[228-230]{eisenberg_2013}; \citealp{libben_etal_2009}; \citealp{nuebling_szczepaniak_2013}).
+
+\begin{tcolorbox}[breakable]
+
+    (C1) Nouns forming the plural form with -\textit{"er} as first constituent mostly attach \zeroLinker or -\textit{"er}-: \compEx{Buch}{book}{}{Deckel}{cover}{}{book cover} but \compEx{Kind}{child}{es}{Alter}{age}{}{childhood}
+
+    \vspace{0.5em}
+
+    (C2) Nouns forming the plural form with -\textit{"er} as first constituent tend to attach -\textit{"er}- when the first constituent exhibits a plural or collective meaning: \compEx{Buch}{book}{er}{Regal}{shelf}{B\textbf{ü}cher}{bookshelf} but \compEx{Buch}{book}{}{Handel}{trade}{}{book trade}
+
+    \vspace{0.5em}
+
+    (C3) Prefixed deverbals as first constituent tend to adopt -\textit{s}-: \compEx{Bedarf}{need}{s}{Fall}{case}{}{case of need} but \compEx{Anruf}{call}{}{Beantworter}{responder}{}{answering machine}
+
+    \vspace{0.5em}
+    
+    (C4) Nouns ending in a schwa as first constituent regularly adopt -\textit{(e)n}-: \compEx{Blume}{flower}{n}{Strauß}{bouquet}{}{flower bouquet} but \compEx{Schäche}{weakness}{}{Zustand}{state}{}{state of weakness}
+        
+\end{tcolorbox}
+
+Both coverage and regularity of nominal compounding constraints fluctuate notably: cf. C4 that applies almost regularly to a very large class of nouns ending with schwa, and C3 that may or may not apply only to a more restricted group of prefixed deverbals. We can sum that nominal compounding constraints in German are highly diverse in terms of their regularity and coverage, as well as regarding the type of linguistic properties they target.
+
+
+%%% BACKGROUND %%%
+
+\section{Previous Research}
+\label{sec:back}
+
+Linking elements in (N+N) compounds have been a subject of interest in German morphology for decades. Numerous works address different aspects of their development, functionality, linguistic status.
+
+\citet{nuebling_szczepaniak_2013}, \citet{wegener_2003}, \citet{wegener_2005} investigate the origin and the diachronic development of the linking elements. They identify two sources of German linking elements: Germanic primary suffixes and later genitive markers. While the details of evolution of these sources into contemporary linkers are debated across these works, they all eventually address the process of their lexicalization and reanalysis, and explain the restrictions on and the tendencies of linker choice in contemporary German from a historical perspective. In particular, they suggest that plural markers -\textit{(e)n}, also -\textit{e}, -\textit{"e}, -\textit{"er} originate from the primary suffixes, and the homonymous linking elements evolve either from these plural markers \citep{nuebling_szczepaniak_2013}, or in parallel to them \citep{wegener_2003}. This way, these works motivate the fact that these linkers appear (almost) only with nouns of the corresponding plural\footnote{For -(e)n- and -e-, \citet{nuebling_szczepaniak_2013} also identify separate edge cases not related to the plural suffixes.}. 
+
+A larger share of the literature body reports contemporary limitations on linker choice without focus on their origin. For example, \citet[chapter 6.2]{eisenberg_2013}, \citet[chapter A.5]{ortner_mueller-bollhagen_1991}, \citet[chapter 8.1]{schaefer_2018} expound general principles of German (nominal) compounding, each covering acceptability conditions of most of the investigated linkers. Numerous works are dedicated specifically to the -\textit{s}- linker since it is the only productive linker not bound to any inflectional class: \citet{libben_etal_2009}, \citet{kopf_2017}, \citet{kuerschner_2005}, \citet{nuebling_szczepaniak_2008}. The most debated question about -\textit{s}- is whether it marks the boundary of a morphologically (as suggested by \citealp{kuerschner_2005}) or a phonologically (according to \citealp{nuebling_szczepaniak_2008}) complex noun. At the same time, \citet{fuhrhop_kuerschner_2015} fairly note that "phonologically bad" words are typically found in morphologically complex words. 
+
+Finally, a notable branch of research is oriented towards investigating various analogical effects associated with compounding in German. Thus, \citet{krott_etal_2007} find that choice between -\textit{s}-, -\textit{(e)n}-, and \zeroLinker is biased towards the most frequent linker occurring with the given first constituent in other compounds, with a statistically significant effect. With different experimentation course, \citet{neef_borgwaldt_2012} arrive at similar results and confirm the left constituent bias. They also suggest that building novel compounds is subject to inter-speaker variability to a certain degree. On another note, \citet{schaefer_pankratz_2018} provide evidence that linkers identical to the plural markers may serve a clue to a plural or collective meaning of the first constituent in the compound.
+
+All these finding are of undeniable value and importance. Combined, they provide an exhaustive yet granular overview of the constraints on linker choice in German. However, the absolute majority of these works have a significant fallback: while noting the infamous irregularity of these constraints, they oftentimes fail to deliver empirical measures of this irregularity. This results in quite vague definitions that sometimes hinder building an adequate idea of a certain constraint. A few examples follow\footnote{Whenever necessary, translated by the authors of the present study.}: "If the stem [of a feminine noun] is monosyllabic, the -\textit{en}- linker is \textit{sometimes}\footnote{In italics, we highlight the vague spots.} inserted, \textit{sometimes} not." \citep[229]{eisenberg_2013}; "There is an \textit{observable tendency} to insert -\textit{e}- after nouns designating animals [...] with many counterexamples." \citep[11]{nuebling_szczepaniak_2008}; "Strong and mixed masculine and neuter nouns \textit{often but by no means always} insert -\textit{s}- or -\textit{es}-\footnote{The original work says -\textit{(e)s}- but as mentioned before, we distinguish between these two linkers.}" \citep[229]{schaefer_2018}.
+
+So far, only targeted corpus studies covering single constraints have been made. Such, \citet{kopf_2017}, \citet{kuerschner_2005}, and \citet{nuebling_szczepaniak_2008} aim at investigating the constraint that imposes preference of the -\textit{s}- linker after prefixed deverbal nouns. Having conducted independent corpus studies, they confirm that prefixed deverbals attach -\textit{s}- in majority of cases: 67.5\%, 76.5-78\%, and 85\% (with unstressed prefix) / 36\% (with stressed prefix)\footnote{The results from \citet{nuebling_szczepaniak_2008} are rather unreliable, since only smaller samples of deverbals with unstressed vs stressed prefixes were considered ($\sim$20 items each).}, respectively. Going further, \citet{nuebling_szczepaniak_2008} and \citet{wegener_2005} address the relation between the probability of -\textit{s}- and the sonority of the last segment of the noun. They both then formulate a constraint that decreases the probability of -\textit{s}- with increasing sonority of the last segment, and support their hypothesis by empirical data. Thus, they find that -\textit{s}- occurs after plosives in 15-20\% and after sonorants in 1.8-4.7\% of cases, and it never occurs after a full vowel. In their turn, \citet{krott_etal_2004} conduct a series of experiments to prove that to some extend, speakers utilize linkers of triconstituent compounds as cues for their correct division on the head and the modifier.
+
+It can be seen that the above mentioned corpus studies are rather restricted. To the best of our knowledge, no attempts have been reported yet of extensive corpus studies that would cover the entire space of nominal compounding constraint or at least a large part of it. We therefore aim at filling in this gap by conducting a novel large-scale corpus study on the application of nominal compounding constraints in German.
+
+
+
+%%% CORPUS STUDY %%%
+
+\section{Empirical Study}
+\label{sec:corp}
+
+The present study was conducted in four steps. We briefly summarize them here, and introduce them in more detail in the corresponding subsections~\ref{sec:constrget}-~\ref{sec:exp} below.
+
+Step one fixes the definitions and status of constraint from the relevant literature, classifies, and structures them.
+
+Step two ensures reproducibility of the study. It generates formalizations concerning application of the collected constraints and calculation of their coverage and regularity.     
+
+The third step prepares the data for the corpus experiments. It obtains a massive collection of N+N compounds taking a compound dataset DeCOW16AX-comps originating from \citetlanguageresource{gecodb} as a baseline. It then derives a custom noun database from CELEX2 \citeplanguageresource{celex2} --- a large lexical database for English, German, and Dutch that stores various linguistic properties of its entries (lemmata and wordforms). Additionally, it supplies the two obtained modifications with word counts of their entries from DeReKo \citeplanguageresource{dereko} --- the largest collection of text corpora in contemporary German.
+
+Step four conducts the corpus study itself. It estimates the empirical applicability of the collected constraints over our modification of DeCOW16AX-comps following the procedural formalization from the second step.
+
+% For each of the collected constraints, we 1) determined the compounds in the collection covered by it by testing for the corresponding linguistic conditions in our modification of CELEX2; 2) identified to which of the covered compounds the constraint applies; 3) calculated the coverage and the regularity of the constraint according to the previously defined mathematical formalization. At last, supplementary statistical measures over all results were calculated.
+
+
+
+\subsection{Step 1: Constraint Acquisition}
+\label{sec:constrget}
+
+To obtain linker choice constraints reported in the linguistic literature so far, we studied a number of scientific works dedicated to German (nominal) compounding. We aimed at keeping the collection of scientific sources diverse in terms of their format, purpose, object and area of research, date of publication. In case of discrepancies on a certain matter, we did not take sides with one or another analyses and kept both sources, assuring a wide spectrum of linguistic perspectives. The resulting body of literature thus spans over 30+ years and includes chapters of fundamental books on German morphology in general and (nominal) compounding in particular, survey-like articles reporting generalizations of German compounding and linker choice, as well as more targeted papers addressing specific aspects of compounding in German, such as their functionality and grammatical status, restrictions on their insertion etc. To adopt a broader perspective, we also involved works dedicated to the origin of linking elements, analogical effects in compounding, and comparative studies on linking elements in Germanic. The resulting set of works included 18 sources referenced in section~\ref{sec:back}.
+
+From these sources, we extracted claims that described restrictions on / patterns of choice of the linking elements in N+N compounds. We find no critical contradictions across the works. The only disagreements concern regularities or linguistic nature of a few constraints. These are of no significance to us, since we obtain our own statistics of constraint application. Otherwise, there is an ongoing debate on morphological/phonological conditioning of -\textit{s}- (see section ~\ref{sec:back}). We formulate both options as two separate constraints for further verification.
+
+The collected observations on linker choice were then summarized into constraint definitions, that were classified by the manner of their application and the level of linguistic information they utilize, and that were structured into a tree-like structure based on this classification.
+
+In total, we fixed 55 constraints\footnote{We stored the resulting set of constraints in a tree-like structure in a YAML document. If paper is accepted, the document will be made available on GitHub.}. We established two main categories of constraints\footnote{The default constraint striving to assign zero linking element to any given compound is left out of account in this paragraph.}. The first category is prevalent with 42 constraints and it limits the acceptable linkers for a given noun (sub)class ('\textit{A} can attach either \textit{x} or \textit{y}'); we therefore call it \textit{P2L} (properties to linkers). The second category (14 constraints) goes the opposite way: it puts restrictions on the noun classes that can attach a given linker ('\textit{x} can only be attached by \textit{A} or \textit{B}'); correspondingly, we name it \textit{L2P}. Table~\ref{tab_constr_prop} exhibits constraint types by level(s) of accessed linguistic information\footnote{Derivational constraints defined over morphologically restricted classes are not additionally marked as morphological if they target nouns with suffixes that determine morphological properties of the derivate (e.g. -\textit{heit} always produces weak feminines).}. One can see that L2P constraints (almost) ignore all linguistic domains except morphology, which confirms that there are only few formal restrictions on inserting different linkers, which partly explains their high variability. P2L constraints, on the contrary, actively employ all kinds of linguistic information, prevalently morphological and semantic, but to a noticeable extend derivational and phonological properties. That observation is again in line with the fact that linker choice is highly variable and is affected by a large variety of factors.
+
+\begin{table}[!ht]
+
+\begin{center}
+\setlength{\extrarowheight}{2pt}
+\begin{tabularx}{\columnwidth}{|l|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+
+      \hline
+      Type                          & P2L   & L2P   \\
+      
+      \hline
+      morphological                 & 7                             & 6 \\
+      \mquad + phonological         & \cellcolor{lightgrey} 2       & \cellcolor{midgrey} 0 \\
+      \quad \quad + semantic        & \cellcolor{lightgrey} 3       & \cellcolor{midgrey} 0 \\
+      \quad \quad + derivational    & \cellcolor{lightgrey} 1       & \cellcolor{midgrey} 0 \\
+      \mquad + semantic             & 8                             & \cellcolor{midgrey} 0 \\
+      \quad \quad + lexical         & \cellcolor{midgrey} 0         & \cellcolor{lightgrey} 2 \\
+      \mquad + lexical              & \cellcolor{midgrey} 0         & \cellcolor{lightgrey} 1 \\
+      
+      \hline
+      derivational                  & 9                             & \cellcolor{midgrey} 0 \\
+      \mquad + semantic             & \cellcolor{lightgrey} 2       & \cellcolor{midgrey} 0 \\
+      
+      \hline
+      phonological                  & 5                             & \cellcolor{lightgrey} 1 \\
+      
+      \hline
+      semantic                      & \cellcolor{lightgrey} 3       & \cellcolor{midgrey} 0\\
+      \mquad + lexical              & \cellcolor{lightgrey} 2       & \cellcolor{midgrey} 0 \\
+      
+      \hline
+      lexical                       & \cellcolor{midgrey} 0         & \cellcolor{lightgrey} 2 \\
+      
+      \hline
+
+\end{tabularx}
+\end{center}
+
+\caption{Types of nominal compounding constraints by employed linguistic information. Mixed types are marked by indentation. Mid-grey marks types of zero, and light-grey of up to three constraints.}
+\label{tab_constr_prop}
+ 
+\end{table}
+
+
+
+\subsection{Step 2: Procedural \& Mathematical Formalizations}
+\label{sec:formal}
+
+Step 2 generates procedural and mathematical formalizations.
+
+Every constraint definition consists of two components. The first component declares the target linguistic properties that entails its potentially applicability (usually of the first constituent). The second assigns a set of linkers that may appear in a covered compound if the constraint apply. One may find it conceptually similar to a generative rule from phonology. For instance, C3 (see above) may be represented\footnote{Arbitrary notation is used for this and the following examples.} as \mbox{\texttt{[+prefixed][+deverbal][+FC]}} $\rightarrow$ \mbox{\texttt{[-s-]}} (FC stands for first constituent). Any constraint can then be abstracted as \mbox{\texttt{[cond $1$][cond $2$]...[cond $n$]}} $\rightarrow$ \mbox{\texttt{[link $1$, ..., link $m$]}} (cond stands for condition, link for linker). Then, the formal tests for potential and actual applicability are trivial. For an arbitrary constraint and an arbitrary N+N compound, it holds: 1) the constraint is potentially applicable to the compound if for any \mbox{$i = (1, 2, ..., n)$}, \textbf{all} \mbox{\texttt{[cond $i$]}} are true; 2) the constraint applies if for any \mbox{$j = (1, ..., m)$}, the compound inserts \textbf{any} of \mbox{\texttt{[link $j$]}}. Note that even if a constraint implicitly licenses further linkers, these are disregarded in our procedure, as these are exactly the irregular deviations from the central tendency. For example, even though C3 only \textit{tends} to insert -\textit{s}- --- and so allows other linkers ---, we only consider that it applies if attached is the -\textit{s}- linker. For the L2P constraints, the two components and, correspondingly, the tests are swapped.
+
+The coverage of a constraint is defined as the share of all compounds to which it is potentially applicable as defined above; the regularity is the share of the latter to which it applies. Formally, this is defined as a simple ratio between the sizes of the corresponding sets. We find two perspectives from which one could estimate the size of these sets: a type-based perspective counts the number of unique compounds in a set, and a token-based perspective sums up their number of occurrences. The two variants correspondingly produce type coverage and regularity and token coverage and regularity. It is obvious that these measures may differ drastically. We therefore calculate and report both variants in our study.
+
+% Here is where the distinction between these two above introduced manner of calculating the size of the sets becomes crucial. Let us consider constraint \texttt{ex1} from Figure~\ref{fig_reg_cov} as an example. Let us assume that in the language over which \texttt{ex1} is defined, the sum of token counts is $1050$ over all compounds ($N$), $1000$ over $A^{\bm{?}}_{\mathrm{C}}$ (the set of covered constraints), and only $100$ over $A^{\checkmark}_{\mathrm{C}}$ (the set of compounds to which \texttt{ex1} applies). Then, if we count the unique compounds, the coverage of \texttt{ex1} will be $\frac{8}{13} \approx 0.62$, and regularity $\frac{5}{8} = 0.625$. However, if we switch to token counts, we will get $\frac{1000}{1050} \approx 0.95$ but only $\frac{100}{1000} = 0.1$, respectively. This means that while in the vocabulary of \texttt{ex1}'s language, this constraint is moderately widespread and regular, its speaker would in fact see very frequently the compounds covered by it, but most of the seen exemplars would actually violate it. This example thus demonstrates how drastic the difference may be between the measures under the two methods of calculation.
+
+
+
+\subsection{Step 3: Data Acquisition}
+\label{sec:data}
+
+As pointed out in section~\ref{sec:corp}, we employed three data sources for various purposes. DeCOW16AX-comps\footnote{DeCOW16AX-comps is licensed under CC BY-NC 4.0 and are freely available for research purposes.} was used to derive a massive N+N collection that served the corpus over which we assessed the empirical applicability of the constraints. CELEX2\footnote{CELEX2 is distributed under a custom license authorizing unrestricted usage for research purposes, see \url{https://catalog.ldc.upenn.edu/docs/LDC96L14/celex.readme.html\#Copyright}. The data was obtained in compliance with this license.} was accessed during the experimental phase to test for various linguistic information that conditioned constraint applicability. Finally, DeReKo \footnote{Most of the DeReKo subcorpora are licensed under a QAO-NC license. DeReKo may be used freely for scientific purposes.} supplied the word counts for the entries of our subsets of the first two. The preprocessing procedure of DeCOW16AX-comps depended on that of CELEX2, so we start the overview over data acquisition with the latter.
+
+CELEX2 contains $\sim$51k German lemmata. For each lemma, it provides a rich set of linguistic information. Relevant for the present study are the records about POS, gender, inflectional paradigm, morphemic structure (both base word and affixes), phonetic transcription, and syllabification scheme of the lemmata. The high quality of annotations in CELEX2 minimized the number of preprocessing steps undertaken. Apart from a few minor preprocessing steps, we simply extracted a subset of one-stem nouns that met two requirements: 1) they had the full set of the relevant records enlisted above; 2) their word count in DeReKo reached the minimum threshold of 50 occurrences. For word counts, we were querying a collection of DeReKo subcorpora compiled under the \texttt{copr-d} (Korpora aus Deutschland, '\textit{corpora from Germany}') namespace of the KorAP interface of DeReKo with a total of 15B+ tokens. This, together with the minimal creation year set to 1970, allowed us to avoid overt regionalisms or anachronisms. The frequencies were obtained via the KorAP OpenAPI endpoint (\url{https://korap.ids-mannheim.de/api/v1.0/openapi/}), the endpoint was accessed in early February 2025. The resulting sample of CELEX2 (henceforth also called CELEX-nouns) contains $\sim$12k nouns.
+
+DeCOW16AX-comps supplied us with $\sim$22.3M SMOR \citep{schmid_2004} analyses of German compounds with nominal heads. We took this collection as a starting point and in a few steps, dropped all records unsuitable for our study. The resulting modification that we called GeCoDB\_v06 contains $\sim$425k N+N compounds featuring all variety of the linkers considered in the present study. Each record is a triplet identifying the two constituents and the linker of the compound. We only kept compounds whose both constituents are present in CELEX-nouns --- that ensured that we had access to the full set of required linguistic information for any our compound. To further ensure the quality of the sample, we set a prerequisite for every compound to occur at least 5 times in DeReKo\footnote{Word counts were collected under the same procedure that was utilized for CELEX2. Note that a number of compounds were not accounted as separate lemmata in DeReKo and were therefore filtered out, e.g. Schlusslokomotive, Eingangssektor.}, and for its modifier to form at least 10 compounds in GeCoDB\_v06 with different heads. Thus, we removed most of the meaningless compounds and potential misanalyses from SMOR and made certain that the modifiers present in our dataset were productive and not lexicalized in domain of compounding and, hence, linker insertion. GeCoDB\_v06 will be published on GitHub upon acceptance of paper.
+
+
+\subsection{Step 4: Corpus Experiment}
+\label{sec:exp}
+
+After implementing the three steps described above, we were missing only one component to start estimating constraint applicability over the GeCoDB\_v06 corpus. Namely, we had to translate the procedural formalizations of the tests for potential and actual applicability from section~\ref{sec:formal} into Python code\footnote{The full code will be published on GitHub upon acceptance of paper.}. For potential applicability, this was done by establishing a mapping between every condition \mbox{\texttt{[cond $i$]}} enclosed in every constraint formalization, and a dedicated programmatic checkers. Each checker accepts a compound and then accesses the CELEX-nouns database to test for the corresponding linguistic properties (almost always of the first constituent). The checkers for actual applicability were overly simple to implement. These directly compare whether the linker indicated in the input compound by SMOR is one of the licensed \mbox{\texttt{[link $1$, ..., link $m$]}}. At this iteration of the study, constraints involving semantic and/or lexical information, were excluded\footnote{See discussion in section~\ref{sec:outro}.}, resulting in 33 pairs of checkers. For the L2P constraints, the programmatic checkers are swapped as well, following the formal tests.
+
+% Again, the strict structure of the linguistic data proved to be of the highest importance for our study. The tabular format of CELEX2 (and, hence, CELEX-nouns), and the triplet format of the SMOR analyses in DeCOW16AX-comps (and thus in GeCoDB\_v06) enabled stable programmatic access to the necessary information in them. If not for the strict structure, automating the formal tests for potential and actual applicability would have been (nearly) impossible. Let us consider the example Buch{\zeroLinker}deckel from constraint C1 to observe the role of structured data for such automation. C1 is potentially applicable to first constituents of the \textit{"er}-plural type; if it actually applies, a compound with such a first constituent should insert \zeroLinker or -\textit{"er}-. Formally, we can define it as \mbox{\texttt{[+}\textit{"er}\texttt{ plural][+fc]}} $\rightarrow$ \mbox{\texttt{[}{\zeroLinker}\texttt{, }-\textit{"er}-\texttt{]}}. Obviously, Buch is the first constituent; in this case, the Python potential applicability checker should access CELEX-nouns for the plural type of this noun. Correspondingly, the ordered indexing and the keyword search enabled in CELEX-nouns by its determined structure become mandatory for accessing this information with Python. After the checker finds in the target cell that the plural type of Buch is indeed -\textit{"er}, the compound will be marked as covered by C1. Then, the actual applicability checker will access the linker through the SMOR analysis --- again, thanks to the strict indexing --- and will find \zeroLinker. Thus, the compound will be marked as one to which C1 is both potentially and actually applicable.
+
+
+% Listing~\ref{pseudocode} demonstrates a pseudo-code version of the application checker of the constraint C1. The actual code is published under GitHub.
+
+% \begin{figure}[!ht]
+% \centering
+% \begin{lstlisting}[
+%     style=pythonlike,
+%     caption={Pseudo-code for the C1 application checker.},
+%     label={pseudocode}
+% ]
+% # toy version
+% celexn = {
+%   "buch": {"pl": "er", "gen": "n"}
+%   "kind": {"pl": "er", "gen": "n"}
+%   "hund": {"pl": "e", "gen": "m"}
+% }
+
+% function c1_p_appl
+%   in: smor: triplet analysis
+%   out: true/false
+
+%   # defined over the first
+%   # constituent; potentially
+%   # applicable to any er-plural
+%   fc = smor[0]
+%   if celexn[fc].pl is "er":
+%     return true
+%   else:
+%     return false
+
+% function c1_applies
+%   in: smor: triplet analysis
+%   out: true/false
+
+%   linker = smor[1]
+%   if linker is "er":
+%     return True
+%   else if linker is "0":
+%     return True
+%   else:
+%     return False
+
+% # Buchdeckel: er-plural
+% # with a zero linker
+% smor = buch, 0, deckel
+% c1_p_appl(smor) # true
+% c1_applies(smor) # true
+
+% # Kindesalter: er-plural,
+% # but with -es-
+% smor = kind, es, alter
+% c1_p_appl(smor) # true
+% c1_applies(smor) # false
+
+% # Hundeleine: e-plural
+% smor = hund, e, leine
+% c1_p_appl(smor) # false
+% # c1_applies undefined
+% \end{lstlisting}
+% \end{figure}
+
+
+Finally, we put together all the components to run the experiments. We ran all available Python checkers against every compound in GeCoDB\_v06. As a result, we automatically discovered and marked all compounds to which the corresponding constraints are potentially and actually applicable (individually). In other words, we programmatically formed sets of compounds by potential and actual applicability of each constraint. Finally, we could employ the mathematical formalizations from section~\ref{sec:formal} to calculate the two variants of coverage and regularity for each constraint by measuring the formed sets. For token coverage and regularity, we used the word counts that had been inferred from DeReKo beforehand (see section~\ref{sec:data}).
+
+% Below, we report and discuss the obtained results.
+
+We find it crucial to emphasize the role of the structured linguistic data for our study. The strict triplet structure of SMOR analyses in GeCoDB\_v06 allowed to establish a dense connection to the CELEX-nouns database through reliable lookup of compound constituents in CELEX-nouns. In its turn, the highly structured tabular format of CELEX-nouns played principal role in stable and predictable programmatic access to the desired linguistic properties of the constituents. It is therefore the structural concert of the two data collections that became determinant in reliable automated testing for empirical constraint application in course of our corpus study.
+
+
+%%% RESULTS %%%
+
+\section{Results \& Discussion}
+\label{sec:res}
+
+In total, we obtained type and token coverage and regularity for 31 constraints\footnote{From the 33 constraints available for automated testing, the results for two were discarded due to a low reliability.}. Figure~\ref{res_cov_reg} demonstrates the distribution of the obtained values. Due to the size limitations, we are unable to provide the mapping between the data points and corresponding constraints definitions. If the paper is accepted, we will depict the entire constraint space with the definitions in appendix and will publish it on GitHub.
+
+
+\begin{figure}[!ht]
+
+    \begin{center}
+    
+    \includegraphics[width=\columnwidth]{figures/cov_reg.png}
+    
+    \end{center}
+
+\vspace{-1.8em}
+
+\caption{Distribution of the obtained coverage and regularity values. Each constraint appears twice: on the left and on the right.}
+
+\label{res_cov_reg}
+\end{figure}
+
+
+Both coverage and regularity values fluctuate significantly. Type and token coverage stretch over the entire range of values: they effectively approximate $0.0$ for a few constraints and reach $1.0$ for three constraints (one of them is the default one). The SD of $0.29$ for both variants further confirms a large spread of values. Nevertheless, it can be observed that most of the coverage values concentrate at the bottom part of the graph. Indeed, 27 out of 31 constraints lay below the threshold of 0.2 for both type and token coverage. Going further, type and token coverage both fall under $0.05$ for almost half of the inspected constraints (14). A significant group of constraints (6) exhibit a type and/or token coverage of $<0.01$.
+
+Regularity, on the contrary, is concentrated more compactly. Except for a single constraint, all type and token regularity values lie in range from $0.57$ to $1.0$. They are also distributed much more evenly than the coverage values, with significantly lower SD of $0.18$ and $0.17$, respectively. Even though the full range of values is densely occupied with no significant gaps, there is still a visible shift of values towards the right edge of the axis. Thus, slightly over half of the constraints (17) reach a type and a token regularity of over $0.9$. While 11 constraints turn out to be approximately regular with token regularity of $>0.98$, only 5 of them exhibit a comparable type regularity as well.
+
+No correlation between coverage and regularity was detected, neither for the type nor for the token variant. We conclude that these two properties are independent. Contrary to our expectations, the values of the type and the token variants of the two measures diverged only slightly. MAE of type coverage against token coverage amounts to only $0.016$, and between type and token regularity --- $0.044$.
+
+% By and large, only qualitative studies have been previously conducted on nominal compounding constraints in German. These studies often addressed rather restricted groups of examples. With our experiments, we fill in the gap in the empiric investigation of these constraints on massive data. We empirically verified a set of constraints documented in the linguistic literature. The introduced results support the fact that these constraints are mainly irregular, with only a handful of approximately regular constraints. Furthermore, it was established that most of the constraints are rather fine-grained and cover more restricted classes of nouns. Finally, the absence of any clear dependency between coverage and regularity, combined with a high spread of values, further suggests that the space of nominal constraints is rather chaotic and complex.
+
+Most of our findings corroborate the qualitative evidence from previous literature. However, we find a number of definitions that did not fully conform to the corpus data.. In the next paragraphs, we provide a number of illustrative examples. As mentioned previously, the full results will be published in appendix and on GitHub if paper is accepted.
+
+For 21 out of 31 constraints, we find a firm accordance between the constraint definition and the obtained measures. For example, C1 that reads  "... \textit{mostly} attach \zeroLinker or -\textit{"er}- ...", features a type and a token regularity of $0.86$ and $0.77$. Similarly, C3 ("... \textit{tend} to adopt -\textit{s}- ...") reaches $0.65$ / $0.72$. Most of these constraints are of a moderate regularity. This explains an easy correspondence with the corpus data: the vague quantifiers in their definitions --- such as '\textit{mostly}', '\textit{usually}', '\textit{tend}' etc. --- are truthful for almost any arbitrary value higher than $0.5$. However, a few more regular constraints are also present in this group.
+
+7 constraints that are marked as regular in the literature did not confirm this status on massive data, with a minor divergence. Their type regularity reached only $0.91$ to $0.98$, and token regularity --- $0.79$ to $0.99$. In particular, we find counter-evidence to the claims of \citet[110]{kuerschner_2005} and \citet[9]{schaefer_pankratz_2018} that suggest that first constituents ending in a full vowel always attach \zeroLinker (e.g. Auto{\zeroLinker}bahn '\textit{highway}'). We detected over 400 compounds that do not conform to this constraint. Among them are numerous compounds with the first constituent Idee such as Idee\textbf{n}buch '\textit{book of ideas}' and further compounds e.g. Schuh\textbf{e}kauf '\textit{purchase of shoes}' or Melodie\textbf{n}folge '\textit{melody sequence}'. Otherwise, we discovered counter-examples to \citet[18]{kuerschner_2010} that formulated an L2P constraint restricting -\textit{e}- from appearing after any first constituents except \textit{e}-plural nouns with stressed last syllable. Examples of Maus\textbf{e}falle '\textit{mouse trap}' or compounds with the first constituent Anhalt (Anhalt\textbf{e}ort 'stopping point', Anhalt\textbf{e}weg 'stopping distance') --- 85 compounds in total --- contradict both conditions from this L2P constraint. The other 5 constraints from this group were likewise shown to have numerous counter-examples.
+
+Finally, 3 constraints were severely invalidated by the corpus evidence. By invalidated we mean that their regularity status that were agreed upon in the qualitative studies, was disproved by the empirical data. The first invalidated constraint was formulated in \citet[107]{ortner_mueller-bollhagen_1991}: nouns with suffixes -bold, -nis, -rich, -at, -al that build the plural form with -e regularly attach a zero linker as first constituents (Format{\zeroLinker}vorlage '\textit{format draft}', Personal{\zeroLinker}ausweis '\textit{personal identification}'). In fact, only 0.86 of compounds with such nouns have \zeroLinker (token regularity $0.94$). Numerous (over 300) compounds with first constituents ending with -at in fact attach -\textit{s}-: Magistrat\textbf{s}verfassung '\textit{magistrate constitution}', Dekanat\textbf{s}veranstaltung '\textit{deanery event}', Referat\textbf{s}vorbereitung 'presentation preparation'. For the covered compounds with the other suffixes, the constraint is regular, indeed. The second constraint for which we find a sizable number of counter-examples states that first constituents ending in schwa (especially feminine nouns) regularly attach -\textbf{n}- (such as Blume\textbf{n}strauß '\textit{flower bouquet}'). Even though \citet[573]{fuhrhop_kuerschner_2015}, \citet[112]{kuerschner_2005}, \citet[93]{ortner_mueller-bollhagen_1991}) pointed out that \zeroLinker is approximately equally probable after such nouns if the schwa is a deadjectival or a deverbal suffix, it seems that the real number of such cases in language has been underestimated in the literature. We detected almost 8k compounds with various deverbal and deadjectival first constituents that do not insert an explicit link (e.g. Reise{\zeroLinker}ziel '\textit{destination}', Glätte{\zeroLinker}stelle '\textit{slippery spot}'). A large group of unrelated examples (Gebäude{\zeroLinker}skizze '\textit{building sketch}', Bronze{\zeroLinker}lack '\textit{bronze lacquer}') adds to this significant number, resulting in over 17.5k compounds not conforming to the constraint. In total, this constraint that was previously usually marked as regular, achieves a type regularity of only $0.78$ and a token regularity of $0.63$. These values are comparable with those of moderately regular constraints such as C1 or C3. The third constraint from this group was refuted completely. It originates from \citet[77]{nuebling_szczepaniak_2013} and \citet[74, 75]{ortner_mueller-bollhagen_1991} and says that feminine first constituents ending with [t] often attach -\textit{s}- if the [t] is part of the stem (e.g. Arbeit\textbf{s}tag '\textit{working day}'). We identified that only 0.17 of the covered compounds actually insert -\textit{s}- (token regularity $0.26$). This fact suggests to refute this constraint as in does not hold in the empirical data.
+
+
+The acquired evidence demonstrates that empirical verification of qualitative studies is both necessary and productive of insights. The present corpus study verified 31 constraints collected in the relevant literature. It confirmed 21 constraints, found smaller inconsistencies towards the data in 7 constraint definitions, identified major discrepancies towards the data in 2 constraint definitions, and refuted one constraint. In sum, it thus proposes novel findings on German nominal compounding and highlights the importance of investigating the corpus data within linguistic studies.
+
+
+
+%%% OUTRO %%%
+
+\section{Conclusion}
+\label{sec:outro}
+
+The linker choice in German N+N compounds is highly chaotic and unpredictable. It is governed by a set of (irregular) constraints that cover smaller classes of nouns and may or may not apply. The conditions on potential applicability of constraints are defined over various linguistic domains. The present study collects constraint on documented in the linguistic literature and programmatically investigates their empirical application over a massive compounds corpus. It verifies 31 constraint definitions and compares the regularity status specified in their definitions against the corpus data. It confirms the definitions of 21 constraints and finds novel evidence that challenge the remaining 10 constraints. The present corpus study thus calls attention to the importance and the necessity to support qualitative linguistic studies with empirical investigations.
+
+There are a few limitations known at the current iteration of the study. First, even the extensive cleaning of DeCOW16AX-comps and CELEX2 could not ensure an ideal quality of their modifications. GeCoDB\_v06 contains a number of compounds that duplicate existing compounds with another linker (e.g. Inhalt\textbf{e}filter vs more common Inhalt\textbf{s}filter). These variants are mostly of a much lower frequency and may not all be accepted by the speaker. However, they contribute to the statistics noticeable and serve especially often as counter-examples. GeCoDB\_v06 also still stores some SMOR misanalises that, again, contaminate the statistics. For instance, the word Auto{\zeroLinker}store, misanalyzed by SMOR as Auto\textbf{s}tore, decreases the regularity of the constraint concerning nouns with a final full vowel. CELEX-nouns, in its turn, is quite bad at separating simplices from derivative nouns. Because of that, we could not verify a constraint that covered solely simplex nouns. The second limitation was already introduces: constraints involving semantic and lexical information were taken out of consideration. The reason for that is that semantic and lexical conditions are not binary and therefore require a separate technical apparatus from what we had at our disposal for morphological, phonological etc. conditions. Moreover, CELEX2 does not provide any information from these linguistic domains, which further complicated implementation of these two types of constraint.
+
+In future research, we plan to implement the missing constraints and obtain a full picture of nominal constraints' coverage and regularity. It is also an open question whether the type of linguistic information that a constraint employs has any relation to constraint's coverage and regularity. Finally, during the experiment we detected a large number of constraint conflicts over various compounds. We believe that investigating constraint conflict resolution is a crucial research direction for understanding the complex interaction of the constraints in the process of linker choice. This research question is therefore to be addressed in future studies.
+
+
+\section{Bibliographical References}\label{sec:reference}
+
+\bibliographystyle{lrec2026-natbib}
+\bibliography{bibki}
+
+\section{Language Resource References}
+\label{lr:ref}
+\bibliographystylelanguageresource{lrec2026-natbib}
+\bibliographylanguageresource{languageresource}
+
+
+\end{document}

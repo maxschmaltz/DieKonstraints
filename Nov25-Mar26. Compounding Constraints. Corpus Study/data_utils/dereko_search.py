@@ -155,10 +155,7 @@ async def aget_dereko_counts(
     # under the same procedure as for CELEX nouns, so we offload the frequency
     # retrieval to this separate module
 
-    outpath = "resources/custom/compounding/intermediate_data"
-    os.makedirs(outpath, exist_ok=True)
-
-    freq_path = os.path.join(outpath, "dereko_de_geq70_counts.tsv")
+    freq_path = "resources/developed/dereko_de_geq70_counts.tsv"
 
     if os.path.exists(freq_path):
         freq_df = pd.read_csv(
@@ -290,10 +287,7 @@ def get_dereko_counts(
     # under the same procedure as for CELEX nouns, so we offload the frequency
     # retrieval to this separate module
 
-    outpath = "resources/custom/compounding/intermediate_data"
-    os.makedirs(outpath, exist_ok=True)
-
-    freq_path = os.path.join(outpath, "dereko_de_geq70_counts.tsv")
+    freq_path = "resources/developed/dereko_de_geq70_counts.tsv"
 
     if os.path.exists(freq_path):
         freq_df = pd.read_csv(

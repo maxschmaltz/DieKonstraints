@@ -16,12 +16,14 @@ from . import applicability_checkers
 
 def main():
     
-    inpath = "resources/custom/compounding/intermediate_data"
-    outpath = "resources/custom/compounding/applicability_statistics"
+    gecodb_path = "resources/developed/gecodb_v06.tsv"
+    constr_path = "constraints.yaml"
+    outdir = "out/applicability_statistics"
+    os.makedirs(outdir, exist_ok=True)
 
     # load GeCoDB
     gecodb_v06 = pd.read_csv(
-        os.path.join(inpath, "gecodb_v06.tsv"),
+        gecodb_path,
         sep="\t",
         dtype=str,
         header=0,
@@ -29,7 +31,7 @@ def main():
     )
 
     # load constraints
-    with open("compounding/constraints/constraints.yaml", encoding="utf-8") as f:
+    with open(constr_path, encoding="utf-8") as f:
         constraints: dict = list(yaml.safe_load_all(f))[-1]["constraints"]
         constr_ids = list(constraints.keys())
 
@@ -61,7 +63,7 @@ def main():
             "reg_item",
             "reg_type",
             # "reg_type_abs",
-            # "reg_token",      # can be found in <outpath>/constr_statistics_legacy.tsv
+            # "reg_token",      # can be found in <outdir>/constr_statistics_legacy.tsv
         ]
     )
 
@@ -299,7 +301,7 @@ def main():
         "index": True
     }
 
-    appl_index_path = os.path.join(outpath, "appl_index.tsv")
+    appl_index_path = os.path.join(outdir, "appl_index.tsv")
     appl_index.to_csv(
         appl_index_path,
         **csv_kwargs
@@ -310,7 +312,7 @@ def main():
     os.remove(appl_index_path)
         
     constr_statistics.to_csv(
-        os.path.join(outpath, "constr_statistics.tsv"),
+        os.path.join(outdir, "constr_statistics.tsv"),
         **csv_kwargs
     )
 

@@ -1,0 +1,56 @@
+constr_id	cvg_type	cvg_type_abs	cvg_token	cvg_token_abs	reg_type	reg_type_abs	reg_token	reg_token_abs
+def-0	1.0	425563	1.0	384759992	0.573	243655	0.605	232657466
+p2l:decl_cl:pl:#0-0|def-0	0.123	52463	0.101	39049318	0.91	47757	0.793	30953757
+p2l:decl_cl:pl:#s-0	0.032	13479	0.032	12432678	0.955	12872	0.974	12112968
+p2l:decl_cl:pl:#e-0|def-0	0.182	77545	0.195	74919086	0.691	53611	0.686	51423356
+p2l:decl_cl:pl:#e-0|pl_interpr-e								
+p2l:decl_cl:pl:#e-0|msyl_anim-e								
+p2l:decl_cl:pl:#er-0/er|def-0/er	0.056	23866	0.099	37991163	0.864	20622	0.766	29092638
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0								
+p2l:decl_cl:pl:#er-0/er|mass-interpr-0								
+p2l:decl_cl:pl:#er-0/er|pl_interpr-er								
+p2l:decl_cl:pl:#er-0/er|anim-er								
+p2l:decl_cl:pl:#e_uml-0|def-0	0.109	46231	0.134	51400096	0.755	34910	0.793	40773697
+p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml								
+p2l:decl_cl:pl:#0_uml-0|def-0	0.012	4902	0.01	3767821	0.955	4683	0.956	3603919
+p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml								
+p2l:decl_cl:mixed-0/s/en|def-0/s/en	0.012	5134	0.014	5543273	0.996	5111	0.99	5487772
+p2l:decl_cl:mixed-0/s/en|pl_interpr-en								
+p2l:drv:sfx:0_pl_sfx-0	0.045	18976	0.029	11034787	0.968	18362	0.906	9992479
+p2l:drv:sfx:e_pl_sfx-0	0.005	2323	0.003	1277676	0.859	1996	0.941	1202391
+p2l:drv:deverb_schwa$-0|def-0	0.028	11936	0.022	8468682	0.575	6869	0.734	6213841
+p2l:drv:deverb_schwa$-0|pl_interpr-en								
+p2l:drv:deadj_schwa$-0/en	0.01	4214	0.009	3445507	0.868	3659	0.904	3113944
+p2l:drv:sfx:sfx-s|def-s	0.144	61278	0.109	41842144	0.98	60041	0.986	41243912
+p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en								
+p2l:drv:sfx:deverb_#en$-s	0.008	3536	0.011	4274706	0.913	3227	0.986	4212990
+p2l:drv:sfx:F_#in$-en	0.0	0	0.0	0		0		0
+p2l:drv:prx_deverb-s	0.12	50974	0.098	37783496	0.647	32957	0.721	27248090
+p2l:phon_fin:sibilant$-0	0.097	41270	0.095	36573549	0.951	39255	0.969	35454042
+p2l:phon_fin:vow$-0	0.035	15031	0.028	10867264	0.971	14592	0.991	10767507
+p2l:phon_fin:F_#stressed_phon$-0	0.032	13513	0.029	11121251	0.965	13034	0.979	10887065
+p2l:phon_fin:F_stem_#t$-s	0.046	19721	0.092	35311379	0.165	3254	0.258	9121086
+p2l:phon_fin:schwa$-en	0.152	64588	0.12	46233732	0.727	46966	0.626	28956266
+p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s								
+p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en								
+p2l:sem:comp_type:copula-0								
+p2l:sem:comp_type:arg-s								
+p2l:sem:tech_term-0								
+p2l:sem:2const_anim/pers-s								
+p2l:tend:cmpx_morph-s|def-s	1.0	425563	1.0	384759992	0.806	342971	0.821	315872627
+p2l:tend:cmpx_phon-s|def-s	1.0	425563	1.0	384759992	0.76	323354	0.787	302701655
+p2l:tend:sonority-!s	0.542	230669	0.609	234349175	0.697	160862	0.599	140371357
+p2l:tend:pl_interpr-pl_marker|def-pl_marker								
+l2p:s|smpx_mn	0.043	18438	0.078	30056115	0.826	15225	0.734	22061143
+l2p:s|smpx_high_freq	0.043	18438	0.078	30056115	0.599	11052	0.724	21764237
+l2p:s|f	0.164	69825	0.138	53027970	1.0	69814	1.0	53025946
+l2p:n	0.113	48027	0.076	29357441	0.978	46966	0.986	28956266
+l2p:en|par	0.13	55343	0.088	33707525	0.966	53487	0.982	33099556
+l2p:en|non_par_m								
+l2p:en|non_par_n_pl_interpr								
+l2p:e	0.008	3547	0.005	2082956	0.976	3462	0.993	2067815
+l2p:er	0.014	5881	0.012	4547874	0.999	5876	1.0	4546705
+l2p:e_uml	0.003	1093	0.002	679361	0.999	1092	1.0	679352
+l2p:es								
+l2p:ens								
+l2p:0_uml	0.0	192	0.0	59872	0.99	190	0.998	59743

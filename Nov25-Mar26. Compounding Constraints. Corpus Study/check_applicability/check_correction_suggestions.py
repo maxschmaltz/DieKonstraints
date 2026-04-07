@@ -2,6 +2,8 @@
 #                prepare_gecodb.py has been run and prepared GeCoDB data is available.
 
 
+# TODO merge with check_applicability.py and distinguish by correction_mode=True
+
 import os
 import zipfile
 import pandas as pd
@@ -16,12 +18,14 @@ from . import applicability_checkers
 
 def main():
     
-    inpath = "resources/custom/compounding/intermediate_data"
-    outpath = "resources/custom/compounding/applicability_statistics"
+    gecodb_path = "resources/developed/gecodb_v06.tsv"
+    constr_path = "constraints.yaml"
+    outpath = "out/applicability_statistics"
+    # os.makedirs(outpath, exist_ok=True)
 
     # load GeCoDB
     gecodb_v06 = pd.read_csv(
-        os.path.join(inpath, "gecodb_v06.tsv"),
+        gecodb_path,
         sep="\t",
         dtype=str,
         header=0,
@@ -29,10 +33,10 @@ def main():
     )
 
     # load constraints and correction suggestions
-    with open("compounding/constraints/constraints.yaml", encoding="utf-8") as f:
+    with open(constr_path, encoding="utf-8") as f:
         constraints: dict = list(yaml.safe_load_all(f))[-1]["constraints"]
 
-    with open("compounding/constraints/constraint_corrections.yaml", encoding="utf-8") as f:
+    with open("constraint_corrections.yaml", encoding="utf-8") as f:
         constraint_corrs: dict = list(yaml.safe_load_all(f))[-1]["correction_suggestions"]
         constr_ids = [
             c_id for c_id, constr in constraint_corrs.items()

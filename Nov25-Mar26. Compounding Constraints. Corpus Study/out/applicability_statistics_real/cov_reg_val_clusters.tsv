@@ -1,0 +1,7 @@
+	shared	p2l	l2p
+cvg_over_0.2	4	3	0
+cvg_under_0.2	34	19	15
+cvg_under_0.05	19	10	9
+cvg_under_0.01	3	2	1
+reg_over_0.9	20	9	11
+reg_over_0.98	6	1	5

@@ -1,6 +1,6 @@
 import unittest
 
-from compounding.constraints.data_utils.gecodb_compound_parser import Compound, Stem, Linker
+from data_utils.gecodb_compound_parser import Compound, Stem, Linker
 
 
 class TestGeCoDBParser(unittest.TestCase):

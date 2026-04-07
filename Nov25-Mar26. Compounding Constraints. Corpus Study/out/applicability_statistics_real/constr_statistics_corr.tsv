@@ -1,0 +1,8 @@
+constr_id	n_appl_items	corrected_quantifier	resulting_cvg_item	resulting_cvg_type	resulting_reg_item	resulting_reg_type
+p2l:drv:sfx:e_pl_sfx-0	3614	regularly	0.005	0.004	1.0	0.999
+p2l:drv:sfx:deverb_#en$-s	3614	mostly	0.005	0.009	0.797	0.957
+p2l:phon_fin:vow$-0	3614	regularly	0.026	0.024	0.993	0.997
+l2p:n	4870	all	0.116	0.109	0.988	1.0
+l2p:e|#stressed_syl	4870	all	0.023	0.008	1.0	1.0
+l2p:er|#stressed_syl	4870	all	0.01	0.015	0.979	0.999
+l2p:es|mono_syl	4870	all	0.012	0.011	0.983	0.94

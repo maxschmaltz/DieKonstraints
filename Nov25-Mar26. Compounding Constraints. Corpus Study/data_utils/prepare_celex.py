@@ -60,8 +60,8 @@ def main():
     # 7. Frequency information.             !`gfl.cd` (disregarded)
 
     celex_path = "resources/Celex/german"
-    outpath = "resources/custom/compounding/intermediate_data"
-    os.makedirs(outpath, exist_ok=True)
+    outdir = "resources/developed"
+    os.makedirs(outdir, exist_ok=True)
 
     # We will proceed as follows:
     # 1. Parse `gml.cd`.
@@ -1354,7 +1354,7 @@ def main():
 
     # 13. Save the final table as TSV.
     gmspflw.to_csv(
-        os.path.join(outpath, "celex_nouns.tsv"),
+        os.path.join(outdir, "celex_nouns.tsv"),
         sep="\t",
         index=True,
         header=True
