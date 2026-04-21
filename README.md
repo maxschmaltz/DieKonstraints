@@ -2,7 +2,7 @@
 
 > Compounding Constraints. Corpus Study. Nov25-Mar26
 
-...
+Paper for the [SLiDE Workshop](https://www.slide-workshop.org) @ [LREC26](https://lrec2026.info).
 
 
 ## Abstract
@@ -48,3 +48,8 @@ Trost. 2002. Wordform- and Class-based Prediction of the Components of German No
 * Baayen, R. H. and Piepenbrock, R. and Gulikers, L. 1995. CELEX2. Linguistic Data Consortium, ISLRN 204-698-863-053-1. Web Download.
 * IDS. 2026. Deutsches Referenzkorpus / Archiv der Korpora geschriebener Gegenwartssprache 2026-I. Leibniz-Institut für Deutsche Sprache. PID https://www.ids-mannheim.de/dereko. Release vom 19.01.2026.
 * Schäfer, Roland and Pankratz, Elizabeth. 2018. Dataset: The plural interpretability of German linking elements ("Morphology"). Zenodo. PID https://doi.org/10.5281/zenodo.1323211.
+
+
+## Citation
+
+Coming soon...
