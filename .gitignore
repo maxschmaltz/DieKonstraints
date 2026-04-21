@@ -61,9 +61,3 @@ coverage.xml
 
 # Environment variables
 **.env**
-
-
-# GLOBAL
-
-resources/
-papers/
