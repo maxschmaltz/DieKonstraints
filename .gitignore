@@ -65,7 +65,12 @@ coverage.xml
 
 # PROJECT-SPECIFIC
 
+# resources
 resources/*
 !resources/developed/
 !resources/developed/**
 resources/developed/celex_nouns.tsv
+
+# heavy outputs
+out/applicability_statistics/appl_index.tsv
+out/applicability_statistics/appl_index_corr.tsv
