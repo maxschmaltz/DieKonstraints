@@ -1,4 +1,4 @@
-# DieKonstraintsPrivat
+# DieKonstraints
 
 
 This repository is dedicated to a long-term project called **The Status of Linguistic Constraints in Neural Language Models**. It contains (sub)projects that are incremental steps of the project or are related to it otherwise. Each (sub)project is hosted on a dedicated branch of this repository; please visit the branch of a specific (sub)project for more details about it.
