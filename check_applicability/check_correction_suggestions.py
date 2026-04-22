@@ -19,7 +19,7 @@ from . import applicability_checkers
 def main():
     
     gecodb_path = "resources/developed/gecodb_v06.tsv"
-    constr_path = "constraints.yaml"
+    constr_path = "constraints/constraints.yaml"
     outdir = "out/applicability_statistics"
     # os.makedirs(outdir, exist_ok=True)
 
@@ -36,7 +36,7 @@ def main():
     with open(constr_path, encoding="utf-8") as f:
         constraints: dict = list(yaml.safe_load_all(f))[-1]["constraints"]
 
-    with open("constraint_corrections.yaml", encoding="utf-8") as f:
+    with open("constraints/constraint_corrections.yaml", encoding="utf-8") as f:
         constraint_corrs: dict = list(yaml.safe_load_all(f))[-1]["correction_suggestions"]
         constr_ids = [
             c_id for c_id, constr in constraint_corrs.items()

@@ -17,7 +17,7 @@ from . import applicability_checkers
 def main():
     
     gecodb_path = "resources/developed/gecodb_v06.tsv"
-    constr_path = "constraints.yaml"
+    constr_path = "constraints/constraints.yaml"
     outdir = "out/applicability_statistics"
     os.makedirs(outdir, exist_ok=True)
 

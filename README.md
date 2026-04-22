@@ -10,9 +10,24 @@ Paper for the [SLiDE Workshop](https://www.slide-workshop.org) @ [LREC26](https:
 The N+N compound class is the largest and the most productive class of compounds in German. A significant number of N+N compounds insert a so-called linking element from a large inventory. The linker choice is notoriously irregular; instead of rules, it is governed by a set of constraints that can only limit this choice based on morphological, phonological, sometimes semantic and lexical properties of the first constituent. While constraints on linking element choice in German nominal compounding are extensively researched and well-documented, no large-scale corpus study has ever been reported on the subject of their empirical application. The present work aims at filling in this gap by conducting an extensive corpus study on potential and actual applicability of these constraints. The study summarizes 64 constraints collected from the relevant literature and obtains applicability statistics for 39 of them over 280k+ German N+N compounds. The study both confirms most of the evidence from previous literature and suggests novel evidence on German nominal compounding. It additionally highlights the importance of structured linguistic data for large-scale empirical studies.
 
 
-##
+## Code Structure & Reproducibility
 
-...
+### Constraints
+
+* The scientific sources from which the original constrain definitions were collected can be found in [constraints/references.bib](constraints/references.bib) (BibTex). The private repo also contains the corresponding papers in 
+* 
+
+The summarized and classified constraints gathered from the relevant literature
+
+
+### Data
+
+
+### Experiments & Tests
+
+
+### Output & Results
+
 
 
 ## References
