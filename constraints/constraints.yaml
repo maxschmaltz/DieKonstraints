@@ -59,13 +59,13 @@ readme: |
         * Partially supported. The gap is not critical yet noticeable. Examples: "regular" vs 0.93, "tends" vs 0.6, "sometimes" vs 0.9.
         * Not supported. The discrepancy between the quantifier and the empirical data is too significant to ignore. Examples: "regular" vs 0.85, "tends" vs 0.4.
         * NA: no data available (unreliable or semantic/lexical constraints).
-    * Add the application item property. This property specifies what exact part of the compound is targeted by a given constraint. There are 4 possible types:
+    * Added the application item property. This property specifies what exact part of the compound is targeted by a given constraint. There are 4 possible types:
         * N1. This will be the case for the majority of the constraints.
         * N1 + linker. This is for the L2P constraints, where one N1 may or may not attach the target linker in different compounds, and then only the cases when it does attach it matter; for example, if we consider compounds `mutter_sprache` and `mutter_+=_zentrum`, N1 'mutter' will become the application item for `p2l:decl_cl:pl:#0_uml-0|def-0` but only that case of 'mutter' that does attach a `_+=_` will be the item of application for `l2p:0_uml`. This derives directly from the definitions of these constraints: "... nouns that build the plural form with a zero ending and umlaut" vs "... nouns ... that attach a zero linker with umlaut"
         * N2. For `p2l:sem:2const_anim/pers-s`.
         * The whole compound. This is for the cases when the semantic type of the whole compounds matters, such as `p2l:sem:comp_type:copula-0`.
-    * Add counts of application items of each type.
-    * Detalized a few constraints.
+    * Added counts of application items of each type.
+    * Detailed a few constraints.
 
 
 
