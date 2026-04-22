@@ -22,14 +22,14 @@ To evaluate our hypotheses, we will adopt a set of methods from mechanistic inte
 ## Projects
 
 
-### [The Status of Linguistic Constraints in Neural Language Models](https://github.com/maxschmaltz/DieKonstraintsPrivat/tree/dfg_proposal_sep25) | Aug25-Sep25
+### [The Status of Linguistic Constraints in Neural Language Models](https://github.com/maxschmaltz/DieKonstraints/tree/dfg_proposal_sep25) | Aug25-Sep25
 
 Proposal to the [LaSTing priority program of the DFG](https://www.dfg.de/de/aktuelles/neuigkeiten-themen/info-wissenschaft/2025/ifw-25-32). The public version only contains the abstract of the proposal and the references.
 
 > \<Abstract identical to the [Overall Abstract](#overall-abstract)\>
 
 
-### [Constraints on Linking Element Choice in German Nominal Compounding: A Large-Scale Corpus Study](https://github.com/maxschmaltz/DieKonstraintsPrivat/tree/comp_constr_corp_study_mar26) | Nov25-Mar26
+### [Constraints on Linking Element Choice in German Nominal Compounding: A Large-Scale Corpus Study](https://github.com/maxschmaltz/DieKonstraints/tree/comp_constr_corp_study_mar26) | Nov25-Mar26
 
 Paper for the [SLiDE Workshop](https://www.slide-workshop.org) @ [LREC26](https://lrec2026.info).
 
