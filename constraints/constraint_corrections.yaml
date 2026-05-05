@@ -1,4 +1,14 @@
-readme: This document contains our suggestion to the formulation of constraints that partially / not supported by the empirical data. Besides, corrections for "positively unsupported" constraints are given; these are constraints that are more regular than stated in the literature. For each correction suggestion, the original and the proposed corrected definitions are given. The difference between the original and the suggested definitions is marked with square brackets. The examples and counterexamples are given for the corrected version. For more infos on reading constraint ids, for notes, glossary, topology, and for evidence on constraints and for their further properties see `constraints/constraints.yaml`.
+readme: This document contains our suggestion to the formulation of constraints that partially/not supported by the empirical data. Besides, corrections for "positively unsupported" constraints are given; these are constraints that are more regular than stated in the literature. For each correction suggestion, the original and the proposed corrected definitions are given. The difference between the original and the suggested definitions is marked with square brackets. The examples and counterexamples are given for the corrected version. For more infos on reading constraint ids, for notes, glossary, topology, and for evidence on constraints and for their further properties see `constraints/constraints.yaml`.
+
+
+
+notes:
+
+    - Corrected versions of `p2l:drv:sfx:deverb_#en$-s`, `p2l:phon_fin:vow$-0` add a new lexical condition, and `l2p:e|#stressed_syl`, `l2p:er|#stressed_syl`, and `l2p:es|mono_syl` add a new derivational condition. To be considered in future research.
+
+    - "The \"almost all\" quantifier was positively promoted to \"all\" only in case where literally no counterexamples were found in the data. Otherwise, even if the item regularlty was equal or exceeded 0.98 but there were some counterexamples, we decided to keep the \"almost all\" quantifier (exception: 'Gesetz' for `l2p:es|mono_syl` due to its derivational history in general compatible with the corrected definition)."
+
+    - Correction for `p2l:phon_fin:vow$-0` was tested in a semi-manual way since it contains a lexical condition "... unless this noun is a loanword ...".
 
 ---
 
@@ -122,7 +132,7 @@ correction_suggestions:
 
 
     # 29
-    p2l:phon_fin:vow$-0:
+    p2l:phon_fin:vow$-0: 
     
         orig_summary: First constituents that are constituted by nouns that end in a full vowel [always] adopt a zero linker.
         correction: First constituents that are constituted by nouns that end in a full vowel adopt a zero linker [regularly unless this noun is a loanword that ends with a stressed long [i] (-ie) or a stressed long [e] (-ee)].
@@ -160,7 +170,7 @@ correction_suggestions:
         examples_contra: [arbeit_geber, jugend_alter, umwelt_schutz]
 
 
-    # # 33
+    # # 33: DISCARD AND MERGE WITH (32): even adding a simplex condition that eliminates deverbal and deadjectival nouns from consideration results in item regularity of 0.868; there is therefore no point in distinguishing between feminine and non-feminine nouns ending in schwa since both end up in the moderate regularity level.
     # p2l:phon_fin:schwa$-en|f-en:
     
     #     orig_summary: First constituents that are constituted by feminine nouns that end in schwa adopt -n- [regularly].
@@ -241,7 +251,7 @@ correction_suggestions:
         examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
 
 
-    # 45
+    # 46
     l2p:s|f_poly_syl:
       
         orig_summary: \[Almost] all feminine nouns that constitute first constituents that attach -s- are polysyllabic.
@@ -260,7 +270,7 @@ correction_suggestions:
         examples_contra: []
 
 
-    # 46
+    # 47
     l2p:n:
     
         orig_summary: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa.
@@ -280,7 +290,7 @@ correction_suggestions:
         examples_contra: []
 
 
-    # 47
+    # 48
     l2p:en|par:
       
         orig_summary: \[All] nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
@@ -299,7 +309,7 @@ correction_suggestions:
         examples_contra: [hahn_+en_kamm, mond_+en_schein, instrument_+en_bau]
 
 
-    # 51
+    # 52
     l2p:e|#stressed_syl:
     
         orig_summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable.
@@ -315,11 +325,11 @@ correction_suggestions:
         resulting_item_regularity: 1.0
         resulting_support_level: supported
 
-        examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
-        examples_contra: [anhalt_+e_stelle]
+        examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine, anhalt_+e_stelle]
+        examples_contra: []
 
 
-    # 55
+    # 56
     l2p:er|#stressed_syl:
     
         orig_summary: All nouns that constitute first constituents that attach -(")er have a stressed last syllable.
@@ -339,7 +349,7 @@ correction_suggestions:
         examples_contra: []
 
 
-    # 60
+    # 61
     l2p:es|mono_syl:
     
         orig_summary: All nouns that constitute first constituents that attach -es- are monosyllabic.
