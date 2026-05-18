@@ -59,7 +59,7 @@ The N+N compound class is the largest and the most productive class of compounds
 
 ### Slides
 
-* [slides/](slides/) contains the slides for the oral presentation at the SLiDE workshop at LREC26 ([LREC%20Talk%20Slides.key](slides/LREC Talk Slides.key)) as well as supplementary material (only in the private version).
+* [slides/](slides/) contains the slides for the oral presentation at the SLiDE workshop at LREC26 ([LREC Talk Slides.key](slides/LREC%20Talk%20Slides.key)) as well as supplementary material (only in the private version).
 
 
 ## Reproducibility
