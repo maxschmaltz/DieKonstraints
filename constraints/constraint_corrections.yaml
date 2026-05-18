@@ -1,8 +1,21 @@
-readme: This document contains our suggestion to the formulation of constraints that partially / not supported by the empirical data. Besides, corrections for "positively unsupported" constraints are given; these are constraints that are more regular than stated in the literature. For each correction suggestion, the original and the proposed corrected definitions are given. The difference between the original and the suggested definitions is marked with square brackets. The examples and counterexamples are given for the corrected version. For more infos on reading constraint ids, for notes, glossary, topology, and for evidence on constraints and for their further properties see `constraints/constraints.yaml`.
+readme: This document contains our suggestion to the formulation of constraints that partially/not supported by the empirical data. Besides, corrections for "positively unsupported" constraints are given; these are constraints that are more regular than stated in the literature. For each correction suggestion, the original and the proposed corrected definitions are given. The difference between the original and the suggested definitions is marked with square brackets. The examples and counterexamples are given for the corrected version. For more infos on reading constraint ids, for notes, glossary, topology, and for evidence on constraints and for their further properties see `constraints/constraints.yaml`.
+
+
+
+notes:
+
+    - Corrected versions of `p2l:drv:sfx:deverb_#en$-s`, `p2l:phon_fin:vow$-0` add a new lexical condition, and `l2p:e|#stressed_syl`, `l2p:er|#stressed_syl`, and `l2p:es|mono_syl` add a new derivational condition. To be considered in future research.
+
+    - "The \"almost all\" quantifier was positively promoted to \"all\" only in case where literally no counterexamples were found in the data. Otherwise, even if the item regularlty was equal or exceeded 0.98 but there were some counterexamples, we decided to keep the \"almost all\" quantifier (exception: 'Gesetz' for `l2p:es|mono_syl` due to its derivational history in general compatible with the corrected definition)."
+
+    - Correction for `p2l:phon_fin:vow$-0` was tested in a semi-manual way since it contains a lexical condition "... unless this noun is a loanword ...".
+
+    - For the correction of `l2p:en|par`, the paper contains a typo 'belong are weak nouns' instead of 'belong to weak nouns'.
 
 ---
 
 
+# NEGATIVE CORRECTIONS
 correction_suggestions:
 
     # 3
@@ -24,25 +37,6 @@ correction_suggestions:
         examples_contra: [deck_+s_balken, interim_+s_phase, karneval_+s_kostüm]
 
 
-    # 16
-    p2l:decl_cl:mixed-0/s/en|def-0/s/en:
-      
-        orig_summary: First constituents that are constituted by mixed masculine and neuter nouns [almost always] attach -s-, a zero linker, or -(e)n-.
-        correction: First constituents that are constituted by mixed masculine and neuter nouns [regularly] attach -s-, a zero linker, or -(e)n-.
-
-        rerun: false
-
-        orig_quantifier: almost always
-        orig_item_regularity: 0.997
-        orig_support_level: supported
-
-        corrected_quantifier: regularly
-        resulting_support_level: supported
-
-        examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
-        examples_contra: [schmerz_+ens_schrei]
-
-
     # 19
     p2l:drv:sfx:e_pl_sfx-0:
     
@@ -61,25 +55,6 @@ correction_suggestions:
 
         examples_pro: [erlaubnis_schein, radikal_operation, personal_ausweis]
         examples_contra: [radikal_+e_fänger]
-
-    
-    # 22
-    p2l:drv:deadj_schwa$-0/en:
-    
-        orig_summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix [almost] always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
-        correction: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
-        
-        rerun: false
-
-        orig_quantifier: almost always
-        orig_item_regularity: 0.97
-        orig_support_level: supported
-        
-        corrected_quantifier: always
-        resulting_support_level: supported
-
-        examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
-        examples_contra: [liebe_+s_brief]
 
 
     # 25
@@ -102,27 +77,8 @@ correction_suggestions:
         examples_contra: [essen_portion, leben_geschäft, husten_tropfen, beben_gebiet]
 
 
-    # 28
-    p2l:phon_fin:sibilant$-0:
-    
-        orig_summary: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] [mostly] adopt a zero linker.
-        correction: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] adopt a zero linker [almost regularly].
-
-        rerun: false
-
-        orig_quantifier: mostly
-        orig_item_regularity: 0.97
-        orig_support_level: supported
-
-        corrected_quantifier: almost regularly
-        resulting_support_level: supported
-
-        examples_pro: [gefäß_system, fisch_öl, notiz_buch, herbst_anfang]
-        examples_contra: [gast_+=e_buch, geist_+=er_haus]
-
-
     # 29
-    p2l:phon_fin:vow$-0:
+    p2l:phon_fin:vow$-0: 
     
         orig_summary: First constituents that are constituted by nouns that end in a full vowel [always] adopt a zero linker.
         correction: First constituents that are constituted by nouns that end in a full vowel adopt a zero linker [regularly unless this noun is a loanword that ends with a stressed long [i] (-ie) or a stressed long [e] (-ee)].
@@ -160,8 +116,8 @@ correction_suggestions:
         examples_contra: [arbeit_geber, jugend_alter, umwelt_schutz]
 
 
-    # # 33
-    # p2l:phon_fin:schwa$-en|f-en:
+    # # 33: DISCARD AND MERGE WITH (32): even adding a simplex condition that eliminates deverbal and deadjectival nouns from consideration results in item regularity of 0.868; there is therefore no point in distinguishing between feminine and non-feminine nouns ending in schwa since both end up in the moderate regularity level.
+    p2l:phon_fin:schwa$-en|f-en:
     
     #     orig_summary: First constituents that are constituted by feminine nouns that end in schwa adopt -n- [regularly].
     #     correction: First constituents that are constituted by [simplex] feminine nouns that end in schwa [mostly] adopt -n-.
@@ -182,10 +138,6 @@ correction_suggestions:
     # DISCARDED:
     # p2l:phon_fin:schwa$-en|f-en	3614	mostly	0.115	0.093	0.868	0.867
     # No point of providing a separate constraint for feminine nouns.
-
-
-    # 33
-    p2l:phon_fin:schwa$-en|f-en:
     
         orig_summary: First constituents that are constituted by [feminine] nouns that end in schwa adopt -n- [regularly].
         correction: <MERGE with p2l:phon_fin:schwa$-en|def-en> First constituents that are constituted by nouns that end in schwa mostly adopt -n-.
@@ -197,10 +149,172 @@ correction_suggestions:
         orig_support_level: not supported
 
         corrected_quantifier: mostly
+        # after merge
+        resulting_item_regularity: 0.752
         resulting_support_level: supported
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, blume_+n_strauß]
         examples_contra: [messe_besucher, kohle_faden, hygiene_artikel]
+
+
+    # 47
+    l2p:n:
+    
+        orig_summary: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa.
+        correction: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa [or in [ɐ] (unstressed -er)].
+        
+        rerun: true
+
+        orig_quantifier: all
+        orig_item_regularity: 0.959
+        orig_support_level: partially supported
+
+        corrected_quantifier: all
+        resulting_item_regularity: 0.988
+        resulting_support_level: supported
+
+        examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
+        examples_contra: []
+
+
+    # 48
+    l2p:en|par:
+      
+        orig_summary: \[All] nouns that constitute first constituents that attach -(e)n- belong to weak nouns.
+        correction: \[Almost all] nouns that constitute first constituents that attach -(e)n- belong to weak nouns.
+        
+        rerun: false
+
+        orig_quantifier: all
+        orig_item_regularity: 0.971
+        orig_support_level: partially supported
+
+        corrected_quantifier: almost all
+        resulting_support_level: supported
+
+        examples_pro: [blume_+n_topf, katze_+n_fell, frau_+en_hand]
+        examples_contra: [hahn_+en_kamm, mond_+en_schein, instrument_+en_bau]
+
+
+    # 52
+    l2p:e|#stressed_syl:
+    
+        orig_summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable.
+        correction: All nouns that constitute first constituents that attach -e- have a stressed last syllable [or are derived of those with a stressed prefix].
+        
+        rerun: true
+
+        orig_quantifier: all
+        orig_item_regularity: 0.973
+        orig_support_level: partially supported
+
+        corrected_quantifier: all
+        resulting_item_regularity: 1.0
+        resulting_support_level: supported
+
+        examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine, anhalt_+e_stelle]
+        examples_contra: []
+
+
+    # 56
+    l2p:er|#stressed_syl:
+    
+        orig_summary: All nouns that constitute first constituents that attach -(")er have a stressed last syllable.
+        correction: All nouns that constitute first constituents that attach -(")er have a stressed last syllable [or are derived of those with a stressed prefix].
+
+        rerun: true
+
+        orig_quantifier: all
+        orig_item_regularity: 0.938
+        orig_support_level: partially supported
+
+        corrected_quantifier: all
+        resulting_item_regularity: 0.979
+        resulting_support_level: supported
+
+        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
+        examples_contra: []
+
+
+    # 61
+    l2p:es|mono_syl:
+    
+        orig_summary: All nouns that constitute first constituents that attach -es- are monosyllabic.
+        correction: All nouns that constitute first constituents that attach -es- are monosyllabic [or are derived of those with a prefix].
+        
+        rerun: true
+
+        orig_quantifier: all
+        orig_item_regularity: 0.914
+        orig_support_level: partially supported
+
+        corrected_quantifier: all
+        resulting_item_regularity: 0.983
+        resulting_support_level: supported
+
+        examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, vorjahr_+es_gewinner, bestand_+es_aufnahme]
+        examples_contra: [gesetz_+es_änderung]
+
+
+
+
+# POSITIVE CORRECTIONS
+
+    # 16
+    p2l:decl_cl:mixed-0/s/en|def-0/s/en:
+      
+        orig_summary: First constituents that are constituted by mixed masculine and neuter nouns [almost always] attach -s-, a zero linker, or -(e)n-.
+        correction: First constituents that are constituted by mixed masculine and neuter nouns [regularly] attach -s-, a zero linker, or -(e)n-.
+
+        rerun: false
+
+        orig_quantifier: almost always
+        orig_item_regularity: 0.997
+        orig_support_level: supported
+
+        corrected_quantifier: regularly
+        resulting_support_level: supported
+
+        examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
+        examples_contra: [schmerz_+ens_schrei]
+
+
+    # 22
+    p2l:drv:deadj_schwa$-0/en:
+    
+        orig_summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix [almost] always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
+        correction: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
+        
+        rerun: false
+
+        orig_quantifier: almost always
+        orig_item_regularity: 0.97
+        orig_support_level: supported
+        
+        corrected_quantifier: always
+        resulting_support_level: supported
+
+        examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
+        examples_contra: [liebe_+s_brief]
+
+
+    # 28
+    p2l:phon_fin:sibilant$-0:
+    
+        orig_summary: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] [mostly] adopt a zero linker.
+        correction: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] adopt a zero linker [almost regularly].
+
+        rerun: false
+
+        orig_quantifier: mostly
+        orig_item_regularity: 0.97
+        orig_support_level: supported
+
+        corrected_quantifier: almost regularly
+        resulting_support_level: supported
+
+        examples_pro: [gefäß_system, fisch_öl, notiz_buch, herbst_anfang]
+        examples_contra: [gast_+=e_buch, geist_+=er_haus]
 
 
     # 40
@@ -241,7 +355,7 @@ correction_suggestions:
         examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
 
 
-    # 45
+    # 46
     l2p:s|f_poly_syl:
       
         orig_summary: \[Almost] all feminine nouns that constitute first constituents that attach -s- are polysyllabic.
@@ -258,102 +372,3 @@ correction_suggestions:
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
         examples_contra: []
-
-
-    # 46
-    l2p:n:
-    
-        orig_summary: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa.
-        correction: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa [or in [ɐ] (unstressed -er)].
-        
-        rerun: true
-
-        orig_quantifier: all
-        orig_item_regularity: 0.959
-        orig_support_level: partially supported
-
-        corrected_quantifier: all
-        resulting_item_regularity: 0.988
-        resulting_support_level: supported
-
-        examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
-        examples_contra: []
-
-
-    # 47
-    l2p:en|par:
-      
-        orig_summary: \[All] nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
-        correction: \[Almost all] nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
-        
-        rerun: false
-
-        orig_quantifier: all
-        orig_item_regularity: 0.971
-        orig_support_level: partially supported
-
-        corrected_quantifier: almost all
-        resulting_support_level: supported
-
-        examples_pro: [blume_+n_topf, katze_+n_fell, frau_+en_hand]
-        examples_contra: [hahn_+en_kamm, mond_+en_schein, instrument_+en_bau]
-
-
-    # 51
-    l2p:e|#stressed_syl:
-    
-        orig_summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable.
-        correction: All nouns that constitute first constituents that attach -e- have a stressed last syllable [or are derived of those with a stressed prefix].
-        
-        rerun: true
-
-        orig_quantifier: all
-        orig_item_regularity: 0.973
-        orig_support_level: partially supported
-
-        corrected_quantifier: all
-        resulting_item_regularity: 1.0
-        resulting_support_level: supported
-
-        examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
-        examples_contra: [anhalt_+e_stelle]
-
-
-    # 55
-    l2p:er|#stressed_syl:
-    
-        orig_summary: All nouns that constitute first constituents that attach -(")er have a stressed last syllable.
-        correction: All nouns that constitute first constituents that attach -(")er have a stressed last syllable [or are derived of those with a stressed prefix].
-
-        rerun: true
-
-        orig_quantifier: all
-        orig_item_regularity: 0.938
-        orig_support_level: partially supported
-
-        corrected_quantifier: all
-        resulting_item_regularity: 0.979
-        resulting_support_level: supported
-
-        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
-        examples_contra: []
-
-
-    # 60
-    l2p:es|mono_syl:
-    
-        orig_summary: All nouns that constitute first constituents that attach -es- are monosyllabic.
-        correction: All nouns that constitute first constituents that attach -es- are monosyllabic [or are derived of those with a prefix].
-        
-        rerun: true
-
-        orig_quantifier: all
-        orig_item_regularity: 0.914
-        orig_support_level: partially supported
-
-        corrected_quantifier: all
-        resulting_item_regularity: 0.983
-        resulting_support_level: supported
-
-        examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, vorjahr_+es_winner, bestand_+es_aufnahme]
-        examples_contra: [gesetz_+es_änderung]
