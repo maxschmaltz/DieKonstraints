@@ -10,9 +10,12 @@ notes:
 
     - Correction for `p2l:phon_fin:vow$-0` was tested in a semi-manual way since it contains a lexical condition "... unless this noun is a loanword ...".
 
+    - For the correction of `l2p:en|par`, the paper contains a typo 'belong are weak nouns' instead of 'belong to weak nouns'.
+
 ---
 
 
+# NEGATIVE CORRECTIONS
 correction_suggestions:
 
     # 3
@@ -34,25 +37,6 @@ correction_suggestions:
         examples_contra: [deck_+s_balken, interim_+s_phase, karneval_+s_kostüm]
 
 
-    # 16
-    p2l:decl_cl:mixed-0/s/en|def-0/s/en:
-      
-        orig_summary: First constituents that are constituted by mixed masculine and neuter nouns [almost always] attach -s-, a zero linker, or -(e)n-.
-        correction: First constituents that are constituted by mixed masculine and neuter nouns [regularly] attach -s-, a zero linker, or -(e)n-.
-
-        rerun: false
-
-        orig_quantifier: almost always
-        orig_item_regularity: 0.997
-        orig_support_level: supported
-
-        corrected_quantifier: regularly
-        resulting_support_level: supported
-
-        examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
-        examples_contra: [schmerz_+ens_schrei]
-
-
     # 19
     p2l:drv:sfx:e_pl_sfx-0:
     
@@ -71,25 +55,6 @@ correction_suggestions:
 
         examples_pro: [erlaubnis_schein, radikal_operation, personal_ausweis]
         examples_contra: [radikal_+e_fänger]
-
-    
-    # 22
-    p2l:drv:deadj_schwa$-0/en:
-    
-        orig_summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix [almost] always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
-        correction: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
-        
-        rerun: false
-
-        orig_quantifier: almost always
-        orig_item_regularity: 0.97
-        orig_support_level: supported
-        
-        corrected_quantifier: always
-        resulting_support_level: supported
-
-        examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
-        examples_contra: [liebe_+s_brief]
 
 
     # 25
@@ -110,25 +75,6 @@ correction_suggestions:
 
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
         examples_contra: [essen_portion, leben_geschäft, husten_tropfen, beben_gebiet]
-
-
-    # 28
-    p2l:phon_fin:sibilant$-0:
-    
-        orig_summary: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] [mostly] adopt a zero linker.
-        correction: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] adopt a zero linker [almost regularly].
-
-        rerun: false
-
-        orig_quantifier: mostly
-        orig_item_regularity: 0.97
-        orig_support_level: supported
-
-        corrected_quantifier: almost regularly
-        resulting_support_level: supported
-
-        examples_pro: [gefäß_system, fisch_öl, notiz_buch, herbst_anfang]
-        examples_contra: [gast_+=e_buch, geist_+=er_haus]
 
 
     # 29
@@ -171,7 +117,7 @@ correction_suggestions:
 
 
     # # 33: DISCARD AND MERGE WITH (32): even adding a simplex condition that eliminates deverbal and deadjectival nouns from consideration results in item regularity of 0.868; there is therefore no point in distinguishing between feminine and non-feminine nouns ending in schwa since both end up in the moderate regularity level.
-    # p2l:phon_fin:schwa$-en|f-en:
+    p2l:phon_fin:schwa$-en|f-en:
     
     #     orig_summary: First constituents that are constituted by feminine nouns that end in schwa adopt -n- [regularly].
     #     correction: First constituents that are constituted by [simplex] feminine nouns that end in schwa [mostly] adopt -n-.
@@ -192,10 +138,6 @@ correction_suggestions:
     # DISCARDED:
     # p2l:phon_fin:schwa$-en|f-en	3614	mostly	0.115	0.093	0.868	0.867
     # No point of providing a separate constraint for feminine nouns.
-
-
-    # 33
-    p2l:phon_fin:schwa$-en|f-en:
     
         orig_summary: First constituents that are constituted by [feminine] nouns that end in schwa adopt -n- [regularly].
         correction: <MERGE with p2l:phon_fin:schwa$-en|def-en> First constituents that are constituted by nouns that end in schwa mostly adopt -n-.
@@ -207,67 +149,12 @@ correction_suggestions:
         orig_support_level: not supported
 
         corrected_quantifier: mostly
+        # after merge
+        resulting_item_regularity: 0.752
         resulting_support_level: supported
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, blume_+n_strauß]
         examples_contra: [messe_besucher, kohle_faden, hygiene_artikel]
-
-
-    # 40
-    p2l:tend:cmpx_morph-s|def-s:
-    
-        orig_summary: The probability of -s- [grows irregularly] with the morphological complexity of the first constituent (any form of derivation).
-        correction: The probability of -s- [exhibits a tendency to grow] with the morphological complexity of the first constituent (any form of derivation).
-        
-        rerun: false
-
-        orig_quantifier: irregularly
-        orig_item_regularity: 0.735
-        orig_support_level: supported
-
-        corrected_quantifier: tendency
-        resulting_support_level: supported
-
-        examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
-        examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
-
-
-    # 41
-    p2l:tend:cmpx_phon-s|def-s:
-    
-        orig_summary: The probability of -s- [grows irregularly] with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
-        correction: The probability of -s- [exhibits a tendency to grow] with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
-
-        rerun: false
-
-        orig_quantifier: irregularly
-        orig_item_regularity: 0.723
-        orig_support_level: supported
-
-        corrected_quantifier: tendency
-        resulting_support_level: supported
-
-        examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
-        examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
-
-
-    # 46
-    l2p:s|f_poly_syl:
-      
-        orig_summary: \[Almost] all feminine nouns that constitute first constituents that attach -s- are polysyllabic.
-        correction: All feminine nouns that constitute first constituents that attach -s- are polysyllabic.
-        
-        rerun: false
-
-        orig_quantifier: almost all
-        orig_item_regularity: 0.999
-        orig_support_level: supported
-
-        corrected_quantifier: all
-        resulting_support_level: supported
-
-        examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
-        examples_contra: []
 
 
     # 47
@@ -293,8 +180,8 @@ correction_suggestions:
     # 48
     l2p:en|par:
       
-        orig_summary: \[All] nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
-        correction: \[Almost all] nouns that constitute first constituents that attach -(e)n- belong are weak nouns.
+        orig_summary: \[All] nouns that constitute first constituents that attach -(e)n- belong to weak nouns.
+        correction: \[Almost all] nouns that constitute first constituents that attach -(e)n- belong to weak nouns.
         
         rerun: false
 
@@ -365,5 +252,123 @@ correction_suggestions:
         resulting_item_regularity: 0.983
         resulting_support_level: supported
 
-        examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, vorjahr_+es_winner, bestand_+es_aufnahme]
+        examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, vorjahr_+es_gewinner, bestand_+es_aufnahme]
         examples_contra: [gesetz_+es_änderung]
+
+
+
+
+# POSITIVE CORRECTIONS
+
+    # 16
+    p2l:decl_cl:mixed-0/s/en|def-0/s/en:
+      
+        orig_summary: First constituents that are constituted by mixed masculine and neuter nouns [almost always] attach -s-, a zero linker, or -(e)n-.
+        correction: First constituents that are constituted by mixed masculine and neuter nouns [regularly] attach -s-, a zero linker, or -(e)n-.
+
+        rerun: false
+
+        orig_quantifier: almost always
+        orig_item_regularity: 0.997
+        orig_support_level: supported
+
+        corrected_quantifier: regularly
+        resulting_support_level: supported
+
+        examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
+        examples_contra: [schmerz_+ens_schrei]
+
+
+    # 22
+    p2l:drv:deadj_schwa$-0/en:
+    
+        orig_summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix [almost] always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
+        correction: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
+        
+        rerun: false
+
+        orig_quantifier: almost always
+        orig_item_regularity: 0.97
+        orig_support_level: supported
+        
+        corrected_quantifier: always
+        resulting_support_level: supported
+
+        examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
+        examples_contra: [liebe_+s_brief]
+
+
+    # 28
+    p2l:phon_fin:sibilant$-0:
+    
+        orig_summary: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] [mostly] adopt a zero linker.
+        correction: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] adopt a zero linker [almost regularly].
+
+        rerun: false
+
+        orig_quantifier: mostly
+        orig_item_regularity: 0.97
+        orig_support_level: supported
+
+        corrected_quantifier: almost regularly
+        resulting_support_level: supported
+
+        examples_pro: [gefäß_system, fisch_öl, notiz_buch, herbst_anfang]
+        examples_contra: [gast_+=e_buch, geist_+=er_haus]
+
+
+    # 40
+    p2l:tend:cmpx_morph-s|def-s:
+    
+        orig_summary: The probability of -s- [grows irregularly] with the morphological complexity of the first constituent (any form of derivation).
+        correction: The probability of -s- [exhibits a tendency to grow] with the morphological complexity of the first constituent (any form of derivation).
+        
+        rerun: false
+
+        orig_quantifier: irregularly
+        orig_item_regularity: 0.735
+        orig_support_level: supported
+
+        corrected_quantifier: tendency
+        resulting_support_level: supported
+
+        examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
+        examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
+
+
+    # 41
+    p2l:tend:cmpx_phon-s|def-s:
+    
+        orig_summary: The probability of -s- [grows irregularly] with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
+        correction: The probability of -s- [exhibits a tendency to grow] with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
+
+        rerun: false
+
+        orig_quantifier: irregularly
+        orig_item_regularity: 0.723
+        orig_support_level: supported
+
+        corrected_quantifier: tendency
+        resulting_support_level: supported
+
+        examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
+        examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
+
+
+    # 46
+    l2p:s|f_poly_syl:
+      
+        orig_summary: \[Almost] all feminine nouns that constitute first constituents that attach -s- are polysyllabic.
+        correction: All feminine nouns that constitute first constituents that attach -s- are polysyllabic.
+        
+        rerun: false
+
+        orig_quantifier: almost all
+        orig_item_regularity: 0.999
+        orig_support_level: supported
+
+        corrected_quantifier: all
+        resulting_support_level: supported
+
+        examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
+        examples_contra: []
