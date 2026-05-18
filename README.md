@@ -57,6 +57,11 @@ The N+N compound class is the largest and the most productive class of compounds
 * [src/](src/) contains LaTex source for the paper, and the paper itself is in [Constraints on Linking Element Choice in German Nominal Compounding. A Large-Scale Corpus Study.pdf](Constraints%20on%20Linking%20Element%20Choice%20in%20German%20Nominal%20Compounding.%20A%20Large-Scale%20Corpus%20Study.pdf).
 
 
+### Slides
+
+* [slides/](slides/) contains the slides for the oral presentation at the SLiDE workshop at LREC26 ([LREC Talk Slides.key](slides/LREC Talk Slides.key)) as well as supplementary material (only in the private version).
+
+
 ## Reproducibility
 
 _Please note that due to the copyright restrictions on CELEX2, you can only reproduce the research if you have an access to it in compliance with its [license](https://catalog.ldc.upenn.edu/docs/LDC96L14/celex.readme.html#Copyright)._
