@@ -2,6 +2,8 @@
 
 This file documents ideas we collected and exchanges I had at LREC26. The opinions/findings etc. of the presenters and their answers to my questions are given in the bullet points; I transmit them intact. My comments and conclusions are pre- and appended in plain text. The summaries are sorted by the day, and within a day by importance.
 
+Summaries (or their fragments) that are already incorporated into the working plan are marked with small text.
+
 
 ## SLiDE@LREC26 (11.05)
 
@@ -23,9 +25,13 @@ The study investigates different operations on dense binary vectors for an effec
 
 ### [Subevent Structure as a Predictor of Entity Identity Change in Procedural Text](https://pustejovsky.github.io/slide-lrec2026/book.pdf#page=66) ★★
 
+<small>
+
 > Rim & Pustejovsky
 
 Didn't quite get what the study was about but it suggested me the following possible procedure to identify plural vs singular meaning of N1 in a compound: 1) reformulate the compound periphrastically (e.g. Kindergarten = ein Garten für Kinder); 2) employ some kind of co-occurrence analysis of the main terms in the periphrasis (how exactly?). For step 1, Kyeongmin Rim recommended I take a look at [Ye et al. 2025](https://aclanthology.org/2025.emnlp-main.1315/).
+
+</small>
 
 
 
@@ -62,6 +68,8 @@ Someone suggested that linkers are so irregular due to diachronic standartizatio
 
 ### [Do Language Models Encode Semantic Relations? Probing and Sparse Feature Analysis](https://lrec.elra.info/lrec2026-main-166) ★★
 
+<small>
+
 > Diera & Scherp
 
 The study aimed at answering the question whether LMs are capable od capturing meaning in a structured manner.
@@ -74,6 +82,7 @@ The study aimed at answering the question whether LMs are capable od capturing m
 
 Since even the small Llama3.1 8B detected antonymy quite easily, maybe we can formulate plural meaning identification for N1 as an antonymy detection task? E.g. Kindergarten = ein Garten für Kinder vs Kindergarten = ein Garten für ein Kind.
 
+</small>
 
 
 ### [Are Language Models Borrowing-Blind? A Multilingual Evaluation of Loanword Identification across 10 Languages](https://lrec.elra.info/lrec2026-main-269) ★
@@ -119,6 +128,8 @@ In the further iterations, Bryan Tuck wants to expand the constraint space to in
 
 ### [Automatic Suggestions Help Extending Eventive Ontology: A Case Study on SynSemClass](https://lrec.elra.info/lrec2026-main-620) ★★★
 
+<small>
+
 > Straková et al.
 
 There exists a verb scheme ontology (motion, causal, etc.) with about 1500 different schemes. Correspondingly, when a new verb is about to be added to the ontology, it should be assigned one of the schemes or, in case none fits it, a new scheme. The study used NNs to help extend the ontology in a semi-automatic manner.
@@ -128,6 +139,7 @@ There exists a verb scheme ontology (motion, causal, etc.) with about 1500 diffe
 * For the problem of classification of semantic relations between N1 and N2, the same method may be exploited given sufficient data. This may be used to cluster compounds by the semantic relation between N1 and N2 (25-30 schemes expected, e.g. possessive, modification, copulative etc. meanings) to investigate the semantic relation effect on linker choice. To begin, we can seed three to five known relations and expand as we will be receiving compounds that belong to none of them. Alternatively, this may be used to identify plural/singular meaning of compounds (plural scheme vs singular scheme).
 * If we don't find data (which most likely will be the case), we can try contrastive learning similar to word2vec. We can train a metric/embedding that will be predicting for two arbitrary compounds if they belong together or not, without knowing to which scheme exactly. To do so, we should train an NN in an unsupervised manner on contrastive pairs or a real compound (with some semantic relation between the N1 and N2) vs a nonce compound (where this relation does not hold at all). When this model learns to tell two compounds apart or together, we can cluster the whole space of real compounds by pairwise comparison. We can then inspect the resulting clusters manually to identify the semantic relations within the resulting groups.
 
+</small>
 
 
 ### [Prompt-Based Stance Control in German: An Evaluation of LLMs for Experimental Research on Attitude Change](https://lrec.elra.info/lrec2026-main-644) ★
@@ -153,18 +165,25 @@ This finding ties nicely with the fact that we have groups of inputs with differ
 
 ### [A Study on Building Efficient Zero-Shot Relation Extraction Models](https://lrec.elra.info/lrec2026-main-480) ★
 
+<small>
+
 > Thomas et al.
 
-Not super relevant but suggested an idea similar to one [Rim & Pustejovsky](#subevent-structure-as-a-predictor-of-entity-identity-change-in-procedural-text-) gave me: can we identify plural etc. N1 meaning by retrieving relations from the compound definitions in a dictionary? Or classify the definitions?
+Not super relevant but suggested an idea similar to the one [Rim & Pustejovsky](#subevent-structure-as-a-predictor-of-entity-identity-change-in-procedural-text-) gave me: can we identify plural etc. N1 meaning by retrieving relations from the compound definitions in a dictionary? Or classify the definitions?
+
+</small>
 
 
 
 ### [Evaluating LLM-based Text Simplification for German: Effects on Post-Editing Effort, Quality Ratings, and User Comprehension](https://lrec.elra.info/lrec2026-main-571) ★
 
+<small>
+
 > Carrer et al.
 
 Interesting but irrelevant for us. However, a question arose: how do simplified German deal with compounds? Do it formulate them periphrastically? If so, can we used text simplification to produce periphrastic formulation for step 1 of the approach I formulated after listening to [Rim & Pustejovsky](#subevent-structure-as-a-predictor-of-entity-identity-change-in-procedural-text-)?
 
+</small>
 
 
 ## Main Conference Day 3 (15.05)
@@ -175,7 +194,10 @@ Interesting but irrelevant for us. However, a question arose: how do simplified 
 
 The study tests the abilities of different LMs to semantically parse the input sentence into a predefined semantic scheme that specifies various linguistic aspects separately (quantification, negation, tense, modality etc.). Each trial looks as follows. First, a YARN ([Pavlova et al. 2024](https://aclanthology.org/2024.dmr-1.8/)) representations of a few example sentences and the target sentence are flattened into JSON (and alternative format), and thus the corresponding semantic properties of the sentences are encoded in a structured manner. These representations are injected in the prompt, and the target sentence is given in plain text. The goal of the model is to create the same representation for the target sentence. The output representation is verified against the flattened YARN representation.
 
+<small>
+
 * The modular structure of YARN (flattened) representation allows to test for different linguistic aspects separately (quantification, negation, tense, modality etc.). It turns out that different aspects are parsed by different models with varying performance. Thus for example, a model A may be good at quantification and exhibit a poor quality at modality while another model B can be great at modality while failing at quantification.
+</small>
 * No tested model was good at all the aspects.
 * The representation format also impacted the performance.
 
