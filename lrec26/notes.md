@@ -106,6 +106,8 @@ Correspondingly, different tokenizers have to be tested for our phenomena.
 
 ### [Orthographic Constraint Satisfaction and Human Difficulty Alignment in Large Language Models](https://lrec.elra.info/lrec2026-main-426) ★★★★★
 
+> Tuck & Verma
+
 The study tests various LMs in the task of word generation under given orthographic constraints. In this iteration, made-up strong constraints are targeted. They are formulated as a plain text within the prompt (e.g. "Generate words with characters [a, b, ...], length 4-7 characters, the 3rd character should be a vowel... "), and the task of the LM is to generate all words it can "think" of that satisfies it. At the same time, a daily puzzle app gathered generations from humans under the same constraints, and the generations were used as a gold standard.
 
 * No constraints were violated in any of the LM-generated words but the word space was underexplored by them.
@@ -151,11 +153,15 @@ This finding ties nicely with the fact that we have groups of inputs with differ
 
 ### [A Study on Building Efficient Zero-Shot Relation Extraction Models](https://lrec.elra.info/lrec2026-main-480) ★
 
+> Thomas et al.
+
 Not super relevant but suggested an idea similar to one [Rim & Pustejovsky](#subevent-structure-as-a-predictor-of-entity-identity-change-in-procedural-text-) gave me: can we identify plural etc. N1 meaning by retrieving relations from the compound definitions in a dictionary? Or classify the definitions?
 
 
 
 ### [Evaluating LLM-based Text Simplification for German: Effects on Post-Editing Effort, Quality Ratings, and User Comprehension](https://lrec.elra.info/lrec2026-main-571) ★
+
+> Carrer et al.
 
 Interesting but irrelevant for us. However, a question arose: how do simplified German deal with compounds? Do it formulate them periphrastically? If so, can we used text simplification to produce periphrastic formulation for step 1 of the approach I formulated after listening to [Rim & Pustejovsky](#subevent-structure-as-a-predictor-of-entity-identity-change-in-procedural-text-)?
 
