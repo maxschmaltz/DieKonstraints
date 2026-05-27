@@ -809,7 +809,7 @@ constraints:
               summary: Nouns forming the plural with -(")er tend to choose a zero linker [1] when no plural meaning is present.
               
             - ref: ortner_mueller-bollhagen_1991
-              pages: [99, 108]
+              pages: [102, 108]
               summary: 80% er-plural nouns having a singular meaning choose a zero linker [2].
               
         footnotes:
@@ -882,8 +882,8 @@ constraints:
               summary: -(")er- is often associated with plural meaning, with many counterexamples.
 
             - ref: ortner_mueller-bollhagen_1991
-              pages: [99]
-              summary: er-plural often attach -(")er- to signalize plural meaning, in which case they indicate concrete, countable entities.
+              pages: [99, 102]
+              summary: 3/4 of er-plural compounds with a plural meaning of the first constituent signalize this plural meaning with -(")er.
 
             - ref: schaefer_pankratz_2018
               pages: [29]
@@ -954,7 +954,7 @@ constraints:
         evidence:
 
             - ref: ortner_mueller-bollhagen_1991
-              pages: [83, 107]
+              pages: [83, 107, 110]
               summary: e=plural nouns regularly have a zero linker with a few exceptions.
 
         footnotes: {}
@@ -988,11 +988,16 @@ constraints:
               pages: [81]
               summary: In compounds with -"e-, plural interpretation occurs in most cases.
 
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [110]
+              summary: Monosyllabic strong [1] F [mostly] adopt a [zero linker or] plural suffix only when a plural meaning is present.
+
             - ref: schaefer_pankratz_2018
               pages: [29]
               summary: -"e- exhibits moderate effect on plural reading.
 
-        footnotes: {}
+        footnotes:
+            "1": The original fragment considers both weak F and strong F. For the latter F, see `p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en`.
 
 
 
@@ -1140,7 +1145,7 @@ constraints:
               summary: Monosyllabic M and N [1] with plural interpretation sometimes attach -en-.
 
             - ref: ortner_mueller-bollhagen_1991
-              pages: [92]
+              pages: [92, 96]
               summary: Mixed M can also attach an -(e)n- if the second constitiuent forces its plural meaning; however, there are counterexamples where -(e)n- is attached even when no plural reading is possible.
 
         footnotes:
@@ -1861,7 +1866,7 @@ constraints:
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [94, 110]
-              summary: F not ending in -e do not usually attach -en-; if there is a singular interpretation, they attach a zero linker. Monosyllabic F adopt zero linker [or plural suffix] depending on the plural meaning.
+              summary: F not ending in -e do not usually attach -en-; if there is a singular interpretation, they attach a zero linker. Monosyllabic weak F mostly adopt a zero linker [or plural suffix only when a plural meaning is present].
 
         footnotes: {}
 
@@ -1904,7 +1909,7 @@ constraints:
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [110]
-              summary: Monosyllabic F adopt [zero linker or] plural suffix [2] depending on the plural meaning.
+              summary: Monosyllabic weak [2] F [mostly] adopt a [zero linker or] plural suffix only when a plural meaning is present.
 
             - ref: schaefer_2018
               pages: [29]
@@ -1912,7 +1917,7 @@ constraints:
 
         footnotes:
             "1": Final phoneme (schwa/consonant) not specified.
-            "2": Both weak and strong F are considered there. For strong F, see `p2l:decl_cl:pl:#e_uml-0`.
+            "2": The original fragment considers both weak F and strong F. For the latter F, see `p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml`.
             "3": This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. All the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well.
 
 
@@ -2442,6 +2447,10 @@ constraints:
             - ref: kuerschner_2010
               pages: [9]
               summary: -(e)n- only attaches to nouns forming the plural with -(e)n.
+
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [76]
+              summary: Only 3 % of nouns with -(e)n- do not bild the plural with -(e)n-.
 
             - ref: nuebling_szczepaniak_2008
               pages: [3]
@@ -3035,13 +3044,17 @@ constraints:
               pages: [3]
               summary: When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning [1].
 
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [110]
+              summary: When a plural meaning should be reinforced, the linker identical to the plural ending may appear instead of a zero linker [2].
+
             - ref: schaefer_2018
               pages: [230, 231]
               summary: Linkers identical to the plural ending tend to be associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element.
 
             - ref: schluecker_2023
               pages: [20]
-              summary: Linkers identical to the plural ending can be [2] associated with plural meaning.
+              summary: Linkers identical to the plural ending can be [3] associated with plural meaning.
 
             - ref: wegener_2005
               pages: [173]
@@ -3049,4 +3062,5 @@ constraints:
 
         footnotes:
             "1": The irreguarity of this constraint is quite high, which is supported by the fact this evidence contradicts its definition.
-            "2": Level of regularity not mentioned.
+            "2": Even though the original text does not explicitly say that the linker identical to the plural ending is preferred in this case, all the examples provided for this claim have such linkers.
+            "3": Level of regularity not mentioned.
