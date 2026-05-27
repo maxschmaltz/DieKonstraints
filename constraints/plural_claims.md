@@ -62,3 +62,17 @@ Eine Reihe von Abweichungen. Wenn der Bezug auf eine **Vielheit** verdeutlicht w
 Eine sehr geschlossene Gruppe im Hinblick auf die Fugenverwendung bilden die einsilbigen Feminina. Sie werden mit keiner unparadigmischen Fuge verbunden und mit einer paradigmischen -en- bzw. -e-Fuge nur bei Bezug auf eine **Vielheit**.
 
 Bei einsilbigen Maskulina und Neutra ist keine so feste Regularität, immerhin aber auch eine Tendenz zur Bevorzugung der -0-Fuge (außer bei Bezug auf eine **Vielheit**) zu beobachten.
+
+
+## wegener_2005
+
+[175]
+
+Die Erstglieder von Komposita erscheinen häufig in Pluralform, obwohl sie keine **Pluralbedeutung** aufweisen.
+
+
+## krott_etal_2007
+
+[3]
+
+At least when compounds are presented auditorily, German linking elements that are equivalent to plural suffixes are not perceived as having **plural semantics**.
