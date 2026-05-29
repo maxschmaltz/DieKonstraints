@@ -64,6 +64,7 @@ Eine sehr geschlossene Gruppe im Hinblick auf die Fugenverwendung bilden die ein
 Bei einsilbigen Maskulina und Neutra ist keine so feste Regularität, immerhin aber auch eine Tendenz zur Bevorzugung der -0-Fuge (außer bei Bezug auf eine **Vielheit**) zu beobachten.
 
 
+
 ## wegener_2005
 
 [175]
@@ -71,8 +72,81 @@ Bei einsilbigen Maskulina und Neutra ist keine so feste Regularität, immerhin a
 Die Erstglieder von Komposita erscheinen häufig in Pluralform, obwohl sie keine **Pluralbedeutung** aufweisen.
 
 
+
 ## krott_etal_2007
 
 [3]
 
 At least when compounds are presented auditorily, German linking elements that are equivalent to plural suffixes are not perceived as having **plural semantics**.
+
+
+
+## eisenberg_2013
+
+[228]
+
+Die schwachen Maskulina verwenden konsequent (e)n als Fuge, also ihr Pluralaffix. Formal kann man von einer **Plural**fuge sprechen, nicht aber **semantisch**.
+
+
+[229]
+
+Bei den Feminina... Ist der Stamm einsilbig, so wird die en-Fuge mal gesetzt, mal nicht gesetzt (Burgtor – Burgenblick, Schriftsetzer – Schriftenverzeichnis, Formklasse – Formenlehre, Zeitrechnung – Zeitenfolge). Möglicherweise ergibt sich bei Betrachtung großer Wortklassen hier doch eine Tendenz zur Wahl der Fuge nach der **Pluralbedeutung**.
+
+Die er-Fuge tritt nur bei solchen Substantivstämmen auf, die den Plural ebenfalls auf er bilden und hat nach allgemeiner Auffassung am besten eine **Pluralbedeutung** bewahrt. Die meisten dieser Stämme kommen, wenn sie **eine andere Bedeutung** haben, auch mit anderer oder ohne Fuge vor. Eine **generische** anstatt einer **Plurallesung** setzt sich bei der er-Fuge wiederum bei Tier- und Personenbezeichnungen durch.
+
+
+
+## nübling_szczepaniak_2013
+
+[67]
+
+Linking elements exhibit functional diversity, with some of them even allowing **plural interpretation**, e.g. -er- in Völk+er+kunde ‘ethnology’ vs. Volk+s+kunde ‘folklore’.
+
+
+[79]
+
+-(e)n- is not obligatorily linked with **plural meaning** although this often happens, e.g. Mensch+en+menge ‘crowd’ and Affe+n+theater ‘charade’.
+
+
+[80]
+
+There is, however, as already mentioned, one exception where -en- rather often has plural reading. It can be added to monosyllabic or polysyllabic finalstressed weak feminines only when the **plural interpretation** is allowed. If the **plural reading** is inadequate, another linking element, mostly -s- or zero, has to be chosen: Schrift+en+verzeichnis ‘publication index’, but Schrift+0+führer ‘reporter’; Geburt+en+kontrolle ‘birth control’, Geburt+en+überschuss ‘birth surplus’, but Geburt+s+tag ‘birthday’, Geburt+s+haus ‘birthplace’. Further plural examples are Rarität+en+handel ‘rarity bargain’, Zeit+en+folge ‘sequence of tenses’, Tat+en+drang ‘zest for action’, Zweipartei+en+staat ‘two parties state’, Priorität+en+katalog ‘checklist of priorities’ etc. -en- after feminines with final stress is always linked to **plural**.
+
+Sometimes, (monosyllabic) masculines and neuters also have to be analyzed as **plurals**, but not as obligatorily as the feminines: Staat+en+bund ‘confederation’ (but Staat+s+geheimnis ‘state secret’), Strahl+en+belastung ‘radiation exposure’, Bett+en+zahl ‘accomodation capacity’ (but Bett+0+tuch ‘bed sheet’).
+
+-er- is often associated with **plural meaning**, although there are many counterexamples such as Hühn+er+ei ‘hen’s egg’, Kind+er+auge ‘child eye’, Männ+er+kopf ‘man’s head’, Rind+er+braten ‘roast beef’. However, -er- is not only often interpreted as a **plural** but even alternates with other linking elements with **singular reading**, e.g. Völk+er+kunde ‘ethnology’ vs. Volk+s+kunde ‘folklore’, Brett+er+verschlag ‘board partition’ vs. Brett+0+spiel ‘board game’, Hörn+er+klang ‘sound of bugles’ vs. Horn+Ø+haut ‘horny skin’, Wört+er+buch ‘dictionary’ vs. Wort+0+geschichte ‘etymology’, Güt+er+transport ‘carriage of goods’ vs. Gut+s+herr ‘laird’.
+
+
+[81]
+
+If the plural of the underlying noun is formed with -e+umlaut the **plural interpretation** occurs in most cases: Läus+e+pulver ‘poison against lice’, Städt+e+planer ‘town planner’, Gäst+e+buch ‘guestbook’, Ärzt+e+kongress ‘doctors’ congress’.
+
+
+[83]
+
+The linking -en- (after feminines with final stress) still has an additional function of expressing **plural meaning**.
+
+
+[84]
+
+The **plural interpretation** holds for -en- (after weak feminines with final stress) and, sometimes, for -er- and umlaut/-e-.
+
+
+
+## schaefer_2018
+
+[230]
+
+Fugen, die mit den Pluralmarkierungen des Erstglieds identisch sind, haben im Kompositum keine **generelle Pluralbedeutung**. Im Fall von Hemdenkauf handelt es sich zum Beispiel nicht notwendigerweise um den Kauf mehrerer Hemden. In Schäfer & Pankratz (2018) wurde aber mittels einer großen Korpusstudie und eines psycholinguistischen Experiment gezeigt, dass sie unter bestimmten Bedingungen mit **Pluralbedeutungen** assoziiert sind. Wenn das Zweitglied semantisch etwas bezeichnet, das eine **pluralische** oder **kollektive Bedeutung** für das Erstglied erzwingt, dann steht das Erstglied präferiert mit Pluralfuge. Zweitglieder, die eine solche Bedeutung haben, sind zum Beispiel Kollektivbezeichnungen wie Haufen oder Gruppe (z. B. Birne.n-haufen, Frau-en.gruppe), Bezeichnungen für wechselseitige Relationen wie Distanz oder Austausch (z. B. Bett-en.distanz, Gedanke-n.austausch) und eingeschränkt (nur unter semantischen und kontextuellen Zusatzbedingungen) Behälter-/ Sammelbezeichnungen wie Kiste oder Katalog (z. B. Schraube-n.kiste, Frage-n.katalog). Im Experiment bevorzugten die Teilnehmenden deutlich Bäderkooperation gegenüber Badkooperation (erzwungene **Pluralbedeutung**), aber Badeingang gegenüber Bädereingang (keine erzwungene **Pluralbedeutung**). Ähnlich verhielt es sich bei Schwertabdruck gegenüber Schwertersammlung usw. Das Phänomen der Pluralfugen ist aus Sicht der systematischen Grammatik insofern schwierig, als es keine klar benennbare formale Regularität gibt, wann die Pluralfuge stehen muss, und wann sie auf jeden Fall **Pluralbedeutung** hat. Wenn die **Pluralbedeutung** sowieso durch das Zweitglied erzwungen wird, dann präferieren wir die Pluralfuge gegenüber anderen Fugen, sofern nicht andere morphosyntaktische Gründe gegen die Pluralfuge sprechen. Dass die Generalisierung weich ist, erkennt man auch daran, dass der Effekt umso stärker ist, je eindeutiger die entsprechende Fuge als Pluralkennzeichen erkennbar ist.
+
+
+[231]
+
+Fugenelemente, die mit dem Plural identisch sind, sind aber tendentiell mit **Pluralbedeutung** assoziiert.
+
+
+## schaefer_pankratz_2018
+
+[29]
+
+N1s with =e and =er especially show good effect strengths in addition to reaching reasonable significance levels. Those with -er and= show mixed results, and for -e, -en, and -n, we find only very weak effects and non- significant p-values, which would normally be dismissed completely. However, even though the results for the last-mentioned PLs are negligible by themselves, it should still be noticed that all N1s show a positive effect except Ei ‘egg’ and Katze ‘cat’, which lean ever so slightly towards the negative side. These results thus support the hypothesis that there is a general co-occurrence preference between PL and an **internal plural relation**. The less type-frequent a plural marker is, the more strongly it tends to be interpreted as a plural marker even when used as a linking element.

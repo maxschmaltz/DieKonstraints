@@ -474,7 +474,35 @@ topology:
             - l2p:0_uml
 
             # 39
-            - l2p:pl_marker
+            - l2p:pl_marker:
+                summary: Linkers that are identical to the plural ending of the first constituent in a given compound tend to be associated with a plural meaning of this first constituent within the compound.
+                children:
+                
+                    - l2p:pl_marker|def-pl
+
+                    - p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en    # EXTERNAL
+
+                    - p2l:decl_cl:pl:#e-0|pl_interpr-e    # EXTERNAL
+                    
+                    - p2l:decl_cl:pl:#er-0/er|!pl_interpr-0    # EXTERNAL
+                    
+                    - p2l:decl_cl:pl:#er-0/er|pl_interpr-er    # EXTERNAL
+                    
+                    - p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml    # EXTERNAL
+                    
+                    - p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml    # EXTERNAL
+                    
+                    - p2l:decl_cl:mixed-0/s/en|pl_interpr-en    # EXTERNAL
+                    
+                    - p2l:drv:deverb_schwa$-0|pl_interpr-en    # EXTERNAL
+                    
+                    - p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en    # EXTERNAL
+                    
+                    - p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s    # EXTERNAL
+                    
+                    - p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en    # EXTERNAL
+                    
+                    - l2p:en|non_par_n_pl_interpr    # EXTERNAL
 
 
 constraints:
@@ -535,8 +563,12 @@ constraints:
               pages: [50, 52, 54, 103]
               summary: Most nominal compounds have a zero linker (in about 2/3 of cases).
 
+            - ref: schaefer_2018
+              pages: [229]
+              summary: The most frequent case is zero linker.
+
             - ref: schaefer_pankratz_2018
-              pages: [8, 9]
+              pages: [6, 8, 9]
               summary: 65-70% of compounds have a zero linker.
 
             - ref: schluecker_2012
@@ -807,14 +839,19 @@ constraints:
             - ref: eisenberg_2013
               pages: [229]
               summary: Nouns forming the plural with -(")er tend to choose a zero linker [1] when no plural meaning is present.
+
+            - ref: nuebling_szczepaniak_2013
+              pages: [81]
+              summary: -(")er- alternates with other linking elements with singular reading [2].
               
             - ref: ortner_mueller-bollhagen_1991
               pages: [102, 108]
-              summary: 80% er-plural nouns having a singular meaning choose a zero linker [2].
+              summary: 80% er-plural nouns having a singular meaning choose a zero linker [3].
               
         footnotes:
             "1": Even though original text reads 'otherwise a zero linker or another linker', none of the provided examples illustrate the use of linkers other than zero or -(")er-.
-            "2": Note that non-N+N compounds are included in this statistics.
+            "2": Since -(")er- is always paradigmatic, the claim concerns (")er-plural nouns.
+            "3": Note that non-N+N compounds are included in this statistics.
 
 
     # 9
@@ -878,7 +915,7 @@ constraints:
               summary: er-plural nouns tend to choose -(")er- when a plural meaning is present.
 
             - ref: nuebling_szczepaniak_2013
-              pages: [80, 81]
+              pages: [80, 81, 84, 87]
               summary: -(")er- is often associated with plural meaning, with many counterexamples.
 
             - ref: ortner_mueller-bollhagen_1991
@@ -985,7 +1022,7 @@ constraints:
         evidence:
 
             - ref: nuebling_szczepaniak_2013
-              pages: [81]
+              pages: [81, 84, 87]
               summary: In compounds with -"e-, plural interpretation occurs in most cases.
 
             - ref: ortner_mueller-bollhagen_1991
@@ -1246,12 +1283,17 @@ constraints:
 
         evidence:
 
+            - ref: eisenberg_2013
+              pages: [229]
+              summary: Possible reference to a verbal stem in F ending in schwa may lead to other linkers other than -(e)n- [1].
+
             - ref: ortner_müller-bollhagen_1991
               pages: [93]
               summary: deverbal F ending in schwa suffix mostly have a zero linker.
 
         footnotes:
-            "1": "Evidence from [fuhrhop_kürschner_2015:573] and [kürschner_2005:112] are disregarded here as, even though not explicitly stated, those concern deadjectivals (see footnotes from `p2l:drv:deverb_schwa$-0|def-0`)."
+            "1": The examples of the other linkers are zero linker and schwa deletion.
+            "2": "Evidence from [fuhrhop_kürschner_2015:573] and [kürschner_2005:112] are disregarded here as, even though not explicitly stated, those concern deadjectivals (see footnotes from `p2l:drv:deverb_schwa$-0|def-0`)."
 
 
     # 21
@@ -1904,8 +1946,8 @@ constraints:
               summary: -(e)n- sometimes has a plural meaning (especially after weak F [1]).
 
             - ref: nuebling_szczepaniak_2013
-              pages: [80]
-              summary: -en- attaches regularly to monosyllabic or polysyllabic final-stressed weak F when the plural interpretation is allowed, with a very few counterexamples.
+              pages: [77, 80, 83, 84, 87]
+              summary: "-en- after (monosyllabic or polysyllabic) final-stressed weak F is linked to plural: it attaches regularly to them when the plural interpretation is allowed, with a very few counterexamples, and they regularly exhibit a plural meaning when occurring with the linker -(e)n-."
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [110]
@@ -3017,7 +3059,7 @@ constraints:
 
 
     # 64
-    l2p:pl_marker:
+    l2p:pl_marker|def-pl:
       
         summary: Linkers that are identical to the plural ending of the first constituent in a given compound tend to be associated with a plural meaning of this first constituent within the compound.
         ling_info_type: [morphological, semantic]
@@ -3050,11 +3092,11 @@ constraints:
 
             - ref: schaefer_2018
               pages: [230, 231]
-              summary: Linkers identical to the plural ending tend to be associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element.
+              summary: Linkers identical to the plural ending tend to be associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element. However, there is no regularity in when a plural linker should be present and when it should necessarily express a plural meaning.
 
-            - ref: schluecker_2023
-              pages: [20]
-              summary: Linkers identical to the plural ending can be [3] associated with plural meaning.
+            - ref: schaefer_pankratz_2018
+              pages: [1, 3, 29]
+              summary: There is an overall tendency that German language users do use pluralic linking elements as cues to the internal plural interpretation of N+N compounds.
 
             - ref: wegener_2005
               pages: [173]
