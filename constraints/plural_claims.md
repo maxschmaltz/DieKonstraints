@@ -150,3 +150,18 @@ Fugenelemente, die mit dem Plural identisch sind, sind aber tendentiell mit **Pl
 [29]
 
 N1s with =e and =er especially show good effect strengths in addition to reaching reasonable significance levels. Those with -er and= show mixed results, and for -e, -en, and -n, we find only very weak effects and non- significant p-values, which would normally be dismissed completely. However, even though the results for the last-mentioned PLs are negligible by themselves, it should still be noticed that all N1s show a positive effect except Ei ‘egg’ and Katze ‘cat’, which lean ever so slightly towards the negative side. These results thus support the hypothesis that there is a general co-occurrence preference between PL and an **internal plural relation**. The less type-frequent a plural marker is, the more strongly it tends to be interpreted as a plural marker even when used as a linking element.
+
+
+[37]
+
+Both in the corpus study and the split-100 experiment, we found evidence that writers prefer to use a PL when N1 necessarily has a plural interpretation due to compound-internal semantics (**internal plural effect**).
+
+
+[38]
+
+The order of preference was =e ≫=er ≫ -er ≫= ≫-e ≫-en ≫-n. The strength of the **internal plural effect** is thus by and large negatively correlated with the type frequency of nouns which take the respective plural. This means that plural interpretation of PLs is stronger with what Köpcke (1993) calls a higher Signalstärke ‘signal strength’ of the PL as a plural marker. We conclude that writers associate plural meaning more strongly with PLs if the PL itself is more strongly associated with plurality, i. e., has greater signal strength.
+
+
+[40]
+
+Our study has helped to show that German PLs can indeed have a **plural interpretation**. More importantly, we have shown that there are differences in when this interpretation is available: primarily, when the head of the compound is a collective noun. This forces a **plural interpretation** upon the N1 which represents multiple members of this collective, and this **plural intepretation** is reflected in an inclination toward the interpretation of a pluralic linking element as a plural marker.

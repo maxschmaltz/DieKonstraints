@@ -663,6 +663,10 @@ constraints:
             - ref: schaefer_2018
               pages: [229]
               summary: s-plural nouns never attach -s-.
+
+            - ref: schaefer_pankratz_2018
+              pages: [37]
+              summary: Words ending in full vowels, which have an -s plural, resist -s linking elements strongly.
         
         footnotes:
             "1": "The given counterexample uhu_+s_nest originating from [wegener_2003:433] could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
@@ -1422,7 +1426,7 @@ constraints:
 
             - ref: nuebling_szczepaniak_2008
               pages: [10, 20, 23]
-              summary: -s- occurs regularly after suffixes -ung, -heit, -keit, -igkeit, -sal, -schaft, -ling, -ität, -ion [1]; derivations in -um also tend to adopt -s- [1].
+              summary: -s- occurs regularly after suffixes -ung, -heit, -keit, -igkeit, -sal, -schaft, -ling, -ität, -ion [1]; derivations in -um also tend to adopt -s- [1, 6].
 
             - ref: nuebling_szczepaniak_2013
               pages: [77]
@@ -1454,6 +1458,7 @@ constraints:
             "3": "Explanation: these are (except for -schaft) closing suffixes, and -s- reopens the stem for further derivation."
             "4": Even though not explicitly stated, we assume that the authors refer to these suffixes, as, to the best of our knowledge, these are the only suffixes in German that regularly trigger the insertion of -s-. To be considered indirect evidence.
             "5": Level of regularity not mentioned.
+            "6": Cited by [kuerschner_2010:25].
 
 
     # 24
@@ -1612,7 +1617,7 @@ constraints:
 
             - ref: nuebling_szczepaniak_2008
               pages: [18, 19]
-              summary: Dererbatives with unstressed prefixes attach -s- in 85%, and with stressed prefixes in 36% of cases [4, 5].
+              summary: Dererbatives with unstressed prefixes attach -s- in 85%, and with stressed prefixes in 36% of cases [4, 5, 7].
 
             - ref: nuebling_szczepaniak_2013
               pages: [78]
@@ -1629,6 +1634,7 @@ constraints:
             "4": "The results of [nuebling_szczepaniak_2008] (provided again in [nuebling_szczepaniak_2013]) are based on a corpus study but are however subject to questions because of the methodology used. First of all, only 21 nouns with unstressed and 19 nouns with stressed prefixes were considered for further combinations, which is a very small sample. Even though the number of resulting compounds was very large, the fact that the same nouns tend to occur with the same linkers discards the representativeness of the large sample size. Furthermore, many of the prefixed nouns were derivates from the same verb (e.g. 'Ansicht', 'Aufsicht', 'Übersicht') which again reduces the diversity of the sample. Furthermore, no specific examples were provided in the paper, whereas further literature suggest several counterexamples to the claim about derivatives with stressed prefixes. Hence, we believe the absolute numbers provided in [nuebling_szczepaniak_2008] might not be very reliable."
             "5": "Explanation: unstressed prefixes form phonologically bad words. -s- is therefore used to mark the boundary of the phonological word starting with such a suffix."
             "6": Evidence for `p2l:phon_fin:sibilant$-0` > `p2l:drv:prx_deverb-s`.
+            "7": Cited by [kuerschner_2010:25].
     
 
     # 1.3. Constraints that map final phoneme(s) of compounds to most probable linkers.
@@ -1703,7 +1709,7 @@ constraints:
               summary: After a full vowel, a zero linker always appears.
 
             - ref: schaefer_pankratz_2018
-              pages: [9]
+              pages: [9, 37]
               summary: Nouns ending in a full vowel occur with a zero linker.
 
         footnotes:
@@ -1960,7 +1966,7 @@ constraints:
         footnotes:
             "1": Final phoneme (schwa/consonant) not specified.
             "2": The original fragment considers both weak F and strong F. For the latter F, see `p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml`.
-            "3": This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. All the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well.
+            "3": This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. All the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F) (see [nuebling_szczepaniak_2013]), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well.
 
 
     # 1.4. Constraints that map semantic properties of compounds/first constituents to most probable linkers.
@@ -2084,7 +2090,7 @@ constraints:
               summary: "[If 'Herz' is used in a medical context, it adopts a zero linker. [1]]."
 
         footnotes:
-            "1": This findings are provided as examples of the constraint.
+            "1": These findings are provided as examples of the constraint.
 
 
 
@@ -2210,7 +2216,7 @@ constraints:
               summary: The greater the distance of the word to the phonological ideal (trochee with schwa in the second syllable), the more probable the occurrence of -s-.
 
         footnotes:
-            "1": These results are also mentioned in literature review in [kuerschner_2010:24], however, without an explicit estimation of the claim's validity.
+            "1": Cited by [kuerschner_2010:24,25].
             "2": Many cases of phonological complexity are bound to morphological complexity of the constituents -- [fuhrhop_kuerschner_2015:572] -- (see `p2l:drv:sfx:sfx-s|def-s`, `p2l:drv:prx_deverb-s`). NB! Only a few of the corresponding pieces of evidence claim that these derivational processes increase the probability of -s- particularly because of the bad phonological structures of the derivates.
 
 
@@ -2257,11 +2263,11 @@ constraints:
 
             - ref: wegener_2003
               pages: [434]
-              summary: -s- never occurs after a full vowel [1] (except for uhu_+s_nest [2]).
+              summary: -s- never occurs after a full vowel [1] (except for uhu_+s_nest [2, 5]).
 
             - ref: wegener_2005
               pages: [180, 181, 182]
-              summary:  "In a simplex, the less the sonority of its code segment, the more probable -s-. It therefore mostly occurs after plosives, much rarer after nasals and liquids, and (whenever possible) never after a full vowel. Corpus data: ~17% after plosives, ~3% after nasals and liquids [3], no occurrences after full vowels [and [st] [4]]."
+              summary:  "In a simplex, the less the sonority of its code segment, the more probable -s-. It therefore mostly occurs after plosives, much rarer after nasals and liquids, and (whenever possible) never after a full vowel. Corpus data: ~17% after plosives, ~3% after nasals and liquids [3], no occurrences after full vowels [and [st] [4]] [5]."
 
 
         footnotes:
@@ -2269,7 +2275,8 @@ constraints:
             "2": "The given counterexample uhu_+s_nest could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
             "3": Recalculated across groups of codas, for individual percentages see table in [wegener_2005:181].
             "4": See more in `phon_fin:fricative$-0`.
-            "5": None of the sources explicitly mention the effect of the constraint on the occurrence of -s- after fricatives. For a particular case with sibilants, see `p2l:phon_fin:sibilant$-0`. 
+            "5": Cited by [kuerschner_2010:24].
+            "6": None of the sources explicitly mention the effect of the constraint on the occurrence of -s- after fricatives. For a particular case with sibilants, see `p2l:phon_fin:sibilant$-0`. 
 
 
 
@@ -3095,8 +3102,8 @@ constraints:
               summary: Linkers identical to the plural ending tend to be associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element. However, there is no regularity in when a plural linker should be present and when it should necessarily express a plural meaning.
 
             - ref: schaefer_pankratz_2018
-              pages: [1, 3, 29]
-              summary: There is an overall tendency that German language users do use pluralic linking elements as cues to the internal plural interpretation of N+N compounds.
+              pages: [1, 3, 29, 37]
+              summary: There is an overall tendency that German language users do use pluralic linking elements as cues to the internal plural interpretation of N+N compounds [4].
 
             - ref: wegener_2005
               pages: [173]
@@ -3106,3 +3113,4 @@ constraints:
             "1": The irreguarity of this constraint is quite high, which is supported by the fact this evidence contradicts its definition.
             "2": Even though the original text does not explicitly say that the linker identical to the plural ending is preferred in this case, all the examples provided for this claim have such linkers.
             "3": Level of regularity not mentioned.
+            "4": Cited by [schlücker_2023:20].
