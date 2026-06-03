@@ -165,3 +165,37 @@ The order of preference was =e ≫=er ≫ -er ≫= ≫-e ≫-en ≫-n. The stren
 [40]
 
 Our study has helped to show that German PLs can indeed have a **plural interpretation**. More importantly, we have shown that there are differences in when this interpretation is available: primarily, when the head of the compound is a collective noun. This forces a **plural interpretation** upon the N1 which represents multiple members of this collective, and this **plural intepretation** is reflected in an inclination toward the interpretation of a pluralic linking element as a plural marker.
+
+
+## koester_etal_2004
+
+[1653]
+
+Often linking elements are identical in form to the plural morpheme of the preceding constituent, for instance, 'Traubenkerne' (grape[s] seeds) and therefore one proposed function of linking elements is to **indicate the number** of the preceding constituent. However, the number function does not apply systematically. For example, 'Fischgeschäft' (fish shop) refers certainly to a shop containing more than one fish; however, 'Fisch' is singular. Moreover, the **plural reading** of the nonhead constituent may additionally depend on the number of the head constituent as one 'Traubenkern' (grape[s] seed) cannot possibly stem from more than one grape. In such cases, the number of nonhead constituents is not determined sufficiently by the linking element, thus rendering its function questionable.
+
+
+[1655]
+
+The results of Experiment 2 do not support the interpretation of linking elements as plural morphemes.
+
+
+[1657]
+
+Linking elements of noun–noun compounds do not indicate by their presence or absence the number of the preceding constituent. That is, numerals and nonhead constituents were not processed as incongruent in number.
+
+
+[1659]
+
+The behavioral as well as the ERP results do not support the concept that linking elements are plural morphemes. Compound constituents elicited more errors and required more time for the agreement judgment than single nouns. These effects reflect a functional difference in processing because the same words were used in both prosodic conditions. They suggest that the compound prosody makes it harder to evaluate the linking elements as plural morphemes (and their absence as indicating singular). Hence, we conclude that linking elements are not processed primarily as plural morphemes.
+
+
+[1661]
+
+Phonologically identical morphemes serve different functions in single noun and compound processing. That is, linking elements are not processed as plural morphemes.
+
+Experiment 2 showed that the number of nonhead constituents is not processed (i.e., linking elements are not plural morphemes). 
+
+
+[1662]
+
+Linking elements that are homophonous with plural morphemes are not processed as plural morphemes.

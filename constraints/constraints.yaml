@@ -547,6 +547,10 @@ constraints:
               pages: [3]
               summary: 60% of compounds have a zero linker.
 
+            - ref: koester_etal_2004
+              pages: [1653]
+              summary: About 35% of German nominal compounds contain such linking elements.
+
             - ref: kuerschner_2005
               pages: [107]
               summary: 58% of compounds have a zero linker.
@@ -647,6 +651,10 @@ constraints:
             - ref: fuhrhop_kuerschner_2015
               pages: [572]
               summary: -s- is impossible with s-plural nouns.
+
+            - ref: koester_etal_2004
+              pages: [1653]
+              summary: The linking -s- does not appear within German compounds as a possible plural morpheme.
 
             - ref: kuerschner_2010
               pages: [9]
@@ -3089,8 +3097,8 @@ constraints:
 
         evidence:
 
-            - ref: krott_etal_2007
-              pages: [3]
+            - ref: koester_etal_2004
+              pages: [1655, 1657, 1659, 1661, 1662]
               summary: When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning [1].
 
             - ref: ortner_mueller-bollhagen_1991
