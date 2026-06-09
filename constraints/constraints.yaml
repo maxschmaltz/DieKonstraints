@@ -3099,11 +3099,11 @@ constraints:
 
             - ref: koester_etal_2004
               pages: [1655, 1657, 1659, 1661, 1662]
-              summary: When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning [1].
+              summary: When presented auditorily, linkers that are equivalent to plural endings are not perceived as having plural meaning [1, 2].
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [110]
-              summary: When a plural meaning should be reinforced, the linker identical to the plural ending may appear instead of a zero linker [2].
+              summary: When a plural meaning should be reinforced, the linker identical to the plural ending may appear instead of a zero linker [3].
 
             - ref: schaefer_2018
               pages: [230, 231]
@@ -3118,7 +3118,7 @@ constraints:
               summary: First constituents of compounds often occur with a linker identical to the plural ending when no plural meaning is intended [1].
 
         footnotes:
-            "1": The irreguarity of this constraint is quite high, which is supported by the fact this evidence contradicts its definition.
-            "2": Even though the original text does not explicitly say that the linker identical to the plural ending is preferred in this case, all the examples provided for this claim have such linkers.
-            "3": Level of regularity not mentioned.
+            "1": The irreguarity of this constraint is quite high, which is supported by the fact that this evidence contradicts its definition.
+            "2": Cited by [krott_etal_2007:3], [nübling_szczepaniak_2013:77]. An explanation to the negativity of the results is also suggested in [scschaefer_pankratz_2018:39].
+            "3": Even though the original text does not explicitly say that the linker identical to the plural ending is preferred in this case, all the examples provided for this claim have such linkers.
             "4": Cited by [schlücker_2023:20].
