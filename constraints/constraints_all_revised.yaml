@@ -47,7 +47,7 @@ readme: |
 
     ## Changelog
 
-    This is version 2 of the constraint list. It was obtained by revising the previous version of the constraint list, which was a result of [_Constraints on Linking Element Choice in German Nominal Compounding: A Large-Scale Corpus Study_](https://github.com/maxschmaltz/DieKonstraints/tree/comp_constr_corp_study_mar26), and incorporating the correction suggestions from the same study. The revision corrected a few minor mistakes in the evidence summaries and expanded those; no constraint definitions were changed as a result of the revision. Incorporating the correction suggestions has changed the definitions of the constraints that were partially/not supported by the empirical data, as reported in the corpus study.
+    This is version 2 of the constraint list. It was obtained by revising the [previous version](https://github.com/maxschmaltz/DieKonstraints/blob/comp_constr_corp_study_mar26/constraints/constraints.yaml) of the constraint list, which was a result of [_Constraints on Linking Element Choice in German Nominal Compounding: A Large-Scale Corpus Study_](https://github.com/maxschmaltz/DieKonstraints/tree/comp_constr_corp_study_mar26), and incorporating the [correction suggestions](https://github.com/maxschmaltz/DieKonstraints/blob/comp_constr_corp_study_mar26/constraints/constraint_corrections.yaml) from the same study. The revision corrected a few minor mistakes in the evidence summaries and expanded those; no constraint definitions were changed as a result of the revision. Incorporating the correction suggestions has changed the definitions of the constraints that were partially/not supported by the empirical data, as reported in the corpus study.
 
     ### Version 1 changelog:
 
