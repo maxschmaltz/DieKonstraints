@@ -47,6 +47,10 @@ readme: |
 
     ## Changelog
 
+    This is version 2 of the constraint list. It was obtained by revising the previous version of the constraint list, which was a result of [_Constraints on Linking Element Choice in German Nominal Compounding: A Large-Scale Corpus Study_](https://github.com/maxschmaltz/DieKonstraints/tree/comp_constr_corp_study_mar26), and incorporating the correction suggestions from the same study. The revision corrected a few minor mistakes in the evidence summaries and expanded those; no constraint definitions were changed as a result of the revision. Incorporating the correction suggestions has changed the definitions of the constraints that were partially/not supported by the empirical data, as reported in the corpus study.
+
+    ### Version 1 changelog:
+
     * Evidence from the literature was gathered
     * The claims about the constraints within the evidence were summarized into constraint definitions
     * The constraints were classified by the type of linguistic information they exploit, based on the definitions
@@ -66,6 +70,12 @@ readme: |
         * The whole compound. This is for the cases when the semantic type of the whole compounds matters, such as `p2l:sem:comp_type:copula-0`.
     * Added counts of application items of each type.
     * Detailed a few constraints.
+
+    ### Current version changelog:
+
+    * Expanded topology for `l2p:pl_marker`. 
+    * Revised the evidence summaries and added more evidence from the literature.
+    * Incorporated the correction suggestions from the corpus study, which led to changes in the definitions of the constraints that were partially/not supported by the empirical data.
 
 
 
@@ -87,7 +97,7 @@ notes:
 ---
 
 
-# Part 2: GLOSSARY  LINKER DESIGNATIONS
+# Part 2: GLOSSARY LINKER DESIGNATIONS
 
 glossary:
     "!": "[negation]"
@@ -623,24 +633,24 @@ constraints:
     # 3
     p2l:decl_cl:pl:#s-0:
     
-        summary: First constituents that are constituted by nouns that build the plural form with -s attach a zero linker regularly.
+        summary: Almost all first constituents that are constituted by nouns that build the plural form with -s attach a zero linker.
         ling_info_type: [morphological]
         appl_item: n1
         n_appl_items: 3613
 
         func_alias: plur_s
 
-        quantifier: regularly
+        quantifier: almost all
         coverage:
             item: 0.035
             type: 0.033
         regularity:
             item: 0.97
             type: 0.957
-        support_level: partially supported
+        support_level: supported
 
         examples_pro: [balkon_möbel, hotel_kette, bob_bahn]
-        examples_contra: [uhu_+s_nest, deck_+s_balken, interim_+s_phase, karneval_+s_kostüm]
+        examples_contra: [deck_+s_balken, interim_+s_phase, karneval_+s_kostüm]
 
         evidence:
 
@@ -1116,14 +1126,14 @@ constraints:
     # 16
     p2l:decl_cl:mixed-0/s/en|def-0/s/en:
       
-        summary: First constituents that are constituted by mixed masculine and neuter nouns almost always attach -s-, a zero linker, or -(e)n-.
+        summary: First constituents that are constituted by mixed masculine and neuter nouns regularly attach -s-, a zero linker, or -(e)n-.
         ling_info_type: [morphological]
         appl_item: n1
         n_appl_items: 3613
 
         func_alias: mixed_mn
 
-        quantifier: almost always
+        quantifier: regularly
         coverage:
             item: 0.013
             type: 0.013
@@ -1240,7 +1250,7 @@ constraints:
     # 19
     p2l:drv:sfx:e_pl_sfx-0:
     
-        summary: First constituents that are constituted by derived nouns with suffixes -bold, -nis, -rich, -at, -al that build the plural form with -e attach a zero linker regularly.
+        summary: First constituents that are constituted by derived nouns with suffixes -bold, -nis, -rich, -al that build the plural form with -e attach a zero linker regularly.
         ling_info_type: [derivational]
         appl_item: n1
         n_appl_items: 3613
@@ -1249,15 +1259,15 @@ constraints:
 
         quantifier: regularly
         coverage:
-            item: 0.007
-            type: 0.005
+            item: 0.005
+            type: 0.004
         regularity:
-            item: 0.747
-            type: 0.873
-        support_level: not supported
+            item: 1.0
+            type: 0.999
+        support_level: supported
 
-        examples_pro: [erlaubnis_schein, format_vorlage, personal_ausweis]
-        examples_contra: [radikal_+e_fänger, internat_+s_leitung, magistrat_+s_verfassung]
+        examples_pro: [erlaubnis_schein, radikal_operation, personal_ausweis]
+        examples_contra: [radikal_+e_fänger]
 
         evidence:
 
@@ -1299,13 +1309,13 @@ constraints:
               pages: [229]
               summary: Possible reference to a verbal stem in F ending in schwa may lead to other linkers other than -(e)n- [1].
 
-            - ref: ortner_müller-bollhagen_1991
+            - ref: ortner_mueller-bollhagen_1991
               pages: [93]
               summary: deverbal F ending in schwa suffix mostly have a zero linker.
 
         footnotes:
             "1": The examples of the other linkers are zero linker and schwa deletion.
-            "2": "Evidence from [fuhrhop_kürschner_2015:573] and [kürschner_2005:112] are disregarded here as, even though not explicitly stated, those concern deadjectivals (see footnotes from `p2l:drv:deverb_schwa$-0|def-0`)."
+            "2": "Evidence from [fuhrhop_kuerschner_2015:573] and [kuerschner_2005:112] are disregarded here as, even though not explicitly stated, those concern deadjectivals (see footnotes from `p2l:drv:deverb_schwa$-0|def-0`)."
 
 
     # 21
@@ -1332,7 +1342,7 @@ constraints:
 
         evidence:
       
-            - ref: ortner_müller-bollhagen_1991
+            - ref: ortner_mueller-bollhagen_1991
               pages: [93]
               summary: deverbal F ending in schwa suffix tend to attach an -n- when the first constituent has a plural reading [1].
 
@@ -1344,14 +1354,14 @@ constraints:
     # 22
     p2l:drv:deadj_schwa$-0/en:
     
-        summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix almost always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
+        summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
         ling_info_type: [derivational]
         appl_item: n1
         n_appl_items: 3613
 
         func_alias: schwa_fin_deadj
 
-        quantifier: almost always
+        quantifier: always
         coverage:
             item: 0.009
             type: 0.01
@@ -1365,22 +1375,21 @@ constraints:
 
         evidence:
 
-            - ref: fuhrhop_kürschner_2015
+            - ref: fuhrhop_kuerschner_2015
               pages: [573]
               summary: If schwa is a suffix of F [1], it adopts a zero linker.
 
-            - ref: kürschner_2005
+            - ref: kuerschner_2005
               pages: [112]
               summary: The claim that F ending in schwa always attach a zero linker is not supported by the empirical data, but it should be marked as a tendency [2].
 
-            - ref: ortner_müller-bollhagen_1991
+            - ref: ortner_mueller-bollhagen_1991
               pages: [93]
               summary: deadjectival F ending in a schwa suffix have a zero linker or -n- in about the same number of cases.
 
         footnotes:
             "1": "Even though not explicitly stated, the examples provided there are deadjectival F: frische_behälter, schwäche_anfall."
             "2": "Both the pro-example and the counterexample there are deadjectival F: härte_fall tiefe_+n_meter, which are both in line with the overall constraint."
-            "3": The "almost always" quantifier bases on the fact that no further linkers are attributed to deadjectival schwa-suffixed F in the literature; still, since none of the claims takes on to deem any of the linkers regular for these nouns, we leave a possibility of another links open by adding "almost" in the quantifier.
 
 
 
@@ -1504,21 +1513,21 @@ constraints:
     # 25
     p2l:drv:sfx:deverb_#en$-s:
     
-        summary: First constituents that are constituted by deverbal nouns that end in suffix -en attach -s- regularly.
-        ling_info_type: [derivational]
+        summary: First constituents that are constituted by deverbal nouns that end in suffix -en mostly attach -s-. Zero linker variants with a significantly lower frequency may occur.
+        ling_info_type: [derivational, lexical]
         appl_item: n1
         n_appl_items: 3613
 
         func_alias: sfx_deverb_en
 
-        quantifier: regularly
+        quantifier: mostly
         coverage:
             item: 0.005
             type: 0.009
         regularity:
-            item: 0.773
-            type: 0.926
-        support_level: not supported
+            item: 0.797
+            type: 0.957
+        support_level: supported
 
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
         examples_contra: [essen_portion, leben_geschäft, husten_tropfen, beben_gebiet]
@@ -1650,14 +1659,14 @@ constraints:
     # 28
     p2l:phon_fin:sibilant$-0:
     
-        summary: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] mostly adopt a zero linker.
+        summary: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] adopt a zero linker almost regularly.
         ling_info_type: [phonological]
         appl_item: n1
         n_appl_items: 3613
 
         func_alias: sibilant_fin
 
-        quantifier: mostly
+        quantifier: almost regularly
         coverage:
             item: 0.083
             type: 0.1
@@ -1691,24 +1700,24 @@ constraints:
     # 29
     p2l:phon_fin:vow$-0:
     
-        summary: First constituents that are constituted by nouns that end in a full vowel always adopt a zero linker.
-        ling_info_type: [phonological]
+        summary: First constituents that are constituted by nouns that end in a full vowel adopt a zero linker regularly unless this noun is a loanword that ends with a stressed long [i] (-ie) or a stressed long [e] (-ee).
+        ling_info_type: [phonological, lexical]
         appl_item: n1
         n_appl_items: 3613
 
         func_alias: vow_fin
 
-        quantifier: always
+        quantifier: regularly
         coverage:
-            item: 0.041
-            type: 0.036
+            item: 0.026
+            type: 0.024
         regularity:
-            item: 0.968
-            type: 0.976
-        support_level: partially supported
+            item: 0.993
+            type: 0.997
+        support_level: supported
 
         examples_pro: [auto_bahn, uhu_paar, kuh_milch, gummi_bär]
-        examples_contra: [uhu_+s_nest, idee_+n_liste, kalorie_+n_wert, schuh_+e_kauf]
+        examples_contra: [uhu_+s_nest, schuh_+e_kauf]
 
         evidence:
 
@@ -1762,21 +1771,21 @@ constraints:
     # 31
     p2l:phon_fin:F_stem_#t$-s:
     
-        summary: First constituents that are constituted by polysyllabic feminine nouns that end with [t] often attach -s- if the [t] is not part of a suffix -(ig)keit, -heit, -schaft, or -ität or its allomorphs.
+        summary: First constituents that are constituted by polysyllabic feminine nouns that end with [t] sometimes attach -s- if the [t] is not part of a suffix -(ig)keit, -heit, -schaft, or -ität or its allomorphs.
         ling_info_type: [morphological, derivational, phonological]
         appl_item: n1
         n_appl_items: 3613
 
         func_alias: f_t_fin
 
-        quantifier: often
+        quantifier: sometimes
         coverage:
             item: 0.013
             type: 0.016
         regularity:
             item: 0.505
             type: 0.463
-        support_level: partially supported
+        support_level: supported
 
         examples_pro: [arbeit_+s_tag, heirat_+s_antrag, zukunft_+s_angst]
         examples_contra: [arbeit_geber, jugend_alter, umwelt_schutz]
@@ -1831,56 +1840,58 @@ constraints:
         footnotes: {}
 
 
-    # 33
-    p2l:phon_fin:schwa$-en|f-en:
-    
-        summary: First constituents that are constituted by feminine nouns that end in schwa adopt -(e)n- regularly.
-        ling_info_type: [morphological, phonological]
-        appl_item: n1
-        n_appl_items: 3613
+    # 33: DEPRECATED.
+    # DISCARD AND MERGE WITH (32): even adding a simplex condition that eliminates deverbal and deadjectival nouns from consideration results in item regularity of 0.868; there is therefore no point in distinguishing between feminine and non-feminine nouns ending in schwa since both end up in the moderate regularity level.
+    # p2l:phon_fin:schwa$-en|f-en:
 
-        func_alias: schwa_fin_f
+    #     orig_summary: First constituents that are constituted by feminine nouns that end in schwa adopt -n- [regularly].
+    #     correction: First constituents that are constituted by [simplex] feminine nouns that end in schwa [mostly] adopt -n-.
 
-        quantifier: regularly
-        coverage:
-            item: 0.156
-            type: 0.133
-        regularity:
-            item: 0.765
-            type: 0.744
-        support_level: not supported
+    #     rerun: true
 
-        examples_pro: [biene_+n_zucht, suppe_+n_schüssel, tiefe_+n_meter]
-        examples_contra: [fläche_maß, sorge_pflicht]
+    #     orig_quantifier: regularly
+    #     orig_item_regularity: 0.765
+    #     orig_support_level: not supported
 
-        evidence:
+    #     corrected_quantifier: mostly
+    #     resulting_item_regularity: 0.868
+    #     resulting_support_level: supported
 
-            - ref: eisenberg_2013
-              pages: [229]
-              summary: F ending in schwa regularly adopt -n-.
+    #     examples_pro: [biene_+n_zucht, suppe_+n_schüssel, blume_+n_strauß]
+    #     examples_contra: [messe_besucher, kohle_faden, hygiene_artikel]
 
-            - ref: fuhrhop_kuerschner_2015
-              pages: [573]
-              summary: F ending in schwa adopt -n-.
+    #     DISCARDED:
+    #     p2l:phon_fin:schwa$-en|f-en	3614	mostly	0.115	0.093	0.868	0.867
+    #     No point of providing a separate constraint for feminine nouns.
 
-            - ref: krott_etal_2007
-              pages: [3]
-              summary: F ending in schwa adopt -n- productively.
+    #     evidence:
 
-            - ref: libben_etal_2009
-              pages: [151, 157]
-              summary: F ending in schwa almost always attach an -n- with a very few exceptions [1].
+    #         - ref: eisenberg_2013
+    #           pages: [229]
+    #           summary: F ending in schwa regularly adopt -n-.
 
-            - ref: ortner_mueller-bollhagen_1991
-              pages: [83, 92]
-              summary: Nouns ending in schwa mostly adopt -n- (especially weak F).
+    #         - ref: fuhrhop_kuerschner_2015
+    #           pages: [573]
+    #           summary: F ending in schwa adopt -n-.
 
-            - ref: schaefer_pankratz_2018
-              pages: [9]
-              summary: F ending in schwa virtually always occur with -n-.
+    #         - ref: krott_etal_2007
+    #           pages: [3]
+    #           summary: F ending in schwa adopt -n- productively.
 
-        footnotes:
-            "1": The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `p2l:sem:tech_term-0` is stronger than `p2l:phon_fin:f_schwa$-en` and thus -- since these are technical terms -- it blocks the application of `p2l:phon_fin:f_schwa$-en` in these cases.
+    #         - ref: libben_etal_2009
+    #           pages: [151, 157]
+    #           summary: F ending in schwa almost always attach an -n- with a very few exceptions [1].
+
+    #         - ref: ortner_mueller-bollhagen_1991
+    #           pages: [83, 92]
+    #           summary: Nouns ending in schwa mostly adopt -n- (especially weak F).
+
+    #         - ref: schaefer_pankratz_2018
+    #           pages: [9]
+    #           summary: F ending in schwa virtually always occur with -n-.
+
+    #     footnotes:
+    #         "1": The exception given there is kohle_berg_werk; a variant kohle_+n_berg_werk coexists. Let's consider further counterexample kohle_filter provided here without a coexisting *kohle_+n_filter. Both kohle_berg_werk and kohle_filter can be accounted for if we assume the constraint `p2l:sem:tech_term-0` is stronger than `p2l:phon_fin:f_schwa$-en` and thus -- since these are technical terms -- it blocks the application of `p2l:phon_fin:f_schwa$-en` in these cases.
 
 
 
@@ -2145,14 +2156,14 @@ constraints:
     # 40
     p2l:tend:cmpx_morph-s|def-s:
     
-        summary: The probability of -s- grows irregularly with the morphological complexity of the first constituent (any form of derivation).
+        summary: The probability of -s- exhibits a tendency to grow with the morphological complexity of the first constituent (any form of derivation).
         ling_info_type: [derivational]
         appl_item: n1
         n_appl_items: 3613
 
         func_alias: cmpx_morph
 
-        quantifier: irregularly
+        quantifier: tendency
         coverage:
             item: 1.0
             type: 1.0
@@ -2190,14 +2201,14 @@ constraints:
     # 41
     p2l:tend:cmpx_phon-s|def-s:
     
-        summary: The probability of -s- grows irregularly with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
+        summary: The probability of -s- exhibits a tendency to grow with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
         ling_info_type: [phonological]
         appl_item: n1
         n_appl_items: 3613
 
         func_alias: cmpx_phon
 
-        quantifier: irregularly
+        quantifier: tendency
         coverage:
             item: 1.0
             type: 1.0
@@ -2398,14 +2409,14 @@ constraints:
     # 46
     l2p:s|f_poly_syl:
       
-        summary: Almost all feminine nouns that constitute first constituents that attach -s- are polysyllabic.
+        summary: All feminine nouns that constitute first constituents that attach -s- are polysyllabic.
         ling_info_type: [morphological, phonological]
         appl_item: n1+linker
         n_appl_items: 4868
 
         func_alias: s_f_polysyl
 
-        quantifier: almost all
+        quantifier: all
         coverage:
             item: 0.163
             type: 0.159
@@ -2431,7 +2442,7 @@ constraints:
     # 47
     l2p:n:
     
-        summary: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa.
+        summary: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa or in [ɐ] (unstressed -er).
         ling_info_type: [phonological]
         appl_item: n1+linker
         n_appl_items: 4868
@@ -2443,12 +2454,12 @@ constraints:
             item: 0.116
             type: 0.109
         regularity:
-            item: 0.959
-            type: 0.985
-        support_level: partially supported
+            item: 0.988
+            type: 1.0
+        support_level: supported
 
-        examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
-        examples_contra: [oper_+n_haus, elster_+n_nest]
+        examples_pro: [biene_+n_zucht, auge_+n_lied, oper_+n_haus]
+        examples_contra: []
 
         evidence:
 
@@ -2472,21 +2483,21 @@ constraints:
     # 48
     l2p:en|par:
       
-        summary: All nouns that constitute first constituents that attach -(e)n- belong to weak nouns.
+        summary: Almost all nouns that constitute first constituents that attach -(e)n- belong to weak nouns.
         ling_info_type: [morphological]
         appl_item: n1+linker
         n_appl_items: 4868
 
         func_alias: en_par
 
-        quantifier: all
+        quantifier: almost all
         coverage:
             item: 0.143
             type: 0.127
         regularity:
             item: 0.971
             type: 0.986
-        support_level: partially supported
+        support_level: supported
 
         examples_pro: [blume_+n_topf, katze_+n_fell, frau_+en_hand]
         examples_contra: [hahn_+en_kamm, mond_+en_schein, instrument_+en_bau]
@@ -2638,8 +2649,8 @@ constraints:
     # 52
     l2p:e|#stressed_syl:
     
-        summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable.
-        ling_info_type: [phonological]
+        summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable or are derived of those with a stressed prefix.
+        ling_info_type: [phonological, derivational]
         appl_item: n1+linker
         n_appl_items: 4868
 
@@ -2650,12 +2661,12 @@ constraints:
             item: 0.023
             type: 0.008
         regularity:
-            item: 0.973
-            type: 0.992
-        support_level: partially supported
+            item: 1.0
+            type: 1.0
+        support_level: supported
 
-        examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
-        examples_contra: [anhalt_+e_stelle]
+        examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine, anhelt_+e_stelle]
+        examples_contra: []
 
         evidence:
 
@@ -2788,8 +2799,8 @@ constraints:
     # 56
     l2p:er|#stressed_syl:
     
-        summary: All nouns that constitute first constituents that attach -(")er- have a stressed last syllable.
-        ling_info_type: [phonological]
+        summary: All nouns that constitute first constituents that attach -(")er- have a stressed last syllable or are derived of those with a stressed prefix.
+        ling_info_type: [phonological, derivational]
         appl_item: n1+linker
         n_appl_items: 4868
 
@@ -2800,12 +2811,12 @@ constraints:
             item: 0.01
             type: 0.015
         regularity:
-            item: 0.938
-            type: 0.96
-        support_level: partially supported
+            item: 0.979
+            type: 0.999
+        support_level: supported
 
-        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
-        examples_contra: [mitglied_+=er_liste, vorbild_+=er_sammlung]
+        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke, mitglied_+=er_liste]
+        examples_contra: []
 
         evidence:
 
@@ -2970,8 +2981,8 @@ constraints:
     # 61
     l2p:es|mono_syl:
     
-        summary: All nouns that constitute first constituents that attach -es- are monosyllabic.
-        ling_info_type: [phonological]
+        summary: All nouns that constitute first constituents that attach -es- are monosyllabic or are derived of those with a prefix.
+        ling_info_type: [phonological, derivational]
         appl_item: n1+linker
         n_appl_items: 4868
 
@@ -2982,12 +2993,12 @@ constraints:
             item: 0.012
             type: 0.011
         regularity:
-            item: 0.914
-            type: 0.9
+            item: 0.983
+            type: 0.94
         support_level: partially supported
 
-        examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, land_+es_regierung]
-        examples_contra: [gesetz_+es_änderung, vorjahr_+es_gewinner, bestand_+es_aufnahme]
+        examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, land_+es_regierung, vorjahr_+es_gewinner]
+        examples_contra: [gesetz_+es_änderung]
 
         evidence:
 
@@ -3119,6 +3130,6 @@ constraints:
 
         footnotes:
             "1": The irreguarity of this constraint is quite high, which is supported by the fact that this evidence contradicts its definition.
-            "2": Cited by [krott_etal_2007:3], [nübling_szczepaniak_2013:77]. An explanation to the negativity of the results is also suggested in [scschaefer_pankratz_2018:39].
+            "2": Cited by [krott_etal_2007:3], [nuebling_szczepaniak_2013:77]. An explanation to the negativity of the results is also suggested in [schaefer_pankratz_2018:39].
             "3": Even though the original text does not explicitly say that the linker identical to the plural ending is preferred in this case, all the examples provided for this claim have such linkers.
-            "4": Cited by [schlücker_2023:20].
+            "4": Cited by [schluecker_2023:20].
