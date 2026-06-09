@@ -95,6 +95,13 @@ Bei den Feminina... Ist der Stamm einsilbig, so wird die en-Fuge mal gesetzt, ma
 Die er-Fuge tritt nur bei solchen Substantivstämmen auf, die den Plural ebenfalls auf er bilden und hat nach allgemeiner Auffassung am besten eine **Pluralbedeutung** bewahrt. Die meisten dieser Stämme kommen, wenn sie **eine andere Bedeutung** haben, auch mit anderer oder ohne Fuge vor. Eine **generische** anstatt einer **Plurallesung** setzt sich bei der er-Fuge wiederum bei Tier- und Personenbezeichnungen durch.
 
 
+## nuebling_szczepaniak_2008
+
+[3]
+
+-(e)n-: sometimes with plural meaning, especially after weak feminines.
+
+
 
 ## nübling_szczepaniak_2013
 
