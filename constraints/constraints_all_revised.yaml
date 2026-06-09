@@ -1800,15 +1800,36 @@ constraints:
 
         evidence:
 
+            - ref: eisenberg_2013
+              pages: [229]
+              summary: F ending in schwa regularly adopt -n-.
+
+            - ref: fuhrhop_kuerschner_2015
+              pages: [573]
+              summary: F ending in schwa adopt -n-.
+
+            - ref: krott_etal_2007
+              pages: [3]
+              summary: F ending in schwa adopt -n- productively.
+
             - ref: kuerschner_2010
               pages: [18]
               summary: Most of the words ending with a schwa adopt -n-.
 
+            - ref: libben_etal_2009
+              pages: [151, 157]
+              summary: F ending in schwa almost always attach an -n- with a very few exceptions [1].
+
             - ref: ortner_mueller-bollhagen_1991
               pages: [83, 92]
-              summary: Nouns ending in schwa mostly adopt -n- ([especially weak F]).
+              summary: Nouns ending in schwa mostly adopt -n- (especially weak F).
 
-        footnotes: {}
+            - ref: schaefer_pankratz_2018
+              pages: [9]
+              summary: F ending in schwa virtually always occur with -n-.
+
+        footnotes:
+            "1": Merged evidence from the deprecated `p2l:phon_fin:schwa$-en|f-en`.
 
 
     # 33: DEPRECATED.
