@@ -25,8 +25,7 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [projekt_+e_macherei, tag_+e_buch, punkt_+e_stand]
         examples_contra: [pilz_sammler, brot_korb, jahr_zehnt,  tag_+e_lohn]
 
@@ -61,8 +60,7 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [buch_deckel, grab_stein, blatt_fläche]
         examples_contra: [mann_+=er_herz, kind_+=er_bild,   buch_handel]
 
@@ -103,8 +101,7 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [glas_auge, kraut_salat, horn_haut]
         examples_contra: [kraut_garten]
 
@@ -135,8 +132,7 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [buch_+=er_regal, grab_+=er_feld, kraut_+=er_frau]
         examples_contra: [buch_handel, bild_band,   kind_+=er_jacke, mann_+=er_herz]
 
@@ -145,6 +141,10 @@ constraints:
             - ref: eisenberg_2013
               pages: [229]
               summary: er-plural nouns tend to choose -(")er- when a plural meaning is present.
+
+            - ref: fuhrhop_1996
+              pages: [544, 545]
+              summary: -(")er- is productive when an explicit plural meaning is present. A plural meaning of the first constituent is a necessary condition for -(")er-. However, there are words in which the plural status is not confirmed.
 
             - ref: nuebling_szczepaniak_2013
               pages: [80, 81, 84, 87]
@@ -178,12 +178,15 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
         examples_contra: [baum_gruppe, zug_verkehr]
 
         evidence:
+
+            - ref: fuhrhop_1996
+              pages: [540, 541, 545]
+              summary: First constituents -"e- can be assigned with a plural meaning. A plural meaning of the first constituent is a necessary condition for -"e-.
 
             - ref: nuebling_szczepaniak_2013
               pages: [81, 84, 87]
@@ -217,8 +220,7 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
         examples_contra: [vogel_futter]
 
@@ -248,8 +250,7 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [staat_+en_bund, bett_+en_zahl, strahl_+en_belastung]
         examples_contra: [  motor_+en_geräusch, professor_+en_titel, auge_+n_lied, interesse_+n_bereich]
 
@@ -284,8 +285,7 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [abgabe_+n_ordnung, anzeige_+n_blatt, lüge_+n_detektor]
         examples_contra: [einnahme_buch, anzeige_tafel]
 
@@ -316,18 +316,22 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [rarität_+en_sammlung, kuriosität_+en_händler, aktualitäten_+en_kino]
         examples_contra: []
 
         evidence:
 
+            - ref: fuhrhop_1996
+              pages: [532]
+              summary: After F-building suffixes (-ei, -erei, and -in excluded), the plural marker is possible when a plural meaning is present [1].
+
             - ref: ortner_mueller-bollhagen_1991
               pages: [94]
               summary: Nouns ending in -ität- can adopt -en- where the plural interpretation should be preserved.
 
-        footnotes: {}
+        footnotes:
+            "1": The only examples are antiquität_+en_handel and minderheit_+en_regelung.
 
 
     # 34
@@ -347,8 +351,7 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [schrift_führer, geburt_+s_tag, burg_anlage]
         examples_contra: [burg_+en_blick, frau_+en_bild]
 
@@ -390,8 +393,7 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [schrift_+en_verzeichnis, geburt_+en_kontrolle, burg_+en_land]
         examples_contra: [  burg_+en_blick]
 
@@ -440,8 +442,7 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [instrument_+en_bau, dokument_+en_sammlung]
         examples_contra: [zertifikat_system]
 
@@ -458,7 +459,7 @@ constraints:
     # 64
     l2p:pl_marker|def-pl:
       
-        summary: Linkers that are identical to the plural ending of the first constituent in a given compound tend to be associated with a plural meaning of this first constituent within the compound.
+        summary: Linkers that are identical to the plural ending of the first constituent (except for -s- and zero linker) in a given compound tend to be associated with a plural meaning of this first constituent within the compound.
         ling_info_type: [morphological, semantic]
         appl_item: n1+linker
         n_appl_items: 4868
@@ -472,12 +473,15 @@ constraints:
         regularity:
             item: NA
             type: NA
-        support_level: NA
-
+        
         examples_pro: [punkt_+e_stand, buch_+=er_regal, staat_+en_bund, burg_+en_land, mutter_+=_zentrum]
         examples_contra: [motor_+en_geräusch, burg_+en_blick, kind_+=er_jacke, hund_+e_leine,   pilz_sammler, buch_handel, vogel_futter]
 
         evidence:
+
+            - ref: fuhrhop_1996
+              pages: [531]
+              summary: When the first constituents occur in their plural form, it often points to a plural meaning. However, this [plural meaning] is not enough [to cause the pluralic linker].
 
             - ref: koester_etal_2004
               pages: [1655, 1657, 1659, 1661, 1662]
