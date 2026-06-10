@@ -99,7 +99,7 @@ Die er-Fuge tritt nur bei solchen Substantivstämmen auf, die den Plural ebenfal
 
 [3]
 
--(e)n-: sometimes with plural meaning, especially after weak feminines.
+-(e)n-: sometimes with **plural meaning**, especially after weak feminines.
 
 
 
@@ -206,3 +206,47 @@ Experiment 2 showed that the number of nonhead constituents is not processed (i.
 [1662]
 
 Linking elements that are homophonous with plural morphemes are not processed as plural morphemes.
+
+
+
+## fuhrhop_1996
+
+[531]
+
+So wird die Verwendung der Pluralform als Erstglied häufig rein semantisch begründet. Der Plural tritt häufig als Erstglied auf, wie zum Beispiel in Bücherregal, Männerheim, Frauenarbeit, Quadratestadt, Mäusegift, Töchterschule, wobei ein Bücherregal sicher für mehrere Bücher bestimmt ist, die Quadratestadt (Mannheim) aus mehreren Quadraten besteht usw. Bei den tatsächlich auftretenden mag es sich oft wirklich um eine **Vielzahl** von Dingen handeln; wie das Beispiel der Semmelknödel zeigt, ist dies aber keine hinreichende Bedingung. Da auch der Schweinebraten nur Teil eines Schweines ist, ein Hühnerei nur von einem Huhn gelegt und ein Kinderwagen nur von einem Kind belegt wird, ist die **Vielzahlbedeutung** auch keine notwendige Bedingung für das Auftreten der Pluralform im Kompositum.
+
+
+[534]
+
+Die hier vorhandenen Suffixe sind fast alle Suffixe des Deutschen, die feminine Substantive bilden (daneben -ei, -erei, -in). Nach Suffixen, die feminine Substantive bilden (daneben -ei, -erei, -in), ist bei ausdrücklicher **Pluralbedeutung** auch das entsprechende Pluralflexiv als Fugenelement möglich: Antiquitätenhandel, Minderheitenregelung.
+
+
+[537]
+
+Beim Suffix -in taucht häufig Plural auf: Lehrerinnenstreik, *Lehrerinstreik. 
+
+
+[540]
+
+Den Wörtern Ärztekammer, Räterepublik, Städtetag, Ständekammer kann man positiv **Pluralbedeutung** zuweisen; ansonsten heißt es: Arztpraxis, Stadtbesichtigung (vs. Städtetour), Rathaus, Standbein. Hier kann **Pluralbedeutung** also als notwendige Bedingung angenommen werden.
+
+
+[541]
+
+Schwa scheint aber bei positiver **Mehrzahlbedeutung** produktiv zu sein. Bei den gefundenen ist allerdings auffällig, daß sie alle auf dentalen Plosiv enden, und daß sie fast alle zusätzlich den Umlaut nehmen. Für Schwa halten wir fest, daß es bei Substantiverstgliedern positiv die **Mehrzahlbedeutung** angibt.
+
+-en- tritt bei positiver **Pluralmarkierung** einiger femininer Substantive auf (Minderheitenregelung, Geburtenregelung, Antiquitätenhandel, Lehrerinnenstreik).
+
+
+[544]
+
+Nach der hier vertretenen Ansicht entspricht das Fugen-er nicht nur stets der Pluralform, sondern es dient bei produktiver Verwendung auch stets dazu, auf eine **Mehrzahl** hinzuweisen: Länderspiel, Schilderwald, Liederabend, Wörterbuch. Nun gibt es noch einige Wörter, in denen der Bezug auf die **Mehrzahl** nicht bestätigt wird: Rinderbraten, Hühnerei, Eierschale, Kinderwagen.
+
+Produktiv ist -er- bei expliziter **Pluralbedeutung** (Völkerkunde - Volkskunde). Dies ist eine notwendige und keine hinreichende Bedingung.
+
+
+[545]
+
+Ferner sind -e- und -er- sowohl vom Flexionsparadigma als auch von der Bedeutung determiniert - sie treten nur bei positiver **Pluralbedeutung** auf.
+
+Das Fugenelement -n- ist formal an das Flexionssystem gebunden, semantisch jedoch nicht. Obwohl es stets dem Pluralflexiv entspricht, bezeichnet es keine **Pluralbedeutung**.
