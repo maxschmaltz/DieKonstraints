@@ -659,7 +659,7 @@ constraints:
             type: 0.957
         
         examples_pro: [balkon_möbel, hotel_kette, bob_bahn]
-        examples_contra: [deck_+s_balken, interim_+s_phase, karneval_+s_kostüm]
+        examples_contra: [deck_+s_balken, interim_+s_phase, karneval_+s_kostüm, leutnant_+s_uniform]
 
         evidence:
 
@@ -702,10 +702,13 @@ constraints:
             - ref: schaefer_pankratz_2018
               pages: [37]
               summary: Words ending in full vowels, which have an -s plural, resist -s linking elements strongly.
+
+            - ref: wegener_2003
+              pages: [434, 444]
+              summary: -s- with plural meaning may appear after s-plural consonant-final nouns, which is not general by any means, but cannot appar after vowel-final s-plural nouns [1].
         
         footnotes:
-            "1": "The given counterexample uhu_+s_nest originating from [wegener_2003:433] could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
-
+            "1": Level of regularity not mentioned.
 
 
     # 4
@@ -1494,7 +1497,7 @@ constraints:
               summary: -s- occurs with -schaft, -heit, -ung, -tum, -tät, -ion [3, 5].
 
             - ref: wegener_2003
-              pages: [448]
+              pages: [445, 448, 452, 453]
               summary: -s- regularly occurs after suffixes -heit, -keit, -ung, -ling, -schaft [3].
 
         footnotes:
@@ -1766,6 +1769,10 @@ constraints:
               pages: [9, 37]
               summary: Nouns ending in a full vowel occur with a zero linker.
 
+            - ref: wegener_2003
+              pages: [451]
+              summary: -s- never occurs after full-vowel-final nouns.
+
         footnotes:
             "1": "The given counterexample uhu_+s_nest originating from [wegener_2003:433] could not be verified. In DeReKo, there are only a few occurrences, and all of them are web pages of the site www.uhusnest.de/. Claim about 148 Google searches 'Uhusnest' in 2003 provided in the paper could not be verified either. However, we include this counterexample here assuming the authors had reasons to provide it."
 
@@ -1903,6 +1910,10 @@ constraints:
             - ref: schaefer_pankratz_2018
               pages: [9]
               summary: F ending in schwa virtually always occur with -n-.
+
+            - ref: wegener_2003
+              pages: [443, 452]
+              summary: Nouns ending in schwa almost always attach -n-.
 
         footnotes:
             "1": Merged evidence from the deprecated `p2l:phon_fin:schwa$-en|f-en`.
@@ -2092,6 +2103,10 @@ constraints:
             - ref: ortner_mueller-bollhagen_1991
               pages: [57, 91, 94, 109]
               summary: Copulative compounds always have a zero linker[; in particular, weak M as well as F ending with suffix -in always adopt -en- unless they are copulative, in which case they have a zero linker [2]].
+
+            - ref: wegener_2003
+              pages: [432]
+              summary: For copulative compounds, no linking element is tendentially used.
 
         footnotes:
             "1": "The author defines two different types of copulative compounds: with additive relations and with appositive relations. However, this notation is not conventional. What the author calls 'copulative compounds with additive relations' are not defined as copulative compounds in most of the literature, while what the author calls 'copulative compounds with appositive relations' are what is defined \"usual\" copulative compounds. Thus, in our terms this finding can be summarized as 'non-copulative compounds adopt explicit linkers non-systematically, while copulative compounds systematically adopt a zero linker'."
@@ -2549,12 +2564,17 @@ constraints:
               pages: [84]
               summary: -n- [1] is strictly bound to weak nouns (inflectional class).
 
+            - ref: wegener_2003
+              pages: [179]
+              summary: -n- may appear after nouns in [ɐ] (-er) [2], almost always appears after schwa-final nouns but never after el-final F.
+
             - ref: wegener_2005
               pages: [179]
               summary: -n- appears only after schwa.
 
         footnotes:
             "1": "Original text makes that claim for both allomorphs: '-(e)n-'."
+            "2": Level of regularity not mentioned.
 
 
 
