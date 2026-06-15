@@ -78,12 +78,13 @@ readme: |
     * Incorporated the correction suggestions from the corpus study, which led to changes in the definitions of the constraints that were partially/not supported by the empirical data.
     * Extracted pluralic constraints into [`constraints_pluralic.yaml`](./constraints_pluralic.yaml).
     * Removed support levels: all verified constraints are now supported, no data is available otherwise.
+    * Added more evidence from the literature after further literature review.
 
 
 
 notes:
 
-    - "Since we disregard weak M from research due to their absolute regularity, the corresponding evidence is excluded. Those are: [eisenberg_2013:228], [fuhrhop_1996:542], [fuhrhop_kuerschner_2015:573], [kuerschner_2005:119], [kuerschner_2010:9], [ortner_mueller-bollhagen_1991:91], [schaefer_pankratz_2018:9]."
+    - "Since we disregard weak M from research due to their absolute regularity, the corresponding evidence is excluded. Those are: [eisenberg_2013:228], [fuhrhop_1996:542], [fuhrhop_kuerschner_2015:573], [kuerschner_2005:119], [kuerschner_2010:9], [ortner_mueller-bollhagen_1991:91], [pankratz_2017:8], [schaefer_pankratz_2018:9]."
 
     - "Since we consider only N+N compounds, we exclude constraints targeting complex first constituents. These are: 1) -s- occurs more frequently with complex first constituents compared to the corresponding simplex and sometimes replaces the default simplex linker ([koliopoulou_2014:61], [kuerschner_2005:108,110,111,112], [ortner_mueller-bollhagen_1991:85]), 2) the more complex the first part of a compound, the more probable the occurrence of a linking element ([fuhrhop_1996:530], [nuebling_szczepaniak_2008:9]); 3) -s- can signalize the head boundary ([fuhrhop_1996:530], [kuerschner_2005:112], [kuerschner_2010:22], [nuebling_szczepaniak_2008:8], [wegener_2005:180,184]); 4) the probability of -s- after a compound is comparable to that after derivatives with stressed prefixes and is about 27-37% ([nuebling_szczepaniak_2008:21], [nuebling_szczepaniak_2013:78], for criticism on these statistics see footnote 3 of `p2l:drv:prx_deverb-s`). More on the structure marking function of -s- in compounds with three constituents see https://doi.org/10.1177/00238309040470010401."
 
@@ -583,6 +584,10 @@ constraints:
               pages: [50, 52, 54, 103]
               summary: Most nominal compounds have a zero linker (in about 2/3 of cases).
 
+            - ref: pankratz_2017
+              pages: [i, 3, 4]
+              summary: By default (in about 2/3 of cases) German nominal compounds are built without linking elements.
+
             - ref: schaefer_2018
               pages: [229]
               summary: The most frequent case is zero linker.
@@ -689,6 +694,10 @@ constraints:
             - ref: schaefer_2018
               pages: [229]
               summary: s-plural nouns never attach -s-.
+
+            - ref: pankratz_2017
+              pages: [13]
+              summary: -s- is never used as a linking element if the first constituent takes -s as a plural suffix.
 
             - ref: schaefer_pankratz_2018
               pages: [37]
@@ -1522,7 +1531,7 @@ constraints:
 
             - ref: fuhrhop_1996
               pages: [532]
-              summary: After F-building suffixes (-ei, -erei, and -in excluded), the plural marker is possible when a plural meaning is present [1].
+              summary: After F-building suffixes (-ei, -erei, and -in excluded), the plural marker is possible when a plural meaning is present [1, 2].
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [94]
@@ -1530,6 +1539,7 @@ constraints:
 
         footnotes:
             "1": The only examples are antiquität_+en_handel and minderheit_+en_regelung.
+            "2": Cited by [pankratz_2017:21].
 
 
 
@@ -1886,6 +1896,10 @@ constraints:
               pages: [83, 92]
               summary: Nouns ending in schwa mostly adopt -n- (especially weak F).
 
+            - ref: pankratz_2017
+              pages: [8, 44, 46]
+              summary: -n- appears very often after schwa-final nouns, almost regularly after F.
+
             - ref: schaefer_pankratz_2018
               pages: [9]
               summary: F ending in schwa virtually always occur with -n-.
@@ -2023,20 +2037,21 @@ constraints:
 
             - ref: nuebling_szczepaniak_2013
               pages: [77, 80, 83, 84, 87]
-              summary: "-en- after (monosyllabic or polysyllabic) final-stressed weak F is linked to plural: it attaches regularly to them when the plural interpretation is allowed, with a very few counterexamples, and they regularly exhibit a plural meaning when occurring with the linker -(e)n-."
+              summary: "-en- after (monosyllabic or polysyllabic) final-stressed weak F is linked to plural: it attaches regularly to them when the plural interpretation is allowed, with a very few counterexamples, and they regularly exhibit a plural meaning when occurring with the linker -(e)n-. [2]"
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [110]
-              summary: Monosyllabic weak [2] F [mostly] adopt a [zero linker or] plural suffix only when a plural meaning is present.
+              summary: Monosyllabic weak [3] F [mostly] adopt a [zero linker or] plural suffix only when a plural meaning is present.
 
             - ref: schaefer_2018
               pages: [29]
-              summary: -(e)n- exhibits a very weak positive effect on plural reading (with non-significant p-value) [3].
+              summary: -(e)n- exhibits a very weak positive effect on plural reading (with non-significant p-value) [4].
 
         footnotes:
             "1": Final phoneme (schwa/consonant) not specified.
-            "2": The original fragment considers both weak F and strong F. For the latter F, see `p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml`.
-            "3": This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. All the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F) (see [nuebling_szczepaniak_2013]), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well.
+            "2": Cited by [pankratz_2017:21].
+            "3": The original fragment considers both weak F and strong F. For the latter F, see `p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml`.
+            "4": This finding concerning plural interpretability of -(e)n- is not very reliable. -(e)n- may occur after different classes of nouns, and the study indeed included occurrences of -(e)n- after nouns from these different classes. All the occurrences were analyzed altogether disregarding the class of the noun. However, as literature points out, these different classes may have different predispositions towards plural interpretability. Thus for example, the tendency of a plural reading of -(e)n- was pointed out by a few papers for F with a stress on the last syllable (incl. monosyllabic F) (see [nuebling_szczepaniak_2013]), which is not the case for trochaic F or weak masculines. Thus, making a single conclusion about all occurrences from different classes adopting -(e)n- may be misleading since strong effect of one class may be wiped out by the absence of the same effect for the others. However, since even with this averaging over the classes, the overall effect is positive (even if weakly), we include this finding in the evidence, assuming the effect of -(e)n- after F with a stress on the last syllable (incl. monosyllabic F) was most probably positive as well.
 
 
     # 1.4. Constraints that map semantic properties of compounds/first constituents to most probable linkers.
@@ -3185,6 +3200,10 @@ constraints:
             - ref: schaefer_2018
               pages: [230, 231]
               summary: Linkers identical to the plural ending tend to be associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element. However, there is no regularity in when a plural linker should be present and when it should necessarily express a plural meaning.
+
+            - ref: pankratz_2017
+              pages: [41, 42, 43, 46, 51]
+              summary: When the first constituent is a concrete count noun and the meaning of the second constituent forces the first constituent to take on plural meaning, it is very likely that the linking element will be homophonous with the first constituent’s plural marker.
 
             - ref: schaefer_pankratz_2018
               pages: [1, 3, 29, 37]

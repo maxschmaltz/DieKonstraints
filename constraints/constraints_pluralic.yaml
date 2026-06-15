@@ -491,6 +491,10 @@ constraints:
               pages: [110]
               summary: When a plural meaning should be reinforced, the linker identical to the plural ending may appear instead of a zero linker [3].
 
+            - ref: pankratz_2017
+              pages: [41, 42, 43, 46, 51]
+              summary: When the first constituent is a concrete count noun and the meaning of the second constituent forces the first constituent to take on plural meaning, it is very likely that the linking element will be homophonous with the first constituent’s plural marker.
+
             - ref: schaefer_2018
               pages: [230, 231]
               summary: Linkers identical to the plural ending tend to be associated with plural meaning. When the second constituent denotes something that forces the first constituent to take a collective or plural meaning, the latter prefers its plural ending as a linking element. However, there is no regularity in when a plural linker should be present and when it should necessarily express a plural meaning.
