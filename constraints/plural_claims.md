@@ -312,3 +312,60 @@ Some linking elements (more specifically, some plural linking elements) carry an
 [51]
 
 Linking elements that are homophonic with the first constituent’s plural suffix occur in 74% of compounds where the head is a collective noun, i.e. where the referent of the first constituent is semantically plural. This shows that certain linking elements do co-occur with plural meaning.
+
+
+
+### wegener_2003
+
+[429]
+
+Die Fugenelemente -e < -a und -i,
+-er< -ir und -(e)n entstanden also selbst aus
+Stammbildungssuffixen, nicht aus Pluralsuffixen. Vielmehr wurden die Stamm-
+bildungssuffixe in zwei parallel verlaufenden Grammatikalisierungspfaden
+einerseits zu Pluralmarkern, andererseits und zeitlich schon früher zu Fugenele-
+menten grammatikalisiert.
+Für die Klassifizierung und Beurteilung der Fugenelemente ist dies von Be-
+deutung. Diese sind also nicht aus Pluralsuffixen entstanden, sondern Pluralsuf-
+fixe und Fugenelemente sind in parallelen Entwicklungen aus Stammbildungs-
+suffixen entstanden
+
+
+[431]
+
+Das einzige Fugenelement, das nicht aus einem Stammbildungssuffix, son-
+dern aus einem Flexionssuffix entstanden ist, ist -s, das sich zunächst aus dem
+Genitiv-s, später auch aus dem Plural-s entwickelte, was heute im Einzelfall von
+der Bedeutung des Erstglieds abhängt (Clownsparade, Kuckucksjagd)
+
+
+[434]
+
+Wie die Beispiele Kuckucksinsel, Clownsparade, Chipsproduktion zeigen, kommt -s mit Pluralbedeutung sehr
+wohl in Komposita vor, allerdings scheint es beschränkt auf Nomen mit finalem
+Konsonanten
+
+
+[435]
+
+treten doch auch andere
+Erstglieder mit pluralischer Bedeutung ohne Pluralsuffix auf: ohne -e oder -er: Schuhschrank, Skiverleih, Buchhändler, Bildband; ohne -n: Nudelsuppe, Ampelanlage, Fasergewebe, Federbett.
+
+
+[442]
+
+Wir finden wie
+erwartet Belege ohne -n trotz Pluralbedeutung des Erstglieds (26a), aber auch
+solche mit -n bei Pluralbedeutung (26b), und sogar solche mit -n trotz Singular-
+bedeutung des Erstglieds (26c):
+(26) a. Komposita ohne Fugen-n trotz Pluralbedeutung:
+Federbett, Schulterschluss, Steuersenkung, Fasergewebe,
+b. Komposita mit Fugen-n bei Pluralbedeutung:
+Asternstrauß, Kapernsoße, Kiefernwald, Mutternschlüssel,
+Schwesternschule, Wimpernstift,
+c. Komposita mit Fugen-n trotz Singularbedeutung:
+Austernschale, Kiefernzapfen, Opernaufführung, Otternbiss.
+
+Die Beispiele zeigen, dass das Auftreten des Pluralsuffixes als Fugenelement
+nicht davon abhängt, ob das Pluralsuffix für die betreffende Wortklasse regulär
+oder irregulär ist, sondern von phonotaktischen Bedingungen gesteuert wird.
