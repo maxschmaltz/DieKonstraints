@@ -250,3 +250,65 @@ Produktiv ist -er- bei expliziter **Pluralbedeutung** (Völkerkunde - Volkskunde
 Ferner sind -e- und -er- sowohl vom Flexionsparadigma als auch von der Bedeutung determiniert - sie treten nur bei positiver **Pluralbedeutung** auf.
 
 Das Fugenelement -n- ist formal an das Flexionssystem gebunden, semantisch jedoch nicht. Obwohl es stets dem Pluralflexiv entspricht, bezeichnet es keine **Pluralbedeutung**.
+
+
+
+## pankratz_2017
+
+[i]
+
+Linking elements with plural form may sometimes, but do not always, express plural semantics, and no clear explanation of exactly when plural form and meaning overlap has yet been put forward. A semantically plural (i.e. collective) head noun is a significant predictor of the appearance of a linking element with plural form.
+
+
+[1]
+
+Certain linking elements share their form with German’s plural suffixes but do not always convey plural meaning, while in other cases, there is doubtlessly plural meaning but non-plural form.
+
+
+[14]
+
+Despite the formal correspondence, plural linking elements do not universally convey plural meaning. In fact, mismatch between form and meaning occurs frequently and can appear in two different configurations: either there is a plural form but no plural meaning or a plural meaning without plural form. The compounds Frau-en-stimme ‘woman’s voice’ and Bild-0-sammlung ‘picture collection’ will be used to illustrate this.
+
+
+[20]
+
+The plural meaning comes from the first constituent when the speaker explicitly chooses to convey that this constituent is plural. This is exemplified by the minimal pairs which show the possible semantic impact of non-plural versus plural linking elements: Generation-s-konflikt ‘conflict within a generation’ (lit. generation conflict) vs Generation-en-konflikt ‘conflict between two generations’ (lit. generations conflict). Partei-0-gruppe ‘faction’ (lit. [political] party group) vs Partei-en-gruppe ‘group of parties’ (lit. [political] parties group).
+
+Fuhrhop (1996:534) proposes that plural/non-plural alternation is productive when the first constituent ends in a feminine-noun-building suffix, i.e. Germanic suffixes -heit/-(ig)keit, -schaft, and -ung, as well as loan suffixes -ion and -(i)tät. Nübling and Szczepaniak (2013:77) also note that the alternation may be productive in the case of mono- and polysyllabic feminine nouns with word-final stress and optionally a final consonant, like Geburt ‘birth’ or Partei ‘[political] party’. These examples show that a speaker may choose a plural linking element over a non- plural one when he or she wishes to express that the first constituent is plural (and the first constituent allows this type of alternation).
+
+
+[25]
+
+Some of these linking elements correspond in form to German’s plural suffixes, and in many cases (though not always), these plural linking elements co-occur with plural meaning of the first constituent.
+
+
+[41]
+
+Compound heads that were collective nouns co-occurred significantly more with a plural linking element than with a non-plural one. There is indeed a relationship between semantic plurality of the compound’s head and the selection of a plural linking element over a non-plural one.
+
+
+[42]
+
+The relationship between collective heads and plural linking elements in the subset of first constituents with human referents (Mutter ‘mother’, Vater ‘father’, Kind ‘child’, Kunde ‘customer’, Bauer ‘farmer’, Frau ‘woman’, Person ‘person’, and Student ‘student’) is even more substantial than in the overall data.
+
+There is a significant correlation between the semantic plurality of the
+compound head and the selection of a plural linking element over a non-plural one.
+
+
+[43]
+
+The pattern of linking element alternation among concrete count nouns seems to be motivated semantically rather than morphologically, with further semantic differentiation between first constituents with human and non-human referents.
+
+The relationship between semantic plurality of the head and plural linking elements can be characterized as follows: when the first constituent is a concrete count noun and the compound head is a collective noun, it is very likely that the linking element will be homophonous with the first constituent’s plural marker (i.e. will be a plural linking element). In 73.79% of all compounds with collective heads in the data (411 of 557 total collective heads), the linking element was a plural one. The correlation between plural linking elements and collective heads is even higher in the samples where the first constituent has a human referent.
+
+
+[46]
+
+It is true that plural semantics are not universally associated with plural linking elements, but this research has revealed an area of fairly regular co-occurrence: when the meaning of the second constituent forces the first constituent to take on plural meaning.
+
+Some linking elements (more specifically, some plural linking elements) carry and convey plural meaning, because they are more likely to appear in situations of plural semantics than non-plural linking elements are.
+
+
+[51]
+
+Linking elements that are homophonic with the first constituent’s plural suffix occur in 74% of compounds where the head is a collective noun, i.e. where the referent of the first constituent is semantically plural. This shows that certain linking elements do co-occur with plural meaning.
