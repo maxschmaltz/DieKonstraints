@@ -667,6 +667,10 @@ constraints:
               pages: [227]
               summary: -s- is avoided with s-plural nouns.
 
+            - ref: fehringer_2009
+              pages: [149, 163]
+              summary: -s plurals do not usually occur within noun+noun compounds. -s- is less accepted after a vowel-final s-plural noun than after a consonant-final one.
+
             - ref: fuhrhop_1996
               pages: [533, 535, 545]
               summary: s-plural nouns regularly avoid -s-.
@@ -708,7 +712,7 @@ constraints:
               summary: -s- with plural meaning may appear after s-plural consonant-final nouns, which is not general by any means, but cannot appar after vowel-final s-plural nouns [1].
         
         footnotes:
-            "1": Level of regularity not mentioned.
+            "1": Level of regularity not mentioned. However, as fairly pointed out by [fehringen_2009:150], s-plural ouns are mostly vowel-final, and s-plural is very restricted after consonant-final nouns.
 
 
     # 4
@@ -1760,6 +1764,10 @@ constraints:
         examples_contra: [uhu_+s_nest, schuh_+e_kauf]
 
         evidence:
+
+            - ref: fehringer_2009
+              pages: [163]
+              summary: -s- is less accepted after a vowel-final s-plural noun than after a consonant-final one.
 
             - ref: kuerschner_2005
               pages: [110]
