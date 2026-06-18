@@ -1457,7 +1457,7 @@ constraints:
               summary: -s- occurs regularly after all F-building suffixes exept for -ei, -erei, and -in; otherwise after suffix -ling.
 
             - ref: fuhrhop_kuerschner_2015
-              pages: [572]
+              pages: [572, 576]
               summary: -s- occurs regularly after suffixes -heit, -ung, -ling, -schaft, -tum, -ität [2].
 
             - ref: koliopoulou_2014
@@ -1661,6 +1661,10 @@ constraints:
             - ref: fuhrhop_1996
               pages: [536, 537]
               summary: A necessary condition for occurrence of -s- in implicit derivates from verb stems is a prefix.
+
+            - ref: fuhrhop_kuerschner_2015
+              pages: [576]
+              summary: When the first part of a compound is prefixed, linking-s is more frequently found than when it is not prefixed.
 
             - ref: koliopoulou_2014
               pages: [61]
@@ -2491,6 +2495,10 @@ constraints:
         examples_contra: [arbeit_+s_tag, heirat_+s_antrag]
 
         evidence:
+
+            - ref: fuhrhop_kuerschner_2015
+              pages: [576]
+              summary: Linking-s is still almost never found with feminine simplexes.
 
             - ref: kuerschner_2010
               pages: [23, 24]
