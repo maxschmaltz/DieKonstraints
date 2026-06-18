@@ -341,3 +341,11 @@ Es treten doch auch andere Erstglieder mit **pluralischer Bedeutung** ohne Plura
 Wir finden wie erwartet Belege ohne -n trotz **Pluralbedeutung** des Erstglieds (Federbett, Schulterschluss, Steuersenkung, Fasergewebe), aber auch solche mit -n bei **Pluralbedeutung** (Asternstrauß, Kapernsoße, Kiefernwald, Mutternschlüssel, Schwesternschule, Wimpernstift), und sogar solche mit -n trotz Singularbedeutung des Erstglieds (Austernschale, Kiefernzapfen, Opernaufführung, Otternbiss).
 
 Die Beispiele zeigen, dass das Auftreten des Pluralsuffixes als Fugenelement nicht davon abhängt, ob das Pluralsuffix für die betreffende Wortklasse regulär oder irregulär ist, sondern von phonotaktischen Bedingungen gesteuert wird.
+
+
+
+## fuhrhop_kuerschner_2015
+
+[577]
+
+While **plural semantics** are associated with linking-e(n) in Dutch and Afrikaans, this is less clear in German (cf. Krott 2001: 224). Dressler et al. (2001) conducted a constituent naming task with German compounds showing that **plural semantics** play no role in compound analysis. For German compounds in which associating linking-(e)n with **plural semantics** makes sense (cf. Frau-en-heim ‘home for women’), the same response latencies were found as for opposite (Schlange-n-biss ‘snake bite’) and unclear cases (Vill-en-bau ‘villa building’). Additional support is provided by Banga et al. (2013) who presented novel Dutch compounds to native speakers of Dutch, Dutch-Frisian bilinguals, and German-speaking learners. The subjects were asked to express their preference for a form with or without linking-en. A context was provided by which either singular or **plural semantics** should be evoked. The results showed that plurality played a role in all groups of subjects, but that the effects were considerably smaller within the German group.
