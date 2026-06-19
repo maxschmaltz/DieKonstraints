@@ -20,8 +20,10 @@ Badfußboden		6.0	match-L01/FEB/06487-p329-330
 Badhalterungen		0.0	
 Badmodernisierer		6.0	match-BRZ07/DEZ/01550-p118-119
 Badsauger		2.0	match-RHZ16/MAR/19187-p206-207
+Badstyling		0.0	
 Badverfliesung		1.0	match-NKU00/JAN/06459-p1379-1380
 Badwärmern		1.0	match-W15/JAN/02265-p878-879
+Ballabdrücke	Ballabdruck	70.0	match-M14/DEZ/04836-p395-396
 Ballgrößen	Ballgröße	85.0	match-M16/AUG/00039-p235-236
 Balljunkie	Balljunkie	13.0	match-RHZ16/AUG/26342-p7-8
 Ballläufe		2.0	match-RHZ05/SEP/35311-p266-267
@@ -32,6 +34,7 @@ Bettcouch	Bettcouch	149.0	match-M00/DEZ/77093-p185-186
 Bettdecke	Bettdecke	11703.0	match-B10/AUG/03767-p102-103
 Bettdecken	Bettdecke	11703.0	match-M05/DEZ/06080-p219-220
 Bettdesign		1.0	match-HAB04/OKT/01451-p260-261
+Bettengröße	Bettengröße	19.0	match-M17/DEZ/02393-p174-175
 Bettentextilie		0.0	
 Bettgefährten	Bettgefährte	188.0	match-B09/NOV/01874-p283-284
 Bettgröße	Bettgröße	33.0	match-NUZ11/DEZ/01933-p55-56
@@ -55,18 +58,23 @@ Bilderupdate		0.0
 Bildflaeche	Bildfläche	18874.0	match-NZF95/NOV/00006-p1679-1680
 Bildgebung	Bildgebung	2387.0	match-B09/NOV/02793-p702-703
 Bildgröße	Bildgröße	743.0	match-M12/DEZ/05663-p513-514
+Bildhandbuchs		1.0	match-W07/MAI/02471-p315-316
 Bildquelle	Bildquelle	733.0	match-B11/MAR/02826-p33-34
 Brettabschieber		0.0	
 Brettbeschriftung		0.0	
 Bretterdecke	Bretterdecke	42.0	match-NKU12/FEB/05434-p69-70
 Brettergerueste		0.0	
 Brettergravur		-1.0	
+Bretternachbildungen		0.0	
 Brettertüren	Brettertüre	74.0	match-RHZ08/OKT/16899-p318-319
 Brettfußball	Brettfußball	16.0	match-M06/JUN/42919-p113-114
+Brettgrößen	Brettgröße	4.0	match-WAS05/SEP/00776-p610-611
 Brettschmieden		0.0	
 Brettspitze	Brettspitze	22.0	match-HMP16/APR/01141-p47-48
+Brettsponsor		0.0	
 Briefbeschwerer	Briefbeschwerer	1511.0	match-M01/DEZ/93038-p210-211
 Briefeausdrucker		0.0	
+Briefeausfahrerin		0.0	
 Briefebeantwortern		0.0	
 Briefebeschwerer		0.0	
 Briefecorpus		0.0	
@@ -90,16 +98,21 @@ Buchtanbieter		0.0
 Buchtanbieters		0.0	
 Buchtareal		0.0	
 Buchtbetreiber		1.0	match-M15/JUN/04979-p340-341
+Buchtecke		0.0	
 Buchteinmündung		0.0	
 Buchteinschnitt		0.0	
 Buchteinschnitten		0.0	
+Buchteneinrahmung		0.0	
+Buchtengefährten		0.0	
 Buchtengrößen		2.0	match-NKU19/FEB/04865-p462-463
 Buchteninfo		0.0	
 Buchtenmaße		0.0	
 Buchtenmaßen		0.0	
 Buchtenwatten		0.0	
 Buchtflinte		0.0	
+Buchtidylle		0.0	
 Buchtipp	Buchtip	14278.0	match-B10/SEP/00002-p858-859
+Buchtipps	Buchtip	14278.0	match-B10/AUG/03945-p1317-1318
 Buchtknoten	Buchtknoten	2.0	match-HAA14/JUL/00604-p102-103
 Buchtlastung		0.0	
 Buchtsitzers		0.0	
@@ -108,6 +121,7 @@ Buchtwatten		0.0
 Bäderexpreß		5.0	match-U95/NOV/79159-p34-35
 Bäderhaus	Bäderhaus	3248.0	match-RHZ00/DEZ/16010-p9-10
 Bäderkassen	Bäderkasse	52.0	match-BRZ06/MAI/00063-p240-241
+Bäderreisen	Bäderreise	158.0	match-RHZ99/FEB/17945-p39-40
 Bäderschließungen	Bäderschließung	467.0	match-M19/DEZ/02406-p34-35
 Bälleabwehrer		0.0	
 Bällebeisserin		0.0	
@@ -116,6 +130,7 @@ Bälleklauer		14.0	match-U06/JUN/04290-p500-501
 Bällepools		4.0	match-L04/NOV/01586-p55-56
 Bällequäler		0.0	
 Bällestreichler		2.0	match-B18/SEP/01699-p173-174
+Bällevergabe		0.0	
 Bücherdiebin	Bücherdiebin	692.0	match-B09/OKT/02308-p153-154
 Bücherecke	Bücherecke	1370.0	match-M06/DEZ/95843-p29-30
 Büchergilde	Büchergilde	1762.0	match-B10/SEP/01128-p114-115
@@ -131,7 +146,9 @@ Dämonenaction		0.0
 Dämonenbeschwörerin	Dämonenbeschwörerin	1.0	match-PAR/DLJ/56817-p24616-24617
 Dämonenbündlern		0.0	
 Dämonenfratze	Dämonenfratze	49.0	match-NUZ02/DEZ/02080-p30-31
+Dämonenfratzen	Dämonenfratze	49.0	match-BIO/MCF/00000-p16959-16960
 Dämonenjägerin	Dämonenjägerin	53.0	match-FOC05/MAR/00045-p33-34
+Dämonenkulte		2.0	match-U09/FEB/00011-p151-152
 Dämonentraeumen		0.0	
 Dämonjägerin		0.0	
 Dämonsgeist		0.0	
@@ -141,9 +158,12 @@ Dämonskralle		0.0
 Dämonstatue		0.0	
 Dämonstatuen		0.0	
 Dämonvertreiber		0.0	
+Eiballen	Eiballen	5.0	match-NKU16/NOV/06828-p428-429
+Eierbrunch		4.0	match-RHZ19/SEP/60041-p551-552
 Eierkennzeichnung	Eierkennzeichnung	118.0	match-NKU10/MAR/08465-p43-44
 Eierkick		3.0	match-T19/JAN/00526-p127-128
 Eierkohlen	Eierkohle	70.0	match-B16/JAN/02701-p585-586
+Eierpiekser	Eierpiekser	23.0	match-B18/OKT/00054-p114-115
 Eierproduzentin	Eierproduzentin	18.0	match-NUN15/APR/00364-p823-824
 Eierschecken	Eierschecke	2115.0	match-B11/APR/02413-p0-1
 Eierwender		2.0	match-HAB13/NOV/00028-p31-32
@@ -188,12 +208,15 @@ Eigenschaftsfiltern		0.0
 Eigenschaftsform		0.0	
 Eigenschaftsgefüge		0.0	
 Eigenschaftsgegenstände		0.0	
+Eigenschaftsgegenständen		0.0	
 Eigenschaftsgradient		0.0	
 Eigenschaftsgrenzen		1.0	match-HAB01/OKT/03300-p159-160
 Eigenschaftsherausforderungen		0.0	
 Eigenschaftsindividuen		0.0	
+Eigenschaftsinfos		0.0	
 Eigenschaftsinspektors		0.0	
 Eigenschaftsirrtums		0.0	
+Eigenschaftskapitel		0.0	
 Eigenschaftskataloge		0.0	
 Eigenschaftskatalogen		0.0	
 Eigenschaftsklasse		0.0	
@@ -254,7 +277,10 @@ Eiverweigerer		0.0
 Eiweise	Eiweise	4.0	match-M15/OKT/09753-p223-224
 Eiweisen		1.0	match-M99/FEB/12435-p127-128
 Elementausfachungen		0.0	
+Elementdecke		0.0	
 Elementdreiklangs		0.0	
+Elementeanzahlen		0.0	
+Elementedecke		0.0	
 Elementedesign		0.0	
 Elementedioramen		0.0	
 Elementeknoten		0.0	
@@ -277,6 +303,7 @@ Elementzugehörigkeiten		0.0
 Fraudisco		0.0	
 Frauenbundesliga	Frauenbundesliga	457.0	match-B11/JUL/01779-p699-700
 Frauenfußball	Frauenfußball	43630.0	match-B11/AUG/01870-p324-325
+Frauenfußballs	Frauenfußball	43630.0	match-B09/SEP/01363-p9-10
 Frauenfüße		216.0	match-B16/FEB/00698-p1-2
 Frauenhaus	Frauenhaus	61885.0	match-B09/SEP/01330-p15-16
 Frauenrechtlerin	Frauenrechtlerin	10683.0	match-B09/SEP/02138-p62-63
@@ -286,6 +313,7 @@ Frauentrio	Frauentrio	782.0	match-M14/DEZ/06450-p0-1
 Frauerversteher		0.0	
 Fraufußball	Fraufußball	1.0	match-RHZ21/AUG/15348-p17-18
 Fraugefuehl		0.0	
+Frauleuten		0.0	
 Fraumauerer		0.0	
 Frauverseherin		0.0	
 Frauversteher		1.0	match-SVZ09/APR/11289-p33-34
@@ -308,7 +336,9 @@ Gerätspreis		0.0
 Gerätsprotokolls		0.0	
 Gerätstuecke		0.0	
 Gerätstypen		0.0	
+Gerätturnerin	Gerätturnerin	303.0	match-M07/OKT/00080-p299-300
 Gerätturnerinnen	Gerätturnerin	303.0	match-M04/DEZ/90883-p87-88
+Gerättypen		2.0	match-RHZ13/SEP/09978-p185-186
 Geräuschaufnehmerin		0.0	
 Geräuscheinblendungen		3.0	match-RHZ02/DEZ/07386-p176-177
 Geräuschemmissionen	Geräuschemmission	6.0	match-RHZ99/JUN/18183-p82-83
@@ -338,6 +368,7 @@ Geschenkskorb	Geschenkskorb	1.0	match-DIV/VHU/00001-p13686-13687
 Geschenktipps	Geschenktipp	645.0	match-M01/DEZ/93038-p8-9
 Geschenkzwecken	Geschenkzweck	38.0	match-M01/NOV/87835-p59-60
 Gitarreapp		0.0	
+Gitarregrößen		0.0	
 Gitarreharmonien		0.0	
 Gitarrekurse	Gitarrekurs	9.0	match-RHZ12/MAI/22334-p282-283
 Gitarrekursen		1.0	match-RHZ97/FEB/04263-p367-368
@@ -353,15 +384,18 @@ Gitarrenmarke	Gitarrenmarke	7.0	match-NUN16/MAI/02307-p55-56
 Gitarrenqueen		0.0	
 Gitarrenrack		0.0	
 Gitarrensounds	Gitarrensound	2874.0	match-RHZ08/DEZ/11563-p133-134
+Gitarreproblemchen		0.0	
 Gitarreshops		0.0	
 Gitarresound		0.0	
 Gitarrestudien		1.0	match-MZE11/APR/08466-p171-172
 Gitarretuners		0.0	
+Gitarretypen		2.0	match-L00/OKT/08015-p592-593
 Handballen	Handballen	1526.0	match-L01/JAN/03162-p43-44
 Handbefüllung		0.0	
 Handfeuerwaffe	Handfeuerwaffe	5778.0	match-B11/DEZ/01255-p102-103
 Handfeuerwaffen	Handfeuerwaffe	5778.0	match-B11/SEP/00201-p1289-1290
 Handlangerin	Handlangerin	331.0	match-B15/JUN/02349-p67-68
+Handlangers	Handlanger	-1.0	match-B13/JAN/01692-p139-140
 Handpumpe	Handpumpe	1290.0	match-M14/DEZ/07649-p325-326
 Handrührers	Handrührer	3443.0	match-M01/DEZ/92065-p223-224
 Handscanner	Handscanner	613.0	match-M01/DEZ/92697-p322-323
@@ -390,12 +424,14 @@ Hundeführerinnen	Hundeführerin|Hundeführerinne	-1.0	match-BRZ10/MAR/15045-p28
 Hundekackern		1.0	match-HAA06/MAR/08862-p220-221
 Hundekita	Hundekita	45.0	match-NUN12/SEP/00563-p89-90
 Hundererfahrung		0.0	
+Hunderernährung		0.0	
 Hunderunde	Hunderunde	394.0	match-RHZ10/DEZ/25977-p2-3
 Hundespaß	Hundespaß	25.0	match-BRZ07/OKT/08729-p0-1
 Hundetagesstätte	Hundetagesstätte	290.0	match-BRZ11/APR/10793-p85-86
 Hundetrainerin	Hundetrainerin	3384.0	match-B11/SEP/02268-p588-589
 Hundevermehrer	Hundevermehrer	24.0	match-NUZ12/FEB/00805-p186-187
 Hundhandler		0.0	
+Hundsaffen	Hundsaffe	14.0	match-B18/OKT/00914-p48-49
 Hundseck	Hundseck	105.0	match-NUN95/DEZ/00210-p169-170
 Hundsfloh		0.0	
 Hundsfurz		1.0	match-U01/JUL/05995-p580-581
@@ -415,6 +451,7 @@ Hundsrosen	Hundsrose	534.0	match-NKU05/DEZ/03207-p112-113
 Hundsrute	Hundsrute	46.0	match-NKU11/AUG/09454-p29-30
 Hundsrücken	Hundsrücken	123.0	match-RHZ04/FEB/00966-p320-321
 Hundsschädel		0.0	
+Hundsstern		236.0	match-B09/AUG/00805-p1-2
 Hundstod	Hundstod	27.0	match-NUN06/AUG/00605-p729-730
 Hundsveilchen	Hundsveilchen	22.0	match-NUZ02/NOV/02044-p297-298
 Hundsviech	Hundsviech	20.0	match-U00/SEP/03209-p22-23
@@ -428,6 +465,7 @@ Hundwerdung		14.0	match-WAS17/OKT/00377-p740-741
 Händeabdrücke	Händeabdruck	164.0	match-R97/AUG/67334-p354-355
 Händeabdrücken	Händeabdruck	164.0	match-NKU01/DEZ/07168-p309-310
 Händeabhacker		1.0	match-W14/MAI/00990-p366-367
+Händedekontamination		0.0	
 Händeflattern	Händeflattern	6.0	match-SOL07/MAI/02341-p399-400
 Händegestik		1.0	match-Z74/MAI/00034-p269-270
 Händegewusel		0.0	
@@ -440,6 +478,7 @@ Händeschüttler	Händeschüttler	204.0	match-B11/SEP/00699-p220-221
 Händetrockner	Händetrockner	341.0	match-BRZ08/JUN/00332-p67-68
 Händetrocknern	Händetrockner	341.0	match-RHZ99/JUL/14232-p90-91
 Händetrockners	Händetrockner	341.0	match-B14/JAN/01799-p381-382
+Händetrocknung		2.0	match-U92/SEP/02106-p153-154
 Händewedler		0.0	
 Händewärmer		6.0	match-NUN19/JAN/01239-p96-97
 Häuserbesetzer	Häuserbesetzer	14.0	match-BRZ10/APR/10554-p83-84
@@ -451,11 +490,14 @@ Häusermassen	Häusermasse	67.0	match-BRZ05/DEZ/01632-p614-615
 Häusernachbildungen		1.0	match-HAZ20/DEZ/00593-p493-494
 Häuserreihen	Häuserreihe	2317.0	match-M02/DEZ/96177-p1022-1023
 Häuserresten	Häuserrest	104.0	match-B13/JUL/01510-p68-69
+Häuserspitze		0.0	
+Häuserspitzen	Häuserspitze	6.0	match-S01/DEZ/00062-p12683-12684
 Katzebabies		0.0	
 Katzebesitzerin		0.0	
 Katzedecken		0.0	
 Katzedärmchen		0.0	
 Katzefalle		0.0	
+Katzefallen		0.0	
 Katzegejaule		0.0	
 Katzehaus		0.0	
 Katzemamis		0.0	
@@ -465,6 +507,7 @@ Katzendekos		1.0	match-NUN11/MAR/02154-p213-214
 Katzenfalle	Katzenfalle	141.0	match-RHZ11/DEZ/28662-p22-23
 Katzenhalterin	Katzenhalterin	217.0	match-B09/SEP/01371-p26-27
 Katzenhaus	Katzenhaus	5642.0	match-M03/DEZ/85121-p243-244
+Katzenherrchen		4.0	match-RHZ13/SEP/12805-p278-279
 Katzenleckerchen		3.0	match-BDZ04/NOV/12361-p542-543
 Katzenpfötchen	Katzenpfötchen	229.0	match-RHZ02/DEZ/12823-p244-245
 Katzensticks		1.0	match-S19/SEP/00280-p415-416
@@ -522,7 +565,9 @@ Kindsverlustes		0.0
 Kindsvertauschung		3.0	match-Z14/OKT/00060-p737-738
 Kindsvätern	Kindsvater	3337.0	match-BRZ11/MAI/03970-p11-12
 Liedduett		1.0	match-SZE01/JAN/05345-p156-157
+Liederbuchs	Liederbuch	6480.0	match-B09/OKT/00490-p178-179
 Liederlisten	Liederliste	117.0	match-NUZ18/JAN/02346-p547-548
+Liedermacherin	Liedermacherin	4544.0	match-B10/SEP/01610-p129-130
 Liederpoet	Liederpoet	225.0	match-HAZ14/MAR/00361-p41-42
 Liedertäfler	Liedertäfler	59.0	match-M17/DEZ/00889-p332-333
 Liedquelle		1.0	match-AAZ06/APR/05698-p125-126
@@ -545,12 +590,16 @@ Nagelkauern		2.0	match-NKU06/SEP/01598-p329-330
 Nagelknipser	Nagelknipser	229.0	match-BRZ09/MAI/11045-p107-108
 Nagelleiste		14.0	match-NKU04/AUG/06314-p29-30
 Nagelschäden	Nagelschaden	9.0	match-RHZ97/NOV/13404-p37-38
+Nagelspitze	Nagelspitze	155.0	match-BRZ07/DEZ/02841-p123-124
+Nagelspitzen	Nagelspitze	155.0	match-BRZ09/OKT/00071-p5-6
 Nagelstylisten		7.0	match-NUZ09/OKT/01109-p451-452
+Nagelstylistin	Nagelstylistin	48.0	match-NKU12/JAN/08184-p27-28
 Nägelabbrecher		0.0	
 Nägelabdrücke		2.0	match-BDZ06/JUN/01652-p47-48
 Nägelbeisser	Nägelbeißer	11.3	match-U93/MAI/04683-p14-15
 Nägelbeisserin		0.0	
 Nägelbeißer	Nägelbeißer	11.0	match-U93/MAI/04683-p14-15
+Nägelbeißern		1.0	match-MZE01/DEZ/06875-p148-149
 Nägelecken		0.0	
 Nägelgröße		0.0	
 Nägelhalterungen		0.0	
@@ -558,15 +607,18 @@ Nägelkauer	Nägelkauer	57.0	match-NUZ03/JUL/03170-p546-547
 Nägelkauerin		0.0	
 Nägelkauern		8.0	match-U12/JAN/04024-p60-61
 Nägelkauers		0.0	
+Nägelknabberei		0.0	
 Nägelknabbern	Nägelknabbern	18.0	match-BRZ12/OKT/12335-p12-13
 Nägelknabberns		2.0	match-NKU12/SEP/06734-p148-149
 Nägelkäuer		0.0	
 Nägelmacherei		0.0	
+Nägelschuppen		0.0	
 Nägelschäden		0.0	
 Nägelspalten		0.0	
 Nägelspitze		2.0	match-Z13/APR/00057-p903-904
 Ohrclips	Ohrclip	414.0	match-B09/MAR/01233-p276-277
 Ohrenkneifer	Ohrenkneifer	460.0	match-BRZ07/MAI/09250-p13-14
+Ohrenkneifern	Ohrenkneifer	460.0	match-BRZ12/MAI/12604-p72-73
 Ohrenkäppchen		0.0	
 Ohrenmarke	Ohrenmarke	129.0	match-NUN09/SEP/00300-p63-64
 Ohrenmarken	Ohrenmarke	129.0	match-NUN92/JAN/00717-p615-616
@@ -600,7 +652,9 @@ Produkteinfos		0.0
 Produktekonfigurator		0.0	
 Produktelabel	Produktelabel	2.0	match-BDZ09/JAN/03283-p119-120
 Produktelabels		0.0	
+Produktemarke		3.0	match-ELI20/AUG/00005-p52-53
 Produktemix	Produktemix	21.0	match-NKU04/DEZ/08629-p103-104
+Produkteportfolio	Produkteportfolio	5.0	match-BDZ08/JUL/05382-p201-202
 Produkteportfolios	Produkteportfolio	5.0	match-BOZ00/DEZ/00580-p404-405
 Produkteregistration		0.0	
 Produktespalte		0.0	
@@ -618,13 +672,16 @@ Radmuttern	Radmutter	2778.0	match-RHZ01/DEZ/12631-p0-1
 Radreise	Radreise	3258.0	match-RHZ03/DEZ/11403-p47-48
 Radrunde	Radrunde	1029.0	match-BRZ12/MAI/00223-p86-87
 Radwanderweg	Radwanderweg	8805.0	match-B10/SEP/00019-p242-243
+Radwanderwegen	Radwanderweg	8805.0	match-BRZ07/MAI/10334-p140-141
 Radwanderweges	Radwanderweg	8805.0	match-B11/NOV/00138-p280-281
+Räderdesigns		2.0	match-HAZ16/NOV/03674-p45-46
 Rädergröße	Rädergröße	10.0	match-NUN07/JAN/00551-p70-71
 Rädergrößen		7.0	match-U12/FEB/00931-p195-196
 Räderkonfigurator		1.0	match-HAA06/APR/06870-p40-41
 Rädermarke		0.0	
 Rädermarken		0.0	
 Rädermontage	Rädermontage	16.0	match-BRZ08/MAI/01883-p93-94
+Schlossareals	Schlossareal	1943.0	match-R99/DEZ/97766-p189-190
 Schlosssignierung		0.0	
 Schlösserareal		5.0	match-U06/OKT/03454-p233-234
 Schlössercup		2.0	match-SZE09/APR/17617-p12-13
@@ -635,6 +692,7 @@ Schlösserreise	Schlösserreise	20.0	match-NUN18/MAI/00306-p440-441
 Schlösserreisen		4.0	match-NKU05/FEB/02093-p25-26
 Schwertahnen		0.0	
 Schwerteraction		0.0	
+Schwerterduell	Schwerterduell	2.0	match-NUZ23/FEB/00314-p122-123
 Schwerterfimmel		0.0	
 Schwertergefuchtel		1.0	match-NUZ09/JUN/00994-p161-162
 Schwertergeknüppel		0.0	
@@ -646,6 +704,7 @@ Schwertermarke	Schwertermarke	17.0	match-M10/NOV/79286-p180-181
 Schwertermarken		0.0	
 Schwertermarkung		0.0	
 Schwerterschmieden		2.0	match-RHZ11/JUL/01889-p63-64
+Schwerterspalte		0.0	
 Schwerterspitzen		0.0	
 Schwerterstyles		0.0	
 Schwertertypen		1.0	match-BRZ10/SEP/02706-p334-335
@@ -672,6 +731,7 @@ Sonnenmarkise	Sonnenmarkise	131.0	match-B10/APR/03918-p81-82
 Sonneplattform		0.0	
 Sonneschirmchen		0.0	
 Sonneschäden		1.0	match-BDZ13/AUG/00616-p42-43
+Stadtgirl		6.0	match-RHZ16/JAN/18051-p252-253
 Stadthalle	Stadthalle	249118.0	match-B09/OKT/01121-p698-699
 Stadtkonservatorin	Stadtkonservatorin	131.0	match-B09/MAR/03127-p465-466
 Stadtparkes	Stadtpark	91436.0	match-B11/APR/02993-p68-69
@@ -684,6 +744,7 @@ Städteranking	Städteranking	953.0	match-B09/OKT/01123-p3-4
 Städtetipps	Städtetipp	47.0	match-FOC17/JAN/00213-p26-27
 Vatergrübchen		0.0	
 Vaterhaus	Vaterhaus	1287.0	match-M10/DEZ/87515-p219-220
+Vaterländerei	Vaterländerei	31.0	match-NUN18/JUL/00618-p335-336
 Vaterquäler		0.0	
 Vogelbeobachter	Vogelbeobachter	1056.0	match-B10/SEP/02169-p475-476
 Vogelbeobachters	Vogelbeobachter	1056.0	match-B10/APR/02799-p126-127
@@ -701,19 +762,24 @@ Väterblog		5.0	match-T12/SEP/03216-p367-368
 Väterdemo		1.0	match-MZE12/AUG/08301-p97-98
 Väterentsorgung		1.0	match-W08/JUN/00869-p627-628
 Vätererbes		0.0	
+Väterrechtler	Väterrechtler	64.0	match-NUN15/MAR/00769-p224-225
 Väterrunden		5.0	match-W15/MAI/00460-p613-614
 Vögelbeobachter		0.0	
 Vögelbeobachtern	Vögelbeobachter	1.0	match-U25/AUG/00125-p469-470
 Vögelbildchen		0.0	
 Vögelflattern	Vögelflattern	2.0	match-AZM21/OKT/01848-p775-776
 Vögelfüttern	Vögelfüttern	43.0	match-BRZ12/DEZ/10113-p2-3
+Vögelfüßen		1.0	match-U97/MAR/15356-p280-281
+Vögelgebrüder		0.0	
 Vögelgezwitscher	Vögelgezwitscher	68.0	match-B17/MAI/00695-p203-204
 Vögelgezwitschers		0.0	
 Vögelstudien		0.0	
+Vögelviecher		0.0	
 Vögelvolieren		0.0	
 Vögelvorkommen	Vögelvorkommen	3.0	match-AAZ22/JAN/00541-p92-93
 Vögelweise		0.0	
 Vögelzüchterin		0.0	
+Wegausleuchtung		1.0	match-AAZ16/MAR/04097-p152-153
 Wegbeschreiber	Wegbeschreiber	10.0	match-NKU19/JUN/00846-p13-14
 Wegedecke	Wegedecke	701.0	match-M00/DEZ/74571-p307-308
 Wegedecken	Wegedecke	701.0	match-BRZ07/NOV/18015-p34-35
@@ -744,6 +810,8 @@ Würmergewusel		0.0
 Würmerklumpen		0.0	
 Würmermasse		0.0	
 Würmerpicker		1.0	match-NUN16/JUL/02589-p1006-1007
+Zahneingriff		11.0	match-EMT20/JUN/00025-p580-581
+Zahnpasten	Zahnpaste	934.0	match-BRZ12/APR/00237-p177-178
 Zahnpulpa	Zahnpulpa	17.0	match-B10/JUN/04115-p112-113
 Zahnschäden	Zahnschäden	459.0	match-BRZ07/SEP/12437-p97-98
 Zahntechnikerin	Zahntechnikerin	1536.0	match-B10/SEP/01544-p741-742
@@ -784,6 +852,7 @@ Zähnezusammenbeißerin		1.0	match-SOL18/OKT/02343-p242-243
 Äpfelevents		0.0	
 Äpfelfütterer		0.0	
 Äpfelgrößen		0.0	
+Äpfelklau	Äpfelklau	6.0	match-RHZ01/JAN/14620-p237-238
 Äpfelklauer		0.0	
 Äpfelresten		0.0	
 Äpfelspalter		0.0	
