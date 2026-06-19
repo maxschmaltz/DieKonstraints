@@ -1,12 +1,11 @@
 import os
-import asyncio
-import aiohttp
 import requests
+from bs4 import BeautifulSoup
 import pandas as pd
-from tqdm.asyncio import tqdm_asyncio
 from tqdm import tqdm
 from dotenv import load_dotenv
-from typing import Optional
+from collections import defaultdict
+from typing import Optional, Tuple
 
 load_dotenv()
 
@@ -61,253 +60,253 @@ load_dotenv()
 
 
 # API endpoint
-url = "https://korap.ids-mannheim.de/api/v1.0/search"
+base_url = "https://korap.ids-mannheim.de/api/v1.0"
 
 headers = {
     "accept": "*/*",
-    # prerequisites:
+    # setup:
     # 1. Get a client ID and client secret by registering an application
-    #   at https://korap.ids-mannheim.de/settings/oauth
+    #   at https://korap.ids-mannheim.de/settings/oauth. Save them
+    #   in the .env under any name, you will need them
+    #   to obtain an auth code in the next step.
     # 2. Authorize at https://korap.ids-mannheim.de/api/v1.0/openapi/
-    # 3. Set the obtained auth code in the .env file as KORAP_AUTH_CODE
-    # 4. IMPORTANT! The code seems to reset every 24h or something,
+    #   using the obtained client ID and client secret. In the scope,
+    #   select "search" in any case, and "match_info" in case
+    #   linguistic annotations are required.
+    # 3. Click "Try it out" of the /search endpoint, then "Execute" with
+    #   any query (e.g., "test"). In the automatically generated curl command,
+    #   you will see the bearer token.
+    # 4. Set the obtained bearer token in the .env file as KORAP_AUTH_CODE
+    # 5. IMPORTANT! The bearer token seems to reset every 24h or something,
     #   make sure to update timely to avoid errors with the API requests
     "Authorization": f"Bearer {os.getenv('KORAP_AUTH_CODE')}"
 }
 
-
-async def _aget_dereko_count(
-    session: aiohttp.ClientSession, 
-    semaphore: asyncio.Semaphore,
-    lemma: str,
-    resolve_sz: Optional[bool]=False
-) -> int:
-
-    # docu available under
-    # https://korap.ids-mannheim.de/api/v1.0/openapi/
-    # https://korap.ids-mannheim.de (Hilfe -> API)
-    params = {
-        # see https://korap.ids-mannheim.de (Hilfe -> Anfragesprachen -> Poliqarp+)
-        # (alternatively https://korap.ids-mannheim.de/doc/ql/poliqarp-plus?embedded=True)
-        "q": f"[base={lemma}]",   # lemma
-        "ql": "poliqarp",
-        "cq": (
-            # all open- and close-source corpora (closed are 
-            # available via authorization); this expression is composed automatically
-            # by the KorAP web interface after authorization
-            "(availability=/CC.*/ | availability=/ACA.*/ | availability=/QAO-NC/) "
-            # only German corpora (Austrian, Luxembourish and Swiss excluded
-            # to avoid catching regionalisms)
-            "& referTo corp-d "
-            # entries after 1970 to avoid historical language
-            "& creationDate since 1970"
-        ),
-        # don't show anything so we can get faster response
-        "context": "1-token,1-token",
-        "engine": "lucene",
-        "count": "0",
-        "page": "1",
-        "offset": "0",
-        "cutoff": "false",
-        "access-rewrite-disabled": "false",
-        "show-tokens": "false",
-        "show-snippet": "false"
-    }
-
-    try:
-        async with semaphore:  # limit concurrent requests
-            async with session.get(
-                url,
-                headers=headers,
-                params=params,
-                timeout=aiohttp.ClientTimeout(total=30)
-            ) as response:
-                if response.status == 200:
-                    data = await response.json()
-                    count = data.get("meta", {}).get("totalResults", -1)
-                else:
-                    return -1
-        # release semaphore;
-        # special case with eszett,
-        # which is encoded as ss in CELEX
-        if resolve_sz and count == 0 and "ss" in lemma:
-            sz_lemma = lemma.replace("ss", "ß")
-            sz_count = await _aget_dereko_count(
-                session, semaphore, sz_lemma
-            )
-            if sz_count > 0:
-                # it means that the lemma ß is correct
-                return sz_count + 0.3   # signalize of the replacement
-        return count
-    except:
-        return -1
-    
-
-async def aget_dereko_counts(
-    lemmas: list[str],
-    resolve_sz: Optional[bool]=False
-) -> list[int]:
-
-    # since querying DeReKo can be time-consuming and resource-intensive,
-    # we cache the frequency counts in a separate TSV file shared with GeCoDB compounds;
-    # moreover, to remain consistent with the count retrieval, we replace
-    # original GeCoDB compound frequencies with the ones obtained
-    # under the same procedure as for CELEX nouns, so we offload the frequency
-    # retrieval to this separate module
-
-    freq_path = "resources/developed/dereko_de_geq70_counts.tsv"
-
-    if os.path.exists(freq_path):
-        freq_df = pd.read_csv(
-            freq_path,
-            sep="\t",
-            header=0,
-            index_col="entry",  # both lemmas and compounds
-            # to be able to store decimal part for 'ß' cases
-            dtype={"entry": str, "freq": float}
-        )
-    else:
-        # empty freq df
-        freq_df = pd.DataFrame(columns=["entry", "freq"]).set_index("entry")
-
-    uncached_entries = list(set(lemmas) - set(freq_df.index))
-
-    if uncached_entries:
-
-        max_requests = 25
-        semaphore = asyncio.Semaphore(max_requests)  # limit concurrent requests
-        connector = aiohttp.TCPConnector(limit=max_requests, limit_per_host=max_requests)
-        
-        async with aiohttp.ClientSession(connector=connector) as session:
-            tasks = [
-                _aget_dereko_count(
-                    session, semaphore, lemma, resolve_sz=resolve_sz
-                )
-                for lemma in uncached_entries
-            ]
-            
-            freqs = await tqdm_asyncio.gather(*tasks, desc="Fetching uncached frequencies from KorAP")
-
-        freqs = pd.DataFrame({
-            "entry": uncached_entries,
-            "freq": freqs
-        }).set_index("entry")
-        freq_df = pd.concat([freq_df, freqs])
-
-    all_freqs = freq_df.loc[lemmas, "freq"].tolist()
-
-    # freq_df.sort_index(inplace=True)
-    freq_df.to_csv(
-        freq_path,
-        sep="\t",
-        header=True,
-        index=True,
-        index_label="entry"
-    )
-
-    return all_freqs
-
-
-# Note: after receiving a Meldung from IDS Mannheim support team,
+# Note: after receiving a notice from the IDS Mannheim support team,
 # we learned that our async requests were causing issues on their servers,
-# and so we provide a synchronous alternative below.
+# and so we provide only synchronous version now.
+# For async verions, refer to
+# https://github.com/maxschmaltz/DieKonstraints/blob/comp_constr_corp_study_mar26/data_utils/dereko_search.py
 
-def _get_dereko_count(
-    lemma: str,
-    resolve_sz: Optional[bool]=False
-) -> int:
+def _retrieve_dereko_lemma(match_id: str) -> str:
 
-    # docu available under
-    # https://korap.ids-mannheim.de/api/v1.0/openapi/
-    # https://korap.ids-mannheim.de (Hilfe -> API)
+    # The API uses the matchID as a part of the url;
+    # weirdly, its appearance in the responce JSON,
+    # in the API documentation and in the url is different.
+    # Let us consider the following match id from the response JSON:
+    # match-B11/SEP/00005-p331-332.
+    # It consists of four parts corresponding to the following API
+    # docu arguments:
+    # 1. corpus_id (B11)
+    # 2. document_id (SEP)
+    # 3. text_id (00005)
+    # 4. match_id (p331-332)
+    # However, to retrieve the match infos, we need to use the following url:
+    # https://korap.ids-mannheim.de/api/v1.0/corpus/B11/SEP/00005/p331-332?...,
+    # so that text_id and match_id are separated by a slash, not a dash.
+    # Therefore, we need to remove the "match-" prefix and 
+    # replace the last but one dash with a slash in the match id to get the required url.
+    # Note that there are incremental properties `corpusSigle`, `docSigle`, and `textSigle`
+    # (B11, B11/SEP, and B11/SEP/00005 in our example, correspondingly) that are also present
+    # in the match info responce JSON, which can be used to compose the url as well,
+    # but since the matchID is always present in the search response, we can use it directly.
+    url_suffix = "/".join(match_id.replace("match-", "").split("-", 1))
+
     params = {
-        # see https://korap.ids-mannheim.de (Hilfe -> Anfragesprachen -> Poliqarp+)
-        # (alternatively https://korap.ids-mannheim.de/doc/ql/poliqarp-plus?embedded=True)
-        "q": f"[base={lemma}]",   # lemma
-        "ql": "poliqarp",
-        "cq": (
-            # all open- and close-source corpora (closed are 
-            # available via authorization); this expression is composed automatically
-            # by the KorAP web interface after authorization
-            "(availability=/CC.*/ | availability=/ACA.*/ | availability=/QAO-NC/) "
-            # only German corpora (Austrian, Luxembourish and Swiss excluded
-            # to avoid catching regionalisms)
-            "& referTo corp-d "
-            # entries after 1970 to avoid historical language
-            "& creationDate since 1970"
-        ),
-        # don't show anything so we can get faster response
-        "context": "1-token,1-token",
-        "engine": "lucene",
-        "count": "0",
-        "page": "1",
-        "offset": "0",
-        "cutoff": "false",
-        "access-rewrite-disabled": "false",
-        "show-tokens": "false",
-        "show-snippet": "false"
+        "foundry": "tt", # text tagger with linguistic annotations
+        "layer": "l"    # lemma layer
     }
 
     try:
         response = requests.get(
-            url,
+            url=f"{base_url}/corpus/{url_suffix}",
             headers=headers,
             params=params,
             timeout=30
         )
         if response.status_code == 200:
             data = response.json()
-            count = data.get("meta", {}).get("totalResults", -1)
+            # the annotations are all available only as HTML in the snippet;
+            # more specifically, the match is marked by the <mark> tag,
+            # and the lemma is available in the title of the <span> tag inside the <mark>:
+            # <mark><span title=\"tt/l:Apfelbaum\">Apfelbäume</span></mark>
+            html = data["snippet"]
+            soup = BeautifulSoup(html, 'html.parser')
+            span = soup.find('mark').find('span', title=True)
+            return span['title'].split('tt/l:')[-1]
         else:
-            return -1
+            return
+    except:
+        return
+
+
+def _get_dereko_count(
+    inp: str,
+    resolve_sz: bool,
+    is_base: bool
+) -> Tuple[int, Optional[str], Optional[str]]:
+
+    # docu available under
+    # https://korap.ids-mannheim.de/api/v1.0/openapi/
+    # https://korap.ids-mannheim.de (Hilfe -> API)
+
+    # we have two variants of search: either by lemma (`is_base=True`)
+    # or by wordform (`is_base=False`); in the first case,
+    # straigtforward search by "[base=lemma]" is performed,
+    # and no further manipulations are needed; in the second case,
+    # if we do not know the lemma of the searched wordform and want to resolve it,
+    # we additionally request the first match in the corpus, and try to
+    # retrieve the lemma from there with the /corpus endpoint,
+    # and then perform the search by lemma
+    params = {
+        # see https://korap.ids-mannheim.de (Hilfe -> Anfragesprachen -> Poliqarp+)
+        # (alternatively https://korap.ids-mannheim.de/doc/ql/poliqarp-plus?embedded=True)
+        "q": f"[base={inp}]" if is_base else inp,   # lemma or wordform
+        "ql": "poliqarp",
+        "cq": (
+            # all open- and close-source corpora (closed are 
+            # available via authorization); this expression is composed automatically
+            # by the KorAP web interface after authorization
+            "(availability=/CC.*/ | availability=/ACA.*/ | availability=/QAO-NC/) "
+            # only German corpora (Austrian, Luxembourish and Swiss excluded
+            # to avoid catching regionalisms)
+            "& referTo corp-d "
+            # entries after 1970 to avoid historical language
+            "& creationDate since 1970"
+        ),
+        # don't show anything so we can get faster response
+        "context": "1-token,1-token",
+        "engine": "lucene",
+        # get exactly 1 match if we need to resolve the lemma
+        "count": "0" if is_base else "1",
+        "page": "1",
+        "offset": "0",
+        "cutoff": "false",
+        "access-rewrite-disabled": "false",
+        "show-tokens": "false",
+        "show-snippet": "false"
+    }
+
+    try:
+
+        response = requests.get(
+            url=f"{base_url}/search",
+            headers=headers,
+            params=params,
+            timeout=30
+        )
+
+        if response.status_code != 200:
+            return -1, None, None
+
+        data = response.json()
+        count = data.get("meta", {}).get("totalResults", -1)
+
         # special case with eszett,
         # which is encoded as ss in CELEX
-        if resolve_sz and count == 0 and "ss" in lemma:
-            sz_lemma = lemma.replace("ss", "ß")
-            sz_count = _get_dereko_count(
-                sz_lemma
+        if count == 0 and "ss" in inp and resolve_sz:
+            sz_inp = inp.replace("ss", "ß")
+            sz_count, sz_lemma, sz_match_id = _get_dereko_count(
+                sz_inp,
+                resolve_sz=False,
+                is_base=is_base
             )
             if sz_count > 0:
-                # it means that the lemma ß is correct
-                return sz_count + 0.3   # signalize of the replacement
-        return count
-    except:
-        return -1
+                # it means that the inp with ß is correct
+                sz_count += 0.3   # signalize of the replacement
+            return sz_count, sz_lemma, sz_match_id
 
+        if (not is_base) and data["matches"]:
+            # try to resolve lemma
+            match_id = data["matches"][0]["matchID"]
+            lemma = _retrieve_dereko_lemma(match_id)
+            if lemma:
+                # perform the search by lemma
+                count, _, _ = _get_dereko_count(
+                    lemma,
+                    # can't be True here, since we
+                    # already resolved eszett above
+                    resolve_sz=False,
+                    is_base=True
+                )
+                # otherwise, lemma and match_id will be
+                # rewritten to None if directly returning
+                # the results of the search with `is_base=True`
+                return count, lemma, match_id
+            # else: lemma is already None
+
+        else:
+            # either None for non-lemmatized
+            # with no matches: signalize of
+            # the absence of the lemma in DeReKo,
+            # or None for lemmatized search,
+            # in which case lemma is ignored anyways
+            lemma, match_id = None, None
+
+        return count, lemma, match_id
+    
+    except Exception as e:
+        return -1, None, None
+    
 
 def get_dereko_counts(
-    lemmas: list[str],
-    resolve_sz: Optional[bool]=False
-) -> list[int]:
-
+    inputs: list[str],
+    resolve_sz: Optional[bool]=False,
+    is_base: Optional[bool]=True
+) -> Tuple[list[int], list[str]]:
+    
     # since querying DeReKo can be time-consuming and resource-intensive,
-    # we cache the frequency counts in a separate TSV file shared with GeCoDB compounds;
-    # moreover, to remain consistent with the count retrieval, we replace
-    # original GeCoDB compound frequencies with the ones obtained
-    # under the same procedure as for CELEX nouns, so we offload the frequency
-    # retrieval to this separate module
+    # we cache the frequency counts in a separate TSV file 
+    # that stores word counts for both the CELEX nouns and the GeCoDB compounds
 
-    freq_path = "resources/developed/dereko_de_geq70_counts.tsv"
+    # in this version, we also add optional lemma retrieval functionality;
+    # for this version, we create a dedicated cache file that stores
+    # both the retrieved lemmas and the word counts of the retrived lemmata
+    # whenever possible, wordforms otherwise; the reason to separate
+    # the cache files is that when `is_base=False, resolve_base=True`,
+    # we have to make a request to DeReKo even if a homograph entry
+    # is present in the first cache to make sure that the lemma is correct
 
-    if os.path.exists(freq_path):
-        freq_df = pd.read_csv(
-            freq_path,
+    cache_path_prxf = "lemmatized" if is_base else "nlemmatized"
+    cache_path = (
+        # the version from [Shmalts:2026] is stored in
+        # 'resources/comp_constr_corp_study_mar26/dereko_de_geq70_counts.tsv'
+        # and was copied to the 'developed' folder for further extension
+        "resources/developed"
+        f"/dereko_de_geq70_counts_{cache_path_prxf}.tsv"
+    )
+    if os.path.exists(cache_path):
+        cache_df = pd.read_csv(
+            cache_path,
             sep="\t",
             header=0,
-            index_col="entry",  # both lemmas and compounds
+            index_col="entry",
             # to be able to store decimal part for 'ß' cases
-            dtype={"entry": str, "freq": float}
+            dtype=defaultdict(lambda: str, wc="float")
         )
     else:
-        # empty freq df
-        freq_df = pd.DataFrame(columns=["entry", "freq"]).set_index("entry")        
+        # empty wc df
+        columns = ["entry", "wc"] if is_base else ["entry", "lemma", "wc", "match_id"]
+        cache_df = pd.DataFrame(columns=columns).set_index("entry")
 
-    uncached_entries = list(set(lemmas) - set(freq_df.index))
+    uncached_entries = list(set(inputs) - set(cache_df.index))
 
     if uncached_entries:
 
-        for lemma in tqdm(uncached_entries, desc="Fetching uncached frequencies from KorAP"):
-            count = _get_dereko_count(lemma, resolve_sz=resolve_sz)
+        for inp in tqdm(uncached_entries, desc="Fetching uncached frequencies from KorAP"):
+
+            count, lemma, match_id = _get_dereko_count(
+                inp,
+                resolve_sz=resolve_sz,
+                is_base=is_base
+            )
+
+            # count for lemma is lemma is not None, otherwise count for wordform
+            cache_df.loc[inp, "wc"] = count
+            if not is_base:
+                cache_df.loc[inp, "lemma"] = lemma
+                cache_df.loc[inp, "match_id"] = match_id
+
             if count == -1:
                 print("Aborting frequency retrieval due to an error with KorAP API.")
                 # this will lead to an error when fetching all freqs,
@@ -315,17 +314,18 @@ def get_dereko_counts(
                 # since the recommendation from IDS Mannheim support team
                 # is to stop querying for some time in case of errors
                 break
-            freq_df.loc[lemma, "freq"] = count
 
-        freq_df.sort_index(inplace=True)
-        freq_df.to_csv(
-            freq_path,
+        cache_df.sort_index(inplace=True)
+        cache_df.to_csv(
+            cache_path,
             sep="\t",
             header=True,
             index=True,
             index_label="entry"
         )
 
-    all_freqs = freq_df.loc[lemmas, "freq"].tolist()
+    all_freqs = cache_df.loc[inputs, "wc"].tolist()
+    dereko_lemmata = cache_df.loc[inputs, "lemma"].tolist() \
+        if not is_base else inputs
 
-    return all_freqs
+    return all_freqs, dereko_lemmata
