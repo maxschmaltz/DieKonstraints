@@ -8,4 +8,5 @@ python-dotenv==1.2.2
 PyYAML==6.0.3
 requests==2.33.1
 scikit-learn==1.8.0
+statsmodels==0.14.6
 tqdm==4.67.3
