@@ -81,6 +81,8 @@ gmwl = gmw.join(gml["lemma"], how="inner")  \
     .set_index("wordform")  \
     .sort_index()
 
+gml["lemma"] = gml["lemma"].map(umlambda)
+
 gmwl.index = gmwl.index.map(umlambda)
 gmwl["lemma"] = gmwl["lemma"].map(umlambda)
 gmwl = gmwl[["lemma", "forms"]]
@@ -214,37 +216,39 @@ def parse_sp18_comp(
     pl_marker: str,
     has_linker: bool,
     n2_num: str,
-    is_lemmatized: bool,
     pbar: tqdm
 ) -> Tuple[str, str, str, str]:
 
-    # contrary to [shmalts_2026], we will be differeciating between
+    # contrary to [shmalts_2026], we will be differentiating between
     # _+er_ and _+=er_ in this study to be able to contrast
     # umlauting vs. non-umlauting pluralic linkers
     pl_gc_template = "_+={pl_marker}_" if "U" in pl_marker else "_+{pl_marker}_"
     maybe_uml = perform_umlaut if ("U" in pl_marker and has_linker) else lambda x: x
     pl_marker = pl_marker.replace("U", "")
-    # Schäfer & Pankratz 2018 only consider two
-    # contrastive options: zero linker vs. pluralic linker;
-    # are other non-pluralic linkers present in the dataset?
+    # to be updated later if needed
     linker = pl_marker if has_linker else ""
     n1_cstem = maybe_uml(n1) + linker
     n2 = re.sub(f"^{n1_cstem}", "", comp)
 
-    if not is_lemmatized:
-        # now, take the resulting n2 and lemmatize it to NomSg with the help of CELEX2,
-        # may be None; start with a zero linker and try other linkers
-        # if no match was found
-        n2_lemma = lemmatize_n2(n2, expected_num=n2_num)
-        if not n2_lemma and (match := re.search(r"^(s|es|ns|ens)", n2)):
+    # now, take the resulting n2 and try to lemmatize it to NomSg 
+    # with the help of CELEX2, starting with a zero linker;
+    # additionally, try eszett for cases like 'Fraß' ('Frass' in CELEX2)
+    sz_in_n2s = [True, False] if "ß" in n2 else [False]
+    for sz_in_n2 in sz_in_n2s:
+        pot_linker = ""
+        variant = n2.replace("ß", "ss") if sz_in_n2 else n2
+        n2_lemma = lemmatize_n2(variant, expected_num=n2_num)
+        if not n2_lemma and (match := re.search(r"^(s|es|ns|ens)", variant)):
             # try other possible non-pluralic linker
             pot_linker = match.group(0)
-            n2_lemma = lemmatize_n2(n2[len(pot_linker):], expected_num=n2_num)
-            if n2_lemma:
-                # if the lemmatization was successful, update the linker
-                linker = pot_linker
-    else:
-        n2_lemma = n2
+            n2_lemma = lemmatize_n2(variant[len(pot_linker):], expected_num=n2_num)
+        # if the lemmatization was successful, update the linker
+        # and revers the eszett if needed
+        if n2_lemma:
+            linker = pot_linker
+            n2_lemma = n2_lemma.replace("ss", "ß") if sz_in_n2 else n2_lemma
+            break
+            
 
     # gecodb style
     pl_gc = pl_gc_template.format(pl_marker=pl_marker)
@@ -253,7 +257,7 @@ def parse_sp18_comp(
     l_gc = pl_gc if has_linker else "_" if not linker else f"_+{linker}_"
     gecodb = f"{n1}{l_gc}{n2 if not n2_lemma else n2_lemma}"
 
-    # recover lemma
+    # recover lemma if possible
     lemma = Compound(gecodb).lemma if n2_lemma else None
 
     pbar.update(1)
@@ -266,7 +270,67 @@ def parse_sp18_comp(
     # pl_gc: plural marker in gecodb style (e.g. _+=er_ instead of Uer)
     #
     # n2(_lemma): lemmatized n2 if possible, otherwise unlemmatized n2
-    return gecodb, lemma, pl_gc, n2_lemma or n2
+    return gecodb, lemma, pl_gc, n2_lemma
+
+
+def verify_n2(n2: str) -> bool:
+    n2s = gml[gml["lemma"] == n2]
+    return not n2s.empty
+
+
+# TODO: join with `parse_sp18_comp()`?
+def verify_sp18_comp(
+    comp: str,
+    n1: str,
+    pl_marker: str,
+    has_linker: bool,
+    pbar: tqdm
+) -> Tuple[str, str]:
+    
+    # contrary to [shmalts_2026], we will be differentiating between
+    # _+er_ and _+=er_ in this study to be able to contrast
+    # umlauting vs. non-umlauting pluralic linkers
+    pl_gc_template = "_+={pl_marker}_" if "U" in pl_marker else "_+{pl_marker}_"
+    maybe_uml = perform_umlaut if ("U" in pl_marker and has_linker) else lambda x: x
+    pl_marker = pl_marker.replace("U", "")
+    # to be updated later if needed
+    linker = pl_marker if has_linker else ""
+    n1_cstem = maybe_uml(n1) + linker
+    n2 = re.sub(f"^{n1_cstem}", "", comp)
+
+    # now, take the resulting n2 and try to lemmatize it to NomSg 
+    # with the help of CELEX2, starting with a zero linker;
+    # additionally, try eszett for cases like 'Fraß' ('Frass' in CELEX2)
+    sz_in_n2s = [True, False] if "ß" in n2 else [False]
+    for sz_in_n2 in sz_in_n2s:
+        pot_linker = ""
+        variant = n2.replace("ß", "ss") if sz_in_n2 else n2
+        n2_verified = verify_n2(variant)
+        if not n2_verified and (match := re.search(r"^(s|es|ns|ens)", n2)):
+            # try other possible non-pluralic linker
+            pot_linker = match.group(0)
+            n2_verified = verify_n2(variant[len(pot_linker):])
+            if n2_verified:
+                # if the lemmatization was successful, update the linker
+                n2 = n2[len(pot_linker):]
+                n2 = n2.replace("ss", "ß") if sz_in_n2 else n2
+                linker = pot_linker
+
+    # gecodb style
+    pl_gc = pl_gc_template.format(pl_marker=pl_marker)
+    # for cases like 'Apfelsscheiben' that has a non-pluralic linker
+    # but still explicit linker -s-; no umlaut is possible in such case
+    l_gc = pl_gc if has_linker else "_" if not linker else f"_+{linker}_"
+    gecodb = f"{n1}{l_gc}{n2}"
+
+    # discard N2 if it was not verified
+    n2 = None if not n2_verified else n2
+
+    pbar.update(1)
+
+    return gecodb, n2
+
+
 
 # %%
 sp18.index = sp18.index.map(str.lower)
@@ -278,14 +342,13 @@ sp18.head()
 with tqdm(total=len(sp18), desc="Lemmatizing compounds") as pbar:
     sp18["gecodb"], sp18["lemma"], sp18["n1_pl_marker"], sp18["n2"] = zip(
         *sp18.apply(
+            # try top lemmatize using CELEX2
             lambda row: parse_sp18_comp(
                 comp=row.name,
                 n1=row["N1Lemma"],
                 pl_marker=row["N1Pl"],
                 has_linker=int(row["LE"]),
                 n2_num=row["N2Num"],
-                # try top lemmatize using CELEX2
-                is_lemmatized=False,
                 pbar=pbar
             ),
             axis=1
@@ -305,8 +368,6 @@ sp18.head()
 # (total word count of all wordforms) and counts for non-lemmatized compounds
 # (only total count of the corresponding wordform).
 # 2. It will partly retrieve the lemma annotation for non-lemmatized compounds.
-
-
 def dereko_wrapper(
     input_lemmata: list[str],
     batch_size: Optional[int]=1000,
@@ -334,7 +395,7 @@ def dereko_wrapper(
     return freqs, output_lemmata
 
 # %%
-# get counts for lemmatized compounds (N=7762, UniqN=6543)
+# get counts for lemmatized compounds (N=8009, UniqN=6755)
 input_lemmata_l = sp18[~pd.isna(sp18["lemma"])].lemma \
     .map(str.capitalize).unique().tolist()
 
@@ -345,11 +406,11 @@ freqs_l, _ = dereko_wrapper(
 )
 
 # %%
-# get counts for non-lemmatized compounds (N=1266, UniqN=1265)
+# get counts for non-lemmatized compounds (N=1019, UniqN=1018)
 input_lemmata_nl = sp18[pd.isna(sp18["lemma"])].index \
     .map(str.capitalize).unique().tolist()
 
-# non-empty output_lemmata: (N=440, +1 manual correction afterwards)
+# non-empty output_lemmata: (N=380)
 freqs_nl, output_lemmata = dereko_wrapper(
     input_lemmata_nl,
     resolve_sz=True,
@@ -357,15 +418,14 @@ freqs_nl, output_lemmata = dereko_wrapper(
 )
 
 # %%
-def apply_dereko_counts(row: pd.Series, pbar: tqdm) -> Tuple[str, str, str, float]:
+def apply_dereko_counts(row: pd.Series, pbar: tqdm) -> Tuple[str, str, float]:
 
     gecodb, n2_lemma = row["gecodb"], row["n2"]
 
-    if pd.notna(row["lemma"]):
+    if pd.notna(n2_lemma):
 
         # lemmatized compound, get the count for the lemma
-        lemma = row["lemma"]
-        count = freqs_l[input_lemmata_l.index(lemma.capitalize())]
+        count = freqs_l[input_lemmata_l.index(row["lemma"].capitalize())]
         
     else:
 
@@ -375,6 +435,35 @@ def apply_dereko_counts(row: pd.Series, pbar: tqdm) -> Tuple[str, str, str, floa
         ind = input_lemmata_nl.index(row.name.capitalize())
         lemma = output_lemmata[ind]
         count = freqs_nl[ind]
+ 
+    # Now we need to parse the compounds again, for which DeReKo found lemmata
+    # (with correct eszett) for three reasons:
+    # 1. To be able to identify/verify the correct N2 lemma to be able
+    # to identify duplicates and contrastive pairs for the analysis 
+    # of the internal and external plural effects; it may be the case
+    # that the N2 won't be verified (even though the lemma is in place),
+    # in which case the entry can't be used for the analysis of the 
+    # external plural effect.
+    # 2. To be able to identify the correct non-pluralic linker.
+    # 3. To update N2 (if applicable) for newly lemmatized compounds:
+    # otherwise these rows will contain the newly acquired lemmata
+    # from DeReKo but unparsed N2s which were not found in CELEX2;
+    # for example 'Apfelspalten' was not able to be parsed to 'Apfelspalte' with CELEX2,
+    # so the gecodb column contains 'apfel_spalten' (instead of 'apfel_spalte'),
+    # and the N2 column contains Spalten (instead of Spalte);
+    # however, DeReKo search for 'Apfelspalten' did return lemma 'Apfelspalte',
+    # from where the desired variants are deductible,
+    # so we need to update the two columns for this row to reflect the new information.
+    if pd.isna(n2_lemma) and pd.notna(lemma):
+        lemma = lemma.lower()
+        gecodb, n2_lemma = verify_sp18_comp(
+            comp=lemma, # !
+            n1=row["N1Lemma"],
+            pl_marker=row["N1Pl"],
+            has_linker=int(row["LE"]),
+            pbar=pbar
+        )
+
 
     # restore eszett; remember, a count ending
     # in 0.3 means that a compound that contained an eszett
@@ -384,47 +473,20 @@ def apply_dereko_counts(row: pd.Series, pbar: tqdm) -> Tuple[str, str, str, floa
     # 'Bildergrösse' (WC=0) vs 'Bildergröße' (WC=23)
     if round(count % 1, 1) == 0.3:
         gecodb = gecodb.replace("ss", "ß")
-        n2_lemma = n2_lemma.replace("ss", "ß")
-        if pd.notna(lemma):
-            lemma = lemma.replace("ss", "ß")
+        if pd.notna(n2_lemma):
+            n2_lemma = n2_lemma.replace("ss", "ß")
         # the current index will be dropped soon,
         # so no need to update it
         count = round(count - 0.3)
 
-    # if needed, update N2 for newly lemmatized compounds with correct eszett
-    # (otherwise these rows will contain the newly acquired lemmata
-    # from DeReKo but unparsed N2s which were not found in CELEX2;
-    # for example 'Apfelspalten' was not able to be parsed to 'Apfelspalte' with CELEX2,
-    # so the gecodb column contains 'apfel_spalten' (instead of 'apfel_spalte'),
-    # and the N2 column contains Spalten (instead of Spalte);
-    # however, DeReKo search for 'Apfelspalten' did return lemma 'Apfelspalte',
-    # so we need to update the two columns for this row to reflect the new information
-    if pd.isna(row["lemma"]) and pd.notna(lemma):
-        lemma = lemma.lower()
-        gecodb, _, _, n2_lemma = parse_sp18_comp(
-            comp=lemma, # !
-            n1=row["N1Lemma"],
-            pl_marker=row["N1Pl"],
-            has_linker=int(row["LE"]),
-            n2_num=row["N2Num"],
-            is_lemmatized=True,
-            pbar=pbar
-        )
-
-    # manual corrections (found during development)
-    if row.name == "würmerfraß":
-        lemma = "würmerfraß"
-    elif row.name == "würmerfrass":
-        count = 7.0
-
-    return gecodb, lemma, n2_lemma, count
+    return gecodb, n2_lemma, count
 
 # %%
 # apply DeReKo counts; whenever applicable, also insert the retrieved lemma
 # and update the gecodb and the N2 column for non-lemmatized compounds
 retrieved_lemmata = [o for o in output_lemmata if not pd.isna(o)]
 with tqdm(desc="Applying DeReKo counts", total=len(retrieved_lemmata)) as pbar:
-    sp18["gecodb"], sp18["lemma"], sp18["n2"], sp18["wc"] = zip(
+    sp18["gecodb"], sp18["n2"], sp18["wc"] = zip(
         *sp18.apply(
             lambda row: apply_dereko_counts(row, pbar=pbar),
             axis=1
@@ -432,9 +494,12 @@ with tqdm(desc="Applying DeReKo counts", total=len(retrieved_lemmata)) as pbar:
     )
 
 # %%
+# discard lemma; now its role will be replaced by the N2 column
+# which will contain the lemmatized N2 whenever applicable,
+# otherwise indicating that the compound is not lemmatized
 sp18 = sp18[
         [
-            "gecodb", "lemma", "N1Lemma", "n2", "n1_pl_marker",
+            "gecodb", "N1Lemma", "n2", "n1_pl_marker",
             "N2Typ", "N2Num", "LE", "wc",
             "context", "context_id"
         ]
@@ -471,8 +536,8 @@ sp18.sample(5)
 
 # not-lemmatized compounds 
 # (originally N=1266, after DeReKo search and manual correction N=825)
-sp18_nlemmatized = sp18[sp18["lemma"].isna()]
-sp18_nlemmatized.drop(columns=["lemma"], inplace=True)
+sp18_nlemmatized = sp18[sp18["n2"].isna()]
+sp18_nlemmatized.drop(columns=["n2"], inplace=True)
 sp18_nlemmatized.to_csv(
     os.path.join(outdir, "leftovers/sp18_nlemmatized.tsv"),
     **outcsv_args
@@ -487,14 +552,12 @@ sp18_all.to_csv(
 
 # default version: lemmatized compounds only 
 # (originally N=7762, after DeReKo search and manual correction N=8203)
-sp18 = sp18_all[sp18_all["lemma"].notna()]
+sp18 = sp18_all[sp18_all["n2"].notna()]
 sp18.to_csv(
     os.path.join(outdir, "sp18.tsv"),
     **outcsv_args
 )
 
-# %%
-sp18_nlemmatized["wc"].describe()
 
 # %%
 # extract contrastive Sg-Pl pairs from the lemmatized version
