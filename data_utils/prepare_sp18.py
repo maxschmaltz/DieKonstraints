@@ -125,6 +125,7 @@ def main():
     #   Uses the same notation as SP18-All except for missing N2 (never present).
     #
     #
+    #
     #   * 'resources/developed/dereko_de_geq70_counts_lemmatized.tsv': updated cache file
     #       with DeReKo counts.
     #   
@@ -136,20 +137,20 @@ def main():
     #   Schäfer-Pankratz-Concordance
     #   the original data (N=9415)
     #   'resources/schaefer_pankratz_2018/Concordance.full.csv'
-    #           |                      \__
-    #           |                         \_____
-    #           |                               \
-    #         SP18-All                      removed records: compounds
-    #   lemmatized and non-lemmatized           with N1s 'Auge' (N=185),
-    #   compounds (N=9028, UniqN=7666)              'Birne' (N=200), and 
-    # resources/developed/sp18/sp18_all.tsv           records with NaN (N=2)
+    #           |                                              \___
+    #           |                                                  \______
+    #           |                                                         \
+    #         SP18-All -----------------> SP18-Meta                       removed records: compounds
+    #   lemmatized and non-lemmatized       meta of SP18-all (N=9028)       with N1s 'Auge' (N=185),
+    #   compounds (N=9028, UniqN=7666)         'resources/developed/         'Birne' (N=200), and 
+    # 'resources/developed/sp18/sp18_all.tsv'      sp18/sp18_meta.tsv'        records with NaN (N=2)
     #           |                      \__
     #           |                         \_____
     #           |                               \
     #          SP18                      SP18-NLemmatized
     #   lemmatized compounds               non-lemmatized compounds
     #   (N=8212, UniqN=6889)                    (N=816, UniqN=781)
-    # resources/developed/sp18/sp18.tsv         'resources/developed/sp18/
+    # 'resources/developed/sp18/sp18.tsv'         'resources/developed/sp18/
     #                                               leftovers/sp18_nlemmatized.tsv'
 
 
