@@ -23,6 +23,7 @@ def main():
     #
     # Convention: (N=x) refers to the number of compound **tokens** in the dataset, 
     # while (UniqN=x) refers to the number of compound **types** in the dataset.
+    # 'Compounds' refers to 'compound tokens' unless specified otherwise.
     # 
     # The original dataset contains N=9415 compounds in Sg and Pl forms (different cases)
     # with individual or collective meaning of N1.
@@ -58,13 +59,13 @@ def main():
     #   2. Load the relevant shards of CELEX2. We will not use CELEX-nouns
     #   originating from [shmalts_2026] for the following reasons:
     #       * CELEX-nouns set a minimal WC (DeReKo) threshold on the lemmata;
-    #         however, we expect that less frequent compounds will be undergoing
-    #         the ExtPE (as opposed to the IntPE, which works at the lexical level), 
-    #         so we don't want to set any WC conditions. Furthermore, to validate 
-    #         the hypothesis about low frequency of compounds affected by the ExtPE,
-    #         we need to preserve compounds of all WCs.
+    #       however, we expect that less frequent compounds will be undergoing
+    #       the ExtPE (as opposed to the IntPE, which works at the lexical level), 
+    #       so we don't want to set any WC conditions. Furthermore, to validate 
+    #       the hypothesis about low frequency of compounds affected by the ExtPE,
+    #       we need to preserve compounds of all WCs.
     #       * CELEX-nouns only features NomSg, GenSg, and NomPl forms of its entries.
-    #         Compounds in Schäfer-Pankratz-Concordance may occur in further wordforms.
+    #       Compounds in Schäfer-Pankratz-Concordance may occur in further wordforms.
     #   Specifically, we will need two files:
     #       * `gml.cd`: 'German Morphology, Lemmas'.
     #       * `gmw.cd`: 'German Morphology, Wordforms'.
@@ -81,14 +82,14 @@ def main():
     #   9. Separate the data into all, lemmatized, and non-lemnmatized compounds.
     #   Save the datasets.
 
-    # As a result of the preprocessing, we obtain the following files:
+    # As a result of the preprocessing, we obtain the following datasets:
     #
     #   * SP18-Meta 'resources/developed/sp18/sp18_meta.tsv' (N=9028):
     #   context sentence metadata of all compounds excluding the ones removed at step 3;
     #       context_id: the unique id of the context sentence. The context sentence results
     #           from joining the left context (LC), the compound (Match), 
     #           and the right context (RC) from the original data. This is the column
-    #           by which this metadata can be joined back to the main dataframe.
+    #           by which this metadata can be joined back to the main dataset.
     #       doc_id: ID of the source document (original DocID).
     #       url: URL of the source document (original DocURL).
     #       sent_n: ordinal number of the context sentence in the source document 
@@ -104,7 +105,7 @@ def main():
     #       n1_pl_marker: the plural type (marker) of N1 (original N1Pl) converted to
     #           the GeCoDB notation.
     #       n1_sem: the meaning of N1 (as forced by N2) (original N2Typ).
-    #           ither "ind" (individual), or "coll" (collective), or "konvc" (ambiguous).
+    #           Either "ind" (individual), or "coll" (collective), or "konvc" (ambiguous).
     #       n2_num: grammatical number of N2 (hence, the entire compound) (original N2Num).
     #           Either "Sg" or "Pl", case not indicated.
     #       is_linker_pl: whether the linking element is pluralic or not (original LE).
@@ -114,7 +115,7 @@ def main():
     #           from joining the left context (LC), the compound (Match), 
     #           and the right context (RC) from the original data.
     #       context_id: the unique id of the context sentence. This is the column
-    #           by which this metadata can be joined back to the main dataframe.
+    #           by which this metadata can be joined back to the main dataset.
     #
     #   * SP18 'resources/developed/sp18/sp18.tsv' (N=8212, UniqN=6889):
     #   default version of SP18 with lemmatized compounds only. Uses the same notation as SP18-All.
@@ -129,6 +130,27 @@ def main():
     #   
     #   * 'resources/developed/dereko_de_geq70_counts_nlemmatized.tsv': new cache file
     #       with DeReKo counts amd lemmata.
+
+    # Thus, the data tree looks as follows:
+    #
+    #   Schäfer-Pankratz-Concordance
+    #   the original data (N=9415)
+    #   'resources/schaefer_pankratz_2018/Concordance.full.csv'
+    #           |                      \__
+    #           |                         \_____
+    #           |                               \
+    #         SP18-All                      removed records: compounds
+    #   lemmatized and non-lemmatized           with N1s 'Auge' (N=185),
+    #   compounds (N=9028, UniqN=7666)              'Birne' (N=200), and 
+    # resources/developed/sp18/sp18_all.tsv           records with NaN (N=2)
+    #           |                      \__
+    #           |                         \_____
+    #           |                               \
+    #          SP18                      SP18-NLemmatized
+    #   lemmatized compounds               non-lemmatized compounds
+    #   (N=8212, UniqN=6889)                    (N=816, UniqN=781)
+    # resources/developed/sp18/sp18.tsv         'resources/developed/sp18/
+    #                                               leftovers/sp18_nlemmatized.tsv'
 
 
     sp18_path = "resources/schaefer_pankratz_2018/Concordance.full.csv"
