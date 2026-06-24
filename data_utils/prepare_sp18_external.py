@@ -120,17 +120,30 @@ def main():
     #   of the linker) appearing only in the Sg form and undergoing the IntPE
     #
     #
-    #   * 'resources/developed/sp18/external_effect/ic_alt_nipe_sg.tsv'
+    #   * 'resources/developed/sp18/external_effect/ic_alt_nipe_sgl_n1.tsv'
     #   (N=1560, UniqN=842, UniqCN=590, UniqN1N=37)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing only in the Sg form and not undergoing the IntPE
     #   whose N1 mostly attach a non-pluralic linker in the Sg form
     #
-    #   * 'resources/developed/sp18/external_effect/leftovers/ic_alt_nipe_pll.tsv'
+    #   * 'resources/developed/sp18/external_effect/leftovers/ic_alt_nipe_pll_n1.tsv'
     #   (N=371, UniqN1N=9)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing only in the Sg form and not undergoing the IntPE
     #   whose N1 mostly attach the pluralic linker in the Sg form
+    #
+    #   * 'resources/developed/sp18/external_effect/ic_alt_nipe_sgl_cc.tsv'
+    #   (N=1333, UniqN=717, UniqCN=490, UniqN1N=46)
+    #   Compounds built from non-unique constituent combinations (regardless 
+    #   of the linker) appearing only in the Sg form and not undergoing the IntPE
+    #   built from constituent combinations that mostly insert
+    #   a non-pluralic linker in the Sg form
+    #
+    #   * 'resources/developed/sp18/external_effect/leftovers/ic_alt_nipe_pll_cc.tsv'
+    #   (N=598, UniqCN=234)
+    #   Compounds built from non-unique constituent combinations (regardless 
+    #   built from constituent combinations that mostly insert
+    #   the pluralic linker in the Sg form
     #
     #
     #   
@@ -392,7 +405,7 @@ def main():
     # count compounds with pluralic and non-pluralic linkers built with each N1
     ic_alt_nipe_sg_links_data = {
         const_comb: {
-            "sg": len(group[
+            "sgl": len(group[
                 (group["n2_num"] == "sg") &
                 (~group["is_linker_pl"])
             ]),
@@ -414,7 +427,7 @@ def main():
     # mostly pluralic linker in the Sg form (N=371, UniqN1N=9)
     ic_alt_nipe_pll = ic_alt_nipe_sg_links[
         ic_alt_nipe_sg_links["pll"] >
-        ic_alt_nipe_sg_links["sg"]
+        ic_alt_nipe_sg_links["sgl"]
     ].index
     ic_alt_nipe[ic_alt_nipe["n1"].isin(ic_alt_nipe_pll)].to_csv(
         os.path.join(outdir, "leftovers/ic_alt_nipe_pll_n1.tsv"),
@@ -439,7 +452,7 @@ def main():
     # built from each constituent combination
     ic_alt_nipe_sg_links_data = {
         const_comb: {
-            "sg": len(group[
+            "sgl": len(group[
                 (group["n2_num"] == "sg") &
                 (~group["is_linker_pl"])
             ]),
@@ -461,7 +474,7 @@ def main():
     # mostly pluralic linker in the Sg form (N=598, UniqCN=234)
     ic_alt_nipe_pll = ic_alt_nipe_sg_links[
         ic_alt_nipe_sg_links["pll"] >
-        ic_alt_nipe_sg_links["sg"]
+        ic_alt_nipe_sg_links["sgl"]
     ].index
     ic_alt_nipe[ic_alt_nipe.index.isin(ic_alt_nipe_pll)].to_csv(
         os.path.join(outdir, "leftovers/ic_alt_nipe_pll_cc.tsv"),
