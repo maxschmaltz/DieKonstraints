@@ -79,8 +79,10 @@ def main():
     #   3. Leave out compounds that do not exhibit an alternation between
     #   Sg vs. Pl forms.
     #   4. Leave out compounds under the IntPE.
-    #   5. Leave out compounds whose N1 mostly attaches the pluralic linker
-    #   due to other constraints.
+    #   5.1. Leave out compounds whose N1 mostly attaches the pluralic linker
+    #   due to other constraints (version "N1").
+    #   5.2. Leave out compounds built from constituent combinations that mostly insert
+    #   the pluralic linker due to other constraints (version "CC").
 
     # As a result of the preprocessing, we obtain the following datasets
     # (all have the same notation as SP18):
@@ -189,15 +191,23 @@ def main():
     #  (N=1931, UniqN=1043, UniqCN=724) ----->  non-pluralic linkers built from each N2 (UniqN1N=46)
     # 'resources/developed/sp18/                  'resources/developed/sp18/external_effect/
     # external_effect/ic_alt_nipe.tsv'              summaries/ic_alt_nipe_sg_links.tsv'
-    #           |                    \__
-    #           |                       \_____
-    #           |                             \
-    #  + mostly attach a non-             + mostly attach the pluralic
-    #  linker in the Sg form               linker in the Sg form
-    #  (N=1560, UniqN=842,                  (N=371, UniqN1N=9)
-    #  UniqCN=590, UniqN1N=37)                'resources/developed/sp18/
-    # 'resources/developed/sp18/              external_effect/leftovers/ic_alt_nipe_pll.tsv'
-    # external_effect/ic_alt_nipe_sg.tsv'     
+    #                            \
+    #                             \_____
+    #                                   \________
+    #                                            \
+    #                     ____variant_N1__________|_____variant_CC______
+    #                    /                                              \
+    #               _____|_____________                                __\________________
+    #              /                   \                              /                   \
+    #             |                     \                            |                     \
+    # + mostly attach a non-pluralic  + mostly attach the       # + mostly attach a       + mostly attach the
+    # linker in the Sg form         pluralic linker in             non-pluralic inker       pluralic linker in
+    # (N=1560, UniqN=842,        the Sg form (N=371, UniqN1N=9)    in the Sg form              the Sg form 
+    # UniqCN=590, UniqN1N=37)     'resources/developed/sp18/      (N=1333, UniqN=717,       (N=598, UniqCN=234)
+    # 'resources/developed/sp18/   external_effect/leftovers/    UniqCN=490, UniqN1N=46)    'resources/developed/sp18/
+    # external_effect/            ic_alt_nipe_pll_n1.tsv'     'resources/developed/sp18/    external_effect/leftovers/
+    # ic_alt_nipe_sgl_n1.tsv'                                  external_effect/             ic_alt_nipe_pll_cc.tsv'
+    #                                                        ic_alt_nipe_sgl_cc.tsv' 
 
 
     sp18_path = "resources/developed/sp18/sp18.tsv"
@@ -359,8 +369,8 @@ def main():
     )
 
 
-    # 5. Leave out compounds whose N1 mostly attaches the pluralic linker
-    # due to other constraints.
+    # 5.1. Leave out compounds whose N1 mostly attaches the pluralic linker
+    # due to other constraints (version "N1").
 
     # Problematic group 3.
     # As we know, semantic constraints are not the only constraints 
@@ -397,7 +407,7 @@ def main():
     # (UniqN1N=46)
     ic_alt_nipe_sg_links = pd.DataFrame.from_dict(ic_alt_nipe_sg_links_data, orient="index")
     ic_alt_nipe_sg_links.to_csv(
-        os.path.join(outdir, "summaries/ic_alt_nipe_sg_links.tsv"),
+        os.path.join(outdir, "summaries/ic_alt_nipe_sg_links_n1.tsv"),
         **outcsv_args
     )
 
@@ -407,7 +417,7 @@ def main():
         ic_alt_nipe_sg_links["sg"]
     ].index
     ic_alt_nipe[ic_alt_nipe["n1"].isin(ic_alt_nipe_pll)].to_csv(
-        os.path.join(outdir, "leftovers/ic_alt_nipe_pll.tsv"),
+        os.path.join(outdir, "leftovers/ic_alt_nipe_pll_n1.tsv"),
         **outcsv_args
     )
 
@@ -417,7 +427,54 @@ def main():
         ~ic_alt_nipe["n1"].isin(ic_alt_nipe_pll)
     ]
     ic_alt_nipe_sg.to_csv(
-        os.path.join(outdir, "ic_alt_nipe_sg.tsv"),
+        os.path.join(outdir, "ic_alt_nipe_sgl_n1.tsv"),
+        **outcsv_args
+    )
+
+
+    # 5.2. Leave out compounds built from constituent combinations that mostly insert
+    # the pluralic linker due to other constraints (version "CC").
+
+    # count compounds with pluralic and non-pluralic linkers 
+    # built from each constituent combination
+    ic_alt_nipe_sg_links_data = {
+        const_comb: {
+            "sg": len(group[
+                (group["n2_num"] == "sg") &
+                (~group["is_linker_pl"])
+            ]),
+            "pll": len(group[
+                (group["n2_num"] == "sg") &
+                (group["is_linker_pl"])
+            ])
+        }
+        for const_comb, group in ic_alt_nipe.groupby("const_comb")
+    }
+
+    # (UniqN1N=46)
+    ic_alt_nipe_sg_links = pd.DataFrame.from_dict(ic_alt_nipe_sg_links_data, orient="index")
+    ic_alt_nipe_sg_links.to_csv(
+        os.path.join(outdir, "summaries/ic_alt_nipe_sg_links_cc.tsv"),
+        **outcsv_args
+    )
+
+    # mostly pluralic linker in the Sg form (N=598, UniqCN=234)
+    ic_alt_nipe_pll = ic_alt_nipe_sg_links[
+        ic_alt_nipe_sg_links["pll"] >
+        ic_alt_nipe_sg_links["sg"]
+    ].index
+    ic_alt_nipe[ic_alt_nipe.index.isin(ic_alt_nipe_pll)].to_csv(
+        os.path.join(outdir, "leftovers/ic_alt_nipe_pll_cc.tsv"),
+        **outcsv_args
+    )
+
+    # compounds with N1s that mostly attach a non-pluralic linker 
+    # in the Sg form (N=1333, UniqN=717, UniqCN=490, UniqN1N=46)
+    ic_alt_nipe_sg = ic_alt_nipe[
+        ~ic_alt_nipe.index.isin(ic_alt_nipe_pll)
+    ]
+    ic_alt_nipe_sg.to_csv(
+        os.path.join(outdir, "ic_alt_nipe_sgl_cc.tsv"),
         **outcsv_args
     )
 
