@@ -15,7 +15,7 @@ constraints:
         acceptable_linkers: [_+e_]
         ling_info_type: [morphological, semantic]
         appl_item: n1+n2
-        n_appl_items: 3613
+        n_appl_items: 282767
 
         func_alias: plur_e_pl
 
@@ -51,7 +51,7 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [morphological, semantic]
         appl_item: n1+n2
-        n_appl_items: 3613
+        n_appl_items: 282767
 
         func_alias: plur_er_sg
 
@@ -93,7 +93,7 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [morphological, semantic]
         appl_item: n1+n2
-        n_appl_items: 3613
+        n_appl_items: 282767
 
         func_alias: plur_er_mass
 
@@ -125,7 +125,7 @@ constraints:
         acceptable_linkers: [_+=er_]
         ling_info_type: [morphological, semantic]
         appl_item: n1+n2
-        n_appl_items: 3613
+        n_appl_items: 282767
 
         func_alias: plur_er_pl
 
@@ -172,7 +172,7 @@ constraints:
         acceptable_linkers: [_+=e_]
         ling_info_type: [morphological, semantic]
         appl_item: n1+n2
-        n_appl_items: 3613
+        n_appl_items: 282767
 
         func_alias: plur_e_uml_pl
 
@@ -217,7 +217,7 @@ constraints:
         ling_info_type: [morphological, semantic]
         func_alias: plur_0_uml_pl
         appl_item: n1+n2
-        n_appl_items: 3613
+        n_appl_items: 282767
 
         quantifier: irregularly
         coverage:
@@ -246,7 +246,7 @@ constraints:
         acceptable_linkers: [_+n_, _+en_]
         ling_info_type: [morphological, semantic]
         appl_item: n1+n2
-        n_appl_items: 3613
+        n_appl_items: 282767
 
         func_alias: mixed_mn_pl
 
@@ -282,7 +282,7 @@ constraints:
         acceptable_linkers: [_+n_,]
         ling_info_type: [derivational, semantic]
         appl_item: n1+n2
-        n_appl_items: 3613
+        n_appl_items: 282767
 
         func_alias: schwa_fin_deverb_pl
 
@@ -314,7 +314,7 @@ constraints:
         acceptable_linkers: [_+en_]
         ling_info_type: [derivational, semantic]
         appl_item: n1+n2
-        n_appl_items: 3613
+        n_appl_items: 282767
 
         func_alias: sfx_itaet_pl
 
@@ -351,7 +351,7 @@ constraints:
         acceptable_linkers: [_, _+s_]
         ling_info_type: [morphological, phonological, semantic]
         appl_item: n1+n2
-        n_appl_items: 3613
+        n_appl_items: 282767
 
         func_alias: f_cons_fin_sg
 
@@ -395,7 +395,7 @@ constraints:
         acceptable_linkers: [_+en_]
         ling_info_type: [morphological, phonological, semantic]
         appl_item: n1+n2
-        n_appl_items: 3613
+        n_appl_items: 282767
 
         func_alias: f_cons_fin_pl
 
@@ -445,7 +445,7 @@ constraints:
         acceptable_linkers: [_+n_, _+en_]
         ling_info_type: [morphological, phonological, lexical, semantic]
         appl_item: n1+n2+linker
-        n_appl_items: 4868
+        n_appl_items: 282767
 
         func_alias: en_non_par_n_pl
 
@@ -477,7 +477,7 @@ constraints:
         acceptable_linkers: [_+e_, _+=e_, _+=er_, _+=_, _+n_, _+en_]
         ling_info_type: [morphological, semantic]
         appl_item: n1+n2+linker
-        n_appl_items: 4868
+        n_appl_items: 282767
 
         func_alias: pl_interpr
 
