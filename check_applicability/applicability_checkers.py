@@ -12,8 +12,8 @@ from data_utils.gecodb_compound_parser import (
 )
 
 
-celex_path = "resources/developed/celex_nouns.tsv"
-gecodb_path = "resources/developed/gecodb_v06.tsv"
+celex_path = "resources/comp_constr_corp_study_mar26/celex_nouns.tsv"
+gecodb_path = "resources/comp_constr_corp_study_mar26/gecodb_v06.tsv"
 
 # load prepared CELEX nouns and GeCoDB
 celex = pd.read_csv(

@@ -2,8 +2,14 @@
 # and the output of that script is available in 'resources/developed/sp18'.
 
 import os
+import yaml
 import pandas as pd
 from collections import defaultdict
+from tqdm import tqdm
+from typing import Tuple
+
+from check_applicability import applicability_checkers
+from .gecodb_compound_parser import Compound
 
 
 def main():
@@ -74,15 +80,14 @@ def main():
 
     # The overall preprocessing includes the following:
     #   1. Load SP18.
-    #   2. Extract sets of multiple compounds with identical constituent combinations
+    #   2. Load the constraints.
+    #   3. Extract sets of multiple compounds with identical constituent combinations
     #   (regardless of the linker).
-    #   3. Leave out compounds that do not exhibit an alternation between
+    #   4. Leave out compounds that do not exhibit an alternation between
     #   Sg vs. Pl forms.
-    #   4. Leave out compounds under the IntPE.
-    #   5.1. Leave out compounds whose N1 mostly attaches the pluralic linker
-    #   due to other constraints (version "N1").
-    #   5.2. Leave out compounds built from constituent combinations that mostly insert
-    #   the pluralic linker due to other constraints (version "CC").
+    #   5. Leave out compounds under the IntPE.
+    #   6. Leave out compounds whose N1 may attach the pluralic linker
+    #   due to other constraints.
 
     # As a result of the preprocessing, we obtain the following datasets
     # (all have the same notation as SP18):
@@ -112,41 +117,30 @@ def main():
     #   * 'resources/developed/sp18/external_effect/ic_alt_nipe.tsv'
     #   (N=1931, UniqN=1043, UniqCN=724)
     #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing only in the Sg form and not undergoing the IntPE
+    #   of the linker) appearing both in the Sg and the Pl forms
+    #   and not undergoing the IntPE
     #
     #   * 'resources/developed/sp18/external_effect/leftovers/ic_alt_ipe.tsv'
     #   (N=387)
     #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing only in the Sg form and undergoing the IntPE
+    #   of the linker) appearing both in the Sg and the Pl forms
+    #   and undergoing the IntPE
     #
     #
-    #   * 'resources/developed/sp18/external_effect/ic_alt_nipe_sgl_n1.tsv'
-    #   (N=1560, UniqN=842, UniqCN=590, UniqN1N=37)
+    #   * 'resources/developed/sp18/external_effect/ic_alt_nipe_npll.tsv'
+    #   (N=1236, UniqN=665, UniqCN=468, UniqN1N=30)
     #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing only in the Sg form and not undergoing the IntPE
-    #   whose N1 mostly attach a non-pluralic linker in the Sg form
+    #   of the linker) appearing both in the Sg and the Pl forms
+    #   and not undergoing the IntPE whose N1 may not attach a pluralic linker
     #
-    #   * 'resources/developed/sp18/external_effect/leftovers/ic_alt_nipe_pll_n1.tsv'
-    #   (N=371, UniqN1N=9)
+    #   * 'resources/developed/sp18/external_effect/leftovers/ic_alt_nipe_pll.tsv'
+    #   (N=695, UniqN1N=16)
     #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing only in the Sg form and not undergoing the IntPE
-    #   whose N1 mostly attach the pluralic linker in the Sg form
-    #
-    #   * 'resources/developed/sp18/external_effect/ic_alt_nipe_sgl_cc.tsv'
-    #   (N=1333, UniqN=717, UniqCN=490, UniqN1N=46)
-    #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing only in the Sg form and not undergoing the IntPE
-    #   built from constituent combinations that mostly insert
-    #   a non-pluralic linker in the Sg form
-    #
-    #   * 'resources/developed/sp18/external_effect/leftovers/ic_alt_nipe_pll_cc.tsv'
-    #   (N=598, UniqCN=234)
-    #   Compounds built from non-unique constituent combinations (regardless 
-    #   built from constituent combinations that mostly insert
-    #   the pluralic linker in the Sg form
+    #   of the linker) appearing both in the Sg and the Pl forms
+    #   and not undergoing the IntPE whose N1 may attach a pluralic linker
     #
     #
-    #   
+    #
     #   * 'resources/developed/sp18/external_effect/summaries/ic_nums.tsv'
     #   (UniqCN=1402)
     #   Counts of compounds in the Sg/Pl forms built from each constituent combination
@@ -154,12 +148,13 @@ def main():
     #
     #   * 'resources/developed/sp18/external_effect/summaries/ic_n1_sem.tsv'
     #   (UniqCN=869)
-    #   Counts of compounds with 'ind'/'coll'/'konvc' N1 meaning built from each constituent combination
+    #   Counts of compounds with 'ind'/'coll'/'konvc' N1 meaning 
+    #   built from each constituent combination
     #   (from 'resources/developed/sp18/external_effect/ic_alt_all.tsv')
     #
-    #   * 'resources/developed/sp18/external_effect/summaries/ic_alt_nipe_sg_links.tsv'
+    #   * 'resources/developed/sp18/external_effect/summaries/ic_alt_nipe_constr.tsv'
     #   (UniqN1N=46)
-    #   Counts of compounds with pluralic and non-pluralic linkers built with each N1
+    #   Record of applicable N1-targeting constraints for each unique N1
     #   (from 'resources/developed/sp18/external_effect/ic_alt_nipe.tsv')
 
     # Thus, the data tree looks as follows:
@@ -200,30 +195,23 @@ def main():
     #           |               'resources/developed/sp18/external_effect/leftovers/ic_alt_ipe.tsv'
     #           |
     #           |
-    #  + not undergoing the IntPE                  Counts of compounds with pluralic and 
-    #  (N=1931, UniqN=1043, UniqCN=724) ----->  non-pluralic linkers built from each N2 (UniqN1N=46)
+    #  + not undergoing the IntPE               Record of applicable N1-targeting constraints
+    #  (N=1931, UniqN=1043, UniqCN=724) ----->      for each unique N1 (UniqN1N=46)
     # 'resources/developed/sp18/                  'resources/developed/sp18/external_effect/
-    # external_effect/ic_alt_nipe.tsv'              summaries/ic_alt_nipe_sg_links.tsv'
-    #                            \
-    #                             \_____
-    #                                   \________
-    #                                            \
-    #                     ____variant_N1__________|_____variant_CC______
-    #                    /                                              \
-    #               _____|_____________                                __\________________
-    #              /                   \                              /                   \
-    #             |                     \                            |                     \
-    # + mostly attach a non-pluralic  + mostly attach the       # + mostly attach a       + mostly attach the
-    # linker in the Sg form         pluralic linker in             non-pluralic inker       pluralic linker in
-    # (N=1560, UniqN=842,        the Sg form (N=371, UniqN1N=9)    in the Sg form              the Sg form 
-    # UniqCN=590, UniqN1N=37)     'resources/developed/sp18/      (N=1333, UniqN=717,       (N=598, UniqCN=234)
-    # 'resources/developed/sp18/   external_effect/leftovers/    UniqCN=490, UniqN1N=46)    'resources/developed/sp18/
-    # external_effect/            ic_alt_nipe_pll_n1.tsv'     'resources/developed/sp18/    external_effect/leftovers/
-    # ic_alt_nipe_sgl_n1.tsv'                                  external_effect/             ic_alt_nipe_pll_cc.tsv'
-    #                                                        ic_alt_nipe_sgl_cc.tsv' 
+    # external_effect/ic_alt_nipe.tsv'              summaries/ic_alt_nipe_constr.tsv'
+    #           |                    \__
+    #           |                       \_____
+    #           |                             \
+    #  + N1 may not attach                 + N1 may attach 
+    #  a pluralic linker                    a pluralic linker     
+    #   (N=1236, UniqN=665,                   (N=695, UniqN1N=16)
+    #  UniqCN=468, UniqN1N=30)                'resources/developed/sp18/
+    # 'resources/developed/sp18/                  external_effect/leftovers/
+    # external_effect/ic_alt_nipe_npll.tsv'         ic_alt_nipe_pll.tsv'
 
 
     sp18_path = "resources/developed/sp18/sp18.tsv"
+    constr_path = "constraints/constraints_all_revised.yaml"
 
     outdir = "resources/developed/sp18/external_effect"
 
@@ -252,7 +240,13 @@ def main():
     )
 
 
-    # 2. Extract sets of multiple compounds with identical constituent combinations
+    # 2. Load the constraints.
+
+    with open(constr_path, encoding="utf-8") as f:
+        constraints: dict = list(yaml.safe_load_all(f))[-1]["constraints"]
+
+
+    # 3. Extract sets of multiple compounds with identical constituent combinations
     # (regardless of the linker).
 
     # All compounds whose constituent combination is unique in the data will be
@@ -270,7 +264,7 @@ def main():
     )
 
 
-    # 3. Leave out compounds that do not exhibit an alternation between
+    # 4. Leave out compounds that do not exhibit an alternation between
     # Sg vs. Pl forms.
 
     # Problematic group 1: if a compound only occurred in either Sg or Pl form,
@@ -316,7 +310,7 @@ def main():
     )
 
 
-    # 4. Leave out compounds under the IntPE.
+    # 5. Leave out compounds under the IntPE.
 
     # Problematic group 2.
     # We assume that since in standard (not colloquial)
@@ -382,112 +376,149 @@ def main():
     )
 
 
-    # 5.1. Leave out compounds whose N1 mostly attaches the pluralic linker
-    # due to other constraints (version "N1").
+    # 6. Leave out compounds whose N1 may attach the pluralic linker
+    # due to other constraints.
 
     # Problematic group 3.
     # As we know, semantic constraints are not the only constraints 
     # that govern linker choice. There may be cases where a constituent
-    # with no  may still consistently receive a pluralic linker (with no plural cue)
+    # with no ExtPE will still consistently receive a pluralic linker (with no plural cue)
     # due to other constraints, e.g. phonological or morphological. 
     # Since a compound with a pluralic linker in Sg will most probably appear 
     # with the same linker in Pl (see the explanation above), we expect to see 
-    # the ExtPE (if it exists) only in the compounds that usually take 
-    # a zero linker in the Sg form. Otherwise, if the compound usually takes 
-    # a pluralic linker in the Sg form, the chances are that it will also 
-    # take a pluralic linker in the Pl form, and thus the ExtPE will be masked.
+    # the ExtPE (if it exists) only in the compounds that may not insert 
+    # the pluralic linker the their lemmatized (hence, also Sg) form. 
+    # Otherwise, if the compound inserts the pluralic linker (in the Sg form), 
+    # the chances are that it will also  insert the pluralic linker in the Pl form, 
+    # and thus the ExtPE will be masked.
     # This is exemplified by the examples in the dataset of 
     # 'Katzenfell' vs. 'Katzenfelle', 'Kinderbuch' vs. 'Kinderbücher'.
     # Therefore, we will here separate the subset into the group
-    # of compounds whose N1 mostly takes a zero linker in the Sg form
-    # and the group of compounds whose N1 mostly takes a pluralic linker in teh Sg form.
+    # of compounds whose N1 may and may not insert a pluralic linker.
 
-    # count compounds with pluralic and non-pluralic linkers built with each N1
-    ic_alt_nipe_sg_links_data = {
-        const_comb: {
-            "sgl": len(group[
-                (group["n2_num"] == "sg") &
-                (~group["is_linker_pl"])
-            ]),
-            "pll": len(group[
-                (group["n2_num"] == "sg") &
-                (group["is_linker_pl"])
-            ])
-        }
-        for const_comb, group in ic_alt_nipe.groupby("n1")
-    }
+    # Note that rather than performing this analysis on the base
+    # of empirical counts of compounds with pluralic vs. non-pluralic linkers
+    # built from each N1, we will perform it on the base of potential
+    # constraint applicability as defined by [shmalts_2026], using the
+    # (corrected) applicability checkers originating form this works.
+    # This will allow us to establish a theoretically grounded "ground truth"-like
+    # set of compounds whose N1s "should" or "should not" 
+    # insert a pluralic linker in the Sg form, and thus extract
+    # the empirical difference caused by the colloquial speech 
+    # in cases the empirical data does not match the theoretical expectation.
 
-    # (UniqN1N=46)
-    ic_alt_nipe_sg_links = pd.DataFrame.from_dict(ic_alt_nipe_sg_links_data, orient="index")
-    ic_alt_nipe_sg_links.to_csv(
-        os.path.join(outdir, "summaries/ic_alt_nipe_sg_links_n1.tsv"),
-        **outcsv_args
-    )
+    # TODO
+    # Since we only target N1s, we will only consider constraints
+    # whose applicability item is N1 as defined by [shmalts_2026].
+    # This then excludes a number of constraints; howeve, since
+    # we are actually interested in constraints that assign a pluralic linker,
+    # the excluded constraints are irrelevent anyways as demostrated below:
+    # * The default constraint. Assigns a zero linker.
+    # * A number of semantic constraints that, while they assign a pluralic linker,
+    # do so under the IntPE excluded above.
+    # * Copulative, argumental compounds, technical terms, and a few other constraints 
+    # that assign -s- or a zero linker.
+    # * All L2P constraints that are irrelevant to the ExtPE, since they 
+    # are not generative.
+    # However, note that there are a few N1-targeting constraints 
+    # that assign a pluralic linker, but which are not implemented 
+    # in the applicability checkers of [shmalts_2026], and this is 
+    # a **limitation** of the current analysis. These are:
+    # * `p2l:decl_cl:pl:#e-0|msyl_anim-e` (assigns -e- to monosyllabic animal designations).
+    # * `p2l:decl_cl:pl:#er-0/er|anim-er` (assigns -"er- to monosyllabic animal designations).
 
-    # mostly pluralic linker in the Sg form (N=371, UniqN1N=9)
-    ic_alt_nipe_pll = ic_alt_nipe_sg_links[
-        ic_alt_nipe_sg_links["pll"] >
-        ic_alt_nipe_sg_links["sgl"]
-    ].index
-    ic_alt_nipe[ic_alt_nipe["n1"].isin(ic_alt_nipe_pll)].to_csv(
-        os.path.join(outdir, "leftovers/ic_alt_nipe_pll_n1.tsv"),
-        **outcsv_args
-    )
+    def is_pll_acceptable(
+        n1: str,
+        pl_marker: str,
+        pbar: tqdm
+    ) -> Tuple[bool, str, str, str]:
+        # we only check for the applicability of constraints on N1,
+        # so we do not really need a real compound,
+        # but we still need to create a Compound object to pass to the checkers
+        comp = Compound(f"{n1}_maske")
+        applicable_constr = []
+        applicable_pl_constr = []
+        all_acceptable_linkers = []
+        for c_id, constraint in constraints.items():
+            if constraint["appl_item"] != "n1":
+                continue
+            func_name = constraint["func_alias"]
+            if hasattr(applicability_checkers, func_name + "_is_applicable"):
+                try:
+                    is_applicable_func = getattr(
+                        applicability_checkers,
+                        func_name + "_is_applicable"
+                    )
+                    is_applicable = is_applicable_func(comp)
+                    if is_applicable:
+                        acceptable_linkers = constraint["acceptable_linkers"]
+                        applicable_constr.append(c_id)
+                        if pl_marker in acceptable_linkers:
+                            applicable_pl_constr.append(c_id)
+                        all_acceptable_linkers.extend(acceptable_linkers)
+                except KeyError:
+                    # unreliable, exclude
+                    return None, None, None, None
+        applicable_constr = ", ".join(applicable_constr)
+        applicable_pl_constr = ", ".join(applicable_pl_constr)
+        all_acceptable_linkers = ", ".join(set(all_acceptable_linkers))
+        pbar.update(1)
+        return (
+            pl_marker in all_acceptable_linkers,
+            all_acceptable_linkers,
+            applicable_constr,
+            applicable_pl_constr
+        )
 
-    # compounds with N1s that mostly attach a non-pluralic linker 
-    # in the Sg form (N=1560, UniqN=842, UniqCN=590, UniqN1N=37)
-    ic_alt_nipe_sg = ic_alt_nipe[
-        ~ic_alt_nipe["n1"].isin(ic_alt_nipe_pll)
+    # record applicable N1-targeting constraints for each unique N1
+    # TODO: optimize
+    ic_alt_nipe_constr = ic_alt_nipe.copy()	\
+        [["n1", "n1_pl_marker"]]	\
+        .reset_index(drop=True)	\
+        .set_index("n1")
+    # keep unique N1s
+    ic_alt_nipe_constr = ic_alt_nipe_constr[
+        ~ic_alt_nipe_constr.index.duplicated(keep="first")
     ]
-    ic_alt_nipe_sg.to_csv(
-        os.path.join(outdir, "ic_alt_nipe_sgl_n1.tsv"),
+    
+    with tqdm(
+        total=len(ic_alt_nipe_constr), 
+        desc="Checking pluralic linker acceptability"
+    ) as pbar:
+        (
+            ic_alt_nipe_constr["is_pll_acceptable"],
+            ic_alt_nipe_constr["acceptable_linkers"],
+            ic_alt_nipe_constr["applicable_constr"],
+            ic_alt_nipe_constr["applicable_pl_constr"]
+        ) = zip(
+            *ic_alt_nipe_constr.apply(
+                lambda row: is_pll_acceptable(row.name, row["n1_pl_marker"], pbar),
+                axis=1
+            )
+        )
+    # (UniqN1N=46, one of them is NA)
+    ic_alt_nipe_constr.to_csv(
+        os.path.join(outdir, "summaries/ic_alt_nipe_constr.tsv"),
+        **outcsv_args
+    )
+    # replace NA with True to exclude those N1s from the analysis,
+    # as we cannot reliably determine their acceptability
+    ic_alt_nipe_constr["is_pll_acceptable"] = (
+        ic_alt_nipe_constr["is_pll_acceptable"].fillna(True)
+    )
+    n1_pll = ic_alt_nipe_constr[ic_alt_nipe_constr["is_pll_acceptable"]].index
+
+    # N1 may attach the pluralic linker
+    # (N=695, UniqN1N=16)
+    ic_alt_nipe[ic_alt_nipe["n1"].isin(n1_pll)].to_csv(
+        os.path.join(outdir, "leftovers/ic_alt_nipe_pll.tsv"),
         **outcsv_args
     )
 
-
-    # 5.2. Leave out compounds built from constituent combinations that mostly insert
-    # the pluralic linker due to other constraints (version "CC").
-
-    # count compounds with pluralic and non-pluralic linkers 
-    # built from each constituent combination
-    ic_alt_nipe_sg_links_data = {
-        const_comb: {
-            "sgl": len(group[
-                (group["n2_num"] == "sg") &
-                (~group["is_linker_pl"])
-            ]),
-            "pll": len(group[
-                (group["n2_num"] == "sg") &
-                (group["is_linker_pl"])
-            ])
-        }
-        for const_comb, group in ic_alt_nipe.groupby("const_comb")
-    }
-
-    # (UniqN1N=46)
-    ic_alt_nipe_sg_links = pd.DataFrame.from_dict(ic_alt_nipe_sg_links_data, orient="index")
-    ic_alt_nipe_sg_links.to_csv(
-        os.path.join(outdir, "summaries/ic_alt_nipe_sg_links_cc.tsv"),
-        **outcsv_args
-    )
-
-    # mostly pluralic linker in the Sg form (N=598, UniqCN=234)
-    ic_alt_nipe_pll = ic_alt_nipe_sg_links[
-        ic_alt_nipe_sg_links["pll"] >
-        ic_alt_nipe_sg_links["sgl"]
-    ].index
-    ic_alt_nipe[ic_alt_nipe.index.isin(ic_alt_nipe_pll)].to_csv(
-        os.path.join(outdir, "leftovers/ic_alt_nipe_pll_cc.tsv"),
-        **outcsv_args
-    )
-
-    # compounds with N1s that mostly attach a non-pluralic linker 
-    # in the Sg form (N=1333, UniqN=717, UniqCN=490, UniqN1N=46)
-    ic_alt_nipe_sg = ic_alt_nipe[
-        ~ic_alt_nipe.index.isin(ic_alt_nipe_pll)
-    ]
-    ic_alt_nipe_sg.to_csv(
-        os.path.join(outdir, "ic_alt_nipe_sgl_cc.tsv"),
+    # N1 may not attach the pluralic linker
+    # (N=1236, UniqN=665, UniqCN=468, UniqN1N=30)
+    ic_alt_nipe[~ic_alt_nipe["n1"].isin(n1_pll)].to_csv(
+        os.path.join(outdir, "ic_alt_nipe_npll.tsv"),
         **outcsv_args
     )
 
