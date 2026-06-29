@@ -1,0 +1,348 @@
+	num_sg	num_pl
+apfel+bauer	0.0	
+apfel+baum	0.0	0.6
+apfel+hof	0.0	0.0
+apfel+plantage	0.0	0.0
+apfel+rest	0.0	0.0
+apfel+rezept	0.0	0.0
+apfel+ring	0.0	0.0
+apfel+saft	0.0	0.0
+apfel+scheibe	0.0	0.0
+apfel+schnecke	0.0	0.0
+apfel+sorte	0.0	0.0
+apfel+tasche	0.0	0.0
+apfel+viertel	0.0	
+apfel+wein	1.0	1.0
+ball+eroberung	0.0	0.0
+ball+gewinn	0.0	0.0
+ball+haus		0.0
+ball+junge	0.0	0.0
+ball+kleid	0.0	0.0
+ball+kontakt	0.0	0.0
+ball+nacht	0.0	0.0
+ball+saal	0.0	0.0
+ball+spiel	0.0	0.0
+ball+spielplatz	0.0	0.0
+ball+stafette	0.0	0.0
+ball+veranstaltung	0.0	0.0
+ball+verlust	0.0	0.0
+ball+wechsel	0.0	0.0
+bild+agentur	0.0	0.0
+bild+ausschnitt	0.0	0.0
+bild+präsentation	1.0	0.0
+bild+rätsel	1.0	1.0
+bild+tafel	0.0	0.0
+bild+unterschrift	0.0	0.0
+bild+welt	1.0	1.0
+brett+boden	1.0	1.0
+brett+bude	1.0	1.0
+brett+bühne	1.0	1.0
+brett+hütte	1.0	1.0
+brett+kante	0.0	
+brett+punkt	0.0	0.0
+brett+schalung	1.0	1.0
+brett+seite	0.0	0.0
+brett+spiel	0.0	0.0
+brett+steg	1.0	1.0
+brett+verkleidung		1.0
+brett+verschlag	1.0	1.0
+brett+wand	1.0	1.0
+brett+weg	1.0	1.0
+brett+wurzel	0.0	0.0
+brett+zaun	1.0	1.0
+brief+bogen	0.0	0.0
+brief+freund	0.0	0.0
+brief+freundschaft	0.0	0.0
+brief+inhalt	0.0	0.0
+brief+kontakt	0.0	0.0
+brief+kopie	0.0	0.0
+brief+roman	0.0	0.0
+brief+schreiber	0.6666666666666666	0.5
+brief+stelle		0.0
+brief+stück	0.0	
+brief+tasche	0.0	0.0
+brief+taube	0.0	0.0
+brief+umschlag	0.0	0.0
+brief+wähler	0.0	0.0
+brief+zentrum	0.0	0.0
+ei+ablage	0.0	0.0
+ei+baum	1.0	
+ei+becher	1.0	1.0
+ei+bläschen	0.0	0.0
+ei+farbe	1.0	1.0
+ei+gelb	0.0	0.0
+ei+haut	0.0	0.0
+ei+hülle	0.0	0.0
+ei+kapsel	0.0	0.0
+ei+kopf	1.0	1.0
+ei+leiter	0.0	0.0
+ei+produzent	1.0	1.0
+ei+schale	0.5	0.5
+ei+schecke	1.0	1.0
+ei+sprung	0.0	0.0
+ei+stock	1.0	1.0
+ei+tanz	1.0	1.0
+ei+uhr	1.0	1.0
+ei+wurf	1.0	1.0
+frau+bild	1.0	1.0
+frau+büro	1.0	1.0
+frau+figur	1.0	
+frau+geschichte	1.0	
+frau+hand	1.0	1.0
+frau+haus	1.0	1.0
+frau+klamotte		1.0
+frau+mann	0.0	0.0
+frau+problem	1.0	1.0
+frau+rolle		1.0
+frau+zentrum	1.0	1.0
+frau+ärztin	1.0	1.0
+gerät+art		1.0
+gerät+haus	0.5	0.5
+gerät+hersteller		1.0
+gerät+klasse	1.0	
+gerät+system		1.0
+gerät+teil	1.0	
+gerät+treiber	1.0	1.0
+gerät+träger	1.0	
+gerät+turner	0.0	0.0
+gerät+typ	1.0	1.0
+gerät+version	1.0	1.0
+gerät+wertung	0.0	0.0
+geräusch+macher	1.0	1.0
+geräusch+situation		0.0
+geschenk+abonnement	0.0	0.0
+geschenk+aktion	1.0	0.0
+geschenk+ausgabe	0.0	0.0
+geschenk+band	0.0	0.0
+geschenk+buch	0.0	0.0
+geschenk+einkauf	1.0	1.0
+geschenk+finder	1.0	
+geschenk+idee	0.0	0.0
+geschenk+karte	0.0	0.0
+geschenk+karton	0.0	0.0
+geschenk+korb	0.5	0.5
+geschenk+packung	0.0	0.0
+geschenk+paket	0.5	0.0
+geschenk+schachtel	0.0	0.0
+geschenk+set	0.5	0.5
+geschenk+tisch	1.0	0.0
+geschenk+tüte	1.0	0.0
+geschenk+verpackung	0.0	0.0
+geschenk+vorschlag	0.0	0.0
+geschenk+wunsch	0.0	0.6666666666666666
+hand+abdruck	0.5	0.6666666666666666
+hand+bewegung	0.0	0.0
+hand+creme	0.0	0.0
+hand+druck	1.0	1.0
+hand+fläche	0.0	0.0
+hand+gelenk	0.0	0.0
+hand+griff	0.0	0.0
+hand+kante	0.0	0.0
+hand+karte	0.0	0.0
+hand+lauf	0.0	0.0
+hand+scheidung	1.0	1.0
+hand+spiel	0.0	
+hand+stab	0.0	0.0
+hand+tuch	0.0	0.0
+hand+waschung	0.5	1.0
+hund+erfahrung	1.0	
+hund+führer	1.0	1.0
+hund+haufen	1.0	
+hund+kontakt	1.0	1.0
+hund+pension	1.0	1.0
+hund+platz		1.0
+hund+rasse	1.0	1.0
+hund+rose	0.0	0.0
+hund+schule	1.0	1.0
+hund+stag	0.0	0.0
+hund+trainer	1.0	1.0
+hund+zahn	0.0	0.0
+kind+artikel		1.0
+kind+buch	1.0	1.0
+kind+fest	1.0	1.0
+kind+kopf	0.0	0.0
+kind+mutter	0.0	0.0
+kind+mörder	0.0	0.3333333333333333
+kind+mörderin	0.0	0.0
+kind+schuh	0.0	1.0
+kind+spiel	1.0	1.0
+kind+stube	1.0	1.0
+kind+tod	0.0	0.0
+kind+tötung	0.0	0.0
+kind+vater	0.0	0.0
+kind+zimmer	1.0	1.0
+lied+begleiter	0.0	0.0
+lied+beitrag	0.0	0.0
+lied+blatt	0.3333333333333333	0.5
+lied+form	0.0	0.0
+lied+gattung	0.0	0.0
+lied+interpretation	0.0	0.0
+lied+jahr		1.0
+lied+komponist	1.0	0.0
+lied+kreis	1.0	1.0
+lied+macher	1.0	1.0
+lied+melodie		0.0
+lied+probe	0.0	0.0
+lied+programm	0.0	0.0
+lied+schreiber	1.0	1.0
+lied+strophe	0.0	0.0
+lied+sänger	1.0	0.0
+lied+tag	0.0	1.0
+lied+text	0.3333333333333333	0.5
+lied+titel	0.0	1.0
+lied+vortrag	0.5	0.0
+lied+zeile	0.0	0.0
+mutter+beratung	1.0	1.0
+mutter+freude	0.0	0.0
+mutter+gefühl	0.0	0.0
+mutter+generation	1.0	1.0
+mutter+instinkt	0.0	0.0
+mutter+kirche	0.0	0.0
+mutter+kuh	0.0	0.0
+mutter+kur	1.0	1.0
+mutter+land	0.0	0.0
+mutter+rente	1.0	1.0
+mutter+rolle	0.0	1.0
+mutter+sohn	0.0	0.0
+mutter+sprache	0.0	0.0
+mutter+tier	0.0	0.0
+nagel+bett	0.0	0.0
+nagel+bombe	0.0	
+nagel+feile	0.0	0.0
+nagel+kopf	0.0	0.0
+nagel+lack	0.0	0.0
+nagel+mal	1.0	1.0
+nagel+oberfläche	0.0	
+nagel+rand	0.0	0.0
+nagel+schere	0.0	0.0
+nagel+schuh		0.0
+nagel+spitze	0.0	0.0
+nagel+studio	0.0	0.0
+nagel+zange	0.0	0.0
+nation+begriff		0.5
+nation+grenze	1.0	1.0
+nation+ticket	1.0	1.0
+person+aufzug	1.0	1.0
+person+beförderung	1.0	1.0
+person+beschreibung	1.0	1.0
+person+fähre	1.0	1.0
+person+gesellschaft	1.0	1.0
+person+kontrolle	1.0	1.0
+person+name	1.0	1.0
+person+schaden	1.0	1.0
+person+schützer		1.0
+person+stimme		1.0
+person+transport	1.0	1.0
+person+zug	1.0	1.0
+produkt+art	0.0	0.0
+produkt+bereich	0.0	0.0
+produkt+beschreibung	0.0	
+produkt+bild	0.0	0.0
+produkt+eigenschaft	0.0	0.0
+produkt+entwicklung	0.0	0.0
+produkt+information		0.0
+produkt+markt		0.0
+produkt+präsentation		0.0
+produkt+suche	0.0	0.0
+produkt+test		0.0
+schwert+form	0.0	0.0
+schwert+griff	0.0	0.0
+schwert+hieb	0.0	0.0
+schwert+kampf	0.6666666666666666	0.3333333333333333
+schwert+kasten	0.0	0.0
+schwert+klinge	0.0	0.0
+schwert+kämpfer	0.0	0.0
+schwert+lilie	0.0	0.0
+schwert+schlag	0.0	
+schwert+schmied	0.0	0.0
+schwert+träger		0.0
+schwester+lokal	0.0	0.0
+schwester+zeitung	0.0	0.0
+stadt+architektur	1.0	0.0
+stadt+besichtigung	0.0	1.0
+stadt+bild	0.0	1.0
+stadt+fest	0.0	0.0
+stadt+führer	1.0	1.0
+stadt+führung	0.0	0.0
+stadt+kern	0.0	0.0
+stadt+lauf	0.0	1.0
+stadt+meisterschaft	0.5	0.5
+stadt+planer	0.5	1.0
+stadt+portal	0.6666666666666666	1.0
+stadt+rat	0.0	0.0
+stadt+raum	0.0	0.0
+stadt+tourist	1.0	1.0
+stadt+trip	1.0	1.0
+vater+bild	0.0	0.5
+vater+buch		0.0
+vater+figur	0.0	0.0
+vater+generation	1.0	1.0
+vater+geschichte	0.5	1.0
+vater+hand	0.0	0.0
+vater+haus	0.0	0.0
+vater+komplex	0.0	0.0
+vater+problem	0.0	
+vater+recht	0.0	1.0
+vater+rolle	0.5	0.5
+vater+sprache	0.0	0.0
+vater+stelle	0.0	
+vater+tag	0.3333333333333333	0.0
+vater+tier	0.0	0.0
+vater+zeit	0.5	1.0
+vogel+art	0.0	0.0
+vogel+baum	0.0	0.0
+vogel+beobachtung		0.0
+vogel+experte		0.0
+vogel+feder	0.0	0.0
+vogel+form	0.0	
+vogel+freund		0.0
+vogel+haus	0.0	0.0
+vogel+häuschen	0.0	1.0
+vogel+kenner	0.0	
+vogel+kirsche	0.0	0.0
+vogel+käfig	0.0	
+vogel+nest	0.0	0.0
+vogel+spinne	0.0	0.0
+vogel+stimme	0.0	0.0
+weg+abschnitt	0.0	0.0
+weg+begleiterin	0.0	0.0
+weg+beschreibung	0.5	0.0
+weg+decke	1.0	1.0
+weg+fläche	1.0	1.0
+weg+gefährte	0.0	0.0
+weg+genosse	0.0	0.0
+weg+karte	1.0	1.0
+weg+länge	0.5	1.0
+weg+marke	0.0	0.0
+weg+markierung	0.0	0.5
+weg+punkt	0.5	0.3333333333333333
+weg+rand	0.6666666666666666	0.3333333333333333
+weg+recht	0.6	1.0
+weg+strecke	0.5	0.0
+weg+stück	0.3333333333333333	0.0
+weg+unfall	1.0	1.0
+weg+verlegung	0.0	0.0
+weg+weisung	0.0	0.0
+weg+zeichen	1.0	0.0
+zahn+arzt	0.0	0.0
+zahn+behandlung	0.0	0.0
+zahn+belag	0.0	0.0
+zahn+bürste	0.0	0.0
+zahn+creme	0.0	0.0
+zahn+fund		0.0
+zahn+füllung	0.0	0.0
+zahn+hals	0.0	0.0
+zahn+implantat	0.0	0.0
+zahn+krankheit	0.0	0.0
+zahn+lücke	0.0	0.0
+zahn+prothese	0.0	0.0
+zahn+reinigung	0.0	0.0
+zahn+schmerz	0.0	0.0
+zahn+spange	0.0	0.0
+zahn+stocher	0.0	0.0
+zahn+substanz	0.0	0.0
+zahn+verfärbung		0.0
+zahn+versicherung	0.0	0.0
+zahn+ärztin	0.0	0.0
+zitat+recht	0.0	0.0
+zitat+spender	0.0	
