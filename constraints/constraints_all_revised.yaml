@@ -335,7 +335,7 @@ topology:
 
                             - p2l:phon_fin:schwa$-en|def-en
 
-                            - p2l:phon_fin:schwa$-en|f-en
+                            # - p2l:phon_fin:schwa$-en|f-en   # DEPRECATED
 
                             - p2l:drv:deadj_schwa$-0/en # EXTERNAL
 
@@ -1932,7 +1932,7 @@ constraints:
 
 
     # 33: DEPRECATED.
-    # DISCARD AND MERGE WITH (32): even adding a simplex condition that eliminates deverbal and deadjectival nouns from consideration results in item regularity of 0.868; there is therefore no point in distinguishing between feminine and non-feminine nouns ending in schwa since both end up in the moderate regularity level.
+    # DISCARD AND MERGE WITH `p2l:phon_fin:schwa$-en|def-en`: even adding a simplex condition that eliminates deverbal and deadjectival nouns from consideration results in item regularity of 0.868; there is therefore no point in distinguishing between feminine and non-feminine nouns ending in schwa since both end up in the moderate regularity level.
     # p2l:phon_fin:schwa$-en|f-en:
 
     #     orig_summary: First constituents that are constituted by feminine nouns that end in schwa adopt -n- [regularly].
