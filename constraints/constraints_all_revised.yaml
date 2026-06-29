@@ -80,6 +80,7 @@ readme: |
     * Removed support levels: all verified constraints are now supported, no data is available otherwise.
     * Added more evidence from the literature after further literature review.
     * Explicitly specified the acceptable linkers for the constraints.
+    * Revise application items for semantic constraints (such as N1+N2 for plural effect constraints).
 
 
 
@@ -756,7 +757,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -e attach -e- irregularly in compounds in which the second constituent forces a plural meaning of the given first constituent.
         acceptable_linkers: [_+e_]
         ling_info_type: [morphological, semantic]
-        appl_item: n1
+        appl_item: n1+n2
         n_appl_items: 3613
 
         func_alias: plur_e_pl
@@ -873,7 +874,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -(")er attach a zero linker in a majority of compounds in which the second constituent forces a singular meaning of the given first constituent.
         acceptable_linkers: [_]
         ling_info_type: [morphological, semantic]
-        appl_item: n1
+        appl_item: n1+n2
         n_appl_items: 3613
 
         func_alias: plur_er_sg
@@ -915,7 +916,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -(")er tend to attach a zero linker in compounds in which the second constituent forces a mass meaning of the given first constituent.
         acceptable_linkers: [_]
         ling_info_type: [morphological, semantic]
-        appl_item: n1
+        appl_item: n1+n2
         n_appl_items: 3613
 
         func_alias: plur_er_mass
@@ -947,7 +948,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -(")er attach -(")er- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
         acceptable_linkers: [_+=er_]
         ling_info_type: [morphological, semantic]
-        appl_item: n1
+        appl_item: n1+n2
         n_appl_items: 3613
 
         func_alias: plur_er_pl
@@ -991,7 +992,7 @@ constraints:
     # 11
     p2l:decl_cl:pl:#er-0/er|anim-er:
     
-        summary: First constituents that are constituted by person and animal designations that build the plural form with -(")er may attach -(")er- regardless of the singular/plural interpretation of the given first constituent within the compound.
+        summary: First constituents that are constituted by person and animal designations that build the plural form with -(")er may attach -(")er- (regardless of the singular/plural interpretation of the given first constituent within the compound).
         acceptable_linkers: [_+=er_]
         ling_info_type: [morphological, semantic]
         appl_item: n1
@@ -1066,7 +1067,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -e and umlaut attach -"e- irregularly in compounds in which the second constituent forces a plural meaning of the given first constituent.
         acceptable_linkers: [_+=e_]
         ling_info_type: [morphological, semantic]
-        appl_item: n1
+        appl_item: n1+n2
         n_appl_items: 3613
 
         func_alias: plur_e_uml_pl
@@ -1143,7 +1144,7 @@ constraints:
         acceptable_linkers: [_+=_]
         ling_info_type: [morphological, semantic]
         func_alias: plur_0_uml_pl
-        appl_item: n1
+        appl_item: n1+n2
         n_appl_items: 3613
 
         quantifier: irregularly
@@ -1226,7 +1227,7 @@ constraints:
         summary: First constituents that are constituted by mixed masculine and neuter nouns attach -(e)n- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
         acceptable_linkers: [_+n_, _+en_]
         ling_info_type: [morphological, semantic]
-        appl_item: n1
+        appl_item: n1+n2
         n_appl_items: 3613
 
         func_alias: mixed_mn_pl
@@ -1374,7 +1375,7 @@ constraints:
         summary: First constituents that are constituted by deverbal feminine nouns with a schwa suffix tend to attach -(e)n- in compounds in which the second constituent forces a plural meaning of the given first constituent.
         acceptable_linkers: [_+n_]
         ling_info_type: [derivational, semantic]
-        appl_item: n1
+        appl_item: n1+n2
         n_appl_items: 3613
 
         func_alias: schwa_fin_deverb_pl
@@ -1543,7 +1544,7 @@ constraints:
         summary: First constituents that are constituted by derived nouns with suffix -ität and its allomorphs prefer -(e)n- in compounds in which the second constituent forces a plural meaning of the given first constituent.
         acceptable_linkers: [_+en_]
         ling_info_type: [derivational, semantic]
-        appl_item: n1
+        appl_item: n1+n2
         n_appl_items: 3613
 
         func_alias: sfx_itaet_pl
@@ -2027,7 +2028,7 @@ constraints:
         summary: First constituents that are constituted by consonant-final weak feminine nouns mostly adopt a zero linker or -s- in compounds in which the second constituent forces a singular meaning of the given first constituent.
         acceptable_linkers: [_, _+s_]
         ling_info_type: [morphological, phonological, semantic]
-        appl_item: n1
+        appl_item: n1+n2
         n_appl_items: 3613
 
         func_alias: f_cons_fin_sg
@@ -2071,7 +2072,7 @@ constraints:
         summary: First constituents that are constituted by consonant-final weak feminine nouns --- especially final-stressed incl. monosyllabic ones --- attach -(e)n- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
         acceptable_linkers: [_+en_]
         ling_info_type: [morphological, phonological, semantic]
-        appl_item: n1
+        appl_item: n1+n2
         n_appl_items: 3613
 
         func_alias: f_cons_fin_pl
@@ -2126,7 +2127,7 @@ constraints:
         summary: Copulative compounds insert a zero linker regularly. By copulative compounds are understood compounds in which the two constituents do not exhibit a clear modifier-head relation.
         acceptable_linkers: [_]
         ling_info_type: [semantic]
-        appl_item: compound
+        appl_item: n1+n2
         n_appl_items: 282767
 
         func_alias: copula
@@ -2172,7 +2173,7 @@ constraints:
         summary: Argumental compounds are sometimes marked by -s-. By argumental compounds are understood compounds in which the second constituent still contains a high degree of verbiness and the first constituent of which constitutes their argument. The second constituent is such compounds is usually an agent designation, an -ung formation etc.
         acceptable_linkers: [_+s_]
         ling_info_type: [semantic]
-        appl_item: compound
+        appl_item: n1+n2
         n_appl_items: 282767
 
         func_alias: argument
@@ -2251,7 +2252,7 @@ constraints:
         summary: Compounds whose first constituent designates a person and whose second constituent is one of 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', or 'Witwe' tend to insert -s-.
         acceptable_linkers: [_+s_]
         ling_info_type: [semantic, lexical]
-        appl_item: compound
+        appl_item: n1+n2
         n_appl_items: 282767
 
         func_alias: sec_const_anim
@@ -2738,7 +2739,7 @@ constraints:
         summary: All neuter nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are polysyllabic foreign nouns that have a stressed final syllable that exhibit a plural meaning within the compound.
         acceptable_linkers: [_+n_, _+en_]
         ling_info_type: [morphological, phonological, lexical, semantic]
-        appl_item: n1+linker
+        appl_item: n1+n2+linker
         n_appl_items: 4868
 
         func_alias: en_non_par_n_pl
@@ -3271,7 +3272,7 @@ constraints:
         summary: Linkers that are identical to the plural ending of the first constituent (except for -s- and zero linker) in a given compound tend to be associated with a plural meaning of this first constituent within the compound.
         acceptable_linkers: [_+e_, _+=e_, _+=er_, _+=_, _+n_, _+en_]
         ling_info_type: [morphological, semantic]
-        appl_item: n1+linker
+        appl_item: n1+n2+linker
         n_appl_items: 4868
 
         func_alias: pl_interpr
