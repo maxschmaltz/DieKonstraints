@@ -1,0 +1,22 @@
+		lfreq	mfreq	hfreq
+N	ic_alt_nipe_npll	61.0	44.0	31.0
+N	ic_alt_nipe	61.0	44.0	31.0
+N	ic_alt	74.0	57.0	36.0
+df	ic_alt_nipe_npll	1.0	1.0	1.0
+df	ic_alt_nipe	1.0	1.0	1.0
+df	ic_alt	1.0	1.0	1.0
+chi2	ic_alt_nipe_npll	1.371	0.505	0.0
+chi2	ic_alt_nipe	1.371	0.505	0.0
+chi2	ic_alt	0.439	0.083	0.0
+p	ic_alt_nipe_npll	0.242	0.477	1.0
+p	ic_alt_nipe	0.242	0.477	1.0
+p	ic_alt	0.507	0.773	1.0
+cramer_v	ic_alt_nipe_npll	0.15	0.107	0.0
+cramer_v	ic_alt_nipe	0.15	0.107	0.0
+cramer_v	ic_alt	0.077	0.038	0.0
+resids_cong	ic_alt_nipe_npll	1.44	1.051	-0.096
+resids_cong	ic_alt_nipe	1.44	1.051	-0.096
+resids_cong	ic_alt	0.897	0.557	-0.126
+resids_incong	ic_alt_nipe_npll	-1.44	-1.051	0.096
+resids_incong	ic_alt_nipe	-1.44	-1.051	0.096
+resids_incong	ic_alt	-0.897	-0.557	0.126

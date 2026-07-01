@@ -1,0 +1,15 @@
+		lfreq	mfreq	hfreq
+N	ic_alt_nipe	45.0	25.0	14.0
+N	ic_alt	50.0	27.0	14.0
+df	ic_alt_nipe	1.0	1.0	1.0
+df	ic_alt	1.0	1.0	1.0
+chi2	ic_alt_nipe	0.227	0.327	0.08
+chi2	ic_alt	0.111	0.313	0.08
+p	ic_alt_nipe	0.634	0.567	0.778
+p	ic_alt	0.739	0.576	0.778
+cramer_v	ic_alt_nipe	0.071	0.114	0.075
+cramer_v	ic_alt	0.047	0.108	0.075
+resids_cong	ic_alt_nipe	-0.778	-0.981	-0.94
+resids_cong	ic_alt	-0.619	-0.947	-0.94
+resids_incong	ic_alt_nipe	0.778	0.981	0.94
+resids_incong	ic_alt	0.619	0.947	0.94

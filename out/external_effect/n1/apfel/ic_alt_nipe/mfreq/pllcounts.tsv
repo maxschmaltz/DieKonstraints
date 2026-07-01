@@ -1,0 +1,29 @@
+		l_sg	l_pl	pl_share
+apfel+bauer	num_sg	1	0	0.0
+apfel+bauer	num_pl	0	0	
+apfel+baum	num_sg	2	0	0.0
+apfel+baum	num_pl	2	3	0.6
+apfel+hof	num_sg	1	0	0.0
+apfel+hof	num_pl	1	0	0.0
+apfel+plantage	num_sg	1	0	0.0
+apfel+plantage	num_pl	1	0	0.0
+apfel+rest	num_sg	1	0	0.0
+apfel+rest	num_pl	1	0	0.0
+apfel+rezept	num_sg	1	0	0.0
+apfel+rezept	num_pl	1	0	0.0
+apfel+ring	num_sg	1	0	0.0
+apfel+ring	num_pl	2	0	0.0
+apfel+saft	num_sg	1	0	0.0
+apfel+saft	num_pl	1	0	0.0
+apfel+scheibe	num_sg	1	0	0.0
+apfel+scheibe	num_pl	1	0	0.0
+apfel+schnecke	num_sg	1	0	0.0
+apfel+schnecke	num_pl	1	0	0.0
+apfel+sorte	num_sg	1	0	0.0
+apfel+sorte	num_pl	1	0	0.0
+apfel+tasche	num_sg	1	0	0.0
+apfel+tasche	num_pl	1	0	0.0
+apfel+viertel	num_sg	1	0	0.0
+apfel+viertel	num_pl	0	0	
+apfel+wein	num_sg	0	2	1.0
+apfel+wein	num_pl	0	1	1.0
