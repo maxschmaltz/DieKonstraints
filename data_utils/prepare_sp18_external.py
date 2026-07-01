@@ -92,13 +92,13 @@ def main():
     # As a result of the preprocessing, we obtain the following datasets
     # (all have the same notation as SP18):
     #
-    #   * 'resources/developed/sp18/external_effect/ident_const_all.tsv'
+    #   * 'resources/developed/sp18/external_effect/ident_cc_all.tsv'
     #   (N=3453, UniqN=2130, UniqCN=1402)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker)
     #
     #
-    #   * 'resources/developed/sp18/external_effect/ic_alt_all.tsv'
+    #   * 'resources/developed/sp18/external_effect/ic_alt.tsv'
     #   (N=2318, UniqN=1246, UniqCN=869)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing both in the Sg and the Pl forms
@@ -144,13 +144,13 @@ def main():
     #   * 'resources/developed/sp18/external_effect/summaries/ic_nums.tsv'
     #   (UniqCN=1402)
     #   Counts of compounds in the Sg/Pl forms built from each constituent combination
-    #   (from 'resources/developed/sp18/external_effect/ident_const_all.tsv')
+    #   (from 'resources/developed/sp18/external_effect/ident_cc_all.tsv')
     #
     #   * 'resources/developed/sp18/external_effect/summaries/ic_n1_sem.tsv'
     #   (UniqCN=869)
     #   Counts of compounds with 'ind'/'coll'/'konvc' N1 meaning 
     #   built from each constituent combination
-    #   (from 'resources/developed/sp18/external_effect/ic_alt_all.tsv')
+    #   (from 'resources/developed/sp18/external_effect/ic_alt.tsv')
     #
     #   * 'resources/developed/sp18/external_effect/summaries/ic_alt_nipe_constr.tsv'
     #   (UniqN1N=46)
@@ -170,7 +170,7 @@ def main():
     #  constituent combinations                 from unique constituent
     #  (N=3453, UniqN=2130, UniqCN=1402)          combinations (N=4669)
     # 'resources/developed/sp18/
-    # external_effect/ident_const_all.tsv' -----> counts of compounds in the Sg/Pl forms
+    # external_effect/ident_cc_all.tsv' -----> counts of compounds in the Sg/Pl forms
     #           |     \__                       built from each constituent combination (UniqCN=1402)
     #           |        \__               'resources/developed/sp18/external_effect/summaries/ic_nums.tsv'
     #           |           \___________ 
@@ -187,7 +187,7 @@ def main():
     #  in the Sg and the Pl forms            counts of compounds with 'ind'/'coll'/'konvc' N1 meaning
     #  (N=2318, UniqN=1246, UniqCN=869) ----->  built from each constituent combination (UniqCN=869)
     # 'resources/developed/sp18/           'resources/developed/sp18/external_effect/summaries/ic_n1_sem.tsv'
-    # external_effect/ic_alt_all.tsv'
+    # external_effect/ic_alt.tsv'
     #           |                    \__
     #           |                       \_____
     #           |                             \
@@ -254,12 +254,12 @@ def main():
 
     # non-unique constituent combinations (N=3453, UniqN=2130, UniqCN=1402)
     sp18["const_comb"] = sp18["n1"] + "+" + sp18["n2"]
-    ident_const_all = sp18[sp18.duplicated(subset="const_comb", keep=False)]    \
+    ident_cc_all = sp18[sp18.duplicated(subset="const_comb", keep=False)]    \
         .sort_values("const_comb")  \
         .reset_index(drop=False)    \
         .set_index("const_comb")
-    ident_const_all.to_csv(
-        os.path.join(outdir, "ident_const_all.tsv"),
+    ident_cc_all.to_csv(
+        os.path.join(outdir, "ident_cc_all.tsv"),
         **outcsv_args
     )
 
@@ -277,7 +277,7 @@ def main():
             "sg_form": len(group[group["n2_num"] == "sg"]),
             "pl_form": len(group[group["n2_num"] == "pl"])
         }
-        for const_comb, group in ident_const_all.groupby("const_comb")
+        for const_comb, group in ident_cc_all.groupby("const_comb")
     }
     ic_nums = pd.DataFrame.from_dict(ic_nums_data, orient="index")
     ic_nums.to_csv(
@@ -287,25 +287,25 @@ def main():
 
     # only Sg forms (N=892)
     ic_nalt_sg = ic_nums[ic_nums["pl_form"] == 0].index
-    ident_const_all.loc[ic_nalt_sg].to_csv(
+    ident_cc_all.loc[ic_nalt_sg].to_csv(
         os.path.join(outdir, "leftovers/ic_nalt_sg.tsv"),
         **outcsv_args
     )
 
     # only Pl forms (N=243)
     ic_nalt_pl = ic_nums[ic_nums["sg_form"] == 0].index
-    ident_const_all.loc[ic_nalt_pl].to_csv(
+    ident_cc_all.loc[ic_nalt_pl].to_csv(
         os.path.join(outdir, "leftovers/ic_nalt_pl.tsv"),
         **outcsv_args
     )
 
     # alternating forms (N=2318, UniqN=1246, UniqCN=869)
-    ident_const_alt = ident_const_all[
-        ~ident_const_all.index.isin(ic_nalt_sg) &
-        ~ident_const_all.index.isin(ic_nalt_pl)
+    ident_const_alt = ident_cc_all[
+        ~ident_cc_all.index.isin(ic_nalt_sg) &
+        ~ident_cc_all.index.isin(ic_nalt_pl)
     ]
     ident_const_alt.to_csv(
-        os.path.join(outdir, "ic_alt_all.tsv"),
+        os.path.join(outdir, "ic_alt.tsv"),
         **outcsv_args
     )
 
