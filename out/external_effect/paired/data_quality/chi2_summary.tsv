@@ -1,0 +1,8 @@
+	ic_alt_nipe_npll_vs_ic_alt_nipe	ic_alt_nipe_npll_vs_ic_alt
+N	1560.0	1735.0
+df	1.0	1.0
+chi2	0.275	7.635
+p	0.6	0.006
+cramer_v	0.013	0.066
+resids_cong	0.577	2.814
+resids_incong	-0.577	-2.814
