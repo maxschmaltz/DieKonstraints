@@ -1,0 +1,23 @@
+		person	apfel	apfel	apfel	bucht
+		lfreq	lfreq	mfreq	hfreq	lfreq
+N	ic_alt_nipe_npll	51.0	46.0	33.0	26.0	46.0
+N	ic_alt_nipe	51.0	46.0	33.0	26.0	46.0
+N	ic_alt	66.0	52.0	33.0	26.0	49.0
+df	ic_alt_nipe_npll	1.0	1.0	1.0	1.0	1.0
+df	ic_alt_nipe	1.0	1.0	1.0	1.0	1.0
+df	ic_alt	1.0	1.0	1.0	1.0	1.0
+chi2	ic_alt_nipe_npll	3.78	3.242	0.136	1.187	2.716
+chi2	ic_alt_nipe	3.78	3.242	0.136	1.187	2.716
+chi2	ic_alt	3.967	2.233	0.136	1.187	2.366
+p	ic_alt_nipe_npll	0.052	0.072	0.712	0.276	0.099
+p	ic_alt_nipe	0.052	0.072	0.712	0.276	0.099
+p	ic_alt	0.046	0.135	0.712	0.276	0.124
+cramer_v	ic_alt_nipe_npll	0.272	0.265	0.064	0.214	0.243
+cramer_v	ic_alt_nipe	0.272	0.265	0.064	0.214	0.243
+cramer_v	ic_alt	0.245	0.207	0.064	0.214	0.22
+resids_cong	ic_alt_nipe_npll	2.228	2.107	0.821	1.323	1.951
+resids_cong	ic_alt_nipe	2.228	2.107	0.821	1.323	1.951
+resids_cong	ic_alt	2.246	1.776	0.821	1.323	1.836
+resids_incong	ic_alt_nipe_npll	-2.228	-2.107	-0.821	-1.323	-1.951
+resids_incong	ic_alt_nipe	-2.228	-2.107	-0.821	-1.323	-1.951
+resids_incong	ic_alt	-2.246	-1.776	-0.821	-1.323	-1.836
