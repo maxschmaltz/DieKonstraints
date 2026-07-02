@@ -19,10 +19,10 @@ def main():
     # external plural effect (ExtPE).
     #
     # Convention: (N=x) refers to the number of compound **tokens** in the dataset, 
-    # (UniqN=x) refers to the number of compound **types** in the dataset,
-    # (UniqCN=x) refers to the number of constituent combination **types**
+    # (UniqN=x) refers to the number of unique compound **lemmata** in the dataset,
+    # (UniqCN=x) refers to the number of unique constituent combinations
     # in the dataset (regardless of the linker),
-    # (UniqN1N=x) refers to the number of N1 **types** in the dataset.
+    # (UniqN1N=x) refers to the number of N1 **lemmata** in the dataset.
     # 'Compounds' refers to 'compound tokens' unless specified otherwise.
     #
     # The default SP18 contains N=8212, UniqN=6889 lemmatized compounds

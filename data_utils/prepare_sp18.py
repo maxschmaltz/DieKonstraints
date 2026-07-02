@@ -22,7 +22,7 @@ def main():
     # 'data_utils/prepare_sp18_external.py' and 'data_utils/prepare_sp18_internal.py', respectively.
     #
     # Convention: (N=x) refers to the number of compound **tokens** in the dataset, 
-    # while (UniqN=x) refers to the number of compound **types** in the dataset.
+    # while (UniqN=x) refers to the number of unique compound **lemmata** in the dataset.
     # 'Compounds' refers to 'compound tokens' unless specified otherwise.
     # 
     # The original dataset contains N=9415 compounds in Sg and Pl forms (different cases)
