@@ -1,5 +1,6 @@
 import os
 import requests
+import json
 from bs4 import BeautifulSoup
 import pandas as pd
 from tqdm import tqdm
@@ -131,9 +132,9 @@ def _retrieve_dereko_lemma(match_id: str) -> str:
             # and the lemma is available in the title of the <span> tag inside the <mark>:
             # <mark><span title=\"tt/l:Apfelbaum\">Apfelbäume</span></mark>
             html = data["snippet"]
-            soup = BeautifulSoup(html, 'html.parser')
-            span = soup.find('mark').find('span', title=True)
-            return span['title'].split('tt/l:')[-1]
+            soup = BeautifulSoup(html, "html.parser")
+            span = soup.find("mark").find("span", title=True)
+            return span["title"].split("tt/l:")[-1]
         else:
             return
     except:
@@ -301,12 +302,6 @@ def get_dereko_counts(
                 is_base=is_base
             )
 
-            # count for lemma is lemma is not None, otherwise count for wordform
-            cache_df.loc[inp, "wc"] = count
-            if not is_base:
-                cache_df.loc[inp, "lemma"] = lemma
-                cache_df.loc[inp, "match_id"] = match_id
-
             if count == -1:
                 print("Aborting frequency retrieval due to an error with KorAP API.")
                 # this will lead to an error when fetching all freqs,
@@ -314,6 +309,12 @@ def get_dereko_counts(
                 # since the recommendation from IDS Mannheim support team
                 # is to stop querying for some time in case of errors
                 break
+
+            # count for lemma is lemma is not None, otherwise count for wordform
+            cache_df.loc[inp, "wc"] = count
+            if not is_base:
+                cache_df.loc[inp, "lemma"] = lemma
+                cache_df.loc[inp, "match_id"] = match_id
 
         cache_df.sort_index(inplace=True)
         cache_df.to_csv(
@@ -329,3 +330,121 @@ def get_dereko_counts(
         if not is_base else inputs
 
     return all_freqs, dereko_lemmata
+
+
+def _get_dereko_matches(inp: str) -> list:
+
+    # docu available under
+    # https://korap.ids-mannheim.de/api/v1.0/openapi/
+    # https://korap.ids-mannheim.de (Hilfe -> API)
+
+    params = {
+        # see https://korap.ids-mannheim.de (Hilfe -> Anfragesprachen -> Poliqarp+)
+        # (alternatively https://korap.ids-mannheim.de/doc/ql/poliqarp-plus?embedded=True)
+        "q": f"[base={inp}]",   # lemma
+        "ql": "poliqarp",
+        "cq": (
+            # all open- and close-source corpora (closed are 
+            # available via authorization); this expression is composed automatically
+            # by the KorAP web interface after authorization
+            "(availability=/CC.*/ | availability=/ACA.*/ | availability=/QAO-NC/) "
+            # only German corpora (Austrian, Luxembourish and Swiss excluded
+            # to avoid catching regionalisms)
+            "& pubPlaceKey=DE "
+            # only press (avoid typos etc.)
+            "& textType=/(:*[Zz]eitung|Zeitschrift|Magazin).*/ "
+            # entries after 1970 to avoid historical language
+            "& creationDate since 1970"
+        ),
+        # longer passages to be sure to contain all the necessary context
+        "context": "30-token,30-token",
+        "engine": "lucene",
+        # get up to 10 matches
+        "count": "10",
+        "page": "1",
+        "offset": "0",
+        "cutoff": "false",
+        "access-rewrite-disabled": "false",
+        "show-tokens": "false",
+        # will retrieve the context from there
+        "show-snippet": "true"
+    }
+
+    try:
+
+        matches = []
+
+        response = requests.get(
+            url=f"{base_url}/search",
+            headers=headers,
+            params=params,
+            timeout=30
+        )
+
+        if response.status_code != 200:
+            return
+
+        data = response.json()
+        for match in data["matches"]:
+            html = match["snippet"]
+            soup = BeautifulSoup(html, "html.parser")
+            # empty spans
+            for span in soup.find_all("span", {"class": "more"}):
+                span.extract()
+            lc = soup.find("span", {"class": "context-left"}).string
+            rc = soup.find("span", {"class": "context-right"}).string
+            hit = soup.find("span", {"class": "match"}).string
+            if not all([lc, rc, hit]):
+                continue
+            match_info = {
+                "id": match["matchID"],
+                "lc": lc,
+                "match": hit,
+                "rc": rc
+            }
+            matches.append(match_info)
+
+        return matches
+    
+    except Exception as e:
+        return
+
+
+def get_dereko_matches(inputs: list[str]) -> dict:
+    
+    # since querying DeReKo can be time-consuming and resource-intensive,
+    # we cache the matches in a separate JSON file
+    cache_path = "resources/developed/dereko_de_geq70_matches.tsv"
+    if os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as c:
+            cache_dict = json.load(c)
+    else:
+        cache_dict = {}
+
+    uncached_entries = list(set(inputs) - set(cache_dict.keys()))
+
+    if uncached_entries:
+
+        for inp in tqdm(uncached_entries, desc="Fetching uncached matches from KorAP"):
+
+            match_dict = _get_dereko_matches(inp)
+
+            if match_dict is None:
+                print("Aborting frequency retrieval due to an error with KorAP API.")
+                # this will lead to an error when fetching all matches,
+                # which is the desired behavior here
+                # since the recommendation from IDS Mannheim support team
+                # is to stop querying for some time in case of errors
+                break
+
+            cache_dict[inp] = match_dict
+
+        cache_dict = {
+            k: cache_dict[k]
+            for k in sorted(cache_dict)
+        }
+        
+        with open(cache_path, "w", encoding="utf-8") as c:
+            json.dump(cache_dict, c, indent=4, ensure_ascii=False)
+
+    return cache_dict
