@@ -1,7 +1,9 @@
 import os
 import pandas as pd
 from collections import defaultdict
+from typing import Tuple
 
+from gecodb_compound_parser import Compound
 from germanet_search import is_germanet_noun
 
 
@@ -20,12 +22,15 @@ def main():
     os.makedirs(outdir, exist_ok=True)
 
     # We will proceed as follows:
-    # 1. Init CELEX-nouns, GeCoDB_v06
-    # 2. Filter out all CELEX-nouns entries not found as nouns in Germanet
-    # 3. Filter out all GeCoDB_v06 entries whose constituents were not found as nouns in Germanet
-    # 4. Save the prepared data to new TSV files.
+    # 1. Init CELEX-nouns, GeCoDB_v06.
+    # 2. Filter out all CELEX-nouns entries not found as nouns in Germanet.
+    # 3. Filter out all GeCoDB_v06 entries whose constituents 
+    # were not found as nouns in Germanet (results in GeCoDB_v07).
+    # 4. Explicitly extract linker from GeCoDB_v07 entries.
+    # 5. Modify column order of GeCoDB_v07.
+    # 6. Save the prepared data to new TSV files.
 
-    # 1. Init CELEX-nouns, GeCoDB_v06
+    # 1. Init CELEX-nouns, GeCoDB_v06.
     
     # load prepared CELEX nouns
     # (N=11996)
@@ -54,7 +59,7 @@ def main():
     )
 
 
-    # 2. Filter out all CELEX-nouns entries not found as nouns in Germanet
+    # 2. Filter out all CELEX-nouns entries not found as nouns in Germanet.
 
     celex["is_germanet_noun"] = celex.index.map(is_germanet_noun)
     # extract negatives for faster filtering of GeCoDB
@@ -63,7 +68,8 @@ def main():
     celex.drop(columns=["is_germanet_noun"], inplace=True)
 
 
-    # 3. Filter out all GeCoDB_v06 entries whose constituents were not found as nouns in Germanet
+    # 3. Filter out all GeCoDB_v06 entries whose constituents
+    # were not found as nouns in Germanet.
 
     gecodb_v07 = gecodb_v06[
         ~(gecodb_v06["n1_lemma"].isin(celex_stop.index)) &
@@ -71,7 +77,36 @@ def main():
     ]
 
 
-    # 4. Save the prepared data to new TSV files.
+    # 4. Explicitly extract linker from GeCoDB_v06 entries.
+
+    def extract_linker(gecodb: str) -> Tuple[str, bool]:
+        comp = Compound(gecodb)
+        linker = comp.linkers[0]
+        umlaut_applied = (
+            linker.adds_umlaut and
+            not comp.lemma.startswith(comp.stems[0].morph)
+        )
+        return linker, umlaut_applied
+    
+    gecodb_v07["linker"], gecodb_v07["umlaut_applied"] = zip(
+        *gecodb_v07.apply(
+            lambda row: extract_linker(row.name),
+            axis=1
+        )
+    )
+
+
+    # 5. Modify column order of GeCoDB_v07.
+
+    gecodb_v07 = gecodb_v07[[
+        "comp_lemma", "comp_freq",
+        "n1_lemma", "n1_freq", "n1_prod", # "n1_mass_freq",
+        "linker", "umlaut_applied",
+        "n2_lemma", "n2_freq"
+    ]]
+
+
+    # 6. Save the prepared data to new TSV files.
     
     # (N=10999, deleted N=997)
     celex.to_csv(
