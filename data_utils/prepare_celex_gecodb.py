@@ -27,7 +27,7 @@ def main():
     # 3. Filter out all GeCoDB_v06 entries whose constituents 
     # were not found as nouns in Germanet (results in GeCoDB_v07).
     # 4. Explicitly extract linker from GeCoDB_v07 entries.
-    # 5. Modify column order of GeCoDB_v07.
+    # 5. Minor modifications of GeCoDB_v07.
     # 6. Save the prepared data to new TSV files.
 
     # 1. Init CELEX-nouns, GeCoDB_v06.
@@ -97,8 +97,9 @@ def main():
     )
 
 
-    # 5. Modify column order of GeCoDB_v07.
+    # 5. Minor modifications of GeCoDB_v07.
 
+    gecodb_v07[~gecodb_v07.index.duplicated(keep="first")]
     gecodb_v07 = gecodb_v07[[
         "comp_lemma", "comp_freq",
         "n1_lemma", "n1_freq", "n1_prod", # "n1_mass_freq",
@@ -117,7 +118,7 @@ def main():
         header=True
     )
 
-    # (N=281589, deleted N=1178)
+    # (N=281588, deleted N=1178, deleted duplicate=1)
     gecodb_v07.to_csv(
         os.path.join(outdir, "gecodb_v07.tsv"),
         sep="\t",
