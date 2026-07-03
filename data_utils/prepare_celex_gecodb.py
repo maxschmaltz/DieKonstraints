@@ -52,7 +52,8 @@ def main():
             **{
                 f"{prx}_freq": int
                 for prx in ["comp", "n1", "n1_mass", "n2"]
-            }
+            },
+            n1_prod="int"
         ),
         header=0,
         index_col=0
