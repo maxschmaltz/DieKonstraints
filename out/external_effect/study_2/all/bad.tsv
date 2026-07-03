@@ -13,3 +13,5 @@ resids_cong	ic_alt_nipe	-0.525	-0.525	-0.385
 resids_cong	ic_alt	-1.008	-1.008	-0.981
 resids_incong	ic_alt_nipe	0.525	0.525	0.385
 resids_incong	ic_alt	1.008	1.008	0.981
+p_sidak	ic_alt_nipe	1.0	1.0	1.0
+p_sidak	ic_alt	0.656	0.656	0.509
