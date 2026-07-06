@@ -3,7 +3,7 @@ import requests
 import json
 from bs4 import BeautifulSoup
 import pandas as pd
-from tqdm import tqdm
+from tqdm import tqdm, tqdm_notebook
 from dotenv import load_dotenv
 from collections import defaultdict
 from typing import Optional, Tuple
@@ -253,7 +253,12 @@ def _get_dereko_count(
 def get_dereko_counts(
     inputs: list[str],
     resolve_sz: Optional[bool]=False,
-    is_base: Optional[bool]=True
+    is_base: Optional[bool]=True,
+    # if running from a Jupyter notebook,
+    # adjust the path and the progress bar
+    # correspondingly
+    from_nb: Optional[bool]=False,
+    nb_depth: Optional[int]=1
 ) -> Tuple[list[int], list[str]]:
     
     # since querying DeReKo can be time-consuming and resource-intensive,
@@ -276,6 +281,8 @@ def get_dereko_counts(
         "resources/developed"
         f"/dereko_de_geq70_counts_{cache_path_prxf}.tsv"
     )
+    if from_nb:
+        cache_path = "../" * nb_depth + cache_path
     if os.path.exists(cache_path):
         cache_df = pd.read_csv(
             cache_path,
@@ -294,7 +301,8 @@ def get_dereko_counts(
 
     if uncached_entries:
 
-        for inp in tqdm(uncached_entries, desc="Fetching uncached frequencies from KorAP"):
+        _tqdm = tqdm if not from_nb else tqdm_notebook
+        for inp in _tqdm(uncached_entries, desc="Fetching uncached frequencies from KorAP"):
 
             count, lemma, match_id = _get_dereko_count(
                 inp,
@@ -410,11 +418,20 @@ def _get_dereko_matches(inp: str) -> list:
         return
 
 
-def get_dereko_matches(inputs: list[str]) -> dict:
+def get_dereko_matches(
+    inputs: list[str],
+    # if running from a Jupyter notebook,
+    # adjust the path and the progress bar
+    # correspondingly
+    from_nb: Optional[bool]=False,
+    nb_depth: Optional[int]=1
+) -> dict:
     
     # since querying DeReKo can be time-consuming and resource-intensive,
     # we cache the matches in a separate JSON file
     cache_path = "resources/developed/dereko_de_geq70_matches.tsv"
+    if from_nb:
+        cache_path = "../" * nb_depth + cache_path
     if os.path.exists(cache_path):
         with open(cache_path, encoding="utf-8") as c:
             cache_dict = json.load(c)
@@ -425,7 +442,8 @@ def get_dereko_matches(inputs: list[str]) -> dict:
 
     if uncached_entries:
 
-        for inp in tqdm(uncached_entries, desc="Fetching uncached matches from KorAP"):
+        _tqdm = tqdm if not from_nb else tqdm_notebook
+        for inp in _tqdm(uncached_entries, desc="Fetching uncached matches from KorAP"):
 
             match_dict = _get_dereko_matches(inp)
 
