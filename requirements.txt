@@ -2,6 +2,9 @@ aiohttp==3.13.5
 bs4==0.0.2
 germanetpy==0.2.5
 ipapy==0.0.9.0
+iprogress==0.4
+ipywidgets==8.1.8
+jupyter==1.1.1
 matplotlib==3.10.8
 pandas==3.0.2
 phonecodes==2.0.0
