@@ -87,7 +87,7 @@ def main():
             linker.adds_umlaut and
             not comp.lemma.startswith(comp.stems[0].morph)
         )
-        return linker, umlaut_applied
+        return linker.gecodb, umlaut_applied
     
     gecodb_v07["linker"], gecodb_v07["umlaut_applied"] = zip(
         *gecodb_v07.apply(
@@ -96,14 +96,46 @@ def main():
         )
     )
 
+    # to investigate the effect of the umlaut on
+    # plural effect, we disambugate between -"er- and -er-
+    er_numl = gecodb_v07[
+        (gecodb_v07["linker"] == "_+=er_") &
+        ~(gecodb_v07["umlaut_applied"])
+    ]
+    gecodb_v07.loc[er_numl.index, "linker"] = "_+er_"
+
+    # identify whether the linker is pluralic;
+    # because of cases like 'Sternenwiese'
+    # or 'Mausefalle', we cannot simply check
+    # if the linker is in the list of all pluralic linkers
+    def is_pll(gecodb: str) -> bool:
+        comp = Compound(gecodb)
+        n1 = comp.stems[0]
+        expected_pl = celex.loc[n1.morph]["nom_pl"]
+        # linker + maybe umlaut
+        maybe_pl = n1.allomorph + comp.linkers[0].allomorph
+        return expected_pl == maybe_pl
+    
+    gecodb_v07["is_pll"] = gecodb_v07.index.map(is_pll)
+
 
     # 5. Minor modifications of GeCoDB_v07.
 
-    gecodb_v07[~gecodb_v07.index.duplicated(keep="first")]
+    # remove possible toponyms (N=4227)
+    toponym_n2s = [
+        "straße", "gasse", "weg", "allee", "platz",
+        "dorf", "burg", "berg", "hof", "eck", "stein"
+    ]
+    gecodb_v07 = gecodb_v07[~gecodb_v07["n2_lemma"].isin(toponym_n2s)]
+
+    # remove duplicates (N=1)
+    gecodb_v07 = gecodb_v07[~gecodb_v07.index.duplicated(keep="first")]
+
+    # sort columns
     gecodb_v07 = gecodb_v07[[
         "comp_lemma", "comp_freq",
         "n1_lemma", "n1_freq", "n1_prod", # "n1_mass_freq",
-        "linker", "umlaut_applied",
+        "linker", "is_pll", "umlaut_applied",
         "n2_lemma", "n2_freq"
     ]]
 
@@ -118,7 +150,7 @@ def main():
         header=True
     )
 
-    # (N=281588, deleted N=1178, deleted duplicate=1)
+    # (N=277361, deleted N=5406 (not in GermaNet N=1178, duplicate N=1, toponyms N=4227))
     gecodb_v07.to_csv(
         os.path.join(outdir, "gecodb_v07.tsv"),
         sep="\t",
