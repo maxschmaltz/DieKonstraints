@@ -104,20 +104,30 @@ def main():
     ]
     gecodb_v07.loc[er_numl.index, "linker"] = "_+er_"
 
-    # identify whether the linker is pluralic;
-    # because of cases like 'Sternenwiese'
-    # or 'Mausefalle', we cannot simply check
-    # if the linker is in the list of all pluralic linkers
+    # identify whether the linker is pluralic
     def is_pll(gecodb: str) -> bool:
         comp = Compound(gecodb)
+        linker = comp.linkers[0]
+        # exclude 0 and -s-
+        if not linker.gecodb in [
+            "_+n_", "_+en_",
+            "_+e_", "_+=e_",
+            "_+=_",
+            "_+er_", "_+=er_"
+        ]:
+            return False
+        # because of cases like 'Sternenwiese'
+        # or 'Mausefalle', we cannot simply check
+        # if the linker is in the list of all pluralic linkers,
+        # so we retrieve the Pl form of N1 instead
         n1 = comp.stems[0]
         expected_pl = celex.loc[n1.morph]["nom_pl"]
-        if not isinstance(expected_pl, str):
+        if pd.isna(expected_pl):
             # no Pl form
             return False
         expected_pls = expected_pl.split("/")
         # linker + maybe umlaut
-        maybe_pl = n1.allomorph + comp.linkers[0].allomorph
+        maybe_pl = n1.allomorph + linker.allomorph
         # account for several Pl form variants
         return any(maybe_pl in expected_pl for expected_pl in expected_pls)
     
