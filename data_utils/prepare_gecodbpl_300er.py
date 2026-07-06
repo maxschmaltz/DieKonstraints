@@ -16,7 +16,7 @@ def main():
     # ...
     
     # load prepared GeCoDB
-    # (N=2100)
+    # (N=1948)
     gecodb_v07pl = pd.read_csv(
         os.path.join(datadir, "gecodb_v07pl_300er_sample.tsv"),
         sep="\t",
