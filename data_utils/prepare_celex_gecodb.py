@@ -112,9 +112,14 @@ def main():
         comp = Compound(gecodb)
         n1 = comp.stems[0]
         expected_pl = celex.loc[n1.morph]["nom_pl"]
+        if not isinstance(expected_pl, str):
+            # no Pl form
+            return False
+        expected_pls = expected_pl.split("/")
         # linker + maybe umlaut
         maybe_pl = n1.allomorph + comp.linkers[0].allomorph
-        return expected_pl == maybe_pl
+        # account for several Pl form variants
+        return any(maybe_pl in expected_pl for expected_pl in expected_pls)
     
     gecodb_v07["is_pll"] = gecodb_v07.index.map(is_pll)
 
