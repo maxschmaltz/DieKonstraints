@@ -465,4 +465,7 @@ def get_dereko_matches(
         with open(cache_path, "w", encoding="utf-8") as c:
             json.dump(cache_dict, c, indent=4, ensure_ascii=False)
 
-    return cache_dict
+    return {
+        k: v for k, v in cache_dict.items()
+        if k in inputs
+    }
