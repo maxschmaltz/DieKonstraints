@@ -1,6 +1,6 @@
-# The Status of Linguistic Constraints in Neural Language Models
+# DFG Proposal: The Status of Linguistic Constraints in Neural Language Models
 
-> DFG Proposal. August 2025 - Sep 2025
+> August 2025 - September 2025
 
 Proposal to the [LaSTing priority program of the DFG](https://www.dfg.de/de/aktuelles/neuigkeiten-themen/info-wissenschaft/2025/ifw-25-32). The public version only contains the abstract of the proposal and the references.
 
