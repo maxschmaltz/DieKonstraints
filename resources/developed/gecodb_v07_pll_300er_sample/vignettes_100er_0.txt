@@ -1,9 +1,9 @@
 Beginnzeit: 15:15
 
 Konkrete (physische) vs. abstrakte (geistliche) Lesungen?
-Weg 'Pfad', 'Straße' ('Wegplatte') vs Weg 'Fahrt' ('Wegbier')
+Weg 'Pfad, Straße' ('Wegplatte') vs Weg 'Fahrt' ('Wegbier')
 Buch 'Band' ('Bücherregal') vs Buch 'Werk' ('Buchklub')
-Gast 'Besucher' ('Gästebuch') vs Gast '~Status' ('Gasthaus')
+Gast 'Besucher' ('Gästebuch') vs Gast ~'Status' ('Gasthaus')
 
 Was mit Bezeichnungen von Objekten, die keine Physische Gestaltung haben können?
 'Lied', 'Schuld', 'Melodie'
