@@ -1,6 +1,6 @@
 # Constraints on Linking Element Choice in German Nominal Compounding: A Large-Scale Corpus Study
 
-> Compounding Constraints. Corpus Study. November 2025 - May 2026
+> November 2025 - May 2026
 
 Paper for the [SLiDE Workshop](https://www.slide-workshop.org) @ [LREC26](https://lrec2026.info).
 
