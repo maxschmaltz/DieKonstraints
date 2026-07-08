@@ -1,12 +1,22 @@
 Beginnzeit: 15:15
+Endzeit: 17:30
 
 Konkrete (physische) vs. abstrakte (geistliche) Lesungen?
-Weg 'Pfad, Straße' ('Wegplatte') vs Weg 'Fahrt' ('Wegbier')
-Buch 'Band' ('Bücherregal') vs Buch 'Werk' ('Buchklub')
-Gast 'Besucher' ('Gästebuch') vs Gast ~'Status' ('Gasthaus')
+Weg 'Pfad, Straße' ('Wegplatte') vs. Weg 'Fahrt' ('Wegbier')
+Buch 'Band' ('Bücherregal') vs. Buch 'Werk' ('Buchklub')
+Gast 'Besucher' ('Gästebuch') vs. Gast ~'Status' ('Gasthaus')
+Bild 'Tafel mit einer Darstellung' ('Bildersammlung') vs. Bild 'Darstellung' ('Bilderkarte')
 
 Was mit Bezeichnungen von Objekten, die keine Physische Gestaltung haben können?
 'Lied', 'Schuld', 'Melodie'
+
+Auch was mit Handlungen in Pl?
+'Probe(n)', 'Abgabe(n)'
+
+TODO:
+* Zusätzlich konkrete/abstrakte Lesung annotieren.
+* Separater Feld für Fehlererklärung.
+
 
 
 # 80: Buchvorhaben
@@ -1008,5 +1018,3 @@ Kontext 3: ... Arzt in dieser Situation knappe Termine bevorzugt an eine Patient
 
 ========================================
 
-
-Endzeit: 17:30
