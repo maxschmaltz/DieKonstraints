@@ -646,7 +646,6 @@ weg_platte	Wegplatte	195	weg	5133691	316	_	False	False	platte	264291	2	8	7	2-8-7
 weg_benutzer	Wegbenutzer	30	weg	5133691	316	_	False	False	benutzer	36990	1	8	7	1-8-7	0.029287842976055904
 weg_bereitung	Wegbereitung	196	weg	5133691	316	_	False	False	bereitung	659	2	8	7	2-8-7	0.015620182920563148
 weg_+e_infrastruktur	Wegeinfrastruktur	74	weg	5133691	316	_+e_	True	False	infrastruktur	434591	1	8	7	1-8-7	0.029287842976055904
-weg_horn	Weghorn	1278	weg	5133691	316	_	False	False	horn	235336	3	8	7	3-8-7	0.007912855821601068
 weg_+e_findung	Wegefindung	25	weg	5133691	316	_+e_	True	False	findung	3482	1	8	7	1-8-7	0.029287842976055904
 weg_+e_patenschaft	Wegepatenschaft	37	weg	5133691	316	_+e_	True	False	patenschaft	63381	1	8	7	1-8-7	0.029287842976055904
 weg_+e_marke	Wegemarke	180	weg	5133691	316	_+e_	True	False	marke	663106	2	8	7	2-8-7	0.015620182920563148
@@ -1107,7 +1106,6 @@ gast_+=e_zuschauer	Gästezuschauer	80	gast	4687625	464	_+=e_	True	True	zuschauer
 gast_lesung	Gastlesung	25	gast	4687625	464	_	False	False	lesung	419567	1	8	8	1-8-8	0.08046449491316411
 gast_+=e_zufriedenheit	Gästezufriedenheit	440	gast	4687625	464	_+=e_	True	True	zufriedenheit	96170	3	8	8	3-8-8	0.02620491213647107
 gast_+=e_treff	Gästetreff	33	gast	4687625	464	_+=e_	True	True	treff	195146	1	8	8	1-8-8	0.08046449491316411
-maus_+=e_vater	Mäusevater	25	maus	201112	154	_+=e_	True	True	vater	2240091	1	5	6	1-5-6	0.03473435412598911
 gast_+=e_verteidigung	Gästeverteidigung	79	gast	4687625	464	_+=e_	True	True	verteidigung	247925	1	8	8	1-8-8	0.08046449491316411
 gast_+=e_gebühr	Gästegebühr	20	gast	4687625	464	_+=e_	True	True	gebühr	452041	1	8	8	1-8-8	0.08046449491316411
 gast_+=e_möglichkeit	Gästemöglichkeit	85	gast	4687625	464	_+=e_	True	True	möglichkeit	2735995	2	8	8	2-8-8	0.05025177268523276
@@ -1265,7 +1263,6 @@ vater_thema	Vaterthema	23	vater	2240091	98	_	False	False	thema	5161685	1	7	5	1-7
 vater_generation	Vatergeneration	51	vater	2240091	98	_	False	False	generation	959451	1	7	5	1-7-5	0.009762614325351969
 vater_dasein	Vaterdasein	60	vater	2240091	98	_	False	False	dasein	71616	1	7	5	1-7-5	0.009762614325351969
 vater_geschichte	Vatergeschichte	60	vater	2240091	98	_	False	False	geschichte	3706026	1	7	5	1-7-5	0.009762614325351969
-vater_spur	Vaterspur	39	vater	2240091	98	_	False	False	spur	487330	1	7	5	1-7-5	0.009762614325351969
 vater_schutz	Vaterschutz	27	vater	2240091	98	_	False	False	schutz	817033	1	7	5	1-7-5	0.009762614325351969
 vater_+=_forscher	Väterforscher	36	vater	2240091	98	_+=_	True	True	forscher	650475	1	7	5	1-7-5	0.009762614325351969
 vater_+=_welt	Väterwelt	30	vater	2240091	98	_+=_	True	True	welt	4916103	1	7	5	1-7-5	0.009762614325351969
@@ -1717,7 +1714,6 @@ gott_+es_lamm	Gotteslamm	85	gott	973846	257	_+es_	False	False	lamm	57976	2	6	7	2
 gut_+=er_transporteur	Gütertransporteur	50	gut	425955	153	_+=er_	True	True	transporteur	4273	1	6	6	1-6-6	0.04254444558627068
 buch_karte	Buchkarte	34	buch	2731652	603	_	False	False	karte	1723659	1	8	8	1-8-8	0.08046449491316411
 buch_stoff	Buchstoff	21	buch	2731652	603	_	False	False	stoff	443913	1	8	8	1-8-8	0.08046449491316411
-gut_+s_kirche	Gutskirche	106	gut	425955	153	_+s_	False	False	kirche	2553981	2	6	6	2-6-6	0.023841331826122702
 buch_+=er_schlange	Bücherschlange	20	buch	2731652	603	_+=er_	True	True	schlange	215876	1	8	8	1-8-8	0.08046449491316411
 buch_+=er_jagd	Bücherjagd	58	buch	2731652	603	_+=er_	True	True	jagd	206012	1	8	8	1-8-8	0.08046449491316411
 buch_kritiker	Buchkritiker	144	buch	2731652	603	_	False	False	kritiker	469219	2	8	8	2-8-8	0.05025177268523276
@@ -1738,7 +1734,6 @@ buch_+=er_mann	Büchermann	39	buch	2731652	603	_+=er_	True	True	mann	8392866	1	8
 buch_zeichen	Buchzeichen	118	buch	2731652	603	_	False	False	zeichen	867844	2	8	8	2-8-8	0.05025177268523276
 buch_stab	Buchstab	143	buch	2731652	603	_	False	False	stab	63599	2	8	8	2-8-8	0.05025177268523276
 buch_+=er_tüte	Büchertüte	42	buch	2731652	603	_+=er_	True	True	tüte	103256	1	8	8	1-8-8	0.08046449491316411
-buch_mühle	Buchmühle	23	buch	2731652	603	_	False	False	mühle	248547	1	8	8	1-8-8	0.08046449491316411
 gott_+=er_getränk	Göttergetränk	27	gott	973846	257	_+=er_	True	True	getränk	422887	1	6	7	1-6-7	0.05210153118898366
 gott_+es_macht	Gottesmacht	21	gott	973846	257	_+es_	False	False	macht	895827	1	6	7	1-6-7	0.05210153118898366
 buch_mal	Buchmal	27	buch	2731652	603	_	False	False	mal	4192978	1	8	8	1-8-8	0.08046449491316411
@@ -1854,7 +1849,6 @@ buch_+=er_zeit	Bücherzeit	102	buch	2731652	603	_+=er_	True	True	zeit	10557899	2
 buch_fassung	Buchfassung	295	buch	2731652	603	_	False	False	fassung	145870	2	8	8	2-8-8	0.05025177268523276
 buch_kontor	Buchkontor	25	buch	2731652	603	_	False	False	kontor	12677	1	8	8	1-8-8	0.08046449491316411
 buch_+=er_katalog	Bücherkatalog	37	buch	2731652	603	_+=er_	True	True	katalog	174318	1	8	8	1-8-8	0.08046449491316411
-buch_horn	Buchhorn	1779	buch	2731652	603	_	False	False	horn	235336	4	8	8	4-8-8	0.011612372829102867
 buch_+=er_menge	Büchermenge	40	buch	2731652	603	_+=er_	True	True	menge	1198791	1	8	8	1-8-8	0.08046449491316411
 buch_sparte	Buchsparte	327	buch	2731652	603	_	False	False	sparte	197467	2	8	8	2-8-8	0.05025177268523276
 gott_könig	Gottkönig	838	gott	973846	257	_	False	False	könig	838289	3	6	7	3-6-7	0.0128455451649368
@@ -1884,7 +1878,6 @@ buch_+=er_wagen	Bücherwagen	330	buch	2731652	603	_+=er_	True	True	wagen	837654	
 buch_+=er_produktion	Bücherproduktion	41	buch	2731652	603	_+=er_	True	True	produktion	752050	1	8	8	1-8-8	0.08046449491316411
 buch_wahl	Buchwahl	35	buch	2731652	603	_	False	False	wahl	2153643	1	8	8	1-8-8	0.08046449491316411
 buch_kalender	Buchkalender	151	buch	2731652	603	_	False	False	kalender	185613	2	8	8	2-8-8	0.05025177268523276
-gott_wein	Gottwein	38	gott	973846	257	_	False	False	wein	656636	1	6	7	1-6-7	0.05210153118898366
 buch_+=er_forum	Bücherforum	167	buch	2731652	603	_+=er_	True	True	forum	388597	2	8	8	2-8-8	0.05025177268523276
 buch_landschaft	Buchlandschaft	95	buch	2731652	603	_	False	False	landschaft	503653	2	8	8	2-8-8	0.05025177268523276
 gut_+s_verkauf	Gutsverkauf	23	gut	425955	153	_+s_	False	False	verkauf	967700	1	6	6	1-6-6	0.04254444558627068
