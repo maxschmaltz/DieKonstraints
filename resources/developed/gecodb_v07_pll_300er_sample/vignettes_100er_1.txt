@@ -1,4 +1,55 @@
 Beginnzeit: 14:15
+Endzeit: 18:00 (mit Ablenkungen, unvollendet)
+
+Ich habe bei der Annotation gemerkt, wie mich Plural-/Singularfugen dazu gedrängt haben, eine dementsprechende Interpretation zu bevorzugen:
+'Väterarbeit' als Pl (beim 'Vaterarbeit' hätte ich Sg gewählt)
+'Buchhandlung' als generisch (beim 'Bücherhandlung' hätte ich Pl gewählt)
+'Schuldenproblematik' als Pl (beim 'Schuldproblematik' hätte ich vllt generisch gewählt)
+'Vaterkonflikt' asl generisch (beim 'Väterkonflikt' hätte ich vllt Pl gewählt)
+
+So ein Effekt entspricht den Befunden von Schäfer & Pankratz 2018 (Split 100 Experiment) und Schreuder et al. 1998 und kann dementsprechend die Annotationsergebnisse beeinflussen. Das Effekt kann zu False Positives ('Bilderkarte' als Pl) oder False Negatives ('Buchladen' als Sg) führen. Un den Einfluss zu entfernen, könnte die Fuge durch einen '+' oder Änliches ersetzt werden.
+
+Andererseits gibt es Fälle, wo eine "erzwungene" Mehrzahlbedeutung durch die Pluralfuge erzeugt wird, wo es ansonsten eine Singularbedeutung zu erwarten wäre oder zumindest sein könnte:
+'Väterförderung', 'Motorenlieferung'
+
+Da sich in diesen Fällen die Mehrzahlbedeutung nur durch die Fuge ausgedrückt wird, würde so eine Tilgung eine Singularinterpretation drängen, was auch zu False Negatives ('Motor+lieferung' als Sg) führen würde.
+
+Ersatz oder Nichtersatz der Pluralfuge würde also einfach zur Wahl zwischen der zwei Typen False Negatives/Positives hinauslaufen; Beide können wir nicht loswerden. Die Pluralität muss also auf jeden Fall aus dem Kontext festgestellt werden. Eine False Positive mir der Plural-/Singularfuge kann ganz simpel aufgehoben werden: Bei der 'Buchhandlung' werden es ja mehrere Bücher gehandelt. 
+Die "erzwungene" Pluralbedeutung kann auch manchmal aus dem Kontext ohne Pluralfuge nachvollziehbar sein:
+'Väterförderung': ... Wir brauchen einen Wandel von der Frauenförderung hin zur Mütter- und Vater+förderung ...
+'Motorenlieferung': ... Motor+lieferungen für künftige Rolls-Royce und Bentley- Modelle ...
+
+
+Es wurde eine distributive Pluralbedeutung formuliert. Es ist also eine Bedeutung, bei der das durch das Zweitglied bezeichnete Objekt gleichzeitig einer Gruppe Objekte verwantd ist, das durch das Erstglied bezeichnet wird. Die Bedeutung ist insofern distributiv, dass das Zweitglieder-Objekt zugleich jedem einzelnen Erstglieder-Objekt (also Singularbedeutung) und der ganzer Gruppe (also Pluralbedeutung) verwandt ist, sodass es eigentlich pragmatisch mehrere Instanzen Zweitglieder-Objekte gemeint werden:
+'Mäusegen': Ein Gen, dass in den Mäusen zu finden ist, d.h. ein Gen, dass jede Maus hat. Maüsegen ist daher mehrere Gene, die in jedem Maus stecken.
+'Väterarbeit': Eine Arbeit, die jeder Vater bzw. alle Väter annehmen. Väterarbeit sind mehrere Vorgänge der Arbeit, die von jedem Vater ausgeübt werden.
+
+Im Gegensatz, werden bei anderen Komposita ein oder mehrere Erstglieder-Objekte nur einem Erstglieder-Objekt zugehörig:
+'Bilderkarte': Eine Karte mit einem (oder mehreren) Bilder. Bilderkarte ist eine einzige Karte, nicht jeder der Bilder aus der Bilderkarte hat eine Karte.
+'Bäderwirtschaft': Eine Wirtschaft, die für ein Bad (oder mehrere Bäder) verantwortlich ist. Die Bäder sind alle nur einer Wirtschaft untergeordnet.
+
+
+Konkrete Lesung bleibt bei der Massen unterspezifiziert:
+'Kohle'
+
+Konkrete Lesung ist auch manchmal schwer zu unterscheiden:
+'Mauskostüm', 'Brüderkuss', 'Buchklub', 'Gästeklub'
+
+Es kommt auch eine metaphorische Bedeutung vor:
+'Eierkohle': Kohle in einer Form des Eis
+'Schwesterbild': Ein Bild, die einem anderen Bild verwandt ist
+
+Obwohl die Erstglieder mit einer konkreten Lesung häufiger generische/metaphorische Bedeutung haben, gibt es keine starke Abhängigkeit zwischen konkret sein und Pluralität:
+'Schuldenproblematik', 'Brüderkuss' -- unkonkret, Pl
+'Kohlebefeuerung' -- konkret, generisch/metaphorisch
+
+Die Indikation von konkreter oder unkonkreter Lesung scheint daher schwierig, subjektiv, und am wichtigsten irrelevant zu sein.
+
+TODO:
+* Indikation von (un)konkreter Lesung entfernen.
+* Distribution von Komposita mit jedem Erstglied zu untersuchen.
+* Einschätzen, ob man die distributive Bedeutung häufig begegnet.
+
 
 
 # 1821: Geistesleben
@@ -99,8 +150,8 @@ Kontext 3: ... des Geschreis hieß der Raum Kreißsaal, von dem alten Wort für 
 
 # 1182: Wertgemeinschaft
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -115,8 +166,8 @@ Kontext 3: ... immer mehr um sich greift. Das moralische Fundament unseres Gemei
 
 # 1507: Badkultur
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -131,8 +182,8 @@ Kontext 3: ... Hölzmann & Vrbanatz Bäder zum Wohlfühlen Die Badkultur in der 
 
 # 1912: Geschenkkultur
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -147,8 +198,8 @@ Kontext 3: ... Ausgewählte und reich verzierte Andenkenstücke aus Porzellan un
 
 # 598: Bäderwirtschaft
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein [x]		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -163,8 +214,8 @@ Kontext 3: ... Steinbach zur - Bäderspitze? BAD NEUENAHR. Ein Bad Neuenahrer so
 
 # 1705: Väterförderung
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -179,8 +230,8 @@ Kontext 3: ... die Arbeitgeber unter ihren Möglichkeiten", sagte Peter Ruhenstr
 
 # 1399: Wegpate
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -195,8 +246,8 @@ Kontext 3: ... machte das Kreuz bei der Jesusbruderschaft in Hünfelden-Gnadenth
 
 # 236: Motorenlieferung
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -211,8 +262,8 @@ Kontext 3: ... stolz darauf, dass BMW als erster Hersteller der Neuzeit an seine
 
 # 817: Gastklub
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -227,8 +278,8 @@ Kontext 3: ... Sportfest endet mit Tod eines 16-Jährigen Ausrichter und Gastklu
 
 # 404: Vaterkonflikt
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -243,8 +294,8 @@ Kontext 3: ... Zeitung spricht der 75-jährige Büchnerpreisträger über 1968 u
 
 # 1707: Bildingenieur
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt [x]		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -259,8 +310,8 @@ Kontext 3: ... sondern hätte Vergnügungssteuer zahlen müssen“, sagt Walter 
 
 # 1511: Gottesgesetz
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -275,8 +326,8 @@ Kontext 3: ... zu dem Fall "Sultana" geäußert und hofft, dass mit einer breite
 
 # 1420: Bilderproduktion
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -291,8 +342,8 @@ Kontext 3: ... Zeitbild voller Gegenwartsspannungen präsentieren. "Erzählungen
 
 # 655: Bücherjagd
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -307,8 +358,8 @@ Kontext 3: ... ein gefundenes Buch vom Finder registriert wird und man seinen We
 
 # 15: Mauskostüm
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein [x]		Vllt []		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -326,7 +377,7 @@ Kontext 3: ... die "Kinder" brauchen auch Namen. "Das ist eine Aufgabe, die eine
 Konkrete Lesung:		Ja []		Nein []
 Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
-Bemerkung: ggf. hier einfügen
+Bemerkung: unklar
 
 Kontext 1: ... Kreistage KH und BIR beschäftigten sich mit dem Thema Tourismus Kirn. Es war eine historische Sitzung: Über die künftige Strategie am umkämpften Gästemarkt berieten die beiden Kreistage Bad Kreuznach und Birkenfeld um Landrätin Bettina Dickes und ihren Amtskollegen Matthias Schneider (rechts) am Montagabend im Kirner Gesellschaftshaus: Die „Zukunft des Tourismus im Naheland“ stand ...
 
@@ -339,8 +390,8 @@ Kontext 3: ... ein gutes Verhältnis. Daraus ergibt sich ihre Kooperationsbereit
 
 # 1886: Juniorennadel
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -355,8 +406,8 @@ Kontext 3: ... des Verbandes, bei der Verleihung der Ehrennadel. Kuch sei es zu 
 
 # 133: Kohlebefeuerung
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -373,7 +424,7 @@ Kontext 3: ... Zu diesen könnte auch das Kohlekraftwerk Schkopau in Sachsen-Anh
 
 Konkrete Lesung:		Ja []		Nein []
 Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
-Fehler: ggf. hier erklären
+Fehler: Name eines Theaterstücks
 Bemerkung: ggf. hier einfügen
 
 Kontext 1: ... der Oeffentlichkeit vorzustellen. Zum Auftakt ist am Sonnabend um 19 Uhr eine Aufführung des Oberstufen-Theaters in der Theaterscheune der Waldorfschule in der Gutsstraße 4 zu sehen. Gespielt wird das Stück "Geistermeister". ...
@@ -390,7 +441,7 @@ Kontext 3: ... Testspiel-Charakter. „Es war komisch in der leeren Halle, aber 
 Konkrete Lesung:		Ja []		Nein []
 Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
-Bemerkung: ggf. hier einfügen
+Bemerkung: nicht verstanden
 
 Kontext 1: ... Mönche nicht in Parteipolitik verwickelt sein, die Institutionen von Religion und Politik vollständig getrennt werden. Wichtig ist, dass es Meinungsfreiheit gibt, eine Herrschaft des Gesetzes, Rechtssicherheit."  Geht das überhaupt, das Gottkönigtum an der Garderobe ablegen wie einen Mantel, den man nicht mehr braucht? Werden das die Tibeter akzeptieren? In der Volksrepublik China feiern Buddhismus, Konfuzianismus und Daoismus gerade eine erstaunliche, staatlich ...
 
@@ -403,8 +454,8 @@ Kontext 3: ... ihren Nachbarn anzuzetteln. Ringsum brandeten mörderische lokale
 
 # 495: Schuldforderung
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt [x]		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -419,8 +470,8 @@ Kontext 3: ... Geringe Sicherheit Genussrechte sind eine Beteiligungsform, die E
 
 # 86: Mitgliederwerber
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -435,8 +486,8 @@ Kontext 3: ... Spenden Scharfes Schwert Manches karitative Hilfswerk hilft sich 
 
 # 944: Mäuseweibchen
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein [x]		Vllt []		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -451,8 +502,8 @@ Kontext 3: ... dar: Im Jahr 2012, als Hayashi gemeinsam mit seinen Kollegen scho
 
 # 813: Buchpatin
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt [x]		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -467,8 +518,8 @@ Kontext 3: ... im Vorfeld der Reformation. Sie gehören zum schützenswerten kul
 
 # 1566: Gottesbekenntnis
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein [x]		Vllt []		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -483,8 +534,8 @@ Kontext 3: ... doch flehende Bitte um Gottes Zuwendung im Kyrie: das jubelnde Go
 
 # 1737: Bildgeber
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt [x]		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -499,8 +550,8 @@ Kontext 3: ... Das Hotel „Oranienhof“ war Sitz des deutschen Generalstabes v
 
 # 814: Gästehäuschen
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -515,8 +566,8 @@ Kontext 3: ... Hannelore Gilsenbach ganz alleine, mit Hund, Katzen und einigen B
 
 # 1714: Bücheroase
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -533,7 +584,7 @@ Kontext 3: ... im Amerikahaus, 0911/230690. Sabine Weigand liest am Donnerstag, 
 
 Konkrete Lesung:		Ja []		Nein []
 Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
-Fehler: ggf. hier erklären
+Fehler: Eigenname
 Bemerkung: ggf. hier einfügen
 
 Kontext 1: ... um Adressen von Glauchauer Fliegern. Und schon kurze Zeit später wurde der erste gemeinsame Ausflug von Bürstädter und Glauchauer Fliegern Wirklichkeit. In Riesa trafen die Südhessen Constanze und Bernd von Hünefeld von der Glauchauer Fliegergemeinde. Wie unter Fliegern üblich, hatte man sich viel zu erzählen, viel zu lachen und die Stunden vergingen wie im Fluge – und natürlich wurde zum Gegenbesuch eingeladen ...
@@ -547,8 +598,8 @@ Kontext 3: ... auch Rock- n -Roll-Größen wie Jimi Hendrix, Fats Domino, Chuck 
 
 # 400: Brüderkuss
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -563,8 +614,8 @@ Kontext 3: ... Sprunghaftigkeit; insbesondere nervte ihn die dudelnde Klassik- M
 
 # 940: Bücherklub
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -579,8 +630,8 @@ Kontext 3: ... mitten im Raum, und im Bücherregal verstauben ungelesene Romane 
 
 # 609: Bildbestellung
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt [x]		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -595,8 +646,8 @@ Kontext 3: ... auf dem Tisch. JÜRGEN SCRIBA  Hardware - http://www.spiegel.de/c
 
 # 767: Einnahmeerhöhung
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -611,7 +662,7 @@ Kontext 3: ... des Landes zu erhöhen und damit Deckungslücken im Haushalt zu s
 
 # 1558: Geisterstädtchen
 
-Konkrete Lesung:		Ja []		Nein []
+Konkrete Lesung:		Ja [x]		Nein []
 Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
@@ -627,8 +678,8 @@ Kontext 3: ... Gefängnis in Brasilien Auf der Insel der Verdammten Einst befand
 
 # 191: Väterforschung
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -643,8 +694,8 @@ Kontext 3: ... Institut Français zu radeln. Mit mir sitzen vier weitere potenti
 
 # 1614: Buchherausgeber
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -659,8 +710,8 @@ Kontext 3: ... in sein Buch übernommen. Mit den Vorwürfen konfrontiert, entsch
 
 # 405: Gästekapitän
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -675,8 +726,8 @@ Kontext 3: ... aber neben das Tor ging (33.). Templin suchte immer wieder Lücke
 
 # 519: Strahlenbombardement
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -691,8 +742,8 @@ Kontext 3: ... Atmosphäre bis zum Erdboden dringen kann, bleiben die energierei
 
 # 1167: Anlagenbetreuung
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja [x]		Nein []
+Pluralbedeutung:		Nein []		Vllt [x]		Ja []		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -707,8 +758,8 @@ Kontext 3: ... einen Platz für sie gefunden, an dem diese Stärken am Besten zu
 
 # 965: Aschegefäß
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -725,7 +776,7 @@ Kontext 3: ... sind alle Leistungen enthalten, auch die Steinmetzarbeiten für d
 
 Konkrete Lesung:		Ja []		Nein []
 Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
-Fehler: ggf. hier erklären
+Fehler: Derivation
 Bemerkung: ggf. hier einfügen
 
 Kontext 1: ... absurd. Man muss eben immer genau hinschauen.“ Genau hinschauen – das haben sich inzwischen auch viele katholische Internate auf die Fahnen geschrieben. Gerade sie können es sich nicht mehr leisten, als „Wegschauer“ zu gelten. Kaum ein katholisches Internat, das derzeit nicht auf seiner Homepage auf das Thema sexuelle Gewalt hinweist. Viele Internatsleiter haben mittlerweile eine vom Verband katholischer Internatsleiter organisierte Fortbildung zum ...
@@ -739,8 +790,8 @@ Kontext 3: ... ist man tatsächlich auf einen repräsentativen Schauplatz angewi
 
 # 1178: Gästeklub
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja [x]		unzutreffend []
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
@@ -757,7 +808,7 @@ Kontext 3: ... die Polizei nach Ausschreitungen am Rande des First-Division-Spie
 
 Konkrete Lesung:		Ja []		Nein []
 Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
-Fehler: ggf. hier erklären
+Fehler: Eigenname
 Bemerkung: ggf. hier einfügen
 
 Kontext 1: ... Die offizielle Auflösung des komplizierten Falles ist so unglaublich einfach wie schön: Die Erben eines Schweizer Sammlers haben demnach das Cranach-Gemälde der Diözese St. Gallen geschenkt, die es wiederum der Bruderkirche in Breslau übergab. Den Namen des im vergangenen Jahr verstorbenen Besitzers schütze, so der Sprecher der Diözese, "die Seelsorgepflicht". Einstweilen kann nur angenommen werden, dass die Madonna, die sich seit ...
@@ -771,8 +822,8 @@ Kontext 3: ... das Bild von verschiedenen Kunsthändlern auf dem grauen Markt an
 
 # 1160: Spurbiene
 
-Konkrete Lesung:		Ja []		Nein []
-Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend []
+Konkrete Lesung:		Ja []		Nein [x]
+Pluralbedeutung:		Nein []		Vllt []		Ja []		unzutreffend [x]
 Fehler: ggf. hier erklären
 Bemerkung: ggf. hier einfügen
 
