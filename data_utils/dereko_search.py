@@ -448,7 +448,7 @@ def get_dereko_matches(
             match_dict = _get_dereko_matches(inp)
 
             if match_dict is None:
-                print("Aborting frequency retrieval due to an error with KorAP API.")
+                print("Aborting matches retrieval due to an error with KorAP API.")
                 # this will lead to an error when fetching all matches,
                 # which is the desired behavior here
                 # since the recommendation from IDS Mannheim support team
