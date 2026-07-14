@@ -1,18 +1,3 @@
-# 1: Bildriss
-
-Pluralbedeutung:		Nein []		Ja []		Unbestimmt []		Unzählbar []
-Falls Fehler (bitte Bemerkung einfügen): []
-Bemerkung: ggf. hier einfügen
-
-Kontext 1: ... der roten Dichter – 96 zum Mitreden. 22.30 Uhr: 0511/tv.lokal (Wdh. von 18.45 Uhr). 22.45 Uhr: Voll und daneben – ein Kurzspielfilm von und mit Jugendtheater Maximal. 23.15 Uhr: Pareh Taswir/Bildriss – Persisch-deutsche Sendung. 23.45 Uhr: 0511/tv.lokal (Wdh. von 18.45 Uhr). ...
-
-Kontext 2: ... aus Hannover. 19 Uhr: blickpunkt masala. 19.30 Uhr: Leben und pflegen. Heute: Ein Herz setzt aus. 20 Uhr: Sie haben die Wahl! Polit-Talk zur Landtagswahl 2013. 20.30 Uhr: Pareh Taswir/Bildriss – Persisch-deutsche Sendung. 21 Uhr: blickpunkt masala (Wdh.).21.30 Uhr: Leben und pflegen. Heute: Ein Herz setzt aus (Wdh.). 22 Uhr: 0511/ tv.lokal – Das tägliche Magazin aus Hannover (Wdh.).22.15 ...
-
-Kontext 3: ... Offene Kanäle h1 15.30 Uhr: Lesung mit Freda Wolff: Nichts ist kälter als der Tod Teil 1. 16.30 Uhr: Pareh Taswir/Bildriss. 17 Uhr: Budder bei die Fische: "Du riechst so himmlisch - Ich finde, du stinkst!" Zu Gast: Marcel Kein, Parfümeur. 17.45 Uhr: Tierheim TV. 18.45 Uhr: 0511/tv.lokal. 19 Uhr: Lesung ...
-
-========================================
-
-
 # 2: Kohlemann
 
 Pluralbedeutung:		Nein []		Ja []		Unbestimmt []		Unzählbar []
