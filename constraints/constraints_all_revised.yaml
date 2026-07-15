@@ -83,6 +83,8 @@ readme: |
     * Revise application items for semantic constraints (such as N1+N2 for plural effect constraints).
     * Revise application items for pluralic constraints. Scratch the N1+N2 item. Since N1 item is underspecified for the pluralic constraints, and N1+N2 item is not accurate because the semantics of N1 is self-contained, we introduce N1+sem item for pluralic constraints. That means that N1 in its Sg meaning and N1 in its Pl meaning are two different application items for the pluralic constraints.
     * Mark the pluralic constraints explicitly with `is_pluralic: true` property.
+    * Mark datasets and the number of application items specifically in this dataset explicitly with `datasets_n_appl_items` property.
+    * Set coverage to 0.0 in `p2l:drv:sfx:F_#in$-en`.
 
 
 
@@ -532,18 +534,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [default]
         is_pluralic: false
+        
         appl_item: compound
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: def_0
 
         quantifier: majority
-        coverage:
-            item: 1.0
-            type: 1.0
-        regularity:
-            item: 0.578
-            type: 0.578
+        measures:
+            gecodb:
+                coverage:
+                    item: 1.0
+                    type: 1.0
+                regularity:
+                    item: 0.578
+                    type: 0.578
         
         examples_pro: [land_kreis, haus_tür, stadt_mauer]
         examples_contra: [land_+es_regierung, haus_+=er_block, stadt_+=e_tag]
@@ -622,18 +628,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [morphological, derivational]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: plur_0
 
         quantifier: almost regularly
-        coverage:
-            item: 0.067
-            type: 0.066
-        regularity:
-            item: 0.954
-            type: 0.936
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.067
+                    type: 0.066
+                regularity:
+                    item: 0.954
+                    type: 0.936
         
         examples_pro: [schlitten_fahrt, wagen_rad, ufer_promenade]
         examples_contra: [orden_+s_bruder, teufel_+s_werk, frieden_+s_angebot]
@@ -655,18 +665,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: plur_s
 
         quantifier: almost all
-        coverage:
-            item: 0.035
-            type: 0.033
-        regularity:
-            item: 0.97
-            type: 0.957
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.035
+                    type: 0.033
+                regularity:
+                    item: 0.97
+                    type: 0.957
         
         examples_pro: [balkon_möbel, hotel_kette, bob_bahn]
         examples_contra: [deck_+s_balken, interim_+s_phase, karneval_+s_kostüm, leutnant_+s_uniform]
@@ -732,18 +746,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: plur_e
 
         quantifier: mostly
-        coverage:
-            item: 0.159
-            type: 0.184
-        regularity:
-            item: 0.762
-            type: 0.689
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.159
+                    type: 0.184
+                regularity:
+                    item: 0.762
+                    type: 0.689
         
         examples_pro: [tisch_decke, projekt_gruppe, pilz_sammler]
         examples_contra: [tag_+e_gericht, projekt_+e_macherei, hund_+e_leine]
@@ -764,18 +782,22 @@ constraints:
         acceptable_linkers: [_+e_]
         ling_info_type: [morphological, semantic]
         is_pluralic: true
+        
         appl_item: n1+sem
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         func_alias: plur_e_pl
 
         quantifier: irregularly
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [projekt_+e_macherei, tag_+e_buch, punkt_+e_stand]
         examples_contra: [pilz_sammler, brot_korb, jahr_zehnt,  tag_+e_lohn]
@@ -801,18 +823,22 @@ constraints:
         acceptable_linkers: [_+e_]
         ling_info_type: [morphological, phonological, semantic]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: plur_e_anim
 
         quantifier: irregularly
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [hund_+e_leine, swein_+e_stall, pferd_+e_wagen]
         examples_contra: [hund_+s_stern, schwein_kram, schaff_stall]
@@ -847,18 +873,22 @@ constraints:
         acceptable_linkers: [_, _+=er_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: plur_er
 
         quantifier: mostly
-        coverage:
-            item: 0.019
-            type: 0.058
-        regularity:
-            item: 0.833
-            type: 0.868
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.019
+                    type: 0.058
+                regularity:
+                    item: 0.833
+                    type: 0.868
         
         examples_pro: [buch_deckel, buch_+=er_regal, kind_+=er_jacke]
         examples_contra: [kind_+es_alter, mann_+s_volk, rind_fleisch]
@@ -884,18 +914,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [morphological, semantic]
         is_pluralic: true
+        
         appl_item: n1+sem
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         func_alias: plur_er_sg
 
         quantifier: majority
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [buch_deckel, grab_stein, blatt_fläche]
         examples_contra: [mann_+=er_herz, kind_+=er_bild,   buch_handel]
@@ -927,18 +961,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [morphological, semantic]
         is_pluralic: true
+        
         appl_item: n1+sem
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         func_alias: plur_er_mass
 
         quantifier: tend
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [glas_auge, kraut_salat, horn_haut]
         examples_contra: [kraut_garten]
@@ -960,18 +998,22 @@ constraints:
         acceptable_linkers: [_+=er_]
         ling_info_type: [morphological, semantic]
         is_pluralic: true
+        
         appl_item: n1+sem
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         func_alias: plur_er_pl
 
         quantifier: more likely
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [buch_+=er_regal, grab_+=er_feld, kraut_+=er_frau]
         examples_contra: [buch_handel, bild_band,   kind_+=er_jacke, mann_+=er_herz]
@@ -1008,18 +1050,22 @@ constraints:
         acceptable_linkers: [_+=er_]
         ling_info_type: [morphological, semantic]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: plur_er_anim
 
         quantifier: may
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [kind_+=er_jacke, huhn_+=er_ei, rind_+=er_brust]
         examples_contra: []
@@ -1050,18 +1096,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: plur_e_uml
 
         quantifier: mostly
-        coverage:
-            item: 0.08
-            type: 0.111
-        regularity:
-            item: 0.722
-            type: 0.756
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.08
+                    type: 0.111
+                regularity:
+                    item: 0.722
+                    type: 0.756
         
         examples_pro: [hand_fläche, frucht_joghurt, arzt_praxis]
         examples_contra: [hand_+=e_druck, arzt_+=e_streik, frucht_+=e_tee]
@@ -1082,18 +1132,22 @@ constraints:
         acceptable_linkers: [_+=e_]
         ling_info_type: [morphological, semantic]
         is_pluralic: true
+        
         appl_item: n1+sem
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         func_alias: plur_e_uml_pl
 
         quantifier: irregularly
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
         examples_contra: [baum_gruppe, zug_verkehr]
@@ -1128,18 +1182,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: plur_0_uml
 
         quantifier: almost always
-        coverage:
-            item: 0.007
-            type: 0.016
-        regularity:
-            item: 0.946
-            type: 0.967
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.007
+                    type: 0.016
+                regularity:
+                    item: 0.946
+                    type: 0.967
         
         examples_pro: [apfel_baum, kloster_kirche, mutter_sprache]
         examples_contra: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
@@ -1161,16 +1219,20 @@ constraints:
         ling_info_type: [morphological, semantic]
         func_alias: plur_0_uml_pl
         is_pluralic: true
+        
         appl_item: n1+sem
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         quantifier: irregularly
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
         examples_contra: [vogel_futter]
@@ -1193,18 +1255,22 @@ constraints:
         acceptable_linkers: [_+s_, _, _+n_, _+en_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: mixed_mn
 
         quantifier: regularly
-        coverage:
-            item: 0.013
-            type: 0.013
-        regularity:
-            item: 0.997
-            type: 0.996
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.013
+                    type: 0.013
+                regularity:
+                    item: 0.997
+                    type: 0.996
         
         examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
         examples_contra: [schmerz_+ens_schrei]
@@ -1246,18 +1312,22 @@ constraints:
         acceptable_linkers: [_+n_, _+en_]
         ling_info_type: [morphological, semantic]
         is_pluralic: true
+        
         appl_item: n1+sem
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         func_alias: mixed_mn_pl
 
         quantifier: more likely
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [staat_+en_bund, bett_+en_zahl, strahl_+en_belastung]
         examples_contra: [  motor_+en_geräusch, professor_+en_titel, auge_+n_lied, interesse_+n_bereich]
@@ -1287,18 +1357,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [derivational]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: sfx_pl_0
 
         quantifier: regularly
-        coverage:
-            item: 0.071
-            type: 0.045
-        regularity:
-            item: 0.983
-            type: 0.968
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.071
+                    type: 0.045
+                regularity:
+                    item: 0.983
+                    type: 0.968
         
         examples_pro: [reiter_schwert, gürtel_schnalle, brötchen_geber]
         examples_contra: [alter_+s_abstand, reiter_+s_mann]
@@ -1320,18 +1394,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [derivational]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: sfx_pl_e
 
         quantifier: regularly
-        coverage:
-            item: 0.005
-            type: 0.004
-        regularity:
-            item: 1.0
-            type: 0.999
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.005
+                    type: 0.004
+                regularity:
+                    item: 1.0
+                    type: 0.999
         
         examples_pro: [erlaubnis_schein, radikal_operation, personal_ausweis]
         examples_contra: [radikal_+e_fänger]
@@ -1355,18 +1433,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [derivational]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: schwa_fin_deverb
 
         quantifier: mostly
-        coverage:
-            item: 0.028
-            type: 0.028
-        regularity:
-            item: 0.579
-            type: 0.592
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.028
+                    type: 0.028
+                regularity:
+                    item: 0.579
+                    type: 0.592
         
         examples_pro: [abgabe_soll, sorge_pflicht, lage_plan]
         examples_contra: [abgabe_+n_ordnung, anzeige_+n_blatt, lüge_+n_detektor]
@@ -1398,18 +1480,22 @@ constraints:
         acceptable_linkers: [_+n_]
         ling_info_type: [derivational, semantic]
         is_pluralic: true
+        
         appl_item: n1+sem
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         func_alias: schwa_fin_deverb_pl
 
         quantifier: tend
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [abgabe_+n_ordnung, anzeige_+n_blatt, lüge_+n_detektor]
         examples_contra: [einnahme_buch, anzeige_tafel]
@@ -1432,18 +1518,22 @@ constraints:
         acceptable_linkers: [_+n_, _]
         ling_info_type: [derivational]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: schwa_fin_deadj
 
         quantifier: always
-        coverage:
-            item: 0.009
-            type: 0.01
-        regularity:
-            item: 0.97
-            type: 0.852
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.009
+                    type: 0.01
+                regularity:
+                    item: 0.97
+                    type: 0.852
         
         examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
         examples_contra: [liebe_+s_brief]
@@ -1480,18 +1570,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [derivational]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: sfx_s
 
         quantifier: regularly
-        coverage:
-            item: 0.215
-            type: 0.158
-        regularity:
-            item: 0.98
-            type: 0.985
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.215
+                    type: 0.158
+                regularity:
+                    item: 0.98
+                    type: 0.985
         
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, schicksal_+s_drama, rarität_+s_wert, eigentum_+s_recht]
         examples_contra: [minderheit_+en_recht, kuriosität_+en_museum, nationalität_+en_kampf]
@@ -1570,18 +1664,22 @@ constraints:
         acceptable_linkers: [_+en_]
         ling_info_type: [derivational, semantic]
         is_pluralic: true
+        
         appl_item: n1+sem
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         func_alias: sfx_itaet_pl
 
         quantifier: may
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [rarität_+en_sammlung, kuriosität_+en_händler, aktualitäten_+en_kino]
         examples_contra: []
@@ -1610,18 +1708,22 @@ constraints:
         acceptable_linkers: [_+s_, _]
         ling_info_type: [derivational, lexical]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: sfx_deverb_en
 
         quantifier: mostly
-        coverage:
-            item: 0.005
-            type: 0.009
-        regularity:
-            item: 0.797
-            type: 0.957
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.005
+                    type: 0.009
+                regularity:
+                    item: 0.797
+                    type: 0.957
         
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
         examples_contra: [essen_portion, leben_geschäft, husten_tropfen, beben_gebiet]
@@ -1659,18 +1761,22 @@ constraints:
         acceptable_linkers: [_+en_]
         ling_info_type: [derivational]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: sfx_F_in_en
 
         quantifier: always
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.0
+                    type: 0.0
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [lehrerinn_+en_mentalität, freundinn_+en_gruppe, schülerinn_+en_rat]
         examples_contra: [königin_mutter]
@@ -1695,18 +1801,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [derivational]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: prx_deverb
 
         quantifier: tendency
-        coverage:
-            item: 0.159
-            type: 0.122
-        regularity:
-            item: 0.641
-            type: 0.659
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.159
+                    type: 0.122
+                regularity:
+                    item: 0.641
+                    type: 0.659
         
         examples_pro: [anspruch_+s_haltung, eintrag_+s_frist, bedarf_+s_fall, verfall_+s_datum]
         examples_contra: [anruf_beantworter, überfall_kommando, bestand_teil]
@@ -1772,18 +1882,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [phonological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: sibilant_fin
 
         quantifier: almost regularly
-        coverage:
-            item: 0.083
-            type: 0.1
-        regularity:
-            item: 0.97
-            type: 0.953
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.083
+                    type: 0.1
+                regularity:
+                    item: 0.97
+                    type: 0.953
         
         examples_pro: [gefäß_system, fisch_öl, notiz_buch, herbst_anfang]
         examples_contra: [gast_+=e_buch, geist_+=er_haus]
@@ -1815,18 +1929,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [phonological, lexical]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: vow_fin
 
         quantifier: regularly
-        coverage:
-            item: 0.026
-            type: 0.024
-        regularity:
-            item: 0.993
-            type: 0.997
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.026
+                    type: 0.024
+                regularity:
+                    item: 0.993
+                    type: 0.997
         
         examples_pro: [auto_bahn, uhu_paar, kuh_milch, gummi_bär]
         examples_contra: [uhu_+s_nest, schuh_+e_kauf]
@@ -1861,18 +1979,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [morphological, phonological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: stressed_phon_fin
 
         quantifier: usually
-        coverage:
-            item: 0.03
-            type: 0.033
-        regularity:
-            item: 0.95
-            type: 0.969
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.03
+                    type: 0.033
+                regularity:
+                    item: 0.95
+                    type: 0.969
         
         examples_pro: [kosmetik_industrie, akustik_paneele, architektur_büro, metzgerei_produkt]
         examples_contra: [kultur_+en_folge, melodie_+n_reigen, partei_+en_staat]
@@ -1896,18 +2018,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [morphological, derivational, phonological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: f_t_fin
 
         quantifier: sometimes
-        coverage:
-            item: 0.013
-            type: 0.016
-        regularity:
-            item: 0.505
-            type: 0.463
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.013
+                    type: 0.016
+                regularity:
+                    item: 0.505
+                    type: 0.463
         
         examples_pro: [arbeit_+s_tag, heirat_+s_antrag, zukunft_+s_angst]
         examples_contra: [arbeit_geber, jugend_alter, umwelt_schutz]
@@ -1939,18 +2065,22 @@ constraints:
         acceptable_linkers: [_+n_]
         ling_info_type: [phonological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: schwa_fin
 
         quantifier: mostly
-        coverage:
-            item: 0.172
-            type: 0.149
-        regularity:
-            item: 0.752
-            type: 0.72
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.172
+                    type: 0.149
+                regularity:
+                    item: 0.752
+                    type: 0.72
         
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
         examples_contra: [fläche_maß, sorge_pflicht, gebäude_komplex, gedanke_+ns_turm]
@@ -2011,11 +2141,11 @@ constraints:
     #     rerun: true
 
     #     orig_quantifier: regularly
-    #     orig_item_regularity: 0.765
+    #     orig_item_        regularity: 0.765
     #     orig_support_level: not supported
 
     #     corrected_quantifier: mostly
-    #     resulting_item_regularity: 0.868
+    #     resulting_item_        regularity: 0.868
     #     resulting_
     #     examples_pro: [biene_+n_zucht, suppe_+n_schüssel, blume_+n_strauß]
     #     examples_contra: [messe_besucher, kohle_faden, hygiene_artikel]
@@ -2063,18 +2193,22 @@ constraints:
         acceptable_linkers: [_, _+s_]
         ling_info_type: [morphological, phonological, semantic]
         is_pluralic: true
+        
         appl_item: n1+sem
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         func_alias: f_cons_fin_sg
 
         quantifier: mostly
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [schrift_führer, geburt_+s_tag, burg_anlage]
         examples_contra: [burg_+en_blick, frau_+en_bild]
@@ -2108,18 +2242,22 @@ constraints:
         acceptable_linkers: [_+en_]
         ling_info_type: [morphological, phonological, semantic]
         is_pluralic: true
+        
         appl_item: n1+sem
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         func_alias: f_cons_fin_pl
 
         quantifier: more likely
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [schrift_+en_verzeichnis, geburt_+en_kontrolle, burg_+en_land]
         examples_contra: [  burg_+en_blick]
@@ -2164,18 +2302,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [semantic]
         is_pluralic: false
+        
         appl_item: n1+n2
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: copula
 
         quantifier: regularly
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [dichter_componist, bett_sofa, königin_mutter]
         examples_contra: []
@@ -2211,18 +2353,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [semantic]
         is_pluralic: false
+        
         appl_item: n1+n2
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: argument
 
         quantifier: sometimes
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [gewicht_+s_heber, krieg_+s_führung, unternehmen_+s_beratung]
         examples_contra: [gewicht_heber, krieg_führung]
@@ -2246,18 +2392,22 @@ constraints:
         acceptable_linkers: [_]
         ling_info_type: [lexical]
         is_pluralic: false
+        
         appl_item: compound
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: tech_term
 
         quantifier: often
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [erbschaft_steuer, herz_schlagen, schaden_ersatz]
         examples_contra: [schaden_+s_ersatz]
@@ -2292,18 +2442,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [semantic, lexical]
         is_pluralic: false
+        
         appl_item: n1+n2
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: sec_const_anim
 
         quantifier: tend
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [reiter_+s_mann, lehrer_+s_tochter, bäcker_+s_leute]
         examples_contra: []
@@ -2333,18 +2487,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [derivational]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: cmpx_morph
 
         quantifier: tendency
-        coverage:
-            item: 1.0
-            type: 1.0
-        regularity:
-            item: 0.735
-            type: 0.766
+        measures:
+            gecodb:
+                coverage:
+                    item: 1.0
+                    type: 1.0
+                regularity:
+                    item: 0.735
+                    type: 0.766
         
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, anspruch_+s_haltung, eintrag_+s_frist]
         examples_contra: [ort_+s_amt, krieg_+s_ende, anruf_beantworter, minderheit_+en_recht]
@@ -2385,18 +2543,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [phonological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: cmpx_phon
 
         quantifier: tendency
-        coverage:
-            item: 1.0
-            type: 1.0
-        regularity:
-            item: 0.723
-            type: 0.761
+        measures:
+            gecodb:
+                coverage:
+                    item: 1.0
+                    type: 1.0
+                regularity:
+                    item: 0.723
+                    type: 0.761
         
         examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
         examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
@@ -2433,18 +2595,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [phonological]
         is_pluralic: false
+        
         appl_item: n1
-        n_appl_items: 3613
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: sonority
 
         quantifier: tend
-        coverage:
-            item: 0.431
-            type: 0.498
-        regularity:
-            item: 0.796
-            type: 0.717
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.431
+                    type: 0.498
+                regularity:
+                    item: 0.796
+                    type: 0.717
         
         examples_pro: [ort_+s_tarif, glück_+s_rad, himmel_reich, uhu_paar]
         examples_contra: [arbeit_geber, dieb_stahl, himmel_+s_bahn, uhu_+s_nest]
@@ -2495,18 +2661,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: s_smpx
 
         quantifier: almost all
-        coverage:
-            item: 0.05
-            type: 0.032
-        regularity:
-            item: 0.988
-            type: 0.915
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.05
+                    type: 0.032
+                regularity:
+                    item: 0.988
+                    type: 0.915
         
         examples_pro: [zwang_+s_jacke, ort_+s_angabe, könig_+s_haus]
         examples_contra: [arbeit_+s_amt, heirat_+s_antrag, liebe_+s_brief]
@@ -2542,18 +2712,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [lexical]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: s_freq
 
         quantifier: many
-        coverage:
-            item: 0.05
-            type: 0.032
-        regularity:
-            item: 0.649
-            type: 0.914
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.05
+                    type: 0.032
+                regularity:
+                    item: 0.649
+                    type: 0.914
         
         examples_pro: [volk_+s_brauch, amt_+s_anwalt, staat_+s_amt]
         examples_contra: [fasching_+s_foto, gral_+s_sage, konvent_+s_sitzung]
@@ -2574,18 +2748,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [morphological, derivational]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: s_f_cmpx
 
         quantifier: almost all
-        coverage:
-            item: 0.163
-            type: 0.159
-        regularity:
-            item: 0.996
-            type: 0.983
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.163
+                    type: 0.159
+                regularity:
+                    item: 0.996
+                    type: 0.983
         
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, liebe_+s_brief]
         examples_contra: [arbeit_+s_tag, heirat_+s_antrag]
@@ -2611,18 +2789,22 @@ constraints:
         acceptable_linkers: [_+s_]
         ling_info_type: [morphological, phonological]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: s_f_polysyl
 
         quantifier: all
-        coverage:
-            item: 0.163
-            type: 0.159
-        regularity:
-            item: 0.999
-            type: 1.0
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.163
+                    type: 0.159
+                regularity:
+                    item: 0.999
+                    type: 1.0
         
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
         examples_contra: []
@@ -2650,18 +2832,22 @@ constraints:
         acceptable_linkers: [_+n_]
         ling_info_type: [phonological]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: n_schwa
 
         quantifier: all
-        coverage:
-            item: 0.116
-            type: 0.109
-        regularity:
-            item: 0.988
-            type: 1.0
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.116
+                    type: 0.109
+                regularity:
+                    item: 0.988
+                    type: 1.0
         
         examples_pro: [biene_+n_zucht, auge_+n_lied, oper_+n_haus]
         examples_contra: []
@@ -2701,18 +2887,22 @@ constraints:
         acceptable_linkers: [_+n_, _+en_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: en_par
 
         quantifier: almost all
-        coverage:
-            item: 0.143
-            type: 0.127
-        regularity:
-            item: 0.971
-            type: 0.986
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.143
+                    type: 0.127
+                regularity:
+                    item: 0.971
+                    type: 0.986
         
         examples_pro: [blume_+n_topf, katze_+n_fell, frau_+en_hand]
         examples_contra: [hahn_+en_kamm, mond_+en_schein, instrument_+en_bau]
@@ -2753,18 +2943,22 @@ constraints:
         acceptable_linkers: [_+n_, _+en_]
         ling_info_type: [morphological, phonological, semantic]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: en_non_par_m
 
         quantifier: all
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [hahn_+en_kamm, mond_+en_schein, stern_+en_himmel, mai_+en_nacht]
         examples_contra: [  mond_aufgang, stern_bild, mai_baum]
@@ -2790,18 +2984,22 @@ constraints:
         acceptable_linkers: [_+n_, _+en_]
         ling_info_type: [morphological, phonological, lexical, semantic]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: en_non_par_n_pl
 
         quantifier: all
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [instrument_+en_bau, dokument_+en_sammlung]
         examples_contra: [zertifikat_system]
@@ -2823,18 +3021,22 @@ constraints:
         acceptable_linkers: [_+e_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: e_par
 
         quantifier: all
-        coverage:
-            item: 0.023
-            type: 0.008
-        regularity:
-            item: 0.982
-            type: 0.994
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.023
+                    type: 0.008
+                regularity:
+                    item: 0.982
+                    type: 0.994
         
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
         examples_contra: [herz_+e_leid, maus_+e_zahn]
@@ -2871,18 +3073,22 @@ constraints:
         acceptable_linkers: [_+e_]
         ling_info_type: [phonological, derivational]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: e_last_syl
 
         quantifier: all
-        coverage:
-            item: 0.023
-            type: 0.008
-        regularity:
-            item: 1.0
-            type: 1.0
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.023
+                    type: 0.008
+                regularity:
+                    item: 1.0
+                    type: 1.0
         
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine, anhelt_+e_stelle]
         examples_contra: []
@@ -2904,18 +3110,22 @@ constraints:
         acceptable_linkers: [_+e_]
         ling_info_type: [derivational]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: e_smpx
 
         quantifier: most
-        coverage:
-            item: 0.023
-            type: 0.008
-        regularity:
-            item: 0.73
-            type: 0.783
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.023
+                    type: 0.008
+                regularity:
+                    item: 0.73
+                    type: 0.783
         
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
         examples_contra: [anhalt_+e_stelle]
@@ -2942,18 +3152,22 @@ constraints:
         acceptable_linkers: [_+e_]
         ling_info_type: [lexical]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: e_non_loan
 
         quantifier: all
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
         examples_contra: []
@@ -2977,18 +3191,22 @@ constraints:
         acceptable_linkers: [_+=er_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: er_par
 
         quantifier: all
-        coverage:
-            item: 0.01
-            type: 0.015
-        regularity:
-            item: 0.979
-            type: 0.999
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.01
+                    type: 0.015
+                regularity:
+                    item: 0.979
+                    type: 0.999
         
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
         examples_contra: []
@@ -3029,18 +3247,22 @@ constraints:
         acceptable_linkers: [_+=er_]
         ling_info_type: [phonological, derivational]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: er_last_syl
 
         quantifier: all
-        coverage:
-            item: 0.01
-            type: 0.015
-        regularity:
-            item: 0.979
-            type: 0.999
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.01
+                    type: 0.015
+                regularity:
+                    item: 0.979
+                    type: 0.999
         
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke, mitglied_+=er_liste]
         examples_contra: []
@@ -3065,18 +3287,22 @@ constraints:
         acceptable_linkers: [_+=er_]
         ling_info_type: [derivational]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: er_smpx
 
         quantifier: most
-        coverage:
-            item: 0.01
-            type: 0.015
-        regularity:
-            item: 0.875
-            type: 0.935
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.01
+                    type: 0.015
+                regularity:
+                    item: 0.875
+                    type: 0.935
         
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
         examples_contra: [mitglied_+=er_liste, vorbild_+=er_sammlung]
@@ -3097,18 +3323,22 @@ constraints:
         acceptable_linkers: [_+=er_]
         ling_info_type: [lexical]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: er_non_loan
 
         quantifier: all
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
         examples_contra: []
@@ -3130,18 +3360,22 @@ constraints:
         acceptable_linkers: [_+=e_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: e_uml_par
 
         quantifier: all
-        coverage:
-            item: 0.011
-            type: 0.003
-        regularity:
-            item: 1.0
-            type: 1.0
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.011
+                    type: 0.003
+                regularity:
+                    item: 1.0
+                    type: 1.0
         
         examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
         examples_contra: []
@@ -3169,18 +3403,22 @@ constraints:
         acceptable_linkers: [_+es_]
         ling_info_type: [lexical, morphological]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: es_isol
 
         quantifier: all
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, land_+es_regierung]
         examples_contra: []
@@ -3224,18 +3462,22 @@ constraints:
         acceptable_linkers: [_+es_]
         ling_info_type: [phonological, derivational]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: es_monosyl
 
         quantifier: all
-        coverage:
-            item: 0.012
-            type: 0.011
-        regularity:
-            item: 0.983
-            type: 0.94
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.012
+                    type: 0.011
+                regularity:
+                    item: 0.983
+                    type: 0.94
         
         examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, land_+es_regierung, vorjahr_+es_gewinner]
         examples_contra: [gesetz_+es_änderung]
@@ -3262,18 +3504,22 @@ constraints:
         acceptable_linkers: [_+ens_]
         ling_info_type: [lexical]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - NA: NA
 
         func_alias: ens_isol
 
         quantifier: all
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            NA:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [schmerz_+ens_geld, name_+ns_tag, herz_+ens_angst]
         examples_contra: []
@@ -3303,18 +3549,22 @@ constraints:
         acceptable_linkers: [_+=_]
         ling_info_type: [morphological]
         is_pluralic: false
+        
         appl_item: n1+linker
-        n_appl_items: 4868
+        datasets_n_appl_items:
+            - gecodb: NA
 
         func_alias: zero_uml_par
 
         quantifier: all
-        coverage:
-            item: 0.003
-            type: 0.0
-        regularity:
-            item: 1.0
-            type: 1.0
+        measures:
+            gecodb:
+                coverage:
+                    item: 0.003
+                    type: 0.0
+                regularity:
+                    item: 1.0
+                    type: 1.0
         
         examples_pro: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
         examples_contra: []
@@ -3337,18 +3587,22 @@ constraints:
         acceptable_linkers: [_+e_, _+=e_, _+=er_, _+=_, _+n_, _+en_]
         ling_info_type: [morphological, semantic]
         is_pluralic: true
+        
         appl_item: linker
-        n_appl_items: 282767
+        datasets_n_appl_items:
+            - sp18: NA
 
         func_alias: pl_interpr
 
         quantifier: tend
-        coverage:
-            item: NA
-            type: NA
-        regularity:
-            item: NA
-            type: NA
+        measures:
+            sp18:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
         
         examples_pro: [punkt_+e_stand, buch_+=er_regal, staat_+en_bund, burg_+en_land, mutter_+=_zentrum]
         examples_contra: [motor_+en_geräusch, burg_+en_blick, kind_+=er_jacke, hund_+e_leine,   pilz_sammler, buch_handel, vogel_futter]
