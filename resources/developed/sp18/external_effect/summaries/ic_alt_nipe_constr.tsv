@@ -1,47 +1,47 @@
 n1	n1_pl_marker	is_pll_acceptable	acceptable_linkers	applicable_constr	applicable_pl_constr
-apfel	_+=_	False	_+s_, _	p2l:decl_cl:pl:#0_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-bad	_+=er_	True	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:pl:#er-0/er|def-0/er
-ball	_+=e_	False	_+s_, _	p2l:decl_cl:pl:#e_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-bett	_+en_	True	_, _+n_, _+en_, _+s_	p2l:decl_cl:mixed-0/s/en|def-0/s/en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bild	_+er_	False	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-brett	_+er_	False	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-brief	_+e_	False	_+s_, _	p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
-buch	_+=er_	True	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:decl_cl:pl:#er-0/er|def-0/er
-bucht	_+en_	False	_+s_	p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
+apfel	_+=_	False	_, _+s_	def-0, p2l:decl_cl:pl:#0_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+bad	_+=er_	True	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:pl:#er-0/er|def-0/er
+ball	_+=e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+bett	_+en_	True	_, _+en_, _+s_, _+n_	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bild	_+er_	False	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+brett	_+er_	False	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+brief	_+e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
+buch	_+=er_	True	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:decl_cl:pl:#er-0/er|def-0/er
+bucht	_+en_	False	_, _+s_	def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
 dämon	_+en_				
-ei	_+er_	False	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-eigenschaft	_+en_	False	_+s_	p2l:drv:sfx:sfx-s|def-s, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
-element	_+e_	False	_+s_, _	p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-frau	_+en_	False	_+s_	p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-gerät	_+e_	False	_+s_, _	p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
-geräusch	_+e_	False	_+s_, _	p2l:decl_cl:pl:#e-0|def-0, p2l:drv:prx_deverb-s, p2l:phon_fin:sibilant$-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
-geschenk	_+e_	False	_+s_, _	p2l:decl_cl:pl:#e-0|def-0, p2l:drv:prx_deverb-s, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
-gitarre	_+n_	True	_+n_, _+s_	p2l:phon_fin:schwa$-en|def-en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:phon_fin:schwa$-en|def-en
-hand	_+=e_	False	_+s_, _	p2l:decl_cl:pl:#e_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-haus	_+=er_	True	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:decl_cl:pl:#er-0/er|def-0/er
-hemd	_+en_	True	_, _+n_, _+en_, _+s_	p2l:decl_cl:mixed-0/s/en|def-0/s/en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-hund	_+e_	False	_+s_, _	p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-katze	_+n_	True	_+n_, _+s_	p2l:phon_fin:schwa$-en|def-en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:phon_fin:schwa$-en|def-en
-kind	_+er_	False	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-kommune	_+n_	True	_+n_, _+s_	p2l:phon_fin:schwa$-en|def-en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:phon_fin:schwa$-en|def-en
-lied	_+er_	False	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-loch	_+=er_	True	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:decl_cl:pl:#er-0/er|def-0/er
-mutter	_+=_	False	_+s_, _	p2l:decl_cl:pl:#0_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-nagel	_+=_	False	_+s_, _	p2l:decl_cl:pl:#0_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-nation	_+en_	False	_+s_	p2l:drv:sfx:sfx-s|def-s, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
-ohr	_+en_	True	_, _+n_, _+en_, _+s_	p2l:decl_cl:mixed-0/s/en|def-0/s/en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-person	_+en_	False	_+s_	p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-produkt	_+e_	False	_+s_, _	p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-projektor	_+en_	True	_, _+n_, _+en_, _+s_	p2l:decl_cl:mixed-0/s/en|def-0/s/en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-rad	_+=er_	True	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss	_+=er_	True	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:decl_cl:pl:#er-0/er|def-0/er
-schwert	_+er_	False	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-schwester	_+n_	False	_+s_	p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-sonne	_+n_	True	_+n_, _+s_	p2l:phon_fin:schwa$-en|def-en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:phon_fin:schwa$-en|def-en
-stadt	_+=e_	False	_+s_, _	p2l:decl_cl:pl:#e_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-vater	_+=_	False	_+s_, _	p2l:decl_cl:pl:#0_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-vogel	_+=_	False	_+s_, _	p2l:decl_cl:pl:#0_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-weg	_+e_	False	_+s_, _	p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-wurm	_+=er_	True	_+s_, _+=er_, _	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:pl:#er-0/er|def-0/er
-zahn	_+=e_	False	_+s_, _	p2l:decl_cl:pl:#e_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
-zitat	_+e_	False	_+s_, _	p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
+ei	_+er_	False	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+eigenschaft	_+en_	False	_, _+s_	def-0, p2l:drv:sfx:sfx-s|def-s, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
+element	_+e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+frau	_+en_	False	_, _+s_	def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+gerät	_+e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
+geräusch	_+e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e-0|def-0, p2l:drv:prx_deverb-s, p2l:phon_fin:sibilant$-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
+geschenk	_+e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e-0|def-0, p2l:drv:prx_deverb-s, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
+gitarre	_+n_	True	_, _+s_, _+n_	def-0, p2l:phon_fin:schwa$-en|def-en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:phon_fin:schwa$-en|def-en
+hand	_+=e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+haus	_+=er_	True	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:decl_cl:pl:#er-0/er|def-0/er
+hemd	_+en_	True	_, _+en_, _+s_, _+n_	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+hund	_+e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+katze	_+n_	True	_, _+s_, _+n_	def-0, p2l:phon_fin:schwa$-en|def-en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:phon_fin:schwa$-en|def-en
+kind	_+er_	False	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+kommune	_+n_	True	_, _+s_, _+n_	def-0, p2l:phon_fin:schwa$-en|def-en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:phon_fin:schwa$-en|def-en
+lied	_+er_	False	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+loch	_+=er_	True	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:decl_cl:pl:#er-0/er|def-0/er
+mutter	_+=_	False	_, _+s_	def-0, p2l:decl_cl:pl:#0_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+nagel	_+=_	False	_, _+s_	def-0, p2l:decl_cl:pl:#0_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+nation	_+en_	False	_, _+s_	def-0, p2l:drv:sfx:sfx-s|def-s, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	
+ohr	_+en_	True	_, _+en_, _+s_, _+n_	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+person	_+en_	False	_, _+s_	def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+produkt	_+e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+projektor	_+en_	True	_, _+en_, _+s_, _+n_	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+rad	_+=er_	True	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss	_+=er_	True	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	p2l:decl_cl:pl:#er-0/er|def-0/er
+schwert	_+er_	False	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+schwester	_+n_	False	_, _+s_	def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+sonne	_+n_	True	_, _+s_, _+n_	def-0, p2l:phon_fin:schwa$-en|def-en, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:phon_fin:schwa$-en|def-en
+stadt	_+=e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+vater	_+=_	False	_, _+s_	def-0, p2l:decl_cl:pl:#0_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+vogel	_+=_	False	_, _+s_	def-0, p2l:decl_cl:pl:#0_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+weg	_+e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+wurm	_+=er_	True	_, _+=er_, _+s_	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	p2l:decl_cl:pl:#er-0/er|def-0/er
+zahn	_+=e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e_uml-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s, p2l:tend:sonority-!s	
+zitat	_+e_	False	_, _+s_	def-0, p2l:decl_cl:pl:#e-0|def-0, p2l:tend:cmpx_morph-s|def-s, p2l:tend:cmpx_phon-s|def-s	

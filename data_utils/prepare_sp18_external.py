@@ -12,6 +12,7 @@ from check_applicability import applicability_checkers
 from .gecodb_compound_parser import Compound
 
 
+# python3 -m data_utils.prepare_sp18_external
 def main():
 
     # This script prepares the default version of SP18 dataset
@@ -61,8 +62,8 @@ def main():
     # (e.g. 'Äpfelkiste' vs. 'Äpfelkisten', or 'Liederabend' vs. 'Liederabende',
     # found in the data). Thus, the IntPE may interfere
     # with the ExtPE and make the latter undetectable.
-    # 3. Compounds whose N1s are forced to attach the pluralic linker 
-    # due to other constraints, e.g. because of schwa ('Katzenfell' vs. 'Katzenfelle',
+    # 3. Compounds whose N1s may attach the pluralic linker due to
+    # non-pluralic constraints, e.g. because of schwa ('Katzenfell' vs. 'Katzenfelle',
     # found in the data) or as a person designation ('Kinderbuch' vs. 'Kinderbücher',
     # found in the data). Again, if the given N1 mostly takes a pluralic linker 
     # in its Sg form, it will most likely do so in Pl, 
@@ -87,7 +88,7 @@ def main():
     #   Sg vs. Pl forms.
     #   5. Leave out compounds under the IntPE.
     #   6. Leave out compounds whose N1 may attach the pluralic linker
-    #   due to other constraints.
+    #   due to non-pluralic constraints.
 
     # As a result of the preprocessing, we obtain the following datasets
     # (all have the same notation as SP18):
@@ -407,23 +408,18 @@ def main():
     # the empirical difference caused by the colloquial speech 
     # in cases the empirical data does not match the theoretical expectation.
 
-    # TODO
-    # Since we only target N1s, we will only consider constraints
-    # whose applicability item is N1 as defined by [shmalts_2026].
-    # This then excludes a number of constraints; howeve, since
-    # we are actually interested in constraints that assign a pluralic linker,
-    # the excluded constraints are irrelevent anyways as demostrated below:
-    # * The default constraint. Assigns a zero linker.
-    # * A number of semantic constraints that, while they assign a pluralic linker,
-    # do so under the IntPE excluded above.
-    # * Copulative, argumental compounds, technical terms, and a few other constraints 
-    # that assign -s- or a zero linker.
-    # * All L2P constraints that are irrelevant to the ExtPE, since they 
+    # On top of targeting non-pluralic constraints only, we will also 
+    # ignore L2P constraints that are irrelevant to the ExtPE, since they 
     # are not generative.
-    # However, note that there are a few N1-targeting constraints 
+    # Note that since we are actually interested in constraints that assign 
+    # a pluralic linker, most of the constraints whose checkers are not implemented 
+    # at the time of this step (June 2026) are irrelevent anyways:
+    # these are copulative, argumental compounds, technical terms, and a few other
+    # constraints that assign -s- or a zero linker.
+    # However, note that there are two non-pluralic constraints 
     # that assign a pluralic linker, but which are not implemented 
-    # in the applicability checkers of [shmalts_2026], and this is 
-    # a **limitation** of the current analysis. These are:
+    # in the applicability checkers on the time of this step (June 2026),
+    # and this is a **limitation** of the current analysis. These are:
     # * `p2l:decl_cl:pl:#e-0|msyl_anim-e` (assigns -e- to monosyllabic animal designations).
     # * `p2l:decl_cl:pl:#er-0/er|anim-er` (assigns -"er- to monosyllabic animal designations).
 
@@ -440,7 +436,12 @@ def main():
         applicable_pl_constr = []
         all_acceptable_linkers = []
         for c_id, constraint in constraints.items():
-            if constraint["appl_item"] != "n1":
+            if (
+                # non-pluralic constraints only
+                constraint["is_pluralic"] or
+                # ignore L2P
+                ("linker" in constraint["appl_item"])
+            ):
                 continue
             func_name = constraint["func_alias"]
             if hasattr(applicability_checkers, func_name + "_is_applicable"):
