@@ -91,122 +91,72 @@ def main():
     # As a result of the preprocessing, we obtain the following datasets
     # (all have the same notation as SP18):
     #
-    #   * 'resources/developed/sp18/external_effect/ident_cc_all.tsv'
-    #   (N=3453, UniqN=2130, UniqCN=1402)
-    #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker)
-    #
-    #
-    #   * 'resources/developed/sp18/external_effect/ic_alt.tsv'
+    #   * 'resources/developed/sp18/internal_effect/alt.tsv'
     #   (N=2318, UniqN=1246, UniqCN=869)
-    #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing both in the Sg and the Pl forms
+    #   Compounds built from N1s appearing both with a Sg and with a Pl meaning
     #
-    #   * 'resources/developed/sp18/external_effect/leftovers/ic_nalt_sg.tsv'
+    #   * 'resources/developed/sp18/internal_effect/leftovers/nalt_sg.tsv'
     #   (N=892)
-    #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing only in the Sg form
+    #   Compounds built from N1s appearing only with a Sg meaning
     #
-    #   * 'resources/developed/sp18/external_effect/leftovers/ic_nalt_pl.tsv'
-    #   (N=243)
-    #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing only in the Pl form
+    #   (N=0)
+    #   (Compounds built from N1s appearing only with a Pl meaning)
     #
     #
-    #   * 'resources/developed/sp18/external_effect/ic_alt_nipe.tsv'
-    #   (N=1931, UniqN=1043, UniqCN=724)
-    #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing both in the Sg and the Pl forms
-    #   and not undergoing the IntPE
-    #
-    #   * 'resources/developed/sp18/external_effect/leftovers/ic_alt_ipe.tsv'
-    #   (N=387)
-    #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing both in the Sg and the Pl forms
-    #   and undergoing the IntPE
-    #
-    #
-    #   * 'resources/developed/sp18/external_effect/ic_alt_nipe_npll.tsv'
+    #   * 'resources/developed/sp18/internal_effect/alt_npll.tsv'
     #   (N=1236, UniqN=665, UniqCN=468, UniqN1N=30)
-    #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing both in the Sg and the Pl forms
-    #   and not undergoing the IntPE whose N1 may not attach a pluralic linker
+    #   Compounds built from N1s appearing both with a Sg and with a Pl meaning
+    #   that may not attach a pluralic linker
     #
-    #   * 'resources/developed/sp18/external_effect/leftovers/ic_alt_nipe_pll.tsv'
+    #   * 'resources/developed/sp18/internal_effect/leftovers/alt_pll.tsv'
     #   (N=695, UniqN1N=16)
-    #   Compounds built from non-unique constituent combinations (regardless 
-    #   of the linker) appearing both in the Sg and the Pl forms
-    #   and not undergoing the IntPE whose N1 may attach a pluralic linker
+    #   Compounds built from N1s appearing both with a Sg and with a Pl meaning
+    #   that may attach a pluralic linker
     #
     #
     #
-    #   * 'resources/developed/sp18/external_effect/summaries/ic_nums.tsv'
-    #   (UniqCN=1402)
-    #   Counts of compounds in the Sg/Pl forms built from each constituent combination
-    #   (from 'resources/developed/sp18/external_effect/ident_cc_all.tsv')
-    #
-    #   * 'resources/developed/sp18/external_effect/summaries/ic_n1_sem.tsv'
+    #   * 'resources/developed/sp18/internal_effect/summaries/n1_sem.tsv'
     #   (UniqCN=869)
     #   Counts of compounds with 'ind'/'coll'/'konvc' N1 meaning 
-    #   built from each constituent combination
-    #   (from 'resources/developed/sp18/external_effect/ic_alt.tsv')
+    #   built from each N1 (from 'resources/developed/sp18/sp18.tsv')
     #
-    #   * 'resources/developed/sp18/external_effect/summaries/ic_alt_nipe_constr.tsv'
+    #   * 'resources/developed/sp18/internal_effect/summaries/alt_constr.tsv'
     #   (UniqN1N=46)
     #   Record of applicable N1-targeting constraints for each unique N1
-    #   (from 'resources/developed/sp18/external_effect/ic_alt_nipe.tsv')
+    #   (from 'resources/developed/sp18/internal_effect/alt.tsv')
 
     # Thus, the data tree looks as follows:
     #
     #          SP18
     #   lemmatized compounds
     #   (N=8212, UniqN=6889)
-    # 'resources/developed/sp18/sp18.tsv'
-    #           |                    \__
-    #           |                       \_____
-    #           |                             \
-    #  compounds from non-unique              removed compounds
-    #  constituent combinations                 from unique constituent
-    #  (N=3453, UniqN=2130, UniqCN=1402)          combinations (N=4669)
-    # 'resources/developed/sp18/
-    # external_effect/ident_cc_all.tsv' -----> counts of compounds in the Sg/Pl forms
-    #           |     \__                       built from each constituent combination (UniqCN=1402)
-    #           |        \__               'resources/developed/sp18/external_effect/summaries/ic_nums.tsv'
+    # 'resources/developed/sp18/sp18.tsv'   -----> counts of compounds with 'ind'/'coll'/'konvc'
+    #           |     \__                         N1 meaning built from each N1 (UniqCN=1402)
+    #           |        \__               'resources/developed/sp18/internal_effect/summaries/n1_sem.tsv'
     #           |           \___________ 
-    #           |            __________/\_________ 
-    #           |           /                     \   
-    #           |   + appearing only               + appearing only
-    #           |   in the Sg form (N=892)         in the Pl form (N=243)
-    #           |   'resources/developed/sp18/     'resources/developed/sp18/
-    #           |    external_effect/leftovers/    external_effect/leftovers/
-    #           |    ic_nalt_sg.tsv'                 ic_nalt_pl.tsv'
+    #           |            __________/\____________ 
+    #           |           /                        \   
+    #           | + built from N1s appearing only     (+ built from N1s appearing only
+    #           |   with a Sg meaning (N=892)         with a Pl meaning (N=0))
+    #           |   'resources/developed/sp18/
+    #           |    internal_effect/leftovers/
+    #           |       nalt_sg.tsv'
     #           | 
     #           | 
-    #  + appearing both                            
-    #  in the Sg and the Pl forms            counts of compounds with 'ind'/'coll'/'konvc' N1 meaning
-    #  (N=2318, UniqN=1246, UniqCN=869) ----->  built from each constituent combination (UniqCN=869)
-    # 'resources/developed/sp18/           'resources/developed/sp18/external_effect/summaries/ic_n1_sem.tsv'
-    # external_effect/ic_alt.tsv'
-    #           |                    \__
-    #           |                       \_____
-    #           |                             \
-    #           |               + undergoing the IntPE (N=387)
-    #           |               'resources/developed/sp18/external_effect/leftovers/ic_alt_ipe.tsv'
-    #           |
-    #           |
-    #  + not undergoing the IntPE               Record of applicable N1-targeting constraints
-    #  (N=1931, UniqN=1043, UniqCN=724) ----->      for each unique N1 (UniqN1N=46)
-    # 'resources/developed/sp18/                  'resources/developed/sp18/external_effect/
-    # external_effect/ic_alt_nipe.tsv'              summaries/ic_alt_nipe_constr.tsv'
-    #           |                    \__
-    #           |                       \_____
-    #           |                             \
+    #  + built from N1s appearing both            Record of applicable N1-targeting constraints
+    #  with a Sg and with a Pl meaning   ----->      for each unique N1 (UniqN1N=46)
+    #  (N=2318, UniqN=1246, UniqCN=869)          'resources/developed/sp18/internal_effect/
+    # 'resources/developed/sp18/                summaries/alt_constr.tsv'
+    # internal_effect/alt.tsv'        
+    #           |            \______ 
+    #           |                   \________
+    #           |                            \
     #  + N1 may not attach                 + N1 may attach 
     #  a pluralic linker                    a pluralic linker     
     #   (N=1236, UniqN=665,                   (N=695, UniqN1N=16)
     #  UniqCN=468, UniqN1N=30)                'resources/developed/sp18/
-    # 'resources/developed/sp18/                  external_effect/leftovers/
-    # external_effect/ic_alt_nipe_npll.tsv'         ic_alt_nipe_pll.tsv'
+    # 'resources/developed/sp18/                  internal_effect/leftovers/
+    # internal_effect/alt_npll.tsv'                 alt_pll.tsv'
 
 
     sp18_path = "resources/developed/sp18/sp18.tsv"
@@ -245,55 +195,42 @@ def main():
         constraints: dict = list(yaml.safe_load_all(f))[-1]["constraints"]
 
 
-    # 3. Extract sets of multiple compounds with identical N1s
-    # (regardless of the linker).
+    # 3. Leave out compounds whose N1s do not exhibit an alternation between
+    # Sg vs. Pl meaning.
 
-    # All compounds whose N1s is unique in the data will be
-    # filtered out as they cannot build a contrastive pair.
+    # Problematic group 1: if an N1 only occurred with either Sg or Pl meaning,
+    # we cannot study its linker alternation across the meaning.
 
-    # non-unique constituent combinations (N=3453, UniqN=2130, UniqCN=1402)
-    ident_n1_all = sp18[sp18.duplicated(subset="n1", keep=False)]    \
-        .sort_values("n1")
-    ident_n1_all.to_csv(
-        os.path.join(outdir, "ident_cc_all.tsv"),
-        **outcsv_args
-    )
-
-
-    # 4. Leave out compounds that do not exhibit an alternation between
-    # Sg vs. Pl forms.
-
-    # Problematic group 1: if a compound only occurred in either Sg or Pl form,
-    # we cannot study its linker alternation across the numbers.
-
-    # counts of compounds in the Sg/Pl forms built
-    # from each constituent combination
-    ic_nums_data = {
+    # counts of compounds with 'ind'/'coll'/'konvc' N1 meaning
+    # built from each N1
+    n1_sem_data = {
         const_comb: {
-            "sg_form": len(group[group["n2_num"] == "sg"]),
-            "pl_form": len(group[group["n2_num"] == "pl"])
+            n1_sem: len(group[group["n1_sem"] == n1_sem])
+            for n1_sem in ["ind", "coll", "konvc"]
         }
-        for const_comb, group in ident_cc_all.groupby("const_comb")
+        for const_comb, group in sp18.groupby("n1")
     }
-    ic_nums = pd.DataFrame.from_dict(ic_nums_data, orient="index")
-    ic_nums.to_csv(
-        os.path.join(outdir, "summaries/ic_nums.tsv"),
+    n1_sem = pd.DataFrame.from_dict(n1_sem_data, orient="index")
+    n1_sem.to_csv(
+        os.path.join(outdir, "summaries/n1_sem.tsv"),
+        **outcsv_args
+    )
+    # we will use the lax annotation here
+    n1_sem["coll-lax"] = n1_sem["coll"] + n1_sem["konvc"]
+
+    # only Sg meaning (N=1)
+    nalt_sg = n1_sem[n1_sem["coll-lax"] == 0].index
+    sp18.loc[nalt_sg].to_csv(
+        os.path.join(outdir, "leftovers/nalt_sg.tsv"),
         **outcsv_args
     )
 
-    # only Sg forms (N=892)
-    ic_nalt_sg = ic_nums[ic_nums["pl_form"] == 0].index
-    ident_cc_all.loc[ic_nalt_sg].to_csv(
-        os.path.join(outdir, "leftovers/ic_nalt_sg.tsv"),
-        **outcsv_args
-    )
-
-    # only Pl forms (N=243)
-    ic_nalt_pl = ic_nums[ic_nums["sg_form"] == 0].index
-    ident_cc_all.loc[ic_nalt_pl].to_csv(
-        os.path.join(outdir, "leftovers/ic_nalt_pl.tsv"),
-        **outcsv_args
-    )
+    # # only Pl meaning (N=0)
+    # nalt_pl = n1_sem[n1_sem["ind"] == 0].index
+    # sp18.loc[nalt_pl].to_csv(
+    #     os.path.join(outdir, "leftovers/nalt_pl.tsv"),
+    #     **outcsv_args
+    # )
 
     # alternating forms (N=2318, UniqN=1246, UniqCN=869)
     ident_const_alt = ident_cc_all[
@@ -339,22 +276,7 @@ def main():
     # Since, again, this difference points to the IntPE rather than 
     # the ExtPE, we exclude these combinations from the analysis of the ExtPE.
 
-    # counts of compounds with 'ind'/'coll'/'konvc' N1 meaning
-    # built from each constituent combination
-    ic_n1_sem_data = {
-        const_comb: {
-            n1_sem: len(group[group["n1_sem"] == n1_sem])
-            for n1_sem in ["ind", "coll", "konvc"]
-        }
-        for const_comb, group in ident_const_alt.groupby("const_comb")
-    }
-    ic_n1_sem = pd.DataFrame.from_dict(ic_n1_sem_data, orient="index")
-    ic_n1_sem.to_csv(
-        os.path.join(outdir, "summaries/ic_n1_sem.tsv"),
-        **outcsv_args
-    )
-    ic_n1_sem_share_ind = ic_n1_sem["ind"] / ic_n1_sem.sum(axis=1)
-
+    
     # IntPE (N=387)
     ic_n1_sem_non_ind = ic_n1_sem_share_ind[ic_n1_sem_share_ind < 1].index
     ident_const_alt.loc[ic_n1_sem_non_ind].to_csv(
