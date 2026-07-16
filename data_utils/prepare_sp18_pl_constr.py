@@ -55,14 +55,6 @@ def main():
     #   5. Save the resulting dataset.
 
 
-    # As a result of the preprocessing, we obtain the following dataset
-    # (has the same notation as SP18):
-    #
-    #   * 'resources/developed/sp18/external_effect/ident_cc_all.tsv'
-    #   (N=3453, UniqN=2130, UniqCN=1402)
-    #   Unique compounds with a WC of 20 or more in DeReKo.
-
-
     sp18_dir = "resources/developed/sp18"
 
 
