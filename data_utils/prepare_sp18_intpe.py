@@ -12,7 +12,7 @@ from check_applicability import applicability_checkers
 from .gecodb_compound_parser import Compound
 
 
-# python3 -m data_utils.prepare_sp18_internal
+# python3 -m data_utils.prepare_sp18_intpe
 def main():
 
     # This script prepares the default version of SP18 dataset
