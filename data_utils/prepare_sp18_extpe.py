@@ -93,48 +93,48 @@ def main():
     # As a result of the preprocessing, we obtain the following datasets
     # (all have the same notation as SP18):
     #
-    #   * 'resources/developed/sp18/external_effect/ident_cc_all.tsv'
+    #   * 'resources/developed/sp18/extpe/ident_cc_all.tsv'
     #   (N=3453, UniqN=2130, UniqCN=1402)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker)
     #
     #
-    #   * 'resources/developed/sp18/external_effect/ic_alt.tsv'
+    #   * 'resources/developed/sp18/extpe/ic_alt.tsv'
     #   (N=2318, UniqN=1246, UniqCN=869)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing both in the Sg and the Pl forms
     #
-    #   * 'resources/developed/sp18/external_effect/leftovers/ic_nalt_sg.tsv'
+    #   * 'resources/developed/sp18/extpe/leftovers/ic_nalt_sg.tsv'
     #   (N=892)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing only in the Sg form
     #
-    #   * 'resources/developed/sp18/external_effect/leftovers/ic_nalt_pl.tsv'
+    #   * 'resources/developed/sp18/extpe/leftovers/ic_nalt_pl.tsv'
     #   (N=243)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing only in the Pl form
     #
     #
-    #   * 'resources/developed/sp18/external_effect/ic_alt_nipe.tsv'
+    #   * 'resources/developed/sp18/extpe/ic_alt_nipe.tsv'
     #   (N=1931, UniqN=1043, UniqCN=724)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing both in the Sg and the Pl forms
     #   and not undergoing the IntPE
     #
-    #   * 'resources/developed/sp18/external_effect/leftovers/ic_alt_ipe.tsv'
+    #   * 'resources/developed/sp18/extpe/leftovers/ic_alt_ipe.tsv'
     #   (N=387)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing both in the Sg and the Pl forms
     #   and undergoing the IntPE
     #
     #
-    #   * 'resources/developed/sp18/external_effect/ic_alt_nipe_npll.tsv'
+    #   * 'resources/developed/sp18/extpe/ic_alt_nipe_npll.tsv'
     #   (N=1236, UniqN=665, UniqCN=468, UniqN1N=30)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing both in the Sg and the Pl forms
     #   and not undergoing the IntPE whose N1 may not attach a pluralic linker
     #
-    #   * 'resources/developed/sp18/external_effect/leftovers/ic_alt_nipe_pll.tsv'
+    #   * 'resources/developed/sp18/extpe/leftovers/ic_alt_nipe_pll.tsv'
     #   (N=695, UniqN1N=16)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing both in the Sg and the Pl forms
@@ -142,21 +142,21 @@ def main():
     #
     #
     #
-    #   * 'resources/developed/sp18/external_effect/summaries/ic_nums.tsv'
+    #   * 'resources/developed/sp18/extpe/summaries/ic_nums.tsv'
     #   (UniqCN=1402)
     #   Counts of compounds in the Sg/Pl forms built from each constituent combination
-    #   (from 'resources/developed/sp18/external_effect/ident_cc_all.tsv')
+    #   (from 'resources/developed/sp18/extpe/ident_cc_all.tsv')
     #
-    #   * 'resources/developed/sp18/external_effect/summaries/ic_n1_sem.tsv'
+    #   * 'resources/developed/sp18/extpe/summaries/ic_n1_sem.tsv'
     #   (UniqCN=869)
     #   Counts of compounds with 'ind'/'coll'/'konvc' N1 meaning 
     #   built from each constituent combination
-    #   (from 'resources/developed/sp18/external_effect/ic_alt.tsv')
+    #   (from 'resources/developed/sp18/extpe/ic_alt.tsv')
     #
-    #   * 'resources/developed/sp18/external_effect/summaries/ic_alt_nipe_constr.tsv'
+    #   * 'resources/developed/sp18/extpe/summaries/ic_alt_nipe_constr.tsv'
     #   (UniqN1N=46)
     #   Record of applicable N1-targeting constraints for each unique N1
-    #   (from 'resources/developed/sp18/external_effect/ic_alt_nipe.tsv')
+    #   (from 'resources/developed/sp18/extpe/ic_alt_nipe.tsv')
 
     # Thus, the data tree looks as follows:
     #
@@ -171,50 +171,49 @@ def main():
     #  constituent combinations                 from unique constituent
     #  (N=3453, UniqN=2130, UniqCN=1402)          combinations (N=4669)
     # 'resources/developed/sp18/
-    # external_effect/ident_cc_all.tsv' -----> counts of compounds in the Sg/Pl forms
+    # extpe/ident_cc_all.tsv' -----> counts of compounds in the Sg/Pl forms
     #           |     \__                       built from each constituent combination (UniqCN=1402)
-    #           |        \__               'resources/developed/sp18/external_effect/summaries/ic_nums.tsv'
+    #           |        \__               'resources/developed/sp18/extpe/summaries/ic_nums.tsv'
     #           |           \___________ 
     #           |            __________/\_________ 
     #           |           /                     \   
     #           |   + appearing only               + appearing only
     #           |   in the Sg form (N=892)         in the Pl form (N=243)
-    #           |   'resources/developed/sp18/     'resources/developed/sp18/
-    #           |    external_effect/leftovers/    external_effect/leftovers/
-    #           |    ic_nalt_sg.tsv'                 ic_nalt_pl.tsv'
-    #           | 
+    #           |   'resources/developed/sp18/      'resources/developed/sp18/
+    #           | extpe/leftovers/ic_nalt_sg.tsv'    extpe/leftovers/ic_nalt_pl.tsv'
+    #           |                     
     #           | 
     #  + appearing both                            
     #  in the Sg and the Pl forms            counts of compounds with 'ind'/'coll'/'konvc' N1 meaning
     #  (N=2318, UniqN=1246, UniqCN=869) ----->  built from each constituent combination (UniqCN=869)
-    # 'resources/developed/sp18/           'resources/developed/sp18/external_effect/summaries/ic_n1_sem.tsv'
-    # external_effect/ic_alt.tsv'
+    # 'resources/developed/sp18/           'resources/developed/sp18/extpe/summaries/ic_n1_sem.tsv'
+    #    extpe/ic_alt.tsv'     \_____
     #           |                    \__
     #           |                       \_____
     #           |                             \
     #           |               + undergoing the IntPE (N=387)
-    #           |               'resources/developed/sp18/external_effect/leftovers/ic_alt_ipe.tsv'
+    #           |         'resources/developed/sp18/extpe/leftovers/ic_alt_ipe.tsv'
     #           |
     #           |
     #  + not undergoing the IntPE               Record of applicable N1-targeting constraints
     #  (N=1931, UniqN=1043, UniqCN=724) ----->      for each unique N1 (UniqN1N=46)
-    # 'resources/developed/sp18/                  'resources/developed/sp18/external_effect/
-    # external_effect/ic_alt_nipe.tsv'              summaries/ic_alt_nipe_constr.tsv'
+    # 'resources/developed/sp18/                  'resources/developed/sp18/extpe/
+    #     extpe/ic_alt_nipe.tsv'                  summaries/ic_alt_nipe_constr.tsv'
     #           |                    \__
     #           |                       \_____
     #           |                             \
     #  + N1 may not attach                 + N1 may attach 
     #  a pluralic linker                    a pluralic linker     
     #   (N=1236, UniqN=665,                   (N=695, UniqN1N=16)
-    #  UniqCN=468, UniqN1N=30)                'resources/developed/sp18/
-    # 'resources/developed/sp18/                  external_effect/leftovers/
-    # external_effect/ic_alt_nipe_npll.tsv'         ic_alt_nipe_pll.tsv'
+    #  UniqCN=468, UniqN1N=30)               'resources/developed/sp18/
+    # 'resources/developed/sp18/              extpe/leftovers/ic_alt_nipe_pll.tsv'
+    # extpe/ic_alt_nipe_npll.tsv'         
 
 
     sp18_path = "resources/developed/sp18/sp18.tsv"
     constr_path = "constraints/constraints_all_revised.yaml"
 
-    outdir = "resources/developed/sp18/external_effect"
+    outdir = "resources/developed/sp18/extpe"
     os.makedirs(outdir, exist_ok=True)
     os.makedirs(os.path.join(outdir, "summaries"), exist_ok=True)
     os.makedirs(os.path.join(outdir, "leftovers"), exist_ok=True)
