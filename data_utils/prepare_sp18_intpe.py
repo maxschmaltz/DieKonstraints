@@ -90,11 +90,11 @@ def main():
     # As a result of the preprocessing, we obtain the following datasets
     # (all have the same notation as SP18):
     #
-    #   * 'resources/developed/sp18/internal_effect/alt.tsv'
+    #   * 'resources/developed/sp18/intpe/alt.tsv'
     #   (N=2318, UniqN=1246, UniqCN=869)
     #   Compounds built from N1s appearing both with a Sg and with a Pl meaning
     #
-    #   * 'resources/developed/sp18/internal_effect/leftovers/nalt_sg.tsv'
+    #   * 'resources/developed/sp18/intpe/leftovers/nalt_sg.tsv'
     #   (N=892)
     #   Compounds built from N1s appearing only with a Sg meaning
     #
@@ -102,27 +102,27 @@ def main():
     #   (Compounds built from N1s appearing only with a Pl meaning)
     #
     #
-    #   * 'resources/developed/sp18/internal_effect/alt_npll.tsv'
+    #   * 'resources/developed/sp18/intpe/alt_npll.tsv'
     #   (N=1236, UniqN=665, UniqCN=468, UniqN1N=30)
     #   Compounds built from N1s appearing both with a Sg and with a Pl meaning
     #   that may not attach a pluralic linker
     #
-    #   * 'resources/developed/sp18/internal_effect/leftovers/alt_pll.tsv'
+    #   * 'resources/developed/sp18/intpe/leftovers/alt_pll.tsv'
     #   (N=695, UniqN1N=16)
     #   Compounds built from N1s appearing both with a Sg and with a Pl meaning
     #   that may attach a pluralic linker
     #
     #
     #
-    #   * 'resources/developed/sp18/internal_effect/summaries/n1_sem.tsv'
+    #   * 'resources/developed/sp18/intpe/summaries/n1_sem.tsv'
     #   (UniqCN=869)
     #   Counts of compounds with 'ind'/'coll'/'konvc' N1 meaning 
     #   built from each N1 (from 'resources/developed/sp18/sp18.tsv')
     #
-    #   * 'resources/developed/sp18/internal_effect/summaries/alt_constr.tsv'
+    #   * 'resources/developed/sp18/intpe/summaries/alt_constr.tsv'
     #   (UniqN1N=46)
     #   Record of applicable N1-targeting constraints for each unique N1
-    #   (from 'resources/developed/sp18/internal_effect/alt.tsv')
+    #   (from 'resources/developed/sp18/intpe/alt.tsv')
 
     # Thus, the data tree looks as follows:
     #
@@ -131,22 +131,21 @@ def main():
     #  (N=8212, UniqN=6889, UniqN1N=46)
     # 'resources/developed/sp18/sp18.tsv'   -----> counts of compounds with 'ind'/'coll'/'konvc'
     #           |     \__                         N1 meaning built from each N1 (UniqN1N=46)
-    #           |        \__               'resources/developed/sp18/internal_effect/summaries/n1_sem.tsv'
+    #           |        \__               'resources/developed/sp18/intpe/summaries/n1_sem.tsv'
     #           |           \___________ 
     #           |            __________/\________________ 
     #           |           /                            \   
     #           | + built from N1s appearing only        (+ built from N1s appearing only
     #           | with a Sg meaning (N=187, UniqN1N=1)         with a Pl meaning (N=0))
     #           |   'resources/developed/sp18/
-    #           |    internal_effect/leftovers/
-    #           |       nalt_sg.tsv'
+    #           |   intpe/leftovers/nalt_sg.tsv'
     #           | 
     #           | 
     #  + built from N1s appearing both            Record of applicable N1-targeting constraints
     #  with a Sg and with a Pl meaning   ----->      for each unique N1 (UniqN1N=45)
-    #  (N=8025, UniqN=6746, UniqN1N=45)          'resources/developed/sp18/internal_effect/
-    # 'resources/developed/sp18/                summaries/alt_constr.tsv'
-    # internal_effect/alt.tsv'        
+    #  (N=8025, UniqN=6746, UniqN1N=45)          'resources/developed/sp18/intpe/
+    # 'resources/developed/sp18/                     summaries/alt_constr.tsv'
+    #     intpe/alt.tsv'    \    
     #           |            \______ 
     #           |                   \________
     #           |                            \
@@ -154,13 +153,13 @@ def main():
     #  a pluralic linker                    a pluralic linker     
     # (N=5311, UniqN=4449, UniqN1N=30)     (N=2714, UniqN1N=15)
     # 'resources/developed/sp18/          'resources/developed/sp18/
-    # internal_effect/alt_npll.tsv'     internal_effect/leftovers/alt_pll.tsv'
+    # intpe/alt_npll.tsv'                 intpe/leftovers/alt_pll.tsv'
 
 
     sp18_path = "resources/developed/sp18/sp18.tsv"
     constr_path = "constraints/constraints_all_revised.yaml"
 
-    outdir = "resources/developed/sp18/internal_effect"
+    outdir = "resources/developed/sp18/intpe"
     os.makedirs(outdir, exist_ok=True)
     os.makedirs(os.path.join(outdir, "summaries"), exist_ok=True)
     os.makedirs(os.path.join(outdir, "leftovers"), exist_ok=True)
