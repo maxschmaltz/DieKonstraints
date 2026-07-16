@@ -24,7 +24,7 @@ def main():
     # (UniqN1N=x) refers to the number of N1 **lemmata** in the dataset.
     # 'Compounds' refers to 'compound tokens' unless specified otherwise.
     #
-    # The default SP18 contains N=8212, UniqN=6889 lemmatized compounds
+    # The default SP18 contains N=8212, UniqN=6889, UniqN1N=46 lemmatized compounds
     # in Sg and Pl forms (different cases) with individual or collective meaning of N1.
     # The columns are as follows:
     #   gecodb: the GeCoDB notation of compound lemma.
