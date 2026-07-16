@@ -91,7 +91,7 @@ def main():
     # (all have the same notation as SP18):
     #
     #   * 'resources/developed/sp18/intpe/alt.tsv'
-    #   (N=2318, UniqN=1246, UniqCN=869)
+    #   (N=8025, UniqN=6746, UniqN1N=45)
     #   Compounds built from N1s appearing both with a Sg and with a Pl meaning
     #
     #   * 'resources/developed/sp18/intpe/leftovers/nalt_sg.tsv'
@@ -103,7 +103,7 @@ def main():
     #
     #
     #   * 'resources/developed/sp18/intpe/alt_npll.tsv'
-    #   (N=1236, UniqN=665, UniqCN=468, UniqN1N=30)
+    #   (N=5311, UniqN=4449, UniqN1N=30)
     #   Compounds built from N1s appearing both with a Sg and with a Pl meaning
     #   that may not attach a pluralic linker
     #
@@ -115,12 +115,12 @@ def main():
     #
     #
     #   * 'resources/developed/sp18/intpe/summaries/n1_sem.tsv'
-    #   (UniqCN=869)
+    #   (UniqN1N=46)
     #   Counts of compounds with 'ind'/'coll'/'konvc' N1 meaning 
     #   built from each N1 (from 'resources/developed/sp18/sp18.tsv')
     #
     #   * 'resources/developed/sp18/intpe/summaries/alt_constr.tsv'
-    #   (UniqN1N=46)
+    #   (UniqN1N=45)
     #   Record of applicable N1-targeting constraints for each unique N1
     #   (from 'resources/developed/sp18/intpe/alt.tsv')
 
