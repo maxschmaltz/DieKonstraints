@@ -1,0 +1,8 @@
+	vs_mfreq	vs_hfreq
+N	864.0	803.0
+df	1.0	1.0
+chi2	0.237	0.837
+p	0.626	0.36
+cramer_v	0.017	0.032
+resids_cong	0.571	1.007
+resids_incong	-0.571	-1.007
