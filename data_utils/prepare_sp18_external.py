@@ -215,6 +215,9 @@ def main():
     constr_path = "constraints/constraints_all_revised.yaml"
 
     outdir = "resources/developed/sp18/external_effect"
+    os.makedirs(outdir, exist_ok=True)
+    os.makedirs(os.path.join(outdir, "summaries"), exist_ok=True)
+    os.makedirs(os.path.join(outdir, "leftovers"), exist_ok=True)
 
     outcsv_args = {
         "sep": "\t",
