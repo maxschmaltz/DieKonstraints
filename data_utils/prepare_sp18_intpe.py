@@ -187,6 +187,8 @@ def main():
         ),
         quoting=3   # = csv.QUOTE_NONE, separate by tabs only
     )
+    # unnecessary column
+    sp18.drop(columns=["n2_num"], inplace=True)
 
 
     # 2. Load the constraints.
