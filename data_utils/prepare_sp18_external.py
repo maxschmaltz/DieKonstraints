@@ -26,7 +26,7 @@ def main():
     # (UniqN1N=x) refers to the number of N1 **lemmata** in the dataset.
     # 'Compounds' refers to 'compound tokens' unless specified otherwise.
     #
-    # The default SP18 contains N=8212, UniqN=6889 lemmatized compounds
+    # The default SP18 contains N=8212, UniqN=6889, UniqCN=6161, UniqN1N=46 lemmatized compounds
     # in Sg and Pl forms (different cases) with individual or collective meaning of N1.
     # The columns are as follows:
     #   gecodb: the GeCoDB notation of compound lemma.
@@ -162,7 +162,7 @@ def main():
     #
     #          SP18
     #   lemmatized compounds
-    #   (N=8212, UniqN=6889)
+    # (N=8212, UniqN=6889, UniqCN=6161, UniqN1N=46)
     # 'resources/developed/sp18/sp18.tsv'
     #           |                    \__
     #           |                       \_____
@@ -228,7 +228,7 @@ def main():
 
     # 1. Load SP18.
     
-    # SP18 (N=8212, UniqN=6889)
+    # SP18 (N=8212, UniqN=6889, UniqCN=6161, UniqN1N=46)
     sp18 = pd.read_csv(
         sp18_path,
         sep="\t",
@@ -276,6 +276,7 @@ def main():
 
     # counts of compounds in the Sg/Pl forms built
     # from each constituent combination
+    # (UniqCN=1402)
     ic_nums_data = {
         const_comb: {
             "sg_form": len(group[group["n2_num"] == "sg"]),
@@ -500,7 +501,7 @@ def main():
                 axis=1
             )
         )
-    # (UniqN1N=46, one of them is NA)
+    # (UniqN1N=46, one of them is NA since it is not in CELEX-nouns)
     ic_alt_nipe_constr.to_csv(
         os.path.join(outdir, "summaries/ic_alt_nipe_constr.tsv"),
         **outcsv_args
