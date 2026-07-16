@@ -12,6 +12,7 @@ from check_applicability import applicability_checkers
 from .gecodb_compound_parser import Compound
 
 
+# python3 -m data_utils.prepare_sp18_internal
 def main():
 
     # This script prepares the default version of SP18 dataset
@@ -20,8 +21,6 @@ def main():
     #
     # Convention: (N=x) refers to the number of compound **tokens** in the dataset, 
     # (UniqN=x) refers to the number of unique compound **lemmata** in the dataset,
-    # (UniqCN=x) refers to the number of unique constituent combinations
-    # in the dataset (regardless of the linker),
     # (UniqN1N=x) refers to the number of N1 **lemmata** in the dataset.
     # 'Compounds' refers to 'compound tokens' unless specified otherwise.
     #
@@ -129,23 +128,23 @@ def main():
     #
     #          SP18
     #   lemmatized compounds
-    #   (N=8212, UniqN=6889)
+    #  (N=8212, UniqN=6889, UniqN1N=46)
     # 'resources/developed/sp18/sp18.tsv'   -----> counts of compounds with 'ind'/'coll'/'konvc'
-    #           |     \__                         N1 meaning built from each N1 (UniqCN=1402)
+    #           |     \__                         N1 meaning built from each N1 (UniqN1N=46)
     #           |        \__               'resources/developed/sp18/internal_effect/summaries/n1_sem.tsv'
     #           |           \___________ 
-    #           |            __________/\____________ 
-    #           |           /                        \   
-    #           | + built from N1s appearing only     (+ built from N1s appearing only
-    #           |   with a Sg meaning (N=892)         with a Pl meaning (N=0))
+    #           |            __________/\________________ 
+    #           |           /                            \   
+    #           | + built from N1s appearing only        (+ built from N1s appearing only
+    #           | with a Sg meaning (N=187, UniqN1N=1)         with a Pl meaning (N=0))
     #           |   'resources/developed/sp18/
     #           |    internal_effect/leftovers/
     #           |       nalt_sg.tsv'
     #           | 
     #           | 
     #  + built from N1s appearing both            Record of applicable N1-targeting constraints
-    #  with a Sg and with a Pl meaning   ----->      for each unique N1 (UniqN1N=46)
-    #  (N=2318, UniqN=1246, UniqCN=869)          'resources/developed/sp18/internal_effect/
+    #  with a Sg and with a Pl meaning   ----->      for each unique N1 (UniqN1N=45)
+    #  (N=8025, UniqN=6746, UniqN1N=45)          'resources/developed/sp18/internal_effect/
     # 'resources/developed/sp18/                summaries/alt_constr.tsv'
     # internal_effect/alt.tsv'        
     #           |            \______ 
@@ -153,16 +152,18 @@ def main():
     #           |                            \
     #  + N1 may not attach                 + N1 may attach 
     #  a pluralic linker                    a pluralic linker     
-    #   (N=1236, UniqN=665,                   (N=695, UniqN1N=16)
-    #  UniqCN=468, UniqN1N=30)                'resources/developed/sp18/
-    # 'resources/developed/sp18/                  internal_effect/leftovers/
-    # internal_effect/alt_npll.tsv'                 alt_pll.tsv'
+    # (N=5311, UniqN=4449, UniqN1N=30)     (N=2714, UniqN1N=15)
+    # 'resources/developed/sp18/          'resources/developed/sp18/
+    # internal_effect/alt_npll.tsv'     internal_effect/leftovers/alt_pll.tsv'
 
 
     sp18_path = "resources/developed/sp18/sp18.tsv"
     constr_path = "constraints/constraints_all_revised.yaml"
 
     outdir = "resources/developed/sp18/internal_effect"
+    os.makedirs(outdir, exist_ok=True)
+    os.makedirs(os.path.join(outdir, "summaries"), exist_ok=True)
+    os.makedirs(os.path.join(outdir, "leftovers"), exist_ok=True)
 
     outcsv_args = {
         "sep": "\t",
@@ -173,7 +174,7 @@ def main():
 
     # 1. Load SP18.
     
-    # SP18 (N=8212, UniqN=6889)
+    # SP18 (N=8212, UniqN=6889, UniqN1N=46)
     sp18 = pd.read_csv(
         sp18_path,
         sep="\t",
@@ -203,6 +204,7 @@ def main():
 
     # counts of compounds with 'ind'/'coll'/'konvc' N1 meaning
     # built from each N1
+    # (UniqN1N=46)
     n1_sem_data = {
         const_comb: {
             n1_sem: len(group[group["n1_sem"] == n1_sem])
@@ -218,9 +220,9 @@ def main():
     # we will use the lax annotation here
     n1_sem["coll-lax"] = n1_sem["coll"] + n1_sem["konvc"]
 
-    # only Sg meaning (N=1)
+    # only Sg meaning (N=187, UniqN=143, UniqN1N=1)
     nalt_sg = n1_sem[n1_sem["coll-lax"] == 0].index
-    sp18.loc[nalt_sg].to_csv(
+    sp18[sp18["n1"].isin(nalt_sg)].to_csv(
         os.path.join(outdir, "leftovers/nalt_sg.tsv"),
         **outcsv_args
     )
@@ -232,85 +234,30 @@ def main():
     #     **outcsv_args
     # )
 
-    # alternating forms (N=2318, UniqN=1246, UniqCN=869)
-    ident_const_alt = ident_cc_all[
-        ~ident_cc_all.index.isin(ic_nalt_sg) &
-        ~ident_cc_all.index.isin(ic_nalt_pl)
+    # alternating forms (N=8025, UniqN=6746, UniqN1N=45)
+    alt = sp18[
+        ~sp18["n1"].isin(nalt_sg) # &
+        # ~sp18.index.isin(nalt_pl)
     ]
-    ident_const_alt.to_csv(
-        os.path.join(outdir, "ic_alt.tsv"),
+    alt.to_csv(
+        os.path.join(outdir, "alt.tsv"),
         **outcsv_args
     )
 
 
-    # 5. Leave out compounds under the IntPE.
-
-    # Problematic group 2.
-    # We assume that since in standard (not colloquial)
-    # German, the combination of N1 and the linker should
-    # remain the same in Sg and Pl compound form,
-    # (e.g. Apfelbaum vs. Apfelbäume),
-    # and since the  should enforce
-    # the pluralic linker, nouns that undergo the
-    #  may not exhibit a reliable
-    # alternation in Sg vs. Pl forms, since they would
-    # receive the pluralic linker in its base form (Sg)
-    # and bring it to the Pl form. This is exemplified 
-    # by the examples in the dataset of Äpfelkiste vs. Äpfelkisten,
-    # or Liederabend vs. Liederabende.
-    # We therefore further separate the data onto the subsets
-    # of alternating compounds with no 
-    # and those with the .
-    # 
-    # Please note that a few constituent combinations exhibit
-    # variation between Sg and Pl-like meaning of N1
-    # in different entries depending on the context (refer to the dataset).
-    # These are:
-    # 'bett+belegung', 'bucht+system', 'ei+paket',
-    # 'ei+sack', 'element+häufigkeit', 'element+zuordnung', 'gerät+verlust',
-    # 'hand+kontakt', 'hund+buch', 'kind+haus', 'kommune+bewegung',
-    # 'kommune+tag', 'lied+abend', 'mutter+zentrum', 'nation+tafel',
-    # 'schloss+tour', 'schwester+genossenschaft', 'stadt+tour', 'vater+zentrum',
-    # 'vogel+buch', 'vogel+population', 'vogel+zimmer', 'zahn+differenz'.
-    # 
-    # Since, again, this difference points to the IntPE rather than 
-    # the ExtPE, we exclude these combinations from the analysis of the ExtPE.
-
-    
-    # IntPE (N=387)
-    ic_n1_sem_non_ind = ic_n1_sem_share_ind[ic_n1_sem_share_ind < 1].index
-    ident_const_alt.loc[ic_n1_sem_non_ind].to_csv(
-        os.path.join(outdir, "leftovers/ic_alt_ipe.tsv"),
-        **outcsv_args
-    )
-
-    # no IntPE (N=1931, UniqN=1043, UniqCN=724)
-    ic_alt_nipe = ident_const_alt[
-        ~ident_const_alt.index.isin(ic_n1_sem_non_ind)
-    ]
-    ic_alt_nipe.to_csv(
-        os.path.join(outdir, "ic_alt_nipe.tsv"),
-        **outcsv_args
-    )
-
-
-    # 6. Leave out compounds whose N1 may attach the pluralic linker
+    # 4. Leave out compounds whose N1 may attach the pluralic linker
     # due to other constraints.
 
-    # Problematic group 3.
+    # Problematic group 2.
     # As we know, semantic constraints are not the only constraints 
     # that govern linker choice. There may be cases where a constituent
-    # with no ExtPE will still consistently receive a pluralic linker (with no plural cue)
+    # with no IntPE will still consistently receive a pluralic linker (with no plural cue)
     # due to other constraints, e.g. phonological or morphological. 
-    # Since a compound with a pluralic linker in Sg will most probably appear 
-    # with the same linker in Pl (see the explanation above), we expect to see 
-    # the ExtPE (if it exists) only in the compounds that may not insert 
-    # the pluralic linker the their lemmatized (hence, also Sg) form. 
-    # Otherwise, if the compound inserts the pluralic linker (in the Sg form), 
-    # the chances are that it will also  insert the pluralic linker in the Pl form, 
-    # and thus the ExtPE will be masked.
+    # We therefore expect to see the ExtPE (if it exists) more pronounced
+    # in the compounds that may not insert the pluralic linker due to other constraints. 
+    # Otherwise, the IntPE may be masked.
     # This is exemplified by the examples in the dataset of 
-    # 'Katzenfell' vs. 'Katzenfelle', 'Kinderbuch' vs. 'Kinderbücher'.
+    # 'Katzenfell', 'Kinderbuch'.
     # Therefore, we will here separate the subset into the group
     # of compounds whose N1 may and may not insert a pluralic linker.
 
@@ -325,23 +272,18 @@ def main():
     # the empirical difference caused by the colloquial speech 
     # in cases the empirical data does not match the theoretical expectation.
 
-    # TODO
-    # Since we only target N1s, we will only consider constraints
-    # whose applicability item is N1 as defined by [shmalts_2026].
-    # This then excludes a number of constraints; howeve, since
-    # we are actually interested in constraints that assign a pluralic linker,
-    # the excluded constraints are irrelevent anyways as demostrated below:
-    # * The default constraint. Assigns a zero linker.
-    # * A number of semantic constraints that, while they assign a pluralic linker,
-    # do so under the IntPE excluded above.
-    # * Copulative, argumental compounds, technical terms, and a few other constraints 
-    # that assign -s- or a zero linker.
-    # * All L2P constraints that are irrelevant to the ExtPE, since they 
+    # On top of targeting non-pluralic constraints only, we will also 
+    # ignore L2P constraints that are irrelevant to the ExtPE, since they 
     # are not generative.
-    # However, note that there are a few N1-targeting constraints 
+    # Note that since we are actually interested in constraints that assign 
+    # a pluralic linker, most of the constraints whose checkers are not implemented 
+    # at the time of this step (June 2026) are irrelevent anyways:
+    # these are copulative, argumental compounds, technical terms, and a few other
+    # constraints that assign -s- or a zero linker.
+    # However, note that there are two non-pluralic constraints 
     # that assign a pluralic linker, but which are not implemented 
-    # in the applicability checkers of [shmalts_2026], and this is 
-    # a **limitation** of the current analysis. These are:
+    # in the applicability checkers on the time of this step (June 2026),
+    # and this is a **limitation** of the current analysis. These are:
     # * `p2l:decl_cl:pl:#e-0|msyl_anim-e` (assigns -e- to monosyllabic animal designations).
     # * `p2l:decl_cl:pl:#er-0/er|anim-er` (assigns -"er- to monosyllabic animal designations).
 
@@ -358,7 +300,12 @@ def main():
         applicable_pl_constr = []
         all_acceptable_linkers = []
         for c_id, constraint in constraints.items():
-            if constraint["appl_item"] != "n1":
+            if (
+                # non-pluralic constraints only
+                constraint["is_pluralic"] or
+                # ignore L2P
+                ("linker" in constraint["appl_item"])
+            ):
                 continue
             func_name = constraint["func_alias"]
             if hasattr(applicability_checkers, func_name + "_is_applicable"):
@@ -390,53 +337,53 @@ def main():
 
     # record applicable N1-targeting constraints for each unique N1
     # TODO: optimize
-    ic_alt_nipe_constr = ic_alt_nipe.copy()	\
+    alt_constr = alt.copy()	\
         [["n1", "n1_pl_marker"]]	\
         .reset_index(drop=True)	\
         .set_index("n1")
     # keep unique N1s
-    ic_alt_nipe_constr = ic_alt_nipe_constr[
-        ~ic_alt_nipe_constr.index.duplicated(keep="first")
+    alt_constr = alt_constr[
+        ~alt_constr.index.duplicated(keep="first")
     ]
     
     with tqdm(
-        total=len(ic_alt_nipe_constr), 
+        total=len(alt_constr), 
         desc="Checking pluralic linker acceptability"
     ) as pbar:
         (
-            ic_alt_nipe_constr["is_pll_acceptable"],
-            ic_alt_nipe_constr["acceptable_linkers"],
-            ic_alt_nipe_constr["applicable_constr"],
-            ic_alt_nipe_constr["applicable_pl_constr"]
+            alt_constr["is_pll_acceptable"],
+            alt_constr["acceptable_linkers"],
+            alt_constr["applicable_constr"],
+            alt_constr["applicable_pl_constr"]
         ) = zip(
-            *ic_alt_nipe_constr.apply(
+            *alt_constr.apply(
                 lambda row: is_pll_acceptable(row.name, row["n1_pl_marker"], pbar),
                 axis=1
             )
         )
-    # (UniqN1N=46, one of them is NA)
-    ic_alt_nipe_constr.to_csv(
-        os.path.join(outdir, "summaries/ic_alt_nipe_constr.tsv"),
+    # (UniqN1N=45, one of them is NA since it is not in CELEX-nouns)
+    alt_constr.to_csv(
+        os.path.join(outdir, "summaries/alt_constr.tsv"),
         **outcsv_args
     )
     # replace NA with True to exclude those N1s from the analysis,
     # as we cannot reliably determine their acceptability
-    ic_alt_nipe_constr["is_pll_acceptable"] = (
-        ic_alt_nipe_constr["is_pll_acceptable"].fillna(True)
+    alt_constr["is_pll_acceptable"] = (
+        alt_constr["is_pll_acceptable"].fillna(True)
     )
-    n1_pll = ic_alt_nipe_constr[ic_alt_nipe_constr["is_pll_acceptable"]].index
+    n1_pll = alt_constr[alt_constr["is_pll_acceptable"]].index
 
     # N1 may attach the pluralic linker
-    # (N=695, UniqN1N=16)
-    ic_alt_nipe[ic_alt_nipe["n1"].isin(n1_pll)].to_csv(
-        os.path.join(outdir, "leftovers/ic_alt_nipe_pll.tsv"),
+    # (N=2714, UniqN1N=15)
+    alt[alt["n1"].isin(n1_pll)].to_csv(
+        os.path.join(outdir, "leftovers/alt_pll.tsv"),
         **outcsv_args
     )
 
     # N1 may not attach the pluralic linker
-    # (N=1236, UniqN=665, UniqCN=468, UniqN1N=30)
-    ic_alt_nipe[~ic_alt_nipe["n1"].isin(n1_pll)].to_csv(
-        os.path.join(outdir, "ic_alt_nipe_npll.tsv"),
+    # (N=5311, UniqN=4449, UniqN1N=30)
+    alt[~alt["n1"].isin(n1_pll)].to_csv(
+        os.path.join(outdir, "alt_npll.tsv"),
         **outcsv_args
     )
 
