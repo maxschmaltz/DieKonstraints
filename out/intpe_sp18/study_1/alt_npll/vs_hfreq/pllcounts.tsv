@@ -1,0 +1,61 @@
+		l_sg	l_pl	pl_share
+apfel	lfreq	2.0	13.0	0.8666666666666667
+apfel	hfreq	0.0	0.0	
+ball	lfreq	1.0	20.0	0.9523809523809523
+ball	hfreq	1.0	5.0	0.8333333333333334
+bild	lfreq	9.0	19.0	0.6785714285714286
+bild	hfreq	7.0	14.0	0.6666666666666666
+brett	lfreq	6.0	11.0	0.6470588235294118
+brett	hfreq	0.0	1.0	1.0
+brief	lfreq	5.0	16.0	0.7619047619047619
+brief	hfreq	4.0	0.0	0.0
+bucht	lfreq	0.0	8.0	1.0
+bucht	hfreq			
+ei	lfreq	8.0	3.0	0.2727272727272727
+ei	hfreq	0.0	1.0	1.0
+eigenschaft	lfreq	8.0	22.0	0.7333333333333333
+eigenschaft	hfreq			
+element	lfreq	11.0	16.0	0.5925925925925926
+element	hfreq			
+frau	lfreq	11.0	27.0	0.7105263157894737
+frau	hfreq	0.0	25.0	1.0
+gerät	lfreq	5.0	11.0	0.6875
+gerät	hfreq	0.0	3.0	1.0
+geräusch	lfreq	6.0	16.0	0.7272727272727273
+geräusch	hfreq	0.0	0.0	
+geschenk	lfreq	4.0	8.0	0.6666666666666666
+geschenk	hfreq	2.0	2.0	0.5
+hand	lfreq	1.0	16.0	0.9411764705882353
+hand	hfreq	0.0	3.0	1.0
+hund	lfreq	2.0	6.0	0.75
+hund	hfreq	0.0	6.0	1.0
+kind	lfreq	2.0	8.0	0.8
+kind	hfreq	1.0	8.0	0.8888888888888888
+lied	lfreq	10.0	14.0	0.5833333333333334
+lied	hfreq	8.0	6.0	0.42857142857142855
+mutter	lfreq	0.0	18.0	1.0
+mutter	hfreq	0.0	8.0	1.0
+nagel	lfreq	0.0	1.0	1.0
+nagel	hfreq	0.0	0.0	
+nation	lfreq	4.0	18.0	0.8181818181818182
+nation	hfreq	0.0	2.0	1.0
+person	lfreq	8.0	24.0	0.75
+person	hfreq	0.0	17.0	1.0
+produkt	lfreq	16.0	18.0	0.5294117647058824
+produkt	hfreq	14.0	0.0	0.0
+schwert	lfreq	2.0	17.0	0.8947368421052632
+schwert	hfreq	0.0	0.0	
+schwester	lfreq	0.0	14.0	1.0
+schwester	hfreq	0.0	5.0	1.0
+stadt	lfreq	0.0	29.0	1.0
+stadt	hfreq	0.0	24.0	1.0
+vater	lfreq	0.0	16.0	1.0
+vater	hfreq	0.0	3.0	1.0
+vogel	lfreq	11.0	12.0	0.5217391304347826
+vogel	hfreq	9.0	0.0	0.0
+weg	lfreq	13.0	14.0	0.5185185185185185
+weg	hfreq	11.0	10.0	0.47619047619047616
+zahn	lfreq	1.0	13.0	0.9285714285714286
+zahn	hfreq	1.0	0.0	0.0
+zitat	lfreq	6.0	22.0	0.7857142857142857
+zitat	hfreq	0.0	0.0	

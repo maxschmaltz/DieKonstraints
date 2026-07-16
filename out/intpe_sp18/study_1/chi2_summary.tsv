@@ -1,0 +1,15 @@
+		lfreq	mfreq	hfreq
+N	alt	7979.0	3505.0	2645.0
+N	alt_npll	5278.0	2392.0	1808.0
+df	alt	1.0	1.0	1.0
+df	alt_npll	1.0	1.0	1.0
+chi2	alt	268.715	161.013	125.68
+chi2	alt_npll	177.073	103.255	78.937
+p	alt	0.0	0.0	0.0
+p	alt_npll	0.0	0.0	0.0
+cramer_v	alt	0.184	0.214	0.218
+cramer_v	alt_npll	0.183	0.208	0.209
+resids_cong	alt	16.429	12.745	11.275
+resids_cong	alt_npll	13.35	10.228	8.96
+resids_incong	alt	-16.429	-12.745	-11.275
+resids_incong	alt_npll	-13.35	-10.228	-8.96
