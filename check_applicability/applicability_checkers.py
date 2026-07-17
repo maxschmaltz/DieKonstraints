@@ -876,6 +876,28 @@ def schwa_fin_applies(compound: Compound):
 
 
 
+# p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+#
+# First constituents that are constituted by 
+# consonant-final weak feminine nouns 
+# regularly attach -s-, a zero linker, or -(e)n-.
+
+def f_cons_fin_is_applicable(compound: Compound) -> bool:
+	n1 = compound.stems[0].morph
+	return (
+		_is_of_gender(n1, "f")
+		and _is_consonant_final(n1)
+		and _is_of_plural(n1, "en")
+	)
+
+def f_cons_fin_applies(compound: Compound) -> bool:
+	return (
+		_has_no_linker(compound)
+		or _has_linker(compound, linker_morph="s")
+		or _has_linker(compound, linker_morph="en")
+	)
+
+
 # p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
 #
 # First constituents that are constituted by
