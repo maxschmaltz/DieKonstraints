@@ -654,7 +654,7 @@ def sfx_s_applies(compound: Compound):
 #
 # First constituents that are constituted by deverbal nouns that end
 # in suffix -en mostly attach -s-. 
-# Zero linker variants with a significantly lower frequency may occur.
+# (Zero linker variants with a significantly lower frequency may occur.)
 
 def sfx_deverb_en_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
@@ -666,21 +666,22 @@ def sfx_deverb_en_is_applicable(compound: Compound):
 def sfx_deverb_en_applies(compound: Compound):
 	return (
 		_has_linker(compound, linker_morph="s")
-		or (
-			_has_no_linker(compound)
-			and (
-				(
-					s_var := compound.stems[0].morph
-					+ "_+s_" + compound.stems[1].morph
-				)
-				in gecodb_v06.index
-			) and (
-				(
-					int(gecodb_v06.loc[s_var, "comp_freq"])
-					/ int(gecodb_v06.loc[compound.gecodb, "comp_freq"])
-				) >= 3	# at least 3 times less frequent
-			)
-		)
+		# # DEPRECATED: see explanation in changelog of constraints
+		# or (
+		# 	_has_no_linker(compound)
+		# 	and (
+		# 		(
+		# 			s_var := compound.stems[0].morph
+		# 			+ "_+s_" + compound.stems[1].morph
+		# 		)
+		# 		in gecodb_v06.index
+		# 	) and (
+		# 		(
+		# 			int(gecodb_v06.loc[s_var, "comp_freq"])
+		# 			/ int(gecodb_v06.loc[compound.gecodb, "comp_freq"])
+		# 		) >= 3	# at least 3 times less frequent
+		# 	)
+		# )
 	)
 
 
@@ -750,9 +751,9 @@ def sibilant_fin_applies(compound: Compound):
 # p2l:phon_fin:vow$-0
 #
 # First constituents that are constituted by nouns that end
-# in a full vowel adopt a zero linker regularly 
-# unless this noun is a loanword that ends 
-# with a stressed long [i] (-ie) or a stressed long [e] (-ee).
+# in a full vowel adopt a zero linker almost regularly. 
+# (Exception: this noun is a loanword that ends 
+# with a stressed long [i] (-ie) or a stressed long [e] (-ee).)
 
 def vow_fin_is_applicable(compound: Compound):
 	n1 = compound.stems[0].morph
@@ -764,18 +765,19 @@ def vow_fin_is_applicable(compound: Compound):
 		# avoid diphthongs
 		and not _is_vowel(last_bo_phone)
 		and not _ends_with_phon_schwa(n1)
-		and not (
-			last_phone == "i"					# i
-			and _is_consonant(last_bo_phone)	# Ci
-			and _is_last_syl_stressed(n1)		# 'X*Ci
-			and n1.endswith("ie")
-		)
-	 and not (
-			last_phone == "e"					# e
-			and _is_consonant(last_bo_phone)	# Ce
-			and _is_last_syl_stressed(n1)		# 'X*Ce
-			and n1.endswith("ee")
-		)
+		# # DEPRECATED: see explanation in changelog of constraints
+		# and not (
+		# 	last_phone == "i"					# i
+		# 	and _is_consonant(last_bo_phone)	# Ci
+		# 	and _is_last_syl_stressed(n1)		# 'X*Ci
+		# 	and n1.endswith("ie")
+		# )
+	 	# and not (
+		# 	last_phone == "e"					# e
+		# 	and _is_consonant(last_bo_phone)	# Ce
+		# 	and _is_last_syl_stressed(n1)		# 'X*Ce
+		# 	and n1.endswith("ee")
+		# )
 	)
 
 def vow_fin_applies(compound: Compound):

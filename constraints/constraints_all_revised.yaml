@@ -85,6 +85,8 @@ readme: |
     * Mark the pluralic constraints explicitly with `is_pluralic: true` property.
     * Mark datasets and the number of application items specifically in this dataset explicitly with `datasets_n_appl_items` property.
     * Set coverage to 0.0 in `p2l:drv:sfx:F_#in$-en`.
+    * Add a joint non-semantic version of `p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s` and `p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en`: `p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en`.
+    * `p2l:drv:sfx:deverb_#en$-s` and `p2l:phon_fin:vow$-0` were simplified. Specifically, the special cases that described the deviant groups (zero-linker low-frequency variants, loanwords ending in -ie and -ee, respectively) were taken out of the constraint definition and were only kept as explanatory lines. The reason to do so is because the previous definitions contradicted our principle to target more general groups with more general constraints and formulate dedicated constraints for deviant groups. Such, instead of one constraint that target "vowel-final nouns except for ... on -ie and -ee", our principle favors two conflicting constraints targeting "vowel-final nouns" and "... on -ie and -ee". As of now, we only kept the more general constraint. The two more specific constraints are yet to be implemented.
 
 
 
@@ -1703,10 +1705,10 @@ constraints:
     # 25
     p2l:drv:sfx:deverb_#en$-s:
     
-        # TODO: decompose
-        summary: First constituents that are constituted by deverbal nouns that end in suffix -en mostly attach -s-. Zero linker variants with a significantly lower frequency may occur.
-        acceptable_linkers: [_+s_, _]
-        ling_info_type: [derivational, lexical]
+        # TODO: make a constraint for the exception
+        summary: First constituents that are constituted by deverbal nouns that end in suffix -en mostly attach -s-. (Zero linker variants with a significantly lower frequency may occur.)
+        acceptable_linkers: [_+s_]
+        ling_info_type: [derivational]
         is_pluralic: false
         
         appl_item: n1
@@ -1719,11 +1721,11 @@ constraints:
         measures:
             gecodb:
                 coverage:
-                    item: 0.005
-                    type: 0.009
+                    item: NA
+                    type: NA
                 regularity:
-                    item: 0.797
-                    type: 0.957
+                    item: NA
+                    type: NA
         
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
         examples_contra: [essen_portion, leben_geschäft, husten_tropfen, beben_gebiet]
@@ -1924,10 +1926,10 @@ constraints:
     # 29
     p2l:phon_fin:vow$-0:
     
-        # TODO: decompose
-        summary: First constituents that are constituted by nouns that end in a full vowel adopt a zero linker regularly unless this noun is a loanword that ends with a stressed long [i] (-ie) or a stressed long [e] (-ee).
+        # TODO: make a constraint for the exception
+        summary: "First constituents that are constituted by nouns that end in a full vowel adopt a zero linker almost regularly. (Exception: this noun is a loanword that ends with a stressed long [i] (-ie) or a stressed long [e] (-ee))."
         acceptable_linkers: [_]
-        ling_info_type: [phonological, lexical]
+        ling_info_type: [phonological]
         is_pluralic: false
         
         appl_item: n1
@@ -1936,7 +1938,7 @@ constraints:
 
         func_alias: vow_fin
 
-        quantifier: regularly
+        quantifier: almost regularly
         measures:
             gecodb:
                 coverage:
