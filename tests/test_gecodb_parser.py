@@ -218,6 +218,30 @@ class TestGeCoDBParser(unittest.TestCase):
         actual_lemma = compound.lemma
         self.assertEqual(expected_lemma, actual_lemma)
 
+    def test_explicit_umlaut_3(self):
+        # parse compound
+        gecodb = "kind_+er_wagen"
+        compound = Compound(gecodb)
+        # compare components and their properties
+        expected_components = [
+            Stem("kind", span=(0, 4)),
+            Linker("_+er_", allomorph="er", span=(4, 6)),
+            Stem("wagen", span=(6, 11))
+        ]
+        expected_components[0].allomorph = "kind"   # can't set in constructor
+        actual_components = compound.components
+        self.assertListEqual(expected_components, actual_components)
+        # compare linker properties
+        self.assertEqual(compound.linkers[0].morph, "er")
+        # to investigate the effect of the umlaut on
+		# plural effect, we disambiguate between -"er- and -er-
+		# in this version
+        self.assertEqual(compound.linkers[0].adds_umlaut, False)
+        # compare pretty form
+        expected_lemma = "kinderwagen"
+        actual_lemma = compound.lemma
+        self.assertEqual(expected_lemma, actual_lemma)
+
 
     def test_complex_compound_0(self):
         # parse compound
