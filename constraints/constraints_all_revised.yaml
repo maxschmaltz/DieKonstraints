@@ -1853,7 +1853,7 @@ constraints:
                     type: NA
                 support_level: NA
         
-        examples_pro: [rarität_+en_sammlung, kuriosität_+en_händler, aktualitäten_+en_kino]
+        examples_pro: [rarität_+en_sammlung, kuriosität_+en_händler, aktualität_+en_kino]
         examples_contra: []
 
         evidence:

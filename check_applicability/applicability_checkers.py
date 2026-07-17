@@ -92,8 +92,11 @@ def _is_of_plural(
 		# this is to avoid cases like
 		# Stern, _+=e_ ---> True
 		if (
-			plural_marker != "er"	# er is allowed to have no uml
-			and lemma == lemma_uml	# cannot be umlauted
+			# # to investigate the effect of the umlaut on
+			# # plural effect, we disambiguate between -"er- and -er-
+			# # in this version
+			# plural_marker != "er" and	# er is allowed to have no uml
+			lemma == lemma_uml	# cannot be umlauted
 		):
 			return False
 		lemma = lemma_uml
@@ -239,7 +242,8 @@ def _ends_with_phon_schwa(lemma: str) -> bool:
 
 def _is_consonant_final(lemma: str) -> bool:
 	phon_transcription = _get_transcription(lemma)
-	return _is_consonant(lemma)
+	last_phone = phon_transcription[-1]
+	return _is_consonant(last_phone)
 
 
 def _get_syllables(lemma: str) -> list[str]:
@@ -408,12 +412,25 @@ def plur_e_pl_applies(
 # mostly attach a zero linker or -(")er-.
 
 def plur_er_is_applicable(compound: Compound):
-	return _is_of_plural(compound.stems[0].morph, "er", adds_umlaut=True)
+	return (
+		# to investigate the effect of the umlaut on
+		# plural effect, we disambiguate between -"er- and -er-
+		# in this version
+		_is_of_plural(compound.stems[0].morph, "er") or
+		_is_of_plural(compound.stems[0].morph, "er", adds_umlaut=True)
+	)
 
 def plur_er_applies(compound: Compound):
 	return (
-		_has_no_linker(compound)
-		or _has_linker(compound, linker_morph="er", adds_umlaut=True)
+		_has_no_linker(compound) or
+		# to investigate the effect of the umlaut on
+		# plural effect, we disambiguate between -"er- and -er-
+		# in this version
+		_has_linker(
+			compound,
+			linker_morph="er",
+			adds_umlaut=("=" in compound.gecodb)
+		)
 	)
 
 
@@ -1472,7 +1489,7 @@ def e_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="e")
 
 def e_par_applies(compound: Compound):
-	return _is_of_plural(compound.stems[0].morph, "e")
+	return plur_e_is_applicable(compound)
 
 
 # l2p:e|#stressed_syl
@@ -1524,7 +1541,7 @@ def er_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
 
 def er_par_applies(compound: Compound):
-	return _is_of_plural(compound.stems[0].morph, "er", adds_umlaut=True)
+	return plur_er_is_applicable(compound)
 
 
 # l2p:er|#stressed_syl
@@ -1576,7 +1593,7 @@ def e_uml_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="e", adds_umlaut=True)
 
 def e_uml_par_applies(compound: Compound):
-	return _is_of_plural(compound.stems[0].morph, "e", adds_umlaut=True)
+	return plur_e_uml_is_applicable(compound)
 
 
 
@@ -1627,7 +1644,7 @@ def zero_uml_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="", adds_umlaut=True)
 
 def zero_uml_par_applies(compound: Compound):
-	return _is_of_plural(compound.stems[0].morph, "", adds_umlaut=True)
+	return plur_0_uml_is_applicable(compound)
 
 
 
