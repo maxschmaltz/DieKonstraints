@@ -2,10 +2,11 @@
 # and the output of that script is available in 'resources/developed/sp18'.
 
 import os
-import pandas as pd
-from collections import defaultdict
+
+from .load_datasets import load_sp18
 
 
+# python3 -m data_utils.prepare_sp18_pl_constr
 def main():
 
     # This script prepares the default version of SP18 dataset
@@ -61,19 +62,7 @@ def main():
     # 1. Load SP18.
     
     # SP18 (N=8212, UniqN=6889, UniqN1N=46)
-    sp18 = pd.read_csv(
-        os.path.join(sp18_dir, "sp18.tsv"),
-        sep="\t",
-        header=0,
-        index_col="gecodb",
-        # all str, WC int, is linker pluralic bool
-        dtype=defaultdict(
-            lambda: str,
-            wc="int",
-            is_linker_pl="bool"
-        ),
-        quoting=3   # = csv.QUOTE_NONE, separate by tabs only
-    )
+    sp18 = load_sp18(os.path.join(sp18_dir, "sp18.tsv"))
 
 
     # 2. Apply frequency filter.
