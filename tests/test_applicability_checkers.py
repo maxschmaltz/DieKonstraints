@@ -23,6 +23,7 @@ from check_applicability.applicability_checkers import (
     _get_last_cons_cluster,
     _ends_with_phon,
     _ends_with_phon_schwa,
+    _is_consonant_final,
     _has_n_syllables,
     _is_monosyllabic,
     _is_syl_stressed,
@@ -172,16 +173,16 @@ class TestIsOfPlural(unittest.TestCase):
 
 
     def test_is_of_plural_30(self):
-        self.assertTrue(
-            _is_of_plural("kind", "er", adds_umlaut=True)
-        )
-
-    def test_is_of_plural_31(self):
         # to investigate the effect of the umlaut on
         # plural effect, we disambiguate between -"er- and -er-
         # in this version
         self.assertTrue(
             _is_of_plural("kind", "er", adds_umlaut=False)
+        )
+
+    def test_is_of_plural_31(self):
+        self.assertFalse(
+            _is_of_plural("kind", "er", adds_umlaut=True)
         )
 
 
@@ -247,6 +248,11 @@ class TestIsOfPlural(unittest.TestCase):
 
     def test_is_multiple_plural_11(self):
         self.assertTrue(
+            _is_of_plural("licht", "er", adds_umlaut=False)
+        )
+
+    def test_is_multiple_plural_12(self):
+        self.assertFalse(
             _is_of_plural("licht", "er", adds_umlaut=True)
         )
 
@@ -944,6 +950,27 @@ class TestEndsWithPhon(unittest.TestCase):
         )
 
 
+    def test_is_consonant_final_0(self):
+        self.assertTrue(
+            _is_consonant_final("topf")
+        )
+
+    def test_is_consonant_final_1(self):
+        self.assertTrue(
+            _is_consonant_final("mann")
+        )
+
+    def test_is_consonant_final_2(self):
+        self.assertFalse(
+            _is_consonant_final("karte")
+        )
+
+    def test_is_consonant_final_3(self):
+        self.assertFalse(
+            _is_consonant_final("etat")
+        )
+
+
 class HasNSyllables(unittest.TestCase):
 
     def test_has_n_syllables_00(self):
@@ -1475,119 +1502,102 @@ class TestApplicabilityCheckersPlurE(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersPlurEPl:
+class TestApplicabilityCheckersPlurEPl(unittest.TestCase):
 
 	# p2l:decl_cl:pl:#e-0|pl_interpr-e
 	#
     # First constituents that are constituted by nouns that build
-    # the plural form with -e attach -e- irregularly in compounds
-    # in which the second constituent forces
-    # a plural meaning of the given first constituent.
+    # the plural form with -e attach -e- irregularly
 
-    # def test_plur_e_pl_is_applicable_0(self):
-    #     compound = Compound("projekt_+e_macherei")
-    #     self.assertTrue(
-    #         plur_e_pl_is_applicable(compound)
-    #     )
+    def test_plur_e_pl_is_applicable_0(self):
+        compound = Compound("projekt_+e_macherei")
+        self.assertTrue(
+            plur_e_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_e_pl_applies_0(self):
-    #     compound = Compound("projekt_+e_macherei")
-    #     self.assertTrue(
-    #         plur_e_pl_applies(compound)
-    #     )
+    def test_plur_e_pl_applies_0(self):
+        compound = Compound("projekt_+e_macherei")
+        self.assertTrue(
+            plur_e_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_plur_e_pl_is_applicable_1(self):
-    #     compound = Compound("tag_+e_buch")
-    #     self.assertTrue(
-    #         plur_e_pl_is_applicable(compound)
-    #     )
+    def test_plur_e_pl_is_applicable_1(self):
+        compound = Compound("tag_+e_buch")
+        self.assertTrue(
+            plur_e_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_e_pl_applies_1(self):
-    #     compound = Compound("tag_+e_buch")
-    #     self.assertTrue(
-    #         plur_e_pl_applies(compound)
-    #     )
-
-        
-    # def test_plur_e_pl_is_applicable_2(self):
-    #     compound = Compound("punkt_+e_stand")
-    #     self.assertTrue(
-    #         plur_e_pl_is_applicable(compound)
-    #     )
-
-    # def test_plur_e_pl_applies_2(self):
-    #     compound = Compound("punkt_+e_stand")
-    #     self.assertTrue(
-    #         plur_e_pl_applies(compound)
-    #     )
+    def test_plur_e_pl_applies_1(self):
+        compound = Compound("tag_+e_buch")
+        self.assertTrue(
+            plur_e_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_plur_e_pl_is_applicable_3(self):
-    #     compound = Compound("pilz_sammler")
-    #     self.assertTrue(
-    #         plur_e_pl_is_applicable(compound)
-    #     )
+    def test_plur_e_pl_is_applicable_2(self):
+        compound = Compound("punkt_+e_stand")
+        self.assertTrue(
+            plur_e_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_e_pl_applies_3(self):
-    #     compound = Compound("pilz_sammler")
-    #     self.assertFalse(
-    #         plur_e_pl_applies(compound)
-    #     )
-
-        
-    # def test_plur_e_pl_is_applicable_4(self):
-    #     compound = Compound("brot_korb")
-    #     self.assertTrue(
-    #         plur_e_pl_is_applicable(compound)
-    #     )
-
-    # def test_plur_e_pl_applies_4(self):
-    #     compound = Compound("brot_korb")
-    #     self.assertFalse(
-    #         plur_e_pl_applies(compound)
-    #     )
+    def test_plur_e_pl_applies_2(self):
+        compound = Compound("punkt_+e_stand")
+        self.assertTrue(
+            plur_e_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_plur_e_pl_is_applicable_5(self):
-    #     compound = Compound("jahr_zehnt")
-    #     self.assertTrue(
-    #         plur_e_pl_is_applicable(compound)
-    #     )
+    def test_plur_e_pl_is_applicable_3(self):
+        compound = Compound("pilz_sammler")
+        self.assertTrue(
+            plur_e_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_e_pl_applies_5(self):
-    #     compound = Compound("jahr_zehnt")
-    #     self.assertFalse(
-    #         plur_e_pl_applies(compound)
-    #     )
-
-        
-    # def test_plur_e_pl_is_applicable_6(self):
-    #     compound = Compound("tag_+e_lohn")
-    #     self.assertTrue(
-    #         plur_e_pl_is_applicable(compound)
-    #     )
-
-    # def test_plur_e_pl_applies_6(self):
-    #     compound = Compound("tag_+e_lohn")
-    #     self.assertFalse(
-    #         plur_e_pl_applies(compound)
-    #     )
+    def test_plur_e_pl_applies_3(self):
+        compound = Compound("pilz_sammler")
+        self.assertFalse(
+            plur_e_pl_applies(compound, is_linker_pl=False)
+        )
 
         
-    # def test_plur_e_pl_is_applicable_7(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_e_pl_is_applicable(compound)
-    #     )
+    def test_plur_e_pl_is_applicable_4(self):
+        compound = Compound("brot_korb")
+        self.assertTrue(
+            plur_e_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_e_pl_is_applicable_8(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_e_pl_is_applicable(compound)
-    #     )
+    def test_plur_e_pl_applies_4(self):
+        compound = Compound("brot_korb")
+        self.assertFalse(
+            plur_e_pl_applies(compound, is_linker_pl=False)
+        )
 
-	pass
+        
+    def test_plur_e_pl_is_applicable_5(self):
+        compound = Compound("jahr_zehnt")
+        self.assertTrue(
+            plur_e_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_plur_e_pl_applies_5(self):
+        compound = Compound("jahr_zehnt")
+        self.assertFalse(
+            plur_e_pl_applies(compound, is_linker_pl=False)
+        )
+
+        
+    def test_plur_e_pl_is_applicable_6(self):
+        compound = Compound("hund_+e_leine")
+        self.assertFalse(
+            plur_e_pl_is_applicable(compound, is_n1_plsem=False)
+        )
+
+    def test_plur_e_pl_is_applicable_7(self):
+        compound = Compound("buch_+=er_regal")
+        self.assertFalse(
+            plur_e_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
 
 class TestApplicabilityCheckersPlurEAnim:
@@ -1726,13 +1736,25 @@ class TestApplicabilityCheckersPlurEr(unittest.TestCase):
         )
 
     
-    def test_plur_er_is_applicable_2(self):
+    def test_plur_er_is_applicable_20(self):
+        compound = Compound("kind_+er_jacke")
+        self.assertTrue(
+            plur_er_is_applicable(compound)
+        )
+
+    def test_plur_er_applies_20(self):
+        compound = Compound("kind_+er_jacke")
+        self.assertTrue(
+            plur_er_applies(compound)
+        )
+
+    def test_plur_er_is_applicable_21(self):
         compound = Compound("kind_+=er_jacke")
         self.assertTrue(
             plur_er_is_applicable(compound)
         )
 
-    def test_plur_er_applies_2(self):
+    def test_plur_er_applies_21(self):
         compound = Compound("kind_+=er_jacke")
         self.assertTrue(
             plur_er_applies(compound)
@@ -1778,94 +1800,91 @@ class TestApplicabilityCheckersPlurEr(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersPlurErSg:
+class TestApplicabilityCheckersPlurErSg(unittest.TestCase):
 
 	# p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 	#
     # First constituents that are constituted by nouns that build
     # the plural form with -(")er
-    # attach a zero linker in majority of compounds
-    # in which the second constituent forces
-    # a singular meaning of the given first constituent.
+    # attach a zero linker in majority of cases 
+    # when they have a singular meaning.
 
-    # def test_plur_er_sg_is_applicable_0(self):
-    #     compound = Compound("buch_deckel")
-    #     self.assertTrue(
-    #         plur_er_sg_is_applicable(compound)
-    #     )
+    def test_plur_er_sg_is_applicable_0(self):
+        compound = Compound("buch_deckel")
+        self.assertTrue(
+            plur_er_sg_is_applicable(compound, is_n1_plsem=False)
+        )
 
-    # def test_plur_er_sg_applies_0(self):
-    #     compound = Compound("buch_deckel")
-    #     self.assertTrue(
-    #         plur_er_sg_applies(compound)
-    #     )
-
-        
-    # def test_plur_er_sg_is_applicable_1(self):
-    #     compound = Compound("grab_stein")
-    #     self.assertTrue(
-    #         plur_er_sg_is_applicable(compound)
-    #     )
-
-    # def test_plur_er_sg_applies_1(self):
-    #     compound = Compound("grab_stein")
-    #     self.assertTrue(
-    #         plur_er_sg_applies(compound)
-    #     )
+    def test_plur_er_sg_applies_0(self):
+        compound = Compound("buch_deckel")
+        self.assertTrue(
+            plur_er_sg_applies(compound, is_linker_pl=False)
+        )
 
         
-    # def test_plur_er_sg_is_applicable_2(self):
-    #     compound = Compound("blatt_fläche")
-    #     self.assertTrue(
-    #         plur_er_sg_is_applicable(compound)
-    #     )
+    def test_plur_er_sg_is_applicable_1(self):
+        compound = Compound("grab_stein")
+        self.assertTrue(
+            plur_er_sg_is_applicable(compound, is_n1_plsem=False)
+        )
 
-    # def test_plur_er_sg_applies_2(self):
-    #     compound = Compound("blatt_fläche")
-    #     self.assertTrue(
-    #         plur_er_sg_applies(compound)
-    #     )
-
-        
-    # def test_plur_er_sg_is_applicable_3(self):
-    #     compound = Compound("mann_+=er_herz")
-    #     self.assertTrue(
-    #         plur_er_sg_is_applicable(compound)
-    #     )
-
-    # def test_plur_er_sg_applies_3(self):
-    #     compound = Compound("mann_+=er_herz")
-    #     self.assertFalse(
-    #         plur_er_sg_applies(compound)
-    #     )
+    def test_plur_er_sg_applies_1(self):
+        compound = Compound("grab_stein")
+        self.assertTrue(
+            plur_er_sg_applies(compound, is_linker_pl=False)
+        )
 
         
-    # def test_plur_er_sg_is_applicable_4(self):
-    #     compound = Compound("kind_+=er_bild")
-    #     self.assertTrue(
-    #         plur_er_sg_is_applicable(compound)
-    #     )
+    def test_plur_er_sg_is_applicable_2(self):
+        compound = Compound("blatt_fläche")
+        self.assertTrue(
+            plur_er_sg_is_applicable(compound, is_n1_plsem=False)
+        )
 
-    # def test_plur_er_sg_applies_4(self):
-    #     compound = Compound("kind_+=er_bild")
-    #     self.assertFalse(
-    #         plur_er_sg_applies(compound)
-    #     )
+    def test_plur_er_sg_applies_2(self):
+        compound = Compound("blatt_fläche")
+        self.assertTrue(
+            plur_er_sg_applies(compound, is_linker_pl=False)
+        )
 
         
-    # def test_plur_er_sg_is_applicable_5(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_er_sg_is_applicable(compound)
-    #     )
+    def test_plur_er_sg_is_applicable_3(self):
+        compound = Compound("mann_+=er_herz")
+        self.assertTrue(
+            plur_er_sg_is_applicable(compound, is_n1_plsem=False)
+        )
 
-    # def test_plur_er_sg_is_applicable_6(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_er_sg_is_applicable(compound)
-    #     )
+    def test_plur_er_sg_applies_3(self):
+        compound = Compound("mann_+=er_herz")
+        self.assertFalse(
+            plur_er_sg_applies(compound, is_linker_pl=True)
+        )
 
-	pass
+        
+    def test_plur_er_sg_is_applicable_4(self):
+        compound = Compound("kind_+=er_bild")
+        self.assertTrue(
+            plur_er_sg_is_applicable(compound, is_n1_plsem=False)
+        )
+
+    def test_plur_er_sg_applies_4(self):
+        compound = Compound("kind_+=er_bild")
+        self.assertFalse(
+            plur_er_sg_applies(compound, is_linker_pl=True)
+        )
+
+
+    def test_plur_er_sg_is_applicable_5(self):
+        compound = Compound("tag_+e_lohn")
+        self.assertFalse(
+            plur_er_sg_is_applicable(compound, is_n1_plsem=False)
+        )
+        
+    def test_plur_er_sg_is_applicable_6(self):
+        compound = Compound("buch_+=er_regal")
+        self.assertFalse(
+            plur_er_sg_is_applicable(compound, is_n1_plsem=True)
+        )
 
 
 class TestApplicabilityCheckersPlurErMass:
@@ -1932,120 +1951,91 @@ class TestApplicabilityCheckersPlurErMass:
 	pass
 
 
-class TestApplicabilityCheckersPlurErPl:
+class TestApplicabilityCheckersPlurErPl(unittest.TestCase):
 
 	# p2l:decl_cl:pl:#er-0/er|pl_interpr-er
 	#
     # First constituents that are constituted by nouns that build
     # the plural form with -(")er
-    # attach -(")er- more likely in compounds
-    # in which the second constituent forces
-    # a plural meaning of the given first constituent.
+    # attach -(")er- more likely more likely 
+    # when they have a plural meaning.
 	
-    # def test_plur_er_pl_is_applicable_0(self):
-    #     compound = Compound("buch_+=er_regal")
-    #     self.assertTrue(
-    #         plur_er_pl_is_applicable(compound)
-    #     )
+    def test_plur_er_pl_is_applicable_0(self):
+        compound = Compound("buch_+=er_regal")
+        self.assertTrue(
+            plur_er_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_er_pl_applies_0(self):
-    #     compound = Compound("buch_+=er_regal")
-    #     self.assertTrue(
-    #         plur_er_pl_applies(compound)
-    #     )
-
-        
-    # def test_plur_er_pl_is_applicable_1(self):
-    #     compound = Compound("grab_+=er_feld")
-    #     self.assertTrue(
-    #         plur_er_pl_is_applicable(compound)
-    #     )
-
-    # def test_plur_er_pl_applies_1(self):
-    #     compound = Compound("grab_+=er_feld")
-    #     self.assertTrue(
-    #         plur_er_pl_applies(compound)
-    #     )
+    def test_plur_er_pl_applies_0(self):
+        compound = Compound("buch_+=er_regal")
+        self.assertTrue(
+            plur_er_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_plur_er_pl_is_applicable_2(self):
-    #     compound = Compound("kraut_+=er_frau")
-    #     self.assertTrue(
-    #         plur_er_pl_is_applicable(compound)
-    #     )
+    def test_plur_er_pl_is_applicable_1(self):
+        compound = Compound("grab_+=er_feld")
+        self.assertTrue(
+            plur_er_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_er_pl_applies_2(self):
-    #     compound = Compound("kraut_+=er_frau")
-    #     self.assertTrue(
-    #         plur_er_pl_applies(compound)
-    #     )
-
-        
-    # def test_plur_er_pl_is_applicable_3(self):
-    #     compound = Compound("buch_handel")
-    #     self.assertTrue(
-    #         plur_er_pl_is_applicable(compound)
-    #     )
-
-    # def test_plur_er_pl_applies_3(self):
-    #     compound = Compound("buch_handel")
-    #     self.assertFalse(
-    #         plur_er_pl_applies(compound)
-    #     )
+    def test_plur_er_pl_applies_1(self):
+        compound = Compound("grab_+=er_feld")
+        self.assertTrue(
+            plur_er_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_plur_er_pl_is_applicable_4(self):
-    #     compound = Compound("bild_band")
-    #     self.assertTrue(
-    #         plur_er_pl_is_applicable(compound)
-    #     )
+    def test_plur_er_pl_is_applicable_2(self):
+        compound = Compound("kraut_+=er_frau")
+        self.assertTrue(
+            plur_er_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_er_pl_applies_4(self):
-    #     compound = Compound("bild_band")
-    #     self.assertFalse(
-    #         plur_er_pl_applies(compound)
-    #     )
-
-        
-    # def test_plur_er_pl_is_applicable_5(self):
-    #     compound = Compound("kind_+=er_jacke")
-    #     self.assertTrue(
-    #         plur_er_pl_is_applicable(compound)
-    #     )
-
-    # def test_plur_er_pl_applies_5(self):
-    #     compound = Compound("kind_+=er_jacke")
-    #     self.assertFalse(
-    #         plur_er_pl_applies(compound)
-    #     )
+    def test_plur_er_pl_applies_2(self):
+        compound = Compound("kraut_+=er_frau")
+        self.assertTrue(
+            plur_er_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_plur_er_pl_is_applicable_6(self):
-    #     compound = Compound("mann_+=er_herz")
-    #     self.assertTrue(
-    #         plur_er_pl_is_applicable(compound)
-    #     )
+    def test_plur_er_pl_is_applicable_3(self):
+        compound = Compound("buch_handel")
+        self.assertTrue(
+            plur_er_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_er_pl_applies_6(self):
-    #     compound = Compound("mann_+=er_herz")
-    #     self.assertFalse(
-    #         plur_er_pl_applies(compound)
-    #     )
+    def test_plur_er_pl_applies_3(self):
+        compound = Compound("buch_handel")
+        self.assertFalse(
+            plur_er_pl_applies(compound, is_linker_pl=False)
+        )
 
         
-    # def test_plur_er_pl_is_applicable_7(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_er_pl_is_applicable(compound)
-    #     )
+    def test_plur_er_pl_is_applicable_4(self):
+        compound = Compound("bild_band")
+        self.assertTrue(
+            plur_er_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_er_pl_is_applicable_8(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_er_pl_is_applicable(compound)
-    #     )
+    def test_plur_er_pl_applies_4(self):
+        compound = Compound("bild_band")
+        self.assertFalse(
+            plur_er_pl_applies(compound, is_linker_pl=False)
+        )
 
-	pass
+
+    def test_plur_er_pl_is_applicable_5(self):
+        compound = Compound("tag_+e_buch")
+        self.assertFalse(
+            plur_er_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+        
+    def test_plur_er_pl_is_applicable_6(self):
+        compound = Compound("kind_+=er_jacke")
+        self.assertFalse(
+            plur_er_pl_is_applicable(compound, is_n1_plsem=False)
+        )
 
 
 class TestApplicabilityCheckersPlurErAnim:
@@ -2199,93 +2189,90 @@ class TestApplicabilityCheckersPlurEUml(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersPlurEUmlPl:
+class TestApplicabilityCheckersPlurEUmlPl(unittest.TestCase):
 
 	# p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml
 	#
     # First constituents that are constituted by nouns that build
-    # the plural form with -e and umlaut attach -"e- irregularly in compounds
-    # in which the second constituent forces
-    # a plural meaning of the given first constituent.
+    # the plural form with -e and umlaut attach -"e- irregularly 
+    # when they have a plural meaning.
 
-    # def test_plur_e_uml_pl_is_applicable_0(self):
-    #     compound = Compound("hand_+=e_druck")
-    #     self.assertTrue(
-    #         plur_e_uml_pl_is_applicable(compound)
-    #     )
+    def test_plur_e_uml_pl_is_applicable_0(self):
+        compound = Compound("hand_+=e_druck")
+        self.assertTrue(
+            plur_e_uml_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_e_uml_pl_applies_0(self):
-    #     compound = Compound("hand_+=e_druck")
-    #     self.assertTrue(
-    #         plur_e_uml_pl_applies(compound)
-    #     )
-
-        
-    # def test_plur_e_uml_pl_is_applicable_1(self):
-    #     compound = Compound("arzt_+=e_streik")
-    #     self.assertTrue(
-    #         plur_e_uml_pl_is_applicable(compound)
-    #     )
-
-    # def test_plur_e_uml_pl_applies_1(self):
-    #     compound = Compound("arzt_+=e_streik")
-    #     self.assertTrue(
-    #         plur_e_uml_pl_applies(compound)
-    #     )
+    def test_plur_e_uml_pl_applies_0(self):
+        compound = Compound("hand_+=e_druck")
+        self.assertTrue(
+            plur_e_uml_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_plur_e_uml_pl_is_applicable_2(self):
-    #     compound = Compound("gast_+=e_buch")
-    #     self.assertTrue(
-    #         plur_e_uml_pl_is_applicable(compound)
-    #     )
+    def test_plur_e_uml_pl_is_applicable_1(self):
+        compound = Compound("arzt_+=e_streik")
+        self.assertTrue(
+            plur_e_uml_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_e_uml_pl_applies_2(self):
-    #     compound = Compound("gast_+=e_buch")
-    #     self.assertTrue(
-    #         plur_e_uml_pl_applies(compound)
-    #     )
-
-        
-    # def test_plur_e_uml_pl_is_applicable_3(self):
-    #     compound = Compound("baum_gruppe")
-    #     self.assertTrue(
-    #         plur_e_uml_pl_is_applicable(compound)
-    #     )
-
-    # def test_plur_e_uml_pl_applies_3(self):
-    #     compound = Compound("baum_gruppe")
-    #     self.assertFalse(
-    #         plur_e_uml_pl_applies(compound)
-    #     )
+    def test_plur_e_uml_pl_applies_1(self):
+        compound = Compound("arzt_+=e_streik")
+        self.assertTrue(
+            plur_e_uml_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_plur_e_uml_pl_is_applicable_4(self):
-    #     compound = Compound("zug_verkehr")
-    #     self.assertTrue(
-    #         plur_e_uml_pl_is_applicable(compound)
-    #     )
+    def test_plur_e_uml_pl_is_applicable_2(self):
+        compound = Compound("gast_+=e_buch")
+        self.assertTrue(
+            plur_e_uml_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_e_uml_pl_applies_4(self):
-    #     compound = Compound("zug_verkehr")
-    #     self.assertFalse(
-    #         plur_e_uml_pl_applies(compound)
-    #     )
+    def test_plur_e_uml_pl_applies_2(self):
+        compound = Compound("gast_+=e_buch")
+        self.assertTrue(
+            plur_e_uml_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_plur_e_uml_pl_is_applicable_5(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_e_uml_pl_is_applicable(compound)
-    #     )
+    def test_plur_e_uml_pl_is_applicable_3(self):
+        compound = Compound("baum_gruppe")
+        self.assertTrue(
+            plur_e_uml_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_e_uml_pl_is_applicable_6(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_e_uml_pl_is_applicable(compound)
-    #     )
+    def test_plur_e_uml_pl_applies_3(self):
+        compound = Compound("baum_gruppe")
+        self.assertFalse(
+            plur_e_uml_pl_applies(compound, is_linker_pl=False)
+        )
 
-	pass
+        
+    def test_plur_e_uml_pl_is_applicable_4(self):
+        compound = Compound("zug_verkehr")
+        self.assertTrue(
+            plur_e_uml_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_plur_e_uml_pl_applies_4(self):
+        compound = Compound("zug_verkehr")
+        self.assertFalse(
+            plur_e_uml_pl_applies(compound, is_linker_pl=False)
+        )
+
+        
+    def test_plur_e_uml_pl_is_applicable_5(self):
+        compound = Compound("tag_+e_buch")
+        self.assertFalse(
+            plur_e_uml_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_plur_e_uml_pl_is_applicable_6(self):
+        compound = Compound("arzt_besuch")
+        self.assertFalse(
+            plur_e_uml_pl_is_applicable(compound, is_n1_plsem=False)
+        )
 
 
 
@@ -2374,75 +2361,78 @@ class TestApplicabilityCheckersPlur0Uml(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersPlur0UmlPl:
+class TestApplicabilityCheckersPlur0UmlPl(unittest.TestCase):
 
 	# p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml
 	#
     # First constituents that are constituted by nouns that build
     # the plural form with a zero ending and umlaut attach
-    # a zero linker with umlaut irregularly in compounds
-    # in which the second constituent forces
-    # a plural meaning of the given first constituent.
+    # a zero linker with umlaut irregularly 
+    # when they have a plural meaning.
 
-    # def test_plur_0_uml_pl_applies_0(self):
-    #     compound = Compound("bruder_+=_gemeinde")
-    #     self.assertTrue(
-    #         plur_0_uml_pl_applies(compound)
-    #     )
+    def test_plur_0_uml_pl_is_applicable_0(self):
+        compound = Compound("bruder_+=_gemeinde")
+        self.assertTrue(
+            plur_0_uml_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-        
-    # def test_plur_0_uml_pl_is_applicable_1(self):
-    #     compound = Compound("mutter_+=_zentrum")
-    #     self.assertTrue(
-    #         plur_0_uml_pl_is_applicable(compound)
-    #     )
-
-    # def test_plur_0_uml_pl_applies_1(self):
-    #     compound = Compound("mutter_+=_zentrum")
-    #     self.assertTrue(
-    #         plur_0_uml_pl_applies(compound)
-    #     )
+    def test_plur_0_uml_pl_applies_0(self):
+        compound = Compound("bruder_+=_gemeinde")
+        self.assertTrue(
+            plur_0_uml_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_plur_0_uml_pl_is_applicable_2(self):
-    #     compound = Compound("vater_+=_aufbruch")
-    #     self.assertTrue(
-    #         plur_0_uml_pl_is_applicable(compound)
-    #     )
+    def test_plur_0_uml_pl_is_applicable_1(self):
+        compound = Compound("mutter_+=_zentrum")
+        self.assertTrue(
+            plur_0_uml_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_0_uml_pl_applies_2(self):
-    #     compound = Compound("vater_+=_aufbruch")
-    #     self.assertTrue(
-    #         plur_0_uml_pl_applies(compound)
-    #     )
-
-        
-    # def test_plur_0_uml_pl_is_applicable_3(self):
-    #     compound = Compound("vogel_futter")
-    #     self.assertTrue(
-    #         plur_0_uml_pl_is_applicable(compound)
-    #     )
-
-    # def test_plur_0_uml_pl_applies_3(self):
-    #     compound = Compound("vogel_futter")
-    #     self.assertFalse(
-    #         plur_0_uml_pl_applies(compound)
-    #     )
+    def test_plur_0_uml_pl_applies_1(self):
+        compound = Compound("mutter_+=_zentrum")
+        self.assertTrue(
+            plur_0_uml_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_plur_0_uml_pl_is_applicable_4(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_0_uml_pl_is_applicable(compound)
-    #     )
+    def test_plur_0_uml_pl_is_applicable_2(self):
+        compound = Compound("vater_+=_aufbruch")
+        self.assertTrue(
+            plur_0_uml_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_plur_0_uml_pl_is_applicable_5(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_0_uml_pl_is_applicable(compound)
-    #     )
+    def test_plur_0_uml_pl_applies_2(self):
+        compound = Compound("vater_+=_aufbruch")
+        self.assertTrue(
+            plur_0_uml_pl_applies(compound, is_linker_pl=True)
+        )
 
-	pass
+        
+    def test_plur_0_uml_pl_is_applicable_3(self):
+        compound = Compound("vogel_futter")
+        self.assertTrue(
+            plur_0_uml_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_plur_0_uml_pl_applies_3(self):
+        compound = Compound("vogel_futter")
+        self.assertFalse(
+            plur_0_uml_pl_applies(compound, is_linker_pl=False)
+        )
+
+        
+    def test_plur_0_uml_pl_is_applicable_4(self):
+        compound = Compound("tag_+e_buch")
+        self.assertFalse(
+            plur_0_uml_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_plur_0_uml_pl_is_applicable_5(self):
+        compound = Compound("mutter_gefühl")
+        self.assertFalse(
+            plur_0_uml_pl_is_applicable(compound, is_n1_plsem=False)
+        )
 
 
 
@@ -2519,119 +2509,76 @@ class TestApplicabilityCheckersMixedMN(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersMixedMnPl:
+class TestApplicabilityCheckersMixedMnPl(unittest.TestCase):
 
 	# p2l:decl_cl:mixed-0/s/en|pl_interpr-en
 	#
     # First constituents that are constituted by
-    # mixed masculine and neuter nouns attach -(e)n-more likely in compounds
-    # in which the second constituent forces
-    # a plural meaning of the given first constituent..
+    # mixed masculine and neuter nouns attach -(e)n-more likely 
+    # when they have a plural meaning.
 
-    # def test_mixed_mn_pl_is_applicable_0(self):
-    #     compound = Compound("staat_+en_bund")
-    #     self.assertTrue(
-    #         mixed_mn_pl_is_applicable(compound)
-    #     )
+    def test_mixed_mn_pl_is_applicable_0(self):
+        compound = Compound("staat_+en_bund")
+        self.assertTrue(
+            mixed_mn_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_mixed_mn_pl_applies_0(self):
-    #     compound = Compound("staat_+en_bund")
-    #     self.assertTrue(
-    #         mixed_mn_pl_applies(compound)
-    #     )
-
-        
-    # def test_mixed_mn_pl_is_applicable_1(self):
-    #     compound = Compound("bett_+en_zahl")
-    #     self.assertTrue(
-    #         mixed_mn_pl_is_applicable(compound)
-    #     )
-
-    # def test_mixed_mn_pl_applies_1(self):
-    #     compound = Compound("bett_+en_zahl")
-    #     self.assertTrue(
-    #         mixed_mn_pl_applies(compound)
-    #     )
+    def test_mixed_mn_pl_applies_0(self):
+        compound = Compound("staat_+en_bund")
+        self.assertTrue(
+            mixed_mn_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_mixed_mn_pl_is_applicable_2(self):
-    #     compound = Compound("strahl_+en_belastung")
-    #     self.assertTrue(
-    #         mixed_mn_pl_is_applicable(compound)
-    #     )
+    def test_mixed_mn_pl_is_applicable_1(self):
+        compound = Compound("bett_+en_zahl")
+        self.assertTrue(
+            mixed_mn_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_mixed_mn_pl_applies_2(self):
-    #     compound = Compound("strahl_+en_belastung")
-    #     self.assertTrue(
-    #         mixed_mn_pl_applies(compound)
-    #     )
-
-        
-    # def test_mixed_mn_pl_is_applicable_3(self):
-    #     compound = Compound("motor_+en_geräusch")
-    #     self.assertTrue(
-    #         mixed_mn_pl_is_applicable(compound)
-    #     )
-
-    # def test_mixed_mn_pl_applies_3(self):
-    #     compound = Compound("motor_+en_geräusch")
-    #     self.assertFalse(
-    #         mixed_mn_pl_applies(compound)
-    #     )
+    def test_mixed_mn_pl_applies_1(self):
+        compound = Compound("bett_+en_zahl")
+        self.assertTrue(
+            mixed_mn_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_mixed_mn_pl_is_applicable_4(self):
-    #     compound = Compound("professor_+en_titel")
-    #     self.assertTrue(
-    #         mixed_mn_pl_is_applicable(compound)
-    #     )
+    def test_mixed_mn_pl_is_applicable_2(self):
+        compound = Compound("strahl_+en_belastung")
+        self.assertTrue(
+            mixed_mn_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_mixed_mn_pl_applies_4(self):
-    #     compound = Compound("professor_+en_titel")
-    #     self.assertFalse(
-    #         mixed_mn_pl_applies(compound)
-    #     )
+    def test_mixed_mn_pl_applies_2(self):
+        compound = Compound("strahl_+en_belastung")
+        self.assertTrue(
+            mixed_mn_pl_applies(compound, is_linker_pl=True)
+        )
 
+
+    def test_mixed_mn_pl_is_applicable_3(self):
+        compound = Compound("tag_+e_buch")
+        self.assertFalse(
+            mixed_mn_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_mixed_mn_pl_is_applicable_4(self):
+        compound = Compound("motor_+en_geräusch")
+        self.assertFalse(
+            mixed_mn_pl_is_applicable(compound, is_n1_plsem=False)
+        )
         
-    # def test_mixed_mn_pl_is_applicable_5(self):
-    #     compound = Compound("auge_+n_lied")
-    #     self.assertTrue(
-    #         mixed_mn_pl_is_applicable(compound)
-    #     )
+    def test_mixed_mn_pl_is_applicable_5(self):
+        compound = Compound("auge_+n_lied")
+        self.assertFalse(
+            mixed_mn_pl_is_applicable(compound, is_n1_plsem=False)
+        )
 
-    # def test_mixed_mn_pl_applies_5(self):
-    #     compound = Compound("auge_+n_lied")
-    #     self.assertFalse(
-    #         mixed_mn_pl_applies(compound)
-    #     )
-
-        
-    # def test_mixed_mn_pl_is_applicable_6(self):
-    #     compound = Compound("interesse_+n_bereich")
-    #     self.assertTrue(
-    #         mixed_mn_pl_is_applicable(compound)
-    #     )
-
-    # def test_mixed_mn_pl_applies_6(self):
-    #     compound = Compound("interesse_+n_bereich")
-    #     self.assertFalse(
-    #         mixed_mn_pl_applies(compound)
-    #     )
-
-        
-    # def test_mixed_mn_pl_is_applicable_7(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         mixed_mn_pl_is_applicable(compound)
-    #     )
-
-    # def test_mixed_mn_pl_is_applicable_8(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         mixed_mn_pl_is_applicable(compound)
-    #     )
-
-	pass
+    def test_mixed_mn_pl_is_applicable_6(self):
+        compound = Compound("auge_+n_lied")
+        self.assertFalse(
+            mixed_mn_pl_is_applicable(compound, is_n1_plsem=False)
+        )
 
 
 
@@ -2893,92 +2840,90 @@ class TestApplicabilityCheckersSchwaFinDeverb(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersSchwaFinDeverbPl:
+class TestApplicabilityCheckersSchwaFinDeverbPl(unittest.TestCase):
 
 	# p2l:drv:deverb_schwa$-0|pl_interpr-en
 	#
     # First constituents that are constituted by deverbal feminine nouns
-    # with a schwa suffix tend to attach -n- in compoundsin which the second
-    # constituent forces a plural reading of the given first constituent.
+    # with a schwa suffix tend to attach -(e)n- 
+    # when they have a plural meaning.
 
-    # def test_schwa_fin_deverb_pl_is_applicable_0(self):
-    #     compound = Compound("abgabe_+n_ordnung")
-    #     self.assertTrue(
-    #         schwa_fin_deverb_pl_is_applicable(compound)
-    #     )
+    def test_schwa_fin_deverb_pl_is_applicable_0(self):
+        compound = Compound("abgabe_+n_ordnung")
+        self.assertTrue(
+            schwa_fin_deverb_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_schwa_fin_deverb_pl_applies_0(self):
-    #     compound = Compound("abgabe_+n_ordnung")
-    #     self.assertTrue(
-    #         schwa_fin_deverb_pl_applies(compound)
-    #     )
-
-        
-    # def test_schwa_fin_deverb_pl_is_applicable_1(self):
-    #     compound = Compound("anzeige_+n_blatt")
-    #     self.assertTrue(
-    #         schwa_fin_deverb_pl_is_applicable(compound)
-    #     )
-
-    # def test_schwa_fin_deverb_pl_applies_1(self):
-    #     compound = Compound("anzeige_+n_blatt")
-    #     self.assertTrue(
-    #         schwa_fin_deverb_pl_applies(compound)
-    #     )
+    def test_schwa_fin_deverb_pl_applies_0(self):
+        compound = Compound("abgabe_+n_ordnung")
+        self.assertTrue(
+            schwa_fin_deverb_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_schwa_fin_deverb_pl_is_applicable_2(self):
-    #     compound = Compound("lüge_+n_detektor")
-    #     self.assertTrue(
-    #         schwa_fin_deverb_pl_is_applicable(compound)
-    #     )
+    def test_schwa_fin_deverb_pl_is_applicable_1(self):
+        compound = Compound("anzeige_+n_blatt")
+        self.assertTrue(
+            schwa_fin_deverb_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_schwa_fin_deverb_pl_applies_2(self):
-    #     compound = Compound("lüge_+n_detektor")
-    #     self.assertTrue(
-    #         schwa_fin_deverb_pl_applies(compound)
-    #     )
-
-        
-    # def test_schwa_fin_deverb_pl_is_applicable_3(self):
-    #     compound = Compound("einnahme_buch")
-    #     self.assertTrue(
-    #         schwa_fin_deverb_pl_is_applicable(compound)
-    #     )
-
-    # def test_schwa_fin_deverb_pl_applies_3(self):
-    #     compound = Compound("einnahme_buch")
-    #     self.assertFalse(
-    #         schwa_fin_deverb_pl_applies(compound)
-    #     )
+    def test_schwa_fin_deverb_pl_applies_1(self):
+        compound = Compound("anzeige_+n_blatt")
+        self.assertTrue(
+            schwa_fin_deverb_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_schwa_fin_deverb_pl_is_applicable_4(self):
-    #     compound = Compound("anzeige_tafel")
-    #     self.assertTrue(
-    #         schwa_fin_deverb_pl_is_applicable(compound)
-    #     )
+    def test_schwa_fin_deverb_pl_is_applicable_2(self):
+        compound = Compound("lüge_+n_detektor")
+        self.assertTrue(
+            schwa_fin_deverb_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_schwa_fin_deverb_pl_applies_4(self):
-    #     compound = Compound("anzeige_tafel")
-    #     self.assertFalse(
-    #         schwa_fin_deverb_pl_applies(compound)
-    #     )
+    def test_schwa_fin_deverb_pl_applies_2(self):
+        compound = Compound("lüge_+n_detektor")
+        self.assertTrue(
+            schwa_fin_deverb_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_schwa_fin_deverb_pl_is_applicable_5(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         schwa_fin_deverb_pl_is_applicable(compound)
-    #     )
+    def test_schwa_fin_deverb_pl_is_applicable_3(self):
+        compound = Compound("einnahme_buch")
+        self.assertTrue(
+            schwa_fin_deverb_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_schwa_fin_deverb_pl_is_applicable_6(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         schwa_fin_deverb_pl_is_applicable(compound)
-    #     )
+    def test_schwa_fin_deverb_pl_applies_3(self):
+        compound = Compound("einnahme_buch")
+        self.assertFalse(
+            schwa_fin_deverb_pl_applies(compound, is_linker_pl=False)
+        )
 
-	pass
+        
+    def test_schwa_fin_deverb_pl_is_applicable_4(self):
+        compound = Compound("anzeige_tafel")
+        self.assertTrue(
+            schwa_fin_deverb_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_schwa_fin_deverb_pl_applies_4(self):
+        compound = Compound("anzeige_tafel")
+        self.assertFalse(
+            schwa_fin_deverb_pl_applies(compound, is_linker_pl=False)
+        )
+
+        
+    def test_schwa_fin_deverb_pl_is_applicable_5(self):
+        compound = Compound("blume_+n_strauß")
+        self.assertFalse(
+            schwa_fin_deverb_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_schwa_fin_deverb_pl_is_applicable_6(self):
+        compound = Compound("einnahme_verlust")
+        self.assertFalse(
+            schwa_fin_deverb_pl_is_applicable(compound, is_n1_plsem=False)
+        )
 
 
 
@@ -3155,66 +3100,64 @@ class TestApplicabilityCheckersSfxS(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersSfxItaetPl:
+class TestApplicabilityCheckersSfxItaetPl(unittest.TestCase):
 
 	# p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en
 	#
     # First constituents that are constituted by derived nouns with suffix
-    # -ität and its allomorphs prefer -en- in compounds in which the second
-    # constituent forces a plural meaning of the given first constituent.
+    # -ität and its allomorphs may attach -(e)n-
+    # when they have a plural meaning.
 
-    # def test_sfx_itaet_pl_is_applicable_0(self):
-    #     compound = Compound("rarität_+en_sammlung")
-    #     self.assertTrue(
-    #         sfx_itaet_pl_is_applicable(compound)
-    #     )
+    def test_sfx_itaet_pl_is_applicable_0(self):
+        compound = Compound("rarität_+en_sammlung")
+        self.assertTrue(
+            sfx_itaet_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_sfx_itaet_pl_applies_0(self):
-    #     compound = Compound("rarität_+en_sammlung")
-    #     self.assertTrue(
-    #         sfx_itaet_pl_applies(compound)
-    #     )
-
-        
-    # def test_sfx_itaet_pl_is_applicable_1(self):
-    #     compound = Compound("kuriosität_+en_händler")
-    #     self.assertTrue(
-    #         sfx_itaet_pl_is_applicable(compound)
-    #     )
-
-    # def test_sfx_itaet_pl_applies_1(self):
-    #     compound = Compound("kuriosität_+en_händler")
-    #     self.assertTrue(
-    #         sfx_itaet_pl_applies(compound)
-    #     )
+    def test_sfx_itaet_pl_applies_0(self):
+        compound = Compound("rarität_+en_sammlung")
+        self.assertTrue(
+            sfx_itaet_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_sfx_itaet_pl_is_applicable_2(self):
-    #     compound = Compound("aktualitäten_+en_kino")
-    #     self.assertTrue(
-    #         sfx_itaet_pl_is_applicable(compound)
-    #     )
+    def test_sfx_itaet_pl_is_applicable_1(self):
+        compound = Compound("kuriosität_+en_händler")
+        self.assertTrue(
+            sfx_itaet_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_sfx_itaet_pl_applies_2(self):
-    #     compound = Compound("aktualitäten_+en_kino")
-    #     self.assertTrue(
-    #         sfx_itaet_pl_applies(compound)
-    #     )
+    def test_sfx_itaet_pl_applies_1(self):
+        compound = Compound("kuriosität_+en_händler")
+        self.assertTrue(
+            sfx_itaet_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_sfx_itaet_pl_is_applicable_3(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         sfx_itaet_pl_is_applicable(compound)
-    #     )
+    def test_sfx_itaet_pl_is_applicable_2(self):
+        compound = Compound("aktualität_+en_kino")
+        self.assertTrue(
+            sfx_itaet_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_sfx_itaet_pl_is_applicable_4(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         sfx_itaet_pl_is_applicable(compound)
-    #     )
+    def test_sfx_itaet_pl_applies_2(self):
+        compound = Compound("aktualität_+en_kino")
+        self.assertTrue(
+            sfx_itaet_pl_applies(compound, is_linker_pl=True)
+        )
 
-	pass
+        
+    def test_sfx_itaet_pl_is_applicable_3(self):
+        compound = Compound("minderheit_+en_recht")
+        self.assertFalse(
+            sfx_itaet_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_sfx_itaet_pl_is_applicable_4(self):
+        compound = Compound("identität_+s_feststellung")
+        self.assertFalse(
+            sfx_itaet_pl_is_applicable(compound, is_n1_plsem=False)
+        )
 
 
 
@@ -4038,157 +3981,237 @@ class TestApplicabilityCheckersSchwaFin(unittest.TestCase):
 
 
 
-class TestApplicabilityCheckersFConsFinSg:
+class TestApplicabilityCheckersFConsFin(unittest.TestCase):
+
+	# p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+    #
+    # First constituents that are constituted by 
+    # consonant-final weak feminine nouns 
+    # regularly attach -s-, a zero linker, or -(e)n-.
+
+    def test_f_cons_fin_is_applicable_0(self):
+        compound = Compound("schrift_führer")
+        self.assertTrue(
+            f_cons_fin_is_applicable(compound)
+        )
+
+    def test_f_cons_fin_applies_0(self):
+        compound = Compound("schrift_führer")
+        self.assertTrue(
+            f_cons_fin_applies(compound)
+        )
+
+        
+    def test_f_cons_fin_is_applicable_1(self):
+        compound = Compound("geburt_+s_tag")
+        self.assertTrue(
+            f_cons_fin_is_applicable(compound)
+        )
+
+    def test_f_cons_fin_applies_1(self):
+        compound = Compound("geburt_+s_tag")
+        self.assertTrue(
+            f_cons_fin_applies(compound)
+        )
+
+        
+    def test_f_cons_fin_is_applicable_2(self):
+        compound = Compound("burg_anlage")
+        self.assertTrue(
+            f_cons_fin_is_applicable(compound)
+        )
+
+    def test_f_cons_fin_applies_2(self):
+        compound = Compound("burg_anlage")
+        self.assertTrue(
+            f_cons_fin_applies(compound)
+        )
+
+        
+    def test_f_cons_fin_is_applicable_3(self):
+        compound = Compound("burg_+en_blick")
+        self.assertTrue(
+            f_cons_fin_is_applicable(compound)
+        )
+
+    def test_f_cons_fin_applies_3(self):
+        compound = Compound("burg_+en_blick")
+        self.assertTrue(
+            f_cons_fin_applies(compound)
+        )
+
+        
+    def test_f_cons_fin_is_applicable_4(self):
+        compound = Compound("arbeit_+s_vertrag")
+        self.assertTrue(
+            f_cons_fin_is_applicable(compound)
+        )
+
+    def test_f_cons_fin_applies_4(self):
+        compound = Compound("arbeit_+s_vertrag")
+        self.assertTrue(
+            f_cons_fin_applies(compound)
+        )
+
+        
+    def test_f_cons_fin_is_applicable_5(self):
+        compound = Compound("buch_handel")
+        self.assertFalse(
+            f_cons_fin_is_applicable(compound)
+        )
+
+    def test_f_cons_fin_is_applicable_6(self):
+        compound = Compound("frau_+en_bild")
+        self.assertFalse(
+            f_cons_fin_is_applicable(compound)
+        )
+
+
+class TestApplicabilityCheckersFConsFinSg(unittest.TestCase):
 
 	# p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
 	#
     # First constituents that are constituted by
     # consonant-final weak feminine nouns mostly adopt a zero linker or -s- 
-    # in compounds in which the second constituent forces
-    # a singular meaning of the given first constituent.
+    # when they have a singular meaning.
 
-    # def test_f_cons_fin_sg_is_applicable_0(self):
-    #     compound = Compound("schrift_führer")
-    #     self.assertTrue(
-    #         f_cons_fin_sg_is_applicable(compound)
-    #     )
+    def test_f_cons_fin_sg_is_applicable_0(self):
+        compound = Compound("schrift_führer")
+        self.assertTrue(
+            f_cons_fin_sg_is_applicable(compound, is_n1_plsem=False)
+        )
 
-    # def test_f_cons_fin_sg_applies_0(self):
-    #     compound = Compound("schrift_führer")
-    #     self.assertTrue(
-    #         f_cons_fin_sg_applies(compound)
-    #     )
-
-        
-    # def test_f_cons_fin_sg_is_applicable_1(self):
-    #     compound = Compound("geburt_+s_tag")
-    #     self.assertTrue(
-    #         f_cons_fin_sg_is_applicable(compound)
-    #     )
-
-    # def test_f_cons_fin_sg_applies_1(self):
-    #     compound = Compound("geburt_+s_tag")
-    #     self.assertTrue(
-    #         f_cons_fin_sg_applies(compound)
-    #     )
+    def test_f_cons_fin_sg_applies_0(self):
+        compound = Compound("schrift_führer")
+        self.assertTrue(
+            f_cons_fin_sg_applies(compound, is_linker_pl=False)
+        )
 
         
-    # def test_f_cons_fin_sg_is_applicable_2(self):
-    #     compound = Compound("burg_anlage")
-    #     self.assertTrue(
-    #         f_cons_fin_sg_is_applicable(compound)
-    #     )
+    def test_f_cons_fin_sg_is_applicable_1(self):
+        compound = Compound("geburt_+s_tag")
+        self.assertTrue(
+            f_cons_fin_sg_is_applicable(compound, is_n1_plsem=False)
+        )
 
-    # def test_f_cons_fin_sg_applies_2(self):
-    #     compound = Compound("burg_anlage")
-    #     self.assertTrue(
-    #         f_cons_fin_sg_applies(compound)
-    #     )
-
-        
-    # def test_f_cons_fin_sg_is_applicable_3(self):
-    #     compound = Compound("burg_+en_blick")
-    #     self.assertTrue(
-    #         f_cons_fin_sg_is_applicable(compound)
-    #     )
-
-    # def test_f_cons_fin_sg_applies_3(self):
-    #     compound = Compound("burg_+en_blick")
-    #     self.assertFalse(
-    #         f_cons_fin_sg_applies(compound)
-    #     )
+    def test_f_cons_fin_sg_applies_1(self):
+        compound = Compound("geburt_+s_tag")
+        self.assertTrue(
+            f_cons_fin_sg_applies(compound, is_linker_pl=False)
+        )
 
         
-    # def test_f_cons_fin_sg_is_applicable_4(self):
-    #     compound = Compound("frau_+en_bild")
-    #     self.assertTrue(
-    #         f_cons_fin_sg_is_applicable(compound)
-    #     )
+    def test_f_cons_fin_sg_is_applicable_2(self):
+        compound = Compound("burg_anlage")
+        self.assertTrue(
+            f_cons_fin_sg_is_applicable(compound, is_n1_plsem=False)
+        )
 
-    # def test_f_cons_fin_sg_applies_4(self):
-    #     compound = Compound("frau_+en_bild")
-    #     self.assertFalse(
-    #         f_cons_fin_sg_applies(compound)
-    #     )
+    def test_f_cons_fin_sg_applies_2(self):
+        compound = Compound("burg_anlage")
+        self.assertTrue(
+            f_cons_fin_sg_applies(compound, is_linker_pl=False)
+        )
 
         
-    # def test_f_cons_fin_sg_is_applicable_5(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         f_cons_fin_sg_is_applicable(compound)
-    #     )
+    def test_f_cons_fin_sg_is_applicable_3(self):
+        compound = Compound("burg_+en_blick")
+        self.assertTrue(
+            f_cons_fin_sg_is_applicable(compound, is_n1_plsem=False)
+        )
 
-    # def test_f_cons_fin_sg_is_applicable_6(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         f_cons_fin_sg_is_applicable(compound)
-    #     )
+    def test_f_cons_fin_sg_applies_3(self):
+        compound = Compound("burg_+en_blick")
+        self.assertFalse(
+            f_cons_fin_sg_applies(compound, is_linker_pl=True)
+        )
 
-	pass
+        
+    def test_f_cons_fin_sg_is_applicable_4(self):
+        compound = Compound("arbeit_+s_vertrag")
+        self.assertTrue(
+            f_cons_fin_sg_is_applicable(compound, is_n1_plsem=False)
+        )
+
+    def test_f_cons_fin_sg__applies_4(self):
+        compound = Compound("arbeit_+s_vertrag")
+        self.assertTrue(
+            f_cons_fin_sg_applies(compound, is_linker_pl=False)
+        )
+
+        
+    def test_f_cons_fin_sg__is_applicable_5(self):
+        compound = Compound("buch_handel")
+        self.assertFalse(
+            f_cons_fin_sg_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_f_cons_fin_sg__is_applicable_6(self):
+        compound = Compound("frau_+en_bild")
+        self.assertFalse(
+            f_cons_fin_sg_is_applicable(compound, is_n1_plsem=False)
+        )
 
 
-class TestApplicabilityCheckersFConsFinPl:
+class TestApplicabilityCheckersFConsFinPl(unittest.TestCase):
 
 	# p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
 	#
     # First constituents that are constituted by
     # consonant-final weak feminine nouns --- especially final-stressed
-    # incl. monosyllabic ones --- attach -en- more likely in compounds
-    # in which the second constituent forces
-    # a plural meaning of the given first constituent.
+    # incl. monosyllabic ones --- attach -en- more likely 
+    # when they have a plural meaning.
 
-    # def test_f_cons_fin_pl_is_applicable_0(self):
-    #     compound = Compound("schrift_+en_verzeichnis")
-    #     self.assertTrue(
-    #         f_cons_fin_pl_is_applicable(compound)
-    #     )
+    def test_f_cons_fin_pl_is_applicable_0(self):
+        compound = Compound("schrift_+en_verzeichnis")
+        self.assertTrue(
+            f_cons_fin_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_f_cons_fin_pl_applies_0(self):
-    #     compound = Compound("schrift_+en_verzeichnis")
-    #     self.assertTrue(
-    #         f_cons_fin_pl_applies(compound)
-    #     )
-
-        
-    # def test_f_cons_fin_pl_is_applicable_1(self):
-    #     compound = Compound("geburt_+en_kontrolle")
-    #     self.assertTrue(
-    #         f_cons_fin_pl_is_applicable(compound)
-    #     )
-
-    # def test_f_cons_fin_pl_applies_1(self):
-    #     compound = Compound("geburt_+en_kontrolle")
-    #     self.assertTrue(
-    #         f_cons_fin_pl_applies(compound)
-    #     )
+    def test_f_cons_fin_pl_applies_0(self):
+        compound = Compound("schrift_+en_verzeichnis")
+        self.assertTrue(
+            f_cons_fin_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_f_cons_fin_pl_is_applicable_2(self):
-    #     compound = Compound("burg_+en_land")
-    #     self.assertTrue(
-    #         f_cons_fin_pl_is_applicable(compound)
-    #     )
+    def test_f_cons_fin_pl_is_applicable_1(self):
+        compound = Compound("geburt_+en_kontrolle")
+        self.assertTrue(
+            f_cons_fin_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_f_cons_fin_pl_applies_2(self):
-    #     compound = Compound("burg_+en_land")
-    #     self.assertTrue(
-    #         f_cons_fin_pl_applies(compound)
-    #     )
+    def test_f_cons_fin_pl_applies_1(self):
+        compound = Compound("geburt_+en_kontrolle")
+        self.assertTrue(
+            f_cons_fin_pl_applies(compound, is_linker_pl=True)
+        )
 
         
-    # def test_f_cons_fin_pl_is_applicable_3(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         f_cons_fin_pl_is_applicable(compound)
-    #     )
+    def test_f_cons_fin_pl_is_applicable_2(self):
+        compound = Compound("burg_+en_land")
+        self.assertTrue(
+            f_cons_fin_pl_is_applicable(compound, is_n1_plsem=True)
+        )
 
-    # def test_f_cons_fin_pl_is_applicable_4(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         f_cons_fin_pl_is_applicable(compound)
-    #     )
+    def test_f_cons_fin_pl_applies_2(self):
+        compound = Compound("burg_+en_land")
+        self.assertTrue(
+            f_cons_fin_pl_applies(compound, is_linker_pl=True)
+        )
 
-	pass
+        
+    def test_f_cons_fin_pl_is_applicable_3(self):
+        compound = Compound("blume_+n_strauß")
+        self.assertFalse(
+            f_cons_fin_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_f_cons_fin_pl_is_applicable_4(self):
+        compound = Compound("burg_+en_blick")
+        self.assertFalse(
+            f_cons_fin_pl_is_applicable(compound, is_n1_plsem=False)
+        )
 
 
 
@@ -5836,7 +5859,7 @@ class TestApplicabilityCheckersErPar(unittest.TestCase):
         )
 
     def test_er_par_applies_2(self):
-        compound = Compound("kind_+=er_jacke")
+        compound = Compound("kind_+er_jacke")
         self.assertTrue(
             er_par_applies(compound)
         )
@@ -6458,156 +6481,165 @@ class TestApplicabilityCheckersZeroUmlPar(unittest.TestCase):
 
 class TestApplicabilityCheckersPlInterpr:
 
-	# p2l:tend:pl_interpr-pl_marker|def-pl_marker
-	#
+	# l2p:pl_marker|def-pl
+    #
     # Linkers that are identical to the plural ending
     # of the first constituent in a given compound
     # tend to be associated with
     # a plural meaning of this first constituent within the compound.
 
-    # def test_pl_interpr_is_applicable_0(self):
-    #     compound = Compound("punkt_+e_stand")
-    #     self.assertTrue(
-    #         pl_interpr_is_applicable(compound)
-    #     )
+    def test_pl_interpr_is_applicable_0(self):
+        compound = Compound("punkt_+e_stand")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=True)
+        )
 
-    # def test_pl_interpr_applies_0(self):
-    #     compound = Compound("punkt_+e_stand")
-    #     self.assertTrue(
-    #         pl_interpr_applies(compound)
-    #     )
-
-        
-    # def test_pl_interpr_is_applicable_1(self):
-    #     compound = Compound("buch_+=er_regal")
-    #     self.assertTrue(
-    #         pl_interpr_is_applicable(compound)
-    #     )
-
-    # def test_pl_interpr_applies_1(self):
-    #     compound = Compound("buch_+=er_regal")
-    #     self.assertTrue(
-    #         pl_interpr_applies(compound)
-    #     )
+    def test_pl_interpr_applies_0(self):
+        compound = Compound("punkt_+e_stand")
+        self.assertTrue(
+            pl_interpr_applies(compound, is_n1_plsem=True)
+        )
 
         
-    # def test_pl_interpr_is_applicable_2(self):
-    #     compound = Compound("staat_+en_bund")
-    #     self.assertTrue(
-    #         pl_interpr_is_applicable(compound)
-    #     )
+    def test_pl_interpr_is_applicable_1(self):
+        compound = Compound("buch_+=er_regal")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=True)
+        )
 
-    # def test_pl_interpr_applies_2(self):
-    #     compound = Compound("staat_+en_bund")
-    #     self.assertTrue(
-    #         pl_interpr_applies(compound)
-    #     )
-
-        
-    # def test_pl_interpr_is_applicable_3(self):
-    #     compound = Compound("burg_+en_land")
-    #     self.assertTrue(
-    #         pl_interpr_is_applicable(compound)
-    #     )
-
-    # def test_pl_interpr_applies_3(self):
-    #     compound = Compound("burg_+en_land")
-    #     self.assertTrue(
-    #         pl_interpr_applies(compound)
-    #     )
+    def test_pl_interpr_applies_1(self):
+        compound = Compound("buch_+=er_regal")
+        self.assertTrue(
+            pl_interpr_applies(compound, is_n1_plsem=True)
+        )
 
         
-    # def test_pl_interpr_is_applicable_4(self):
-    #     compound = Compound("mutter_+=_zentrum")
-    #     self.assertTrue(
-    #         pl_interpr_is_applicable(compound)
-    #     )
+    def test_pl_interpr_is_applicable_2(self):
+        compound = Compound("staat_+en_bund")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=True)
+        )
 
-    # def test_pl_interpr_applies_4(self):
-    #     compound = Compound("mutter_+=_zentrum")
-    #     self.assertTrue(
-    #         pl_interpr_applies(compound)
-    #     )
-
-        
-    # def test_pl_interpr_is_applicable_5(self):
-    #     compound = Compound("pilz_sammler")
-    #     self.assertTrue(
-    #         pl_interpr_is_applicable(compound)
-    #     )
-
-    # def test_pl_interpr_applies_5(self):
-    #     compound = Compound("pilz_sammler")
-    #     self.assertFalse(
-    #         pl_interpr_applies(compound)
-    #     )
+    def test_pl_interpr_applies_2(self):
+        compound = Compound("staat_+en_bund")
+        self.assertTrue(
+            pl_interpr_applies(compound, is_n1_plsem=True)
+        )
 
         
-    # def test_pl_interpr_is_applicable_6(self):
-    #     compound = Compound("buch_handel")
-    #     self.assertTrue(
-    #         pl_interpr_is_applicable(compound)
-    #     )
+    def test_pl_interpr_is_applicable_3(self):
+        compound = Compound("burg_+en_land")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=True)
+        )
 
-    # def test_pl_interpr_applies_6(self):
-    #     compound = Compound("buch_handel")
-    #     self.assertFalse(
-    #         pl_interpr_applies(compound)
-    #     )
+    def test_pl_interpr_applies_3(self):
+        compound = Compound("burg_+en_land")
+        self.assertTrue(
+            pl_interpr_applies(compound, is_n1_plsem=True)
+        )
+
+    
+    def test_pl_interpr_is_applicable_4(self):
+        compound = Compound("mutter_+=_zentrum")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=True)
+        )
+
+    def test_pl_interpr_applies_4(self):
+        compound = Compound("mutter_+=_zentrum")
+        self.assertTrue(
+            pl_interpr_applies(compound, is_n1_plsem=True)
+        )
+
+
+    def test_pl_interpr_is_applicable_5(self):
+        compound = Compound("kind_+er_jacke")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=True)
+        )
+
+    def test_pl_interpr_applies_5(self):
+        compound = Compound("kind_+er_jacke")
+        self.assertTrue(
+            pl_interpr_applies(compound, is_n1_plsem=False)
+        )
+
+
+    def test_pl_interpr_is_applicable_6(self):
+        compound = Compound("tag_+e_lohn")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=True)
+        )
+
+    def test_pl_interpr_applies_6(self):
+        compound = Compound("tag_+e_lohn")
+        self.assertTrue(
+            pl_interpr_applies(compound, is_n1_plsem=False)
+        )
 
         
-    # def test_pl_interpr_is_applicable_7(self):
-    #     compound = Compound("motor_+en_geräusch")
-    #     self.assertTrue(
-    #         pl_interpr_is_applicable(compound)
-    #     )
+    def test_pl_interpr_is_applicable_7(self):
+        compound = Compound("motor_+en_geräusch")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=True)
+        )
 
-    # def test_pl_interpr_applies_7(self):
-    #     compound = Compound("motor_+en_geräusch")
-    #     self.assertFalse(
-    #         pl_interpr_applies(compound)
-    #     )
-
-        
-    # def test_pl_interpr_is_applicable_8(self):
-    #     compound = Compound("burg_+en_blick")
-    #     self.assertTrue(
-    #         pl_interpr_is_applicable(compound)
-    #     )
-
-    # def test_pl_interpr_applies_8(self):
-    #     compound = Compound("burg_+en_blick")
-    #     self.assertFalse(
-    #         pl_interpr_applies(compound)
-    #     )
+    def test_pl_interpr_applies_7(self):
+        compound = Compound("motor_+en_geräusch")
+        self.assertFalse(
+            pl_interpr_applies(compound, is_n1_plsem=False)
+        )
 
         
-    # def test_pl_interpr_is_applicable_9(self):
-    #     compound = Compound("vogel_futter")
-    #     self.assertTrue(
-    #         pl_interpr_is_applicable(compound)
-    #     )
+    def test_pl_interpr_is_applicable_8(self):
+        compound = Compound("burg_+en_blick")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=True)
+        )
 
-    # def test_pl_interpr_applies_9(self):
-    #     compound = Compound("vogel_futter")
-    #     self.assertFalse(
-    #         pl_interpr_applies(compound)
-    #     )
+    def test_pl_interpr_applies_8(self):
+        compound = Compound("burg_+en_blick")
+        self.assertFalse(
+            pl_interpr_applies(compound, is_n1_plsem=True)
+        )
 
-        
-    # def test_pl_interpr_is_applicable_10(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         pl_interpr_is_applicable(compound)
-    #     )
 
-    # def test_pl_interpr_is_applicable_11(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         pl_interpr_is_applicable(compound)
-    #     )
+    def test_pl_interpr_is_applicable_9(self):
+        compound = Compound("stern_+en_wiese")
+        self.assertFalse(
+            pl_interpr_is_applicable(compound, is_linker_pl=False)
+        )
 
-	pass
+    def test_pl_interpr_is_applicable_10(self):
+        compound = Compound("maus_+e_fall")
+        self.assertFalse(
+            pl_interpr_is_applicable(compound, is_linker_pl=False)
+        )
+
+    def test_pl_interpr_is_applicable_11(self):
+        compound = Compound("liebling_+s_frucht")
+        self.assertFalse(
+            pl_interpr_is_applicable(compound, is_linker_pl=False)
+        )
+
+    def test_pl_interpr_is_applicable_12(self):
+        compound = Compound("pilz_sammler")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=False)
+        )
+
+    def test_pl_interpr_is_applicable_13(self):
+        compound = Compound("buch_handel")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=False)
+        )
+
+    def test_pl_interpr_is_applicable_14(self):
+        compound = Compound("vogel_futter")
+        self.assertTrue(
+            pl_interpr_is_applicable(compound, is_linker_pl=False)
+        )
 
 
 
