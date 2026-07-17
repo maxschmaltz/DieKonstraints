@@ -13,8 +13,7 @@ from data_utils.gecodb_compound_parser import (
 from data_utils.load_datasets import load_celex
 
 
-celex_path = "resources/comp_constr_corp_study_mar26/celex_nouns.tsv"
-gecodb_path = "resources/comp_constr_corp_study_mar26/gecodb_v06.tsv"
+celex_path = "resources/developed/celex_nouns.tsv"
 
 # load prepared CELEX nouns and GeCoDB
 celex = load_celex(celex_path)
