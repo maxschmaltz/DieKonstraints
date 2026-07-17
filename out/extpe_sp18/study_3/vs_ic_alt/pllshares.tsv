@@ -161,26 +161,26 @@ buch+veröffentlichung	0.0
 buch+vorstellung	0.0	
 buch+wand	1.0	
 buch+wurm	1.0	
-bucht+abschnitt	0.0	0.0
-bucht+abtrennung	1.0	1.0
-bucht+begrenzung	0.0	0.0
-bucht+boden	0.6666666666666666	0.6666666666666666
-bucht+breite	0.0	0.0
-bucht+fläche	0.5	0.5
-bucht+form	0.0	0.0
-bucht+gitter	1.0	1.0
-bucht+größe	1.0	1.0
-bucht+kraftwerk	1.0	1.0
-bucht+küste	0.5	0.5
-bucht+restaurant	0.0	0.0
-bucht+seite	0.0	0.0
-bucht+strand	0.0	0.0
+bucht+abschnitt	0.0	
+bucht+abtrennung	1.0	
+bucht+begrenzung	0.0	
+bucht+boden	0.6666666666666666	
+bucht+breite	0.0	
+bucht+fläche	0.5	
+bucht+form	0.0	
+bucht+gitter	1.0	
+bucht+größe	1.0	
+bucht+kraftwerk	1.0	
+bucht+küste	0.5	
+bucht+restaurant	0.0	
+bucht+seite	0.0	
+bucht+strand	0.0	
 bucht+system	1.0	
-bucht+tag	1.0	1.0
-bucht+thema	0.0	0.0
-bucht+tiefe	1.0	1.0
-bucht+umrandung	1.0	1.0
-bucht+wand	0.5	0.5
+bucht+tag	1.0	
+bucht+thema	0.0	
+bucht+tiefe	1.0	
+bucht+umrandung	1.0	
+bucht+wand	0.5	
 dämon+arche	1.0	
 dämon+austreibung	0.5	
 dämon+beschwörer	0.0	
@@ -220,14 +220,14 @@ ei+tanz	1.0	1.0
 ei+uhr	1.0	1.0
 ei+wurf	1.0	1.0
 ei+zusatz	0.0	0.0
-eigenschaft+blatt	0.5	0.5
-eigenschaft+dialog	0.75	0.75
+eigenschaft+blatt	0.5	
+eigenschaft+dialog	0.75	
 eigenschaft+satz	1.0	
-eigenschaft+schlüssel	0.0	0.0
-eigenschaft+test	1.0	1.0
-eigenschaft+variable	0.0	0.0
-eigenschaft+wert	1.0	1.0
-eigenschaft+änderung	1.0	1.0
+eigenschaft+schlüssel	0.0	
+eigenschaft+test	1.0	
+eigenschaft+variable	0.0	
+eigenschaft+wert	1.0	
+eigenschaft+änderung	1.0	
 element+abkürzung	0.0	0.0
 element+häufigkeit	1.0	
 element+maß	0.0	0.0
@@ -550,23 +550,23 @@ nagel+schuh	1.0	1.0
 nagel+spitze	0.0	0.0
 nagel+studio	0.5	0.5
 nagel+zange	0.0	0.0
-nation+begriff	0.0	0.0
-nation+bezeichnung	0.0	0.0
-nation+debatte	1.0	1.0
-nation+farbe	1.0	1.0
-nation+form	0.0	0.0
-nation+führer	0.0	0.0
-nation+gedanke	0.0	0.0
-nation+grenze	1.0	1.0
+nation+begriff	0.0	
+nation+bezeichnung	0.0	
+nation+debatte	1.0	
+nation+farbe	1.0	
+nation+form	0.0	
+nation+führer	0.0	
+nation+gedanke	0.0	
+nation+grenze	1.0	
 nation+gruppe	1.0	
-nation+gründer	0.0	0.0
-nation+idee	0.0	0.0
-nation+konzept	0.6666666666666666	0.6666666666666666
-nation+park	0.0	0.0
+nation+gründer	0.0	
+nation+idee	0.0	
+nation+konzept	0.6666666666666666	
+nation+park	0.0	
 nation+tafel	1.0	
-nation+ticket	1.0	1.0
+nation+ticket	1.0	
 nation+verband	1.0	
-nation+verständnis	0.3333333333333333	0.3333333333333333
+nation+verständnis	0.3333333333333333	
 nation+wertung	0.5	
 ohr+arzt	1.0	
 ohr+brille	1.0	
@@ -591,29 +591,29 @@ ohr+wurm	0.3333333333333333
 ohr+zeichnung	0.0	
 ohr+zeuge	1.0	
 ohr+öffnung	0.0	
-person+akt	0.0	0.0
-person+aufzug	1.0	1.0
-person+beförderung	0.5	0.5
-person+beschreibung	0.5	0.5
-person+faktor	0.0	0.0
-person+fähre	1.0	1.0
-person+gesellschaft	0.5	0.5
+person+akt	0.0	
+person+aufzug	1.0	
+person+beförderung	0.5	
+person+beschreibung	0.5	
+person+faktor	0.0	
+person+fähre	1.0	
+person+gesellschaft	0.5	
 person+gruppe	1.0	
-person+haushalt	0.0	0.0
-person+kontrolle	0.5	0.5
-person+konzept	0.5	0.5
+person+haushalt	0.0	
+person+kontrolle	0.5	
+person+konzept	0.5	
 person+kreis	0.5	
-person+merkmal	0.0	0.0
-person+name	0.5	0.5
-person+recht	0.0	0.0
-person+schaden	0.5	0.5
-person+schützer	0.0	0.0
-person+stimme	0.0	0.0
-person+transport	1.0	1.0
+person+merkmal	0.0	
+person+name	0.5	
+person+recht	0.0	
+person+schaden	0.5	
+person+schützer	0.0	
+person+stimme	0.0	
+person+transport	1.0	
 person+vereinigung	1.0	
 person+verzeichnis	1.0	
 person+zahl	1.0	
-person+zug	0.5	0.5
+person+zug	0.5	
 produkt+art	0.0	0.0
 produkt+bereich	0.5	0.5
 produkt+beschreibung	0.0	0.0
@@ -703,9 +703,9 @@ schwert+schmied	0.0	0.0
 schwert+träger	1.0	1.0
 schwert+verleihung	1.0	1.0
 schwester+genossenschaft	1.0	
-schwester+kostüm	1.0	1.0
-schwester+lokal	0.0	0.0
-schwester+zeitung	0.0	0.0
+schwester+kostüm	1.0	
+schwester+lokal	0.0	
+schwester+zeitung	0.0	
 sonne+bad	0.5	
 sonne+bank	0.5	
 sonne+blende	0.5	

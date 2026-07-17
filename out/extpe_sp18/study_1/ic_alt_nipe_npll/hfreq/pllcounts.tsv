@@ -377,32 +377,6 @@ nagel+spitze	num_sg	1	0	0.0
 nagel+spitze	num_pl	1	0	0.0
 nagel+studio	num_sg	1	0	0.0
 nagel+studio	num_pl	1	0	0.0
-nation+begriff	num_sg	0	0	
-nation+begriff	num_pl	0	1	1.0
-person+aufzug	num_sg	0	1	1.0
-person+aufzug	num_pl	0	1	1.0
-person+beförderung	num_sg	0	1	1.0
-person+beförderung	num_pl	0	1	1.0
-person+beschreibung	num_sg	0	1	1.0
-person+beschreibung	num_pl	0	1	1.0
-person+fähre	num_sg	0	1	1.0
-person+fähre	num_pl	0	1	1.0
-person+gesellschaft	num_sg	0	1	1.0
-person+gesellschaft	num_pl	0	1	1.0
-person+kontrolle	num_sg	0	1	1.0
-person+kontrolle	num_pl	0	1	1.0
-person+name	num_sg	0	2	1.0
-person+name	num_pl	0	1	1.0
-person+schaden	num_sg	0	1	1.0
-person+schaden	num_pl	0	2	1.0
-person+schützer	num_sg	0	0	
-person+schützer	num_pl	0	1	1.0
-person+stimme	num_sg	0	0	
-person+stimme	num_pl	0	1	1.0
-person+transport	num_sg	0	1	1.0
-person+transport	num_pl	0	1	1.0
-person+zug	num_sg	0	1	1.0
-person+zug	num_pl	0	2	1.0
 produkt+art	num_sg	1	0	0.0
 produkt+art	num_pl	1	0	0.0
 produkt+bereich	num_sg	1	0	0.0
@@ -441,8 +415,6 @@ schwert+schlag	num_sg	1	0	0.0
 schwert+schlag	num_pl	0	0	
 schwert+träger	num_sg	0	0	
 schwert+träger	num_pl	1	0	0.0
-schwester+zeitung	num_sg	1	0	0.0
-schwester+zeitung	num_pl	1	0	0.0
 stadt+architektur	num_sg	0	0	
 stadt+architektur	num_pl	1	0	0.0
 stadt+besichtigung	num_sg	1	0	0.0

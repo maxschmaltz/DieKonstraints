@@ -1,25 +1,17 @@
 		lfreq
-N	ic_alt_nipe_npll	51.0
 N	ic_alt_nipe	51.0
 N	ic_alt	66.0
-df	ic_alt_nipe_npll	1.0
 df	ic_alt_nipe	1.0
 df	ic_alt	1.0
-chi2	ic_alt_nipe_npll	3.78
 chi2	ic_alt_nipe	3.78
 chi2	ic_alt	3.967
-p	ic_alt_nipe_npll	0.052
 p	ic_alt_nipe	0.052
 p	ic_alt	0.046
-cramer_v	ic_alt_nipe_npll	0.272
 cramer_v	ic_alt_nipe	0.272
 cramer_v	ic_alt	0.245
-resids_cong	ic_alt_nipe_npll	2.228
 resids_cong	ic_alt_nipe	2.228
 resids_cong	ic_alt	2.246
-resids_incong	ic_alt_nipe_npll	-2.228
 resids_incong	ic_alt_nipe	-2.228
 resids_incong	ic_alt	-2.246
-p_sidak	ic_alt_nipe_npll	0.888
 p_sidak	ic_alt_nipe	0.052
 p_sidak	ic_alt	0.046

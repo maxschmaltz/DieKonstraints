@@ -324,45 +324,45 @@ buch+wand	ic_alt_nipe_npll
 buch+wurm	ic_alt	0.0	1.0	1.0
 buch+wurm	ic_alt_nipe_npll			
 bucht+abschnitt	ic_alt	1.0	0.0	0.0
-bucht+abschnitt	ic_alt_nipe_npll	1.0	0.0	0.0
+bucht+abschnitt	ic_alt_nipe_npll			
 bucht+abtrennung	ic_alt	0.0	1.0	1.0
-bucht+abtrennung	ic_alt_nipe_npll	0.0	1.0	1.0
+bucht+abtrennung	ic_alt_nipe_npll			
 bucht+begrenzung	ic_alt	1.0	0.0	0.0
-bucht+begrenzung	ic_alt_nipe_npll	1.0	0.0	0.0
+bucht+begrenzung	ic_alt_nipe_npll			
 bucht+boden	ic_alt	1.0	2.0	0.6666666666666666
-bucht+boden	ic_alt_nipe_npll	1.0	2.0	0.6666666666666666
+bucht+boden	ic_alt_nipe_npll			
 bucht+breite	ic_alt	1.0	0.0	0.0
-bucht+breite	ic_alt_nipe_npll	1.0	0.0	0.0
+bucht+breite	ic_alt_nipe_npll			
 bucht+fläche	ic_alt	1.0	1.0	0.5
-bucht+fläche	ic_alt_nipe_npll	1.0	1.0	0.5
+bucht+fläche	ic_alt_nipe_npll			
 bucht+form	ic_alt	1.0	0.0	0.0
-bucht+form	ic_alt_nipe_npll	1.0	0.0	0.0
+bucht+form	ic_alt_nipe_npll			
 bucht+gitter	ic_alt	0.0	1.0	1.0
-bucht+gitter	ic_alt_nipe_npll	0.0	1.0	1.0
+bucht+gitter	ic_alt_nipe_npll			
 bucht+größe	ic_alt	0.0	1.0	1.0
-bucht+größe	ic_alt_nipe_npll	0.0	1.0	1.0
+bucht+größe	ic_alt_nipe_npll			
 bucht+kraftwerk	ic_alt	0.0	1.0	1.0
-bucht+kraftwerk	ic_alt_nipe_npll	0.0	1.0	1.0
+bucht+kraftwerk	ic_alt_nipe_npll			
 bucht+küste	ic_alt	1.0	1.0	0.5
-bucht+küste	ic_alt_nipe_npll	1.0	1.0	0.5
+bucht+küste	ic_alt_nipe_npll			
 bucht+restaurant	ic_alt	1.0	0.0	0.0
-bucht+restaurant	ic_alt_nipe_npll	1.0	0.0	0.0
+bucht+restaurant	ic_alt_nipe_npll			
 bucht+seite	ic_alt	1.0	0.0	0.0
-bucht+seite	ic_alt_nipe_npll	1.0	0.0	0.0
+bucht+seite	ic_alt_nipe_npll			
 bucht+strand	ic_alt	2.0	0.0	0.0
-bucht+strand	ic_alt_nipe_npll	2.0	0.0	0.0
+bucht+strand	ic_alt_nipe_npll			
 bucht+system	ic_alt	0.0	2.0	1.0
 bucht+system	ic_alt_nipe_npll			
 bucht+tag	ic_alt	0.0	1.0	1.0
-bucht+tag	ic_alt_nipe_npll	0.0	1.0	1.0
+bucht+tag	ic_alt_nipe_npll			
 bucht+thema	ic_alt	1.0	0.0	0.0
-bucht+thema	ic_alt_nipe_npll	1.0	0.0	0.0
+bucht+thema	ic_alt_nipe_npll			
 bucht+tiefe	ic_alt	0.0	1.0	1.0
-bucht+tiefe	ic_alt_nipe_npll	0.0	1.0	1.0
+bucht+tiefe	ic_alt_nipe_npll			
 bucht+umrandung	ic_alt	0.0	1.0	1.0
-bucht+umrandung	ic_alt_nipe_npll	0.0	1.0	1.0
+bucht+umrandung	ic_alt_nipe_npll			
 bucht+wand	ic_alt	1.0	1.0	0.5
-bucht+wand	ic_alt_nipe_npll	1.0	1.0	0.5
+bucht+wand	ic_alt_nipe_npll			
 dämon+arche	ic_alt	0.0	1.0	1.0
 dämon+arche	ic_alt_nipe_npll			
 dämon+austreibung	ic_alt	1.0	1.0	0.5
@@ -442,21 +442,21 @@ ei+wurf	ic_alt_nipe_npll	0.0	1.0	1.0
 ei+zusatz	ic_alt	1.0	0.0	0.0
 ei+zusatz	ic_alt_nipe_npll	1.0	0.0	0.0
 eigenschaft+blatt	ic_alt	1.0	1.0	0.5
-eigenschaft+blatt	ic_alt_nipe_npll	1.0	1.0	0.5
+eigenschaft+blatt	ic_alt_nipe_npll			
 eigenschaft+dialog	ic_alt	1.0	3.0	0.75
-eigenschaft+dialog	ic_alt_nipe_npll	1.0	3.0	0.75
+eigenschaft+dialog	ic_alt_nipe_npll			
 eigenschaft+satz	ic_alt	0.0	2.0	1.0
 eigenschaft+satz	ic_alt_nipe_npll			
 eigenschaft+schlüssel	ic_alt	1.0	0.0	0.0
-eigenschaft+schlüssel	ic_alt_nipe_npll	1.0	0.0	0.0
+eigenschaft+schlüssel	ic_alt_nipe_npll			
 eigenschaft+test	ic_alt	0.0	2.0	1.0
-eigenschaft+test	ic_alt_nipe_npll	0.0	2.0	1.0
+eigenschaft+test	ic_alt_nipe_npll			
 eigenschaft+variable	ic_alt	1.0	0.0	0.0
-eigenschaft+variable	ic_alt_nipe_npll	1.0	0.0	0.0
+eigenschaft+variable	ic_alt_nipe_npll			
 eigenschaft+wert	ic_alt	0.0	2.0	1.0
-eigenschaft+wert	ic_alt_nipe_npll	0.0	2.0	1.0
+eigenschaft+wert	ic_alt_nipe_npll			
 eigenschaft+änderung	ic_alt	0.0	1.0	1.0
-eigenschaft+änderung	ic_alt_nipe_npll	0.0	1.0	1.0
+eigenschaft+änderung	ic_alt_nipe_npll			
 element+abkürzung	ic_alt	1.0	0.0	0.0
 element+abkürzung	ic_alt_nipe_npll	1.0	0.0	0.0
 element+häufigkeit	ic_alt	0.0	1.0	1.0
@@ -1102,39 +1102,39 @@ nagel+studio	ic_alt_nipe_npll	1.0	1.0	0.5
 nagel+zange	ic_alt	1.0	0.0	0.0
 nagel+zange	ic_alt_nipe_npll	1.0	0.0	0.0
 nation+begriff	ic_alt	1.0	0.0	0.0
-nation+begriff	ic_alt_nipe_npll	1.0	0.0	0.0
+nation+begriff	ic_alt_nipe_npll			
 nation+bezeichnung	ic_alt	1.0	0.0	0.0
-nation+bezeichnung	ic_alt_nipe_npll	1.0	0.0	0.0
+nation+bezeichnung	ic_alt_nipe_npll			
 nation+debatte	ic_alt	0.0	1.0	1.0
-nation+debatte	ic_alt_nipe_npll	0.0	1.0	1.0
+nation+debatte	ic_alt_nipe_npll			
 nation+farbe	ic_alt	0.0	1.0	1.0
-nation+farbe	ic_alt_nipe_npll	0.0	1.0	1.0
+nation+farbe	ic_alt_nipe_npll			
 nation+form	ic_alt	1.0	0.0	0.0
-nation+form	ic_alt_nipe_npll	1.0	0.0	0.0
+nation+form	ic_alt_nipe_npll			
 nation+führer	ic_alt	1.0	0.0	0.0
-nation+führer	ic_alt_nipe_npll	1.0	0.0	0.0
+nation+führer	ic_alt_nipe_npll			
 nation+gedanke	ic_alt	2.0	0.0	0.0
-nation+gedanke	ic_alt_nipe_npll	2.0	0.0	0.0
+nation+gedanke	ic_alt_nipe_npll			
 nation+grenze	ic_alt	0.0	1.0	1.0
-nation+grenze	ic_alt_nipe_npll	0.0	1.0	1.0
+nation+grenze	ic_alt_nipe_npll			
 nation+gruppe	ic_alt	0.0	1.0	1.0
 nation+gruppe	ic_alt_nipe_npll			
 nation+gründer	ic_alt	1.0	0.0	0.0
-nation+gründer	ic_alt_nipe_npll	1.0	0.0	0.0
+nation+gründer	ic_alt_nipe_npll			
 nation+idee	ic_alt	1.0	0.0	0.0
-nation+idee	ic_alt_nipe_npll	1.0	0.0	0.0
+nation+idee	ic_alt_nipe_npll			
 nation+konzept	ic_alt	1.0	2.0	0.6666666666666666
-nation+konzept	ic_alt_nipe_npll	1.0	2.0	0.6666666666666666
+nation+konzept	ic_alt_nipe_npll			
 nation+park	ic_alt	2.0	0.0	0.0
-nation+park	ic_alt_nipe_npll	2.0	0.0	0.0
+nation+park	ic_alt_nipe_npll			
 nation+tafel	ic_alt	0.0	1.0	1.0
 nation+tafel	ic_alt_nipe_npll			
 nation+ticket	ic_alt	0.0	1.0	1.0
-nation+ticket	ic_alt_nipe_npll	0.0	1.0	1.0
+nation+ticket	ic_alt_nipe_npll			
 nation+verband	ic_alt	0.0	1.0	1.0
 nation+verband	ic_alt_nipe_npll			
 nation+verständnis	ic_alt	2.0	1.0	0.3333333333333333
-nation+verständnis	ic_alt_nipe_npll	2.0	1.0	0.3333333333333333
+nation+verständnis	ic_alt_nipe_npll			
 nation+wertung	ic_alt	1.0	1.0	0.5
 nation+wertung	ic_alt_nipe_npll			
 ohr+arzt	ic_alt	0.0	1.0	1.0
@@ -1184,43 +1184,43 @@ ohr+zeuge	ic_alt_nipe_npll
 ohr+öffnung	ic_alt	1.0	0.0	0.0
 ohr+öffnung	ic_alt_nipe_npll			
 person+akt	ic_alt	2.0	0.0	0.0
-person+akt	ic_alt_nipe_npll	2.0	0.0	0.0
+person+akt	ic_alt_nipe_npll			
 person+aufzug	ic_alt	0.0	1.0	1.0
-person+aufzug	ic_alt_nipe_npll	0.0	1.0	1.0
+person+aufzug	ic_alt_nipe_npll			
 person+beförderung	ic_alt	1.0	1.0	0.5
-person+beförderung	ic_alt_nipe_npll	1.0	1.0	0.5
+person+beförderung	ic_alt_nipe_npll			
 person+beschreibung	ic_alt	1.0	1.0	0.5
-person+beschreibung	ic_alt_nipe_npll	1.0	1.0	0.5
+person+beschreibung	ic_alt_nipe_npll			
 person+faktor	ic_alt	1.0	0.0	0.0
-person+faktor	ic_alt_nipe_npll	1.0	0.0	0.0
+person+faktor	ic_alt_nipe_npll			
 person+fähre	ic_alt	0.0	1.0	1.0
-person+fähre	ic_alt_nipe_npll	0.0	1.0	1.0
+person+fähre	ic_alt_nipe_npll			
 person+gesellschaft	ic_alt	1.0	1.0	0.5
-person+gesellschaft	ic_alt_nipe_npll	1.0	1.0	0.5
+person+gesellschaft	ic_alt_nipe_npll			
 person+gruppe	ic_alt	0.0	1.0	1.0
 person+gruppe	ic_alt_nipe_npll			
 person+haushalt	ic_alt	1.0	0.0	0.0
-person+haushalt	ic_alt_nipe_npll	1.0	0.0	0.0
+person+haushalt	ic_alt_nipe_npll			
 person+kontrolle	ic_alt	1.0	1.0	0.5
-person+kontrolle	ic_alt_nipe_npll	1.0	1.0	0.5
+person+kontrolle	ic_alt_nipe_npll			
 person+konzept	ic_alt	1.0	1.0	0.5
-person+konzept	ic_alt_nipe_npll	1.0	1.0	0.5
+person+konzept	ic_alt_nipe_npll			
 person+kreis	ic_alt	2.0	2.0	0.5
 person+kreis	ic_alt_nipe_npll			
 person+merkmal	ic_alt	1.0	0.0	0.0
-person+merkmal	ic_alt_nipe_npll	1.0	0.0	0.0
+person+merkmal	ic_alt_nipe_npll			
 person+name	ic_alt	2.0	2.0	0.5
-person+name	ic_alt_nipe_npll	2.0	2.0	0.5
+person+name	ic_alt_nipe_npll			
 person+recht	ic_alt	1.0	0.0	0.0
-person+recht	ic_alt_nipe_npll	1.0	0.0	0.0
+person+recht	ic_alt_nipe_npll			
 person+schaden	ic_alt	1.0	1.0	0.5
-person+schaden	ic_alt_nipe_npll	1.0	1.0	0.5
+person+schaden	ic_alt_nipe_npll			
 person+schützer	ic_alt	1.0	0.0	0.0
-person+schützer	ic_alt_nipe_npll	1.0	0.0	0.0
+person+schützer	ic_alt_nipe_npll			
 person+stimme	ic_alt	1.0	0.0	0.0
-person+stimme	ic_alt_nipe_npll	1.0	0.0	0.0
+person+stimme	ic_alt_nipe_npll			
 person+transport	ic_alt	0.0	1.0	1.0
-person+transport	ic_alt_nipe_npll	0.0	1.0	1.0
+person+transport	ic_alt_nipe_npll			
 person+vereinigung	ic_alt	0.0	1.0	1.0
 person+vereinigung	ic_alt_nipe_npll			
 person+verzeichnis	ic_alt	0.0	1.0	1.0
@@ -1228,7 +1228,7 @@ person+verzeichnis	ic_alt_nipe_npll
 person+zahl	ic_alt	0.0	1.0	1.0
 person+zahl	ic_alt_nipe_npll			
 person+zug	ic_alt	1.0	1.0	0.5
-person+zug	ic_alt_nipe_npll	1.0	1.0	0.5
+person+zug	ic_alt_nipe_npll			
 produkt+art	ic_alt	1.0	0.0	0.0
 produkt+art	ic_alt_nipe_npll	1.0	0.0	0.0
 produkt+bereich	ic_alt	1.0	1.0	0.5
@@ -1408,11 +1408,11 @@ schwert+verleihung	ic_alt_nipe_npll	0.0	1.0	1.0
 schwester+genossenschaft	ic_alt	0.0	1.0	1.0
 schwester+genossenschaft	ic_alt_nipe_npll			
 schwester+kostüm	ic_alt	0.0	1.0	1.0
-schwester+kostüm	ic_alt_nipe_npll	0.0	1.0	1.0
+schwester+kostüm	ic_alt_nipe_npll			
 schwester+lokal	ic_alt	1.0	0.0	0.0
-schwester+lokal	ic_alt_nipe_npll	1.0	0.0	0.0
+schwester+lokal	ic_alt_nipe_npll			
 schwester+zeitung	ic_alt	1.0	0.0	0.0
-schwester+zeitung	ic_alt_nipe_npll	1.0	0.0	0.0
+schwester+zeitung	ic_alt_nipe_npll			
 sonne+bad	ic_alt	1.0	1.0	0.5
 sonne+bad	ic_alt_nipe_npll			
 sonne+bank	ic_alt	1.0	1.0	0.5

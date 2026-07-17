@@ -129,13 +129,13 @@ def main():
     #
     #
     #   * 'resources/developed/sp18/extpe/ic_alt_nipe_npll.tsv'
-    #   (N=1236, UniqN=665, UniqCN=468, UniqN1N=30)
+    #   (N=1075, UniqN=568, UniqCN=407, UniqN1N=25)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing both in the Sg and the Pl forms
     #   and not undergoing the IntPE whose N1 may not attach a pluralic linker
     #
     #   * 'resources/developed/sp18/extpe/leftovers/ic_alt_nipe_pll.tsv'
-    #   (N=695, UniqN1N=16)
+    #   (N=856, UniqN1N=21)
     #   Compounds built from non-unique constituent combinations (regardless 
     #   of the linker) appearing both in the Sg and the Pl forms
     #   and not undergoing the IntPE whose N1 may attach a pluralic linker
@@ -204,7 +204,7 @@ def main():
     #           |                             \
     #  + N1 may not attach                 + N1 may attach 
     #  a pluralic linker                    a pluralic linker     
-    #   (N=1236, UniqN=665,                   (N=695, UniqN1N=16)
+    #   (N=1236, UniqN=665,                   (N=856, UniqN1N=21)
     #  UniqCN=468, UniqN1N=30)               'resources/developed/sp18/
     # 'resources/developed/sp18/              extpe/leftovers/ic_alt_nipe_pll.tsv'
     # extpe/ic_alt_nipe_npll.tsv'         
@@ -508,7 +508,7 @@ def main():
     )
 
     # N1 may not attach the pluralic linker
-    # (N=1236, UniqN=665, UniqCN=468, UniqN1N=30)
+    # (N=1075, UniqN=568, UniqCN=407, UniqN1N=25)
     ic_alt_nipe[~ic_alt_nipe["n1"].isin(n1_pll)].to_csv(
         os.path.join(outdir, "ic_alt_nipe_npll.tsv"),
         **outcsv_args

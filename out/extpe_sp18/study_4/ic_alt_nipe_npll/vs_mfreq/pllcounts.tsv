@@ -173,44 +173,6 @@ brief+wähler	lfreq	1.0	0.0	0.0
 brief+wähler	mfreq	1.0	0.0	0.0
 brief+zentrum	lfreq	1.0	1.0	0.5
 brief+zentrum	mfreq	1.0	0.0	0.0
-bucht+abschnitt	lfreq	1.0	1.0	0.5
-bucht+abschnitt	mfreq			
-bucht+abtrennung	lfreq	0.0	1.0	1.0
-bucht+abtrennung	mfreq			
-bucht+begrenzung	lfreq	0.0	1.0	1.0
-bucht+begrenzung	mfreq			
-bucht+boden	lfreq	0.0	1.0	1.0
-bucht+boden	mfreq			
-bucht+breite	lfreq	0.0	1.0	1.0
-bucht+breite	mfreq			
-bucht+fläche	lfreq	0.0	1.0	1.0
-bucht+fläche	mfreq			
-bucht+form	lfreq	0.0	1.0	1.0
-bucht+form	mfreq			
-bucht+gitter	lfreq	0.0	1.0	1.0
-bucht+gitter	mfreq			
-bucht+größe	lfreq	0.0	1.0	1.0
-bucht+größe	mfreq			
-bucht+kraftwerk	lfreq	0.0	2.0	1.0
-bucht+kraftwerk	mfreq			
-bucht+küste	lfreq	0.0	1.0	1.0
-bucht+küste	mfreq			
-bucht+restaurant	lfreq	0.0	1.0	1.0
-bucht+restaurant	mfreq			
-bucht+seite	lfreq	1.0	0.0	0.0
-bucht+seite	mfreq			
-bucht+strand	lfreq	1.0	0.0	0.0
-bucht+strand	mfreq			
-bucht+tag	lfreq	1.0	0.0	0.0
-bucht+tag	mfreq			
-bucht+thema	lfreq	1.0	0.0	0.0
-bucht+thema	mfreq			
-bucht+tiefe	lfreq	0.0	1.0	1.0
-bucht+tiefe	mfreq			
-bucht+umrandung	lfreq	0.0	1.0	1.0
-bucht+umrandung	mfreq			
-bucht+wand	lfreq	0.0	1.0	1.0
-bucht+wand	mfreq			
 ei+abgabe	lfreq	1.0	0.0	0.0
 ei+abgabe	mfreq			
 ei+ablage	lfreq	1.0	0.0	0.0
@@ -255,20 +217,6 @@ ei+wurf	lfreq	0.0	1.0	1.0
 ei+wurf	mfreq	0.0	1.0	1.0
 ei+zusatz	lfreq	1.0	0.0	0.0
 ei+zusatz	mfreq			
-eigenschaft+blatt	lfreq	0.0	1.0	1.0
-eigenschaft+blatt	mfreq			
-eigenschaft+dialog	lfreq	0.0	1.0	1.0
-eigenschaft+dialog	mfreq			
-eigenschaft+schlüssel	lfreq	1.0	0.0	0.0
-eigenschaft+schlüssel	mfreq			
-eigenschaft+test	lfreq	1.0	0.0	0.0
-eigenschaft+test	mfreq			
-eigenschaft+variable	lfreq	1.0	0.0	0.0
-eigenschaft+variable	mfreq			
-eigenschaft+wert	lfreq	0.0	1.0	1.0
-eigenschaft+wert	mfreq			
-eigenschaft+änderung	lfreq	0.0	1.0	1.0
-eigenschaft+änderung	mfreq			
 element+abkürzung	lfreq	1.0	0.0	0.0
 element+abkürzung	mfreq			
 element+maß	lfreq	1.0	1.0	0.5
@@ -607,70 +555,6 @@ nagel+studio	lfreq	1.0	1.0	0.5
 nagel+studio	mfreq	1.0	0.0	0.0
 nagel+zange	lfreq	1.0	0.0	0.0
 nagel+zange	mfreq	1.0	0.0	0.0
-nation+begriff	lfreq	1.0	1.0	0.5
-nation+begriff	mfreq	1.0	1.0	0.5
-nation+bezeichnung	lfreq	1.0	0.0	0.0
-nation+bezeichnung	mfreq			
-nation+debatte	lfreq	1.0	0.0	0.0
-nation+debatte	mfreq			
-nation+farbe	lfreq	2.0	0.0	0.0
-nation+farbe	mfreq			
-nation+form	lfreq	1.0	0.0	0.0
-nation+form	mfreq			
-nation+führer	lfreq	1.0	0.0	0.0
-nation+führer	mfreq			
-nation+gedanke	lfreq	0.0	1.0	1.0
-nation+gedanke	mfreq			
-nation+grenze	lfreq	0.0	1.0	1.0
-nation+grenze	mfreq	0.0	1.0	1.0
-nation+gründer	lfreq	1.0	0.0	0.0
-nation+gründer	mfreq			
-nation+idee	lfreq	0.0	1.0	1.0
-nation+idee	mfreq			
-nation+konzept	lfreq	1.0	1.0	0.5
-nation+konzept	mfreq			
-nation+park	lfreq	1.0	0.0	0.0
-nation+park	mfreq			
-nation+ticket	lfreq	0.0	1.0	1.0
-nation+ticket	mfreq	0.0	1.0	1.0
-nation+verständnis	lfreq	2.0	0.0	0.0
-nation+verständnis	mfreq			
-person+akt	lfreq	0.0	2.0	1.0
-person+akt	mfreq			
-person+aufzug	lfreq	0.0	1.0	1.0
-person+aufzug	mfreq	0.0	1.0	1.0
-person+beförderung	lfreq	0.0	1.0	1.0
-person+beförderung	mfreq	0.0	1.0	1.0
-person+beschreibung	lfreq	0.0	1.0	1.0
-person+beschreibung	mfreq	0.0	1.0	1.0
-person+faktor	lfreq	1.0	0.0	0.0
-person+faktor	mfreq			
-person+fähre	lfreq	0.0	1.0	1.0
-person+fähre	mfreq	0.0	1.0	1.0
-person+gesellschaft	lfreq	0.0	1.0	1.0
-person+gesellschaft	mfreq	0.0	1.0	1.0
-person+haushalt	lfreq	1.0	0.0	0.0
-person+haushalt	mfreq			
-person+kontrolle	lfreq	0.0	1.0	1.0
-person+kontrolle	mfreq	0.0	1.0	1.0
-person+konzept	lfreq	1.0	0.0	0.0
-person+konzept	mfreq			
-person+merkmal	lfreq	1.0	0.0	0.0
-person+merkmal	mfreq			
-person+name	lfreq	0.0	1.0	1.0
-person+name	mfreq	0.0	1.0	1.0
-person+recht	lfreq	1.0	0.0	0.0
-person+recht	mfreq			
-person+schaden	lfreq	0.0	2.0	1.0
-person+schaden	mfreq	0.0	2.0	1.0
-person+schützer	lfreq	0.0	1.0	1.0
-person+schützer	mfreq	0.0	1.0	1.0
-person+stimme	lfreq	0.0	1.0	1.0
-person+stimme	mfreq	0.0	1.0	1.0
-person+transport	lfreq	0.0	1.0	1.0
-person+transport	mfreq	0.0	1.0	1.0
-person+zug	lfreq	1.0	2.0	0.6666666666666666
-person+zug	mfreq	0.0	2.0	1.0
 produkt+art	lfreq	1.0	0.0	0.0
 produkt+art	mfreq	1.0	0.0	0.0
 produkt+bereich	lfreq	2.0	1.0	0.3333333333333333
@@ -729,12 +613,6 @@ schwert+träger	lfreq	1.0	1.0	0.5
 schwert+träger	mfreq	1.0	0.0	0.0
 schwert+verleihung	lfreq	0.0	1.0	1.0
 schwert+verleihung	mfreq			
-schwester+kostüm	lfreq	0.0	1.0	1.0
-schwester+kostüm	mfreq			
-schwester+lokal	lfreq	1.0	0.0	0.0
-schwester+lokal	mfreq	1.0	0.0	0.0
-schwester+zeitung	lfreq	1.0	0.0	0.0
-schwester+zeitung	mfreq	1.0	0.0	0.0
 stadt+architektur	lfreq	1.0	0.0	0.0
 stadt+architektur	mfreq	1.0	0.0	0.0
 stadt+besichtigung	lfreq	0.0	1.0	1.0

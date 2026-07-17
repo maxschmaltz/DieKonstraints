@@ -1,26 +1,26 @@
 		apfel	apfel	apfel	bucht	person
 		lfreq	mfreq	hfreq	lfreq	lfreq
-N	ic_alt_nipe_npll	46.0	33.0	26.0	46.0	51.0
+N	ic_alt_nipe_npll	46.0	33.0	26.0		
 N	ic_alt_nipe	46.0	33.0	26.0	46.0	51.0
 N	ic_alt	52.0	33.0	26.0	49.0	66.0
-df	ic_alt_nipe_npll	1.0	1.0	1.0	1.0	1.0
+df	ic_alt_nipe_npll	1.0	1.0	1.0		
 df	ic_alt_nipe	1.0	1.0	1.0	1.0	1.0
 df	ic_alt	1.0	1.0	1.0	1.0	1.0
-chi2	ic_alt_nipe_npll	3.242	0.136	1.187	2.716	3.78
+chi2	ic_alt_nipe_npll	3.242	0.136	1.187		
 chi2	ic_alt_nipe	3.242	0.136	1.187	2.716	3.78
 chi2	ic_alt	2.233	0.136	1.187	2.366	3.967
-p	ic_alt_nipe_npll	0.072	0.712	0.276	0.099	0.052
+p	ic_alt_nipe_npll	0.072	0.712	0.276		
 p	ic_alt_nipe	0.072	0.712	0.276	0.099	0.052
 p	ic_alt	0.135	0.712	0.276	0.124	0.046
-cramer_v	ic_alt_nipe_npll	0.265	0.064	0.214	0.243	0.272
+cramer_v	ic_alt_nipe_npll	0.265	0.064	0.214		
 cramer_v	ic_alt_nipe	0.265	0.064	0.214	0.243	0.272
 cramer_v	ic_alt	0.207	0.064	0.214	0.22	0.245
-resids_cong	ic_alt_nipe_npll	2.107	0.821	1.323	1.951	2.228
+resids_cong	ic_alt_nipe_npll	2.107	0.821	1.323		
 resids_cong	ic_alt_nipe	2.107	0.821	1.323	1.951	2.228
 resids_cong	ic_alt	1.776	0.821	1.323	1.836	2.246
-resids_incong	ic_alt_nipe_npll	-2.107	-0.821	-1.323	-1.951	-2.228
+resids_incong	ic_alt_nipe_npll	-2.107	-0.821	-1.323		
 resids_incong	ic_alt_nipe	-2.107	-0.821	-1.323	-1.951	-2.228
 resids_incong	ic_alt	-1.776	-0.821	-1.323	-1.836	-2.246
-p_sidak	ic_alt_nipe_npll	0.072	0.712	0.276	0.099	0.052
+p_sidak	ic_alt_nipe_npll	0.072	0.712	0.276		
 p_sidak	ic_alt_nipe	0.072	0.712	0.276	0.099	0.052
 p_sidak	ic_alt	0.135	0.712	0.276	0.124	0.046
