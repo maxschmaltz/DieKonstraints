@@ -5,6 +5,7 @@ from typing import Tuple
 
 from gecodb_compound_parser import Compound
 from germanet_search import is_germanet_noun
+from load_datasets import load_gecodb, load_celex
 
 
 def main():
@@ -34,30 +35,11 @@ def main():
     
     # load prepared CELEX nouns
     # (N=11996)
-    celex = pd.read_csv(
-        celex_path,
-        sep="\t",
-        dtype=str,
-        header=0,
-        index_col="lemma"
-    )
+    celex = load_celex(celex_path)
 
     # load prepared GeCoDB
     # (N=282767)
-    gecodb_v06 = pd.read_csv(
-        gecodb_path,
-        sep="\t",
-        dtype=defaultdict(
-            lambda: str,
-            **{
-                f"{prx}_freq": int
-                for prx in ["comp", "n1", "n1_mass", "n2"]
-            },
-            n1_prod="int"
-        ),
-        header=0,
-        index_col=0
-    )
+    gecodb_v06 = load_gecodb(gecodb_path)
 
 
     # 2. Filter out all CELEX-nouns entries not found as nouns in Germanet.

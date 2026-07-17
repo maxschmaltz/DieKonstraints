@@ -16,22 +16,7 @@ celex_path = "resources/comp_constr_corp_study_mar26/celex_nouns.tsv"
 gecodb_path = "resources/comp_constr_corp_study_mar26/gecodb_v06.tsv"
 
 # load prepared CELEX nouns and GeCoDB
-celex = pd.read_csv(
-	celex_path,
-	sep="\t",
-	dtype=str,
-	header=0,
-	index_col="lemma"
-)
-
-# load GeCoDB
-gecodb_v06 = pd.read_csv(
-	gecodb_path,
-	sep="\t",
-	dtype=str,
-	header=0,
-	index_col="comp_gecodb"
-)
+celex = load_celex(celex_path)
 
 
 # Helper functions for linker checks

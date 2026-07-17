@@ -3,42 +3,31 @@ import pandas as pd
 from scipy.stats import chi2_contingency
 from statsmodels.stats.contingency_tables import Table
 import math
-from collections import defaultdict
 from typing import Tuple, Optional, Union
 from types import FunctionType
 
-
-sp18_extpe_path = "../resources/developed/sp18/extpe"
-sp18_intpe_path = "../resources/developed/sp18/intpe"
-
-resdir_extpe = "../out/extpe_sp18"
-resdir_intpe = "../out/intpe_sp18"
+from data_utils.load_datasets import load_sp18
 
 
-def get_read_sp18(intpe: bool) -> FunctionType:
+sp18_extpe_path = "resources/developed/sp18/extpe"
+sp18_intpe_path = "resources/developed/sp18/intpe"
 
-	incsv_args = {
-		"sep": "\t",
-		"header": 0,
-		"index_col": "gecodb" if intpe else "const_comb",
-		# all str, WC int, is linker pluralic bool
-		"dtype": defaultdict(
-			lambda: str,
-			wc="int",
-			is_linker_pl="bool"
-		),
-		# = csv.QUOTE_NONE, separate by tabs only
-		"quoting": 3
-	}
+resdir_extpe = "out/extpe_sp18"
+resdir_intpe = "out/intpe_sp18"
+
+
+def get_load_sp18(intpe: bool) -> FunctionType:
 
 	sp18_path = sp18_intpe_path if intpe else sp18_extpe_path
-	def read_sp18(name: str) -> pd.DataFrame:
-		return pd.read_csv(
+	index_col = "gecodb" if intpe else "const_comb"
+
+	def _load_sp18(name: str) -> pd.DataFrame:
+		return load_sp18(
 			os.path.join(sp18_path, f"{name}.tsv"),
-			**incsv_args
+			index_col
 		)
 
-	return read_sp18, incsv_args
+	return _load_sp18
 
 
 def savetsv(

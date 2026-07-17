@@ -4,12 +4,12 @@
 import os
 import yaml
 import pandas as pd
-from collections import defaultdict
 from tqdm import tqdm
 from typing import Tuple
 
 from check_applicability import applicability_checkers
 from .gecodb_compound_parser import Compound
+from .load_datasets import load_sp18
 
 
 # python3 -m data_utils.prepare_sp18_extpe
@@ -228,19 +228,7 @@ def main():
     # 1. Load SP18.
     
     # SP18 (N=8212, UniqN=6889, UniqCN=6161, UniqN1N=46)
-    sp18 = pd.read_csv(
-        sp18_path,
-        sep="\t",
-        header=0,
-        index_col="gecodb",
-        # all str, WC int, is linker pluralic bool
-        dtype=defaultdict(
-            lambda: str,
-            wc="int",
-            is_linker_pl="bool"
-        ),
-        quoting=3   # = csv.QUOTE_NONE, separate by tabs only
-    )
+    sp18 = load_sp18(sp18_path)
 
 
     # 2. Load the constraints.
