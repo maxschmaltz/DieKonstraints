@@ -31,16 +31,10 @@ mutter	n1_ind	60	21	0.25925925925925924
 mutter	n1_coll	0	8	1.0
 nagel	n1_ind	28	0	0.0
 nagel	n1_coll	0	0	
-nation	n1_ind	0	6	1.0
-nation	n1_coll	0	2	1.0
-person	n1_ind	3	52	0.9454545454545454
-person	n1_coll	0	17	1.0
 produkt	n1_ind	57	0	0.0
 produkt	n1_coll	14	0	0.0
 schwert	n1_ind	21	1	0.045454545454545456
 schwert	n1_coll	0	0	
-schwester	n1_ind	5	3	0.375
-schwester	n1_coll	0	5	1.0
 stadt	n1_ind	80	38	0.3220338983050847
 stadt	n1_coll	0	24	1.0
 vater	n1_ind	40	13	0.24528301886792453

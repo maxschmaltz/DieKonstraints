@@ -9,12 +9,8 @@ brett	lfreq	6.0	11.0	0.6470588235294118
 brett	mfreq	0.0	1.0	1.0
 brief	lfreq	5.0	16.0	0.7619047619047619
 brief	mfreq	5.0	2.0	0.2857142857142857
-bucht	lfreq	0.0	8.0	1.0
-bucht	mfreq			
 ei	lfreq	8.0	3.0	0.2727272727272727
 ei	mfreq	5.0	1.0	0.16666666666666666
-eigenschaft	lfreq	8.0	22.0	0.7333333333333333
-eigenschaft	mfreq	0.0	0.0	
 element	lfreq	11.0	16.0	0.5925925925925926
 element	mfreq			
 frau	lfreq	11.0	27.0	0.7105263157894737
@@ -37,16 +33,10 @@ mutter	lfreq	0.0	18.0	1.0
 mutter	mfreq	0.0	11.0	1.0
 nagel	lfreq	0.0	1.0	1.0
 nagel	mfreq	0.0	0.0	
-nation	lfreq	4.0	18.0	0.8181818181818182
-nation	mfreq	0.0	2.0	1.0
-person	lfreq	8.0	24.0	0.75
-person	mfreq	0.0	23.0	1.0
 produkt	lfreq	16.0	18.0	0.5294117647058824
 produkt	mfreq	15.0	1.0	0.0625
 schwert	lfreq	2.0	17.0	0.8947368421052632
 schwert	mfreq	0.0	0.0	
-schwester	lfreq	0.0	14.0	1.0
-schwester	mfreq	0.0	6.0	1.0
 stadt	lfreq	0.0	29.0	1.0
 stadt	mfreq	0.0	27.0	1.0
 vater	lfreq	0.0	16.0	1.0
