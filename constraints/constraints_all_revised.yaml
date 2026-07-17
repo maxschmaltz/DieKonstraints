@@ -2185,6 +2185,50 @@ constraints:
 
 
 
+    # 33
+    p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en:
+
+        summary: First constituents that are constituted by consonant-final weak feminine nouns regularly attach -s-, a zero linker, or -(e)n-.
+        acceptable_linkers: [_, _+s_, _+n_, _+en_]
+        ling_info_type: [morphological, phonological]
+        is_pluralic: false
+        
+        appl_item: n1
+        datasets_n_appl_items:
+            - gecodb_v06: 3613
+
+        func_alias: f_cons_fin
+
+        quantifier: regularly
+        measures:
+            gecodb_v06:
+                coverage:
+                    item: NA
+                    type: NA
+                regularity:
+                    item: NA
+                    type: NA
+        
+        examples_pro: [schrift_führer, geburt_+s_tag, burg_anlage, burg_+en_blick]
+        examples_contra: []
+
+        evidence:
+
+            - ref: eisenberg_2013
+              pages: [229]
+              summary: Monosyllabic F sometimes adopt -en-, sometimes a zero linker.
+
+            - ref: nuebling_szczepaniak_2013
+              pages: [80]
+              summary: -en- after (monosyllabic or polysyllabic) final-stressed weak F [is linked to plural]. [If the plural reading is inadequate,] monosyllabic or polysyllabic final-stressed weak F [mostly] choose -s- or zero.
+
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [94, 110]
+              summary: F not ending in [-e do not usually attach -en-; [if there is a singular interpretation,] they attach a zero linker. Monosyllabic weak F mostly adopt a zero linker or plural suffix [only when a plural meaning is present].
+
+        footnotes: {}
+
+
     # 34
     p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s:
 
