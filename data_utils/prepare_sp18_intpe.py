@@ -207,7 +207,10 @@ def main():
         os.path.join(outdir, "summaries/n1_sem.tsv"),
         **outcsv_args
     )
-    # we will use the lax annotation here
+    # we will use the lax annotation here;
+    # note that the IntPE experiments will be
+    # using the strict annotation to make the
+    # experiment "harder"
     n1_sem["coll-lax"] = n1_sem["coll"] + n1_sem["konvc"]
 
     # only Sg meaning (N=187, UniqN=143, UniqN1N=1)
