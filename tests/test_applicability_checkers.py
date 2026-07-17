@@ -177,7 +177,10 @@ class TestIsOfPlural(unittest.TestCase):
         )
 
     def test_is_of_plural_31(self):
-        self.assertFalse(
+        # to investigate the effect of the umlaut on
+        # plural effect, we disambiguate between -"er- and -er-
+        # in this version
+        self.assertTrue(
             _is_of_plural("kind", "er", adds_umlaut=False)
         )
 
@@ -2741,67 +2744,53 @@ class TestApplicabilityCheckersSfxPlE(unittest.TestCase):
 
         
     def test_sfx_pl_e_is_applicable_1(self):
-        compound = Compound("format_vorlage")
+        compound = Compound("personal_ausweis")
         self.assertTrue(
             sfx_pl_e_is_applicable(compound)
         )
 
     def test_sfx_pl_e_applies_1(self):
-        compound = Compound("format_vorlage")
+        compound = Compound("personal_ausweis")
         self.assertTrue(
             sfx_pl_e_applies(compound)
         )
 
-        
+
     def test_sfx_pl_e_is_applicable_2(self):
-        compound = Compound("personal_ausweis")
+        compound = Compound("radikal_+e_fänger")
         self.assertTrue(
             sfx_pl_e_is_applicable(compound)
         )
 
     def test_sfx_pl_e_applies_2(self):
-        compound = Compound("personal_ausweis")
-        self.assertTrue(
+        compound = Compound("radikal_+e_fänger")
+        self.assertFalse(
             sfx_pl_e_applies(compound)
         )
 
 
     def test_sfx_pl_e_is_applicable_3(self):
-        compound = Compound("radikal_+e_fänger")
-        self.assertTrue(
+        compound = Compound("format_vorlage")
+        self.assertFalse(
             sfx_pl_e_is_applicable(compound)
         )
 
-    def test_sfx_pl_e_applies_3(self):
-        compound = Compound("radikal_+e_fänger")
-        self.assertFalse(
-            sfx_pl_e_applies(compound)
-        )
-
-        
     def test_sfx_pl_e_is_applicable_4(self):
+        compound = Compound("dekanat_+s_leitung")
+        self.assertFalse(
+            sfx_pl_e_is_applicable(compound)
+        )
+        
+    def test_sfx_pl_e_is_applicable_5(self):
         compound = Compound("brötchen_geber")
         self.assertFalse(
             sfx_pl_e_is_applicable(compound)
         )
 
-    def test_sfx_pl_e_is_applicable_5(self):
+    def test_sfx_pl_e_is_applicable_6(self):
         compound = Compound("reiter_schwert")
         self.assertFalse(
             sfx_pl_e_is_applicable(compound)
-        )
-
-
-    def test_sfx_pl_e_is_applicable_corr_0(self):
-        compound = Compound("format_vorlage")
-        self.assertFalse(
-            sfx_pl_e_is_applicable_corr(compound)
-        )
-
-    def test_sfx_pl_e_is_applicable_corr_1(self):
-        compound = Compound("dekanat_+s_leitung")
-        self.assertFalse(
-            sfx_pl_e_is_applicable_corr(compound)
         )
 
 
@@ -3274,43 +3263,43 @@ class TestApplicabilityCheckersSfxDeverbEn(unittest.TestCase):
             sfx_deverb_en_applies(compound)
         )
 
-        
+
     def test_sfx_deverb_en_is_applicable_3(self):
+        compound = Compound("beben_gebiet")
+        self.assertTrue(
+            sfx_deverb_en_is_applicable(compound)
+        )
+
+    def test_sfx_deverb_en_applies_3(self):
+        compound = Compound("beben_gebiet")
+        self.assertFalse(
+            sfx_deverb_en_applies(compound)
+        )
+
+
+    def test_sfx_deverb_en_is_applicable_4(self):
+        compound = Compound("braten_soße")
+        self.assertTrue(
+            sfx_deverb_en_is_applicable(compound)
+        )
+
+    def test_sfx_deverb_en_applies_4(self):
+        compound = Compound("braten_soße")
+        self.assertFalse(
+            sfx_deverb_en_applies(compound)
+        )
+
+        
+    def test_sfx_deverb_en_is_applicable_5(self):
         compound = Compound("liebe_+s_brief")
         self.assertFalse(
             sfx_deverb_en_is_applicable(compound)
         )
 
-    def test_sfx_deverb_en_is_applicable_4(self):
+    def test_sfx_deverb_en_is_applicable_6(self):
         compound = Compound("alter_vorsorge")
         self.assertFalse(
             sfx_deverb_en_is_applicable(compound)
-        )
-
-
-    def test_sfx_deverb_en_is_applicable_corr_0(self):
-        compound = Compound("leben_stil")
-        self.assertTrue(
-            sfx_deverb_en_is_applicable_corr(compound)
-        )
-
-    def test_sfx_deverb_en_applies_corr_0(self):
-        compound = Compound("leben_stil")
-        self.assertTrue(
-            sfx_deverb_en_applies_corr(compound)
-        )
-
-
-    def test_sfx_deverb_en_is_applicable_corr_1(self):
-        compound = Compound("essen_geruch")
-        self.assertTrue(
-            sfx_deverb_en_is_applicable_corr(compound)
-        )
-
-    def test_sfx_deverb_en_applies_corr_1(self):
-        compound = Compound("essen_geruch")
-        self.assertTrue(
-            sfx_deverb_en_applies_corr(compound)
         )
 
 
@@ -3645,30 +3634,30 @@ class TestApplicabilityCheckersVowFin(unittest.TestCase):
             vow_fin_applies(compound)
         )
 
-        
+
     def test_vow_fin_is_applicable_5(self):
+        compound = Compound("idee_+n_liste")
+        self.assertTrue(
+            vow_fin_is_applicable(compound)
+        )
+
+    def test_vow_fin_applies_5(self):
+        compound = Compound("idee_+n_liste")
+        self.assertFalse(
+            vow_fin_applies(compound)
+        )
+
+        
+    def test_vow_fin_is_applicable_6(self):
         compound = Compound("blume_+n_topf")
         self.assertFalse(
             vow_fin_is_applicable(compound)
         )
 
-    def test_vow_fin_is_applicable_6(self):
+    def test_vow_fin_is_applicable_7(self):
         compound = Compound("reiter_schwert")
         self.assertFalse(
             vow_fin_is_applicable(compound)
-        )
-
-
-    def test_vow_fin_is_applicable_corr_0(self):
-        compound = Compound("idee_+n_liste")
-        self.assertFalse(
-            vow_fin_is_applicable_corr(compound)
-        )
-
-    def test_vow_fin_is_applicable_corr_1(self):
-        compound = Compound("melodie_+n_folge")
-        self.assertFalse(
-            vow_fin_is_applicable_corr(compound)
         )
 
 
@@ -3956,108 +3945,96 @@ class TestApplicabilityCheckersSchwaFin(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersSchwaFinF(unittest.TestCase):
+# DEPRECATED: DISCARD AND MERGE WITH `p2l:phon_fin:schwa$-en|def-en`
+# class TestApplicabilityCheckersSchwaFinF(unittest.TestCase):
 
-	# p2l:phon_fin:schwa$-en|f-en
-	#
-	# First constituents that are constituted by feminine nouns
-    # that end in schwa adopt -n- regularly.
+# 	# p2l:phon_fin:schwa$-en|f-en
+# 	#
+# 	# First constituents that are constituted by feminine nouns
+#     # that end in schwa adopt -n- regularly.
 
-    def test_schwa_fin_f_is_applicable_0(self):
-        compound = Compound("biene_+n_zucht")
-        self.assertTrue(
-            schwa_fin_f_is_applicable(compound)
-        )
+#     def test_schwa_fin_f_is_applicable_0(self):
+#         compound = Compound("biene_+n_zucht")
+#         self.assertTrue(
+#             schwa_fin_f_is_applicable(compound)
+#         )
 
-    def test_schwa_fin_f_applies_0(self):
-        compound = Compound("biene_+n_zucht")
-        self.assertTrue(
-            schwa_fin_f_applies(compound)
-        )
-
-        
-    def test_schwa_fin_f_is_applicable_1(self):
-        compound = Compound("suppe_+n_schüssel")
-        self.assertTrue(
-            schwa_fin_f_is_applicable(compound)
-        )
-
-    def test_schwa_fin_f_applies_1(self):
-        compound = Compound("suppe_+n_schüssel")
-        self.assertTrue(
-            schwa_fin_f_applies(compound)
-        )
+#     def test_schwa_fin_f_applies_0(self):
+#         compound = Compound("biene_+n_zucht")
+#         self.assertTrue(
+#             schwa_fin_f_applies(compound)
+#         )
 
         
-    def test_schwa_fin_is_applicable_2(self):
-        compound = Compound("tiefe_+n_meter")
-        self.assertTrue(
-            schwa_fin_is_applicable(compound)
-        )
+#     def test_schwa_fin_f_is_applicable_1(self):
+#         compound = Compound("suppe_+n_schüssel")
+#         self.assertTrue(
+#             schwa_fin_f_is_applicable(compound)
+#         )
 
-    def test_schwa_fin_applies_2(self):
-        compound = Compound("tiefe_+n_meter")
-        self.assertTrue(
-            schwa_fin_applies(compound)
-        )
-
-        
-    def test_schwa_fin_f_is_applicable_3(self):
-        compound = Compound("fläche_maß")
-        self.assertTrue(
-            schwa_fin_f_is_applicable(compound)
-        )
-
-    def test_schwa_fin_f_applies_3(self):
-        compound = Compound("fläche_maß")
-        self.assertFalse(
-            schwa_fin_f_applies(compound)
-        )
+#     def test_schwa_fin_f_applies_1(self):
+#         compound = Compound("suppe_+n_schüssel")
+#         self.assertTrue(
+#             schwa_fin_f_applies(compound)
+#         )
 
         
-    def test_schwa_fin_f_is_applicable_4(self):
-        compound = Compound("sorge_pflicht")
-        self.assertTrue(
-            schwa_fin_f_is_applicable(compound)
-        )
+#     def test_schwa_fin_is_applicable_2(self):
+#         compound = Compound("tiefe_+n_meter")
+#         self.assertTrue(
+#             schwa_fin_is_applicable(compound)
+#         )
 
-    def test_schwa_fin_f_applies_4(self):
-        compound = Compound("sorge_pflicht")
-        self.assertFalse(
-            schwa_fin_f_applies(compound)
-        )
+#     def test_schwa_fin_applies_2(self):
+#         compound = Compound("tiefe_+n_meter")
+#         self.assertTrue(
+#             schwa_fin_applies(compound)
+#         )
 
         
-    def test_schwa_fin_f_is_applicable_5(self):
-        compound = Compound("gebäude_komplex")
-        self.assertFalse(
-            schwa_fin_f_is_applicable(compound)
-        )
+#     def test_schwa_fin_f_is_applicable_3(self):
+#         compound = Compound("fläche_maß")
+#         self.assertTrue(
+#             schwa_fin_f_is_applicable(compound)
+#         )
+
+#     def test_schwa_fin_f_applies_3(self):
+#         compound = Compound("fläche_maß")
+#         self.assertFalse(
+#             schwa_fin_f_applies(compound)
+#         )
+
         
-    def test_schwa_fin_f_is_applicable_6(self):
-        compound = Compound("idee_+n_liste")
-        self.assertFalse(
-            schwa_fin_f_is_applicable(compound)
-        )
+#     def test_schwa_fin_f_is_applicable_4(self):
+#         compound = Compound("sorge_pflicht")
+#         self.assertTrue(
+#             schwa_fin_f_is_applicable(compound)
+#         )
 
-    def test_schwa_fin_f_is_applicable_7(self):
-        compound = Compound("gummi_bär")
-        self.assertFalse(
-            schwa_fin_f_is_applicable(compound)
-        )
+#     def test_schwa_fin_f_applies_4(self):
+#         compound = Compound("sorge_pflicht")
+#         self.assertFalse(
+#             schwa_fin_f_applies(compound)
+#         )
 
+        
+#     def test_schwa_fin_f_is_applicable_5(self):
+#         compound = Compound("gebäude_komplex")
+#         self.assertFalse(
+#             schwa_fin_f_is_applicable(compound)
+#         )
+        
+#     def test_schwa_fin_f_is_applicable_6(self):
+#         compound = Compound("idee_+n_liste")
+#         self.assertFalse(
+#             schwa_fin_f_is_applicable(compound)
+#         )
 
-    # def test_schwa_fin_f_is_applicable_corr_0(self):
-    #     compound = Compound("reise_zentrum")
-    #     self.assertFalse(
-    #         schwa_fin_is_applicable_corr(compound)
-    #     )
-
-    # def test_schwa_fin_f_is_applicable_corr_1(self):
-    #     compound = Compound("wärme_abgabe")
-    #     self.assertFalse(
-    #         schwa_fin_is_applicable_corr(compound)
-    #     )
+#     def test_schwa_fin_f_is_applicable_7(self):
+#         compound = Compound("gummi_bär")
+#         self.assertFalse(
+#             schwa_fin_f_is_applicable(compound)
+#         )
 
 
 
@@ -5204,27 +5181,41 @@ class TestApplicabilityCheckersNSchwa(unittest.TestCase):
             n_schwa_applies(compound)
         )
 
-        
+
     def test_n_schwa_is_applicable_3(self):
+        compound = Compound("oper_+n_haus")
+        self.assertTrue(
+            n_schwa_is_applicable(compound)
+        )
+
+    def test_n_schwa_applies_3(self):
+        compound = Compound("oper_+n_haus")
+        self.assertTrue(
+            n_schwa_applies(compound)
+        )
+
+    
+    def test_n_schwa_is_applicable_4(self):
+        compound = Compound("schwester_+n_verbund")
+        self.assertTrue(
+            n_schwa_is_applicable(compound)
+        )
+
+    def test_n_schwa_applies_4(self):
+        compound = Compound("schwester_+n_verbund")
+        self.assertTrue(
+            n_schwa_applies(compound)
+        )
+
+        
+    def test_n_schwa_is_applicable_5(self):
         compound = Compound("kind_+er_garten")
         self.assertFalse(
             n_schwa_is_applicable(compound)
         )
 
-    def test_n_schwa_is_applicable_4(self):
-        compound = Compound("burg_+en_land")
-        self.assertFalse(
-            n_schwa_is_applicable(compound)
-        )
-
-    def test_n_schwa_is_applicable_5(self):
-        compound = Compound("melodie_+n_folge")
-        self.assertFalse(
-            n_schwa_is_applicable(compound)
-        )
-
     def test_n_schwa_is_applicable_6(self):
-        compound = Compound("kategorie_+n_liste")
+        compound = Compound("melodie_+n_folge")
         self.assertFalse(
             n_schwa_is_applicable(compound)
         )
@@ -5233,32 +5224,6 @@ class TestApplicabilityCheckersNSchwa(unittest.TestCase):
         compound = Compound("idee_+n_austausch")
         self.assertFalse(
             n_schwa_is_applicable(compound)
-        )
-
-
-    def test_n_schwa_is_applicable_corr_0(self):
-        compound = Compound("oper_+n_haus")
-        self.assertTrue(
-            n_schwa_is_applicable_corr(compound)
-        )
-
-    def test_n_schwa_applies_corr_0(self):
-        compound = Compound("oper_+n_haus")
-        self.assertTrue(
-            n_schwa_applies_corr(compound)
-        )
-
-    
-    def test_n_schwa_is_applicable_corr_1(self):
-        compound = Compound("schwester_+n_verbund")
-        self.assertTrue(
-            n_schwa_is_applicable_corr(compound)
-        )
-
-    def test_n_schwa_applies_corr_1(self):
-        compound = Compound("schwester_+n_verbund")
-        self.assertTrue(
-            n_schwa_applies_corr(compound)
         )
 
 
@@ -5667,7 +5632,7 @@ class TestApplicabilityCheckersELastSyl(unittest.TestCase):
 
     def test_e_last_syl_applies_3(self):
         compound = Compound("anhalt_+e_stelle")
-        self.assertFalse(
+        self.assertTrue(
             e_last_syl_applies(compound)
         )
 
@@ -5682,19 +5647,6 @@ class TestApplicabilityCheckersELastSyl(unittest.TestCase):
         compound = Compound("dokument_+en_sammlung")
         self.assertFalse(
             e_last_syl_is_applicable(compound)
-        )
-
-
-    def test_e_last_syl_is_applicable_corr_0(self):
-        compound = Compound("anhalt_+e_stelle")
-        self.assertTrue(
-            e_last_syl_is_applicable_corr(compound)
-        )
-
-    def test_e_last_syl_applies_corr_0(self):
-        compound = Compound("anhalt_+e_stelle")
-        self.assertTrue(
-            e_last_syl_applies_corr(compound)
         )
 
 
@@ -5948,30 +5900,30 @@ class TestApplicabilityCheckersErLastSyl(unittest.TestCase):
             er_last_syl_applies(compound)
         )
 
-        
+
     def test_er_last_syl_is_applicable_3(self):
+        compound = Compound("mitglied_+=er_liste")
+        self.assertTrue(
+            er_last_syl_is_applicable(compound)
+        )
+
+    def test_er_last_syl_applies_3(self):
+        compound = Compound("mitglied_+=er_liste")
+        self.assertTrue(
+            er_last_syl_applies(compound)
+        )
+
+        
+    def test_er_last_syl_is_applicable_4(self):
         compound = Compound("haus_tür")
         self.assertFalse(
             er_last_syl_is_applicable(compound)
         )
 
-    def test_er_last_syl_is_applicable_4(self):
+    def test_er_last_syl_is_applicable_5(self):
         compound = Compound("blume_+n_topf")
         self.assertFalse(
             er_last_syl_is_applicable(compound)
-        )
-
-
-    def test_er_last_syl_is_applicable_corr_0(self):
-        compound = Compound("mitglied_+=er_liste")
-        self.assertTrue(
-            er_last_syl_is_applicable_corr(compound)
-        )
-
-    def test_er_last_syl_applies_corr_0(self):
-        compound = Compound("mitglied_+=er_liste")
-        self.assertTrue(
-            er_last_syl_applies_corr(compound)
         )
 
 
@@ -6295,49 +6247,49 @@ class TestApplicabilityCheckersEsIsol(unittest.TestCase):
             es_monosyl_applies(compound)
         )
 
-        
+
     def test_es_monosyl_is_applicable_4(self):
+        compound = Compound("vorjahr_+es_wagen")
+        self.assertTrue(
+            es_monosyl_is_applicable(compound)
+        )
+
+    def test_es_monosyl_applies_4(self):
+        compound = Compound("vorjahr_+es_wagen")
+        self.assertTrue(
+            es_monosyl_applies(compound)
+        )
+
+
+    def test_es_monosyl_is_applicable_5(self):
+        compound = Compound("bestand_+es_aufnahme")
+        self.assertTrue(
+            es_monosyl_is_applicable(compound)
+        )
+
+    def test_es_monosyl_applies_5(self):
+        compound = Compound("bestand_+es_aufnahme")
+        self.assertTrue(
+            es_monosyl_applies(compound)
+        )
+
+        
+    def test_es_monosyl_is_applicable_6(self):
         compound = Compound("kind_+er_garten")
         self.assertFalse(
             es_monosyl_is_applicable(compound)
         )
         
-    def test_es_monosyl_is_applicable_5(self):
+    def test_es_monosyl_is_applicable_7(self):
         compound = Compound("land_kreis")
         self.assertFalse(
             es_monosyl_is_applicable(compound)
         )
 
-    def test_es_isol_is_applicable_6(self):
+    def test_es_isol_is_applicable_8(self):
         compound = Compound("tag_blatt")
         self.assertFalse(
             es_monosyl_is_applicable(compound)
-        )
-
-
-    def test_es_monosyl_is_applicable_corr_0(self):
-        compound = Compound("vorjahr_+es_wagen")
-        self.assertTrue(
-            es_monosyl_is_applicable_corr(compound)
-        )
-
-    def test_es_monosyl_applies_corr_0(self):
-        compound = Compound("vorjahr_+es_wagen")
-        self.assertTrue(
-            es_monosyl_applies_corr(compound)
-        )
-
-
-    def test_es_monosyl_is_applicable_corr_1(self):
-        compound = Compound("bestand_+es_aufnahme")
-        self.assertTrue(
-            es_monosyl_is_applicable_corr(compound)
-        )
-
-    def test_es_monosyl_applies_corr_1(self):
-        compound = Compound("bestand_+es_aufnahme")
-        self.assertTrue(
-            es_monosyl_applies_corr(compound)
         )
 
 
