@@ -97,12 +97,19 @@ def main():
     )
 
     # to investigate the effect of the umlaut on
-    # plural effect, we disambugate between -"er- and -er-
+    # plural effect, we disambiguate between -"er- and -er-
     er_numl = gecodb_v07[
         (gecodb_v07["linker"] == "_+=er_") &
         ~(gecodb_v07["umlaut_applied"])
     ]
     gecodb_v07.loc[er_numl.index, "linker"] = "_+er_"
+    gecodb_v07.rename(
+        {
+            ind: ind.replace("_+=er_", "_+er_")
+            for ind in er_numl.index
+        },
+        inplace=True
+    )
 
     # identify whether the linker is pluralic
     def is_pll(gecodb: str) -> bool:
