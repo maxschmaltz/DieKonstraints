@@ -11,8 +11,6 @@ brief	n1_ind	80	4	0.047619047619047616
 brief	n1_coll	5	2	0.2857142857142857
 ei	n1_ind	41	68	0.6238532110091743
 ei	n1_coll	5	1	0.16666666666666666
-eigenschaft	n1_ind	1	0	0.0
-eigenschaft	n1_coll	0	0	
 frau	n1_ind	8	64	0.8888888888888888
 frau	n1_coll	0	27	1.0
 gerät	n1_ind	9	60	0.8695652173913043
@@ -33,16 +31,10 @@ mutter	n1_ind	67	36	0.34951456310679613
 mutter	n1_coll	0	11	1.0
 nagel	n1_ind	46	3	0.061224489795918366
 nagel	n1_coll	0	0	
-nation	n1_ind	1	12	0.9230769230769231
-nation	n1_coll	0	2	1.0
-person	n1_ind	4	62	0.9393939393939394
-person	n1_coll	0	23	1.0
 produkt	n1_ind	70	0	0.0
 produkt	n1_coll	15	1	0.0625
 schwert	n1_ind	36	5	0.12195121951219512
 schwert	n1_coll	0	0	
-schwester	n1_ind	13	11	0.4583333333333333
-schwester	n1_coll	0	6	1.0
 stadt	n1_ind	86	52	0.37681159420289856
 stadt	n1_coll	0	27	1.0
 vater	n1_ind	61	28	0.3146067415730337

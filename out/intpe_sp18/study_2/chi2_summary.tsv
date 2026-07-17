@@ -1,8 +1,8 @@
 	vs_alt_npll	vs_alt_npll
-N	15239.0	12767.0
+N	15239.0	11974.0
 df	1.0	1.0
-chi2	0.507	1.175
-p	0.476	0.278
-cramer_v	0.006	0.01
-resids_cong	-0.728	-1.102
-resids_incong	0.728	1.102
+chi2	0.507	1.894
+p	0.476	0.169
+cramer_v	0.006	0.013
+resids_cong	-0.728	-1.396
+resids_incong	0.728	1.396

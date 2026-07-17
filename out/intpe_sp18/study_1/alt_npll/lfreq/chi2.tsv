@@ -1,8 +1,8 @@
 	0
-N	5278.0
+N	4379.0
 df	1.0
-chi2	177.073
+chi2	135.742
 p	0.0
-cramer_v	0.183
-resids_cong	13.35
-resids_incong	-13.35
+cramer_v	0.176
+resids_cong	11.699
+resids_incong	-11.699
