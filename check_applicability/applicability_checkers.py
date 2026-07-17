@@ -10,6 +10,7 @@ from data_utils.gecodb_compound_parser import (
 	Linker,
     perform_umlaut
 )
+from data_utils.load_datasets import load_celex
 
 
 celex_path = "resources/comp_constr_corp_study_mar26/celex_nouns.tsv"
@@ -63,9 +64,12 @@ def _is_of_plural(
 	adds_umlaut: Optional[bool]=False,
 	dupl: Optional[bool]=False
 ) -> pd.Series:
-	if plural_marker == "er" and not adds_umlaut:
-		# -("")er- always adds umlaut if possible
-		return False
+	# # to investigate the effect of the umlaut on
+    # # plural effect, we disambiguate between -"er- and -er-
+	# # in this version
+	# if plural_marker == "er" and not adds_umlaut:
+	# 	# -("")er- always adds umlaut if possible
+	# 	return False
 	lemma_info = celex.loc[lemma]
 	if _has_no_plural(lemma):
 		return False	# has no plural
@@ -225,7 +229,6 @@ def _get_transcription(lemma: str) -> str:
 def _ends_with_phon(lemma: str, endings: str | list[str]) -> bool:
 	if isinstance(endings, str):
 		endings = [endings]
-	lemma_info = celex.loc[lemma]
 	return any(
 		_get_transcription(lemma).endswith(ending) for ending in endings
 	)
@@ -233,6 +236,11 @@ def _ends_with_phon(lemma: str, endings: str | list[str]) -> bool:
 def _ends_with_phon_schwa(lemma: str) -> bool:
 	# for better readability
 	return _ends_with_phon(lemma, "ə")
+
+def _is_consonant_final(lemma: str) -> bool:
+	phon_transcription = _get_transcription(lemma)
+	return _is_consonant(lemma)
+
 
 def _get_syllables(lemma: str) -> list[str]:
 	phon_transcr = _get_transcription(lemma)
@@ -354,10 +362,34 @@ def plur_e_applies(compound: Compound):
 # p2l:decl_cl:pl:#e-0|pl_interpr-e
 #
 # First constituents that are constituted by nouns that build
-# the plural form with -e attach -e- irregularly in compounds
-# in which the second constituent forces
-# a plural meaning of the given first constituent.
-# TODO
+# the plural form with -e attach -e- irregularly
+# when they have a plural meaning.
+
+def plur_e_pl_is_applicable(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return (
+		# morph cond
+		plur_e_is_applicable(compound) and
+        # sem cond
+        is_n1_plsem
+    )
+
+def plur_e_pl_applies(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return is_linker_pl
 
 
 # p2l:decl_cl:pl:#e-0|msyl_anim-e
@@ -389,19 +421,41 @@ def plur_er_applies(compound: Compound):
 #
 # First constituents that are constituted by nouns that build
 # the plural form with -(")er
-# attach a zero linker in majority of compounds
-# in which the second constituent forces
-# a singular meaning of the given first constituent.
-# TODO
+# attach a zero linker in majority of cases 
+# when they have a singular meaning.
+
+def plur_er_sg_is_applicable(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return (
+		# morph cond
+		plur_er_is_applicable(compound) and
+        # sem cond
+        not is_n1_plsem
+    )
+
+def plur_er_sg_applies(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return not is_linker_pl
 
 
 # p2l:decl_cl:pl:#er-0/er|mass-interpr-0
 #
 # First constituents that are constituted by nouns that build
 # the plural form with -(")er
-# tend to attach a zero linker in compounds
-# in which the second constituent forces
-# a mass meaning of the given first constituent.
+# tend to attach a zero linker when they have a mass meaning.
 # TODO
 
 
@@ -409,10 +463,34 @@ def plur_er_applies(compound: Compound):
 #
 # First constituents that are constituted by nouns that build
 # the plural form with -(")er
-# attach -(")er- more likely in compounds
-# in which the second constituent forces
-# a plural meaning of the given first constituent.
-# TODO
+# attach -(")er- more likely more likely 
+# when they have a plural meaning.
+
+def plur_er_pl_is_applicable(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return (
+		# morph cond
+		plur_er_is_applicable(compound) and
+        # sem cond
+        is_n1_plsem
+    )
+
+def plur_er_pl_applies(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return is_linker_pl
 
 
 # p2l:decl_cl:pl:#er-0/er|anim-er
@@ -442,10 +520,34 @@ def plur_e_uml_applies(compound: Compound):
 # p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml
 #
 # First constituents that are constituted by nouns that build
-# the plural form with -e and umlaut attach -"e- irregularly in compounds
-# in which the second constituent forces
-# a plural meaning of the given first constituent.
-# TODO
+# the plural form with -e and umlaut attach -"e- irregularly 
+# when they have a plural meaning.
+
+def plur_e_uml_pl_is_applicable(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return (
+		# morph cond
+		plur_e_uml_is_applicable(compound) and
+        # sem cond
+        is_n1_plsem
+    )
+
+def plur_e_uml_pl_applies(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return is_linker_pl
 
 
 
@@ -465,10 +567,34 @@ def plur_0_uml_applies(compound: Compound):
 #
 # First constituents that are constituted by nouns that build
 # the plural form with a zero ending and umlaut attach
-# a zero linker with umlaut irregularly in compounds
-# in which the second constituent forces
-# a plural meaning of the given first constituent.
-# TODO
+# a zero linker with umlaut irregularly 
+# when they have a plural meaning.
+
+def plur_0_uml_pl_is_applicable(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return (
+		# morph cond
+		plur_0_uml_is_applicable(compound) and
+        # sem cond
+        is_n1_plsem
+    )
+
+def plur_0_uml_pl_applies(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return is_linker_pl
 
 
 
@@ -492,10 +618,34 @@ def mixed_mn_applies(compound: Compound):
 # p2l:decl_cl:mixed-0/s/en|pl_interpr-en
 #
 # First constituents that are constituted by
-# mixed masculine and neuter nouns attach -(e)n-more likely in compounds
-# in which the second constituent forces
-# a plural meaning of the given first constituent.
-# TODO
+# mixed masculine and neuter nouns attach -(e)n-more likely 
+# when they have a plural meaning.
+
+def mixed_mn_pl_is_applicable(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return (
+		# morph cond
+		mixed_mn_is_applicable(compound) and
+        # sem cond
+        is_n1_plsem
+    )
+
+def mixed_mn_pl_applies(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return is_linker_pl
 
 
 
@@ -576,9 +726,35 @@ def schwa_fin_deverb_applies(compound: Compound):
 # p2l:drv:deverb_schwa$-0|pl_interpr-en
 #
 # First constituents that are constituted by deverbal feminine nouns
-# with a schwa suffix tend to attach -n- in compoundsin which the second
-# constituent forces a plural reading of the given first constituent.
-# TODO
+# with a schwa suffix tend to attach -(e)n- 
+# when they have a plural meaning.
+
+def schwa_fin_deverb_pl_is_applicable(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	n1 = compound.stems[0].morph
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return (
+		# morph cond
+		schwa_fin_deverb_is_applicable(compound) and
+        # sem cond
+        is_n1_plsem
+    )
+
+def schwa_fin_deverb_pl_applies(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return is_linker_pl
 
 
 
@@ -629,9 +805,41 @@ def sfx_s_applies(compound: Compound):
 # p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en
 #
 # First constituents that are constituted by derived nouns with suffix
-# -ität and its allomorphs prefer -en- in compounds in which the second
-# constituent forces a plural meaning of the given first constituent.
-# TODO
+# -ität and its allomorphs may attach -(e)n-
+# when they have a plural meaning.
+
+def sfx_itaet_pl_is_applicable(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return (
+		# morph cond
+		_ends_with_sfx(
+			compound.stems[0].morph,
+			[
+				# in CELEX: qualit-ät, ?, aktiv-ität,
+				# spontan-eität, plast-izität
+				"ät", "tät", "ität", "eität", "izität"
+			]
+		) and
+        # sem cond
+        is_n1_plsem
+    )
+
+def sfx_itaet_pl_applies(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return is_linker_pl
 
 
 
@@ -889,19 +1097,67 @@ def f_cons_fin_applies(compound: Compound) -> bool:
 #
 # First constituents that are constituted by
 # consonant-final weak feminine nouns mostly adopt a zero linker or -s- 
-# in compounds in which the second constituent forces
-# a singular meaning of the given first constituent.
-# TODO
+# when they have a singular meaning.
+
+def f_cons_fin_sg_is_applicable(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return (
+		# morph cond
+		f_cons_fin_is_applicable(compound) and
+        # sem cond
+        not is_n1_plsem
+    )
+
+def f_cons_fin_sg_applies(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return not is_linker_pl
 
 
 # p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
 #
 # First constituents that are constituted by
 # consonant-final weak feminine nouns --- especially final-stressed
-# incl. monosyllabic ones --- attach -en- more likely in compounds
-# in which the second constituent forces
-# a plural meaning of the given first constituent.
-# TODO
+# incl. monosyllabic ones --- attach -en- more likely 
+# when they have a plural meaning.
+
+def f_cons_fin_pl_is_applicable(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return (
+		# morph cond
+		f_cons_fin_is_applicable(compound) and
+        # sem cond
+        is_n1_plsem
+    )
+
+def f_cons_fin_pl_applies(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return is_linker_pl
 
 
 
@@ -941,15 +1197,7 @@ def f_cons_fin_applies(compound: Compound) -> bool:
 # 'Tochter', 'Gattin', 'Witwe' tend to insert -s-
 # if the compound designates a person
 # (even if the first constituent would otherwise attach a zero linker).
-
-# def sec_const_anims_is_applicable(compound: Compound):
-# 	n2 = compound.stems[1].morph.lower()
-# 	return n2 in [
-# 		"mann", "frau", "leute", "tochter", "gattin", "witwe"
-# 	]
-
-# def sec_const_anim_applies(compound: Compound):
-# 	return _has_linker(compound, linker_morph="s")
+# TODO
 
 
 
@@ -1383,10 +1631,30 @@ def zero_uml_par_applies(compound: Compound):
 
 
 
-# p2l:tend:pl_interpr-pl_marker|def-pl_marker
+# l2p:pl_marker|def-pl
 #
 # Linkers that are identical to the plural ending
 # of the first constituent in a given compound
 # tend to be associated with
 # a plural meaning of this first constituent within the compound.
-# TODO
+
+def pl_interpr_is_applicable(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return is_linker_pl
+
+def pl_interpr_applies(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return is_n1_plsem
