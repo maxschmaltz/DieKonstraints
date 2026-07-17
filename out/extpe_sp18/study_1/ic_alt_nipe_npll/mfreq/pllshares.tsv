@@ -219,21 +219,6 @@ nagel+schuh		0.0
 nagel+spitze	0.0	0.0
 nagel+studio	0.0	0.0
 nagel+zange	0.0	0.0
-nation+begriff		0.5
-nation+grenze	1.0	1.0
-nation+ticket	1.0	1.0
-person+aufzug	1.0	1.0
-person+beförderung	1.0	1.0
-person+beschreibung	1.0	1.0
-person+fähre	1.0	1.0
-person+gesellschaft	1.0	1.0
-person+kontrolle	1.0	1.0
-person+name	1.0	1.0
-person+schaden	1.0	1.0
-person+schützer		1.0
-person+stimme		1.0
-person+transport	1.0	1.0
-person+zug	1.0	1.0
 produkt+art	0.0	0.0
 produkt+bereich	0.0	0.0
 produkt+beschreibung	0.0	
@@ -256,8 +241,6 @@ schwert+lilie	0.0	0.0
 schwert+schlag	0.0	
 schwert+schmied	0.0	0.0
 schwert+träger		0.0
-schwester+lokal	0.0	0.0
-schwester+zeitung	0.0	0.0
 stadt+architektur	1.0	0.0
 stadt+besichtigung	0.0	1.0
 stadt+bild	0.0	1.0
