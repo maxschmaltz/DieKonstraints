@@ -8,7 +8,7 @@
 # 	by its allomorph realization) and whether it adds an umlaut (
 # 	stored as a property of the `Linker` object).
 # 2. Allomorphy operations that were only relevant for n-gram models,
-#	are removed. Instead, both stems and linkers store their abstract morph
+#	are removed. Instead, both constituents and linkers store their abstract morph
 # 	and concrete allomorph realizations directly.
 # 3. A few variable name changes for higher linguistic accuracy.
 
@@ -33,10 +33,10 @@ UMLAUTS = {
 
 
 @dataclass
-class Stem:
+class Constituent:
 
 	"""
-	A stem component of a `Compound`.
+	A constituent component of a `Compound`.
 
 	Parameters
 	----------
@@ -53,7 +53,7 @@ class Stem:
 		after initialization, equals to `morph`;
 		is to modify later if needed; the only case when
 		`allomorph` is different from `morph` is when
-		the stem undergoes umlauting
+		the constituent undergoes umlauting
 
 	Example
 	-------
@@ -97,7 +97,7 @@ class Linker:
 		concrete realization of the component, e.g. "n";
 		since linkers appear in compounds as allomorphs and not morph,
 		this attribute (and not `morph`) is always defined for
-		explicit linkers (as opposed to stems that appear as morphs
+		explicit linkers (as opposed to constituents that appear as morphs
 		and not allomorphs in compounds);
 		if not provided, equals to empty string
 
@@ -115,7 +115,7 @@ class Linker:
 		we do not consider _+s_ and _+es_ allomorphic
 
 	adds_umlaut : `bool`
-		whether the linker adds an umlaut to the preceding stem;
+		whether the linker adds an umlaut to the preceding constituent;
 		added automatically after initialization
 
 	Example
@@ -214,14 +214,14 @@ class Compound:
 	lemma : `str`
 		recovered lemma representation of the compound
 
-	stems : `List[Stem]`
-		list of the stems of the compound
+	constituents : `List[Constituent]`
+		list of the constituents of the compound
 
 	linkers : `List[Linker]`
 		list of the linkers of the compound
 		
-	components : `List[Union[Stem, Linker]]`
-		list of the stems and the linkers of the compound, sorted by span
+	components : `List[Union[Constituent, Linker]]`
+		list of the constituents and the linkers of the compound, sorted by span
 
 	Example
 	-------
@@ -238,15 +238,15 @@ class Compound:
 
 	# added later
 	lemma: str = field(compare=True, init=False)
-	stems: List[Stem] = field(compare=False, init=False)
+	constituents: List[Constituent] = field(compare=False, init=False)
 	linkers: List[Linker] = field(compare=False, init=False)
-	components: List[Union[Stem, Linker]] = field(compare=True, init=False)
+	components: List[Union[Constituent, Linker]] = field(compare=True, init=False)
 
 	def __post_init__(self) -> None:
 		self.gecodb = self.gecodb.lower()
-		self.stems = []
+		self.constituents = []
 		self.linkers = []
-		self._analyze() # defines .stems, .linkers, .components, .lemma
+		self._analyze() # defines .constituents, .linkers, .components, .lemma
 
 	def _analyze(self) -> None:
 
@@ -259,10 +259,10 @@ class Compound:
 			if not component:
 				continue  # `None` from capturing group occasionally occurs
 
-			if not "_" in component:    # stem
+			if not "_" in component:    # constituent
 
-				self.stems.append(
-					Stem(
+				self.constituents.append(
+					Constituent(
 						morph=component,
 						# allomorph will be modified later if needed
 						span=(j, j := j + len(component))
@@ -290,16 +290,16 @@ class Compound:
 						span=(j, j := j + len(allomorph))
 					)
 
-					if linker.adds_umlaut: # adjust previous stem if needed
+					if linker.adds_umlaut: # adjust previous constituent if needed
 						
-						prev_stem = self.stems[-1]
+						prev_stem = self.constituents[-1]
 						# adjust realization: perform umlaut
 						prev_stem.allomorph = perform_umlaut(prev_stem.morph)
 
 				self.linkers.append(linker)
 
 		# sort by span => order of appearance
-		self.components = sorted(self.stems + self.linkers, key=lambda c: c.span)
+		self.components = sorted(self.constituents + self.linkers, key=lambda c: c.span)
 		self.lemma = "".join([component.allomorph for component in self.components])
 
 	def __len__(self) -> int:

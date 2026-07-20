@@ -1,6 +1,6 @@
 import unittest
 
-from data_utils.gecodb_compound_parser import Compound, Stem, Linker
+from data_utils.gecodb_compound_parser import Compound, Constituent, Linker
 
 
 class TestGeCoDBParser(unittest.TestCase):
@@ -11,9 +11,9 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("frage", span=(0, 5)),
+            Constituent("frage", span=(0, 5)),
             Linker("_", span=(5, 5)),
-            Stem("stellung", span=(5, 13))
+            Constituent("stellung", span=(5, 13))
         ]
         actual_components = compound.components
         self.assertListEqual(expected_components, actual_components)
@@ -31,9 +31,9 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("ring", span=(0, 4)),
+            Constituent("ring", span=(0, 4)),
             Linker("_", span=(4, 4)),
-            Stem("finger", span=(4, 10))
+            Constituent("finger", span=(4, 10))
         ]
         actual_components = compound.components
         self.assertListEqual(expected_components, actual_components)
@@ -51,11 +51,11 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("tier", span=(0, 4)),
+            Constituent("tier", span=(0, 4)),
             Linker("_", span=(4, 4)),
-            Stem("schutz", span=(4, 10)),
+            Constituent("schutz", span=(4, 10)),
             Linker("_", span=(10, 10)),
-            Stem("verein", span=(10, 16))
+            Constituent("verein", span=(10, 16))
         ]
         actual_components = compound.components
         self.assertListEqual(expected_components, actual_components)
@@ -76,9 +76,9 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("hund", span=(0, 4)),
+            Constituent("hund", span=(0, 4)),
             Linker("_+e_", allomorph="e", span=(4, 5)),
-            Stem("leine", span=(5, 10))
+            Constituent("leine", span=(5, 10))
         ]
         actual_components = compound.components
         self.assertListEqual(expected_components, actual_components)
@@ -96,9 +96,9 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("nerv", span=(0, 4)),
+            Constituent("nerv", span=(0, 4)),
             Linker("_+en_", allomorph="en", span=(4, 6)),
-            Stem("system", span=(6, 12))
+            Constituent("system", span=(6, 12))
         ]
         actual_components = compound.components
         self.assertListEqual(expected_components, actual_components)
@@ -116,9 +116,9 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("rente", span=(0, 5)),
+            Constituent("rente", span=(0, 5)),
             Linker("_+n_", allomorph="n", span=(5, 6)),
-            Stem("versicherung", span=(6, 18))
+            Constituent("versicherung", span=(6, 18))
         ]
         actual_components = compound.components
         self.assertListEqual(expected_components, actual_components)
@@ -136,11 +136,11 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("bund", span=(0, 4)),
+            Constituent("bund", span=(0, 4)),
             Linker("_+es_", allomorph="es", span=(4, 6)),
-            Stem("verfassung", span=(6, 16)),
+            Constituent("verfassung", span=(6, 16)),
             Linker("_+s_", allomorph="s", span=(16, 17)),
-            Stem("gericht", span=(17, 24))
+            Constituent("gericht", span=(17, 24))
         ]
         actual_components = compound.components
         self.assertListEqual(expected_components, actual_components)
@@ -161,9 +161,9 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("mangel", span=(0, 6)),
+            Constituent("mangel", span=(0, 6)),
             Linker("_+=_", span=(6, 6)),
-            Stem("rüge", span=(6, 10))
+            Constituent("rüge", span=(6, 10))
         ]
         expected_components[0].allomorph = "mängel"   # can't set in constructor
         actual_components = compound.components
@@ -182,9 +182,9 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("gast", span=(0, 4)),
+            Constituent("gast", span=(0, 4)),
             Linker("_+=e_", allomorph="e", span=(4, 5)),
-            Stem("buch", span=(5, 9))
+            Constituent("buch", span=(5, 9))
         ]
         expected_components[0].allomorph = "gäst"   # can't set in constructor
         actual_components = compound.components
@@ -203,9 +203,9 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("gut", span=(0, 3)),
+            Constituent("gut", span=(0, 3)),
             Linker("_+=er_", allomorph="er", span=(3, 5)),
-            Stem("wagen", span=(5, 10))
+            Constituent("wagen", span=(5, 10))
         ]
         expected_components[0].allomorph = "güt"   # can't set in constructor
         actual_components = compound.components
@@ -224,9 +224,9 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("kind", span=(0, 4)),
+            Constituent("kind", span=(0, 4)),
             Linker("_+er_", allomorph="er", span=(4, 6)),
-            Stem("wagen", span=(6, 11))
+            Constituent("wagen", span=(6, 11))
         ]
         expected_components[0].allomorph = "kind"   # can't set in constructor
         actual_components = compound.components
@@ -249,11 +249,11 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("schaden", span=(0, 7)),
+            Constituent("schaden", span=(0, 7)),
             Linker("_+s_", allomorph="s", span=(7, 8)),
-            Stem("ersatz", span=(8, 14)),
+            Constituent("ersatz", span=(8, 14)),
             Linker("_", span=(14, 14)),
-            Stem("anspruch", span=(14, 22))
+            Constituent("anspruch", span=(14, 22))
         ]
         actual_components = compound.components
         self.assertListEqual(expected_components, actual_components)
@@ -273,11 +273,11 @@ class TestGeCoDBParser(unittest.TestCase):
         compound = Compound(gecodb)
         # compare components and their properties
         expected_components = [
-            Stem("bund", span=(0, 4)),
+            Constituent("bund", span=(0, 4)),
             Linker("_+es_", allomorph="es", span=(4, 6)),
-            Stem("arzt", span=(6, 10)),
+            Constituent("arzt", span=(6, 10)),
             Linker("_+=e_", allomorph="e", span=(10, 11)),
-            Stem("kammer", span=(11, 17))
+            Constituent("kammer", span=(11, 17))
         ]
         expected_components[2].allomorph = "ärzt"   # can't set in constructor
         actual_components = compound.components
