@@ -70,6 +70,7 @@ readme: |
         * The whole compound. This is for the cases when the semantic type of the whole compounds matters, such as `p2l:sem:comp_type:copula-0`.
     * Added counts of application items of each type.
     * Detailed a few constraints.
+    * By mistake, compounds built from N1 'Samt' were recorded as starting from 'Amt' in GeCoDB_v06 (resolved July 20, 2026). The number of unique N1s was therefore one more than recorded here (3614 and not 3613). This change fixed that. Note that the issue didn't affect constraint measurements, since the number of unique constraints was calculated dynamically, and so the number if unique N1 s of 3614 was used for calculation (e.g., see `comp_constr_corp_study_mar26-private/out/applicability_statistics/constr_statistics.tsv`). N1 'Samt' had two N1+linker combinations: 'Samt-0' and 'Samt-s'. Correspondingly, the real number of N1+linker unique combinations was 4870, not 4868. Similarly, this did not affect the measurements.
 
     ### Current version changelog:
 
@@ -179,16 +180,18 @@ datasets:
     gecodb_v06:
         description: "~280k German N+N compounds from the DECOW16A corpus that are built from nouns found in CELEX2 and have a WC of at least 20 in DeReKo."
         origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR), final preprocessing in [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02).
-        size: 282767 compound lemmata. 3613 N1 lemmata. 9 linkers, 11 linker allomorphs. 4768 unique N1+linker combinations.
+        size: 282767 compound lemmata. 3614 N1 lemmata. 9 linkers, 11 linker allomorphs. 4768 unique N1+linker combinations.
         filepath: resources/comp_constr_corp_study_mar26/gecodb_v06.tsv
         load_func: load_gecodb
+        celexn_version: 0
 
     gecodb_v07:
         description: "~277k German N+N compounds from the DECOW16A corpus that are built from nouns found in both CELEX2 and GermaNet and have a WC of at least 20 in DeReKo."
         origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR) and [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02), final preprocessing in the present study (TODO).
-        size: 277361 compound lemmata. 3593 N1 lemmata. 10 linkers, 12 linker allomorphs. 4786 unique N1+linker combinations.
+        size: 277361 compound lemmata. 3594 N1 lemmata. 10 linkers, 12 linker allomorphs. 4788 unique N1+linker combinations.
         filepath: resources/developed/gecodb_v07.tsv
         load_func: load_gecodb
+        celexn_version: 1
 
     sp18_pl_constr:
         description: "~2.5k German N+N compounds from the DECOW16A corpus that have a WC of at least 20 in DeReKo, with annotated singular/plural meaning of N1."
@@ -196,6 +199,7 @@ datasets:
         size: 2681 compound lemmata. 44 N1 lemmata. 8 linkers, 9 linker allomorphs. 78 unique N1+(Sg/Pl meaning) combinations. 88 unique N1+linker combinations.
         filepath: resources/developed/sp18/sp18_pl_constr.tsv
         load_func: load_sp18
+        celexn_version: 0
 
 ---
 
@@ -571,8 +575,8 @@ constraints:
         
         appl_item: compound
         datasets_n_appl_items:
-            - gecodb_v06: 282767
-            - gecodb_v07: 277361
+            gecodb_v06: 282767
+            gecodb_v07: 277361
 
         func_alias: def_0
 
@@ -676,8 +680,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: plur_0
 
@@ -724,8 +728,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: plur_s
 
@@ -816,8 +820,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: plur_e
 
@@ -863,7 +867,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            - sp18_pl_constr: 78
+            sp18_pl_constr: 78
 
         func_alias: plur_e_pl
 
@@ -948,8 +952,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: plur_er
 
@@ -1000,7 +1004,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            - sp18_pl_constr: 78
+            sp18_pl_constr: 78
 
         func_alias: plur_er_sg
 
@@ -1048,7 +1052,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            - sp18_pl_constr: 78
+            sp18_pl_constr: 78
 
         func_alias: plur_er_mass
 
@@ -1086,7 +1090,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            - sp18_pl_constr: 78
+            sp18_pl_constr: 78
 
         func_alias: plur_er_pl
 
@@ -1178,8 +1182,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: plur_e_uml
 
@@ -1225,7 +1229,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            - sp18_pl_constr: 78
+            sp18_pl_constr: 78
 
         func_alias: plur_e_uml_pl
 
@@ -1276,8 +1280,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: plur_0_uml
 
@@ -1324,7 +1328,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            - sp18_pl_constr: 78
+            sp18_pl_constr: 78
 
         quantifier: irregularly
         measures:
@@ -1361,8 +1365,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: mixed_mn
 
@@ -1429,7 +1433,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            - sp18_pl_constr: 78
+            sp18_pl_constr: 78
 
         func_alias: mixed_mn_pl
 
@@ -1475,8 +1479,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: sfx_pl_0
 
@@ -1523,8 +1527,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: sfx_pl_e
 
@@ -1573,8 +1577,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: schwa_fin_deverb
 
@@ -1631,7 +1635,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            - sp18_pl_constr: 78
+            sp18_pl_constr: 78
 
         func_alias: schwa_fin_deverb_pl
 
@@ -1670,8 +1674,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: schwa_fin_deadj
 
@@ -1733,8 +1737,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: sfx_s
 
@@ -1838,7 +1842,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            - sp18_pl_constr: 78
+            sp18_pl_constr: 78
 
         func_alias: sfx_itaet_pl
 
@@ -1883,8 +1887,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: sfx_deverb_en
 
@@ -1937,8 +1941,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: sfx_F_in_en
 
@@ -1987,8 +1991,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: prx_deverb
 
@@ -2079,8 +2083,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: sibilant_fin
 
@@ -2137,8 +2141,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: vow_fin
 
@@ -2188,8 +2192,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: stressed_phon_fin
 
@@ -2238,8 +2242,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: f_t_fin
 
@@ -2296,8 +2300,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: schwa_fin
 
@@ -2434,8 +2438,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: f_cons_fin
 
@@ -2480,7 +2484,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            - sp18_pl_constr: 78
+            sp18_pl_constr: 78
 
         func_alias: f_cons_fin_sg
 
@@ -2530,7 +2534,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            - sp18_pl_constr: 78
+            sp18_pl_constr: 78
 
         func_alias: f_cons_fin_pl
 
@@ -2748,8 +2752,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: cmpx_morph
 
@@ -2815,8 +2819,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: cmpx_phon
 
@@ -2878,8 +2882,8 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - gecodb_v06: 3613
-            - gecodb_v07: 3593
+            gecodb_v06: 3614
+            gecodb_v07: 3594
 
         func_alias: sonority
 
@@ -2955,8 +2959,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: s_smpx
 
@@ -3017,8 +3021,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: s_freq
 
@@ -3064,8 +3068,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: s_f_cmpx
 
@@ -3116,8 +3120,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: s_f_polysyl
 
@@ -3170,8 +3174,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: n_schwa
 
@@ -3236,8 +3240,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: en_par
 
@@ -3367,8 +3371,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: e_par
 
@@ -3430,8 +3434,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: e_last_syl
 
@@ -3478,8 +3482,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: e_smpx
 
@@ -3563,8 +3567,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: er_par
 
@@ -3630,8 +3634,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: er_last_syl
 
@@ -3681,8 +3685,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: er_smpx
 
@@ -3758,8 +3762,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: e_uml_par
 
@@ -3864,8 +3868,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: es_monosyl
 
@@ -3955,8 +3959,8 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4868
-            - gecodb_v07: 4786
+            gecodb_v06: 4870
+            gecodb_v07: 4788
 
         func_alias: zero_uml_par
 
@@ -4004,7 +4008,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - sp18_pl_constr: 88
+            sp18_pl_constr: 88
 
         func_alias: pl_interpr
 

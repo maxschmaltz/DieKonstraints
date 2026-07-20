@@ -1,6 +1,5 @@
 import os
 import pandas as pd
-from collections import defaultdict
 from typing import Tuple
 
 from gecodb_compound_parser import Compound
