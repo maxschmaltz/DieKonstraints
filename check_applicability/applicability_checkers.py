@@ -13,10 +13,17 @@ from data_utils.gecodb_compound_parser import (
 from data_utils.load_datasets import load_celex
 
 
-celex_path = "resources/developed/celex_nouns.tsv"
-
-# load prepared CELEX nouns and GeCoDB
-celex = load_celex(celex_path)
+# to be initialized for each CELEX-nouns version!!!
+def __init__(celexn_version: int):
+	global celex
+	match celexn_version:
+		case 0:
+			celex_path = "resources/comp_constr_corp_study_mar26/celex_nouns.tsv"
+		case 1:
+			celex_path = "resources/developed/celex_nouns.tsv"
+		case _:
+			raise
+	celex = load_celex(celex_path)
 
 
 # Helper functions for linker checks
