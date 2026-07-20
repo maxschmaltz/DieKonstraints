@@ -179,21 +179,21 @@ datasets:
     gecodb_v06:
         description: "~280k German N+N compounds from the DECOW16A corpus that are built from nouns found in CELEX2 and have a WC of at least 20 in DeReKo."
         origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR), final preprocessing in [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02).
-        size: 282767 compound lemmata. 3613 N1 lemmata. 9 linkers, 11 linker allomorphs. 4780 unique N1+linker combinations.
+        size: 282767 compound lemmata. 3613 N1 lemmata. 9 linkers, 11 linker allomorphs. 4768 unique N1+linker combinations.
         filepath: resources/comp_constr_corp_study_mar26/gecodb_v06.tsv
         load_func: load_gecodb
 
     gecodb_v07:
         description: "~277k German N+N compounds from the DECOW16A corpus that are built from nouns found in both CELEX2 and GermaNet and have a WC of at least 20 in DeReKo."
         origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR) and [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02), final preprocessing in the present study (TODO).
-        size: 277361 compound lemmata. 3593 N1 lemmata. 9 linkers, 12 linker allomorphs. 4786 unique N1+linker combinations.
+        size: 277361 compound lemmata. 3593 N1 lemmata. 10 linkers, 12 linker allomorphs. 4786 unique N1+linker combinations.
         filepath: resources/developed/gecodb_v07.tsv
         load_func: load_gecodb
 
     sp18_pl_constr:
         description: "~2.5k German N+N compounds from the DECOW16A corpus that have a WC of at least 20 in DeReKo, with annotated singular/plural meaning of N1."
         origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Corpusstudy/Concordance.full.csv'), final preprocessing in the present study (TODO).
-        size: 2681 compound lemmata. 44 N1 lemmata. 7 linkers, 9 linker allomorphs. 78 unique N1+(Sg/Pl meaning) combinations. 88 unique N1+linker combinations.
+        size: 2681 compound lemmata. 44 N1 lemmata. 8 linkers, 9 linker allomorphs. 78 unique N1+(Sg/Pl meaning) combinations. 88 unique N1+linker combinations.
         filepath: resources/developed/sp18/sp18_pl_constr.tsv
         load_func: load_sp18
 
@@ -2955,7 +2955,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: s_smpx
@@ -3017,7 +3017,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: s_freq
@@ -3064,7 +3064,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: s_f_cmpx
@@ -3116,7 +3116,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: s_f_polysyl
@@ -3170,7 +3170,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: n_schwa
@@ -3236,7 +3236,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: en_par
@@ -3367,7 +3367,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: e_par
@@ -3430,7 +3430,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: e_last_syl
@@ -3478,7 +3478,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: e_smpx
@@ -3563,7 +3563,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: er_par
@@ -3630,7 +3630,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: er_last_syl
@@ -3681,7 +3681,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: er_smpx
@@ -3758,7 +3758,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: e_uml_par
@@ -3864,7 +3864,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: es_monosyl
@@ -3955,7 +3955,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - gecodb_v06: 4870
+            - gecodb_v06: 4868
             - gecodb_v07: 4786
 
         func_alias: zero_uml_par
