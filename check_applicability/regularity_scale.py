@@ -9,7 +9,7 @@ class RegularityLevel:
     rank: int
     min_reg_item: float
     max_reg_item: float
-    quantifiers: List[Quantifier]  # -> List[Quantifier]
+    quantifiers: List[str]  # -> List[Quantifier]
 
     def __post_init__(self):
         for q in self.quantifiers:

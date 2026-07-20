@@ -36,25 +36,6 @@ def main():
         constr_ids = list(constraints.keys())
         data_specs: dict = yamls[-2]["datasets"]
 
-
-
-
-
-
-    constraints = {
-        k: constraints[k]
-        for k in ["def-0", "p2l:decl_cl:pl:#e-0|pl_interpr-e", "p2l:phon_fin:schwa$-en|def-en", "l2p:pl_marker|def-pl"]
-    }
-
-
-
-
-
-
-
-
-
-
     # load datasets
     datasets = {
         dname: getattr(load_datasets, d["load_func"])(d["filepath"])
