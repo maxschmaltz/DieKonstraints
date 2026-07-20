@@ -1,6 +1,6 @@
 import pandas as pd
 from collections import defaultdict
-from typing import Optional, Tuple
+from typing import Optional
 
 
 def load_celex(celex_path: str) -> pd.DataFrame:
@@ -39,7 +39,7 @@ def load_gecodb(gecodb_path: str) -> pd.DataFrame:
 def load_sp18(
 	sp18_path: str,
 	index_col: Optional[str]="gecodb"
-) -> Tuple[pd.DataFrame, dict]:
+) -> pd.DataFrame:
 	return pd.read_csv(
 		sp18_path,
 		sep="\t",
