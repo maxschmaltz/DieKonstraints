@@ -66,6 +66,7 @@ readme: |
         * The whole compound. This is for the cases when the semantic type of the whole compounds matters, such as `p2l:sem:comp_type:copula-0`.
     * Added counts of application items of each type.
     * Detailed a few constraints.
+    * By mistake, compounds built from N1 'Samt' were recorded as starting from 'Amt' in GeCoDB_v06 (resolved July 20, 2026). The number of unique N1s was therefore one more than recorded here (3614 and not 3613). This change fixed that. Note that the issue didn't affect constraint measurements, since the number of unique constraints was calculated dynamically, and so the number if unique N1 s of 3614 was used for calculation (e.g., see `comp_constr_corp_study_mar26-private/out/applicability_statistics/constr_statistics.tsv`). N1 'Samt' had two N1+linker combinations: 'Samt-0' and 'Samt-s'. Correspondingly, the real number of N1+linker unique combinations was 4870, not 4868. Similarly, this did not affect the measurements.
 
 
 
@@ -558,7 +559,7 @@ constraints:
         summary: First constituents that are constituted by simplex masculine or neuter nouns that build the plural form with a zero ending and simplex or complex feminine nouns that build the plural form with a zero ending attach a zero linker almost regularly.
         ling_info_type: [morphological, derivational]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_0
 
@@ -590,7 +591,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -s attach a zero linker regularly.
         ling_info_type: [morphological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_s
 
@@ -643,7 +644,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -e mostly have a zero linker.
         ling_info_type: [morphological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_e
 
@@ -674,7 +675,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -e attach -e- irregularly in compounds in which the second constituent forces a plural meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_e_pl
 
@@ -710,7 +711,7 @@ constraints:
         summary: First constituents that are constituted by monosyllabic animal designations that build the plural form with -e attach -e- irregularly.
         ling_info_type: [morphological, phonological, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_e_anim
 
@@ -750,7 +751,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -(")er mostly attach a zero linker or -(")er-.
         ling_info_type: [morphological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_er
 
@@ -786,7 +787,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -(")er attach a zero linker in a majority of compounds in which the second constituent forces a singular meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_er_sg
 
@@ -823,7 +824,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -(")er tend to attach a zero linker in compounds in which the second constituent forces a mass meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_er_mass
 
@@ -855,7 +856,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -(")er attach -(")er- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_er_pl
 
@@ -898,7 +899,7 @@ constraints:
         summary: First constituents that are constituted by person and animal designations that build the plural form with -(")er may attach -(")er- regardless of the singular/plural interpretation of the given first constituent within the compound.
         ling_info_type: [morphological, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_er_anim
 
@@ -935,7 +936,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -e and umlaut mostly have a zero linker.
         ling_info_type: [morphological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_e_uml
 
@@ -966,7 +967,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with -e and umlaut attach -"e- irregularly in compounds in which the second constituent forces a plural meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_e_uml_pl
 
@@ -1002,7 +1003,7 @@ constraints:
         summary: First constituents that are constituted by nouns that build the plural form with a zero ending and umlaut almost always have a zero linker.
         ling_info_type: [morphological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: plur_0_uml
 
@@ -1034,7 +1035,7 @@ constraints:
         ling_info_type: [morphological, semantic]
         func_alias: plur_0_uml_pl
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         quantifier: irregularly
         coverage:
@@ -1065,7 +1066,7 @@ constraints:
         summary: First constituents that are constituted by mixed masculine and neuter nouns almost always attach -s-, a zero linker, or -(e)n-.
         ling_info_type: [morphological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: mixed_mn
 
@@ -1117,7 +1118,7 @@ constraints:
         summary: First constituents that are constituted by mixed masculine and neuter nouns attach -(e)n- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
         ling_info_type: [morphological, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: mixed_mn_pl
 
@@ -1157,7 +1158,7 @@ constraints:
         summary: First constituents that are constituted by derived nouns with suffixes -er, -ler, -ner, -el, -sel, -chen, -lein that build the plural form with a zero ending attach a zero linking element regularly.
         ling_info_type: [derivational]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: sfx_pl_0
 
@@ -1189,7 +1190,7 @@ constraints:
         summary: First constituents that are constituted by derived nouns with suffixes -bold, -nis, -rich, -at, -al that build the plural form with -e attach a zero linker regularly.
         ling_info_type: [derivational]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: sfx_pl_e
 
@@ -1223,7 +1224,7 @@ constraints:
         summary: First constituents that are constituted by deverbal feminine nouns with a schwa suffix mostly attach a zero linker.
         ling_info_type: [derivational]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: schwa_fin_deverb
 
@@ -1255,7 +1256,7 @@ constraints:
         summary: First constituents that are constituted by deverbal feminine nouns with a schwa suffix tend to attach -(e)n- in compounds in which the second constituent forces a plural reading of the given first constituent.
         ling_info_type: [derivational, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: schwa_fin_deverb_pl
 
@@ -1288,7 +1289,7 @@ constraints:
         summary: First constituents that are constituted by deadjectival feminine nouns with a schwa suffix almost always attach -(e)n- or a zero linker. Each of the two linkers is preferred in about the same number of cases.
         ling_info_type: [derivational]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: schwa_fin_deadj
 
@@ -1331,7 +1332,7 @@ constraints:
         summary: First constituents that are constituted by derived nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -tum, -um, -ion, also -ität and its allomorphs attach -s- regularly.
         ling_info_type: [derivational]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: sfx_s
 
@@ -1415,7 +1416,7 @@ constraints:
         summary: First constituents that are constituted by derived nouns with suffix -ität and its allomorphs prefer -(e)n- in compounds in which the second constituent forces a plural meaning of the given first constituent.
         ling_info_type: [derivational, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: sfx_itaet_pl
 
@@ -1447,7 +1448,7 @@ constraints:
         summary: First constituents that are constituted by deverbal nouns that end in suffix -en attach -s- regularly.
         ling_info_type: [derivational]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: sfx_deverb_en
 
@@ -1490,7 +1491,7 @@ constraints:
         summary: First constituents that are constituted by derived feminine nouns with suffix -in always attach -(e)n-. (The suffix -in adjusts orthographically in this case and becomes -inn.)
         ling_info_type: [derivational]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: sfx_F_in_en
 
@@ -1525,7 +1526,7 @@ constraints:
         summary: First constituents that are constituted by prefixed deverbal nouns exhibit a tendency to attach -s-.
         ling_info_type: [derivational]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: prx_deverb
 
@@ -1592,7 +1593,7 @@ constraints:
         summary: First constituents that are constituted by nouns that end in a sibilant or in a consonant cluster including [s] mostly adopt a zero linker.
         ling_info_type: [phonological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: sibilant_fin
 
@@ -1633,7 +1634,7 @@ constraints:
         summary: First constituents that are constituted by nouns that end in a full vowel always adopt a zero linker.
         ling_info_type: [phonological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: vow_fin
 
@@ -1670,7 +1671,7 @@ constraints:
         summary: First constituents that are constituted by feminine nouns that end with stressed -ei, -ie, -ur, also stressed or unstressed -ik usually attach a zero linker.
         ling_info_type: [morphological, phonological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: stressed_phon_fin
 
@@ -1704,7 +1705,7 @@ constraints:
         summary: First constituents that are constituted by polysyllabic feminine nouns that end with [t] often attach -s- if the [t] is not part of a suffix -(ig)keit, -heit, -schaft, or -ität or its allomorphs.
         ling_info_type: [morphological, derivational, phonological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: f_t_fin
 
@@ -1741,7 +1742,7 @@ constraints:
         summary: First constituents that are constituted by nouns that end in schwa mostly adopt -(e)n-.
         ling_info_type: [phonological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: schwa_fin
 
@@ -1776,7 +1777,7 @@ constraints:
         summary: First constituents that are constituted by feminine nouns that end in schwa adopt -(e)n- regularly.
         ling_info_type: [morphological, phonological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: schwa_fin_f
 
@@ -1829,7 +1830,7 @@ constraints:
         summary: First constituents that are constituted by consonant-final weak feminine nouns mostly adopt a zero linker or -s- in compounds in which the second constituent forces a singular meaning of the given first constituent.
         ling_info_type: [morphological, phonological, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: f_cons_fin_sg
 
@@ -1872,7 +1873,7 @@ constraints:
         summary: First constituents that are constituted by consonant-final weak feminine nouns --- especially final-stressed incl. monosyllabic ones --- attach -(e)n- more likely in compounds in which the second constituent forces a plural meaning of the given first constituent.
         ling_info_type: [morphological, phonological, semantic]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: f_cons_fin_pl
 
@@ -2087,7 +2088,7 @@ constraints:
         summary: The probability of -s- grows irregularly with the morphological complexity of the first constituent (any form of derivation).
         ling_info_type: [derivational]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: cmpx_morph
 
@@ -2132,7 +2133,7 @@ constraints:
         summary: The probability of -s- grows irregularly with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
         ling_info_type: [phonological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: cmpx_phon
 
@@ -2174,7 +2175,7 @@ constraints:
         summary: The probability of -s- in compounds with simplex first constituents tends to decrease with the increasing sonority of the final segment of the first constituent. -s- is thus more frequent after plosives, infrequent after nasals and liquids, and it never occurs after a full vowel.
         ling_info_type: [phonological]
         appl_item: n1
-        n_appl_items: 3613
+        n_appl_items: 3614
 
         func_alias: sonority
 
@@ -2234,7 +2235,7 @@ constraints:
         summary: Almost all simplex nouns that constitute first constituents that attach -s- belong to a small fixed group of masculine and neuter nouns.
         ling_info_type: [morphological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: s_smpx
 
@@ -2276,7 +2277,7 @@ constraints:
         summary: Many simplex nouns that constitute first constituents that attach -s- have a high token frequency.
         ling_info_type: [lexical]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: s_freq
 
@@ -2307,7 +2308,7 @@ constraints:
         summary: All feminine nouns that constitute first constituents that attach -s- are morphologically complex.
         ling_info_type: [morphological, derivational]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: s_f_cmpx
 
@@ -2339,7 +2340,7 @@ constraints:
         summary: Almost all feminine nouns that constitute first constituents that attach -s- are polysyllabic.
         ling_info_type: [morphological, phonological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: s_f_polysyl
 
@@ -2372,7 +2373,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa.
         ling_info_type: [phonological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: n_schwa
 
@@ -2413,7 +2414,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach -(e)n- belong to weak nouns.
         ling_info_type: [morphological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: en_par
 
@@ -2460,7 +2461,7 @@ constraints:
         summary: All masculine nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are monosyllabic designations of male persons, animals, astronomic objects, months.
         ling_info_type: [morphological, phonological, semantic]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: en_non_par_m
 
@@ -2496,7 +2497,7 @@ constraints:
         summary: All neuter nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are polysyllabic foreign nouns that have a stressed final syllable that exhibit a plural meaning within the compound.
         ling_info_type: [morphological, phonological, lexical, semantic]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: en_non_par_n_pl
 
@@ -2528,7 +2529,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach -e- build the plural form with -e.
         ling_info_type: [morphological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: e_par
 
@@ -2575,7 +2576,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable.
         ling_info_type: [phonological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: e_last_syl
 
@@ -2607,7 +2608,7 @@ constraints:
         summary: Most nouns that constitute first constituents that attach -e- are simplex.
         ling_info_type: [derivational]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: e_smpx
 
@@ -2644,7 +2645,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach -e- are native (none are loanwords).
         ling_info_type: [lexical]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: e_non_loan
 
@@ -2678,7 +2679,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach -(")er- build the plural form with -(")er.
         ling_info_type: [morphological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: er_par
 
@@ -2725,7 +2726,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach -(")er- have a stressed last syllable.
         ling_info_type: [phonological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: er_last_syl
 
@@ -2756,7 +2757,7 @@ constraints:
         summary: Most nouns that constitute first constituents that attach -(")er- are simplex.
         ling_info_type: [derivational]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: er_smpx
 
@@ -2787,7 +2788,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach -(")er- are native (none are loanwords).
         ling_info_type: [lexical]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: er_non_loan
 
@@ -2819,7 +2820,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach -"e- build the plural form with -e and umlaut.
         ling_info_type: [morphological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: e_uml_par
 
@@ -2857,7 +2858,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach -es- belong to a fixed row of masculine and neuter nouns and build the genitive form with -(e)s-. -es- is thus isolated.
         ling_info_type: [lexical, morphological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: es_isol
 
@@ -2907,7 +2908,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach -es- are monosyllabic.
         ling_info_type: [phonological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: es_monosyl
 
@@ -2940,7 +2941,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach -(e)ns- belong to a fixed group of a few masculine nouns and a single neuter noun and have different genitive endings. -(e)ns- is thus isolated.
         ling_info_type: [lexical]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: ens_isol
 
@@ -2980,7 +2981,7 @@ constraints:
         summary: All nouns that constitute first constituents that attach a zero linker with umlaut build the plural form with a zero ending and umlaut.
         ling_info_type: [morphological]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: zero_uml_par
 
@@ -3013,7 +3014,7 @@ constraints:
         summary: Linkers that are identical to the plural ending of the first constituent in a given compound tend to be associated with a plural meaning of this first constituent within the compound.
         ling_info_type: [morphological, semantic]
         appl_item: n1+linker
-        n_appl_items: 4868
+        n_appl_items: 4870
 
         func_alias: pl_interpr
 
