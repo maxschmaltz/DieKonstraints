@@ -199,6 +199,7 @@ datasets:
         size: 2681 compound lemmata. 44 N1 lemmata. 8 linkers, 9 linker allomorphs. 78 unique N1+(Sg/Pl meaning) combinations. 88 unique N1+linker combinations.
         filepath: resources/developed/sp18/sp18_pl_constr.tsv
         load_func: load_sp18
+        # GermaNet coverage not important
         celexn_version: 0
 
 ---

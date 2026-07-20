@@ -3,7 +3,7 @@
 
 import os
 
-from .load_datasets import load_sp18
+from .load_datasets import load_celex, load_sp18
 
 
 # python3 -m data_utils.prepare_sp18_pl_constr
@@ -49,42 +49,56 @@ def main():
     # deduplicated version of SP18 for verification of the pluralic constraints.
 
     # The overall IntPE dataset preprocessing includes the following:
-    #   1. Load SP18.
-    #   2. Apply frequency filter.
-    #   3. Deduplicate the sample (keep doubtful cases).
-    #   4. Remove unnecessary columns (e.g. context, context_id, etc.).
-    #   5. Save the resulting dataset.
+    #   1. Load SP18 and CELEX-Nouns.
+    #   2. Leave out compounds whose N1 or N2 are not in CELEX-Nouns.
+    #   3. Apply frequency filter.
+    #   4. Deduplicate the sample (keep doubtful cases).
+    #   5. Remove unnecessary columns (e.g. context, context_id, etc.).
+    #   6. Save the resulting dataset.
 
 
     sp18_dir = "resources/developed/sp18"
+    # using older CELEX since no features of the latest
+    # version are relevant
+    celex_path = "resources/comp_constr_corp_study_mar26/celex_nouns.tsv"
 
 
-    # 1. Load SP18.
+    # 1. Load SP18 and CELEX-Nouns.
     
     # SP18 (N=8212, UniqN=6889, UniqN1N=46)
     sp18 = load_sp18(os.path.join(sp18_dir, "sp18.tsv"))
+    celex = load_celex(celex_path)
 
 
-    # 2. Apply frequency filter.
+    # 2. Leave out compounds whose N1 or N2 are not in CELEX-Nouns.
 
-    # (N=3626, UniqN=2681, UniqN1N=44)
+    # (N=6770, UniqN=5646, UniqN1N=45)
+    sp18 = sp18[
+        (sp18["n1"].isin(celex.index)) &
+        (sp18["n2"].isin(celex.index))
+    ]
+
+
+    # 3. Apply frequency filter.
+
+    # (N=3129, UniqN=2304, UniqN1N=43)
     sp18 = sp18[sp18["wc"] >= 20]
 
 
-    # 3. Deduplicate the sample (keep doubtful cases).
+    # 4. Deduplicate the sample (keep doubtful cases).
 
-    # (UniqN=2681, UniqN1N=44)
+    # (UniqN=2304, UniqN1N=43)
     sp18_pl_constr = sp18[~sp18.index.duplicated(keep="first")]
 
     
-    # 4. Remove unnecessary columns (e.g. context, context_id, etc.).
+    # 5. Remove unnecessary columns (e.g. context, context_id, etc.).
     sp18_pl_constr.drop(
         columns=["n2_num", "context", "context_id"],
         inplace=True
     )
 
 
-    # 5. Save the resulting dataset.
+    # 6. Save the resulting dataset.
     sp18_pl_constr.to_csv(
         os.path.join(sp18_dir, "sp18_pl_constr.tsv"),
         sep="\t",
