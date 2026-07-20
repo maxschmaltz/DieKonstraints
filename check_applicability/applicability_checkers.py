@@ -41,7 +41,7 @@ def _has_no_linker(compound: Compound) -> bool:
 
 # Helper functions for property checks
 
-# TODO: add all this checks to Stem class in order
+# TODO: add all this checks to Constituent class in order
 # to avoid re-accessing properties multiple times?
 
 # Helper functions for morphological checks
@@ -317,7 +317,7 @@ def def_0_applies(compound: Compound):
 # attach a zero linker almost regularly.
 
 def plur_0_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		(
 			(
@@ -343,7 +343,7 @@ def plur_0_applies(compound: Compound):
 # the plural form with -s attach a zero linker regularly.
 
 def plur_s_is_applicable(compound: Compound):
-	return _is_of_plural(compound.stems[0].morph, "s")
+	return _is_of_plural(compound.constituents[0].morph, "s")
 
 def plur_s_applies(compound: Compound):
 	return _has_no_linker(compound)
@@ -356,7 +356,7 @@ def plur_s_applies(compound: Compound):
 # the plural form with -e mostly have a zero linker.
 
 def plur_e_is_applicable(compound: Compound):
-	return _is_of_plural(compound.stems[0].morph, "e")
+	return _is_of_plural(compound.constituents[0].morph, "e")
 
 def plur_e_applies(compound: Compound):
 	return _has_no_linker(compound)
@@ -415,8 +415,8 @@ def plur_er_is_applicable(compound: Compound):
 		# to investigate the effect of the umlaut on
 		# plural effect, we disambiguate between -"er- and -er-
 		# in this version
-		_is_of_plural(compound.stems[0].morph, "er") or
-		_is_of_plural(compound.stems[0].morph, "er", adds_umlaut=True)
+		_is_of_plural(compound.constituents[0].morph, "er") or
+		_is_of_plural(compound.constituents[0].morph, "er", adds_umlaut=True)
 	)
 
 def plur_er_applies(compound: Compound):
@@ -527,7 +527,7 @@ def plur_er_pl_applies(
 # the plural form with -e and umlaut mostly have a zero linker.
 
 def plur_e_uml_is_applicable(compound: Compound):
-	return _is_of_plural(compound.stems[0].morph, "e", adds_umlaut=True)
+	return _is_of_plural(compound.constituents[0].morph, "e", adds_umlaut=True)
 
 def plur_e_uml_applies(compound: Compound):
 	return _has_no_linker(compound)
@@ -573,7 +573,7 @@ def plur_e_uml_pl_applies(
 # the plural form with a zero ending and umlaut mostly have a zero linker.
 
 def plur_0_uml_is_applicable(compound: Compound):
-	return _is_of_plural(compound.stems[0].morph, "", adds_umlaut=True)
+	return _is_of_plural(compound.constituents[0].morph, "", adds_umlaut=True)
 
 def plur_0_uml_applies(compound: Compound):
 	return _has_no_linker(compound)
@@ -621,7 +621,7 @@ def plur_0_uml_pl_applies(
 # almost always attach -s-, a zero linker, or -(e)n-.
 
 def mixed_mn_is_applicable(compound: Compound):
-	return _is_mixed(compound.stems[0].morph)
+	return _is_mixed(compound.constituents[0].morph)
 
 def mixed_mn_applies(compound: Compound):
 	return (
@@ -672,7 +672,7 @@ def mixed_mn_pl_applies(
 # with a zero ending attach a zero linking element regularly.
 
 def sfx_pl_0_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_ends_with_sfx(
 			n1,
@@ -697,7 +697,7 @@ def sfx_pl_0_applies(compound: Compound):
 # the plural form with -e attach a zero linker regularly.
 
 def sfx_pl_e_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		(
 			_ends_with_sfx(n1, ["bold", "rich", "al"])
@@ -729,7 +729,7 @@ def sfx_pl_e_applies(compound: Compound):
 # with a schwa suffix mostly attach a zero linker.
 
 def schwa_fin_deverb_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_ends_with_phon_schwa(n1)
 		and _is_deverbal(n1)
@@ -749,7 +749,7 @@ def schwa_fin_deverb_pl_is_applicable(
 	compound: Compound,
 	is_n1_plsem: Optional[bool]
 ) -> bool:
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	if is_n1_plsem is None:
 		# for future
 		pass
@@ -781,7 +781,7 @@ def schwa_fin_deverb_pl_applies(
 # Each of the two linkers is preferred in about the same number of cases.
 
 def schwa_fin_deadj_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_ends_with_phon_schwa(n1)
 		and _is_deadjective(n1)
@@ -803,7 +803,7 @@ def schwa_fin_deadj_applies(compound: Compound):
 
 def sfx_s_is_applicable(compound: Compound):
 	return _ends_with_sfx(
-		compound.stems[0].morph,
+		compound.constituents[0].morph,
 		[
 			"keit", "igkeit", "heit", "schaft", "ung", "sal",
 			"ing", "ling", "tum", "um", "ion",
@@ -834,7 +834,7 @@ def sfx_itaet_pl_is_applicable(
 	return (
 		# morph cond
 		_ends_with_sfx(
-			compound.stems[0].morph,
+			compound.constituents[0].morph,
 			[
 				# in CELEX: qualit-ät, ?, aktiv-ität,
 				# spontan-eität, plast-izität
@@ -866,7 +866,7 @@ def sfx_itaet_pl_applies(
 # (Zero linker variants with a significantly lower frequency may occur.)
 
 def sfx_deverb_en_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_is_deverbal(n1)
 		and _ends_with_sfx(n1, "en")
@@ -880,8 +880,8 @@ def sfx_deverb_en_applies(compound: Compound):
 		# 	_has_no_linker(compound)
 		# 	and (
 		# 		(
-		# 			s_var := compound.stems[0].morph
-		# 			+ "_+s_" + compound.stems[1].morph
+		# 			s_var := compound.constituents[0].morph
+		# 			+ "_+s_" + compound.constituents[1].morph
 		# 		)
 		# 		in gecodb_v06.index
 		# 	) and (
@@ -902,7 +902,7 @@ def sfx_deverb_en_applies(compound: Compound):
 # (The suffix -in adjusts orthographically in this case and becomes -inn.)
 
 def sfx_F_in_en_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	# since -in becomes -inn before -en, adjust for that
 	# as in case the constraint applies, 
 	# n1s like 'Lehrerinn' will be coming
@@ -926,7 +926,7 @@ def sfx_F_in_en_applies(compound: Compound):
 # exhibit a strong tendency to attach -s-.
 
 def prx_deverb_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_is_deverbal(n1)
 		and _is_prefixed(n1)
@@ -943,7 +943,7 @@ def prx_deverb_applies(compound: Compound):
 # or in a consonant cluster including [s] mostly adopt a zero linker.
 
 def sibilant_fin_is_applicable(compound: Compound):
-	cons_cluster = _get_last_cons_cluster(compound.stems[0].morph)
+	cons_cluster = _get_last_cons_cluster(compound.constituents[0].morph)
 	return (
 		bool(cons_cluster)
 		and (
@@ -965,7 +965,7 @@ def sibilant_fin_applies(compound: Compound):
 # with a stressed long [i] (-ie) or a stressed long [e] (-ee).)
 
 def vow_fin_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	phon_transcription = _get_transcription(n1)
 	last_phone = phon_transcription[-1]
 	last_bo_phone = phon_transcription[-2]
@@ -1001,7 +1001,7 @@ def vow_fin_applies(compound: Compound):
 # usually attach a zero linker.
 
 def stressed_phon_fin_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_is_of_gender(n1, "f")
 		and (
@@ -1036,7 +1036,7 @@ def stressed_phon_fin_applies(compound: Compound):
 # -(ig)keit, -heit, -schaft, or -ität or its allomorphs.
 
 def f_t_fin_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_is_of_gender(n1, "f")
 		and _is_polysyllabic(n1)
@@ -1062,7 +1062,7 @@ def f_t_fin_applies(compound: Compound):
 # that end in schwa mostly adopt -n-.
 
 def schwa_fin_is_applicable(compound: Compound):
-	return _ends_with_phon_schwa(compound.stems[0].morph)
+	return _ends_with_phon_schwa(compound.constituents[0].morph)
 
 def schwa_fin_applies(compound: Compound):
 	return _has_linker(compound, linker_morph="en")
@@ -1075,7 +1075,7 @@ def schwa_fin_applies(compound: Compound):
 # # by simplex feminine nouns that end in schwa adopt -n-.
 
 # def schwa_fin_f_is_applicable(compound: Compound):
-# 	n1 = compound.stems[0].morph
+# 	n1 = compound.constituents[0].morph
 # 	return (
 # 		_is_simplex(n1)
 # 		and _is_of_gender(n1, "f")
@@ -1094,7 +1094,7 @@ def schwa_fin_applies(compound: Compound):
 # regularly attach -s-, a zero linker, or -(e)n-.
 
 def f_cons_fin_is_applicable(compound: Compound) -> bool:
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_is_of_gender(n1, "f")
 		and _is_consonant_final(n1)
@@ -1228,7 +1228,7 @@ def cmpx_morph_is_applicable(compound: Compound):
 	return True
 
 def cmpx_morph_applies(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		(
 			_is_simplex(n1)
@@ -1256,7 +1256,7 @@ def cmpx_phon_is_applicable(compound: Compound):
 	return True
 
 def cmpx_phon_applies(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		(
 			# even though [nuebling_szczepaniak_2013:78] claims
@@ -1293,7 +1293,7 @@ def cmpx_phon_applies(compound: Compound):
 def sonority_is_applicable(compound: Compound):
 	# even though universal tendency, none of the sources explicitly
 	# mention the effect of the constraint on the occurrence of -s- after fricatives
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	last_phone = _get_transcription(n1)[-1]
 	return (
 		_is_simplex(n1)
@@ -1310,7 +1310,7 @@ def sonority_is_applicable(compound: Compound):
 	)
 
 def sonority_applies(compound: Compound):
-	last_phone = _get_transcription(compound.stems[0].morph)[-1]
+	last_phone = _get_transcription(compound.constituents[0].morph)[-1]
 	return (
 		(
 			(
@@ -1342,11 +1342,11 @@ def sonority_applies(compound: Compound):
 def s_smpx_is_applicable(compound: Compound):
 	return (
 		_has_linker(compound, linker_morph="s")
-		and _is_simplex(compound.stems[0].morph)
+		and _is_simplex(compound.constituents[0].morph)
 	)
 
 def s_smpx_applies(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	# simplex condition already checked in applicability
 	return (
 		_is_of_gender(n1, "m")
@@ -1362,7 +1362,7 @@ def s_smpx_applies(compound: Compound):
 def s_freq_is_applicable(compound: Compound):
 	return (
 		_has_linker(compound, linker_morph="s")
-		and _is_simplex(compound.stems[0].morph)
+		and _is_simplex(compound.constituents[0].morph)
 	)
 
 def s_freq_applies(compound: Compound):
@@ -1370,7 +1370,7 @@ def s_freq_applies(compound: Compound):
 	# DeReKo is an enormous corpus so
 	# "frequent" on its scales is measured
 	# in hundreds of thousands (e.g. 'Land' has freq ~8.9M)
-	return _get_frequency(compound.stems[0].morph) > 100_000
+	return _get_frequency(compound.constituents[0].morph) > 100_000
 
 
 # l2p:s|f_cmpx
@@ -1381,11 +1381,11 @@ def s_freq_applies(compound: Compound):
 def s_f_cmpx_is_applicable(compound: Compound):
 	return (
 		_has_linker(compound, linker_morph="s")
-		and _is_of_gender(compound.stems[0].morph, "f")
+		and _is_of_gender(compound.constituents[0].morph, "f")
 	)
 
 def s_f_cmpx_applies(compound: Compound):
-	return _is_derived(compound.stems[0].morph)
+	return _is_derived(compound.constituents[0].morph)
 
 
 # l2p:s|f_poly_syl
@@ -1396,11 +1396,11 @@ def s_f_cmpx_applies(compound: Compound):
 def s_f_polysyl_is_applicable(compound: Compound):
 	return (
 		_has_linker(compound, linker_morph="s")
-		and _is_of_gender(compound.stems[0].morph, "f")
+		and _is_of_gender(compound.constituents[0].morph, "f")
 	)
 
 def s_f_polysyl_applies(compound: Compound):
-	return _is_polysyllabic(compound.stems[0].morph)
+	return _is_polysyllabic(compound.constituents[0].morph)
 
 
 
@@ -1411,7 +1411,7 @@ def s_f_polysyl_applies(compound: Compound):
 # end in schwa or in [ɐ] (unstressed -er).
 
 def n_schwa_is_applicable(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_has_linker(compound, linker_morph="en")
 		and compound.linkers[0].allomorph == "n"
@@ -1434,7 +1434,7 @@ def n_schwa_is_applicable(compound: Compound):
 	)
 
 def n_schwa_applies(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_ends_with_phon_schwa(n1)
 		or (
@@ -1456,7 +1456,7 @@ def en_par_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="en")
 
 def en_par_applies(compound: Compound):
-	return _is_of_plural(compound.stems[0].morph, "en")
+	return _is_of_plural(compound.constituents[0].morph, "en")
 
 
 # l2p:en|non_par_m
@@ -1501,7 +1501,7 @@ def e_last_syl_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="e")
 
 def e_last_syl_applies(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_is_last_syl_stressed(n1)
 		or (
@@ -1520,7 +1520,7 @@ def e_smpx_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="e")
 
 def e_smpx_applies(compound: Compound):
-	return _is_simplex(compound.stems[0].morph)
+	return _is_simplex(compound.constituents[0].morph)
 
 
 # l2p:e|!loan:
@@ -1553,7 +1553,7 @@ def er_last_syl_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
 
 def er_last_syl_applies(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_is_last_syl_stressed(n1)
 		or (
@@ -1572,7 +1572,7 @@ def er_smpx_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
 
 def er_smpx_applies(compound: Compound):
-	return _is_simplex(compound.stems[0].morph)
+	return _is_simplex(compound.constituents[0].morph)
 
 
 # l2p:er|!loan
@@ -1613,7 +1613,7 @@ def es_monosyl_is_applicable(compound: Compound):
 	return _has_linker(compound, linker_morph="es")
 
 def es_monosyl_applies(compound: Compound):
-	n1 = compound.stems[0].morph
+	n1 = compound.constituents[0].morph
 	return (
 		_is_monosyllabic(n1)
 		or (

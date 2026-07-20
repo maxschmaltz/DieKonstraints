@@ -67,7 +67,7 @@ def main():
         linker = comp.linkers[0]
         umlaut_applied = (
             linker.adds_umlaut and
-            not comp.lemma.startswith(comp.stems[0].morph)
+            not comp.lemma.startswith(comp.constituents[0].morph)
         )
         return linker.gecodb, umlaut_applied
     
@@ -109,7 +109,7 @@ def main():
         # or 'Mausefalle', we cannot simply check
         # if the linker is in the list of all pluralic linkers,
         # so we retrieve the Pl form of N1 instead
-        n1 = comp.stems[0]
+        n1 = comp.constituents[0]
         expected_pl = celex.loc[n1.morph]["nom_pl"]
         if pd.isna(expected_pl):
             # no Pl form
