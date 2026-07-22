@@ -1,0 +1,41 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               reg_item   R-squared:                       0.437
+Model:                            OLS   Adj. R-squared:                  0.315
+Method:                 Least Squares   F-statistic:                     3.589
+Date:                Tue, 21 Jul 2026   Prob (F-statistic):            0.00355
+Time:                        18:35:51   Log-Likelihood:                 23.437
+No. Observations:                  46   AIC:                            -28.87
+Df Residuals:                      37   BIC:                            -12.42
+Df Model:                           8                                         
+Covariance Type:            nonrobust                                         
+====================================================================================================================================================
+                                                                                       coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                            0.6410      0.068      9.426      0.000       0.503       0.779
+morphological[T.True]                                                                0.2874      0.068      4.227      0.000       0.150       0.425
+derivational[T.True]                                                                 0.1845      0.068      2.714      0.010       0.047       0.322
+phonological[T.True]                                                                 0.2253      0.068      3.312      0.002       0.087       0.363
+semantic[T.True]                                                                    -0.1575      0.039     -4.087      0.000      -0.236      -0.079
+morphological[T.True]:derivational[T.True]                                          -0.1376      0.106     -1.300      0.202      -0.352       0.077
+morphological[T.True]:phonological[T.True]                                          -0.1708      0.095     -1.800      0.080      -0.363       0.021
+derivational[T.True]:phonological[T.True]                                           -0.0742      0.095     -0.782      0.439      -0.266       0.118
+morphological[T.True]:semantic[T.True]                                              -0.1575      0.039     -4.087      0.000      -0.236      -0.079
+derivational[T.True]:semantic[T.True]                                                     0          0        nan        nan           0           0
+phonological[T.True]:semantic[T.True]                                                0.0185      0.083      0.222      0.825      -0.150       0.188
+morphological[T.True]:derivational[T.True]:phonological[T.True]                     -0.4388      0.199     -2.203      0.034      -0.842      -0.035
+morphological[T.True]:derivational[T.True]:semantic[T.True]                               0          0        nan        nan           0           0
+morphological[T.True]:phonological[T.True]:semantic[T.True]                          0.0185      0.083      0.222      0.825      -0.150       0.188
+derivational[T.True]:phonological[T.True]:semantic[T.True]                                0          0        nan        nan           0           0
+morphological[T.True]:derivational[T.True]:phonological[T.True]:semantic[T.True]          0          0        nan        nan           0           0
+==============================================================================
+Omnibus:                        6.628   Durbin-Watson:                   2.424
+Prob(Omnibus):                  0.036   Jarque-Bera (JB):                7.289
+Skew:                          -0.446   Prob(JB):                       0.0261
+Kurtosis:                       4.734   Cond. No.                          inf
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is      0. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
