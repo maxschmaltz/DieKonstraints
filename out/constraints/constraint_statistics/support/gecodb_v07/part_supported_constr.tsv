@@ -1,0 +1,4 @@
+constr_id	appl_item	n_appl_items	quantifier	cvg_item	cvg_type	reg_item	reg_type	support_level
+l2p:er|par	n1+linker	4788.0	all	0.006	0.007	0.966	0.998	partially supported
+l2p:er|#stressed_syl	n1+linker	4788.0	all	0.006	0.007	0.966	0.998	partially supported
+l2p:es|mono_syl	n1+linker	4788.0	all	0.011	0.011	0.964	0.939	partially supported

@@ -8,6 +8,7 @@ jupyter==1.1.1
 matplotlib==3.10.8
 pandas==3.0.2
 phonecodes==2.0.0
+pyarrow==25.0.0
 python-dotenv==1.2.2
 PyYAML==6.0.3
 requests==2.33.1
