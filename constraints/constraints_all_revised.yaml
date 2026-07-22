@@ -910,7 +910,7 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: plur_e_anim
 
@@ -1144,7 +1144,7 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: plur_er_anim
 
@@ -2596,7 +2596,7 @@ constraints:
         
         appl_item: n1+n2
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: copula
 
@@ -2640,7 +2640,7 @@ constraints:
         
         appl_item: n1+n2
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: argument
 
@@ -2672,7 +2672,7 @@ constraints:
         
         appl_item: compound
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: tech_term
 
@@ -2715,7 +2715,7 @@ constraints:
         
         appl_item: n1+n2
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: sec_const_anim
 
@@ -3308,7 +3308,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: en_non_par_m
 
@@ -3342,7 +3342,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: en_non_par_n_pl
 
@@ -3536,7 +3536,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: e_non_loan
 
@@ -3733,7 +3733,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: er_non_loan
 
@@ -3817,7 +3817,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: es_isol
 
@@ -3922,7 +3922,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            - NA: NA
+            NA: NA
 
         func_alias: ens_isol
 
