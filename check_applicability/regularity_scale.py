@@ -1,5 +1,7 @@
+import numpy as np
 from dataclasses import dataclass
-from typing import List
+from typing import List, Union
+from types import FunctionType
 
 
 @dataclass
@@ -7,7 +9,7 @@ class RegularityLevel:
 
     name: str
     rank: int
-    min_reg_item: float
+    min_reg_item: Union[float, FunctionType]
     max_reg_item: float
     quantifiers: List[str]  # -> List[Quantifier]
 
@@ -27,62 +29,58 @@ class RegularityScale:
     def __init__(self):
 
         # populate the scale
-        self.scale: List[RegularityLevel] = [None] * 4
-
-        self.scale[0] = RegularityLevel(
-            "low_regularity",
-            rank=0,
-            min_reg_item=0.5,
-            max_reg_item=0.6,
-            quantifiers=[
-                Quantifier(value, None)
-                for value in [
+        self.scale = [
+            
+            RegularityLevel(
+                "low_regularity",
+                rank=0,
+                min_reg_item=0.5,
+                max_reg_item=0.6,
+                quantifiers=[
                     "irregularly", "majority", "may",
                     "most", "mostly", "sometimes"
                 ]
-            ]
-        )
+            ),
 
-        self.scale[1] = RegularityLevel(
-            "moderate_regularity",
-            rank=1,
-            min_reg_item=0.6,
-            max_reg_item=0.9,
-            quantifiers=[
-                Quantifier(value, None)
-                for value in [
+            RegularityLevel(
+                "moderate_regularity",
+                rank=1,
+                min_reg_item=0.6,
+                max_reg_item=0.8,
+                quantifiers=[
                     "many", "more likely", "often",
                     "prefer", "tend", "tendency"
                 ]
-            ]
-        )
+            ),
 
-        self.scale[2] = RegularityLevel(
-            "increased_regularity",
-            rank=2,
-            min_reg_item=0.9,
-            max_reg_item=0.98,
-            quantifiers=[
-                Quantifier(value, None)
-                for value in [
+            RegularityLevel(
+                "increased_regularity",
+                rank=2,
+                min_reg_item=0.8,
+                max_reg_item=0.95,
+                quantifiers=[
                     "almost all", "almost always",
                     "almost regularly", "usually"
                 ]
-            ]
-        )
+            ),
 
-        self.scale[3] = RegularityLevel(
-            "high_regularity",
-            rank=3,
-            min_reg_item=0.98,
-            max_reg_item=1.01,  # <, not <= is used
-            quantifiers=[
-                Quantifier(value, None)
-                for value in [
-                    "all", "always", "regularly"
-                ]
-            ]
-        )
+            RegularityLevel(
+                "high_regularity",
+                rank=3,
+                min_reg_item=0.95,
+                max_reg_item=0.98,
+                quantifiers=["all", "always", "regularly"]
+            ),
+
+            RegularityLevel(
+                "high_regularity",
+                rank=4,
+                min_reg_item=lambda N: 1 - (self._tp(N) - N),
+                max_reg_item=1.01,  # <, not <= is used
+                quantifiers=["all", "always", "regularly"]
+            )
+
+        ]
 
         self.quantifier_map = {}
         for reg_level in self.scale:
@@ -92,22 +90,33 @@ class RegularityScale:
     def _reg_level_by_quant(self, quantifier: str) -> RegularityLevel:
         return self.quantifier_map[quantifier]
     
-    def _reg_level_by_reg(self, reg_item: float) -> RegularityLevel:
+    def _reg_level_by_reg(self, reg_item: float, cvg_item_abs: int) -> RegularityLevel:
         for reg_level in self.scale:
+            min_reg_item = (
+                reg_level.min_reg_item if isinstance(float, reg_level.min_reg_item)
+                # run as function
+                else reg_level.min_reg_item(cvg_item_abs)
+            )
             if (
-                (reg_item >= reg_level.min_reg_item) &
+                (reg_item >= min_reg_item) &
                 (reg_item < reg_level.max_reg_item)
             ):
                 return reg_level
             
-    def get_support_level(self, quantifier: str, reg_item: float, cvg_item: float) -> str:
-        # correction for low cvg (see footnote Shmalts 2026, 21)
-        if (cvg_item <= 0.01) and (reg_item >= 0.97):
-            reg_item = 0.98 # adjust to reach high reg
+    def _tp(self, N: int) -> int:
+        # the Tolerance Principle, Yang 2016
+        return round(N / np.log(N))
+            
+    def get_support_level(
+        self,
+        quantifier: str,
+        reg_item: float,
+        cvg_item_abs: int
+    ) -> str:
+        if reg_item < 0.5:
+            return "not supported"
         expected_reg_level = self._reg_level_by_quant(quantifier)
-        actual_reg_level = self._reg_level_by_reg(reg_item)
-        if not actual_reg_level:
-            return "not supported"  # below 0.5
+        actual_reg_level = self._reg_level_by_reg(reg_item, cvg_item_abs)
         diff = actual_reg_level.rank - expected_reg_level.rank
         # (Shmalts 2026, 21)
         if diff >= 1:
