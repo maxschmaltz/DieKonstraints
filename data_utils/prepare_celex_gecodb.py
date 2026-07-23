@@ -124,12 +124,25 @@ def main():
 
     # 5. Minor modifications of GeCoDB_v07.
 
-    # remove possible toponyms (N=4227)
-    toponym_n2s = [
-        "straße", "gasse", "weg", "allee", "platz",
-        "dorf", "burg", "berg", "hof", "eck", "stein"
+    # remove possible toponyms and other problematic N2s (N=6175)
+    to_remove_n2s = [
+        # toponyms
+        "straße", "gasse", "weg", "allee", "platz", "wald", "torf", "gau", "tal", "feld",
+        "dorf", "burg", "berg", "hof", "eck", "stein", "kirche", "bach",
+        # other
+        "pass", # _spass is consistently analyzed as _+s_pass
     ]
-    gecodb_v07 = gecodb_v07[~gecodb_v07["n2_lemma"].isin(toponym_n2s)]
+    gecodb_v07 = gecodb_v07[~gecodb_v07["n2_lemma"].isin(to_remove_n2s)]
+
+    # remove misanalyses found while inspecting the results (N=4)
+    to_remove_comps = [
+        # Misanalyzed conversions
+        "zwiebel_+n_schneide",  # beim Zwiebelnschneiden
+        "windel_+n_wechsel",    # beim Windelnwechseln
+        "vokabel_+n_pauke", # beim Vokabelpauken
+        "waffel_+n_backe",  # beim Waffelnbacken
+    ]
+    gecodb_v07.drop(to_remove_comps, inplace=True)
 
     # remove duplicates (N=1)
     gecodb_v07 = gecodb_v07[~gecodb_v07.index.duplicated(keep="first")]
