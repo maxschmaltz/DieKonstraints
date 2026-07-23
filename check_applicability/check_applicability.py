@@ -4,6 +4,7 @@
 
 import os
 import zipfile
+import numpy as np
 import pandas as pd
 import yaml
 import copy
@@ -72,7 +73,6 @@ def main():
     #   2.5. Determine the support level of the constraint by the dataset.
     # 3. Save results.
 
-
     # For each dataset, we follow the algorithm:
     for dname, dataset in datasets.items():
 
@@ -118,10 +118,16 @@ def main():
                 "appl_item",
                 "n_appl_items",
                 "quantifier",
+                "cvg_item_abs",
                 "cvg_item",
                 "cvg_type",
                 "reg_item",
                 "reg_type",
+                "n_violations",
+                "is_productive",
+                "is_regular",
+                "expected_reg_level",
+                "actual_reg_level",
                 "support_level"
             ]
         )
@@ -348,40 +354,51 @@ def main():
                     reg_bw_item = reg_bw_item_abs / Nbwi # n bw item conform / n bw item covered
                     item_regs.append(reg_bw_item)
                 reg_item = pd.array(item_regs).mean().item()   # avg over (n bw item conform / n bw item covered)s
+                # calculate n_violations cumulatively:
+                # the sum of the violation rate of each compound;
+                # for example, if one item always builds deviant compounds,
+                # and four items have regularities of 0.2,
+                # n_violations will be 1.8 items
+                violation_rate = 1 - np.array(item_regs)
+                n_violations = violation_rate.sum()
                 print()
 
 
             # 2.5. Determine the support level of the constraint by the dataset.
 
-            support_level = REGULARITY_SCALE.get_support_level(
-                quantifier=quantifier,
-                reg_item=reg_item,
-                cvg_item=cvg_item
+            is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+                REGULARITY_SCALE.get_support_level(
+                    quantifier=quantifier,
+                    reg_item=reg_item,
+                    cvg_item_abs=cvg_item_abs,
+                    n_violations=n_violations
+                )
             )
 
 
             # record
             appl_statistics.loc[c_id, :] = [
-                # "appl_item"
                 appl_item,
-                # "n_appl_items"
                 Ni,
-                # "quantifier"
                 quantifier,
-                # "cvg_item"
+                cvg_item_abs,
                 cvg_item,
-                # "cvg_type"
                 cvg_type,
-                # "reg_item"
                 reg_item,
-                # "reg_type",
                 reg_type,
-                # "support_level"
+                n_violations,
+                is_productive,
+                is_regular,
+                expected_reg_level,
+                actual_reg_level,
                 support_level
             ]
 
-        float_cols = ["cvg_item", "cvg_type", "reg_item", "reg_type"]
+        appl_statistics["n_appl_items"] = appl_statistics["n_appl_items"].astype("Int32")
+        float_cols = ["cvg_item", "cvg_type", "reg_item", "reg_type", "n_violations"]
         appl_statistics[float_cols] = appl_statistics[float_cols].astype(float).round(3)
+        bool_cols = ["is_productive", "is_regular"]
+        appl_statistics[bool_cols] = appl_statistics[bool_cols].astype("boolean[pyarrow]")
         all_appl_statistics[dname] = appl_statistics
 
 

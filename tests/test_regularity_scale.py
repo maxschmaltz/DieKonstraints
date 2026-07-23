@@ -70,11 +70,13 @@ class TestRegularityScale(unittest.TestCase):
         reg_item = 0.578
         cvg_item_abs = 275000
         n_violations = 115000
-        is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-            quantifier, reg_item, cvg_item_abs, n_violations
+        is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+            REGULARITY_SCALE.get_support_level(quantifier, reg_item, cvg_item_abs, n_violations)
         )
         self.assertFalse(is_productive)
         self.assertFalse(is_regular)
+        self.assertEqual(expected_reg_level, "low regularity")
+        self.assertEqual(actual_reg_level, "low regularity")
         self.assertEqual(support_level, "supported")
 
     def test_supported_1(self):
@@ -82,11 +84,13 @@ class TestRegularityScale(unittest.TestCase):
         reg_item = 0.641
         cvg_item_abs = 525
         n_violations = 180
-        is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-            quantifier, reg_item, cvg_item_abs, n_violations
+        is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+            REGULARITY_SCALE.get_support_level(quantifier, reg_item, cvg_item_abs, n_violations)
         )
         self.assertFalse(is_productive)
         self.assertFalse(is_regular)
+        self.assertEqual(expected_reg_level, "moderate regularity")
+        self.assertEqual(actual_reg_level, "moderate regularity")
         self.assertEqual(support_level, "supported")
 
     def test_supported_2(self):
@@ -94,11 +98,13 @@ class TestRegularityScale(unittest.TestCase):
         reg_item = 0.95
         cvg_item_abs = 100
         n_violations = 5
-        is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-            quantifier, reg_item, cvg_item_abs, n_violations
+        is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+            REGULARITY_SCALE.get_support_level(quantifier, reg_item, cvg_item_abs, n_violations)
         )
         self.assertTrue(is_productive)
         self.assertFalse(is_regular)
+        self.assertEqual(expected_reg_level, "high regularity")
+        self.assertEqual(actual_reg_level, "high regularity")
         self.assertEqual(support_level, "supported")
 
     def test_supported_3(self):
@@ -106,11 +112,13 @@ class TestRegularityScale(unittest.TestCase):
         reg_item = 0.995
         cvg_item_abs = 750
         n_violations = 5
-        is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-            quantifier, reg_item, cvg_item_abs, n_violations
+        is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+            REGULARITY_SCALE.get_support_level(quantifier, reg_item, cvg_item_abs, n_violations)
         )
         self.assertTrue(is_productive)
         self.assertTrue(is_regular)
+        self.assertEqual(expected_reg_level, "regular")
+        self.assertEqual(actual_reg_level, "regular")
         self.assertEqual(support_level, "supported")
 
     def test_supported_4(self):
@@ -118,11 +126,13 @@ class TestRegularityScale(unittest.TestCase):
         reg_item = 0.96
         cvg_item_abs = 50
         n_violations = 2
-        is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-            quantifier, reg_item, cvg_item_abs, n_violations
+        is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+            REGULARITY_SCALE.get_support_level(quantifier, reg_item, cvg_item_abs, n_violations)
         )
         self.assertTrue(is_productive)
         self.assertTrue(is_regular)
+        self.assertEqual(expected_reg_level, "regular")
+        self.assertEqual(actual_reg_level, "regular")
         self.assertEqual(support_level, "supported")
 
 
@@ -131,11 +141,13 @@ class TestRegularityScale(unittest.TestCase):
         reg_item = 0.96
         cvg_item_abs = 50
         n_violations = 2
-        is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-            quantifier, reg_item, cvg_item_abs, n_violations
+        is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+            REGULARITY_SCALE.get_support_level(quantifier, reg_item, cvg_item_abs, n_violations)
         )
         self.assertTrue(is_productive)
         self.assertTrue(is_regular)
+        self.assertEqual(expected_reg_level, "high regularity")
+        self.assertEqual(actual_reg_level, "regular")
         self.assertEqual(support_level, "supported+")
 
     def test_supported_plus_1(self):
@@ -143,11 +155,13 @@ class TestRegularityScale(unittest.TestCase):
         reg_item = 0.84
         cvg_item_abs = 500
         n_violations = 80
-        is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-            quantifier, reg_item, cvg_item_abs, n_violations
+        is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+            REGULARITY_SCALE.get_support_level(quantifier, reg_item, cvg_item_abs, n_violations)
         )
         self.assertTrue(is_productive)
         self.assertFalse(is_regular)
+        self.assertEqual(expected_reg_level, "low regularity")
+        self.assertEqual(actual_reg_level, "moderate regularity")
         self.assertEqual(support_level, "supported+")
 
 
@@ -156,11 +170,13 @@ class TestRegularityScale(unittest.TestCase):
         reg_item = 0.505
         cvg_item_abs = 45
         n_violations = 22
-        is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-            quantifier, reg_item, cvg_item_abs, n_violations
+        is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+            REGULARITY_SCALE.get_support_level(quantifier, reg_item, cvg_item_abs, n_violations)
         )
         self.assertFalse(is_productive)
         self.assertFalse(is_regular)
+        self.assertEqual(expected_reg_level, "moderate regularity")
+        self.assertEqual(actual_reg_level, "low regularity")
         self.assertEqual(support_level, "partially supported")
 
     def test_partially_supported_1(self):
@@ -168,11 +184,13 @@ class TestRegularityScale(unittest.TestCase):
         reg_item = 0.98
         cvg_item_abs = 750
         n_violations = 15
-        is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-            quantifier, reg_item, cvg_item_abs, n_violations
+        is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+            REGULARITY_SCALE.get_support_level(quantifier, reg_item, cvg_item_abs, n_violations)
         )
         self.assertTrue(is_productive)
         self.assertFalse(is_regular)
+        self.assertEqual(expected_reg_level, "regular")
+        self.assertEqual(actual_reg_level, "high regularity")
         self.assertEqual(support_level, "partially supported")
 
 
@@ -181,11 +199,13 @@ class TestRegularityScale(unittest.TestCase):
         reg_item = 0.641
         cvg_item_abs = 525
         n_violations = 180
-        is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-            quantifier, reg_item, cvg_item_abs, n_violations
+        is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+            REGULARITY_SCALE.get_support_level(quantifier, reg_item, cvg_item_abs, n_violations)
         )
         self.assertFalse(is_productive)
         self.assertFalse(is_regular)
+        self.assertEqual(expected_reg_level, "regular")
+        self.assertEqual(actual_reg_level, "moderate regularity")
         self.assertEqual(support_level, "not supported")
 
     def test_not_supported_1(self):
@@ -193,11 +213,13 @@ class TestRegularityScale(unittest.TestCase):
         reg_item = 0.146
         cvg_item_abs = 900
         n_violations = 770
-        is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-            quantifier, reg_item, cvg_item_abs, n_violations
+        is_productive, is_regular, expected_reg_level, actual_reg_level, support_level = (
+            REGULARITY_SCALE.get_support_level(quantifier, reg_item, cvg_item_abs, n_violations)
         )
         self.assertFalse(is_productive)
         self.assertFalse(is_regular)
+        self.assertEqual(expected_reg_level, "moderate regularity")
+        self.assertEqual(actual_reg_level, "below scale")
         self.assertEqual(support_level, "not supported")
 
 
