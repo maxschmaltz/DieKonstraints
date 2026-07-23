@@ -1,6 +1,6 @@
 import numpy as np
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Tuple, Union
 
 
 @dataclass
@@ -21,7 +21,7 @@ class RegularityScale:
         self.scale = [
             
             RegularityLevel(
-                "low_regularity",
+                "low regularity",
                 rank=1,
                 min_reg_item=0.5,
                 max_reg_item=0.6,
@@ -32,7 +32,7 @@ class RegularityScale:
             ),
 
             RegularityLevel(
-                "moderate_regularity",
+                "moderate regularity",
                 rank=2,
                 min_reg_item=0.6,
                 # natural cut-off is 0.8, there are only three constraints
@@ -45,7 +45,7 @@ class RegularityScale:
             ),
 
             RegularityLevel(
-                "high_regularity",
+                "high regularity",
                 rank=3,
                 min_reg_item=0.95,
                 quantifiers=[
@@ -68,7 +68,7 @@ class RegularityScale:
     def _yang_theta(self, N: int) -> int:
         return N / np.log(N)
 
-    def _tolerance_principle(self, N: int, e: int) -> bool:
+    def _tolerance_principle(self, N: int, e: Union[int, float]) -> bool:
         # the Tolerance Principle, Yang 2016;
         # if the number of exceptions to a rule is
         # n exc <= N / ln(N), the rule falls apart
@@ -96,12 +96,8 @@ class RegularityScale:
         quantifier: str,
         reg_item: float,
         cvg_item_abs: int,
-        n_violations: int
-    ) -> str:
-
-        # not confirmed constraint
-        if reg_item < 0.5:
-            return False, False, "not supported"
+        n_violations: float
+    ) -> Tuple[bool, bool, str, str, str]:
 
         # test the regularity by the Tolerance Principle
         is_productive = self._tolerance_principle(
@@ -119,8 +115,28 @@ class RegularityScale:
 
         # even if the item reg very high, the constraint is not fully supported
         # until is_regular since the expected rank is beyond the scale then
-        expected_rank = len(self.scale) + 1 if expected_reg_level == "regular" else expected_reg_level.rank
-        actual_rank = len(self.scale) + 1 if is_regular else actual_reg_level.rank
+        if expected_reg_level == "regular":
+            expected_rank = len(self.scale) + 1
+        else:
+            expected_rank = expected_reg_level.rank
+            expected_reg_level = expected_reg_level.name
+
+        # not confirmed constraint
+        if reg_item < 0.5:
+            return (
+                is_productive,
+                is_regular,
+                expected_reg_level,
+                "below scale",
+                "not supported"
+            )
+
+        if is_regular:
+            actual_rank = len(self.scale) + 1
+            actual_reg_level = "regular"
+        else:
+            actual_rank = actual_reg_level.rank
+            actual_reg_level = actual_reg_level.name
 
         diff = actual_rank - expected_rank
         # (Shmalts 2026, 21)
@@ -133,16 +149,11 @@ class RegularityScale:
         else:
             verdict = "not supported"
 
-        return is_productive, is_regular, verdict
+        return (
+            is_productive, is_regular,
+            expected_reg_level, actual_reg_level,
+            verdict
+        )
         
 
 REGULARITY_SCALE = RegularityScale()
-
-
-quantifier = "almost always"
-reg_item = 0.96
-cvg_item_abs = 50
-n_violations = 2
-is_productive, is_regular, support_level = REGULARITY_SCALE.get_support_level(
-    quantifier, reg_item, cvg_item_abs, n_violations
-)
