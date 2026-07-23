@@ -10,6 +10,13 @@ from typing import Optional, Tuple
 
 load_dotenv()
 
+# TODO:
+# 1. Remove duplicated contexts while retrieving WCs.
+# 2. Search for both [base=Comp] and Comp to avoid misanalyses
+# like '(beim) Zwiebelnschneiden' incorrectly lemmatized
+# as 'Zwiebelnschneide' and being counted towards `zwibel_+n_schneide`
+# but never appearing it this form.
+
 
 # DeReKo is the biggest corpus of contemporary German language,
 # hosted at the Institut für Deutsche Sprache (IDS) in Mannheim, Germany:
