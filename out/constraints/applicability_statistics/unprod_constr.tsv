@@ -1,0 +1,12 @@
+constr_id	cvg_item_abs	n_violations_allowed	n_violations	reg_item	actual_reg_level
+p2l:decl_cl:pl:#e-0|def-0	570.0	89.826	136.14	0.761	moderate regularity
+p2l:decl_cl:pl:#e_uml-0|def-0	287.0	50.711	79.519	0.723	moderate regularity
+p2l:drv:deverb_schwa$-0|def-0	100.0	21.715	42.448	0.576	low regularity
+p2l:drv:prx_deverb-s	574.0	90.356	204.992	0.643	moderate regularity
+p2l:phon_fin:F_stem_#t$-s	46.0	12.015	22.242	0.516	low regularity
+p2l:phon_fin:schwa$-en|def-en	620.0	96.427	152.943	0.753	moderate regularity
+p2l:tend:cmpx_morph-s|def-s	3594.0	438.988	947.188	0.736	moderate regularity
+p2l:tend:cmpx_phon-s|def-s	3594.0	438.988	997.373	0.722	moderate regularity
+p2l:tend:sonority-!s	1549.0	210.881	310.151	0.8	moderate regularity
+l2p:e|smpx	107.0	22.898	29.0	0.729	moderate regularity
+l2p:pl_marker|def-pl	40.0	10.843	34.159	0.146	below scale
