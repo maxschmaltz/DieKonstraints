@@ -11,7 +11,7 @@ import copy
 from collections import defaultdict
 from tqdm import tqdm
 
-# python3 -m check_applicability.check_applicability
+# python3 -m check_applicability.main
 from data_utils.gecodb_compound_parser import Compound
 from data_utils import load_datasets
 from . import applicability_checkers
