@@ -1066,7 +1066,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            gecodb_v07_gn_mass: 3348
+            gecodb_v07_gn: 3348
 
         func_alias: plur_er_mass
 
