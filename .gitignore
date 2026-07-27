@@ -68,5 +68,6 @@ coverage.xml
 # resources and out: allow zip for heavy resources
 resources/Celex/german/
 resources/DeCOW16AX-comps/decow16ax_comps.tsv
-resources/GermaNet/GN_V190_XML/
+resources/GermaNet/V190/GN_V190_XML/
+resources/GermaNet/V200/GN_V200_XML/
 out/constraints/applicability_statistics/**/appl_index.tsv

@@ -11,6 +11,7 @@ from data_utils.gecodb_compound_parser import (
     perform_umlaut
 )
 from data_utils.load_datasets import load_celex
+from data_utils.germanet_search import germanet
 
 
 # to be initialized for each CELEX-nouns version!!!
@@ -290,11 +291,23 @@ def _is_last_syl_stressed(lemma: str) -> bool:
 		or _is_monosyllabic(lemma)
 	)
 
+
 # Helper for frequency check
 
 def _get_frequency(lemma: str) -> int:
 	lemma_info = celex.loc[lemma]
 	return int(lemma_info["freq"])
+
+
+# Helper functions for lexical checks
+
+def is_synset_mass(synset: Synset) -> bool:
+    # all mass nouns are children of the
+    # 'Materie/Stoff/Substanz' node
+    return (
+        germanet.get_synset_by_id("s47684")
+        in synset.all_hypernyms()
+    )
 
 
 
@@ -407,7 +420,12 @@ def plur_e_pl_applies(
 # First constituents that are constituted by
 # monosyllabic animal designations that build
 # the plural form with -e attach -e- irregularly.
-# TODO
+
+def plur_e_anim_is_applicable(compound: Compound):
+	pass
+
+def plur_e_anim_applies(compound: Compound):
+	pass
 
 
 

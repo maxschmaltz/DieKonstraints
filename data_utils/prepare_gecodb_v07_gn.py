@@ -28,7 +28,7 @@ def main():
     # 1. Init GeCoDB_v07.
 
     # load prepared GeCoDB
-    # (N=275409)
+    # (N=275411)
     gecodb_v07 = load_gecodb(os.path.join(datadir, "gecodb_v07.tsv"))
 
 
@@ -40,7 +40,7 @@ def main():
 
     # 3. Save the prepared data.
 
-    # (N=52433)
+    # (N=54000)
     gecodb_v07_gn.to_csv(
         os.path.join(datadir, "gecodb_v07_gn.tsv"),
         sep="\t",
