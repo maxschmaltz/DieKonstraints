@@ -158,7 +158,7 @@ def main():
 
     # 6. Save the prepared data to new TSV files.
     
-    # (N=10999, deleted N=997)
+    # (N=11031, deleted N=965)
     celex.to_csv(
         os.path.join(outdir, "celex_nouns.tsv"),
         sep="\t",
@@ -166,7 +166,8 @@ def main():
         header=True
     )
 
-    # (N=277361, deleted N=5406 (not in GermaNet N=1178, duplicate N=1, toponyms N=4227))
+    # (N=275411, deleted N=7356)
+    # (constituents not in GermaNet N=1176, further filtering N=6180))
     gecodb_v07.to_csv(
         os.path.join(outdir, "gecodb_v07.tsv"),
         sep="\t",

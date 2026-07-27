@@ -57406,6 +57406,7 @@ nacht_topf	Nachttopf	2562	nacht	2114394	368	_	False	False	topf	188753
 nacht_schweiß	Nachtschweiß	433	nacht	2114394	368	_	False	False	schweiß	62402
 nacht_blindheit	Nachtblindheit	411	nacht	2114394	368	_	False	False	blindheit	17368
 nacht_lokal	Nachtlokal	2007	nacht	2114394	368	_	False	False	lokal	211407
+nacht_mahr	Nachtmahr	1052	nacht	2114394	368	_	False	False	mahr	12652
 nacht_mahl	Nachtmahl	837	nacht	2114394	368	_	False	False	mahl	22276
 nacht_schrank	Nachtschrank	1361	nacht	2114394	368	_	False	False	schrank	135168
 nacht_modus	Nachtmodus	586	nacht	2114394	368	_	False	False	modus	67168
@@ -116725,6 +116726,7 @@ rum_gebrüll	Rumgebrüll	26	rum	22694	54	_	False	False	gebrüll	9471
 wohnung_+s_begriff	Wohnungsbegriff	40	wohnung	1994713	275	_+s_	False	False	begriff	605580
 wohnung_+s_raum	Wohnungsraum	190	wohnung	1994713	275	_+s_	False	False	raum	2256201
 rum_stadt	Rumstadt	1090	rum	22694	54	_	False	False	stadt	9376427
+rum_gezappel	Rumgezappel	22	rum	22694	54	_	False	False	gezappel	593
 wohnung_+s_inserat	Wohnungsinserat	235	wohnung	1994713	275	_+s_	False	False	inserat	12576
 wohnung_+s_tiger	Wohnungstiger	20	wohnung	1994713	275	_+s_	False	False	tiger	210540
 rum_pöbel	Rumpöbel	36	rum	22694	54	_	False	False	pöbel	4509
