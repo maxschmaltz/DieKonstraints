@@ -930,7 +930,7 @@ constraints:
         measures: NA
         
         examples_pro: [hund_+e_leine, swein_+e_stall, pferd_+e_wagen]
-        examples_contra: [hund_+s_stern, schwein_kram, schaff_stall]
+        examples_contra: [hund_+s_stern, schwein_kram, schaf_stall]
 
         evidence:
 
@@ -991,7 +991,7 @@ constraints:
                     type: NA
                 support_level: NA
         
-        examples_pro: [buch_deckel, buch_+=er_regal, kind_+=er_jacke]
+        examples_pro: [buch_deckel, buch_+=er_regal, kind_+er_jacke]
         examples_contra: [kind_+es_alter, mann_+s_volk, rind_fleisch]
 
         evidence:
@@ -1034,7 +1034,7 @@ constraints:
                 support_level: NA
         
         examples_pro: [buch_deckel, grab_stein, blatt_fläche]
-        examples_contra: [mann_+=er_herz, kind_+=er_bild,   buch_handel]
+        examples_contra: [mann_+=er_herz, kind_+er_bild,   buch_handel]
 
         evidence:
 
@@ -1120,7 +1120,7 @@ constraints:
                 support_level: NA
         
         examples_pro: [buch_+=er_regal, grab_+=er_feld, kraut_+=er_frau]
-        examples_contra: [buch_handel, bild_band,   kind_+=er_jacke, mann_+=er_herz]
+        examples_contra: [buch_handel, bild_band,   kind_+er_jacke, mann_+=er_herz]
 
         evidence:
 
@@ -1164,7 +1164,7 @@ constraints:
         quantifier: may
         measures: NA
         
-        examples_pro: [kind_+=er_jacke, huhn_+=er_ei, rind_+=er_brust]
+        examples_pro: [kind_+er_jacke, huhn_+=er_ei, rind_+er_brust]
         examples_contra: []
 
         evidence:
@@ -1182,7 +1182,7 @@ constraints:
               summary: Some examples exhibit that -(")er- is not always associated with a plural meaning [1].
               
         footnotes:
-            "1": "Even though not explicitly stated, counterexamples for the plural meaning given in [ortner_mueller-bollhagen_1991:98] confirm the hypothesis from [eisenberg_2013:229] that for person and animal designations, -\"er- is not necessarily associated with a plural meaning: huhn_+=er_keule, kind_+=er_jacke, rind_+=er_brust."
+            "1": "Even though not explicitly stated, counterexamples for the plural meaning given in [ortner_mueller-bollhagen_1991:98] confirm the hypothesis from [eisenberg_2013:229] that for person and animal designations, -\"er- is not necessarily associated with a plural meaning: huhn_+=er_keule, kind_+er_jacke, rind_+er_brust."
 
 
 
@@ -3637,7 +3637,7 @@ constraints:
                     type: NA
                 support_level: NA
         
-        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
+        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+er_jacke]
         examples_contra: []
 
         evidence:
@@ -3705,7 +3705,7 @@ constraints:
                     type: NA
                 support_level: NA
         
-        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke, mitglied_+=er_liste]
+        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+er_jacke, mitglied_+er_liste]
         examples_contra: []
 
         evidence:
@@ -3757,8 +3757,8 @@ constraints:
                     type: NA
                 support_level: NA
         
-        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
-        examples_contra: [mitglied_+=er_liste, vorbild_+=er_sammlung]
+        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+er_jacke]
+        examples_contra: [mitglied_+er_liste, vorbild_+er_sammlung]
 
         evidence:
 
@@ -3786,7 +3786,7 @@ constraints:
         quantifier: all
         measures: NA
         
-        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+=er_jacke]
+        examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+er_jacke]
         examples_contra: []
 
         evidence:
@@ -4074,7 +4074,7 @@ constraints:
                 support_level: NA
         
         examples_pro: [punkt_+e_stand, buch_+=er_regal, staat_+en_bund, burg_+en_land, mutter_+=_zentrum]
-        examples_contra: [motor_+en_geräusch, burg_+en_blick, kind_+=er_jacke, hund_+e_leine,   pilz_sammler, buch_handel, vogel_futter]
+        examples_contra: [motor_+en_geräusch, burg_+en_blick, kind_+er_jacke, hund_+e_leine,   pilz_sammler, buch_handel, vogel_futter]
 
         evidence:
 
