@@ -197,7 +197,7 @@ datasets:
         description: "~49k German N+N compounds from the DECOW16A corpus that are built from nouns found in both CELEX2 and GermaNet, can themselves be parsed confidently in GermaNet, and have a WC of at least 20 in DeReKo."
         origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR) and [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02), final preprocessing in the present study (TODO).
         size: 48980 compound lemmata (48664 unique N1+N2 combinations). 3320 N1 lemmata. 10 linkers, 12 linker allomorphs. 3587 unique N1+linker combinations.
-        filepath: resources/developed/gecodb_v07.tsv
+        filepath: resources/developed/gecodb_v07_gn.tsv
         load_func: load_gecodb
         celexn_version: 1
 
@@ -1064,7 +1064,7 @@ constraints:
         ling_info_type: [morphological, semantic]
         is_pluralic: true
         
-        appl_item: n1+sem
+        appl_item: n1 #+sem
         datasets_n_appl_items:
             gecodb_v07_gn: 3320
 

@@ -305,6 +305,7 @@ def main():
             # item and type measures are effectively the same thing
             if appl_item == "compound":
 
+                cvg_item_abs = copy.copy(cvg_type_abs)
                 cvg_item = copy.copy(cvg_type)
 
             else:
@@ -336,6 +337,8 @@ def main():
             if appl_item == "compound":
 
                 reg_item = copy.copy(reg_type)
+                n_violations = cvg_type_abs - reg_type_abs
+
                 print(f"Calculating statistics for {c_id}: done\n") # unify with tqdm below
 
             else:
@@ -360,8 +363,8 @@ def main():
                 # for example, if one item always builds deviant compounds,
                 # and four items have regularities of 0.2,
                 # n_violations will be 1.8 items
-                violation_rate = 1 - np.array(item_regs)
-                n_violations = violation_rate.sum()
+                violation_rates = 1 - np.array(item_regs)
+                n_violations = violation_rates.sum()
                 print()
 
 
