@@ -3,7 +3,7 @@ import pandas as pd
 from ipapy import UNICODE_TO_IPA
 from ipapy.ipachar import IPAChar
 from itertools import product
-from typing import Optional, Literal, List
+from typing import Optional, Literal
 from germanetpy.lexunit import Lexunit
 
 from data_utils.gecodb_compound_parser import (
@@ -302,13 +302,15 @@ def _get_frequency(lemma: str) -> int:
 
 # Helper functions for semantic and lexical checks
 
-def _has_hypernym(lemma: Lexunit, ids: List[str]) -> bool:
+def _has_hypernym(lemma: Lexunit, ids: list[str]) -> bool:
 	return any(
 		germanet.get_synset_by_id(id) in lemma.synset.all_hypernyms()
 		for id in ids
 	)
 
-def _is_of_catergory(lemma: Lexunit, cats: List[str]) -> bool:
+def _is_of_catergory(lemma: Lexunit, cats: str | list[str]) -> bool:
+	if isinstance(cats, str):
+		cats = [cats]
 	# all categories present in implemented constraints
 	cats2ids = {
 		# we have different synsets that can identify
@@ -444,10 +446,14 @@ def plur_e_pl_applies(
 # the plural form with -e attach -e- irregularly.
 
 def plur_e_anim_is_applicable(compound: Compound):
-	pass
+	n1_lu = get_n1_lexunit(compound.lemma)
+	return (
+		plur_e_is_applicable(compound) and
+		_is_of_catergory(n1_lu, "animal")
+	)
 
 def plur_e_anim_applies(compound: Compound):
-	pass
+	return _has_linker(compound, linker_morph="e")
 
 
 
@@ -519,7 +525,17 @@ def plur_er_sg_applies(
 # First constituents that are constituted by nouns that build
 # the plural form with -(")er
 # tend to attach a zero linker when they have a mass meaning.
-# TODO
+
+def plur_er_mass_is_applicable(compound: Compound):
+	# NB!!! This checker cannot handles cases with food!
+	n1_lu = get_n1_lexunit(compound.lemma)
+	return (
+		plur_er_is_applicable(compound) and
+		_is_of_catergory(n1_lu, "mass")
+	)
+
+def plur_er_mass_applies(compound: Compound):
+	return _has_no_linker(compound)
 
 
 # p2l:decl_cl:pl:#er-0/er|pl_interpr-er
@@ -564,7 +580,23 @@ def plur_er_pl_applies(
 # may attach -(")er- regardless of the
 # singular/pluralinterpretation of
 # the given first constituent within the compound.
-# TODO
+
+def plur_er_anim_is_applicable(compound: Compound):
+	n1_lu = get_n1_lexunit(compound.lemma)
+	return (
+		plur_er_is_applicable(compound) and
+		_is_of_catergory(n1_lu, ["person", "animal"])
+	)
+
+def plur_er_anim_applies(compound: Compound):
+	# to investigate the effect of the umlaut on
+	# plural effect, we disambiguate between -"er- and -er-
+	# in this version
+	return _has_linker(
+		compound,
+		linker_morph="er",
+		adds_umlaut=("=" in compound.gecodb)
+	)
 
 
 
@@ -1256,12 +1288,21 @@ def f_cons_fin_pl_applies(
 
 # p2l:sem:2const_anim/pers-s
 #
-# Compounds with second constituents 'Mann', 'Frau', 'Leute',
-# 'Tochter', 'Gattin', 'Witwe' tend to insert -s-
-# if the compound designates a person
-# (even if the first constituent would otherwise attach a zero linker).
-# TODO
+# Compounds whose first constituent designates a person 
+# and whose second constituent is one of 
+# 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', or 'Witwe' 
+# tend to insert -s-.
 
+def sec_const_anim_is_applicable(compound: Compound):
+	n1_lu = get_n1_lexunit(compound.lemma)
+	n2 = compound.constituents[1].morph
+	return (
+		_is_of_catergory(n1_lu, "person") and
+		(n2 in ["mann", "frau", "leute", "tochter", "gattin", "witwe"])
+	)
+
+def sec_const_anim_applies(compound: Compound):
+	return _has_linker(compound, linker_morph="s")
 
 
 # p2l:tend:cmpx_morph-s|def-s
@@ -1512,7 +1553,25 @@ def en_par_applies(compound: Compound):
 # that constitute first constituents that attach -(e)n-
 # are monosyllabic designations of male persons, animals,
 # astronomic objects, months.
-# TODO
+
+def en_non_par_m_is_applicable(compound: Compound):
+	n1 = compound.constituents[0].morph
+	return (
+		_is_of_gender(n1, "m") and
+		(not _is_of_plural(n1, "en")) and
+		_has_linker(compound, linker_morph="en")
+	)
+
+def en_non_par_m_applies(compound: Compound):
+	n1_lu = get_n1_lexunit(compound.lemma)
+	# given a high correlation between sex and gender
+	# in person designation, we assume that, since
+	# only masculine nouns are covered by this constraint,
+	# if they designate a person, it is a male one
+	return _is_of_catergory(
+		n1_lu,
+		["person", "animal", "astronomic_obj", "month"]
+	)
 
 
 # l2p:en|non_par_n_pl_interpr
@@ -1584,7 +1643,11 @@ def e_smpx_applies(compound: Compound):
 # build the plural form with -(")er.
 
 def er_par_is_applicable(compound: Compound):
-	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
+	return _has_linker(
+		compound,
+		linker_morph="er",
+		adds_umlaut="=" in compound.gecodb
+	)
 
 def er_par_applies(compound: Compound):
 	return plur_er_is_applicable(compound)
@@ -1597,7 +1660,11 @@ def er_par_applies(compound: Compound):
 # or are derived of those with a stressed prefix.
 
 def er_last_syl_is_applicable(compound: Compound):
-	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
+	return _has_linker(
+		compound,
+		linker_morph="er",
+		adds_umlaut="=" in compound.gecodb
+	)
 
 def er_last_syl_applies(compound: Compound):
 	n1 = compound.constituents[0].morph
@@ -1616,7 +1683,11 @@ def er_last_syl_applies(compound: Compound):
 # Most nouns that constitute first constituents that attach -(")er- are simplex.
 
 def er_smpx_is_applicable(compound: Compound):
-	return _has_linker(compound, linker_morph="er", adds_umlaut=True)
+	return _has_linker(
+		compound,
+		linker_morph="er",
+		adds_umlaut="=" in compound.gecodb
+	)
 
 def er_smpx_applies(compound: Compound):
 	return _is_simplex(compound.constituents[0].morph)

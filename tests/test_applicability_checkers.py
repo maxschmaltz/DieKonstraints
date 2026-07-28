@@ -1174,12 +1174,12 @@ class TestIsOfCategory(unittest.TestCase):
 
     def test_animal_0(self):
         lemma = self._get_lu("hund")
-        cats = ["animal"]
+        cats = "animal"
         self.assertTrue(_is_of_catergory(lemma, cats))
 
     def test_animal_1(self):
         lemma = self._get_lu("insekt")
-        cats = ["animal"]
+        cats = "animal"
         self.assertTrue(_is_of_catergory(lemma, cats))
 
     def test_animal_2(self):
@@ -1190,7 +1190,7 @@ class TestIsOfCategory(unittest.TestCase):
 
     def test_person_0(self):
         lemma = self._get_lu("person")
-        cats = ["person"]
+        cats = "person"
         self.assertTrue(_is_of_catergory(lemma, cats))
 
     def test_person_1(self):
@@ -1200,7 +1200,7 @@ class TestIsOfCategory(unittest.TestCase):
 
     def test_person_2(self):
         lemma = self._get_lu("hund")
-        cats = ["person"]
+        cats = "person"
         self.assertFalse(_is_of_catergory(lemma, cats))
 
 
@@ -1211,18 +1211,18 @@ class TestIsOfCategory(unittest.TestCase):
 
     def test_astronomic_obj_1(self):
         lemma = self._get_lu("mond")
-        cats = ["astronomic_obj"]
+        cats = "astronomic_obj"
         self.assertTrue(_is_of_catergory(lemma, cats))
 
     def test_astronomic_obj_2(self):
         lemma = self._get_lu("wind")
-        cats = ["astronomic_obj"]
+        cats = "astronomic_obj"
         self.assertFalse(_is_of_catergory(lemma, cats))
 
 
     def test_month_0(self):
         lemma = self._get_lu("mai")
-        cats = ["month"]
+        cats = "month"
         self.assertTrue(_is_of_catergory(lemma, cats))
 
     def test_month_2(self):
@@ -1238,7 +1238,7 @@ class TestIsOfCategory(unittest.TestCase):
 
     def test_mass_1(self):
         lemma = self._get_lu("glas_a")
-        cats = ["mass"]
+        cats = "mass"
         self.assertFalse(_is_of_catergory(lemma, cats))
 
 
@@ -1261,6 +1261,12 @@ class TestIsOfCategory(unittest.TestCase):
     def test_key_error_0(self):
         lemma = self._get_lu("hund")
         cats = ["animal", "mammal"]
+        with self.assertRaises(KeyError):
+            _ = _is_of_catergory(lemma, cats)
+
+    def test_key_error_1(self):
+        lemma = self._get_lu("hund")
+        cats = "person, animal"
         with self.assertRaises(KeyError):
             _ = _is_of_catergory(lemma, cats)
     
@@ -1721,7 +1727,7 @@ class TestApplicabilityCheckersPlurEPl(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersPlurEAnim:
+class TestApplicabilityCheckersPlurEAnim(unittest.TestCase):
 
 	# p2l:decl_cl:pl:#e-0|msyl_anim-e
 	#
@@ -1729,97 +1735,95 @@ class TestApplicabilityCheckersPlurEAnim:
     # monosyllabic animal designations that build
     # the plural form with -e attach -e- irregularly.
 
-    # def test_plur_e_anim_is_applicable_0(self):
-    #     compound = Compound("hund_+e_leine")
-    #     self.assertTrue(
-    #         plur_e_anim_is_applicable(compound)
-    #     )
+    def test_plur_e_anim_is_applicable_0(self):
+        compound = Compound("hund_+e_leine")
+        self.assertTrue(
+            plur_e_anim_is_applicable(compound)
+        )
 
-    # def test_plur_e_anim_applies_0(self):
-    #     compound = Compound("hund_+e_leine")
-    #     self.assertTrue(
-    #         plur_e_anim_applies(compound)
-    #     )
-
-        
-    # def test_plur_e_anim_is_applicable_1(self):
-    #     compound = Compound("swein_+e_stall")
-    #     self.assertTrue(
-    #         plur_e_anim_is_applicable(compound)
-    #     )
-
-    # def test_plur_e_anim_applies_1(self):
-    #     compound = Compound("swein_+e_stall")
-    #     self.assertTrue(
-    #         plur_e_anim_applies(compound)
-    #     )
+    def test_plur_e_anim_applies_0(self):
+        compound = Compound("hund_+e_leine")
+        self.assertTrue(
+            plur_e_anim_applies(compound)
+        )
 
         
-    # def test_plur_e_anim_is_applicable_2(self):
-    #     compound = Compound("pferd_+e_wagen")
-    #     self.assertTrue(
-    #         plur_e_anim_is_applicable(compound)
-    #     )
+    def test_plur_e_anim_is_applicable_1(self):
+        compound = Compound("schwein_+e_stall")
+        self.assertTrue(
+            plur_e_anim_is_applicable(compound)
+        )
 
-    # def test_plur_e_anim_applies_2(self):
-    #     compound = Compound("pferd_+e_wagen")
-    #     self.assertTrue(
-    #         plur_e_anim_applies(compound)
-    #     )
-
-        
-    # def test_plur_e_anim_is_applicable_3(self):
-    #     compound = Compound("hund_+s_stern")
-    #     self.assertTrue(
-    #         plur_e_anim_is_applicable(compound)
-    #     )
-
-    # def test_plur_e_anim_applies_3(self):
-    #     compound = Compound("hund_+s_stern")
-    #     self.assertFalse(
-    #         plur_e_anim_applies(compound)
-    #     )
+    def test_plur_e_anim_applies_1(self):
+        compound = Compound("schwein_+e_stall")
+        self.assertTrue(
+            plur_e_anim_applies(compound)
+        )
 
         
-    # def test_plur_e_anim_is_applicable_4(self):
-    #     compound = Compound("schwein_kram")
-    #     self.assertTrue(
-    #         plur_e_anim_is_applicable(compound)
-    #     )
+    def test_plur_e_anim_is_applicable_2(self):
+        compound = Compound("pferd_+e_wagen")
+        self.assertTrue(
+            plur_e_anim_is_applicable(compound)
+        )
 
-    # def test_plur_e_anim_applies_4(self):
-    #     compound = Compound("schwein_kram")
-    #     self.assertFalse(
-    #         plur_e_anim_applies(compound)
-    #     )
-
-        
-    # def test_plur_e_anim_is_applicable_5(self):
-    #     compound = Compound("schaff_stall")
-    #     self.assertTrue(
-    #         plur_e_anim_is_applicable(compound)
-    #     )
-
-    # def test_plur_e_anim_applies_5(self):
-    #     compound = Compound("schaff_stall")
-    #     self.assertFalse(
-    #         plur_e_anim_applies(compound)
-    #     )
+    def test_plur_e_anim_applies_2(self):
+        compound = Compound("pferd_+e_wagen")
+        self.assertTrue(
+            plur_e_anim_applies(compound)
+        )
 
         
-    # def test_plur_e_anim_is_applicable_6(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_e_anim_is_applicable(compound)
-    #     )
+    def test_plur_e_anim_is_applicable_3(self):
+        compound = Compound("hund_+s_rose")
+        self.assertTrue(
+            plur_e_anim_is_applicable(compound)
+        )
 
-    # def test_plur_e_anim_is_applicable_7(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_e_anim_is_applicable(compound)
-    #     )
+    def test_plur_e_anim_applies_3(self):
+        compound = Compound("hund_+s_rose")
+        self.assertFalse(
+            plur_e_anim_applies(compound)
+        )
 
-	pass
+        
+    def test_plur_e_anim_is_applicable_4(self):
+        compound = Compound("schwein_kram")
+        self.assertTrue(
+            plur_e_anim_is_applicable(compound)
+        )
+
+    def test_plur_e_anim_applies_4(self):
+        compound = Compound("schwein_kram")
+        self.assertFalse(
+            plur_e_anim_applies(compound)
+        )
+
+        
+    def test_plur_e_anim_is_applicable_5(self):
+        compound = Compound("schaf_stall")
+        self.assertTrue(
+            plur_e_anim_is_applicable(compound)
+        )
+
+    def test_plur_e_anim_applies_5(self):
+        compound = Compound("schaf_stall")
+        self.assertFalse(
+            plur_e_anim_applies(compound)
+        )
+
+        
+    def test_plur_e_anim_is_applicable_6(self):
+        compound = Compound("glas_fenster")
+        self.assertFalse(
+            plur_e_anim_is_applicable(compound)
+        )
+
+    def test_plur_e_anim_is_applicable_6(self):
+        compound = Compound("rind_+er_fleisch")
+        self.assertFalse(
+            plur_e_anim_is_applicable(compound)
+        )
 
 
 
@@ -1870,13 +1874,13 @@ class TestApplicabilityCheckersPlurEr(unittest.TestCase):
         )
 
     def test_plur_er_is_applicable_21(self):
-        compound = Compound("kind_+=er_jacke")
+        compound = Compound("kind_+er_jacke")
         self.assertTrue(
             plur_er_is_applicable(compound)
         )
 
     def test_plur_er_applies_21(self):
-        compound = Compound("kind_+=er_jacke")
+        compound = Compound("kind_+er_jacke")
         self.assertTrue(
             plur_er_applies(compound)
         )
@@ -1983,13 +1987,13 @@ class TestApplicabilityCheckersPlurErSg(unittest.TestCase):
 
         
     def test_plur_er_sg_is_applicable_4(self):
-        compound = Compound("kind_+=er_bild")
+        compound = Compound("kind_+er_bild")
         self.assertTrue(
             plur_er_sg_is_applicable(compound, is_n1_plsem=False)
         )
 
     def test_plur_er_sg_applies_4(self):
-        compound = Compound("kind_+=er_bild")
+        compound = Compound("kind_+er_bild")
         self.assertFalse(
             plur_er_sg_applies(compound, is_linker_pl=True)
         )
@@ -2008,7 +2012,7 @@ class TestApplicabilityCheckersPlurErSg(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersPlurErMass:
+class TestApplicabilityCheckersPlurErMass(unittest.TestCase):
 
 	# p2l:decl_cl:pl:#er-0/er|mass-interpr-0
 	#
@@ -2018,21 +2022,21 @@ class TestApplicabilityCheckersPlurErMass:
     # in which the second constituent forces
     # a mass meaning of the given first constituent.
 
-    # def test_plur_er_mass_is_applicable_0(self):
-    #     compound = Compound("glas_auge")
-    #     self.assertTrue(
-    #         plur_er_mass_is_applicable(compound)
-    #     )
+    def test_plur_er_mass_is_applicable_0(self):
+        compound = Compound("glas_auge")
+        self.assertTrue(
+            plur_er_mass_is_applicable(compound)
+        )
 
-    # def test_plur_er_mass_applies_0(self):
-    #     compound = Compound("glas_auge")
-    #     self.assertTrue(
-    #         plur_er_mass_applies(compound)
-    #     )
+    def test_plur_er_mass_applies_0(self):
+        compound = Compound("glas_auge")
+        self.assertTrue(
+            plur_er_mass_applies(compound)
+        )
 
         
     # def test_plur_er_mass_is_applicable_1(self):
-    #     compound = Compound("kraut_salat")
+    #     compound = Compound("kraut_salat")    # is not material
     #     self.assertTrue(
     #         plur_er_mass_is_applicable(compound)
     #     )
@@ -2044,32 +2048,30 @@ class TestApplicabilityCheckersPlurErMass:
     #     )
 
         
-    # def test_plur_er_mass_is_applicable_2(self):
-    #     compound = Compound("horn_haut")
-    #     self.assertTrue(
-    #         plur_er_mass_is_applicable(compound)
-    #     )
+    def test_plur_er_mass_is_applicable_2(self):
+        compound = Compound("horn_brille")
+        self.assertTrue(
+            plur_er_mass_is_applicable(compound)
+        )
 
-    # def test_plur_er_mass_applies_2(self):
-    #     compound = Compound("horn_haut")
-    #     self.assertTrue(
-    #         plur_er_mass_applies(compound)
-    #     )
+    def test_plur_er_mass_applies_2(self):
+        compound = Compound("horn_brille")
+        self.assertTrue(
+            plur_er_mass_applies(compound)
+        )
 
         
-    # def test_plur_er_mass_is_applicable_3(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_er_mass_is_applicable(compound)
-    #     )
+    def test_plur_er_mass_is_applicable_3(self):
+        compound = Compound("hund_+e_leine")
+        self.assertFalse(
+            plur_er_mass_is_applicable(compound)
+        )
 
-    # def test_plur_er_mass_is_applicable_4(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_er_mass_is_applicable(compound)
-    #     )
-
-	pass
+    def test_plur_er_mass_is_applicable_4(self):
+        compound = Compound("kraut_+=er_garten")
+        self.assertFalse(
+            plur_er_mass_is_applicable(compound)
+        )
 
 
 class TestApplicabilityCheckersPlurErPl(unittest.TestCase):
@@ -2153,13 +2155,13 @@ class TestApplicabilityCheckersPlurErPl(unittest.TestCase):
         )
         
     def test_plur_er_pl_is_applicable_6(self):
-        compound = Compound("kind_+=er_jacke")
+        compound = Compound("kind_+er_jacke")
         self.assertFalse(
             plur_er_pl_is_applicable(compound, is_n1_plsem=False)
         )
 
 
-class TestApplicabilityCheckersPlurErAnim:
+class TestApplicabilityCheckersPlurErAnim(unittest.TestCase):
 
 	# p2l:decl_cl:pl:#er-0/er|anim-er
 	#
@@ -2170,58 +2172,56 @@ class TestApplicabilityCheckersPlurErAnim:
     # singular/pluralinterpretation of
     # the given first constituent within the compound.
 
-    # def test_plur_er_anim_is_applicable_0(self):
-    #     compound = Compound("kind_+=er_jacke")
-    #     self.assertTrue(
-    #         plur_er_anim_is_applicable(compound)
-    #     )
+    def test_plur_er_anim_is_applicable_0(self):
+        compound = Compound("kind_+er_zimmer")
+        self.assertTrue(
+            plur_er_anim_is_applicable(compound)
+        )
 
-    # def test_plur_er_anim_applies_0(self):
-    #     compound = Compound("kind_+=er_jacke")
-    #     self.assertTrue(
-    #         plur_er_anim_applies(compound)
-    #     )
+    def test_plur_er_anim_applies_0(self):
+        compound = Compound("kind_+er_zimmer")
+        self.assertTrue(
+            plur_er_anim_applies(compound)
+        )
 
         
-    # def test_plur_er_anim_is_applicable_1(self):
-    #     compound = Compound("huhn_+=er_ei")
-    #     self.assertTrue(
-    #         plur_er_anim_is_applicable(compound)
-    #     )
+    def test_plur_er_anim_is_applicable_1(self):
+        compound = Compound("huhn_+=er_ei")
+        self.assertTrue(
+            plur_er_anim_is_applicable(compound)
+        )
 
-    # def test_plur_er_anim_applies_1(self):
-    #     compound = Compound("huhn_+=er_ei")
-    #     self.assertTrue(
-    #         plur_er_anim_applies(compound)
-    #     )
+    def test_plur_er_anim_applies_1(self):
+        compound = Compound("huhn_+=er_ei")
+        self.assertTrue(
+            plur_er_anim_applies(compound)
+        )
 
         
     # def test_plur_er_anim_is_applicable_2(self):
-    #     compound = Compound("rind_+=er_brust")
+    #     compound = Compound("rind_+er_brust")    # not in GN 
     #     self.assertTrue(
     #         plur_er_anim_is_applicable(compound)
     #     )
 
     # def test_plur_er_anim_applies_2(self):
-    #     compound = Compound("rind_+=er_brust")
+    #     compound = Compound("rind_+er_brust")
     #     self.assertTrue(
     #         plur_er_anim_applies(compound)
     #     )
 
         
-    # def test_plur_er_anim_is_applicable_3(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_er_anim_is_applicable(compound)
-    #     )
+    def test_plur_er_anim_is_applicable_3(self):
+        compound = Compound("glas_fenster")
+        self.assertFalse(
+            plur_er_anim_is_applicable(compound)
+        )
 
-    # def test_plur_er_anim_is_applicable_4(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         plur_er_anim_is_applicable(compound)
-    #     )
-
-	pass
+    def test_plur_er_anim_is_applicable_4(self):
+        compound = Compound("hund_+e_leine")
+        self.assertFalse(
+            plur_er_anim_is_applicable(compound)
+        )
 
 
 
@@ -3620,7 +3620,7 @@ class TestApplicabilityCheckersSibilantFin(unittest.TestCase):
         )
 
     def test_sibilant_fin_is_applicable_5(self):
-        compound = Compound("kind_+=er_garten")
+        compound = Compound("kind_+er_garten")
         self.assertFalse(
             sibilant_fin_is_applicable(compound)
         )
@@ -4554,17 +4554,17 @@ class TestApplicabilityCheckersTechTerm:
 
 
 
-class TestApplicabilityCheckersSecConstAnim:
+class TestApplicabilityCheckersSecConstAnim(unittest.TestCase):
 
 	# p2l:sem:2const_anim/pers-s
 	#
-    # Compounds with second constituents 'Mann', 'Frau', 'Leute',
-    # 'Tochter', 'Gattin', 'Witwe' tend to insert -s-
-    # if the compound designates a person
-    # (even if the first constituent would otherwise attach a zero linker).
+    # Compounds whose first constituent designates a person 
+    # and whose second constituent is one of 
+    # 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', or 'Witwe' 
+    # tend to insert -s-.
 
     # def test_sec_const_anim_is_applicable_0(self):
-    #     compound = Compound("reiter_+s_mann")
+    #     compound = Compound("reiter_+s_mann") # not in GN
     #     self.assertTrue(
     #         sec_const_anim_is_applicable(compound)
     #     )
@@ -4576,45 +4576,43 @@ class TestApplicabilityCheckersSecConstAnim:
     #     )
 
         
-    # def test_sec_const_anim_is_applicable_1(self):
-    #     compound = Compound("lehrer_+s_tochter")
-    #     self.assertTrue(
-    #         sec_const_anim_is_applicable(compound)
-    #     )
+    def test_sec_const_anim_is_applicable_1(self):
+        compound = Compound("könig_+s_tochter")  # not in GN
+        self.assertTrue(
+            sec_const_anim_is_applicable(compound)
+        )
 
-    # def test_sec_const_anim_applies_1(self):
-    #     compound = Compound("lehrer_+s_tochter")
-    #     self.assertTrue(
-    #         sec_const_anim_applies(compound)
-    #     )
-
-        
-    # def test_sec_const_anim_is_applicable_2(self):
-    #     compound = Compound("bäcker_+s_leute")
-    #     self.assertTrue(
-    #         sec_const_anim_is_applicable(compound)
-    #     )
-
-    # def test_sec_const_anim_applies_2(self):
-    #     compound = Compound("bäcker_+s_leute")
-    #     self.assertTrue(
-    #         sec_const_anim_applies(compound)
-    #     )
+    def test_sec_const_anim_applies_1(self):
+        compound = Compound("könig_+s_tochter")
+        self.assertTrue(
+            sec_const_anim_applies(compound)
+        )
 
         
-    # def test_sec_const_anim_is_applicable_3(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         sec_const_anim_is_applicable(compound)
-    #     )
+    def test_sec_const_anim_is_applicable_2(self):
+        compound = Compound("bäcker_+s_frau")
+        self.assertTrue(
+            sec_const_anim_is_applicable(compound)
+        )
 
-    # def test_sec_const_anim_is_applicable_4(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         sec_const_anim_is_applicable(compound)
-    #     )
+    def test_sec_const_anim_applies_2(self):
+        compound = Compound("bäcker_+s_frau")
+        self.assertTrue(
+            sec_const_anim_applies(compound)
+        )
 
-	pass
+        
+    def test_sec_const_anim_is_applicable_3(self):
+        compound = Compound("land_+s_mann")
+        self.assertFalse(
+            sec_const_anim_is_applicable(compound)
+        )
+
+    def test_sec_const_anim_is_applicable_4(self):
+        compound = Compound("lehrer_mangel")
+        self.assertFalse(
+            sec_const_anim_is_applicable(compound)
+        )
 
 
 
@@ -5470,7 +5468,7 @@ class TestApplicabilityCheckersEnPar(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersEnNonParM:
+class TestApplicabilityCheckersEnNonParM(unittest.TestCase):
 
 	# l2p:en|non_par_m
 	#
@@ -5479,21 +5477,21 @@ class TestApplicabilityCheckersEnNonParM:
     # are monosyllabic designations of male persons, animals,
     # astronomic objects, months.
 
-    # def test_en_non_par_m_is_applicable_0(self):
-    #     compound = Compound("hahn_+en_kamm")
-    #     self.assertTrue(
-    #         en_non_par_m_is_applicable(compound)
-    #     )
+    def test_en_non_par_m_is_applicable_0(self):
+        compound = Compound("hahn_+en_kamm")
+        self.assertTrue(
+            en_non_par_m_is_applicable(compound)
+        )
 
-    # def test_en_non_par_m_applies_0(self):
-    #     compound = Compound("hahn_+en_kamm")
-    #     self.assertTrue(
-    #         en_non_par_m_applies(compound)
-    #     )
+    def test_en_non_par_m_applies_0(self):
+        compound = Compound("hahn_+en_kamm")
+        self.assertTrue(
+            en_non_par_m_applies(compound)
+        )
 
         
     # def test_en_non_par_m_is_applicable_1(self):
-    #     compound = Compound("mond_+en_schein")
+    #     compound = Compound("mond_+en_schein")    # not in GN
     #     self.assertTrue(
     #         en_non_par_m_is_applicable(compound)
     #     )
@@ -5505,17 +5503,17 @@ class TestApplicabilityCheckersEnNonParM:
     #     )
 
         
-    # def test_en_non_par_m_is_applicable_2(self):
-    #     compound = Compound("stern_+en_himmel")
-    #     self.assertTrue(
-    #         en_non_par_m_is_applicable(compound)
-    #     )
+    def test_en_non_par_m_is_applicable_2(self):
+        compound = Compound("stern_+en_himmel")
+        self.assertTrue(
+            en_non_par_m_is_applicable(compound)
+        )
 
-    # def test_en_non_par_m_applies_2(self):
-    #     compound = Compound("stern_+en_himmel")
-    #     self.assertTrue(
-    #         en_non_par_m_applies(compound)
-    #     )
+    def test_en_non_par_m_applies_2(self):
+        compound = Compound("stern_+en_himmel")
+        self.assertTrue(
+            en_non_par_m_applies(compound)
+        )
 
         
     # def test_en_non_par_m_is_applicable_3(self):
@@ -5525,64 +5523,29 @@ class TestApplicabilityCheckersEnNonParM:
     #     )
 
     # def test_en_non_par_m_applies_3(self):
-    #     compound = Compound("mai_+en_nacht")
+    #     compound = Compound("mai_+en_nacht")  # not in GN
     #     self.assertTrue(
     #         en_non_par_m_applies(compound)
     #     )
 
         
-    # def test_en_non_par_m_is_applicable_4(self):
-    #     compound = Compound("mond_aufgang")
-    #     self.assertTrue(
-    #         en_non_par_m_is_applicable(compound)
-    #     )
+    def test_en_non_par_m_is_applicable_4(self):
+        compound = Compound("mond_aufgang")
+        self.assertFalse(
+            en_non_par_m_is_applicable(compound)
+        )
 
-    # def test_en_non_par_m_applies_4(self):
-    #     compound = Compound("mond_aufgang")
-    #     self.assertFalse(
-    #         en_non_par_m_applies(compound)
-    #     )
+    def test_en_non_par_m_is_applicable_5(self):
+        compound = Compound("mai_baum")
+        self.assertFalse(
+            en_non_par_m_is_applicable(compound)
+        )
 
-        
-    # def test_en_non_par_m_is_applicable_5(self):
-    #     compound = Compound("stern_bild")
-    #     self.assertTrue(
-    #         en_non_par_m_is_applicable(compound)
-    #     )
-
-    # def test_en_non_par_m_applies_5(self):
-    #     compound = Compound("stern_bild")
-    #     self.assertFalse(
-    #         en_non_par_m_applies(compound)
-    #     )
-
-        
-    # def test_en_non_par_m_is_applicable_6(self):
-    #     compound = Compound("mai_baum")
-    #     self.assertTrue(
-    #         en_non_par_m_is_applicable(compound)
-    #     )
-
-    # def test_en_non_par_m_applies_6(self):
-    #     compound = Compound("mai_baum")
-    #     self.assertFalse(
-    #         en_non_par_m_applies(compound)
-    #     )
-
-        
-    # def test_en_non_par_m_is_applicable_7(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         en_non_par_m_is_applicable(compound)
-    #     )
-
-    # def test_en_non_par_m_is_applicable_8(self):
-    #     compound = Compound("TODO")
-    #     self.assertFalse(
-    #         en_non_par_m_is_applicable(compound)
-    #     )
-
-	pass
+    def test_en_non_par_m_is_applicable_6(self):
+        compound = Compound("instrument_+en_bau")
+        self.assertFalse(
+            en_non_par_m_is_applicable(compound)
+        )
 
 
 class TestApplicabilityCheckersEnNonParNPl:
@@ -5974,7 +5937,7 @@ class TestApplicabilityCheckersErPar(unittest.TestCase):
 
         
     def test_er_par_is_applicable_2(self):
-        compound = Compound("kind_+=er_jacke")
+        compound = Compound("kind_+er_jacke")
         self.assertTrue(
             er_par_is_applicable(compound)
         )
@@ -6033,26 +5996,26 @@ class TestApplicabilityCheckersErLastSyl(unittest.TestCase):
 
         
     def test_er_last_syl_is_applicable_2(self):
-        compound = Compound("kind_+=er_jacke")
+        compound = Compound("kind_+er_jacke")
         self.assertTrue(
             er_last_syl_is_applicable(compound)
         )
 
     def test_er_last_syl_applies_2(self):
-        compound = Compound("kind_+=er_jacke")
+        compound = Compound("kind_+er_jacke")
         self.assertTrue(
             er_last_syl_applies(compound)
         )
 
 
     def test_er_last_syl_is_applicable_3(self):
-        compound = Compound("mitglied_+=er_liste")
+        compound = Compound("mitglied_+er_liste")
         self.assertTrue(
             er_last_syl_is_applicable(compound)
         )
 
     def test_er_last_syl_applies_3(self):
-        compound = Compound("mitglied_+=er_liste")
+        compound = Compound("mitglied_+er_liste")
         self.assertTrue(
             er_last_syl_applies(compound)
         )
@@ -6105,13 +6068,13 @@ class TestApplicabilityCheckersErSmpx(unittest.TestCase):
 
         
     def test_er_smpx_is_applicable_2(self):
-        compound = Compound("kind_+=er_jacke")
+        compound = Compound("kind_+er_jacke")
         self.assertTrue(
             er_smpx_is_applicable(compound)
         )
 
     def test_er_smpx_applies_2(self):
-        compound = Compound("kind_+=er_jacke")
+        compound = Compound("kind_+er_jacke")
         self.assertTrue(
             er_smpx_applies(compound)
         )
@@ -6164,13 +6127,13 @@ class TestApplicabilityCheckersErNonLoan(unittest.TestCase):
 
         
     # def test_er_non_loan_is_applicable_2(self):
-    #     compound = Compound("kind_+=er_jacke")
+    #     compound = Compound("kind_+er_jacke")
     #     self.assertTrue(
     #         er_non_loan_is_applicable(compound)
     #     )
 
     # def test_er_non_loan_applies_2(self):
-    #     compound = Compound("kind_+=er_jacke")
+    #     compound = Compound("kind_+er_jacke")
     #     self.assertTrue(
     #         er_non_loan_applies(compound)
     #     )
