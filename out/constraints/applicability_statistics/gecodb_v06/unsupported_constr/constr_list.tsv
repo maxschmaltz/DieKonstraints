@@ -1,3 +1,0 @@
-constr_id	appl_item	n_appl_items	quantifier	cvg_item_abs	cvg_item	cvg_type	reg_item	reg_type	n_violations	is_productive	is_regular	expected_reg_level	actual_reg_level	support_level
-p2l:drv:sfx:sfx-s|def-s	n1	3614.0	regularly	777.0	0.215	0.158	0.98	0.985	15.267	True	False	regular	high regularity	partially supported
-l2p:n	n1+linker	4870.0	all	564.0	0.116	0.109	0.988	1.0	7.0	True	False	regular	high regularity	partially supported

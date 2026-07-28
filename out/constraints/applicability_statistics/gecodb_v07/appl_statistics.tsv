@@ -1,5 +1,5 @@
 constr_id	appl_item	n_appl_items	quantifier	cvg_item_abs	cvg_item	cvg_type	reg_item	reg_type	n_violations	is_productive	is_regular	expected_reg_level	actual_reg_level	support_level
-def-0	compound	275409	majority	275409	1.0	1.0	0.577	0.577	116594.0	False	False	low regularity	low regularity	supported
+def-0	compound	275411	majority	275411	1.0	1.0	0.577	0.577	116594.0	False	False	low regularity	low regularity	supported
 p2l:decl_cl:pl:#0-0|def-0	n1	3594	almost regularly	240	0.067	0.065	0.958	0.939	10.051	True	False	high regularity	high regularity	supported
 p2l:decl_cl:pl:#s-0	n1	3594	almost all	126	0.035	0.034	0.968	0.957	3.977	True	True	high regularity	regular	supported+
 p2l:decl_cl:pl:#e-0|def-0	n1	3594	mostly	570	0.159	0.184	0.761	0.687	136.14	False	False	low regularity	moderate regularity	supported+
@@ -53,9 +53,9 @@ l2p:e|par	n1+linker	4743	all	107	0.023	0.008	0.981	0.994	2.0	True	True	regular	r
 l2p:e|#stressed_syl	n1+linker	4743	all	107	0.023	0.008	1.0	1.0	0.0	True	True	regular	regular	supported
 l2p:e|smpx	n1+linker	4743	most	107	0.023	0.008	0.729	0.781	29.0	False	False	low regularity	moderate regularity	supported+
 l2p:e|!loan														
-l2p:er|par	n1+linker	4743	all	29	0.006	0.007	0.966	0.998	1.0	True	True	regular	regular	supported
-l2p:er|#stressed_syl	n1+linker	4743	all	29	0.006	0.007	0.966	0.998	1.0	True	True	regular	regular	supported
-l2p:er|smpx	n1+linker	4743	most	29	0.006	0.007	0.862	0.945	4.0	True	False	low regularity	moderate regularity	supported+
+l2p:er|par	n1+linker	4743	all	48	0.01	0.015	0.979	0.999	1.0	True	True	regular	regular	supported
+l2p:er|#stressed_syl	n1+linker	4743	all	48	0.01	0.015	0.979	0.999	1.0	True	True	regular	regular	supported
+l2p:er|smpx	n1+linker	4743	most	48	0.01	0.015	0.875	0.934	6.0	True	False	low regularity	moderate regularity	supported+
 l2p:er|!loan														
 l2p:e_uml	n1+linker	4743	all	51	0.011	0.003	1.0	1.0	0.0	True	True	regular	regular	supported
 l2p:es|isol														

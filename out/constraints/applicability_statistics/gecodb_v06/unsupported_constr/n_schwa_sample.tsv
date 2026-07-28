@@ -1,9 +1,0 @@
-comp_gecodb	comp_lemma	comp_freq	n1_lemma	n1_freq	n1_prod	n1_mass_freq	n2_lemma	n2_freq
-nachbar_+n_land	Nachbarnland	29	nachbar	749629	242	454415	land	8929250
-mittel_+n_dorf	Mittelndorf	2569	mittel	1037124	191	1056630	dorf	1146675
-mittel_+n_kirche	Mittelnkirche	591	mittel	1037124	191	1056630	kirche	2553981
-zwiebel_+n_schneide	Zwiebelnschneide	21	zwiebel	92339	89	32684	schneide	12747
-windel_+n_wechsel	Windelnwechsel	419	windel	33836	31	4160	wechsel	721192
-vokabel_+n_pauke	Vokabelnpauke	34	vokabel	30470	15	1780	pauke	11600
-waffel_+n_backe	Waffelnbacke	73	waffel	47707	29	9087	backe	10343
-semmel_+n_knödel	Semmelnknödel	82	semmel	18026	15	7811	knödel	13322
