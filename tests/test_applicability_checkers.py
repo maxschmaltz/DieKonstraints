@@ -1,6 +1,8 @@
 import unittest
 
 from data_utils.gecodb_compound_parser import Compound
+from data_utils.germanet_search import germanet
+from check_applicability import applicability_checkers
 from check_applicability.applicability_checkers import *
 from check_applicability.applicability_checkers import (
     _has_linker,
@@ -28,8 +30,11 @@ from check_applicability.applicability_checkers import (
     _is_monosyllabic,
     _is_syl_stressed,
     _is_trochaic,
-    _is_last_syl_stressed
+    _is_last_syl_stressed,
+    _is_of_catergory
 )
+
+applicability_checkers.__init__(celexn_version=0)
 
 
 # Tests for helper functions
@@ -1143,6 +1148,122 @@ class TestIsSylStressed(unittest.TestCase):
             _is_last_syl_stressed("karte")
         )
 
+
+class TestIsOfCategory(unittest.TestCase):
+
+    _lexunits = {
+        "hund": "l71772",
+        "insekt": "l70037",
+        "bakterie": "l72079",
+        "person": "l140806",
+        "könig": "l48811",
+        "stern": "l62501",
+        "mond": "l62503",
+        "wind": "l60380",
+        "mai": "l72659",
+        "montag": "l72745",
+        "glas_m": "l68144",
+        "glas_a": "l9711"
+    }
+
+    def _get_lu(self, lemma: str) -> Lexunit:
+        return germanet.get_lexunit_by_id(
+            self._lexunits[lemma]
+        )
+
+
+    def test_animal_0(self):
+        lemma = self._get_lu("hund")
+        cats = ["animal"]
+        self.assertTrue(_is_of_catergory(lemma, cats))
+
+    def test_animal_1(self):
+        lemma = self._get_lu("insekt")
+        cats = ["animal"]
+        self.assertTrue(_is_of_catergory(lemma, cats))
+
+    def test_animal_2(self):
+        lemma = self._get_lu("bakterie")
+        cats = ["animal"]
+        self.assertFalse(_is_of_catergory(lemma, cats))
+
+
+    def test_person_0(self):
+        lemma = self._get_lu("person")
+        cats = ["person"]
+        self.assertTrue(_is_of_catergory(lemma, cats))
+
+    def test_person_1(self):
+        lemma = self._get_lu("könig")
+        cats = ["person"]
+        self.assertTrue(_is_of_catergory(lemma, cats))
+
+    def test_person_2(self):
+        lemma = self._get_lu("hund")
+        cats = ["person"]
+        self.assertFalse(_is_of_catergory(lemma, cats))
+
+
+    def test_astronomic_obj_0(self):
+        lemma = self._get_lu("stern")
+        cats = ["astronomic_obj"]
+        self.assertTrue(_is_of_catergory(lemma, cats))
+
+    def test_astronomic_obj_1(self):
+        lemma = self._get_lu("mond")
+        cats = ["astronomic_obj"]
+        self.assertTrue(_is_of_catergory(lemma, cats))
+
+    def test_astronomic_obj_2(self):
+        lemma = self._get_lu("wind")
+        cats = ["astronomic_obj"]
+        self.assertFalse(_is_of_catergory(lemma, cats))
+
+
+    def test_month_0(self):
+        lemma = self._get_lu("mai")
+        cats = ["month"]
+        self.assertTrue(_is_of_catergory(lemma, cats))
+
+    def test_month_2(self):
+        lemma = self._get_lu("montag")
+        cats = ["month"]
+        self.assertFalse(_is_of_catergory(lemma, cats))
+
+
+    def test_mass_0(self):
+        lemma = self._get_lu("glas_m")
+        cats = ["mass"]
+        self.assertTrue(_is_of_catergory(lemma, cats))
+
+    def test_mass_1(self):
+        lemma = self._get_lu("glas_a")
+        cats = ["mass"]
+        self.assertFalse(_is_of_catergory(lemma, cats))
+
+
+    def test_mixed_0(self):
+        lemma = self._get_lu("könig")
+        cats = ["animal", "person"]
+        self.assertTrue(_is_of_catergory(lemma, cats))
+
+    def test_mixed_1(self):
+        lemma = self._get_lu("mai")
+        cats = ["person", "astronomic_obj", "month"]
+        self.assertTrue(_is_of_catergory(lemma, cats))
+
+    def test_mixed_2(self):
+        lemma = self._get_lu("mai")
+        cats = ["person", "astronomic_obj"]
+        self.assertFalse(_is_of_catergory(lemma, cats))
+
+
+    def test_key_error_0(self):
+        lemma = self._get_lu("hund")
+        cats = ["animal", "mammal"]
+        with self.assertRaises(KeyError):
+            _ = _is_of_catergory(lemma, cats)
+    
 
 
 # Tests for applicability checkers
