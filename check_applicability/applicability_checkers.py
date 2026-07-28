@@ -3,7 +3,8 @@ import pandas as pd
 from ipapy import UNICODE_TO_IPA
 from ipapy.ipachar import IPAChar
 from itertools import product
-from typing import Optional, Literal
+from typing import Optional, Literal, List
+from germanetpy.lexunit import Lexunit
 
 from data_utils.gecodb_compound_parser import (
     Compound,
@@ -11,7 +12,7 @@ from data_utils.gecodb_compound_parser import (
     perform_umlaut
 )
 from data_utils.load_datasets import load_celex
-from data_utils.germanet_search import germanet
+from data_utils.germanet_search import germanet, get_n1_lexunit
 
 
 # to be initialized for each CELEX-nouns version!!!
@@ -299,15 +300,36 @@ def _get_frequency(lemma: str) -> int:
 	return int(lemma_info["freq"])
 
 
-# Helper functions for lexical checks
+# Helper functions for semantic and lexical checks
 
-def is_synset_mass(synset: Synset) -> bool:
-    # all mass nouns are children of the
-    # 'Materie/Stoff/Substanz' node
-    return (
-        germanet.get_synset_by_id("s47684")
-        in synset.all_hypernyms()
-    )
+def _has_hypernym(lemma: Lexunit, ids: List[str]) -> bool:
+	return any(
+		germanet.get_synset_by_id(id) in lemma.synset.all_hypernyms()
+		for id in ids
+	)
+
+def _is_of_catergory(lemma: Lexunit, cats: List[str]) -> bool:
+	# all categories present in implemented constraints
+	cats2ids = {
+		# we have different synsets that can identify
+		# animate objects:
+		# "s50990": Lebewesen, Organismus: persons, animals, insects etc.
+		# "s50996": übernatürliches Lebewesen: dragons, dwarves etc.
+		# "s50997": höheres Lebewesen: mammals, birds etc.
+		# but since the constraint definition specifically says
+		# 'animal designations', we use "s48805": Tier
+		"animal": "s48805",
+		# Mensch, Person, Persönlichkeit, Individuum, Menschenwesen
+		"person": "s34063",
+		# Stoff, Substanz, Materie
+		"mass": "s47684",
+		# Himmelskörper, Gestirn, Himmelsobjekt
+		"astronomic_obj": "s42867",
+		# Monat
+		"month": "s51370"
+	}
+	ids = [cats2ids[cat] for cat in cats]
+	return _has_hypernym(lemma, ids)
 
 
 

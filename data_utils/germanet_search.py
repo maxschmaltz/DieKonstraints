@@ -56,33 +56,3 @@ def get_n1_lexunit(lemma: str) -> Synset:
         # e.g. 'Landesgrenze': 'Land (Bundesland)' vs 'Land (Staat)'
         return
     return germanet.get_lexunit_by_id(n1_lu_ids[0])
-
-
-
-
-
-
-
-def is_synset_mass(synset: Synset) -> bool:
-    # all mass nouns are children of the
-    # 'Materie/Stoff/Substanz' node
-    return (
-        germanet.get_synset_by_id("s47684")
-        in synset.all_hypernyms()
-    )
-
-def get_germanet_mass_senses(lemma: str) -> Tuple[bool, bool]:
-    # some N1s may be mass/non-mass in their different senses:
-    # 'Glas', 'Stein' etc. so we are returning a tuple of form
-    # bool: a mass sense exists
-    # bool: a non-mass sense exists
-    lemma = lemma.capitalize()
-    synsets = germanet.get_synsets_by_orthform(lemma)
-    mass_senses = [
-        is_synset_mass(synset)
-        for synset in synsets
-    ]
-    return (
-        True in mass_senses,   # at least one synset is mass
-        False in mass_senses,   # at least one synset is non-mass
-    )
