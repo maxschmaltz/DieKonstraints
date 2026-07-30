@@ -2225,7 +2225,7 @@ constraints:
 
         func_alias: stressed_phon_fin
 
-        quantifier: usually
+        quantifier: mostly
         measures:
             gecodb_v06:
                 coverage:
@@ -2252,7 +2252,7 @@ constraints:
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [107]
-              summary: F endings with stressed -ei, -ie, -ur, also those with -ik usually attach a zero linker.
+              summary: F endings with stressed -ei, -ie, -ur, also those with -ik mostly attach a zero linker.
 
         footnotes: {
             "1": "Not derivational since these ending may also be part of the stem, e.g. in akustik_paneele."
