@@ -50,6 +50,10 @@ Gehört einBestimmungswort der Flexionsklasse mit -er-Plural an, so wird der **�
 
 Nach dieser Übersicht hängt die Setzung der -e-Fuge weder von der Lautform und speziell der Auslautkonsonanz des Bestimmungssubstantivs noch von seiner Zugehörigkeit zu einer bestimmten Bezeichnungsklasse ab, sondern **meistens von der Funktion des Bestimmungswortes, auf eine Vielheit zu referieren**. Z.B. wird die Wahl der Fuge in manchen Fällen dadurch bestimmt, daß das Grundwort eine **Sammelbezeichnung** wie -gruppe, -paar, -bund, -sammlung ist oder doch den Begriff des **Mehrfachen** in dem betreffenden Kompositum impliziert (Gäste-buch, Läuse-pulver, Mäuse-nest). Bemerkenswerte Einzelfälle finden sich darüberhinaus bei „abstrakten" Nominalisierungen wie Projektemacherei, Wortemacherei.
 
+[107]
+
+Fem. mit den Endsilben -ur, -ei, -ie (alle endbetont) und -ik fügen selten die Nullfuge ein, und nur bei Hervorhebung des **Pluralbezugs**: Kurlur-en-folge, Zwei-partei-en-staat, Melodie-n-reigen.
+
 [108]
 
 Wenn sich das Erstglied auf etwas **Einzelnes** bezieht, steht in 80% -0-Fuge. Das gilt vor allen für Neutra.

@@ -3221,63 +3221,82 @@ class TestApplicabilityCheckersSfxS(unittest.TestCase):
         )
 
 
-class TestApplicabilityCheckersSfxItaetPl(unittest.TestCase):
+class TestApplicabilityCheckersSfxSPl(unittest.TestCase):
 
-	# p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en
+	# p2l:drv:sfx:sfx-s|pl_interpr-en
 	#
-    # First constituents that are constituted by derived nouns with suffix
-    # -ität and its allomorphs may attach -(e)n-
+    # First constituents that are constituted by derived nouns with suffixes
+    # -(ig)keig, -heit, or -ität and its allomorphs may attach -(e)n-
     # when they have a plural meaning.
 
-    def test_sfx_itaet_pl_is_applicable_0(self):
+    def test_sfx_s_pl_is_applicable_0(self):
         compound = Compound("rarität_+en_sammlung")
         self.assertTrue(
-            sfx_itaet_pl_is_applicable(compound, is_n1_plsem=True)
+            sfx_s_pl_is_applicable(compound, is_n1_plsem=True)
         )
 
-    def test_sfx_itaet_pl_applies_0(self):
+    def test_sfx_s_pl_applies_0(self):
         compound = Compound("rarität_+en_sammlung")
         self.assertTrue(
-            sfx_itaet_pl_applies(compound, is_linker_pl=True)
+            sfx_s_pl_applies(compound, is_linker_pl=True)
         )
 
         
-    def test_sfx_itaet_pl_is_applicable_1(self):
-        compound = Compound("kuriosität_+en_händler")
+    def test_sfx_s_pl_is_applicable_1(self):
+        compound = Compound("minderheit_+en_regelung")
         self.assertTrue(
-            sfx_itaet_pl_is_applicable(compound, is_n1_plsem=True)
+            sfx_s_pl_is_applicable(compound, is_n1_plsem=True)
         )
 
-    def test_sfx_itaet_pl_applies_1(self):
-        compound = Compound("kuriosität_+en_händler")
+    def test_sfx_s_pl_applies_1(self):
+        compound = Compound("minderheit_+en_regelung")
         self.assertTrue(
-            sfx_itaet_pl_applies(compound, is_linker_pl=True)
+            sfx_s_pl_applies(compound, is_linker_pl=True)
         )
 
+
+    def test_sfx_s_pl_is_applicable_2(self):
+            compound = Compound("generation_+en_konflikt")
+            self.assertTrue(
+                sfx_s_pl_is_applicable(compound, is_n1_plsem=True)
+            )
+    
+    def test_sfx_s_pl_applies_2(self):
+        compound = Compound("generation_+en_konflikt")
+        self.assertTrue(
+            sfx_s_pl_applies(compound, is_linker_pl=True)
+        )
+
+
+    def test_sfx_s_pl_is_applicable_3(self):
+        compound = Compound("generation_+s_unterschied")
+        self.assertTrue(
+            sfx_s_pl_is_applicable(compound, is_n1_plsem=True)
+        )
         
-    def test_sfx_itaet_pl_is_applicable_2(self):
-        compound = Compound("aktualität_+en_kino")
-        self.assertTrue(
-            sfx_itaet_pl_is_applicable(compound, is_n1_plsem=True)
-        )
-
-    def test_sfx_itaet_pl_applies_2(self):
-        compound = Compound("aktualität_+en_kino")
-        self.assertTrue(
-            sfx_itaet_pl_applies(compound, is_linker_pl=True)
-        )
-
-        
-    def test_sfx_itaet_pl_is_applicable_3(self):
-        compound = Compound("minderheit_+en_recht")
+    def test_sfx_s_pl_applies_3(self):
+        compound = Compound("generation_+s_unterschied")
         self.assertFalse(
-            sfx_itaet_pl_is_applicable(compound, is_n1_plsem=True)
+            sfx_s_pl_applies(compound, is_linker_pl=False)
         )
 
-    # def test_sfx_itaet_pl_is_applicable_4(self):
+        
+    def test_sfx_s_pl_is_applicable_4(self):
+        compound = Compound("generation_+s_problem")
+        self.assertFalse(
+            sfx_s_pl_is_applicable(compound, is_n1_plsem=False)
+        )
+
+    def test_sfx_s_pl_is_applicable_5(self):
+        compound = Compound("melodie_+n_folge")
+        self.assertFalse(
+            sfx_s_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    # def test_sfx_s_pl_is_applicable_4(self):
     #     compound = Compound("identität_+s_feststellung")      # not in CELEX-nouns
     #     self.assertFalse(
-    #         sfx_itaet_pl_is_applicable(compound, is_n1_plsem=False)
+    #         sfx_s_pl_is_applicable(compound, is_n1_plsem=False)
     #     )
 
 
@@ -3728,7 +3747,7 @@ class TestApplicabilityCheckersVowFin(unittest.TestCase):
 
 class TestApplicabilityCheckersStressedPhonFin(unittest.TestCase):
 
-	# p2l:phon_fin:F_#stressed_phon$-0
+	# p2l:phon_fin:F_#stressed_phon$|def-0
 	#
     # First constituents that are constituted by feminine nouns that end 
     # with stressed -ei, -ie, -ur, also stressed or unstressed -ik
@@ -3821,6 +3840,65 @@ class TestApplicabilityCheckersStressedPhonFin(unittest.TestCase):
         compound = Compound("abstieg_+s_angst")
         self.assertFalse(
             stressed_phon_fin_is_applicable(compound)
+        )
+
+
+class TestApplicabilityCheckersStressedPhonFinPl(unittest.TestCase):
+
+	# p2l:phon_fin:F_#stressed_phon$|pl_interpr-en
+    #
+    # First constituents that are constituted by feminine nouns that end 
+    # with stressed -ei, -ie, -ur, also stressed or unstressed -ik
+    # attach -en- irregularly when they have a plural meaning.
+
+    def test_stressed_phon_fin_pl_is_applicable_0(self):
+        compound = Compound("kultur_+en_folge")
+        self.assertTrue(
+            stressed_phon_fin_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_stressed_phon_fin_pl_applies_0(self):
+        compound = Compound("kultur_+en_folge")
+        self.assertTrue(
+            stressed_phon_fin_pl_applies(compound, is_linker_pl=True)
+        )
+
+    def test_stressed_phon_fin_pl_is_applicable_1(self):
+        compound = Compound("melodie_+n_reigen")
+        self.assertTrue(
+            stressed_phon_fin_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_stressed_phon_fin_pl_applies_1(self):
+        compound = Compound("melodie_+n_reigen")
+        self.assertTrue(
+            stressed_phon_fin_pl_applies(compound, is_linker_pl=True)
+        )
+
+        
+    def test_stressed_phon_fin_pl_is_applicable_2(self):
+        compound = Compound("partei_+en_staat")
+        self.assertTrue(
+            stressed_phon_fin_pl_is_applicable(compound, is_n1_plsem=True)
+        )
+
+    def test_stressed_phon_fin_pl_applies_2(self):
+        compound = Compound("partei_+en_staat")
+        self.assertTrue(
+            stressed_phon_fin_pl_applies(compound, is_linker_pl=True)
+        )
+
+        
+    def test_stressed_phon_fin_pl_is_applicable_3(self):
+        compound = Compound("bedarf_+s_lage")
+        self.assertFalse(
+            stressed_phon_fin_pl_is_applicable(compound, is_n1_plsem=False)
+        )
+
+    def test_stressed_phon_fin_pl_is_applicable_4(self):
+        compound = Compound("minderheit_+en_regelung")
+        self.assertFalse(
+            stressed_phon_fin_pl_is_applicable(compound, is_n1_plsem=True)
         )
 
 

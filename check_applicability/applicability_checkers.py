@@ -897,13 +897,14 @@ def sfx_s_applies(compound: Compound):
 	return _has_linker(compound, linker_morph="s")
 
 
-# p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en
+# p2l:drv:sfx:sfx-s|pl_interpr-en
 #
-# First constituents that are constituted by derived nouns with suffix
-# -ität and its allomorphs may attach -(e)n-
+# First constituents that are constituted by derived nouns with suffixes
+# -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -tum, -um, -ion,
+# also -ität and its allomorphs attach -en- irregularly
 # when they have a plural meaning.
 
-def sfx_itaet_pl_is_applicable(
+def sfx_s_pl_is_applicable(
 	compound: Compound,
 	is_n1_plsem: Optional[bool]
 ) -> bool:
@@ -911,20 +912,12 @@ def sfx_itaet_pl_is_applicable(
 		# for future
 		pass
 	return (
-		# morph cond
-		_ends_with_sfx(
-			compound.constituents[0].morph,
-			[
-				# in CELEX: qualit-ät, ?, aktiv-ität,
-				# spontan-eität, plast-izität
-				"ät", "tät", "ität", "eität", "izität"
-			]
-		) and
+		sfx_s_is_applicable(compound)
         # sem cond
-        is_n1_plsem
+        and is_n1_plsem
     )
 
-def sfx_itaet_pl_applies(
+def sfx_s_pl_applies(
 	compound: Compound,
 	is_linker_pl: Optional[bool]
 ) -> bool:
@@ -1073,7 +1066,7 @@ def vow_fin_applies(compound: Compound):
 
 
 
-# p2l:phon_fin:F_#stressed_phon$-0
+# p2l:phon_fin:F_#stressed_phon$|def-0
 #
 # First constituents that are constituted by feminine nouns that end 
 # with stressed -ei, -ie, -ur, also stressed or unstressed -ik
@@ -1105,6 +1098,38 @@ def stressed_phon_fin_is_applicable(compound: Compound):
 
 def stressed_phon_fin_applies(compound: Compound):
 	return _has_no_linker(compound)
+
+
+# p2l:phon_fin:F_#stressed_phon$|pl_interpr-en
+#
+# First constituents that are constituted by feminine nouns that end 
+# with stressed -ei, -ie, -ur, also stressed or unstressed -ik
+# attach -en- irregularly when they have a plural meaning.
+
+def stressed_phon_fin_pl_is_applicable(
+	compound: Compound,
+	is_n1_plsem: Optional[bool]
+) -> bool:
+	if is_n1_plsem is None:
+		# for future
+		pass
+	return (
+		stressed_phon_fin_is_applicable(compound)
+		# sem cond
+		and is_n1_plsem
+	)
+
+def stressed_phon_fin_pl_applies(
+	compound: Compound,
+	is_linker_pl: Optional[bool]
+) -> bool:
+	if is_linker_pl is None:
+		# for datasets where the PLLs are not
+		# indicated; otherwise, take an advantage
+		# of the annotation (e.g., in SP18) and
+		# cut the processing 
+		pass
+	return is_linker_pl
 
 
 

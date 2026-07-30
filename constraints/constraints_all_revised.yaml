@@ -90,6 +90,7 @@ readme: |
     * `p2l:drv:sfx:deverb_#en$-s` and `p2l:phon_fin:vow$-0` were simplified. Specifically, the special cases that described the deviant groups (zero-linker low-frequency variants, loanwords ending in -ie and -ee, respectively) were taken out of the constraint definition and were only kept as explanatory lines. The reason to do so is because the previous definitions contradicted our principle to target more general groups with more general constraints and formulate dedicated constraints for deviant groups. Such, instead of one constraint that target "vowel-final nouns except for ... on -ie and -ee", our principle favors two conflicting constraints targeting "vowel-final nouns" and "... on -ie and -ee". As of now, we only kept the more general constraint. The two more specific constraints are yet to be implemented.
     * Add dataset metadata.
     * Expand dataset and the number of application item properties (gecodb_v07, sp18_pl_constr).
+    * Generalize `p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en` to `p2l:drv:sfx:sfx-s|pl_interpr-en` and add `p2l:phon_fin:F_#stressed_phon$|pl_interpr-en`.
 
 
 
@@ -103,7 +104,7 @@ notes:
 
     - "Despite the findings from [krott_etal_2007] concerning analogical effects are promising, we disregard them as well from this iteration. These are: 1) there is a significant left bias for choosing a link (-en-, -s- and zero linker were investigated), that is, a noun tending to usually choose -x- will more probably also choose -x- in novel compounds [krott_etal_2007:7,9]; 2) apart from the left bias, gender was a significantly predictive feature for -en- and zero linker, and inflectional class -- on -s- and zero linker [krott_etal_2007:9]. The reason for excluding this findings is that we believe these analogical effects are an accumulative product of acquisition and (subconscious) application of all compounding constraints present in German. Such, it cannot be a constraint itself and is rather a combined account of the investigated constraints."
 
-    - In the constraints that draw on the singular/plural meaning of the first constituents (such as ``, `` etc.), the definitions are generally given as "First constituents that ... attach -x- in compounds in which the second constituent forces a singular/plural meaning of this first constituent". For such constraints, we may sometimes add counterexamples where -x- is attached when the opposite meaning of the first constituent is forced by the second constituent (e.g. -(")er- with a singular meaning). Strictly speaking, these are no real counterexamples to this constraints, since they do not say anything about this opposite meaning. Such counterexamples are added purely for a better illustrativity of the irregularity of singular/plural meaning effect and are separated by a tab from the real counterexamples.
+    - In the constraints that draw on the singular/plural meaning of the first constituents (such as ``, `` etc.), the definitions are generally given as "First constituents that ... attach -x- in compounds where they have a singular/plural meaning of this first constituent". For such constraints, we may sometimes add counterexamples where -x- is attached when the opposite meaning of the first constituent is forced by the second constituent (e.g. -(")er- with a singular meaning). Strictly speaking, these are no real counterexamples to this constraints, since they do not say anything about this opposite meaning. Such counterexamples are added purely for a better illustrativity of the irregularity of singular/plural meaning effect and are separated by a tab from the real counterexamples.
 
     - We adhere to the framework that assigns to affixes a scheme defining the morphological and semantic properties of the input for derivation and its result. Thus, even if the morphological class of an input of a derivational constraint is restricted, we do not claim this constraint to also have a morphological character since we assume this morphological information is embedded in the affix. For example, we categorize `p2l:drv:sfx:F_#in$-en` or `p2l:drv:sfx:0_pl_sfx-0` as purely derivational constraint as this exact suffix -in takes certain Xs as the input and always produces an F with certain semantic properties, or suffixes -er, -el etc. always produce zero-plural nouns.
 
@@ -254,7 +255,7 @@ topology:
 
                             # 4
                             - p2l:decl_cl:pl:#e-0:
-                                summary: First constituents that are constituted by nouns that build the plural form with -e mostly have a zero linker. In compounds in which the second constituent forces a plural meaning of the given first constituent, they also attach -e- irregularly. Those that are constituted by monosyllabic animal designations that build the plural form with -e also attach -e- irregularly. Nouns that have a stressed last syllable and build the plural form with -e is the only class of nouns that can constitute first constituent that attach this linker.
+                                summary: First constituents that are constituted by nouns that build the plural form with -e mostly have a zero linker. They they have a plural meaning, they also attach -e- irregularly. Those that are constituted by monosyllabic animal designations that build the plural form with -e also attach -e- irregularly. Nouns that have a stressed last syllable and build the plural form with -e is the only class of nouns that can constitute first constituent that attach this linker.
                                 children:
 
                                     - p2l:decl_cl:pl:#e-0|def-0
@@ -267,7 +268,7 @@ topology:
 
                             # 5
                             - p2l:decl_cl:pl:#er-0/er:
-                                summary: First constituents that are constituted by nouns that build the plural form with -(")er mostly attach a zero linker or -(")er-. A zero linker is attached after them in a majority of compounds in which the second constituent forces a singular or a mass meaning of the given first constituent, and -(")er- tends to be attached after them in compounds in which the second constituent forces a plural meaning of the given first constituent. However, those that are constituted by person and animal designations that build the plural form with -(")er may attach -(")er- regardless of the singular/plural interpretation of the given first constituent within the compound. Nouns that build the plural form with -(")er is the only class of nouns that can constitute first constituent that attach this linker.
+                                summary: First constituents that are constituted by nouns that build the plural form with -(")er mostly attach a zero linker or -(")er-. A zero linker is attached after them in a majority of compounds in which the they have a mass meaning of the given first constituent, and -(")er- tends to be attached after them They they have a plural meaning. However, those that are constituted by person and animal designations that build the plural form with -(")er may attach -(")er- regardless of the singular/plural interpretation of the given first constituent within the compound. Nouns that build the plural form with -(")er is the only class of nouns that can constitute first constituent that attach this linker.
                                 children:
 
                                     - p2l:decl_cl:pl:#er-0/er|def-0/er
@@ -284,7 +285,7 @@ topology:
 
                             # 6
                             - p2l:decl_cl:pl:#e_uml-0:
-                                  summary: First constituents that are constituted by nouns that build the plural form with -e and umlaut mostly have a zero linker. In compounds in which the second constituent forces a plural meaning of the given first constituent, they also attach -"e- irregularly. Nouns that build the plural form with -e and umlaut is the only class of nouns that can constitute first constituent that attach this linker.
+                                  summary: First constituents that are constituted by nouns that build the plural form with -e and umlaut mostly have a zero linker. They they have a plural meaning, they also attach -"e- irregularly. Nouns that build the plural form with -e and umlaut is the only class of nouns that can constitute first constituent that attach this linker.
                                   children:
 
                                       - p2l:decl_cl:pl:#e_uml-0|def-0
@@ -295,7 +296,7 @@ topology:
 
                             # 7
                             - p2l:decl_cl:pl:#0_uml-0:
-                                summary: First constituents that are constituted by nouns that build the plural form with a zero ending and umlaut mostly have a zero linker. In compounds in which the second constituent forces a plural meaning of the given first constituent, they also attach a zero linker with umlaut irregularly. Nouns that build the plural form with a zero ending and umlaut is the only class of nouns that can constitute first constituent that attach this linker.
+                                summary: First constituents that are constituted by nouns that build the plural form with a zero ending and umlaut mostly have a zero linker. They they have a plural meaning, they also attach a zero linker with umlaut irregularly. Nouns that build the plural form with a zero ending and umlaut is the only class of nouns that can constitute first constituent that attach this linker.
                                 children:
 
                                     - p2l:decl_cl:pl:#0_uml-0|def-0
@@ -307,7 +308,7 @@ topology:
                     # 8
                     - p2l:decl_cl:mixed-0/s/en:
 
-                          summary: First constituents that are constituted by mixed masculine and neuter nouns almost always attach -s-, a zero linker, or -(e)n-. In compounds in which the second constituent forces a plural meaning of the given first constituent, they are more likely to attach -(e)n-.
+                          summary: First constituents that are constituted by mixed masculine and neuter nouns almost always attach -s-, a zero linker, or -(e)n-. They they have a plural meaning, they are more likely to attach -(e)n-.
                           children:
 
                               - p2l:decl_cl:mixed-0/s/en|def-0/s/en
@@ -333,7 +334,7 @@ topology:
 
                             # 11
                             - p2l:drv:deverb_schwa$-0:
-                                  summary: First constituents that are constituted by deverbal feminine nouns with a schwa suffix mostly attach a zero linker. In compounds in which the second constituent forces a plural meaning of the given first constituent, they tend to attach -(e)n-.
+                                  summary: First constituents that are constituted by deverbal feminine nouns with a schwa suffix mostly attach a zero linker. They they have a plural meaning, they tend to attach -(e)n-.
                                   children:
 
                                     - p2l:drv:deverb_schwa$-0|def-0
@@ -345,12 +346,12 @@ topology:
 
                             # 13
                             - p2l:drv:sfx:sfx-s:
-                                summary: First constituents that are constituted by derived nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -tum, -um, -ion, also -ität and its allomorphs attach -s- regularly. For the latter, -en- is preferred in compounds in which the second constituent forces a plural meaning of the given first constituent.
+                                summary: First constituents that are constituted by derived nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -tum, -um, -ion, also -ität and its allomorphs attach -s- regularly. For the latter, -en- is preferred They they have a plural meaning.
                                 children:
 
                                     - p2l:drv:sfx:sfx-s|def-s
 
-                                    - p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en
+                                    - p2l:drv:sfx:sfx-s|pl_interpr-en
 
                             # 14
                             - p2l:drv:sfx:deverb_#en$-s
@@ -374,14 +375,20 @@ topology:
                     - p2l:phon_fin:vow$-0
 
                     # 19
-                    - p2l:phon_fin:F_#stressed_phon$-0
+                    - p2l:phon_fin:F_#stressed_phon$:
+                        summary: First constituents that are constituted by feminine nouns that end with stressed -ei, -ie, -ur, also stressed or unstressed -ik mostly attach a zero linker but attach -en- irregularly when they have a plural meaning.
+                        children:
+
+                            - p2l:phon_fin:F_#stressed_phon$|def-0
+
+                            - p2l:phon_fin:F_#stressed_phon$|pl_interpr-en
 
                     # 20
                     - p2l:phon_fin:F_stem_#t$-s
 
                     # 21
                     - p2l:phon_fin:schwa$-en:
-                        summary: First constituents that are constituted by nouns that end in schwa mostly adopt -(e)n-. Those constituted by feminine nouns that end in schwa do so regularly except for the following cases. If the schwa is a deverbal suffix of such a noun and this noun is feminine, a zero linker is mostly attached except in compounds in which the second constituent forces a plural reading of the given first constituent, in which case -(e)n- tends to be attached. If the schwa is a deadjectival suffix of such a noun and the noun is feminine, -(e)n- or a zero linker are preferred in about the same number of cases. Nouns that end in schwa is the only class of nouns that can constitute first constituent that attach this linker.
+                        summary: First constituents that are constituted by nouns that end in schwa mostly adopt -(e)n-. Those constituted by feminine nouns that end in schwa do so regularly except for the following cases. If the schwa is a deverbal suffix of such a noun and this noun is feminine, a zero linker is mostly attached except in compounds where they have a plural reading of the given first constituent, in which case -(e)n- tends to be attached. If the schwa is a deadjectival suffix of such a noun and the noun is feminine, -(e)n- or a zero linker are preferred in about the same number of cases. Nouns that end in schwa is the only class of nouns that can constitute first constituent that attach this linker.
                         children:
 
                             - p2l:phon_fin:schwa$-en|def-en
@@ -398,7 +405,7 @@ topology:
 
                     # 22
                     - p2l:phon_fin:weak_F_cons$-0/s/en:
-                        summary: First constituents that are constituted by consonant-final weak feminine nouns mostly adopt a zero linker or -s- in compounds in which the second constituent forces a singular meaning of the given first constituent. In compounds in which the second constituent forces a plural meaning of the given first constituent --- especially if the latter is final-stressed incl. monosyllabic ---, they attach -en- more likely.
+                        summary: First constituents that are constituted by consonant-final weak feminine nouns mostly adopt a zero linker or -s- in compounds where they have a singular meaning of the given first constituent. They they have a plural meaning --- especially if the latter is final-stressed incl. monosyllabic ---, they attach -en- more likely.
                         children:
 
                             - p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
@@ -563,7 +570,9 @@ topology:
                     
                     - p2l:drv:deverb_schwa$-0|pl_interpr-en    # EXTERNAL
                     
-                    - p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en    # EXTERNAL
+                    - p2l:drv:sfx:sfx-s|pl_interpr-en    # EXTERNAL
+
+                    - p2l:phon_fin:F_#stressed_phon$|pl_interpr-en  # EXTERNAL
                     
                     - p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s    # EXTERNAL
                     
@@ -1581,7 +1590,7 @@ constraints:
               summary: Nouns with suffixes -bold, -nis, -rich [1], -at, -al that build the plural form with -e regularly attach a zero linker.
 
         footnotes:
-            "1": The passage from [ortner_mueller-bollhagen_1991:83] also adds suffix -ei to this list but this case is eventually handled by `p2l:phon_fin:F_#stressed_phon$-0`.
+            "1": The passage from [ortner_mueller-bollhagen_1991:83] also adds suffix -ei to this list but this case is eventually handled by `p2l:phon_fin:F_#stressed_phon$|def-0`.
             "2": "There is a discrepancy about this constraint in [ortner_mueller-bollhagen_1991]: [ortner_mueller-bollhagen_1991:83] says that nouns with suffixes -bold, -nis, -rich [1] **usually** attach a zero linker, while in [ortner_mueller-bollhagen_1991:107] nouns with these three suffixes plus -at, -al are claimed to attach a zero linker **regularly**. We pick the strongest claim for the validation and find that it is not supported while the more moderate **usually** would have been."
 
 
@@ -1855,9 +1864,9 @@ constraints:
 
 
     # 24
-    p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en:
+    p2l:drv:sfx:sfx-s|pl_interpr-en:
     
-        summary: First constituents that are constituted by derived nouns with suffix -ität and its allomorphs may attach -(e)n- when they have a plural meaning.
+        summary: First constituents that are constituted by derived nouns with suffixes -(ig)keit, -heit, -schaft, -ung, -sal, -ing, -ling, -tum, -um, -ion, also -ität and its allomorphs attach -en- irregularly when they have a plural meaning.
         acceptable_linkers: [_+en_]
         ling_info_type: [derivational, semantic]
         is_pluralic: true
@@ -1866,9 +1875,9 @@ constraints:
         datasets_n_appl_items:
             sp18_pl_constr: 78
 
-        func_alias: sfx_itaet_pl
+        func_alias: sfx_s_pl
 
-        quantifier: may
+        quantifier: irregularly
         measures:
             sp18_pl_constr:
                 coverage:
@@ -1879,29 +1888,29 @@ constraints:
                     type: NA
                 support_level: NA
         
-        examples_pro: [rarität_+en_sammlung, kuriosität_+en_händler, aktualität_+en_kino]
-        examples_contra: []
+        examples_pro: [rarität_+en_sammlung, minderheit_+en_regelung, generation_+en_konflikt]
+        examples_contra: [generation_+s_unterschied]
 
         evidence:
 
             - ref: fuhrhop_1996
               pages: [532]
-              summary: After F-building suffixes (-ei, -erei, and -in excluded), the plural marker is possible when a plural meaning is present [1, 2].
+              summary: After F-building suffixes (-ei, -erei, and -in excluded) [1], the plural marker is possible when a plural meaning is present [2, 3].
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [94]
               summary: Nouns ending in -ität- can adopt -en- where the plural interpretation should be preserved.
 
         footnotes:
-            "1": The only examples are antiquität_+en_handel and minderheit_+en_regelung.
-            "2": Cited by [pankratz_2017:21].
+            "1": -ei will be handled in `p2l:phon_fin:F_#stressed_phon$|pl_interpr-en`.
+            "2": The only examples are antiquität_+en_handel and minderheit_+en_regelung.
+            "3": Cited by [pankratz_2017:21].
 
 
 
     # 25
     p2l:drv:sfx:deverb_#en$-s:
     
-        # TODO: make a constraint for the exception
         summary: First constituents that are constituted by deverbal nouns that end in suffix -en mostly attach -s-. (Zero linker variants with a significantly lower frequency may occur.)
         acceptable_linkers: [_+s_]
         ling_info_type: [derivational]
@@ -2210,9 +2219,9 @@ constraints:
 
 
     # 30
-    p2l:phon_fin:F_#stressed_phon$-0:
+    p2l:phon_fin:F_#stressed_phon$|def-0:
     
-        summary: First constituents that are constituted by feminine nouns that end with stressed -ei, -ie, -ur, also stressed or unstressed -ik usually attach a zero linker.
+        summary: First constituents that are constituted by feminine nouns that end with stressed -ei, -ie, -ur, also stressed or unstressed -ik mostly attach a zero linker.
         acceptable_linkers: [_]
         ling_info_type: [morphological, phonological]
         is_pluralic: false
@@ -2259,8 +2268,35 @@ constraints:
         }
 
 
-
     # 31
+    p2l:phon_fin:F_#stressed_phon$|pl_interpr-en:
+    
+        summary: First constituents that are constituted by feminine nouns that end with stressed -ei, -ie, -ur, also stressed or unstressed -ik attach -en- irregularly when they have a plural meaning.
+        acceptable_linkers: [_+n_, _+en_]
+        ling_info_type: [morphological, phonological, semantic]
+        is_pluralic: true
+        
+        appl_item: n1+sem
+        datasets_n_appl_items:
+            sp18_pl_constr: 78
+
+        func_alias: stressed_phon_fin_pl
+
+        quantifier: irregularly
+        measures: NA
+        
+        examples_pro: [kultur_+en_folge, melodie_+n_reigen, partei_+en_staat]
+        examples_contra: []
+
+        evidence:
+
+            - ref: ortner_mueller-bollhagen_1991
+              pages: [107]
+              summary: F endings with stressed -ei, -ie, -ur, also those with -ik rarely attach -en- and do so only to highlight a plural meaning.
+
+
+
+    # 32
     p2l:phon_fin:F_stem_#t$-s:
     
         summary: First constituents that are constituted by polysyllabic feminine nouns that end with [t] sometimes attach -s- if the [t] is not part of a suffix -(ig)keit, -heit, -schaft, or -ität or its allomorphs.
@@ -2319,7 +2355,7 @@ constraints:
 
 
     
-    # 32
+    # 33
     p2l:phon_fin:schwa$-en|def-en:
     
         summary: First constituents that are constituted by nouns that end in schwa mostly adopt -(e)n-.
@@ -2404,7 +2440,7 @@ constraints:
             "1": Merged evidence from the deprecated `p2l:phon_fin:schwa$-en|f-en`.
 
 
-    # 33: DEPRECATED.
+    # 34: DEPRECATED.
     # DISCARD AND MERGE WITH `p2l:phon_fin:schwa$-en|def-en`: even adding a simplex condition that eliminates deverbal and deadjectival nouns from consideration results in item regularity of 0.868; there is therefore no point in distinguishing between feminine and non-feminine nouns ending in schwa since both end up in the moderate regularity level.
     # p2l:phon_fin:schwa$-en|f-en:
 
@@ -2458,7 +2494,7 @@ constraints:
 
 
 
-    # 33
+    # 35
     p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en:
 
         summary: First constituents that are constituted by consonant-final weak feminine nouns regularly attach -s-, a zero linker, or -(e)n-.
@@ -2504,7 +2540,7 @@ constraints:
         footnotes: {}
 
 
-    # 34
+    # 36
     p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s:
 
         # TODO: compose with 35 into a new morphology-only constraint (as with "er-plurals)
@@ -2554,7 +2590,7 @@ constraints:
         footnotes: {}
 
 
-    # 35
+    # 37
     p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en:
     
         # TODO: compose with 34 into a new morphology-only constraint (as with "er-plurals)
@@ -2616,7 +2652,7 @@ constraints:
 
     #   1.4.1. Constraints that map compound types to most probable linkers.
 
-    # 36
+    # 38
     p2l:sem:comp_type:copula-0:
     
         summary: Copulative compounds insert a zero linker regularly. By copulative compounds are understood compounds in which the two constituents do not exhibit a clear modifier-head relation.
@@ -2660,7 +2696,7 @@ constraints:
 
 
 
-    # 37
+    # 39
     # https://uni-tuebingen.de/en/faculties/faculty-of-humanities/departments/modern-languages/department-of-linguistics/chairs/general-and-computational-linguistics/ressources/lexica/germanet/description/relations/#c1097739
     p2l:sem:comp_type:arg-s:
     
@@ -2693,7 +2729,7 @@ constraints:
 
     #  1.4.2. Other semantic constraints.
 
-    # 38
+    # 40
     p2l:sem:tech_term-0:
     
         summary: Compounds belonging to technical terminology (economics, law, medicine, etc.) are often missing an explicit linking element.
@@ -2736,7 +2772,7 @@ constraints:
 
 
 
-    # 39
+    # 41
     p2l:sem:2const_anim/pers-s:
     
         summary: Compounds whose first constituent designates a person and whose second constituent is one of 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', or 'Witwe' tend to insert -s-.
@@ -2774,7 +2810,7 @@ constraints:
 
     # 1.5. Constraints that describe general irregular tendencies.
 
-    # 40
+    # 42
     p2l:tend:cmpx_morph-s|def-s:
     
         summary: The probability of -s- exhibits a tendency to grow with the morphological complexity of the first constituent (any form of derivation).
@@ -2842,7 +2878,7 @@ constraints:
 
 
 
-    # 41
+    # 43
     p2l:tend:cmpx_phon-s|def-s:
     
         summary: The probability of -s- exhibits a tendency to grow with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
@@ -2906,7 +2942,7 @@ constraints:
 
 
 
-    # 42
+    # 44
     p2l:tend:sonority-!s:
     
         summary: The probability of -s- in compounds with simplex first constituents tends to decrease with the increasing sonority of the final segment of the first constituent. -s- is thus more frequent after plosives, infrequent after nasals and liquids, and it never occurs after a full vowel.
@@ -2984,7 +3020,7 @@ constraints:
 
     # 2. Constraints that restrict properties of compounds appearing with certain linkers.
 
-    # 43
+    # 45
     l2p:s|smpx_mn:
       
         summary: Almost all simplex nouns that constitute first constituents that attach -s- belong to a small fixed group of masculine and neuter nouns.
@@ -3047,7 +3083,7 @@ constraints:
             "3": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `l2p:es`, we modify it to -s- here.
 
 
-    # 44
+    # 46
     l2p:s|smpx_high_freq:
     
         summary: Many simplex nouns that constitute first constituents that attach -s- have a high token frequency.
@@ -3095,7 +3131,7 @@ constraints:
         footnotes: {}
 
 
-    # 45
+    # 47
     l2p:s|f_cmpx:
       
         summary: All feminine nouns that constitute first constituents that attach -s- are morphologically complex.
@@ -3148,7 +3184,7 @@ constraints:
             "1": "[kuerschner_2010:23] notes that simplex F adopting -s- are mostly early derivatives ('hauptsächlich handelt es sich um frühere Derivate')."
 
 
-    # 46
+    # 48
     l2p:s|f_poly_syl:
       
         summary: All feminine nouns that constitute first constituents that attach -s- are polysyllabic.
@@ -3203,7 +3239,7 @@ constraints:
 
 
 
-    # 47
+    # 49
     l2p:n:
     
         summary: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa or in [ɐ] (unstressed -er).
@@ -3270,7 +3306,7 @@ constraints:
 
 
 
-    # 48
+    # 50
     l2p:en|par:
       
         summary: Almost all nouns that constitute first constituents that attach -(e)n- belong to weak nouns.
@@ -3338,7 +3374,7 @@ constraints:
         footnotes: {}
 
 
-    # 49
+    # 51
     l2p:en|non_par_m:
     
         summary: All masculine nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are monosyllabic designations of male persons, animals, astronomic objects, months.
@@ -3372,7 +3408,7 @@ constraints:
             "1": "Even though not explicitly stated, all the examples provided there are monosyllabic masculine nouns designating anumals: 'Hahn', 'Storch', 'Schwan'."
 
 
-    # 50
+    # 52
     l2p:en|non_par_n_pl_interpr:
     
         summary: All neuter nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are polysyllabic foreign nouns that have a stressed final syllable that exhibit a plural meaning.
@@ -3402,7 +3438,7 @@ constraints:
             "1": "Evidence from [nuebling_szczepaniak_2013:79,80] is disregarded here as, even though not explicitly stated, it concerns only monosyllabic M."
     
 
-    # 51
+    # 53
     l2p:e|par:
     
         summary: All nouns that constitute first constituents that attach -e- build the plural form with -e.
@@ -3466,7 +3502,7 @@ constraints:
             "4": TODO in the next iteration; the reason to not exclude the whole constraint because of incapability to implement this check is that it plays a minor role
 
 
-    # 52
+    # 54
     l2p:e|#stressed_syl:
     
         summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable or are derived of those with a stressed prefix.
@@ -3515,7 +3551,7 @@ constraints:
             "1": The last claim explains why -e- does not occur after nouns like 'Teppich' (teppich_boden vs *teppich_+e_boden).
 
 
-    # 53
+    # 55
     l2p:e|smpx:
     
         summary: Most nouns that constitute first constituents that attach -e- are simplex.
@@ -3569,7 +3605,7 @@ constraints:
             "2": The last claim explains why -e- does not occur after nouns like 'Dokument' (dokument_+en_bearbeitung vs *dokument_+e_bearbeitung).
 
 
-    # 54
+    # 56
     l2p:e|!loan:
     
         summary: All nouns that constitute first constituents that attach -e- are native (none are loanwords).
@@ -3601,7 +3637,7 @@ constraints:
 
    
 
-    # 55
+    # 57
     l2p:er|par:
     
         summary: All nouns that constitute first constituents that attach -(")er- build the plural form with -(")er.
@@ -3669,7 +3705,7 @@ constraints:
         footnotes: {}
 
 
-    # 56
+    # 58
     l2p:er|#stressed_syl:
     
         summary: All nouns that constitute first constituents that attach -(")er- have a stressed last syllable or are derived of those with a stressed prefix.
@@ -3721,7 +3757,7 @@ constraints:
         footnotes: {}
 
 
-    # 57
+    # 59
     l2p:er|smpx:
     
         summary: Most nouns that constitute first constituents that attach -(")er- are simplex.
@@ -3769,7 +3805,7 @@ constraints:
         footnotes: {}
 
 
-    # 58
+    # 60
     l2p:er|!loan:
     
         summary: All nouns that constitute first constituents that attach -(")er- are native (none are loanwords).
@@ -3799,7 +3835,7 @@ constraints:
 
 
 
-    # 59
+    # 61
     l2p:e_uml:
     
         summary: All nouns that constitute first constituents that attach -"e- build the plural form with -e and umlaut.
@@ -3854,7 +3890,7 @@ constraints:
 
 
 
-    # 60
+    # 62
     l2p:es|isol:
     
         summary: All nouns that constitute first constituents that attach -es- belong to a fixed row of masculine and neuter nouns and build the genitive form with -(e)s-. -es- is thus isolated.
@@ -3906,7 +3942,7 @@ constraints:
             "3": Since the original text claimed simplex M and N often adopt -es- or (!) -s-, this evidence is to be considered indirect since simplices taking -s- -- that may be polysyllabic (e.g. könig_+s_haus) -- are also included in this evidence. However, the 30-40 nouns taking -es- are all monosyllabic, hence, simplices, so the evidence is still relevant.
 
 
-    # 61
+    # 63
     l2p:es|mono_syl:
     
         summary: All nouns that constitute first constituents that attach -es- are monosyllabic or are derived of those with a prefix.
@@ -3960,7 +3996,7 @@ constraints:
 
 
 
-    # 62
+    # 64
     l2p:ens:
     
         summary: All nouns that constitute first constituents that attach -(e)ns- belong to a fixed group of a few masculine nouns and a single neuter noun and have different genitive endings. -(e)ns- is thus isolated.
@@ -3998,7 +4034,7 @@ constraints:
 
 
 
-    # 63
+    # 65
     l2p:0_uml:
     
         summary: All nouns that constitute first constituents that attach a zero linker with umlaut build the plural form with a zero ending and umlaut.
@@ -4048,7 +4084,7 @@ constraints:
 
 
 
-    # 64
+    # 66
     l2p:pl_marker|def-pl:
       
         summary: Linkers that are identical to the plural ending of the first constituent (except for -s- and zero linker) in a given compound tend to be associated with a plural meaning of this first constituent within the compound.
