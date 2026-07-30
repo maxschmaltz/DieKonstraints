@@ -108,7 +108,7 @@ def main():
                 ]
             ]
         )
-        appl_index.index.name = "gecodb"
+        appl_index.index.name = "comp_gecodb"
 
         is_appl_cache = defaultdict(dict)
 
