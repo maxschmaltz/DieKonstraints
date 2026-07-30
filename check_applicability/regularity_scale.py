@@ -66,7 +66,11 @@ class RegularityScale:
             self.quantifier_map[quantifier] = "regular"
 
     def _yang_theta(self, N: int) -> int:
-        return N / np.log(N)
+        log_n = np.log(N)
+        if log_n:
+            return N / np.log(N)
+        else:
+            return 0
 
     def _tolerance_principle(self, N: int, e: Union[int, float]) -> bool:
         # the Tolerance Principle, Yang 2016;
@@ -75,7 +79,11 @@ class RegularityScale:
         return e <= round(self._yang_theta(N))
 
     def _irreg_tolerance(self, N: int) -> int:
-        return 1 / self._yang_theta(N)
+        theta = self._yang_theta(N)
+        if theta:
+            return 1 / self._yang_theta(N)
+        else:
+            return 0
 
     def _irreg_tolerance_principle(self, N: int, reg: float) -> bool:
         return reg >= (1 - self._irreg_tolerance(N))
