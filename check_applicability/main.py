@@ -278,6 +278,9 @@ def main():
 
             # 2. Calculate statistics
 
+            # in this version, we pre-calculate the numbers in data_utils/dataset_stats.ipynb
+            Ni = datasets_n_appl_items[dname]
+
             # 2.1. Type coverage: proportion of the number of compounds for which the
             # constraint is potentially applicable, and the total number of the compounds.
 
@@ -287,9 +290,23 @@ def main():
             # compounds (hence, items) were found in the dataset;
             # might also be the case for further constraints added in the future
             if not cvg_type_abs:
-                cvg_type = 0.0
-                cvg_item = 0.0
-                # regs stay NA
+                # record
+                appl_statistics.loc[c_id, :] = [
+                    appl_item,
+                    Ni,
+                    quantifier,
+                    0,  # cvg_item_abs
+                    0.0,    #cvg_item
+                    0.0,    # cvg_type
+                    None,   # reg_item
+                    None,   # reg_type
+                    None,   # n_violations
+                    None,   # is_productive
+                    None,   # is_regular
+                    None,   # expected_reg_level
+                    None,   # actual_reg_level
+                    None    # support_level
+                ]
                 continue
 
             cvg_type = cvg_type_abs / N   # n comps covered / n all comps
@@ -297,9 +314,6 @@ def main():
 
             # 2.2. Item coverage: proportion of the number of application items for which the
             # constraint is potentially applicable, and the total number of the application items.
-
-            # in this version, we pre-calculate the numbers in data_utils/dataset_stats.ipynb
-            Ni = datasets_n_appl_items[dname]
 
             # for constraints with the application item "compound",
             # item and type measures are effectively the same thing
