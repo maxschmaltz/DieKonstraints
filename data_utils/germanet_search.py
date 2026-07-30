@@ -23,7 +23,7 @@ def is_germanet_noun(lemma: str) -> bool:
     # synsets are sets of synonyms composed of specific
     # lexical units; we need the latter
     lexunits = get_lexunits(lemma)
-    if not get_lexunits:
+    if not lexunits:
         return False
     return all(
         # 2 = noun, see docu under

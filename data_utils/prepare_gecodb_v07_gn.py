@@ -56,7 +56,7 @@ def main():
 
     # 3. Save the prepared data.
 
-    # (N=48980)
+    # (N=48977)
     gecodb_v07_gn.to_csv(
         os.path.join(datadir, "gecodb_v07_gn.tsv"),
         sep="\t",
