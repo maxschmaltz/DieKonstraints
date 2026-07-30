@@ -88231,7 +88231,6 @@ nord_ausrichtung	Nordausrichtung	106	nord	459844	253	_	False	False	ausrichtung	1
 nord_horizont	Nordhorizont	419	nord	459844	253	_	False	False	horizont	129704
 nord_anlage	Nordanlage	67	nord	459844	253	_	False	False	anlage	1195984
 nord_meisterschaft	Nordmeisterschaft	734	nord	459844	253	_	False	False	meisterschaft	600675
-nord_kaper	Nordkaper	354	nord	459844	253	_	False	False	kaper	966
 nord_gerade	Nordgerade	62	nord	459844	253	_	False	False	gerade	12373
 nord_borg	Nordborg	106	nord	459844	253	_	False	False	borg	28939
 nord_rang	Nordrang	289	nord	459844	253	_	False	False	rang	923686
@@ -95746,7 +95745,6 @@ salz_häufchen	Salzhäufchen	20	salz	235304	245	_	False	False	häufchen	11639
 salz_tradition	Salztradition	20	salz	235304	245	_	False	False	tradition	796474
 salz_nachschub	Salznachschub	39	salz	235304	245	_	False	False	nachschub	44545
 salz_rinne	Salzrinne	66	salz	235304	245	_	False	False	rinne	12438
-salz_kaper	Salzkaper	35	salz	235304	245	_	False	False	kaper	966
 salz_brise	Salzbrise	32	salz	235304	245	_	False	False	brise	22041
 salz_aroma	Salzaroma	21	salz	235304	245	_	False	False	aroma	64186
 salz_zeit	Salzzeit	20	salz	235304	245	_	False	False	zeit	10557899
@@ -114820,7 +114818,6 @@ kloster_hauptmann	Klosterhauptmann	261	kloster	329895	260	_	False	False	hauptman
 stimme_+n_zugewinn	Stimmenzugewinn	166	stimme	920646	106	_+n_	True	False	zugewinn	21027
 stimme_+n_könig	Stimmenkönig	1360	stimme	920646	106	_+n_	True	False	könig	838289
 kloster_eingang	Klostereingang	138	kloster	329895	260	_	False	False	eingang	359511
-süd_kaper	Südkaper	102	süd	307169	227	_	False	False	kaper	966
 kloster_jahr	Klosterjahr	86	kloster	329895	260	_	False	False	jahr	43845868
 kloster_gymnasium	Klostergymnasium	221	kloster	329895	260	_	False	False	gymnasium	670989
 süd_ausfahrt	Südausfahrt	30	süd	307169	227	_	False	False	ausfahrt	100356
@@ -272440,7 +272437,6 @@ frustration_+s_toleranz	Frustrationstoleranz	2282	frustration	29302	11	_+s_	Fals
 einfall_+s_winkel	Einfallswinkel	469	einfall	47793	19	_+s_	False	False	winkel	173196
 juwelier_geschäft	Juweliergeschäft	8410	juwelier	31156	12	_	False	False	geschäft	1891578
 kahn_fahrt	Kahnfahrt	3172	kahn	140777	17	_	False	False	fahrt	969468
-kaper_fahrt	Kaperfahrt	997	kaper	966	11	_	False	False	fahrt	969468
 zugabe_ruf	Zugaberuf	1809	zugabe	139828	13	_	False	False	ruf	526026
 thymian_zweig	Thymianzweig	1013	thymian	20668	15	_	False	False	zweig	91949
 zugabe_+n_teil	Zugabenteil	1019	zugabe	139828	13	_+n_	True	False	teil	4304832
@@ -272449,7 +272445,6 @@ falter_art	Falterart	478	falter	25579	15	_	False	False	art	2477614
 zugabe_verordnung	Zugabeverordnung	1065	zugabe	139828	13	_	False	False	verordnung	175943
 rüsche_+n_hemd	Rüschenhemd	812	rüsche	1544	15	_+n_	True	False	hemd	138298
 rüsche_+n_baum	Rüschenbaum	362	rüsche	1544	15	_+n_	True	False	baum	1443177
-kaper_schiff	Kaperschiff	119	kaper	966	11	_	False	False	schiff	689036
 henkel_mann	Henkelmann	4291	henkel	146680	19	_	False	False	mann	8392866
 falter_fisch	Falterfisch	56	falter	25579	15	_	False	False	fisch	398730
 thymian_öl	Thymianöl	95	thymian	20668	15	_	False	False	öl	373840
@@ -272471,17 +272466,14 @@ thymian_blatt	Thymianblatt	397	thymian	20668	15	_	False	False	blatt	474851
 frustration_+s_schwelle	Frustrationsschwelle	122	frustration	29302	11	_+s_	False	False	schwelle	133252
 kahn_partie	Kahnpartie	450	kahn	140777	17	_	False	False	partie	1630193
 vernehmung_+s_termin	Vernehmungstermin	225	vernehmung	99137	14	_+s_	False	False	termin	1292638
-kaper_fahrer	Kaperfahrer	86	kaper	966	11	_	False	False	fahrer	1151148
 würde_begriff	Würdebegriff	36	würde	164210	13	_	False	False	begriff	605580
 vernehmung_+s_zimmer	Vernehmungszimmer	669	vernehmung	99137	14	_+s_	False	False	zimmer	650100
 henkel_kreuz	Henkelkreuz	21	henkel	146680	19	_	False	False	kreuz	474669
 falter_tag	Faltertag	222	falter	25579	15	_	False	False	tag	11101971
-kaper_+n_strauch	Kapernstrauch	85	kaper	966	11	_+n_	False	False	strauch	129062
 thymian_honig	Thymianhonig	159	thymian	20668	15	_	False	False	honig	106418
 frustration_+s_potential	Frustrationspotential	41	frustration	29302	11	_+s_	False	False	potential	57573
 würde_zeichen	Würdezeichen	78	würde	164210	13	_	False	False	zeichen	867844
 zugabe_forderung	Zugabeforderung	318	zugabe	139828	13	_	False	False	forderung	996409
-kaper_krieg	Kaperkrieg	51	kaper	966	11	_	False	False	krieg	1579762
 würde_+n_trägerin	Würdenträgerin	395	würde	164210	13	_+n_	True	False	trägerin	19382
 juwelier_kunst	Juwelierkunst	108	juwelier	31156	12	_	False	False	kunst	1608690
 würde_schutz	Würdeschutz	94	würde	164210	13	_	False	False	schutz	817033
@@ -272495,7 +272487,6 @@ vernehmung_+s_situation	Vernehmungssituation	81	vernehmung	99137	14	_+s_	False	F
 würde_verletzung	Würdeverletzung	46	würde	164210	13	_	False	False	verletzung	698730
 henkel_becher	Henkelbecher	108	henkel	146680	19	_	False	False	becher	85824
 einfall_+s_los	Einfallslos	362	einfall	47793	19	_+s_	False	False	los	328189
-kaper_+n_apfel	Kapernapfel	342	kaper	966	11	_+n_	False	False	apfel	196091
 kippe_+n_stummel	Kippenstummel	186	kippe	57756	13	_+n_	True	False	stummel	2603
 kiebitz_markt	Kiebitzmarkt	175	kiebitz	11317	11	_	False	False	markt	2649376
 henkel_tasse	Henkeltasse	154	henkel	146680	19	_	False	False	tasse	109150
@@ -272511,7 +272502,6 @@ vernehmung_+s_lehre	Vernehmungslehre	22	vernehmung	99137	14	_+s_	False	False	leh
 einfall_+s_pforte	Einfallspforte	43	einfall	47793	19	_+s_	False	False	pforte	115123
 rüsche_+n_kragen	Rüschenkragen	129	rüsche	1544	15	_+n_	True	False	kragen	62699
 kahn_fahrer	Kahnfahrer	327	kahn	140777	17	_	False	False	fahrer	1151148
-kaper_+n_ersatz	Kapernersatz	46	kaper	966	11	_+n_	False	False	ersatz	210710
 einfall_+s_kraft	Einfallskraft	175	einfall	47793	19	_+s_	False	False	kraft	1790715
 falter_baum	Falterbaum	679	falter	25579	15	_	False	False	baum	1443177
 vernehmung_+s_richter	Vernehmungsrichter	85	vernehmung	99137	14	_+s_	False	False	richter	1405088
@@ -272522,13 +272512,11 @@ kahn_hafen	Kahnhafen	56	kahn	140777	17	_	False	False	hafen	467824
 frustration_+s_grad	Frustrationsgrad	31	frustration	29302	11	_+s_	False	False	grad	864987
 frustration_+s_erfahrung	Frustrationserfahrung	33	frustration	29302	11	_+s_	False	False	erfahrung	1716922
 einfall_reichtum	Einfallreichtum	33	einfall	47793	19	_	False	False	reichtum	116998
-kaper_kapitän	Kaperkapitän	41	kaper	966	11	_	False	False	kapitän	537919
 henkel_glas	Henkelglas	82	henkel	146680	19	_	False	False	glas	486646
 zugabe_stück	Zugabestück	72	zugabe	139828	13	_	False	False	stück	2330343
 kippe_+n_gelände	Kippengelände	351	kippe	57756	13	_+n_	True	False	gelände	900481
 rüsche_+n_kleidchen	Rüschenkleidchen	86	rüsche	1544	15	_+n_	True	False	kleidchen	6165
 kiebitz_moor	Kiebitzmoor	97	kiebitz	11317	11	_	False	False	moor	127492
-kaper_+n_soße	Kapernsoße	91	kaper	966	11	_+n_	False	False	soße	44834
 juwelier_haus	Juwelierhaus	262	juwelier	31156	12	_	False	False	haus	6907268
 frustration_+s_bewältigung	Frustrationsbewältigung	23	frustration	29302	11	_+s_	False	False	bewältigung	72522
 kiebitz_paar	Kiebitzpaar	34	kiebitz	11317	11	_	False	False	paar	628289
@@ -272574,8 +272562,6 @@ henkel_gefäß	Henkelgefäß	25	henkel	146680	19	_	False	False	gefäß	59783
 würde_formel	Würdeformel	64	würde	164210	13	_	False	False	formel	275469
 vernehmung_+s_fähigkeit	Vernehmungsfähigkeit	142	vernehmung	99137	14	_+s_	False	False	fähigkeit	406445
 rüsche_+n_gardine	Rüschengardine	86	rüsche	1544	15	_+n_	True	False	gardine	25492
-kaper_+n_butter	Kapernbutter	46	kaper	966	11	_+n_	False	False	butter	145934
-kaper_+n_beere	Kapernbeere	29	kaper	966	11	_+n_	False	False	beere	40034
 kahn_station	Kahnstation	48	kahn	140777	17	_	False	False	station	672700
 zugabe_+n_wunsch	Zugabenwunsch	49	zugabe	139828	13	_+n_	True	False	wunsch	1257260
 henkel_körbchen	Henkelkörbchen	58	henkel	146680	19	_	False	False	körbchen	13289

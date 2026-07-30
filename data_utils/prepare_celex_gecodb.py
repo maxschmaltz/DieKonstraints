@@ -24,11 +24,12 @@ def main():
     # We will proceed as follows:
     # 1. Init CELEX-nouns, GeCoDB_v06.
     # 2. Filter out all CELEX-nouns entries not found as nouns in Germanet.
-    # 3. Filter out all GeCoDB_v06 entries whose constituents 
-    # were not found as nouns in Germanet (results in GeCoDB_v07).
-    # 4. Explicitly extract linker from GeCoDB_v07 entries.
-    # 5. Minor modifications of GeCoDB_v07.
-    # 6. Save the prepared data to new TSV files.
+    # 3. Cleaning of CELEX-nouns.
+    # 4. Filter out all GeCoDB_v06 entries whose constituents 
+    # were not found as nouns in Germanet  or were removed from CELEX.
+    # 5. Explicitly extract linker from GeCoDB_v07 entries.
+    # 6. Cleaning & minor modifications of GeCoDB_v07.
+    # 7. Save the prepared data to new TSV files.
 
     # 1. Init CELEX-nouns, GeCoDB_v06.
     
@@ -50,16 +51,26 @@ def main():
     celex.drop(columns=["is_germanet_noun"], inplace=True)
 
 
-    # 3. Filter out all GeCoDB_v06 entries whose constituents
-    # were not found as nouns in Germanet.
+    # 3. Cleaning of CELEX-nouns.
+
+    # remove misanalyses found while inspecting the results (N=1)
+    to_remove_nouns = [
+        # ambiguous nouns
+        "kaper"
+    ]
+    celex_stop = celex_stop.index.to_list() + to_remove_nouns
+
+
+    # 4. Filter out all GeCoDB_v06 entries whose constituents
+    # were not found as nouns in Germanet or were removed from CELEX.
 
     gecodb_v07 = gecodb_v06[
-        ~(gecodb_v06["n1_lemma"].isin(celex_stop.index)) &
-        ~(gecodb_v06["n2_lemma"].isin(celex_stop.index))
+        ~(gecodb_v06["n1_lemma"].isin(celex_stop)) &
+        ~(gecodb_v06["n2_lemma"].isin(celex_stop))
     ]
 
 
-    # 4. Explicitly extract linker from GeCoDB_v06 entries.
+    # 5. Explicitly extract linker from GeCoDB_v06 entries.
 
     def extract_linker(gecodb: str) -> Tuple[str, bool]:
         comp = Compound(gecodb)
@@ -122,7 +133,7 @@ def main():
     gecodb_v07["is_pll"] = gecodb_v07.index.map(is_pll)
 
 
-    # 5. Minor modifications of GeCoDB_v07.
+    # 6. Cleaning & minor modifications of GeCoDB_v07.
 
     # remove possible toponyms and other problematic N2s (N=6175)
     to_remove_n2s = [
@@ -156,9 +167,10 @@ def main():
     ]]
 
 
-    # 6. Save the prepared data to new TSV files.
+    # 7. Save the prepared data to new TSV files.
     
-    # (N=11031, deleted N=965)
+    # (N=11030, deleted N=966)
+    # (nouns not in GermaNet N=965, cleaning N=1)
     celex.to_csv(
         os.path.join(outdir, "celex_nouns.tsv"),
         sep="\t",
@@ -166,8 +178,9 @@ def main():
         header=True
     )
 
-    # (N=275411, deleted N=7356)
-    # (constituents not in GermaNet N=1176, further filtering N=6180))
+    # (N=275398, deleted N=7356)
+    # (constituents not in GermaNet N=1176, constituents removed from CELEX N=14,
+    # cleaning N=6179+1)
     gecodb_v07.to_csv(
         os.path.join(outdir, "gecodb_v07.tsv"),
         sep="\t",
