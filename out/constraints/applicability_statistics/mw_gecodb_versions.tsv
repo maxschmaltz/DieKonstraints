@@ -1,0 +1,12 @@
+		reg	reg	cvg	cvg
+		item	type	item	type
+comparison					
+gecodb_v06 vs. gecodb_v07	U	770.5	761.5	760.5	755.5
+gecodb_v06 vs. gecodb_v07	p	0.924	0.996	1.0	0.964
+gecodb_v06 vs. gecodb_v07	r	0.999	1.0	1.0	1.0
+gecodb_v06 vs. gecodb_v07_gn	U	770.5	761.5	760.5	755.5
+gecodb_v06 vs. gecodb_v07_gn	p	0.924	0.996	1.0	0.964
+gecodb_v06 vs. gecodb_v07_gn	r	0.999	1.0	1.0	1.0
+gecodb_v07 vs. gecodb_v07_gn	U	770.5	761.5	760.5	755.5
+gecodb_v07 vs. gecodb_v07_gn	p	0.924	0.996	1.0	0.964
+gecodb_v07 vs. gecodb_v07_gn	r	0.999	1.0	1.0	1.0

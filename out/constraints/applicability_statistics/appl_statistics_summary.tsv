@@ -115,9 +115,9 @@ p2l:phon_fin:vow$-0	gecodb_v06	n1	3614	almost regularly	148	0.041	0.036	0.968	0.
 p2l:phon_fin:vow$-0	gecodb_v07	n1	3594	almost regularly	147	0.041	0.037	0.968	0.976	4.684	True	True	high regularity	regular	supported+
 p2l:phon_fin:vow$-0	gecodb_v07_gn	n1	3320	almost regularly	132	0.04	0.033	0.96	0.979	5.222	True	False	high regularity	high regularity	supported
 p2l:phon_fin:vow$-0	sp18_pl_constr														
-p2l:phon_fin:F_#stressed_phon$-0	gecodb_v06	n1	3614	usually	108	0.03	0.033	0.95	0.969	5.439	True	False	high regularity	moderate regularity	partially supported
-p2l:phon_fin:F_#stressed_phon$-0	gecodb_v07	n1	3594	usually	108	0.03	0.033	0.95	0.969	5.421	True	False	high regularity	moderate regularity	partially supported
-p2l:phon_fin:F_#stressed_phon$-0	gecodb_v07_gn	n1	3320	usually	94	0.028	0.032	0.94	0.975	5.67	True	False	high regularity	moderate regularity	partially supported
+p2l:phon_fin:F_#stressed_phon$-0	gecodb_v06	n1	3614	mostly	108	0.03	0.033	0.95	0.969	5.439	True	False	moderate regularity	moderate regularity	supported
+p2l:phon_fin:F_#stressed_phon$-0	gecodb_v07	n1	3594	mostly	108	0.03	0.033	0.95	0.969	5.421	True	False	moderate regularity	moderate regularity	supported
+p2l:phon_fin:F_#stressed_phon$-0	gecodb_v07_gn	n1	3320	mostly	94	0.028	0.032	0.94	0.975	5.67	True	False	moderate regularity	moderate regularity	supported
 p2l:phon_fin:F_#stressed_phon$-0	sp18_pl_constr														
 p2l:phon_fin:F_stem_#t$-s	gecodb_v06	n1	3614	sometimes	47	0.013	0.016	0.505	0.463	23.271	False	False	low regularity	low regularity	supported
 p2l:phon_fin:F_stem_#t$-s	gecodb_v07	n1	3594	sometimes	46	0.013	0.016	0.516	0.464	22.242	False	False	low regularity	low regularity	supported
