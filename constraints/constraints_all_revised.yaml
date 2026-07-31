@@ -376,7 +376,7 @@ topology:
 
                     # 19
                     - p2l:phon_fin:F_#stressed_phon$:
-                        summary: First constituents that are constituted by feminine nouns that end with stressed -ei, -ie, -ur, also stressed or unstressed -ik mostly attach a zero linker but attach -en- irregularly when they have a plural meaning.
+                        summary: First constituents that are constituted by feminine nouns that end with stressed -ei, -ie, -ur, also stressed or unstressed -ik usually attach a zero linker but attach -en- irregularly when they have a plural meaning.
                         children:
 
                             - p2l:phon_fin:F_#stressed_phon$|def-0
@@ -2221,7 +2221,7 @@ constraints:
     # 30
     p2l:phon_fin:F_#stressed_phon$|def-0:
     
-        summary: First constituents that are constituted by feminine nouns that end with stressed -ei, -ie, -ur, also stressed or unstressed -ik mostly attach a zero linker.
+        summary: First constituents that are constituted by feminine nouns that end with stressed -ei, -ie, -ur, also stressed or unstressed -ik usually attach a zero linker.
         acceptable_linkers: [_]
         ling_info_type: [morphological, phonological]
         is_pluralic: false
@@ -2234,7 +2234,7 @@ constraints:
 
         func_alias: stressed_phon_fin
 
-        quantifier: mostly
+        quantifier: usually
         measures:
             gecodb_v06:
                 coverage:
@@ -2261,10 +2261,11 @@ constraints:
 
             - ref: ortner_mueller-bollhagen_1991
               pages: [107]
-              summary: F endings with stressed -ei, -ie, -ur, also those with -ik mostly attach a zero linker.
+              summary: F endings with stressed -ei, -ie, -ur, also those with -ik mostly [1] attach a zero linker.
 
         footnotes: {
-            "1": "Not derivational since these ending may also be part of the stem, e.g. in akustik_paneele."
+            "1": "While the original texts contains the 'mostly' ('meistens') quantifier, it also says that the exceptions are rare ('selten'), which in its total we interpret as 'usually'.",
+            "2": "Not derivational since these ending may also be part of the stem, e.g. in akustik_paneele."
         }
 
 
