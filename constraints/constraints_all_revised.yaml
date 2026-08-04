@@ -188,7 +188,7 @@ datasets:
 
     gecodb_v07:
         description: "~275k German N+N compounds from the DECOW16A corpus that are built from nouns found in both CELEX2 and GermaNet and have a WC of at least 20 in DeReKo."
-        origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR) and [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02), final preprocessing in the present study (TODO).
+        origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR) and [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02), final preprocessing in the present study ([data_utils/prepare_celex_gecodb.py](data_utils/prepare_celex_gecodb.py)).
         size: 275411 compound lemmata. 3593 N1 lemmata. 10 linkers, 12 linker allomorphs. 4741 unique N1+linker combinations.
         filepath: resources/developed/gecodb_v07.tsv
         load_func: load_gecodb
@@ -196,7 +196,7 @@ datasets:
 
     gecodb_v07_gn:
         description: "~49k German N+N compounds from the DECOW16A corpus that are built from nouns found in both CELEX2 and GermaNet, can themselves be parsed confidently in GermaNet, and have a WC of at least 20 in DeReKo."
-        origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR) and [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02), final preprocessing in the present study (TODO).
+        origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR) and [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02), final preprocessing in the present study ([data_utils/prepare_gecodb_v07_gn.py](data_utils/prepare_gecodb_v07_gn.py)).
         size: 48976 compound lemmata (48660 unique N1+N2 combinations). 3319 N1 lemmata. 10 linkers, 12 linker allomorphs. 3585 unique N1+linker combinations.
         filepath: resources/developed/gecodb_v07_gn.tsv
         load_func: load_gecodb
@@ -204,7 +204,7 @@ datasets:
 
     sp18_pl_constr:
         description: "~2.5k German N+N compounds from the DECOW16A corpus that have a WC of at least 20 in DeReKo, with annotated singular/plural meaning of N1."
-        origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Corpusstudy/Concordance.full.csv'), final preprocessing in the present study (TODO).
+        origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Corpusstudy/Concordance.full.csv'), final preprocessing in the present study ([data_utils/prepare_sp18_pl_constr.py](data_utils/prepare_sp18_pl_constr.py)).
         size: 2681 compound lemmata. 44 N1 lemmata. 8 linkers, 9 linker allomorphs. 78 unique N1+(Sg/Pl meaning) combinations. 88 unique N1+linker combinations.
         filepath: resources/developed/sp18/sp18_pl_constr.tsv
         load_func: load_sp18
@@ -2495,7 +2495,7 @@ constraints:
 
 
 
-    # 35
+    # 34
     p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en:
 
         summary: First constituents that are constituted by consonant-final weak feminine nouns regularly attach -s-, a zero linker, or -(e)n-.
@@ -2541,7 +2541,7 @@ constraints:
         footnotes: {}
 
 
-    # 36
+    # 35
     p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s:
 
         # TODO: compose with 35 into a new morphology-only constraint (as with "er-plurals)
@@ -2591,7 +2591,7 @@ constraints:
         footnotes: {}
 
 
-    # 37
+    # 36
     p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en:
     
         # TODO: compose with 34 into a new morphology-only constraint (as with "er-plurals)
@@ -2653,7 +2653,7 @@ constraints:
 
     #   1.4.1. Constraints that map compound types to most probable linkers.
 
-    # 38
+    # 37
     p2l:sem:comp_type:copula-0:
     
         summary: Copulative compounds insert a zero linker regularly. By copulative compounds are understood compounds in which the two constituents do not exhibit a clear modifier-head relation.
@@ -2662,8 +2662,7 @@ constraints:
         is_pluralic: false
         
         appl_item: n1+n2
-        datasets_n_appl_items:
-            NA: NA
+        datasets_n_appl_items: NA
 
         func_alias: copula
 
@@ -2697,7 +2696,7 @@ constraints:
 
 
 
-    # 39
+    # 38
     # https://uni-tuebingen.de/en/faculties/faculty-of-humanities/departments/modern-languages/department-of-linguistics/chairs/general-and-computational-linguistics/ressources/lexica/germanet/description/relations/#c1097739
     p2l:sem:comp_type:arg-s:
     
@@ -2707,8 +2706,7 @@ constraints:
         is_pluralic: false
         
         appl_item: n1+n2
-        datasets_n_appl_items:
-            NA: NA
+        datasets_n_appl_items: NA
 
         func_alias: argument
 
@@ -2730,7 +2728,7 @@ constraints:
 
     #  1.4.2. Other semantic constraints.
 
-    # 40
+    # 39
     p2l:sem:tech_term-0:
     
         summary: Compounds belonging to technical terminology (economics, law, medicine, etc.) are often missing an explicit linking element.
@@ -2739,8 +2737,7 @@ constraints:
         is_pluralic: false
         
         appl_item: compound
-        datasets_n_appl_items:
-            NA: NA
+        datasets_n_appl_items: NA
 
         func_alias: tech_term
 
@@ -2773,7 +2770,7 @@ constraints:
 
 
 
-    # 41
+    # 40
     p2l:sem:2const_anim/pers-s:
     
         summary: Compounds whose first constituent designates a person and whose second constituent is one of 'Mann', 'Frau', 'Leute', 'Tochter', 'Gattin', or 'Witwe' tend to insert -s-.
@@ -2811,7 +2808,7 @@ constraints:
 
     # 1.5. Constraints that describe general irregular tendencies.
 
-    # 42
+    # 41
     p2l:tend:cmpx_morph-s|def-s:
     
         summary: The probability of -s- exhibits a tendency to grow with the morphological complexity of the first constituent (any form of derivation).
@@ -2879,7 +2876,7 @@ constraints:
 
 
 
-    # 43
+    # 42
     p2l:tend:cmpx_phon-s|def-s:
     
         summary: The probability of -s- exhibits a tendency to grow with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
@@ -2943,7 +2940,7 @@ constraints:
 
 
 
-    # 44
+    # 43
     p2l:tend:sonority-!s:
     
         summary: The probability of -s- in compounds with simplex first constituents tends to decrease with the increasing sonority of the final segment of the first constituent. -s- is thus more frequent after plosives, infrequent after nasals and liquids, and it never occurs after a full vowel.
@@ -3021,7 +3018,7 @@ constraints:
 
     # 2. Constraints that restrict properties of compounds appearing with certain linkers.
 
-    # 45
+    # 44
     l2p:s|smpx_mn:
       
         summary: Almost all simplex nouns that constitute first constituents that attach -s- belong to a small fixed group of masculine and neuter nouns.
@@ -3084,7 +3081,7 @@ constraints:
             "3": The original text says -(e)s- but since 1) we divide -s- and -es- these two in our research and 2) -es- is handled separately in `l2p:es`, we modify it to -s- here.
 
 
-    # 46
+    # 45
     l2p:s|smpx_high_freq:
     
         summary: Many simplex nouns that constitute first constituents that attach -s- have a high token frequency.
@@ -3132,7 +3129,7 @@ constraints:
         footnotes: {}
 
 
-    # 47
+    # 46
     l2p:s|f_cmpx:
       
         summary: All feminine nouns that constitute first constituents that attach -s- are morphologically complex.
@@ -3185,7 +3182,7 @@ constraints:
             "1": "[kuerschner_2010:23] notes that simplex F adopting -s- are mostly early derivatives ('hauptsächlich handelt es sich um frühere Derivate')."
 
 
-    # 48
+    # 47
     l2p:s|f_poly_syl:
       
         summary: All feminine nouns that constitute first constituents that attach -s- are polysyllabic.
@@ -3240,7 +3237,7 @@ constraints:
 
 
 
-    # 49
+    # 48
     l2p:n:
     
         summary: All nouns that constitute first constituents that attach the -n- allomorph of the -(e)n- linker end in schwa or in [ɐ] (unstressed -er).
@@ -3307,7 +3304,7 @@ constraints:
 
 
 
-    # 50
+    # 49
     l2p:en|par:
       
         summary: Almost all nouns that constitute first constituents that attach -(e)n- belong to weak nouns.
@@ -3375,7 +3372,7 @@ constraints:
         footnotes: {}
 
 
-    # 51
+    # 50
     l2p:en|non_par_m:
     
         summary: All masculine nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are monosyllabic designations of male persons, animals, astronomic objects, months.
@@ -3409,7 +3406,7 @@ constraints:
             "1": "Even though not explicitly stated, all the examples provided there are monosyllabic masculine nouns designating anumals: 'Hahn', 'Storch', 'Schwan'."
 
 
-    # 52
+    # 51
     l2p:en|non_par_n_pl_interpr:
     
         summary: All neuter nouns that do not build the plural form with -(e)n that constitute first constituents that attach -(e)n- are polysyllabic foreign nouns that have a stressed final syllable that exhibit a plural meaning.
@@ -3418,8 +3415,7 @@ constraints:
         is_pluralic: false
         
         appl_item: n1+linker
-        datasets_n_appl_items:
-            NA: NA
+        datasets_n_appl_items: NA
 
         func_alias: en_non_par_n_pl
 
@@ -3439,7 +3435,7 @@ constraints:
             "1": "Evidence from [nuebling_szczepaniak_2013:79,80] is disregarded here as, even though not explicitly stated, it concerns only monosyllabic M."
     
 
-    # 53
+    # 52
     l2p:e|par:
     
         summary: All nouns that constitute first constituents that attach -e- build the plural form with -e.
@@ -3503,7 +3499,7 @@ constraints:
             "4": TODO in the next iteration; the reason to not exclude the whole constraint because of incapability to implement this check is that it plays a minor role
 
 
-    # 54
+    # 53
     l2p:e|#stressed_syl:
     
         summary: All nouns that constitute first constituents that attach -e- have a stressed last syllable or are derived of those with a stressed prefix.
@@ -3552,7 +3548,7 @@ constraints:
             "1": The last claim explains why -e- does not occur after nouns like 'Teppich' (teppich_boden vs *teppich_+e_boden).
 
 
-    # 55
+    # 54
     l2p:e|smpx:
     
         summary: Most nouns that constitute first constituents that attach -e- are simplex.
@@ -3606,7 +3602,7 @@ constraints:
             "2": The last claim explains why -e- does not occur after nouns like 'Dokument' (dokument_+en_bearbeitung vs *dokument_+e_bearbeitung).
 
 
-    # 56
+    # 55
     l2p:e|!loan:
     
         summary: All nouns that constitute first constituents that attach -e- are native (none are loanwords).
@@ -3615,8 +3611,7 @@ constraints:
         is_pluralic: false
         
         appl_item: n1+linker
-        datasets_n_appl_items:
-            NA: NA
+        datasets_n_appl_items: NA
 
         func_alias: e_non_loan
 
@@ -3638,7 +3633,7 @@ constraints:
 
    
 
-    # 57
+    # 56
     l2p:er|par:
     
         summary: All nouns that constitute first constituents that attach -(")er- build the plural form with -(")er.
@@ -3706,7 +3701,7 @@ constraints:
         footnotes: {}
 
 
-    # 58
+    # 57
     l2p:er|#stressed_syl:
     
         summary: All nouns that constitute first constituents that attach -(")er- have a stressed last syllable or are derived of those with a stressed prefix.
@@ -3758,7 +3753,7 @@ constraints:
         footnotes: {}
 
 
-    # 59
+    # 58
     l2p:er|smpx:
     
         summary: Most nouns that constitute first constituents that attach -(")er- are simplex.
@@ -3806,7 +3801,7 @@ constraints:
         footnotes: {}
 
 
-    # 60
+    # 59
     l2p:er|!loan:
     
         summary: All nouns that constitute first constituents that attach -(")er- are native (none are loanwords).
@@ -3815,8 +3810,7 @@ constraints:
         is_pluralic: false
         
         appl_item: n1+linker
-        datasets_n_appl_items:
-            NA: NA
+        datasets_n_appl_items: NA
 
         func_alias: er_non_loan
 
@@ -3836,7 +3830,7 @@ constraints:
 
 
 
-    # 61
+    # 60
     l2p:e_uml:
     
         summary: All nouns that constitute first constituents that attach -"e- build the plural form with -e and umlaut.
@@ -3891,7 +3885,7 @@ constraints:
 
 
 
-    # 62
+    # 61
     l2p:es|isol:
     
         summary: All nouns that constitute first constituents that attach -es- belong to a fixed row of masculine and neuter nouns and build the genitive form with -(e)s-. -es- is thus isolated.
@@ -3900,8 +3894,7 @@ constraints:
         is_pluralic: false
         
         appl_item: n1+linker
-        datasets_n_appl_items:
-            NA: NA
+        datasets_n_appl_items: NA
 
         func_alias: es_isol
 
@@ -3943,7 +3936,7 @@ constraints:
             "3": Since the original text claimed simplex M and N often adopt -es- or (!) -s-, this evidence is to be considered indirect since simplices taking -s- -- that may be polysyllabic (e.g. könig_+s_haus) -- are also included in this evidence. However, the 30-40 nouns taking -es- are all monosyllabic, hence, simplices, so the evidence is still relevant.
 
 
-    # 63
+    # 62
     l2p:es|mono_syl:
     
         summary: All nouns that constitute first constituents that attach -es- are monosyllabic or are derived of those with a prefix.
@@ -3997,7 +3990,7 @@ constraints:
 
 
 
-    # 64
+    # 63
     l2p:ens:
     
         summary: All nouns that constitute first constituents that attach -(e)ns- belong to a fixed group of a few masculine nouns and a single neuter noun and have different genitive endings. -(e)ns- is thus isolated.
@@ -4006,8 +3999,7 @@ constraints:
         is_pluralic: false
         
         appl_item: n1+linker
-        datasets_n_appl_items:
-            NA: NA
+        datasets_n_appl_items: NA
 
         func_alias: ens_isol
 
@@ -4035,7 +4027,7 @@ constraints:
 
 
 
-    # 65
+    # 64
     l2p:0_uml:
     
         summary: All nouns that constitute first constituents that attach a zero linker with umlaut build the plural form with a zero ending and umlaut.
@@ -4085,7 +4077,7 @@ constraints:
 
 
 
-    # 66
+    # 65
     l2p:pl_marker|def-pl:
       
         summary: Linkers that are identical to the plural ending of the first constituent (except for -s- and zero linker) in a given compound tend to be associated with a plural meaning of this first constituent within the compound.

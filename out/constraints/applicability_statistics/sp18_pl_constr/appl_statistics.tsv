@@ -6,7 +6,7 @@ p2l:decl_cl:pl:#e-0|def-0
 p2l:decl_cl:pl:#e-0|pl_interpr-e	n1+sem	78	irregularly	6	0.077	0.022	0.544	0.52	2.733	True	False	low regularity	low regularity	supported
 p2l:decl_cl:pl:#e-0|msyl_anim-e														
 p2l:decl_cl:pl:#er-0/er|def-0/er														
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	n1+sem	78	majority	13	0.167	0.329	0.621	0.572	4.933	True	False	low regularity	moderate regularity	supported+
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	n1+sem	78	majority	13	0.167	0.329	0.621	0.572	4.933	True	False	low regularity	low regularity	supported
 p2l:decl_cl:pl:#er-0/er|mass-interpr-0														
 p2l:decl_cl:pl:#er-0/er|pl_interpr-er	n1+sem	78	more likely	10	0.128	0.037	0.754	0.721	2.456	True	False	moderate regularity	moderate regularity	supported
 p2l:decl_cl:pl:#er-0/er|anim-er														

@@ -25,10 +25,10 @@ p2l:drv:sfx:sfx-s|def-s	n1	3614	regularly	777	0.215	0.158	0.98	0.985	15.267	True
 p2l:drv:sfx:sfx-s|pl_interpr-en														
 p2l:drv:sfx:deverb_#en$-s	n1	3614	mostly	19	0.005	0.009	0.773	0.926	4.319	True	False	low regularity	moderate regularity	supported+
 p2l:drv:sfx:F_#in$-en	n1	3614	always	0	0.0	0.0								
-p2l:drv:prx_deverb-s	n1	3614	tendency	575	0.159	0.122	0.641	0.659	206.143	False	False	moderate regularity	moderate regularity	supported
+p2l:drv:prx_deverb-s	n1	3614	tendency	575	0.159	0.122	0.641	0.659	206.143	False	False	moderate regularity	low regularity	partially supported
 p2l:phon_fin:sibilant$-0	n1	3614	almost regularly	301	0.083	0.1	0.97	0.953	9.156	True	False	high regularity	high regularity	supported
 p2l:phon_fin:vow$-0	n1	3614	almost regularly	148	0.041	0.036	0.968	0.976	4.687	True	True	high regularity	regular	supported+
-p2l:phon_fin:F_#stressed_phon$|def-0	n1	3614	mostly	108	0.03	0.033	0.95	0.969	5.439	True	False	low regularity	moderate regularity	supported+
+p2l:phon_fin:F_#stressed_phon$|def-0	n1	3614	usually	108	0.03	0.033	0.95	0.969	5.439	True	False	high regularity	high regularity	supported
 p2l:phon_fin:F_#stressed_phon$|pl_interpr-en														
 p2l:phon_fin:F_stem_#t$-s	n1	3614	sometimes	47	0.013	0.016	0.505	0.463	23.271	False	False	low regularity	low regularity	supported
 p2l:phon_fin:schwa$-en|def-en	n1	3614	mostly	623	0.172	0.149	0.752	0.72	154.453	False	False	low regularity	moderate regularity	supported+
@@ -43,7 +43,7 @@ p2l:tend:cmpx_morph-s|def-s	n1	3614	tendency	3614	1.0	1.0	0.735	0.766	957.755	Fa
 p2l:tend:cmpx_phon-s|def-s	n1	3614	tendency	3614	1.0	1.0	0.723	0.761	1002.443	False	False	moderate regularity	moderate regularity	supported
 p2l:tend:sonority-!s	n1	3614	tend	1559	0.431	0.498	0.796	0.717	317.804	False	False	moderate regularity	moderate regularity	supported
 l2p:s|smpx_mn	n1+linker	4870	almost all	242	0.05	0.032	0.988	0.915	3.0	True	True	high regularity	regular	supported+
-l2p:s|smpx_high_freq	n1+linker	4870	many	242	0.05	0.032	0.649	0.914	85.0	False	False	moderate regularity	moderate regularity	supported
+l2p:s|smpx_high_freq	n1+linker	4870	many	242	0.05	0.032	0.649	0.914	85.0	False	False	moderate regularity	low regularity	partially supported
 l2p:s|f_cmpx	n1+linker	4870	almost all	794	0.163	0.159	0.996	0.983	3.0	True	True	high regularity	regular	supported+
 l2p:s|f_poly_syl	n1+linker	4870	all	794	0.163	0.159	0.999	1.0	1.0	True	True	regular	regular	supported
 l2p:n	n1+linker	4870	all	564	0.116	0.109	0.988	1.0	7.0	True	False	regular	high regularity	partially supported
