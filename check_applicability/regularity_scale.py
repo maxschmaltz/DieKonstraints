@@ -24,7 +24,7 @@ class RegularityScale:
                 "low regularity",
                 rank=1,
                 min_reg_item=0.5,
-                max_reg_item=0.6,
+                max_reg_item=0.7,
                 quantifiers=[
                     "irregularly", "majority", "may",
                     "most", "mostly", "sometimes"
@@ -34,10 +34,8 @@ class RegularityScale:
             RegularityLevel(
                 "moderate regularity",
                 rank=2,
-                min_reg_item=0.6,
-                # natural cut-off is 0.8, there are only three constraints
-                # with item reg in [0.8, 0.95)
-                max_reg_item=0.95,
+                min_reg_item=0.7,
+                max_reg_item=0.9,
                 quantifiers=[
                     "many", "more likely", "often",
                     "prefer", "tend", "tendency"
@@ -47,7 +45,7 @@ class RegularityScale:
             RegularityLevel(
                 "high regularity",
                 rank=3,
-                min_reg_item=0.95,
+                min_reg_item=0.9,
                 quantifiers=[
                     "almost all", "almost always",
                     "almost regularly", "usually"
@@ -78,15 +76,15 @@ class RegularityScale:
         # n exc <= N / ln(N), the rule falls apart
         return e <= round(self._yang_theta(N))
 
-    def _irreg_tolerance(self, N: int) -> int:
+    def _reg_tolerance(self, N: int) -> int:
         theta = self._yang_theta(N)
         if theta:
             return 1 / self._yang_theta(N)
         else:
             return 0
 
-    def _irreg_tolerance_principle(self, N: int, reg: float) -> bool:
-        return reg >= (1 - self._irreg_tolerance(N))
+    def _reg_tolerance_principle(self, N: int, reg: float) -> bool:
+        return reg >= (1 - self._reg_tolerance(N))
 
     def _reg_level_by_quant(self, quantifier: str) -> RegularityLevel:
         return self.quantifier_map[quantifier]
@@ -113,7 +111,7 @@ class RegularityScale:
             e=n_violations
         )
 
-        is_regular = self._irreg_tolerance_principle(
+        is_regular = self._reg_tolerance_principle(
             N=cvg_item_abs,
             reg=reg_item
         )

@@ -1,16 +1,17 @@
-	total	p2l	l2p
-morphological	12	6	6
-derivational	11	9	2
-morphological+semantic	9	8	1
-phonological	6	5	1
-morphological+phonological+semantic	5	4	1
-lexical	5	1	4
-morphological+phonological	3	2	1
-derivational+phonological	3	0	3
-derivational+morphological	2	1	1
-derivational+semantic	2	2	0
-semantic	2	2	0
-derivational+morphological+phonological	1	1	0
-lexical+semantic	1	1	0
-lexical+morphological+phonological+semantic	1	0	1
-lexical+morphological	1	0	1
+	total	total	p2l	p2l	l2p	l2p
+	N	%	N	%	N	%
+morphological	12	18.8	6	14.6	6	28.6
+derivational	11	17.2	9	22.0	2	9.5
+morphological+semantic	9	14.1	8	19.5	1	4.8
+phonological	6	9.4	5	12.2	1	4.8
+morphological+phonological+semantic	5	7.8	4	9.8	1	4.8
+lexical	5	7.8	1	2.4	4	19.0
+morphological+phonological	3	4.7	2	4.9	1	4.8
+derivational+phonological	3	4.7	0	0.0	3	14.3
+derivational+morphological	2	3.1	1	2.4	1	4.8
+derivational+semantic	2	3.1	2	4.9	0	0.0
+semantic	2	3.1	2	4.9	0	0.0
+derivational+morphological+phonological	1	1.6	1	2.4	0	0.0
+lexical+semantic	1	1.6	1	2.4	0	0.0
+lexical+morphological+phonological+semantic	1	1.6	0	0.0	1	4.8
+lexical+morphological	1	1.6	0	0.0	1	4.8
