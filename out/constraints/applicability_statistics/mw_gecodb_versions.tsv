@@ -4,9 +4,9 @@ comparison
 gecodb_v06 vs. gecodb_v07	U	769.5	760.5	761.5	755.5
 gecodb_v06 vs. gecodb_v07	p	0.932	1.0	0.996	0.964
 gecodb_v06 vs. gecodb_v07	r	0.999	1.0	1.0	1.0
-gecodb_v06 vs. gecodb_v07_gn	U	769.5	760.5	761.5	755.5
-gecodb_v06 vs. gecodb_v07_gn	p	0.932	1.0	0.996	0.964
-gecodb_v06 vs. gecodb_v07_gn	r	0.999	1.0	1.0	1.0
-gecodb_v07 vs. gecodb_v07_gn	U	769.5	760.5	761.5	755.5
-gecodb_v07 vs. gecodb_v07_gn	p	0.932	1.0	0.996	0.964
-gecodb_v07 vs. gecodb_v07_gn	r	0.999	1.0	1.0	1.0
+gecodb_v06 vs. gecodb_v07_gn	U	719.0	731.0	814.5	764.5
+gecodb_v06 vs. gecodb_v07_gn	p	0.681	0.771	0.593	0.972
+gecodb_v06 vs. gecodb_v07_gn	r	0.982	0.991	0.999	1.0
+gecodb_v07 vs. gecodb_v07_gn	U	713.5	732.0	814.0	768.5
+gecodb_v07 vs. gecodb_v07_gn	p	0.641	0.779	0.596	0.94
+gecodb_v07 vs. gecodb_v07_gn	r	0.986	0.991	0.999	1.0
