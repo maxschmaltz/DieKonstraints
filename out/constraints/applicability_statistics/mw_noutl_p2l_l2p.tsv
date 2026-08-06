@@ -1,0 +1,5 @@
+alternative		cvg	reg
+P2L>L2P	U	235.5	89.0
+P2L>L2P	p	0.072	0.997
+P2L<L2P	U	235.5	89.0
+P2L<L2P	p	0.932	0.003
