@@ -1,0 +1,29 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               cvg_item   R-squared:                       0.117
+Model:                            OLS   Adj. R-squared:                  0.012
+Method:                 Least Squares   F-statistic:                     1.110
+Date:                Thu, 06 Aug 2026   Prob (F-statistic):              0.370
+Time:                        13:41:39   Log-Likelihood:                 10.975
+No. Observations:                  48   AIC:                            -9.951
+Df Residuals:                      42   BIC:                             1.277
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept                 0.2433      0.091      2.678      0.011       0.060       0.427
+morphological[T.True]    -0.1578      0.086     -1.829      0.075      -0.332       0.016
+derivational[T.True]     -0.1036      0.086     -1.208      0.234      -0.277       0.069
+phonological[T.True]      0.0132      0.072      0.184      0.855      -0.131       0.158
+semantic[T.True]         -0.0338      0.083     -0.409      0.684      -0.200       0.133
+lexical[T.True]          -0.2173      0.225     -0.966      0.340      -0.671       0.237
+==============================================================================
+Omnibus:                       54.471   Durbin-Watson:                   0.802
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              276.619
+Skew:                           3.002   Prob(JB):                     8.57e-61
+Kurtosis:                      13.113   Cond. No.                         10.1
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

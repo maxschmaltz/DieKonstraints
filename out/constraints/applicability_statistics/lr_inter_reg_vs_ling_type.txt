@@ -1,0 +1,57 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:               reg_item   R-squared:                       0.469
+Model:                            OLS   Adj. R-squared:                  0.344
+Method:                 Least Squares   F-statistic:                     3.734
+Date:                Thu, 06 Aug 2026   Prob (F-statistic):            0.00195
+Time:                        13:32:40   Log-Likelihood:                 37.106
+No. Observations:                  48   AIC:                            -54.21
+Df Residuals:                      38   BIC:                            -35.50
+Df Model:                           9                                         
+Covariance Type:            nonrobust                                         
+====================================================================================================================================================================
+                                                                                                       coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                                                            0.6719      0.049     13.753      0.000       0.573       0.771
+morphological[T.True]                                                                                0.2575      0.050      5.116      0.000       0.156       0.359
+derivational[T.True]                                                                                 0.1736      0.051      3.431      0.001       0.071       0.276
+phonological[T.True]                                                                                 0.1958      0.052      3.784      0.001       0.091       0.301
+semantic[T.True]                                                                                    -0.1278      0.029     -4.461      0.000      -0.186      -0.070
+lexical[T.True]                                                                                      0.0751      0.121      0.621      0.538      -0.170       0.320
+morphological[T.True]:derivational[T.True]                                                          -0.1260      0.084     -1.497      0.143      -0.296       0.044
+morphological[T.True]:phonological[T.True]                                                          -0.1451      0.076     -1.915      0.063      -0.299       0.008
+derivational[T.True]:phonological[T.True]                                                           -0.0506      0.076     -0.667      0.509      -0.204       0.103
+morphological[T.True]:semantic[T.True]                                                              -0.1278      0.029     -4.461      0.000      -0.186      -0.070
+derivational[T.True]:semantic[T.True]                                                                     0          0        nan        nan           0           0
+phonological[T.True]:semantic[T.True]                                                                0.0843      0.064      1.316      0.196      -0.045       0.214
+morphological[T.True]:lexical[T.True]                                                                     0          0        nan        nan           0           0
+derivational[T.True]:lexical[T.True]                                                                      0          0        nan        nan           0           0
+phonological[T.True]:lexical[T.True]                                                                      0          0        nan        nan           0           0
+semantic[T.True]:lexical[T.True]                                                                          0          0        nan        nan           0           0
+morphological[T.True]:derivational[T.True]:phonological[T.True]                                     -0.3520      0.160     -2.206      0.034      -0.675      -0.029
+morphological[T.True]:derivational[T.True]:semantic[T.True]                                               0          0        nan        nan           0           0
+morphological[T.True]:phonological[T.True]:semantic[T.True]                                          0.0843      0.064      1.316      0.196      -0.045       0.214
+derivational[T.True]:phonological[T.True]:semantic[T.True]                                                0          0        nan        nan           0           0
+morphological[T.True]:derivational[T.True]:lexical[T.True]                                                0          0        nan        nan           0           0
+morphological[T.True]:phonological[T.True]:lexical[T.True]                                                0          0        nan        nan           0           0
+derivational[T.True]:phonological[T.True]:lexical[T.True]                                                 0          0        nan        nan           0           0
+morphological[T.True]:semantic[T.True]:lexical[T.True]                                                    0          0        nan        nan           0           0
+derivational[T.True]:semantic[T.True]:lexical[T.True]                                                     0          0        nan        nan           0           0
+phonological[T.True]:semantic[T.True]:lexical[T.True]                                                     0          0        nan        nan           0           0
+morphological[T.True]:derivational[T.True]:phonological[T.True]:semantic[T.True]                          0          0        nan        nan           0           0
+morphological[T.True]:derivational[T.True]:phonological[T.True]:lexical[T.True]                           0          0        nan        nan           0           0
+morphological[T.True]:derivational[T.True]:semantic[T.True]:lexical[T.True]                               0          0        nan        nan           0           0
+morphological[T.True]:phonological[T.True]:semantic[T.True]:lexical[T.True]                               0          0        nan        nan           0           0
+derivational[T.True]:phonological[T.True]:semantic[T.True]:lexical[T.True]                                0          0        nan        nan           0           0
+morphological[T.True]:derivational[T.True]:phonological[T.True]:semantic[T.True]:lexical[T.True]          0          0        nan        nan           0           0
+==============================================================================
+Omnibus:                        0.912   Durbin-Watson:                   1.901
+Prob(Omnibus):                  0.634   Jarque-Bera (JB):                0.275
+Skew:                          -0.055   Prob(JB):                        0.872
+Kurtosis:                       3.354   Cond. No.                     1.46e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 3.97e-31. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.
