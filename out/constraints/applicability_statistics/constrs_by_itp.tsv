@@ -1,0 +1,4 @@
+is_productive	is_regular	N
+False	False	11
+True	False	13
+True	True	24
