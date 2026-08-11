@@ -3,8 +3,8 @@
 Dep. Variable:               cvg_item   R-squared:                       0.117
 Model:                            OLS   Adj. R-squared:                  0.012
 Method:                 Least Squares   F-statistic:                     1.110
-Date:                Thu, 06 Aug 2026   Prob (F-statistic):              0.370
-Time:                        16:08:06   Log-Likelihood:                 10.975
+Date:                Tue, 11 Aug 2026   Prob (F-statistic):              0.370
+Time:                        18:15:18   Log-Likelihood:                 10.975
 No. Observations:                  48   AIC:                            -9.951
 Df Residuals:                      42   BIC:                             1.277
 Df Model:                           5                                         
