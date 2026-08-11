@@ -3,8 +3,8 @@
 Dep. Variable:               reg_item   R-squared:                       0.469
 Model:                            OLS   Adj. R-squared:                  0.344
 Method:                 Least Squares   F-statistic:                     3.734
-Date:                Thu, 06 Aug 2026   Prob (F-statistic):            0.00195
-Time:                        16:08:06   Log-Likelihood:                 37.106
+Date:                Tue, 11 Aug 2026   Prob (F-statistic):            0.00195
+Time:                        18:15:18   Log-Likelihood:                 37.106
 No. Observations:                  48   AIC:                            -54.21
 Df Residuals:                      38   BIC:                            -35.50
 Df Model:                           9                                         

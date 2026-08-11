@@ -1,5 +1,5 @@
 alternative		cvg	reg
 P2L>L2P	shift	0.088	-0.131
-P2L>L2P	p	0.057	0.998
+P2L>L2P	p	0.059	0.998
 P2L<L2P	shift	0.088	-0.131
-P2L<L2P	p	0.943	0.002
+P2L<L2P	p	0.941	0.002

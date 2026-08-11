@@ -2544,7 +2544,6 @@ constraints:
     # 35
     p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s:
 
-        # TODO: compose with 35 into a new morphology-only constraint (as with "er-plurals)
         summary: First constituents that are constituted by consonant-final weak feminine nouns mostly adopt a zero linker or -s- when they have a singular meaning.
         acceptable_linkers: [_, _+s_]
         ling_info_type: [morphological, phonological, semantic]
@@ -2594,7 +2593,6 @@ constraints:
     # 36
     p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en:
     
-        # TODO: compose with 34 into a new morphology-only constraint (as with "er-plurals)
         summary: First constituents that are constituted by consonant-final weak feminine nouns --- especially final-stressed incl. monosyllabic ones --- attach -(e)n- more likely when they have a plural meaning.
         acceptable_linkers: [_+en_]
         ling_info_type: [morphological, phonological, semantic]
