@@ -1,5 +1,0 @@
-constr_id	appl_item	n_appl_items	quantifier	cvg_item_abs	cvg_item	cvg_type	reg_item	reg_type	n_violations	is_productive	is_regular	expected_reg_level	actual_reg_level	support_level
-p2l:decl_cl:pl:#e-0|msyl_anim-e	n1	3319.0	irregularly	31.0	0.009	0.009	0.088	0.385	28.276	False	False	low regularity	below scale	not supported
-p2l:drv:sfx:sfx-s|def-s	n1	3319.0	regularly	710.0	0.214	0.154	0.987	0.995	9.273	True	False	regular	high regularity	partially supported
-p2l:drv:prx_deverb-s	n1	3319.0	tendency	527.0	0.159	0.123	0.649	0.702	184.806	False	False	moderate regularity	low regularity	partially supported
-p2l:sem:2const_anim/pers-s	n1+n2	48660.0	tend	28.0	0.001	0.001	0.482	0.483	14.5	False	False	moderate regularity	below scale	not supported
