@@ -5768,7 +5768,7 @@ class TestApplicabilityCheckersELastSyl(unittest.TestCase):
 	# l2p:e|#stressed_syl
 	#
     # All nouns that constitute first constituents that attach -e-
-    # have a stressed last syllable.
+    # have a stressed last syllable or are derived of those with a stressed prefix.
 
     def test_e_last_syl_is_applicable_0(self):
         compound = Compound("tag_+e_buch")
@@ -6045,7 +6045,7 @@ class TestApplicabilityCheckersErLastSyl(unittest.TestCase):
 	# l2p:er|#stressed_syl
 	#
     # All nouns that constitute first constituents that attach -(")er-
-    # have a stressed last syllable.
+    # have a stressed last syllable or are derived of those with a stressed prefix.
 
     def test_er_last_syl_is_applicable_0(self):
         compound = Compound("buch_+=er_regal")
@@ -6157,14 +6157,27 @@ class TestApplicabilityCheckersErSmpx(unittest.TestCase):
             er_smpx_applies(compound)
         )
 
-        
+
     def test_er_smpx_is_applicable_3(self):
+        compound = Compound("mitglied_+er_liste")
+        self.assertTrue(
+            er_smpx_is_applicable(compound)
+        )
+
+    def test_er_smpx_applies_3(self):
+        compound = Compound("mitglied_+er_liste")
+        self.assertFalse(
+            er_smpx_applies(compound)
+        )
+
+        
+    def test_er_smpx_is_applicable_4(self):
         compound = Compound("haus_tür")
         self.assertFalse(
             er_smpx_is_applicable(compound)
         )
 
-    def test_er_smpx_is_applicable_4(self):
+    def test_er_smpx_is_applicable_5(self):
         compound = Compound("blume_+n_topf")
         self.assertFalse(
             er_smpx_is_applicable(compound)
@@ -6280,7 +6293,7 @@ class TestApplicabilityCheckersEUlmPar(unittest.TestCase):
 
         
     def test_e_uml_par_is_applicable_3(self):
-        compound = Compound("blume_+e_topf")
+        compound = Compound("blume_+n_topf")
         self.assertFalse(
             e_uml_par_is_applicable(compound)
         )
@@ -6374,12 +6387,12 @@ class TestApplicabilityCheckersEsIsol:
 	pass
 
 
-class TestApplicabilityCheckersEsIsol(unittest.TestCase):
+class TestApplicabilityCheckersEsMonosyl(unittest.TestCase):
 
 	# l2p:es|mono_syl
 	#
     # All nouns that constitute first constituents that attach -es-
-    # are monosyllabic.
+    # are monosyllabic or are derived of those with a prefix.
 
     # def test_es_isol_is_applicable_0(self):
     #     compound = Compound("bund_+es_tag")   bund was removed from CELEX
