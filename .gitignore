@@ -67,4 +67,4 @@ coverage.xml
 
 # resources and out: allow zip for heavy resources
 resources/GermaNet/V200/GN_V200_XML/
-resources/semrel_comp_corp_study-private/**.tsv
+resources/semrel_comp_corp_study-private/constr_appl_indices/**.tsv
