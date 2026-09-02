@@ -88,17 +88,22 @@ def main():
     # 4. Deduplicate the sample (keep doubtful cases).
 
     # (UniqN=2304, UniqN1N=43)
-    sp18_pl_constr = sp18[~sp18.index.duplicated(keep="first")]
+    sp18 = sp18[~sp18.index.duplicated(keep="first")]
+
+
+    # (UniqN=2294, UniqN1N=43)
+    # 5. Remove the rows with the annotation 'q'.
+    sp18_pl_constr = sp18[~(sp18["n1_sem"] == "q")]
 
     
-    # 5. Remove unnecessary columns (e.g. context, context_id, etc.).
+    # 6. Remove unnecessary columns (e.g. context, context_id, etc.).
     sp18_pl_constr.drop(
         columns=["n2_num", "context", "context_id"],
         inplace=True
     )
 
 
-    # 6. Save the resulting dataset.
+    # 7. Save the resulting dataset.
     sp18_pl_constr.to_csv(
         os.path.join(sp18_dir, "sp18_pl_constr.tsv"),
         sep="\t",

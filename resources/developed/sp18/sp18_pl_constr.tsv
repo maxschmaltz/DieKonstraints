@@ -644,7 +644,6 @@ frau_+en_anteil	frau	anteil	_+en_	coll	True	29268
 frau_+en_arzt	frau	arzt	_+en_	ind	True	16986
 frau_+en_beirat	frau	beirat	_+en_	coll	True	981
 frau_+en_bestattung	frau	bestattung	_+en_	ind	True	22
-frau_+en_bewegung	frau	bewegung	_+en_	q	True	15001
 frau_+en_beziehung	frau	beziehung	_+en_	ind	True	206
 frau_+en_bild	frau	bild	_+en_	ind	True	14592
 frau_+en_boot	frau	boot	_+en_	ind	True	172
@@ -786,7 +785,6 @@ geschenk_+e_paket	geschenk	paket	_+e_	ind	True	34
 geschenk_+e_päckchen	geschenk	päckchen	_+e_	ind	True	45
 geschenk_+e_rausch	geschenk	rausch	_+e_	ind	True	44
 geschenk_+e_sack	geschenk	sack	_+e_	konvc	True	1144
-geschenk_+e_schlacht	geschenk	schlacht	_+e_	q	True	55
 geschenk_+e_stand	geschenk	stand	_+e_	ind	True	64
 geschenk_+e_stapel	geschenk	stapel	_+e_	coll	True	29
 geschenk_+e_suche	geschenk	suche	_+e_	ind	True	311
@@ -1106,7 +1104,6 @@ hund_+e_pelz	hund	pelz	_+e_	ind	True	56
 hund_+e_pflege	hund	pflege	_+e_	ind	True	152
 hund_+e_platz	hund	platz	_+e_	ind	True	5252
 hund_+e_rasse	hund	rasse	_+e_	ind	True	9451
-hund_+e_rennen	hund	rennen	_+e_	q	True	1860
 hund_+e_rudel	hund	rudel	_+e_	coll	True	269
 hund_+e_runde	hund	runde	_+e_	coll	True	394
 hund_+e_schule	hund	schule	_+e_	ind	True	9818
@@ -1791,7 +1788,6 @@ schloss_verkauf	schloss	verkauf	_+=er_	ind	False	205
 schloss_verwaltung	schloss	verwaltung	_+=er_	ind	False	1126
 schloss_wache	schloss	wache	_+=er_	ind	False	291
 schwert_+er_geklirr	schwert	geklirr	_+er_	ind	True	45
-schwert_+er_kampf	schwert	kampf	_+er_	q	True	76
 schwert_+er_kiste	schwert	kiste	_+er_	ind	True	41
 schwert_+er_klang	schwert	klang	_+er_	ind	True	40
 schwert_+er_tanz	schwert	tanz	_+er_	ind	True	104
@@ -1800,11 +1796,9 @@ schwert_arm	schwert	arm	_+er_	ind	False	51
 schwert_attacke	schwert	attacke	_+er_	ind	False	71
 schwert_farn	schwert	farn	_+er_	ind	False	135
 schwert_form	schwert	form	_+er_	ind	False	83
-schwert_gefecht	schwert	gefecht	_+er_	q	False	20
 schwert_griff	schwert	griff	_+er_	ind	False	155
 schwert_größe	schwert	größe	_+er_	ind	False	48
 schwert_hieb	schwert	hieb	_+er_	ind	False	610
-schwert_kampf	schwert	kampf	_+er_	q	False	3922
 schwert_kasten	schwert	kasten	_+er_	ind	False	46
 schwert_klinge	schwert	klinge	_+er_	ind	False	160
 schwert_kämpfer	schwert	kämpfer	_+er_	ind	False	1454
@@ -1826,7 +1820,6 @@ schwester_+n_beruf	schwester	beruf	_+n_	ind	True	27
 schwester_+n_buch	schwester	buch	_+n_	ind	True	24
 schwester_+n_garten	schwester	garten	_+n_	ind	True	31
 schwester_+n_gruppe	schwester	gruppe	_+n_	coll	True	27
-schwester_+n_kampf	schwester	kampf	_+n_	q	True	21
 schwester_+n_kleid	schwester	kleid	_+n_	ind	True	21
 schwester_+n_konvent	schwester	konvent	_+n_	konvc	True	141
 schwester_+n_mord	schwester	mord	_+n_	ind	True	31
@@ -1924,11 +1917,9 @@ stadt_+=e_gemeinschaft	stadt	gemeinschaft	_+=e_	coll	True	128
 stadt_+=e_gruppe	stadt	gruppe	_+=e_	ind	True	82
 stadt_+=e_gründung	stadt	gründung	_+=e_	ind	True	124
 stadt_+=e_initiative	stadt	initiative	_+=e_	ind	True	145
-stadt_+=e_kampf	stadt	kampf	_+=e_	q	True	194
 stadt_+=e_konferenz	stadt	konferenz	_+=e_	coll	True	52
 stadt_+=e_konkurrenz	stadt	konkurrenz	_+=e_	coll	True	62
 stadt_+=e_kooperation	stadt	kooperation	_+=e_	coll	True	273
-stadt_+=e_krieg	stadt	krieg	_+=e_	q	True	121
 stadt_+=e_landschaft	stadt	landschaft	_+=e_	coll	True	188
 stadt_+=e_lauf	stadt	lauf	_+=e_	ind	True	378
 stadt_+=e_marathon	stadt	marathon	_+=e_	ind	True	141
@@ -2019,7 +2010,6 @@ vater_+=_anteil	vater	anteil	_+=_	coll	True	141
 vater_+=_aufbruch	vater	aufbruch	_+=_	ind	True	1106
 vater_+=_beratung	vater	beratung	_+=_	ind	True	87
 vater_+=_beteiligung	vater	beteiligung	_+=_	ind	True	150
-vater_+=_bewegung	vater	bewegung	_+=_	q	True	27
 vater_+=_bild	vater	bild	_+=_	ind	True	53
 vater_+=_forschung	vater	forschung	_+=_	ind	True	31
 vater_+=_förderung	vater	förderung	_+=_	ind	True	27

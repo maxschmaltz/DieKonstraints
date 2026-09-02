@@ -210,6 +210,22 @@ def main():
     # extpe/ic_alt_nipe_npll.tsv'         
 
 
+    # NB!!! Update: I found out much later that there is about a dozen
+    # of entries with an annotation 'Q'. Please note that this does not
+    # affect any of the experiments:
+    # 1. The ExtPE ignores the plural semantics annotation;
+    # 2. The IntPE is not affected because:
+    #   * `prepare_sp18_intpe` only uses the annotations to
+    #   filter out N1 that appear with singular meaning only;
+    #   all of the 'Q'-annotated N1s have plural meaning entries,
+    #   so they are not removed anyways and so the fact that 'Q'
+    #   was not considered during the filtering could not have become 
+    #   a reason for an erroneous removal of any N1s;
+    #   * the actual IntPE experiment contrasts 'ind' vs 'coll'
+    #   labels explicitly (not 'coll' vs. non-'coll'), 
+    #   and so 'Q' were as good as absent.
+    # 3. SP18_Pl_Constr now removes these entries.
+
     sp18_path = "resources/developed/sp18/sp18.tsv"
     constr_path = "constraints/constraints_all_revised.yaml"
 

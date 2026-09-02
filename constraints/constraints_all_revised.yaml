@@ -203,9 +203,9 @@ datasets:
         celexn_version: 1
 
     sp18_pl_constr:
-        description: "~2.5k German N+N compounds from the DECOW16A corpus that have a WC of at least 20 in DeReKo, with annotated singular/plural meaning of N1."
+        description: "~2.3k German N+N compounds from the DECOW16A corpus that have a WC of at least 20 in DeReKo, with annotated singular/plural meaning of N1."
         origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Corpusstudy/Concordance.full.csv'), final preprocessing in the present study ([data_utils/prepare_sp18_pl_constr.py](data_utils/prepare_sp18_pl_constr.py)).
-        size: 2681 compound lemmata. 44 N1 lemmata. 8 linkers, 9 linker allomorphs. 78 unique N1+(Sg/Pl meaning) combinations. 88 unique N1+linker combinations.
+        size: 2294 compound lemmata. 43 N1 lemmata. 8 linkers, 9 linker allomorphs. 76 unique N1+(Sg/Pl meaning) combinations. 86 unique N1+linker combinations.
         filepath: resources/developed/sp18/sp18_pl_constr.tsv
         load_func: load_sp18
         # GermaNet coverage not important
@@ -953,7 +953,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            sp18_pl_constr: 78
+            sp18_pl_constr: 76
 
         func_alias: plur_e_pl
 
@@ -1121,7 +1121,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            sp18_pl_constr: 78
+            sp18_pl_constr: 76
 
         func_alias: plur_er_sg
 
@@ -1213,7 +1213,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            sp18_pl_constr: 78
+            sp18_pl_constr: 76
 
         func_alias: plur_er_pl
 
@@ -1383,7 +1383,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            sp18_pl_constr: 78
+            sp18_pl_constr: 76
 
         func_alias: plur_e_uml_pl
 
@@ -1502,7 +1502,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            sp18_pl_constr: 78
+            sp18_pl_constr: 76
 
         quantifier: irregularly
         measures:
@@ -1627,7 +1627,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            sp18_pl_constr: 78
+            sp18_pl_constr: 76
 
         func_alias: mixed_mn_pl
 
@@ -1883,7 +1883,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            sp18_pl_constr: 78
+            sp18_pl_constr: 76
 
         func_alias: schwa_fin_deverb_pl
 
@@ -2116,7 +2116,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            sp18_pl_constr: 78
+            sp18_pl_constr: 76
 
         func_alias: sfx_s_pl
 
@@ -2609,7 +2609,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            sp18_pl_constr: 78
+            sp18_pl_constr: 76
 
         func_alias: stressed_phon_fin_pl
 
@@ -2939,7 +2939,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            sp18_pl_constr: 78
+            sp18_pl_constr: 76
 
         func_alias: f_cons_fin_sg
 
@@ -2991,7 +2991,7 @@ constraints:
         
         appl_item: n1+sem
         datasets_n_appl_items:
-            sp18_pl_constr: 78
+            sp18_pl_constr: 76
 
         func_alias: f_cons_fin_pl
 
@@ -4789,7 +4789,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            sp18_pl_constr: 88
+            sp18_pl_constr: 86
 
         func_alias: pl_interpr
 
