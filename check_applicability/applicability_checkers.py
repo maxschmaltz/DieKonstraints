@@ -1336,22 +1336,29 @@ def sec_const_anim_applies(compound: Compound):
 # morphological complexity of the first constituent
 # (any form of derivation).
 
+# # DEPRECATED
+# def cmpx_morph_is_applicable(compound: Compound):
+# 	# universal tendency
+# 	return True
+
+# def cmpx_morph_applies(compound: Compound):
+# 	n1 = compound.constituents[0].morph
+# 	return (
+# 		(
+# 			_is_simplex(n1)
+# 			and not _has_linker(compound, linker_morph="s")
+# 		)
+# 		or (
+# 			_is_derived(n1)
+# 			and _has_linker(compound, linker_morph="s")
+# 		)
+# 	)
+
 def cmpx_morph_is_applicable(compound: Compound):
-	# universal tendency
-	return True
+	return _is_derived(compound.constituents[0].morph)
 
 def cmpx_morph_applies(compound: Compound):
-	n1 = compound.constituents[0].morph
-	return (
-		(
-			_is_simplex(n1)
-			and not _has_linker(compound, linker_morph="s")
-		)
-		or (
-			_is_derived(n1)
-			and _has_linker(compound, linker_morph="s")
-		)
-	)
+	return _has_linker(compound, linker_morph="s")
 
 
 
@@ -1364,34 +1371,41 @@ def cmpx_morph_applies(compound: Compound):
 # words with unstressed prefixes,
 # words with stressed or semi-stressed suffixes etc.
 
+# # DEPRECATED
+# def cmpx_phon_is_applicable(compound: Compound):
+# 	# universal tendency
+# 	return True
+
+# def cmpx_phon_applies(compound: Compound):
+# 	n1 = compound.constituents[0].morph
+# 	return (
+# 		(
+# 			# even though [nuebling_szczepaniak_2013:78] claims
+# 			# that the ideal is a trochee with a schwa at the end,
+# 			# we, following [fuhrhop_kuerschner_2015:572], expand
+# 			# the definition of phonologically good words
+# 			# with monosyllabic words and trochaic words
+# 			# with full vowel at the end;
+# 			# the cases of unstressed prefixes and stressed suffixes
+# 			# do not have to be checked separately here
+# 			# since they corrupt the trochaic pattern anyway
+# 			(
+# 				_is_monosyllabic(n1)
+# 				or _is_trochaic(n1)
+# 			)
+# 			and not _has_linker(compound, linker_morph="s")
+# 		)
+# 		or (
+# 			not _is_trochaic(n1)
+# 			and _has_linker(compound, linker_morph="s")
+# 		)
+# 	)
+
 def cmpx_phon_is_applicable(compound: Compound):
-	# universal tendency
-	return True
+	return not _is_trochaic(compound.constituents[0].morph)
 
 def cmpx_phon_applies(compound: Compound):
-	n1 = compound.constituents[0].morph
-	return (
-		(
-			# even though [nuebling_szczepaniak_2013:78] claims
-			# that the ideal is a trochee with a schwa at the end,
-			# we, following [fuhrhop_kuerschner_2015:572], expand
-			# the definition of phonologically good words
-			# with monosyllabic words and trochaic words
-			# with full vowel at the end;
-			# the cases of unstressed prefixes and stressed suffixes
-			# do not have to be checked separately here
-			# since they corrupt the trochaic pattern anyway
-			(
-				_is_monosyllabic(n1)
-				or _is_trochaic(n1)
-			)
-			and not _has_linker(compound, linker_morph="s")
-		)
-		or (
-			not _is_trochaic(n1)
-			and _has_linker(compound, linker_morph="s")
-		)
-	)
+	return _has_linker(compound, linker_morph="s")
 
 
 
