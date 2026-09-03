@@ -39,8 +39,8 @@ p2l:sem:comp_type:copula-0
 p2l:sem:comp_type:arg-s														
 p2l:sem:tech_term-0														
 p2l:sem:2const_anim/pers-s														
-p2l:tend:cmpx_morph-s|def-s	n1	3593	tendency	3593	1.0	1.0	0.737	0.766	946.188	False	False	moderate regularity	moderate regularity	supported
-p2l:tend:cmpx_phon-s|def-s	n1	3593	tendency	3593	1.0	1.0	0.722	0.76	997.373	False	False	moderate regularity	moderate regularity	supported
+p2l:tend:cmpx_morph-s|def-s	n1	3593	tendency	1855	0.516	0.429	0.525	0.529	881.505	False	False	moderate regularity	low regularity	partially supported
+p2l:tend:cmpx_phon-s|def-s	n1	3593	tendency	2163	0.602	0.624	0.36	0.28	1384.946	False	False	moderate regularity	below scale	not supported
 p2l:tend:sonority-!s	n1	3593	tend	1549	0.431	0.495	0.8	0.716	310.151	False	False	moderate regularity	moderate regularity	supported
 l2p:s|smpx_mn	n1+linker	4741	almost all	191	0.04	0.032	0.984	0.912	3.0	True	True	high regularity	regular	supported+
 l2p:s|smpx_high_freq	n1+linker	4741	many	191	0.04	0.032	0.691	0.92	59.0	False	False	moderate regularity	low regularity	partially supported

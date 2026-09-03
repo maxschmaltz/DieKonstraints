@@ -18,7 +18,7 @@ p2l:decl_cl:pl:#e-0|def-0	sp18_pl_constr
 p2l:decl_cl:pl:#e-0|pl_interpr-e	gecodb_v06														
 p2l:decl_cl:pl:#e-0|pl_interpr-e	gecodb_v07														
 p2l:decl_cl:pl:#e-0|pl_interpr-e	gecodb_v07_gn														
-p2l:decl_cl:pl:#e-0|pl_interpr-e	sp18_pl_constr	n1+sem	78	irregularly	6	0.077	0.022	0.544	0.52	2.733	True	False	low regularity	low regularity	supported
+p2l:decl_cl:pl:#e-0|pl_interpr-e	sp18_pl_constr	n1+sem	76	irregularly	6	0.079	0.022	0.544	0.52	2.733	True	False	low regularity	low regularity	supported
 p2l:decl_cl:pl:#e-0|msyl_anim-e	gecodb_v06														
 p2l:decl_cl:pl:#e-0|msyl_anim-e	gecodb_v07														
 p2l:decl_cl:pl:#e-0|msyl_anim-e	gecodb_v07_gn	n1	3319	irregularly	31	0.009	0.009	0.088	0.385	28.276	False	False	low regularity	below scale	not supported
@@ -30,7 +30,7 @@ p2l:decl_cl:pl:#er-0/er|def-0/er	sp18_pl_constr
 p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	gecodb_v06														
 p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	gecodb_v07														
 p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	gecodb_v07_gn														
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	sp18_pl_constr	n1+sem	78	majority	13	0.167	0.329	0.621	0.572	4.933	True	False	low regularity	low regularity	supported
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	sp18_pl_constr	n1+sem	76	majority	13	0.171	0.329	0.622	0.572	4.914	True	False	low regularity	low regularity	supported
 p2l:decl_cl:pl:#er-0/er|mass-interpr-0	gecodb_v06														
 p2l:decl_cl:pl:#er-0/er|mass-interpr-0	gecodb_v07														
 p2l:decl_cl:pl:#er-0/er|mass-interpr-0	gecodb_v07_gn	n1	3319	tend	6	0.002	0.009	0.741	0.906	1.554	True	True	moderate regularity	regular	supported+
@@ -38,7 +38,7 @@ p2l:decl_cl:pl:#er-0/er|mass-interpr-0	sp18_pl_constr
 p2l:decl_cl:pl:#er-0/er|pl_interpr-er	gecodb_v06														
 p2l:decl_cl:pl:#er-0/er|pl_interpr-er	gecodb_v07														
 p2l:decl_cl:pl:#er-0/er|pl_interpr-er	gecodb_v07_gn														
-p2l:decl_cl:pl:#er-0/er|pl_interpr-er	sp18_pl_constr	n1+sem	78	more likely	10	0.128	0.037	0.754	0.721	2.456	True	False	moderate regularity	moderate regularity	supported
+p2l:decl_cl:pl:#er-0/er|pl_interpr-er	sp18_pl_constr	n1+sem	76	more likely	10	0.132	0.037	0.754	0.721	2.456	True	False	moderate regularity	moderate regularity	supported
 p2l:decl_cl:pl:#er-0/er|anim-er	gecodb_v06														
 p2l:decl_cl:pl:#er-0/er|anim-er	gecodb_v07														
 p2l:decl_cl:pl:#er-0/er|anim-er	gecodb_v07_gn	n1	3319	may	10	0.003	0.01	0.501	0.803	4.989	False	False	low regularity	low regularity	supported
@@ -50,7 +50,7 @@ p2l:decl_cl:pl:#e_uml-0|def-0	sp18_pl_constr
 p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml	gecodb_v06														
 p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml	gecodb_v07														
 p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml	gecodb_v07_gn														
-p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml	sp18_pl_constr	n1+sem	78	irregularly	4	0.051	0.01	0.562	0.864	1.75	True	False	low regularity	low regularity	supported
+p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml	sp18_pl_constr	n1+sem	76	irregularly	4	0.053	0.01	0.562	0.864	1.75	True	False	low regularity	low regularity	supported
 p2l:decl_cl:pl:#0_uml-0|def-0	gecodb_v06	n1	3614	almost always	25	0.007	0.016	0.946	0.967	1.345	True	True	high regularity	regular	supported+
 p2l:decl_cl:pl:#0_uml-0|def-0	gecodb_v07	n1	3593	almost always	25	0.007	0.016	0.952	0.97	1.19	True	True	high regularity	regular	supported+
 p2l:decl_cl:pl:#0_uml-0|def-0	gecodb_v07_gn	n1	3319	almost always	24	0.007	0.019	0.974	0.986	0.612	True	True	high regularity	regular	supported+
@@ -58,7 +58,7 @@ p2l:decl_cl:pl:#0_uml-0|def-0	sp18_pl_constr
 p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml	gecodb_v06														
 p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml	gecodb_v07														
 p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml	gecodb_v07_gn														
-p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml	sp18_pl_constr	n1+sem	78	irregularly	3	0.038	0.007	0.667	0.625	1.0	True	True	low regularity	regular	supported+
+p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml	sp18_pl_constr	n1+sem	76	irregularly	3	0.039	0.007	0.667	0.625	1.0	True	True	low regularity	regular	supported+
 p2l:decl_cl:mixed-0/s/en|def-0/s/en	gecodb_v06	n1	3614	regularly	47	0.013	0.013	0.997	0.996	0.163	True	True	regular	regular	supported
 p2l:decl_cl:mixed-0/s/en|def-0/s/en	gecodb_v07	n1	3593	regularly	46	0.013	0.013	0.996	0.996	0.163	True	True	regular	regular	supported
 p2l:decl_cl:mixed-0/s/en|def-0/s/en	gecodb_v07_gn	n1	3319	regularly	44	0.013	0.016	0.996	0.995	0.156	True	True	regular	regular	supported
@@ -66,7 +66,7 @@ p2l:decl_cl:mixed-0/s/en|def-0/s/en	sp18_pl_constr
 p2l:decl_cl:mixed-0/s/en|pl_interpr-en	gecodb_v06														
 p2l:decl_cl:mixed-0/s/en|pl_interpr-en	gecodb_v07														
 p2l:decl_cl:mixed-0/s/en|pl_interpr-en	gecodb_v07_gn														
-p2l:decl_cl:mixed-0/s/en|pl_interpr-en	sp18_pl_constr	n1+sem	78	more likely	3	0.038	0.004	1.0	1.0	0.0	True	True	moderate regularity	regular	supported+
+p2l:decl_cl:mixed-0/s/en|pl_interpr-en	sp18_pl_constr	n1+sem	76	more likely	3	0.039	0.004	1.0	1.0	0.0	True	True	moderate regularity	regular	supported+
 p2l:drv:sfx:0_pl_sfx-0	gecodb_v06	n1	3614	regularly	257	0.071	0.045	0.983	0.968	4.423	True	True	regular	regular	supported
 p2l:drv:sfx:0_pl_sfx-0	gecodb_v07	n1	3593	regularly	256	0.071	0.045	0.986	0.969	3.523	True	True	regular	regular	supported
 p2l:drv:sfx:0_pl_sfx-0	gecodb_v07_gn	n1	3319	regularly	226	0.068	0.032	0.984	0.96	3.711	True	True	regular	regular	supported
@@ -82,7 +82,7 @@ p2l:drv:deverb_schwa$-0|def-0	sp18_pl_constr
 p2l:drv:deverb_schwa$-0|pl_interpr-en	gecodb_v06														
 p2l:drv:deverb_schwa$-0|pl_interpr-en	gecodb_v07														
 p2l:drv:deverb_schwa$-0|pl_interpr-en	gecodb_v07_gn														
-p2l:drv:deverb_schwa$-0|pl_interpr-en	sp18_pl_constr	n1+sem	78	tend	0	0.0	0.0								
+p2l:drv:deverb_schwa$-0|pl_interpr-en	sp18_pl_constr	n1+sem	76	tend	0	0.0	0.0								
 p2l:drv:deadj_schwa$-0/en	gecodb_v06	n1	3614	always	32	0.009	0.01	0.97	0.852	0.954	True	True	regular	regular	supported
 p2l:drv:deadj_schwa$-0/en	gecodb_v07	n1	3593	always	32	0.009	0.01	0.97	0.849	0.958	True	True	regular	regular	supported
 p2l:drv:deadj_schwa$-0/en	gecodb_v07_gn	n1	3319	always	29	0.009	0.008	0.966	0.833	0.984	True	True	regular	regular	supported
@@ -94,7 +94,7 @@ p2l:drv:sfx:sfx-s|def-s	sp18_pl_constr
 p2l:drv:sfx:sfx-s|pl_interpr-en	gecodb_v06														
 p2l:drv:sfx:sfx-s|pl_interpr-en	gecodb_v07														
 p2l:drv:sfx:sfx-s|pl_interpr-en	gecodb_v07_gn														
-p2l:drv:sfx:sfx-s|pl_interpr-en	sp18_pl_constr	n1+sem	78	irregularly	1	0.013	0.001	1.0	1.0	0.0	True	True	low regularity	regular	supported+
+p2l:drv:sfx:sfx-s|pl_interpr-en	sp18_pl_constr	n1+sem	76	irregularly	1	0.013	0.001	1.0	1.0	0.0	True	True	low regularity	regular	supported+
 p2l:drv:sfx:deverb_#en$-s	gecodb_v06	n1	3614	mostly	19	0.005	0.009	0.773	0.926	4.319	True	False	low regularity	moderate regularity	supported+
 p2l:drv:sfx:deverb_#en$-s	gecodb_v07	n1	3593	mostly	19	0.005	0.009	0.775	0.928	4.272	True	False	low regularity	moderate regularity	supported+
 p2l:drv:sfx:deverb_#en$-s	gecodb_v07_gn	n1	3319	mostly	18	0.005	0.01	0.831	0.962	3.05	True	False	low regularity	moderate regularity	supported+
@@ -122,7 +122,7 @@ p2l:phon_fin:F_#stressed_phon$|def-0	sp18_pl_constr
 p2l:phon_fin:F_#stressed_phon$|pl_interpr-en	gecodb_v06														
 p2l:phon_fin:F_#stressed_phon$|pl_interpr-en	gecodb_v07														
 p2l:phon_fin:F_#stressed_phon$|pl_interpr-en	gecodb_v07_gn														
-p2l:phon_fin:F_#stressed_phon$|pl_interpr-en	sp18_pl_constr	n1+sem	78	irregularly	0	0.0	0.0								
+p2l:phon_fin:F_#stressed_phon$|pl_interpr-en	sp18_pl_constr	n1+sem	76	irregularly	0	0.0	0.0								
 p2l:phon_fin:F_stem_#t$-s	gecodb_v06	n1	3614	sometimes	47	0.013	0.016	0.505	0.463	23.271	False	False	low regularity	low regularity	supported
 p2l:phon_fin:F_stem_#t$-s	gecodb_v07	n1	3593	sometimes	46	0.013	0.016	0.516	0.464	22.242	False	False	low regularity	low regularity	supported
 p2l:phon_fin:F_stem_#t$-s	gecodb_v07_gn	n1	3319	sometimes	41	0.012	0.02	0.625	0.501	15.386	False	False	low regularity	low regularity	supported
@@ -138,11 +138,11 @@ p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en	sp18_pl_constr
 p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s	gecodb_v06														
 p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s	gecodb_v07														
 p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s	gecodb_v07_gn														
-p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s	sp18_pl_constr	n1+sem	78	mostly	4	0.051	0.033	0.41	0.184	2.359	True	False	low regularity	below scale	not supported
+p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s	sp18_pl_constr	n1+sem	76	mostly	4	0.053	0.033	0.416	0.187	2.337	True	False	low regularity	below scale	not supported
 p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en	gecodb_v06														
 p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en	gecodb_v07														
 p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en	gecodb_v07_gn														
-p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en	sp18_pl_constr	n1+sem	78	more likely	3	0.038	0.009	1.0	1.0	0.0	True	True	moderate regularity	regular	supported+
+p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en	sp18_pl_constr	n1+sem	76	more likely	3	0.039	0.009	1.0	1.0	0.0	True	True	moderate regularity	regular	supported+
 p2l:sem:comp_type:copula-0	gecodb_v06														
 p2l:sem:comp_type:copula-0	gecodb_v07														
 p2l:sem:comp_type:copula-0	gecodb_v07_gn														
@@ -159,13 +159,13 @@ p2l:sem:2const_anim/pers-s	gecodb_v06
 p2l:sem:2const_anim/pers-s	gecodb_v07														
 p2l:sem:2const_anim/pers-s	gecodb_v07_gn	n1+n2	48660	tend	28	0.001	0.001	0.482	0.483	14.5	False	False	moderate regularity	below scale	not supported
 p2l:sem:2const_anim/pers-s	sp18_pl_constr														
-p2l:tend:cmpx_morph-s|def-s	gecodb_v06	n1	3614	tendency	3614	1.0	1.0	0.735	0.766	957.755	False	False	moderate regularity	moderate regularity	supported
-p2l:tend:cmpx_morph-s|def-s	gecodb_v07	n1	3593	tendency	3593	1.0	1.0	0.737	0.766	946.188	False	False	moderate regularity	moderate regularity	supported
-p2l:tend:cmpx_morph-s|def-s	gecodb_v07_gn	n1	3319	tendency	3319	1.0	1.0	0.742	0.778	854.716	False	False	moderate regularity	moderate regularity	supported
+p2l:tend:cmpx_morph-s|def-s	gecodb_v06	n1	3614	tendency	1865	0.516	0.426	0.522	0.526	891.221	False	False	moderate regularity	low regularity	partially supported
+p2l:tend:cmpx_morph-s|def-s	gecodb_v07	n1	3593	tendency	1855	0.516	0.429	0.525	0.529	881.505	False	False	moderate regularity	low regularity	partially supported
+p2l:tend:cmpx_morph-s|def-s	gecodb_v07_gn	n1	3319	tendency	1696	0.511	0.41	0.535	0.558	788.512	False	False	moderate regularity	low regularity	partially supported
 p2l:tend:cmpx_morph-s|def-s	sp18_pl_constr														
-p2l:tend:cmpx_phon-s|def-s	gecodb_v06	n1	3614	tendency	3614	1.0	1.0	0.723	0.761	1002.443	False	False	moderate regularity	moderate regularity	supported
-p2l:tend:cmpx_phon-s|def-s	gecodb_v07	n1	3593	tendency	3593	1.0	1.0	0.722	0.76	997.373	False	False	moderate regularity	moderate regularity	supported
-p2l:tend:cmpx_phon-s|def-s	gecodb_v07_gn	n1	3319	tendency	3319	1.0	1.0	0.719	0.767	931.185	False	False	moderate regularity	moderate regularity	supported
+p2l:tend:cmpx_phon-s|def-s	gecodb_v06	n1	3614	tendency	2176	0.602	0.622	0.358	0.277	1396.719	False	False	moderate regularity	below scale	not supported
+p2l:tend:cmpx_phon-s|def-s	gecodb_v07	n1	3593	tendency	2163	0.602	0.624	0.36	0.28	1384.946	False	False	moderate regularity	below scale	not supported
+p2l:tend:cmpx_phon-s|def-s	gecodb_v07_gn	n1	3319	tendency	2005	0.604	0.641	0.357	0.28	1289.877	False	False	moderate regularity	below scale	not supported
 p2l:tend:cmpx_phon-s|def-s	sp18_pl_constr														
 p2l:tend:sonority-!s	gecodb_v06	n1	3614	tend	1559	0.431	0.498	0.796	0.717	317.804	False	False	moderate regularity	moderate regularity	supported
 p2l:tend:sonority-!s	gecodb_v07	n1	3593	tend	1549	0.431	0.495	0.8	0.716	310.151	False	False	moderate regularity	moderate regularity	supported
@@ -258,4 +258,4 @@ l2p:0_uml	sp18_pl_constr
 l2p:pl_marker|def-pl	gecodb_v06														
 l2p:pl_marker|def-pl	gecodb_v07														
 l2p:pl_marker|def-pl	gecodb_v07_gn														
-l2p:pl_marker|def-pl	sp18_pl_constr	n1+linker	88	tend	40	0.455	0.465	0.146	0.153	34.159	False	False	moderate regularity	below scale	not supported
+l2p:pl_marker|def-pl	sp18_pl_constr	n1+linker	76	tend	40	0.526	0.463	0.147	0.154	34.108	False	False	moderate regularity	below scale	not supported

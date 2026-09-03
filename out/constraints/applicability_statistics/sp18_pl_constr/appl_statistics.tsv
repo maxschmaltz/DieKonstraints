@@ -3,38 +3,38 @@ def-0
 p2l:decl_cl:pl:#0-0|def-0														
 p2l:decl_cl:pl:#s-0														
 p2l:decl_cl:pl:#e-0|def-0														
-p2l:decl_cl:pl:#e-0|pl_interpr-e	n1+sem	78	irregularly	6	0.077	0.022	0.544	0.52	2.733	True	False	low regularity	low regularity	supported
+p2l:decl_cl:pl:#e-0|pl_interpr-e	n1+sem	76	irregularly	6	0.079	0.022	0.544	0.52	2.733	True	False	low regularity	low regularity	supported
 p2l:decl_cl:pl:#e-0|msyl_anim-e														
 p2l:decl_cl:pl:#er-0/er|def-0/er														
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	n1+sem	78	majority	13	0.167	0.329	0.621	0.572	4.933	True	False	low regularity	low regularity	supported
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	n1+sem	76	majority	13	0.171	0.329	0.622	0.572	4.914	True	False	low regularity	low regularity	supported
 p2l:decl_cl:pl:#er-0/er|mass-interpr-0														
-p2l:decl_cl:pl:#er-0/er|pl_interpr-er	n1+sem	78	more likely	10	0.128	0.037	0.754	0.721	2.456	True	False	moderate regularity	moderate regularity	supported
+p2l:decl_cl:pl:#er-0/er|pl_interpr-er	n1+sem	76	more likely	10	0.132	0.037	0.754	0.721	2.456	True	False	moderate regularity	moderate regularity	supported
 p2l:decl_cl:pl:#er-0/er|anim-er														
 p2l:decl_cl:pl:#e_uml-0|def-0														
-p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml	n1+sem	78	irregularly	4	0.051	0.01	0.562	0.864	1.75	True	False	low regularity	low regularity	supported
+p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml	n1+sem	76	irregularly	4	0.053	0.01	0.562	0.864	1.75	True	False	low regularity	low regularity	supported
 p2l:decl_cl:pl:#0_uml-0|def-0														
-p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml	n1+sem	78	irregularly	3	0.038	0.007	0.667	0.625	1.0	True	True	low regularity	regular	supported+
+p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml	n1+sem	76	irregularly	3	0.039	0.007	0.667	0.625	1.0	True	True	low regularity	regular	supported+
 p2l:decl_cl:mixed-0/s/en|def-0/s/en														
-p2l:decl_cl:mixed-0/s/en|pl_interpr-en	n1+sem	78	more likely	3	0.038	0.004	1.0	1.0	0.0	True	True	moderate regularity	regular	supported+
+p2l:decl_cl:mixed-0/s/en|pl_interpr-en	n1+sem	76	more likely	3	0.039	0.004	1.0	1.0	0.0	True	True	moderate regularity	regular	supported+
 p2l:drv:sfx:0_pl_sfx-0														
 p2l:drv:sfx:e_pl_sfx-0														
 p2l:drv:deverb_schwa$-0|def-0														
-p2l:drv:deverb_schwa$-0|pl_interpr-en	n1+sem	78	tend	0	0.0	0.0								
+p2l:drv:deverb_schwa$-0|pl_interpr-en	n1+sem	76	tend	0	0.0	0.0								
 p2l:drv:deadj_schwa$-0/en														
 p2l:drv:sfx:sfx-s|def-s														
-p2l:drv:sfx:sfx-s|pl_interpr-en	n1+sem	78	irregularly	1	0.013	0.001	1.0	1.0	0.0	True	True	low regularity	regular	supported+
+p2l:drv:sfx:sfx-s|pl_interpr-en	n1+sem	76	irregularly	1	0.013	0.001	1.0	1.0	0.0	True	True	low regularity	regular	supported+
 p2l:drv:sfx:deverb_#en$-s														
 p2l:drv:sfx:F_#in$-en														
 p2l:drv:prx_deverb-s														
 p2l:phon_fin:sibilant$-0														
 p2l:phon_fin:vow$-0														
 p2l:phon_fin:F_#stressed_phon$|def-0														
-p2l:phon_fin:F_#stressed_phon$|pl_interpr-en	n1+sem	78	irregularly	0	0.0	0.0								
+p2l:phon_fin:F_#stressed_phon$|pl_interpr-en	n1+sem	76	irregularly	0	0.0	0.0								
 p2l:phon_fin:F_stem_#t$-s														
 p2l:phon_fin:schwa$-en|def-en														
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en														
-p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s	n1+sem	78	mostly	4	0.051	0.033	0.41	0.184	2.359	True	False	low regularity	below scale	not supported
-p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en	n1+sem	78	more likely	3	0.038	0.009	1.0	1.0	0.0	True	True	moderate regularity	regular	supported+
+p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s	n1+sem	76	mostly	4	0.053	0.033	0.416	0.187	2.337	True	False	low regularity	below scale	not supported
+p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en	n1+sem	76	more likely	3	0.039	0.009	1.0	1.0	0.0	True	True	moderate regularity	regular	supported+
 p2l:sem:comp_type:copula-0														
 p2l:sem:comp_type:arg-s														
 p2l:sem:tech_term-0														
@@ -63,4 +63,4 @@ l2p:es|isol
 l2p:es|mono_syl														
 l2p:ens														
 l2p:0_uml														
-l2p:pl_marker|def-pl	n1+linker	88	tend	40	0.455	0.465	0.146	0.153	34.159	False	False	moderate regularity	below scale	not supported
+l2p:pl_marker|def-pl	n1+linker	76	tend	40	0.526	0.463	0.147	0.154	34.108	False	False	moderate regularity	below scale	not supported

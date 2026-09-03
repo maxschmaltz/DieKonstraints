@@ -210,13 +210,14 @@ datasets:
         load_func: load_sp18
         celexn_version: 0
 
-    gecodb_v07_pll_ant:
-        description: "~1.3k German N+N compounds from GeCoDB_v07 with annotated singular/plural meaning of N1."
-        origin: "Originates from GeCoDB_v07. The preparation is the product of the present study. Sample extraction and vignettes generation in [data_utils/prepare_gecodb_v07_pll_ant_vignettes.ipynb](data_utils/prepare_gecodb_v07_pll_ant_vignettes.ipynb). The vignettes were annotated by two independent annotators: our HiWis, native German speakers. The annotated vignettes are parsed and filtered in [data_utils/prepare_gecodb_v07_pll_ant.ipynb](data_utils/prepare_gecodb_v07_pll_ant.ipynb). Only entries where the two annotators agreed on the class were kept."
-        size: 1308 compound lemmata. 49 N1 lemmata. 8 linkers, 9 linker allomorphs. 82 unique N1+(Sg/Pl meaning) combinations. 99 unique N1+linker combinations.
-        filepath: resources/developed/gecodb_v07_pll_ant/gecodb_v07_pll_ant.tsv
-        load_func: load_sp18
-        celexn_version: 1
+    # # The validity of the dataset is being assessed at the moment.
+    # gecodb_v07_pll_ant:
+    #     description: "~1.3k German N+N compounds from GeCoDB_v07 with annotated singular/plural meaning of N1."
+    #     origin: "Originates from GeCoDB_v07. The preparation is the product of the present study. Sample extraction and vignettes generation in [data_utils/prepare_gecodb_v07_pll_ant_vignettes.ipynb](data_utils/prepare_gecodb_v07_pll_ant_vignettes.ipynb). The vignettes were annotated by two independent annotators: our HiWis, native German speakers. The annotated vignettes are parsed and filtered in [data_utils/prepare_gecodb_v07_pll_ant.ipynb](data_utils/prepare_gecodb_v07_pll_ant.ipynb). Only entries where the two annotators agreed on the class were kept."
+    #     size: 1308 compound lemmata. 49 N1 lemmata. 8 linkers, 9 linker allomorphs. 82 unique N1+(Sg/Pl meaning) combinations. 99 unique N1+linker combinations.
+    #     filepath: resources/developed/gecodb_v07_pll_ant/gecodb_v07_pll_ant.tsv
+    #     load_func: load_sp18
+    #     celexn_version: 1
 
 ---
 
@@ -961,7 +962,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 82
+            # gecodb_v07_pll_ant: 82
 
         func_alias: plur_e_pl
 
@@ -1130,7 +1131,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 82
+            # gecodb_v07_pll_ant: 82
 
         func_alias: plur_er_sg
 
@@ -1223,7 +1224,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 82
+            # gecodb_v07_pll_ant: 82
 
         func_alias: plur_er_pl
 
@@ -1394,7 +1395,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 82
+            # gecodb_v07_pll_ant: 82
 
         func_alias: plur_e_uml_pl
 
@@ -1514,7 +1515,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 82
+            # gecodb_v07_pll_ant: 82
 
         quantifier: irregularly
         measures:
@@ -1640,7 +1641,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 82
+            # gecodb_v07_pll_ant: 82
 
         func_alias: mixed_mn_pl
 
@@ -1897,7 +1898,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 82
+            # gecodb_v07_pll_ant: 82
 
         func_alias: schwa_fin_deverb_pl
 
@@ -2131,7 +2132,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 82
+            # gecodb_v07_pll_ant: 82
 
         func_alias: sfx_s_pl
 
@@ -2625,7 +2626,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 82
+            # gecodb_v07_pll_ant: 82
 
         func_alias: stressed_phon_fin_pl
 
@@ -2956,7 +2957,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 82
+            # gecodb_v07_pll_ant: 82
 
         func_alias: f_cons_fin_sg
 
@@ -3009,7 +3010,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 82
+            # gecodb_v07_pll_ant: 82
 
         func_alias: f_cons_fin_pl
 
@@ -4808,7 +4809,7 @@ constraints:
         appl_item: n1+linker
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            gecodb_v07_pll_ant: 99
+            # gecodb_v07_pll_ant: 99
 
         func_alias: pl_interpr
 
