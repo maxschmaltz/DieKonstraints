@@ -56,7 +56,6 @@ person_verständnis	person	verständnis	_+en_	ind	False	21
 schwester_+n_beruf	schwester	beruf	_+n_	ind	True	27
 schwester_+n_buch	schwester	buch	_+n_	ind	True	24
 schwester_+n_garten	schwester	garten	_+n_	ind	True	31
-schwester_+n_kampf	schwester	kampf	_+n_	q	True	21
 schwester_+n_kleid	schwester	kleid	_+n_	ind	True	21
 schwester_+n_konvent	schwester	konvent	_+n_	konvc	True	141
 schwester_+n_mord	schwester	mord	_+n_	ind	True	31

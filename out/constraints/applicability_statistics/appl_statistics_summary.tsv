@@ -258,4 +258,4 @@ l2p:0_uml	sp18_pl_constr
 l2p:pl_marker|def-pl	gecodb_v06														
 l2p:pl_marker|def-pl	gecodb_v07														
 l2p:pl_marker|def-pl	gecodb_v07_gn														
-l2p:pl_marker|def-pl	sp18_pl_constr	n1+linker	76	tend	40	0.526	0.463	0.147	0.154	34.108	False	False	moderate regularity	below scale	not supported
+l2p:pl_marker|def-pl	sp18_pl_constr	n1+linker	86	tend	40	0.526	0.463	0.147	0.154	34.108	False	False	moderate regularity	below scale	not supported

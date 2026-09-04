@@ -970,7 +970,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.077
+                    item: 0.079
                     type: 0.022
                 regularity:
                     item: 0.544
@@ -1139,10 +1139,10 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.167
+                    item: 0.171
                     type: 0.329
                 regularity:
-                    item: 0.621
+                    item: 0.622
                     type: 0.572
                 is_productive: True
                 expected_reg_level: low regularity
@@ -1232,7 +1232,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.128
+                    item: 0.132
                     type: 0.037
                 regularity:
                     item: 0.754
@@ -1403,7 +1403,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.051
+                    item: 0.053
                     type: 0.01
                 regularity:
                     item: 0.562
@@ -1521,7 +1521,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.038
+                    item: 0.039
                     type: 0.007
                 regularity:
                     item: 0.667
@@ -1649,7 +1649,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.038
+                    item: 0.039
                     type: 0.004
                 regularity:
                     item: 1.0
@@ -2965,11 +2965,11 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.051
+                    item: 0.053
                     type: 0.033
                 regularity:
-                    item: 0.41
-                    type: 0.184
+                    item: 0.416
+                    type: 0.187
                 is_productive: True
                 expected_reg_level: low regularity
                 actual_reg_level: below scale
@@ -3018,7 +3018,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.038
+                    item: 0.039
                     type: 0.009
                 regularity:
                     item: 1.0
@@ -3250,37 +3250,37 @@ constraints:
         measures:
             gecodb_v06:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.516
+                    type: 0.426
                 regularity:
-                    item: 0.735
-                    type: 0.766
+                    item: 0.522
+                    type: 0.526
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: low regularity
+                support_level: partially supported
             gecodb_v07:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.516
+                    type: 0.429
                 regularity:
-                    item: 0.737
-                    type: 0.766
+                    item: 0.525
+                    type: 0.529
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: low regularity
+                support_level: partially supported
             gecodb_v07_gn:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.511
+                    type: 0.41
                 regularity:
-                    item: 0.742
-                    type: 0.778
+                    item: 0.535
+                    type: 0.558
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: low regularity
+                support_level: partially supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, anspruch_+s_haltung, eintrag_+s_frist]
         examples_contra: [ort_+s_amt, krieg_+s_ende, anruf_beantworter, minderheit_+en_recht]
@@ -3334,37 +3334,37 @@ constraints:
         measures:
             gecodb_v06:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.602
+                    type: 0.622
                 regularity:
-                    item: 0.723
-                    type: 0.761
+                    item: 0.358
+                    type: 0.277
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: below scale
+                support_level: not supported
             gecodb_v07:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.602
+                    type: 0.624
                 regularity:
-                    item: 0.722
-                    type: 0.76
+                    item: 0.36
+                    type: 0.28
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: below scale
+                support_level: not supported
             gecodb_v07_gn:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.604
+                    type: 0.641
                 regularity:
-                    item: 0.719
-                    type: 0.767
+                    item: 0.357
+                    type: 0.28
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: below scale
+                support_level: not supported
 
         examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
         examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
@@ -4808,7 +4808,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            sp18_pl_constr: 76
+            sp18_pl_constr: 86
             # gecodb_v07_pll_ant: 99
 
         func_alias: pl_interpr
@@ -4817,11 +4817,11 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.455
-                    type: 0.465
+                    item: 0.526
+                    type: 0.463
                 regularity:
-                    item: 0.146
-                    type: 0.153
+                    item: 0.147
+                    type: 0.154
                 is_productive: False
                 expected_reg_level: moderate regularity
                 actual_reg_level: below scale
