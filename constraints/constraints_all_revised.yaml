@@ -178,18 +178,35 @@ linkers:
 
 datasets:
 
-    gecodb_v07_gn:
-        description: "~49k German N+N compounds from the DECOW16A corpus that are built from nouns found in both CELEX2 and GermaNet, can themselves be parsed confidently in GermaNet, and have a WC of at least 20 in DeReKo."
-        origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR) and [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02), final preprocessing in the present study ([data_utils/prepare_gecodb_v07_gn.py](data_utils/prepare_gecodb_v07_gn.py)).
-        size: 48976 compound lemmata (48660 unique N1+N2 combinations). 3319 N1 lemmata. 10 linkers, 12 linker allomorphs. 3585 unique N1+linker combinations.
-        filepath: resources/semrel_comp_corp_study-private/gecodb_v07_gn.tsv
+    gecodb_v06:
+        description: "~280k German N+N compounds from the DECOW16A corpus that are built from nouns found in CELEX2 and have a WC of at least 20 in DeReKo."
+        origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR), final preprocessing in [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02).
+        size: 282767 compound lemmata. 3614 N1 lemmata. 9 linkers, 11 linker allomorphs. 4768 unique N1+linker combinations.
+        filepath: resources/comp_constr_corp_study_mar26/gecodb_v06.tsv
         load_func: load_gecodb
+        celexn_version: 0
+
+    gecodb_v07:
+        description: "~275k German N+N compounds from GeCoDB_v06 built from nouns found in GermaNet."
+        origin: Originates from GeCoDB_v06, downstream preprocessing in the present study ([data_utils/prepare_celex_gecodb.py](data_utils/prepare_celex_gecodb.py)).
+        size: 275411 compound lemmata. 3593 N1 lemmata. 10 linkers, 12 linker allomorphs. 4741 unique N1+linker combinations.
+        filepath: resources/developed/gecodb_v07.tsv
+        load_func: load_gecodb
+        celexn_version: 1
+
+    gecodb_v07_gn:
+        description: "~49k German N+N compounds from GeCoDB_v07 that can be parsed confidently in GermaNet."
+        origin: Originates from GeCoDB_v07, downstream preprocessing in the present study ([data_utils/prepare_gecodb_v07_gn.py](data_utils/prepare_gecodb_v07_gn.py)).
+        size: 48976 compound lemmata (48660 unique N1+N2 combinations). 3319 N1 lemmata. 10 linkers, 12 linker allomorphs. 3585 unique N1+linker combinations.
+        filepath: resources/developed/gecodb_v07_gn.tsv
+        load_func: load_gecodb
+        celexn_version: 1
 
     sp18_pl_constr:
-        description: "~2.5k German N+N compounds from the DECOW16A corpus that have a WC of at least 20 in DeReKo, with annotated singular/plural meaning of N1."
-        origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Corpusstudy/Concordance.full.csv'), final preprocessing in the present study ([data_utils/prepare_sp18_pl_constr.py](data_utils/prepare_sp18_pl_constr.py)).
-        size: 2681 compound lemmata. 44 N1 lemmata. 8 linkers, 9 linker allomorphs. 78 unique N1+(Sg/Pl meaning) combinations. 88 unique N1+linker combinations.
-        filepath: resources/semrel_comp_corp_study-private/sp18/sp18_pl_constr.tsv
+        description: "~2.3k German N+N compounds from the DECOW16A corpus that are built from nouns found in CELEX2 and have a WC of at least 20 in DeReKo, with annotated singular/plural meaning of N1."
+        origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Corpusstudy/Concordance.full.csv'), downstream preprocessing in the present study ([data_utils/prepare_sp18_pl_constr.py](data_utils/prepare_sp18_pl_constr.py)).
+        size: 2294 compound lemmata. 43 N1 lemmata. 8 linkers, 9 linker allomorphs. 76 unique N1+(Sg/Pl meaning) combinations. 86 unique N1+linker combinations.
+        filepath: resources/developed/sp18/sp18_pl_constr.tsv
         load_func: load_sp18
         celexn_version: 0
 
@@ -953,7 +970,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.077
+                    item: 0.079
                     type: 0.022
                 regularity:
                     item: 0.544
@@ -1122,10 +1139,10 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.167
+                    item: 0.171
                     type: 0.329
                 regularity:
-                    item: 0.621
+                    item: 0.622
                     type: 0.572
                 is_productive: True
                 expected_reg_level: low regularity
@@ -1215,7 +1232,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.128
+                    item: 0.132
                     type: 0.037
                 regularity:
                     item: 0.754
@@ -1386,7 +1403,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.051
+                    item: 0.053
                     type: 0.01
                 regularity:
                     item: 0.562
@@ -1504,7 +1521,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.038
+                    item: 0.039
                     type: 0.007
                 regularity:
                     item: 0.667
@@ -1632,7 +1649,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.038
+                    item: 0.039
                     type: 0.004
                 regularity:
                     item: 1.0
@@ -2948,11 +2965,11 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.051
+                    item: 0.053
                     type: 0.033
                 regularity:
-                    item: 0.41
-                    type: 0.184
+                    item: 0.416
+                    type: 0.187
                 is_productive: True
                 expected_reg_level: low regularity
                 actual_reg_level: below scale
@@ -3001,7 +3018,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.038
+                    item: 0.039
                     type: 0.009
                 regularity:
                     item: 1.0
@@ -3233,37 +3250,37 @@ constraints:
         measures:
             gecodb_v06:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.516
+                    type: 0.426
                 regularity:
-                    item: 0.735
-                    type: 0.766
+                    item: 0.522
+                    type: 0.526
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: low regularity
+                support_level: partially supported
             gecodb_v07:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.516
+                    type: 0.429
                 regularity:
-                    item: 0.737
-                    type: 0.766
+                    item: 0.525
+                    type: 0.529
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: low regularity
+                support_level: partially supported
             gecodb_v07_gn:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.511
+                    type: 0.41
                 regularity:
-                    item: 0.742
-                    type: 0.778
+                    item: 0.535
+                    type: 0.558
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: low regularity
+                support_level: partially supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, anspruch_+s_haltung, eintrag_+s_frist]
         examples_contra: [ort_+s_amt, krieg_+s_ende, anruf_beantworter, minderheit_+en_recht]
@@ -3317,37 +3334,37 @@ constraints:
         measures:
             gecodb_v06:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.602
+                    type: 0.622
                 regularity:
-                    item: 0.723
-                    type: 0.761
+                    item: 0.358
+                    type: 0.277
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: below scale
+                support_level: not supported
             gecodb_v07:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.602
+                    type: 0.624
                 regularity:
-                    item: 0.722
-                    type: 0.76
+                    item: 0.36
+                    type: 0.28
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: below scale
+                support_level: not supported
             gecodb_v07_gn:
                 coverage:
-                    item: 1.0
-                    type: 1.0
+                    item: 0.604
+                    type: 0.641
                 regularity:
-                    item: 0.719
-                    type: 0.767
+                    item: 0.357
+                    type: 0.28
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: below scale
+                support_level: not supported
 
         examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
         examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
@@ -4791,7 +4808,7 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            sp18_pl_constr: 76
+            sp18_pl_constr: 86
             # gecodb_v07_pll_ant: 99
 
         func_alias: pl_interpr
@@ -4800,11 +4817,11 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.455
-                    type: 0.465
+                    item: 0.526
+                    type: 0.463
                 regularity:
-                    item: 0.146
-                    type: 0.153
+                    item: 0.147
+                    type: 0.154
                 is_productive: False
                 expected_reg_level: moderate regularity
                 actual_reg_level: below scale
