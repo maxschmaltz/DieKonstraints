@@ -90,8 +90,8 @@ class TestRegularityScale(unittest.TestCase):
         self.assertFalse(is_productive)
         self.assertFalse(is_regular)
         self.assertEqual(expected_reg_level, "moderate regularity")
-        self.assertEqual(actual_reg_level, "moderate regularity")
-        self.assertEqual(support_level, "supported")
+        self.assertEqual(actual_reg_level, "low regularity")
+        self.assertEqual(support_level, "partially supported")
 
     def test_supported_2(self):
         quantifier = "usually"
@@ -205,7 +205,7 @@ class TestRegularityScale(unittest.TestCase):
         self.assertFalse(is_productive)
         self.assertFalse(is_regular)
         self.assertEqual(expected_reg_level, "regular")
-        self.assertEqual(actual_reg_level, "moderate regularity")
+        self.assertEqual(actual_reg_level, "low regularity")
         self.assertEqual(support_level, "not supported")
 
     def test_not_supported_1(self):

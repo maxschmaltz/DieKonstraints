@@ -4696,7 +4696,7 @@ class TestApplicabilityCheckersSecConstAnim(unittest.TestCase):
 
 class TestApplicabilityCheckersCmpxMorph(unittest.TestCase):
 
-	# p2l:tend:cmpx_morph-s|def-s
+	# l2p:s|tend_cmpx_morph
 	#
     # The probability of -s- grows irregularly with the
     # morphological complexity of the first constituent
@@ -4782,34 +4782,20 @@ class TestApplicabilityCheckersCmpxMorph(unittest.TestCase):
         
     def test_cmpx_morph_is_applicable_6(self):
         compound = Compound("minderheit_+en_recht")
-        self.assertTrue(
+        self.assertFalse(
             cmpx_morph_is_applicable(compound)
         )
 
-    def test_cmpx_morph_applies_6(self):
-        compound = Compound("minderheit_+en_recht")
-        self.assertFalse(
-            cmpx_morph_applies(compound)
-        )
-
-        
     def test_cmpx_morph_is_applicable_7(self):
         compound = Compound("anruf_beantworter")
-        self.assertTrue(
+        self.assertFalse(
             cmpx_morph_is_applicable(compound)
         )
-
-    def test_cmpx_morph_applies_7(self):
-        compound = Compound("anruf_beantworter")
-        self.assertFalse(
-            cmpx_morph_applies(compound)
-        )
-
 
 
 class TestApplicabilityCheckersCmpxPhon(unittest.TestCase):
 
-	# p2l:tend:cmpx_phon-s|def-s
+	# l2p:s|tend_cmpx_phon
 	#
     # The probability of -s- grows irregularly with the
     # phonological complexity of the first constituent.
@@ -4819,87 +4805,74 @@ class TestApplicabilityCheckersCmpxPhon(unittest.TestCase):
     # words with stressed or semi-stressed suffixes etc.
 
     def test_cmpx_phon_is_applicable_0(self):
-        compound = Compound("anruf_beantworter")
+        compound = Compound("beruf_+s_erfahrung")
         self.assertTrue(
             cmpx_phon_is_applicable(compound)
         )
 
     def test_cmpx_phon_applies_0(self):
-        compound = Compound("anruf_beantworter")
+        compound = Compound("beruf_+s_erfahrung")
         self.assertTrue(
             cmpx_phon_applies(compound)
         )
 
         
     def test_cmpx_phon_is_applicable_1(self):
-        compound = Compound("beruf_+s_erfahrung")
+        compound = Compound("religion_+s_unterricht")
         self.assertTrue(
             cmpx_phon_is_applicable(compound)
         )
 
     def test_cmpx_phon_applies_1(self):
-        compound = Compound("beruf_+s_erfahrung")
+        compound = Compound("religion_+s_unterricht")
         self.assertTrue(
             cmpx_phon_applies(compound)
         )
 
         
     def test_cmpx_phon_is_applicable_2(self):
-        compound = Compound("religion_+s_unterricht")
+        compound = Compound("liebe_+s_brief")
         self.assertTrue(
             cmpx_phon_is_applicable(compound)
         )
 
     def test_cmpx_phon_applies_2(self):
-        compound = Compound("religion_+s_unterricht")
-        self.assertTrue(
+        compound = Compound("liebe_+s_brief")
+        self.assertFalse(
             cmpx_phon_applies(compound)
         )
 
         
     def test_cmpx_phon_is_applicable_3(self):
-        compound = Compound("schlaf_plan")
+        compound = Compound("land_+s_mann")
         self.assertTrue(
             cmpx_phon_is_applicable(compound)
         )
 
     def test_cmpx_phon_applies_3(self):
-        compound = Compound("schlaf_plan")
-        self.assertTrue(
+        compound = Compound("land_+s_mann")
+        self.assertFalse(
             cmpx_phon_applies(compound)
         )
 
-        
+
     def test_cmpx_phon_is_applicable_4(self):
         compound = Compound("rarität_+en_laden")
-        self.assertTrue(
+        self.assertFalse(
             cmpx_phon_is_applicable(compound)
         )
 
-    def test_cmpx_phon_applies_4(self):
-        compound = Compound("rarität_+en_laden")
-        self.assertFalse(
-            cmpx_phon_applies(compound)
-        )
-
-        
     def test_cmpx_phon_is_applicable_5(self):
         compound = Compound("bestand_teil")
-        self.assertTrue(
-            cmpx_phon_is_applicable(compound)
-        )
-
-    def test_cmpx_phon_applies_5(self):
-        compound = Compound("bestand_teil")
         self.assertFalse(
-            cmpx_phon_applies(compound)
+            cmpx_phon_is_applicable(compound)
         )
 
 
 
 class TestApplicabilityCheckersSonority(unittest.TestCase):
 
-	# p2l:tend:sonority-!s
+	# l2p:s|tend_!sonority
 	#
     # The probability of -s- in compounds with simplex first constituents
     # tends to decrease with the increasing sonority of the final segment
@@ -4934,93 +4907,52 @@ class TestApplicabilityCheckersSonority(unittest.TestCase):
 
         
     def test_sonority_is_applicable_2(self):
-        compound = Compound("himmel_reich")
+        compound = Compound("land_+s_mann")
         self.assertTrue(
             sonority_is_applicable(compound)
         )
 
     def test_sonority_applies_2(self):
-        compound = Compound("himmel_reich")
+        compound = Compound("land_+s_mann")
         self.assertTrue(
             sonority_applies(compound)
         )
 
-        
+
     def test_sonority_is_applicable_3(self):
-        compound = Compound("uhu_paar")
+        compound = Compound("himmel_+s_bahn")
         self.assertTrue(
             sonority_is_applicable(compound)
         )
 
     def test_sonority_applies_3(self):
-        compound = Compound("uhu_paar")
-        self.assertTrue(
+        compound = Compound("himmel_+s_bahn")
+        self.assertFalse(
             sonority_applies(compound)
         )
 
         
     def test_sonority_is_applicable_4(self):
-        compound = Compound("arbeit_geber")
+        compound = Compound("uhu_+s_nest")
         self.assertTrue(
             sonority_is_applicable(compound)
         )
 
     def test_sonority_applies_4(self):
-        compound = Compound("arbeit_geber")
+        compound = Compound("uhu_+s_nest")
         self.assertFalse(
             sonority_applies(compound)
         )
 
 
     def test_sonority_is_applicable_5(self):
-        compound = Compound("dieb_stahl")
-        self.assertTrue(
-            sonority_is_applicable(compound)
-        )
-
-    def test_sonority_applies_5(self):
-        compound = Compound("dieb_stahl")
-        self.assertFalse(
-            sonority_applies(compound)
-        )
-
-        
-    def test_sonority_is_applicable_6(self):
-        compound = Compound("himmel_+s_bahn")
-        self.assertTrue(
-            sonority_is_applicable(compound)
-        )
-
-    def test_sonority_applies_6(self):
-        compound = Compound("himmel_+s_bahn")
-        self.assertFalse(
-            sonority_applies(compound)
-        )
-
-        
-    def test_sonority_is_applicable_7(self):
-        compound = Compound("uhu_+s_nest")
-        self.assertTrue(
-            sonority_is_applicable(compound)
-        )
-
-    def test_sonority_applies_7(self):
-        compound = Compound("uhu_+s_nest")
-        self.assertFalse(
-            sonority_applies(compound)
-        )
-
-    # none of the sources explicitly
-	# mention the effect of the constraint 
-    # on the occurrence of -s- after fricatives
-    def test_sonority_is_applicable_8(self):
         compound = Compound("gefäß_system")
         self.assertFalse(
             sonority_is_applicable(compound)
         )
 
-    def test_sonority_is_applicable_9(self):
-        compound = Compound("abstieg_+s_angst")
+    def test_sonority_is_applicable_6(self):
+        compound = Compound("beruf_+s_erfahrung")
         self.assertFalse(
             sonority_is_applicable(compound)
         )

@@ -1,28 +1,28 @@
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:               cvg_item   R-squared:                       0.062
-Model:                            OLS   Adj. R-squared:                 -0.052
-Method:                 Least Squares   F-statistic:                    0.5457
-Date:                Fri, 04 Sep 2026   Prob (F-statistic):              0.741
-Time:                        18:59:05   Log-Likelihood:                 39.408
-No. Observations:                  47   AIC:                            -66.82
-Df Residuals:                      41   BIC:                            -55.71
+Dep. Variable:               cvg_item   R-squared:                       0.038
+Model:                            OLS   Adj. R-squared:                 -0.076
+Method:                 Least Squares   F-statistic:                    0.3350
+Date:                Sat, 05 Sep 2026   Prob (F-statistic):              0.889
+Time:                        21:05:01   Log-Likelihood:                 53.072
+No. Observations:                  48   AIC:                            -94.14
+Df Residuals:                      42   BIC:                            -82.92
 Df Model:                           5                                         
 Covariance Type:            nonrobust                                         
 =========================================================================================
                             coef    std err          t      P>|t|      [0.025      0.975]
 -----------------------------------------------------------------------------------------
-Intercept                 0.1307      0.051      2.567      0.014       0.028       0.234
-morphological[T.True]    -0.0549      0.048     -1.137      0.262      -0.152       0.043
-derivational[T.True]     -0.0398      0.048     -0.830      0.412      -0.137       0.057
-phonological[T.True]      0.0086      0.039      0.220      0.827      -0.070       0.088
-semantic[T.True]         -0.0217      0.045     -0.484      0.631      -0.113       0.069
-lexical[T.True]          -0.1047      0.123     -0.851      0.400      -0.353       0.144
+Intercept                 0.0923      0.038      2.443      0.019       0.016       0.169
+morphological[T.True]    -0.0198      0.036     -0.550      0.585      -0.092       0.053
+derivational[T.True]     -0.0225      0.036     -0.631      0.531      -0.095       0.049
+phonological[T.True]      0.0105      0.030      0.350      0.728      -0.050       0.071
+semantic[T.True]         -0.0188      0.034     -0.548      0.586      -0.088       0.050
+lexical[T.True]          -0.0663      0.094     -0.708      0.483      -0.255       0.123
 ==============================================================================
-Omnibus:                       32.088   Durbin-Watson:                   0.994
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               68.875
-Skew:                           1.977   Prob(JB):                     1.11e-15
-Kurtosis:                       7.420   Cond. No.                         10.2
+Omnibus:                        9.358   Durbin-Watson:                   1.165
+Prob(Omnibus):                  0.009   Jarque-Bera (JB):                9.795
+Skew:                           1.106   Prob(JB):                      0.00746
+Kurtosis:                       3.022   Cond. No.                         10.1
 ==============================================================================
 
 Notes:

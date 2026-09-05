@@ -1330,39 +1330,21 @@ def sec_const_anim_applies(compound: Compound):
 	return _has_linker(compound, linker_morph="s")
 
 
-# p2l:tend:cmpx_morph-s|def-s
+
+# l2p:s|tend_cmpx_morph
 #
 # The probability of -s- grows irregularly with the
 # morphological complexity of the first constituent
 # (any form of derivation).
 
-# # DEPRECATED
-# def cmpx_morph_is_applicable(compound: Compound):
-# 	# universal tendency
-# 	return True
-
-# def cmpx_morph_applies(compound: Compound):
-# 	n1 = compound.constituents[0].morph
-# 	return (
-# 		(
-# 			_is_simplex(n1)
-# 			and not _has_linker(compound, linker_morph="s")
-# 		)
-# 		or (
-# 			_is_derived(n1)
-# 			and _has_linker(compound, linker_morph="s")
-# 		)
-# 	)
-
 def cmpx_morph_is_applicable(compound: Compound):
-	return _is_derived(compound.constituents[0].morph)
-
-def cmpx_morph_applies(compound: Compound):
 	return _has_linker(compound, linker_morph="s")
 
+def cmpx_morph_applies(compound: Compound):
+	return _is_derived(compound.constituents[0].morph)
 
 
-# p2l:tend:cmpx_phon-s|def-s
+# l2p:s|tend_cmpx_phon
 #
 # The probability of -s- grows irregularly with the
 # phonological complexity of the first constituent.
@@ -1371,45 +1353,27 @@ def cmpx_morph_applies(compound: Compound):
 # words with unstressed prefixes,
 # words with stressed or semi-stressed suffixes etc.
 
-# # DEPRECATED
-# def cmpx_phon_is_applicable(compound: Compound):
-# 	# universal tendency
-# 	return True
-
-# def cmpx_phon_applies(compound: Compound):
-# 	n1 = compound.constituents[0].morph
-# 	return (
-# 		(
-# 			# even though [nuebling_szczepaniak_2013:78] claims
-# 			# that the ideal is a trochee with a schwa at the end,
-# 			# we, following [fuhrhop_kuerschner_2015:572], expand
-# 			# the definition of phonologically good words
-# 			# with monosyllabic words and trochaic words
-# 			# with full vowel at the end;
-# 			# the cases of unstressed prefixes and stressed suffixes
-# 			# do not have to be checked separately here
-# 			# since they corrupt the trochaic pattern anyway
-# 			(
-# 				_is_monosyllabic(n1)
-# 				or _is_trochaic(n1)
-# 			)
-# 			and not _has_linker(compound, linker_morph="s")
-# 		)
-# 		or (
-# 			not _is_trochaic(n1)
-# 			and _has_linker(compound, linker_morph="s")
-# 		)
-# 	)
-
 def cmpx_phon_is_applicable(compound: Compound):
-	return not _is_trochaic(compound.constituents[0].morph)
-
-def cmpx_phon_applies(compound: Compound):
 	return _has_linker(compound, linker_morph="s")
 
+def cmpx_phon_applies(compound: Compound):
+	n1 = compound.constituents[0].morph
+	return not (
+		# even though [nuebling_szczepaniak_2013:78] claims
+		# that the ideal is a trochee with a schwa at the end,
+		# we, following [fuhrhop_kuerschner_2015:572], expand
+		# the definition of phonologically good words
+		# with monosyllabic words and trochaic words
+		# with full vowel at the end;
+		# the cases of unstressed prefixes and stressed suffixes
+		# do not have to be checked separately here
+		# since they corrupt the trochaic pattern anyway
+			_is_monosyllabic(n1)
+			or _is_trochaic(n1)
+		)
 
 
-# p2l:tend:sonority-!s
+# l2p:s|tend_!sonority
 #
 # The probability of -s- in compounds with simplex first constituents
 # tends to decrease with the increasing sonority of the final segment
@@ -1418,46 +1382,23 @@ def cmpx_phon_applies(compound: Compound):
 # and it never occurs after a full vowel.
 
 def sonority_is_applicable(compound: Compound):
-	# even though universal tendency, none of the sources explicitly
-	# mention the effect of the constraint on the occurrence of -s- after fricatives
-	n1 = compound.constituents[0].morph
-	last_phone = _get_transcription(n1)[-1]
 	return (
-		_is_simplex(n1)
-		and (
-			_is_vowel(last_phone)
-			or any (
-				_phone_has_property(last_phone, prop)
-				for prop in [
-					"uvular", "lateral-approximant", # liquids
-					"nasal", "plosive"
-				]
-			)
-		)
+		_has_linker(compound, linker_morph="s")
+		and _is_simplex(compound.constituents[0].morph)
 	)
 
 def sonority_applies(compound: Compound):
 	last_phone = _get_transcription(compound.constituents[0].morph)[-1]
-	return (
-		(
-			(
-				_is_vowel(last_phone)
-				# liquids
-				or (
-					_phone_has_property(last_phone, ["uvular"])
-					or _phone_has_property(last_phone, ["lateral-approximant"])	# [l]
-				)
-				# nasals
-				or _phone_has_property(last_phone, ["nasal"])
-			)
-			and not _has_linker(compound, linker_morph="s")
-		)
+	return not (
+		_is_vowel(last_phone)
+		# liquids
 		or (
-			_phone_has_property(last_phone, ["plosive"])
-			and _has_linker(compound, linker_morph="s")
+			_phone_has_property(last_phone, ["uvular"])
+			or _phone_has_property(last_phone, ["lateral-approximant"])	# [l]
 		)
+		# nasals
+		or _phone_has_property(last_phone, ["nasal"])
 	)
-
 
 
 # l2p:s|smpx_mn

@@ -1,0 +1,7 @@
+		reg	reg	cvg	cvg
+		item	type	item	type
+comparison					
+P2L	W	118.5	145.5	72.0	115.0
+P2L	p	0.268	0.063	0.66	0.354
+L2P	W	142.5	87.0	75.0	104.0
+L2P	p	0.004	0.346	0.677	0.204

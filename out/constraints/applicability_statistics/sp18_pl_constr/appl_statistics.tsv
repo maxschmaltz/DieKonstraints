@@ -39,9 +39,9 @@ p2l:sem:comp_type:copula-0
 p2l:sem:comp_type:arg-s														
 p2l:sem:tech_term-0														
 p2l:sem:2const_anim/pers-s														
-p2l:tend:cmpx_morph-s|def-s														
-p2l:tend:cmpx_phon-s|def-s														
-p2l:tend:sonority-!s														
+l2p:s|tend_cmpx_morph														
+l2p:s|tend_cmpx_phon														
+l2p:s|tend_!sonority														
 l2p:s|smpx_mn														
 l2p:s|smpx_high_freq														
 l2p:s|f_cmpx														
@@ -63,4 +63,4 @@ l2p:es|isol
 l2p:es|mono_syl														
 l2p:ens														
 l2p:0_uml														
-l2p:pl_marker|def-pl	n1+linker	86	tend	40	0.526	0.463	0.147	0.154	34.108	False	False	moderate regularity	below scale	not supported
+l2p:pl_marker|def-pl	n1+linker	86	tend	40	0.465	0.463	0.147	0.154	34.108	False	False	moderate regularity	below scale	not supported
