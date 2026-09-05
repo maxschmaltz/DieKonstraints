@@ -47,7 +47,7 @@ readme: |
 
     ## Changelog
 
-    This is version 2 of the constraint list. It was obtained by revising the [previous version](https://github.com/maxschmaltz/DieKonstraints/blob/comp_constr_corp_study_mar26/constraints/constraints.yaml) of the constraint list, which was a result of [_Constraints on Linking Element Choice in German Nominal Compounding: A Large-Scale Corpus Study_](https://github.com/maxschmaltz/DieKonstraints/tree/comp_constr_corp_study_mar26), and incorporating the [correction suggestions](https://github.com/maxschmaltz/DieKonstraints/blob/comp_constr_corp_study_mar26/constraints/constraint_corrections.yaml) from the same study. The revision corrected a few minor mistakes in the evidence summaries and expanded those; no constraint definitions were changed as a result of the revision, except for `l2p:pl_marker|def-pl` where plural-congruent linkers -s- and zero linker were explicitly excluded from the pluralic linkers. Incorporating the correction suggestions has changed the definitions of the constraints that were partially/not supported by the empirical data, as reported in the corpus study.
+    This is version 2 of the constraint list. It was obtained by revising [Version 1](https://github.com/maxschmaltz/DieKonstraints/blob/comp_constr_corp_study_mar26/constraints/constraints.yaml) of the constraint list, which was a result of [_Constraints on Linking Element Choice in German Nominal Compounding: A Large-Scale Corpus Study_](https://github.com/maxschmaltz/DieKonstraints/tree/comp_constr_corp_study_mar26), and incorporating the [correction suggestions](https://github.com/maxschmaltz/DieKonstraints/blob/comp_constr_corp_study_mar26/constraints/constraint_corrections.yaml) from the same study. The revision corrected a few minor mistakes in the evidence summaries and expanded those; incorporating the correction suggestions has changed the definitions of the constraints that were partially/not supported by the empirical data, as reported in the corpus study. A few constraint definitions/properties were changed after the revision, see the changelog of the current version.
 
     ### Version 1 changelog:
 
@@ -91,6 +91,8 @@ readme: |
     * Add dataset metadata.
     * Expand dataset and the number of application item properties (gecodb_v07, sp18_pl_constr).
     * Generalize `p2l:drv:sfx:sfx-s|#itaet$_pl_interpr-en` to `p2l:drv:sfx:sfx-s|pl_interpr-en` and add `p2l:phon_fin:F_#stressed_phon$|pl_interpr-en`.
+    * Apply the new regularity scale (see [check_applicability/regularity_scale.py](check_applicability/regularity_scale.py)).
+    * The three general tendencies (formerly `p2l:tend:morph_phon-s`, `p2l:tend:cmpx_phon-s`, and `p2l:tend:sonority-!s`) were transferred towards the L2P constraints and became `l2p:s|tend_cmpx_morph`, `l2p:s|tend_cmpx_phon`, and `l2p:s|tend_!sonority`, respectively.
 
 
 
@@ -109,6 +111,8 @@ notes:
     - We adhere to the framework that assigns to affixes a scheme defining the morphological and semantic properties of the input for derivation and its result. Thus, even if the morphological class of an input of a derivational constraint is restricted, we do not claim this constraint to also have a morphological character since we assume this morphological information is embedded in the affix. For example, we categorize `p2l:drv:sfx:F_#in$-en` or `p2l:drv:sfx:0_pl_sfx-0` as purely derivational constraint as this exact suffix -in takes certain Xs as the input and always produces an F with certain semantic properties, or suffixes -er, -el etc. always produce zero-plural nouns.
 
     - When dealing with morphological constraints, simplices are meant by default. Otherwise, "derivational" type is specified in addition. This is, among other, the reason why `l2p:s|smpx_mn` is classified as purely morphological, and `l2p:s|f` -- as both morphological and derivational.
+
+    - \"Generative\" counterparts of some L2P linkers are represented as P2L linkers in a distributed manner. For instance, the L2P tendency of -s- to appear more probably after morphologically complex N1s is represented by a number of P2L constraints that require -s- after different forms of derivation.
 
 ---
 
@@ -446,48 +450,22 @@ topology:
                     - p2l:sem:2const_anim/pers-s
 
 
-            - p2l:tend:
-
-                summary: Clusters of constraints that describe general irregular tendencies.
-                children:
-
-                    # 27
-                    - p2l:tend:cmpx_morph-s:
-                        summary: The probability of -s- grows irregularly with the morphological complexity of the first constituent (any form of derivation).
-                        children:
-
-                            - p2l:tend:cmpx_morph-s|def-s
-
-                            - p2l:drv:sfx:sfx-s|def-s  # EXTERNAL
-
-                            - p2l:drv:sfx:deverb_#en$-s  # EXTERNAL
-
-                            - p2l:drv:prx_deverb-s  # EXTERNAL
-
-                    # 28
-                    - p2l:tend:cmpx_phon-s:
-                        summary: The probability of -s- grows irregularly with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
-                        children:
-
-                            - p2l:tend:cmpx_phon-s|def-s
-
-                            - p2l:drv:sfx:sfx-s|def-s  # EXTERNAL
-
-                            - p2l:drv:prx_deverb-s  # EXTERNAL
-
-                    # 29
-                    - p2l:tend:sonority-!s
-
 
     - l2p:
     
         summary: Constraints that restrict properties of first constituents attaching certain linkers.
         children:
 
-            # 30
+            # 27
             - l2p:s:
                 summary: All except for a few simplex nouns that constitute first constituents that attach -s- belong to a small fixed group of masculine and neuter nouns, and many of them have a high token frequency. Almost all feminine nouns that constitute first constituents that attach -s- are morphologically complex and/or polysyllabic.
                 children:
+
+                    - l2p:s|tend_cmpx_morph
+
+                    - l2p:s|tend_cmpx_phon
+
+                    - l2p:s|tend_!sonority
 
                     - l2p:s|smpx_mn
 
@@ -497,10 +475,10 @@ topology:
 
                     - l2p:s|f_poly_syl
 
-            # 31
+            # 28
             - l2p:n
 
-            # 32
+            # 29
             - l2p:en:
                 summary: "All nouns that constitute first constituents that attach -(e)n- build the plural form with -(e)n, with a few idiosyncratic exceptions. The exceptions are: 1) masculine monosyllabic designations of male persons, animals, astronomic objects, months; 2) polysyllabic foreign neuter nouns that have a stressed final syllable (and mostly end in with -at and -ment) that exhibit a plural meaning within the compound."
                 children:
@@ -511,7 +489,7 @@ topology:
 
                     - l2p:en|non_par_n_pl_interpr
 
-            # 33
+            # 30
             - l2p:e:
                 summary: All nouns that constitute first constituents that attach -e- build the plural form with -e, have a stressed last syllable, are mostly simpices and never loanwords. 
                 children:
@@ -524,7 +502,7 @@ topology:
 
                     - l2p:e|!loan
 
-            # 34
+            # 31
             - l2p:er:
                 summary: All nouns that constitute first constituents that attach -(")er- build the plural form with -(")er, have a stressed last syllable, are mostly simpices and never loanwords. 
                 children:
@@ -537,10 +515,10 @@ topology:
 
                     - l2p:er|!loan
 
-            # 35
+            # 32
             - l2p:e_uml
 
-            # 36
+            # 33
             - l2p:es:
                 summary: All nouns that constitute first constituents that attach -es- belong to a fixed row of monosyllabic masculine and neuter nouns and build the genitive form with -(e)s-. -es- is thus isolated.
                 children:
@@ -549,13 +527,13 @@ topology:
 
                     - l2p:es|mono_syl
 
-            # 37
+            # 34
             - l2p:ens
 
-            # 38
+            # 35
             - l2p:0_uml
 
-            # 39
+            # 36
             - l2p:pl_marker:
                 summary: Linkers that are identical to the plural ending of the first constituent in a given compound tend to be associated with a plural meaning of this first constituent within the compound.
                 children:
@@ -3228,21 +3206,21 @@ constraints:
             "3": Evidence for an increased strength of `p2l:sem:2const_anim/pers-s`.
 
 
-    # 1.5. Constraints that describe general irregular tendencies.
+    # 2. Constraints that restrict properties of compounds appearing with certain linkers.
 
     # 41
-    p2l:tend:cmpx_morph-s|def-s:
+    l2p:s|tend_cmpx_morph:
     
         summary: The probability of -s- exhibits a tendency to grow with the morphological complexity of the first constituent (any form of derivation).
         acceptable_linkers: [_+s_]
         ling_info_type: [derivational]
         is_pluralic: false
         
-        appl_item: n1
+        appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
-            gecodb_v07_gn: 3319
+            gecodb_v06: 4870
+            gecodb_v07: 4741
+            gecodb_v07_gn: 3585
 
         func_alias: cmpx_morph
 
@@ -3250,37 +3228,37 @@ constraints:
         measures:
             gecodb_v06:
                 coverage:
-                    item: 0.516
-                    type: 0.426
+                    item: 0.27
+                    type: 0.256
                 regularity:
-                    item: 0.522
-                    type: 0.526
+                    item: 0.816
+                    type: 0.874
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
+                actual_reg_level: moderate regularity
+                support_level: supported
             gecodb_v07:
                 coverage:
-                    item: 0.516
-                    type: 0.429
+                    item: 0.264
+                    type: 0.259
                 regularity:
-                    item: 0.525
-                    type: 0.529
+                    item: 0.847
+                    type: 0.876
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
+                actual_reg_level: moderate regularity
+                support_level: supported
             gecodb_v07_gn:
                 coverage:
-                    item: 0.511
-                    type: 0.41
+                    item: 0.285
+                    type: 0.269
                 regularity:
-                    item: 0.535
-                    type: 0.558
-                is_productive: False
+                    item: 0.907
+                    type: 0.85
+                is_productive: True
                 expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
+                actual_reg_level: high regularity
+                support_level: supported+
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, anspruch_+s_haltung, eintrag_+s_frist]
         examples_contra: [ort_+s_amt, krieg_+s_ende, anruf_beantworter, minderheit_+en_recht]
@@ -3315,18 +3293,18 @@ constraints:
 
 
     # 42
-    p2l:tend:cmpx_phon-s|def-s:
+    l2p:s|tend_cmpx_phon:
     
         summary: The probability of -s- exhibits a tendency to grow with the phonological complexity of the first constituent. By phonologically complex words are understood words with polysyllable non-trochaic form, words with unstressed prefixes, words with stressed or semi-stressed suffixes etc.
         acceptable_linkers: [_+s_]
         ling_info_type: [phonological]
         is_pluralic: false
         
-        appl_item: n1
+        appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
-            gecodb_v07_gn: 3319
+            gecodb_v06: 4870
+            gecodb_v07: 4741
+            gecodb_v07_gn: 3585
 
         func_alias: cmpx_phon
 
@@ -3334,40 +3312,40 @@ constraints:
         measures:
             gecodb_v06:
                 coverage:
-                    item: 0.602
-                    type: 0.622
+                    item: 0.27
+                    type: 0.256
                 regularity:
-                    item: 0.358
-                    type: 0.277
+                    item: 0.607
+                    type: 0.611
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: below scale
-                support_level: not supported
+                actual_reg_level: low regularity
+                support_level: partially supported
             gecodb_v07:
                 coverage:
-                    item: 0.602
-                    type: 0.624
+                    item: 0.264
+                    type: 0.259
                 regularity:
-                    item: 0.36
-                    type: 0.28
+                    item: 0.637
+                    type: 0.614
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: below scale
-                support_level: not supported
+                actual_reg_level: low regularity
+                support_level: partially supported
             gecodb_v07_gn:
                 coverage:
-                    item: 0.604
-                    type: 0.641
+                    item: 0.285
+                    type: 0.269
                 regularity:
-                    item: 0.357
-                    type: 0.28
+                    item: 0.688
+                    type: 0.587
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: below scale
-                support_level: not supported
+                actual_reg_level: low regularity
+                support_level: partially supported
 
-        examples_pro: [anruf_beantworter, beruf_+s_erfahrung, religion_+s_unterricht]
-        examples_contra: [schlaf_plan, herbst_anfang, bestand_teil]
+        examples_pro: [beruf_+s_erfahrung, religion_+s_unterricht]
+        examples_contra: [liebe_+s_brief, land_+s_mann,     bestand_teil]
 
         evidence:
 
@@ -3395,18 +3373,18 @@ constraints:
 
 
     # 43
-    p2l:tend:sonority-!s:
+    l2p:s|tend_!sonority:
     
         summary: The probability of -s- in compounds with simplex first constituents tends to decrease with the increasing sonority of the final segment of the first constituent. -s- is thus more frequent after plosives, infrequent after nasals and liquids, and it never occurs after a full vowel.
         acceptable_linkers: [_+s_]
         ling_info_type: [phonological]
         is_pluralic: false
         
-        appl_item: n1
+        appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
-            gecodb_v07_gn: 3319
+            gecodb_v06: 4870
+            gecodb_v07: 4741
+            gecodb_v07_gn: 3585
 
         func_alias: sonority
 
@@ -3414,40 +3392,40 @@ constraints:
         measures:
             gecodb_v06:
                 coverage:
-                    item: 0.431
-                    type: 0.498
+                    item: 0.05
+                    type: 0.032
                 regularity:
-                    item: 0.796
-                    type: 0.717
+                    item: 0.388
+                    type: 0.745
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: below scale
+                support_level: not supported
             gecodb_v07:
                 coverage:
-                    item: 0.431
-                    type: 0.495
+                    item: 0.04
+                    type: 0.032
                 regularity:
-                    item: 0.8
-                    type: 0.716
+                    item: 0.45
+                    type: 0.756
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: below scale
+                support_level: not supported
             gecodb_v07_gn:
                 coverage:
-                    item: 0.435
-                    type: 0.508
+                    item: 0.026
+                    type: 0.04
                 regularity:
-                    item: 0.793
-                    type: 0.709
+                    item: 0.537
+                    type: 0.821
                 is_productive: False
                 expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+                actual_reg_level: low regularity
+                support_level: partially supported
 
-        examples_pro: [ort_+s_tarif, glück_+s_rad, himmel_reich, uhu_paar]
-        examples_contra: [arbeit_geber, dieb_stahl, himmel_+s_bahn, uhu_+s_nest]
+        examples_pro: [ort_+s_tarif, glück_+s_rad, land_+s_mann]
+        examples_contra: [himmel_+s_bahn, uhu_+s_nest,  arbeit_geber]
 
         evidence:
 
@@ -3484,9 +3462,6 @@ constraints:
             "5": Cited by [kuerschner_2010:24].
             "6": None of the sources explicitly mention the effect of the constraint on the occurrence of -s- after fricatives. For a particular case with sibilants, see `p2l:phon_fin:sibilant$-0`. 
 
-
-
-    # 2. Constraints that restrict properties of compounds appearing with certain linkers.
 
     # 44
     l2p:s|smpx_mn:
@@ -4817,7 +4792,7 @@ constraints:
         measures:
             sp18_pl_constr:
                 coverage:
-                    item: 0.526
+                    item: 0.465
                     type: 0.463
                 regularity:
                     item: 0.147
