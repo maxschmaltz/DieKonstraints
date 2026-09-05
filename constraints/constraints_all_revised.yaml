@@ -182,21 +182,23 @@ linkers:
 
 datasets:
 
-    gecodb_v06:
-        description: "~280k German N+N compounds from the DECOW16A corpus that are built from nouns found in CELEX2 and have a WC of at least 20 in DeReKo."
-        origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR), final preprocessing in [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02).
-        size: 282767 compound lemmata. 3614 N1 lemmata. 9 linkers, 11 linker allomorphs. 4768 unique N1+linker combinations.
-        filepath: resources/comp_constr_corp_study_mar26/gecodb_v06.tsv
-        load_func: load_gecodb
-        celexn_version: 0
+    # # Not used in this iteration
+    # gecodb_v06:
+    #     description: "~280k German N+N compounds from the DECOW16A corpus that are built from nouns found in CELEX2 and have a WC of at least 20 in DeReKo."
+    #     origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR), final preprocessing in [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02).
+    #     size: 282767 compound lemmata. 3614 N1 lemmata. 9 linkers, 11 linker allomorphs. 4768 unique N1+linker combinations.
+    #     filepath: resources/comp_constr_corp_study_mar26/gecodb_v06.tsv
+    #     load_func: load_gecodb
+    #     celexn_version: 0
 
-    gecodb_v07:
-        description: "~275k German N+N compounds from GeCoDB_v06 built from nouns found in GermaNet."
-        origin: Originates from GeCoDB_v06, downstream preprocessing in the present study ([data_utils/prepare_celex_gecodb.py](data_utils/prepare_celex_gecodb.py)).
-        size: 275411 compound lemmata. 3593 N1 lemmata. 10 linkers, 12 linker allomorphs. 4741 unique N1+linker combinations.
-        filepath: resources/developed/gecodb_v07.tsv
-        load_func: load_gecodb
-        celexn_version: 1
+    # # Not used in this iteration
+    # gecodb_v07:
+    #     description: "~275k German N+N compounds from GeCoDB_v06 built from nouns found in GermaNet."
+    #     origin: Originates from GeCoDB_v06, downstream preprocessing in the present study ([data_utils/prepare_celex_gecodb.py](data_utils/prepare_celex_gecodb.py)).
+    #     size: 275411 compound lemmata. 3593 N1 lemmata. 10 linkers, 12 linker allomorphs. 4741 unique N1+linker combinations.
+    #     filepath: resources/developed/gecodb_v07.tsv
+    #     load_func: load_gecodb
+    #     celexn_version: 1
 
     gecodb_v07_gn:
         description: "~49k German N+N compounds from GeCoDB_v07 that can be parsed confidently in GermaNet."
