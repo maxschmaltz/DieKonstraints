@@ -1543,14 +1543,18 @@ def en_non_par_m_is_applicable(compound: Compound):
 	)
 
 def en_non_par_m_applies(compound: Compound):
+	n1 = compound.constituents[0].morph
 	n1_lu = get_n1_lexunit(compound.lemma)
 	# given a high correlation between sex and gender
 	# in person designation, we assume that, since
 	# only masculine nouns are covered by this constraint,
 	# if they designate a person, it is a male one
-	return _is_of_catergory(
-		n1_lu,
-		["person", "animal", "astronomic_obj", "month"]
+	return (
+		_is_monosyllabic(n1) and
+		_is_of_catergory(
+			n1_lu,
+			["person", "animal", "astronomic_obj", "month"]
+		)
 	)
 
 
