@@ -46,7 +46,7 @@ for dname, appl_ind in appl_inds.items():
 class TestCompXConstraintsLinkers(unittest.TestCase):
 
 	def test_compxconstraints_0(self):
-		comp = "blume_+n_strauß"
+		comp = "blume_+n_topf"
 		dname = "gecodb_v07_gn"
 		appl_row = appl_inds[dname].loc[comp]
 		cxc = CompXConstraints(appl_row, dname)
@@ -77,6 +77,16 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 					"c_id": "l2p:s|tend_cmpx_morph",
 					"item_reg": 0.907,
 					"item_cvg": 0.285
+				},
+				{
+					"c_id": "l2p:s|smpx_mn",
+					"item_reg": 0.979,
+					"item_cvg": 0.026
+				},
+				{
+					"c_id": "l2p:s|f_cmpx",
+					"item_reg": 0.997,
+					"item_cvg": 0.202
 				}
 			],
 			"_+e_": [
@@ -125,7 +135,7 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 				}
 			]
 		})
-		
+            
 
 	def test_compxconstraints_1(self):
 		comp = "beruf_+s_erfahrung"
@@ -269,6 +279,81 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 				{
 					"c_id": "l2p:e|par",
 					"item_reg": 0.968,
+					"item_cvg": 0.009
+				}
+			],
+			"_+=e_": [
+				{
+					"c_id": "l2p:e_uml",
+					"item_reg": 1.0,
+					"item_cvg": 0.003
+				}
+			],
+			"_+=_": [
+				{
+					"c_id": "l2p:0_uml",
+					"item_reg": 1.0,
+					"item_cvg": 0.001
+				}
+			]
+		})
+
+
+	def test_compxconstraints_3(self):
+		comp = "stern_+en_himmel"
+		dname = "gecodb_v07_gn"
+		appl_row = appl_inds[dname].loc[comp]
+		cxc = CompXConstraints(appl_row, dname)
+		# true linker
+		self.assertTrue(cxc.comp.linkers[0].gecodb == "_+en_")
+		self.assertTrue(cxc.true == "_+en_")
+		# acceptable linkers
+		self.assertTrue(cxc.acceptable_linkers == {
+			"_": [
+				{
+					"c_id": "def-0",
+					"item_reg": 0.573,
+					"item_cvg": 1.0
+				},
+				{
+					"c_id": "p2l:decl_cl:pl:#e-0|def-0",
+					"item_reg": 0.754,
+					"item_cvg": 0.162
+				}
+			],
+			"_+en_": [
+				{
+					"c_id": "l2p:en|non_par_m",
+					"item_reg": 0.786,
+					"item_cvg": 0.001
+				}
+			]
+		})
+		# unacceptable linkers
+		self.assertTrue(cxc.unacceptable_linkers == {
+			"_+s_": [
+				{
+					"c_id": "l2p:s|tend_cmpx_morph",
+					"item_reg": 0.907,
+					"item_cvg": 0.285
+				},
+				{
+					"c_id": "l2p:s|tend:cmpx_phon",
+					"item_reg": 0.607,
+					"item_cvg": 0.27
+				}
+			],
+			"_+en_": [
+				{
+					"c_id": "l2p:en|par",
+					"item_reg": 0.985,
+					"item_cvg": 0.152
+				}
+			],
+			"_+=er_": [
+				{
+					"c_id": "l2p:er|par",
+					"item_reg": 1.0,
 					"item_cvg": 0.009
 				}
 			],

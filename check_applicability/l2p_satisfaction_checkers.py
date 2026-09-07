@@ -1,5 +1,7 @@
 import re
 import pandas as pd
+from ipapy import UNICODE_TO_IPA
+from ipapy.ipachar import IPAChar
 from itertools import product
 from typing import Optional, Literal
 from germanetpy.lexunit import Lexunit
@@ -114,9 +116,47 @@ def _is_prefixed(lemma: str) -> bool:
 
 # Helper functions for phonetic checks
 
+def _get_ipa_obj(string: str) -> list[str]:
+	# cannot use `IPAString` here because of
+	# version incompatibilities: `ipapy` 
+	# calls `MutableSequence` from `collections` instead of
+	# `collections.abc` in Python 3.10+;
+	# otherwise, this solution is identical and works fine
+	return [UNICODE_TO_IPA[c] for c in string]
+
+def _phone_has_property(phone: str, property: str | list[str]) -> bool:
+	if isinstance(property, str):
+		property = [property]
+	# can be vowel/consonant,
+	# voiced/voiceless, manner, place,
+	# backness, height, rounded/unrounded
+	ipa: IPAChar = _get_ipa_obj(phone)
+	return all(
+		prop in ipa[0].descriptors for prop in property
+	)
+
+def _is_vowel(phone: str) -> bool:
+	# for better readability;
+	# alternatively:
+	# ipa = _get_ipa_obj(phone)
+	# return ipa[0].is_vowel
+	return _phone_has_property(phone, "vowel")
+
+
 def _get_transcription(lemma: str) -> str:
 	lemma_info = celex.loc[lemma]
 	return lemma_info["phonetic_transcription"]
+
+def _ends_with_phon(lemma: str, endings: str | list[str]) -> bool:
+	if isinstance(endings, str):
+		endings = [endings]
+	return any(
+		_get_transcription(lemma).endswith(ending) for ending in endings
+	)
+
+def _ends_with_phon_schwa(lemma: str) -> bool:
+	# for better readability
+	return _ends_with_phon(lemma, "ə")
 
 
 def _get_syllables(lemma: str) -> list[str]:
@@ -148,6 +188,13 @@ def _is_last_syl_stressed(lemma: str) -> bool:
 	return (
 		_is_syl_stressed(lemma, -1)
 		or _is_monosyllabic(lemma)
+	)
+
+def _is_trochaic(lemma: str) -> bool:
+	# trochaic = Xx
+	return (
+		_has_n_syllables(lemma, 2)
+		and _is_syl_stressed(lemma, 0)
 	)
 
 
@@ -195,10 +242,10 @@ def _is_of_catergory(lemma: Lexunit, cats: str | list[str]) -> bool:
 
 # Since we are using the L2P constraints not to validate
 # the prerequisites of N1 given the linker, but to
-# restrict acceptable linkers, we swap the potential
-# and actual applicability checkers;
-# thus if an N1 does not satisfy the actual applicability
-# conditions, it may not even potentially have the
+# restrict acceptable linkers, we concentrate on 
+# actual applicability checkers because if an N1
+# does not satisfy the actual applicability
+# conditions, it may not potentially have the
 # corresponding linker(s).
 # We therefore rename the "_applies" function into
 # "_is_satisfied" function.
@@ -237,6 +284,82 @@ def _is_of_catergory(lemma: Lexunit, cats: str | list[str]) -> bool:
 #
 # We remove `l2p:pl_marker|def-pl` because it is unconfirmed
 # (item regularity 0.147 over SP18_Pl_Constr).
+
+
+# l2p:s|tend_cmpx_morph
+#
+# The probability of -s- grows irregularly with the
+# morphological complexity of the first constituent
+# (any form of derivation).
+
+def cmpx_morph_is_presatisfied(compound: Compound):
+	# general restriction
+	return True
+
+def cmpx_morph_is_satisfied(compound: Compound):
+	return _is_derived(compound.constituents[0].morph)
+
+
+# l2p:s|tend_cmpx_phon
+#
+# The probability of -s- grows irregularly with the
+# phonological complexity of the first constituent.
+# By phonologically complex words are understood
+# words with polysyllable non-trochaic form,
+# words with unstressed prefixes,
+# words with stressed or semi-stressed suffixes etc.
+
+def cmpx_phon_is_presatisfied(compound: Compound):
+	# general restriction
+	return True
+
+def cmpx_phon_is_satisfied(compound: Compound):
+	n1 = compound.constituents[0].morph
+	return not (
+		# even though [nuebling_szczepaniak_2013:78] claims
+		# that the ideal is a trochee with a schwa at the end,
+		# we, following [fuhrhop_kuerschner_2015:572], expand
+		# the definition of phonologically good words
+		# with monosyllabic words and trochaic words
+		# with full vowel at the end;
+		# the cases of unstressed prefixes and stressed suffixes
+		# do not have to be checked separately here
+		# since they corrupt the trochaic pattern anyway
+			_is_monosyllabic(n1)
+			or _is_trochaic(n1)
+		)
+
+
+# l2p:s|tend_!sonority
+#
+# The probability of -s- in compounds with simplex first constituents
+# tends to decrease with the increasing sonority of the final segment
+# of the first constituent. -s- is thus more frequent after plosives,
+# infrequent after nasals and liquids,
+# and it never occurs after a full vowel.
+
+def sonority_is_presatisfied(compound: Compound):
+	return _is_simplex(compound.constituents[0].morph)
+
+def sonority_is_satisfied(compound: Compound):
+	n1 = compound.constituents[0].morph
+	phon_transcription = _get_transcription(n1)
+	last_phone = phon_transcription[-1]
+	last_bo_phone = phon_transcription[-2]
+	return not (
+		(
+			_is_vowel(last_phone) and 
+			# avoid diphthongs and schwa
+			not _is_vowel(last_bo_phone) and 
+			not _ends_with_phon_schwa(n1))
+		# liquids
+		or (
+			_phone_has_property(last_phone, ["uvular"])
+			or _phone_has_property(last_phone, ["lateral-approximant"])	# [l]
+		)
+		# nasals
+		or _phone_has_property(last_phone, ["nasal"])
+	)
 
 
 # l2p:s|smpx_mn

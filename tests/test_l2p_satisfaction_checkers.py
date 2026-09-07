@@ -10,9 +10,14 @@ from check_applicability.l2p_satisfaction_checkers import (
     _is_simplex,
     _is_derived,
     _is_prefixed,
+    _phone_has_property,
+    _is_vowel,
+    _ends_with_phon,
+    _ends_with_phon_schwa,
     _has_n_syllables,
     _is_monosyllabic,
     _is_syl_stressed,
+    _is_trochaic,
     _is_last_syl_stressed,
     _is_of_catergory
 )
@@ -385,6 +390,198 @@ class TestIsPrefixed(unittest.TestCase):
         )
 
 
+class TestPhoneProperties(unittest.TestCase):
+
+    def test_is_vowel_0(self):
+        self.assertTrue(
+            _is_vowel("a")
+        )
+
+    def test_is_vowel_1(self):
+        self.assertTrue(
+            _is_vowel("ə")
+        )
+
+    def test_is_vowel_2(self):
+        self.assertTrue(
+            _is_vowel("ɶ")
+        )
+
+    def test_is_vowel_3(self):
+        self.assertFalse(
+            _is_vowel("w")
+        )
+
+
+    def test_phone_has_property_0(self):
+        self.assertTrue(
+            _phone_has_property("ʝ", "voiced")
+        )
+
+    def test_phone_has_property_1(self):
+        self.assertTrue(
+            _phone_has_property("ʝ", "non-sibilant-fricative")
+        )
+
+    def test_phone_has_property_2(self):
+        self.assertTrue(
+            _phone_has_property("ʝ", "palatal")
+        )
+
+    def test_phone_has_property_3(self):
+        self.assertFalse(
+            _phone_has_property("ʝ", "rounded")
+        )
+
+
+    def test_phone_has_property_4(self):
+        self.assertTrue(
+            _phone_has_property("b", "voiced")
+        )
+
+    def test_phone_has_property_5(self):
+        self.assertTrue(
+            _phone_has_property("b", "plosive")
+        )
+
+    def test_phone_has_property_6(self):
+        self.assertTrue(
+            _phone_has_property("b", "bilabial")
+        )
+
+    def test_phone_has_property_7(self):
+        self.assertFalse(
+            _phone_has_property("b", "alveolar")
+        )
+
+
+    def test_phone_has_property_8(self):
+        self.assertTrue(
+            _phone_has_property(
+                "ʃ",
+                ["voiceless", "sibilant-fricative", "palato-alveolar"]
+            )
+        )
+
+    def test_phone_has_property_9(self):
+        self.assertFalse(
+            _phone_has_property(
+                "ʃ",
+                ["voiced", "sibilant-fricative", "palato-alveolar"]
+            )
+        )
+
+    def test_phone_has_property_10(self):
+        self.assertFalse(
+            _phone_has_property(
+                "ʃ",
+                ["voiceless", "non-sibilant-fricative", "palato-alveolar"]
+            )
+        )
+
+    def test_phone_has_property_11(self):
+        self.assertFalse(
+            _phone_has_property(
+                "ʃ",
+                ["voiceless", "sibilant-fricative", "alveolar"]
+            )
+        )
+
+
+    def test_phone_has_property_12(self):
+        self.assertTrue(
+            _phone_has_property("ɨ", "central")
+        )
+
+    def test_phone_has_property_13(self):
+        self.assertTrue(
+            _phone_has_property("ɨ", "close")
+        )
+
+    def test_phone_has_property_14(self):
+        self.assertTrue(
+            _phone_has_property("ɨ", "unrounded")
+        )
+
+    def test_phone_has_property_15(self):
+        self.assertFalse(
+            _phone_has_property("ɨ", "tense")
+        )
+
+
+    def test_phone_has_property_16(self):
+        self.assertTrue(
+            _phone_has_property(
+                "ʉ",
+                ["central", "close", "rounded"]
+            )
+        )
+
+    def test_phone_has_property_17(self):
+        self.assertFalse(
+            _phone_has_property(
+                "ʉ",
+                ["front", "close", "rounded"]
+            )
+        )
+
+    def test_phone_has_property_18(self):
+        self.assertFalse(
+            _phone_has_property(
+                "ʉ",
+                ["central", "open-mid", "rounded"]
+            )
+        )
+
+    def test_phone_has_property_19(self):
+        self.assertFalse(
+            _phone_has_property(
+                "ʉ",
+                ["central", "close", "unrounded"]
+            )
+        )
+
+
+class TestEndsWithPhon(unittest.TestCase):
+
+    def test_ends_with_phon_00(self):
+        self.assertTrue(
+            _ends_with_phon("kind", ["t"])
+        )
+
+    def test_ends_with_phon_01(self):
+        self.assertFalse(
+            _ends_with_phon("kind", ["d"])
+        )
+
+
+    def test_ends_with_phon_10(self):
+        self.assertTrue(
+            _ends_with_phon("orden", "ən")
+        )
+
+    def test_ends_with_phon_11(self):
+        self.assertFalse(
+            _ends_with_phon("orden", "en")
+        )
+
+
+    def test_ends_with_phon_schwa_0(self):
+        self.assertTrue(
+            _ends_with_phon_schwa("blume")
+        )
+
+    def test_ends_with_phon_schwa_1(self):
+        self.assertTrue(
+            _ends_with_phon_schwa("karte")
+        )
+
+    def test_ends_with_phon_schwa_2(self):
+        self.assertFalse(
+            _ends_with_phon_schwa("auto")
+        )
+
+
 class HasNSyllables(unittest.TestCase):
 
     def test_has_n_syllables_00(self):
@@ -493,6 +690,37 @@ class TestIsSylStressed(unittest.TestCase):
     def test_is_syl_stressed_22(self):
         self.assertFalse(
             _is_syl_stressed("koketterie", 2)
+        )
+
+
+    def test_is_trochaic_0(self):
+        self.assertTrue(
+            _is_trochaic("blume")
+        )
+
+    def test_is_trochaic_1(self):
+        self.assertTrue(
+            _is_trochaic("krieger")
+        )
+
+    def test_is_trochaic_2(self):
+        self.assertTrue(
+            _is_trochaic("uhu")
+        )
+
+    def test_is_trochaic_3(self):
+        self.assertFalse(
+            _is_trochaic("baum")
+        )
+
+    def test_is_trochaic_4(self):
+        self.assertFalse(
+            _is_trochaic("bedarf")
+        )
+
+    def test_is_trochaic_5(self):
+        self.assertFalse(
+            _is_trochaic("komiker")
         )
 
 
@@ -651,6 +879,295 @@ class TestIsOfCategory(unittest.TestCase):
 
 
 # Tests for L2P satisfaction checkers
+
+class TestApplicabilityCheckersCmpxMorph(unittest.TestCase):
+
+	# l2p:s|tend_cmpx_morph
+	#
+    # The probability of -s- grows irregularly with the
+    # morphological complexity of the first constituent
+    # (any form of derivation).
+
+    def test_cmpx_morph_is_presatisfied_0(self):
+        compound = Compound("gesundheit_+s_amt")
+        self.assertTrue(
+            cmpx_morph_is_presatisfied(compound)
+        )
+
+    def test_cmpx_morph_is_satisfied_0(self):
+        compound = Compound("gesundheit_+s_amt")
+        self.assertTrue(
+            cmpx_morph_is_satisfied(compound)
+        )
+
+        
+    def test_cmpx_morph_is_presatisfied_1(self):
+        compound = Compound("gesellschaft_+s_politik")
+        self.assertTrue(
+            cmpx_morph_is_presatisfied(compound)
+        )
+
+    def test_cmpx_morph_is_satisfied_1(self):
+        compound = Compound("gesellschaft_+s_politik")
+        self.assertTrue(
+            cmpx_morph_is_satisfied(compound)
+        )
+
+        
+    def test_cmpx_morph_is_presatisfied_2(self):
+        compound = Compound("anspruch_+s_haltung")
+        self.assertTrue(
+            cmpx_morph_is_presatisfied(compound)
+        )
+
+    def test_cmpx_morph_is_satisfied_2(self):
+        compound = Compound("anspruch_+s_haltung")
+        self.assertTrue(
+            cmpx_morph_is_satisfied(compound)
+        )
+
+        
+    def test_cmpx_morph_is_presatisfied_3(self):
+        compound = Compound("eintrag_+s_frist")
+        self.assertTrue(
+            cmpx_morph_is_presatisfied(compound)
+        )
+
+    def test_cmpx_morph_is_satisfied_3(self):
+        compound = Compound("eintrag_+s_frist")
+        self.assertTrue(
+            cmpx_morph_is_satisfied(compound)
+        )
+
+
+    def test_cmpx_morph_is_presatisfied_4(self):
+        compound = Compound("ort_+s_amt")
+        self.assertTrue(
+            cmpx_morph_is_presatisfied(compound)
+        )
+
+    def test_cmpx_morph_is_satisfied_4(self):
+        compound = Compound("ort_+s_amt")
+        self.assertFalse(
+            cmpx_morph_is_satisfied(compound)
+        )
+
+
+    def test_cmpx_morph_is_presatisfied_5(self):
+        compound = Compound("krieg_+s_ende")
+        self.assertTrue(
+            cmpx_morph_is_presatisfied(compound)
+        )
+
+    def test_cmpx_morph_is_satisfied_5(self):
+        compound = Compound("krieg_+s_ende")
+        self.assertFalse(
+            cmpx_morph_is_satisfied(compound)
+        )
+
+        
+    def test_cmpx_morph_is_presatisfied_6(self):
+        compound = Compound("minderheit_+en_recht")
+        self.assertTrue(
+            cmpx_morph_is_presatisfied(compound)
+        )
+
+    def test_cmpx_morph_is_satisfied_6(self):
+        compound = Compound("minderheit_+en_recht")
+        self.assertTrue(
+            cmpx_morph_is_satisfied(compound)
+        )
+
+
+    def test_cmpx_morph_is_presatisfied_7(self):
+        compound = Compound("hund_+e_leine")
+        self.assertTrue(
+            cmpx_morph_is_presatisfied(compound)
+        )
+
+    def test_cmpx_morph_is_satisfied_7(self):
+        compound = Compound("hund_+e_leine")
+        self.assertFalse(
+            cmpx_morph_is_satisfied(compound)
+        )
+
+
+class TestApplicabilityCheckersCmpxPhon(unittest.TestCase):
+
+	# l2p:s|tend_cmpx_phon
+	#
+    # The probability of -s- grows irregularly with the
+    # phonological complexity of the first constituent.
+    # By phonologically complex words are understood
+    # words with polysyllable non-trochaic form,
+    # words with unstressed prefixes,
+    # words with stressed or semi-stressed suffixes etc.
+
+    def test_cmpx_phon_is_presatisfied_0(self):
+        compound = Compound("beruf_+s_erfahrung")
+        self.assertTrue(
+            cmpx_phon_is_presatisfied(compound)
+        )
+
+    def test_cmpx_phon_is_satisfied_0(self):
+        compound = Compound("beruf_+s_erfahrung")
+        self.assertTrue(
+            cmpx_phon_is_satisfied(compound)
+        )
+
+        
+    def test_cmpx_phon_is_presatisfied_1(self):
+        compound = Compound("religion_+s_unterricht")
+        self.assertTrue(
+            cmpx_phon_is_presatisfied(compound)
+        )
+
+    def test_cmpx_phon_is_satisfied_1(self):
+        compound = Compound("religion_+s_unterricht")
+        self.assertTrue(
+            cmpx_phon_is_satisfied(compound)
+        )
+
+        
+    def test_cmpx_phon_is_presatisfied_2(self):
+        compound = Compound("liebe_+s_brief")
+        self.assertTrue(
+            cmpx_phon_is_presatisfied(compound)
+        )
+
+    def test_cmpx_phon_is_satisfied_2(self):
+        compound = Compound("liebe_+s_brief")
+        self.assertFalse(
+            cmpx_phon_is_satisfied(compound)
+        )
+
+        
+    def test_cmpx_phon_is_presatisfied_3(self):
+        compound = Compound("land_+s_mann")
+        self.assertTrue(
+            cmpx_phon_is_presatisfied(compound)
+        )
+
+    def test_cmpx_phon_is_satisfied_3(self):
+        compound = Compound("land_+s_mann")
+        self.assertFalse(
+            cmpx_phon_is_satisfied(compound)
+        )
+
+
+    def test_cmpx_phon_is_presatisfied_4(self):
+        compound = Compound("hund_+e_leine")
+        self.assertTrue(
+            cmpx_phon_is_presatisfied(compound)
+        )
+
+    def test_cmpx_phon_is_satisfied_4(self):
+        compound = Compound("hund_+e_leine")
+        self.assertFalse(
+            cmpx_phon_is_satisfied(compound)
+        )
+
+
+class TestApplicabilityCheckersSonority(unittest.TestCase):
+
+	# l2p:s|tend_!sonority
+	#
+    # The probability of -s- in compounds with simplex first constituents
+    # tends to decrease with the increasing sonority of the final segment
+    # of the first constituent. -s- is thus more frequent after plosives,
+    # infrequent after nasals and liquids,
+    # and it never occurs after a full vowel.
+
+    def test_sonority_is_presatisfied_0(self):
+        compound = Compound("ort_+s_tarif")
+        self.assertTrue(
+            sonority_is_presatisfied(compound)
+        )
+
+    def test_sonority_is_satisfied_0(self):
+        compound = Compound("ort_+s_tarif")
+        self.assertTrue(
+            sonority_is_satisfied(compound)
+        )
+
+        
+    def test_sonority_is_presatisfied_1(self):
+        compound = Compound("glück_+s_rad")
+        self.assertTrue(
+            sonority_is_presatisfied(compound)
+        )
+
+    def test_sonority_is_satisfied_1(self):
+        compound = Compound("glück_+s_rad")
+        self.assertTrue(
+            sonority_is_satisfied(compound)
+        )
+
+        
+    def test_sonority_is_presatisfied_2(self):
+        compound = Compound("land_+s_mann")
+        self.assertTrue(
+            sonority_is_presatisfied(compound)
+        )
+
+    def test_sonority_is_satisfied_2(self):
+        compound = Compound("land_+s_mann")
+        self.assertTrue(
+            sonority_is_satisfied(compound)
+        )
+
+
+    def test_sonority_is_presatisfied_3(self):
+        compound = Compound("himmel_+s_bahn")
+        self.assertTrue(
+            sonority_is_presatisfied(compound)
+        )
+
+    def test_sonority_is_satisfied_3(self):
+        compound = Compound("himmel_+s_bahn")
+        self.assertFalse(
+            sonority_is_satisfied(compound)
+        )
+
+
+    # def test_sonority_is_presatisfied_4(self):
+    #     compound = Compound("liebe_+s_brief")
+    #     self.assertTrue(
+    #         sonority_is_presatisfied(compound)
+    #     )
+
+    # def test_sonority_is_satisfied_4(self):
+    #     compound = Compound("liebe_+s_brief")
+    #     self.assertFalse(
+    #         sonority_is_satisfied(compound)
+    #     )
+
+        
+    def test_sonority_is_presatisfied_5(self):
+        compound = Compound("uhu_+s_nest")
+        self.assertTrue(
+            sonority_is_presatisfied(compound)
+        )
+
+    def test_sonority_is_satisfied_5(self):
+        compound = Compound("uhu_+s_nest")
+        self.assertFalse(
+            sonority_is_satisfied(compound)
+        )
+
+
+    def test_sonority_is_presatisfied_6(self):
+        compound = Compound("gefäß_system")
+        self.assertFalse(
+            sonority_is_presatisfied(compound)
+        )
+
+    def test_sonority_is_presatisfied_7(self):
+        compound = Compound("beruf_+s_erfahrung")
+        self.assertFalse(
+            sonority_is_presatisfied(compound)
+        )
+
 
 class TestApplicabilityCheckersSSmpx(unittest.TestCase):
 
