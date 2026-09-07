@@ -41,7 +41,7 @@ p2l:sem:tech_term-0
 p2l:sem:2const_anim/pers-s														
 l2p:s|tend_cmpx_morph	n1+linker	4870	tendency	1314	0.27	0.256	0.816	0.874	242.0	False	False	moderate regularity	moderate regularity	supported
 l2p:s|tend_cmpx_phon	n1+linker	4870	tendency	1314	0.27	0.256	0.607	0.611	516.0	False	False	moderate regularity	low regularity	partially supported
-l2p:s|tend_!sonority	n1+linker	4870	tend	242	0.05	0.032	0.388	0.745	148.0	False	False	moderate regularity	below scale	not supported
+l2p:s|tend_!sonority	n1+linker	4870	tend	242	0.05	0.032	0.413	0.746	142.0	False	False	moderate regularity	below scale	not supported
 l2p:s|smpx_mn	n1+linker	4870	almost all	242	0.05	0.032	0.988	0.915	3.0	True	True	high regularity	regular	supported+
 l2p:s|smpx_high_freq	n1+linker	4870	many	242	0.05	0.032	0.649	0.914	85.0	False	False	moderate regularity	low regularity	partially supported
 l2p:s|f_cmpx	n1+linker	4870	almost all	794	0.163	0.159	0.996	0.983	3.0	True	True	high regularity	regular	supported+

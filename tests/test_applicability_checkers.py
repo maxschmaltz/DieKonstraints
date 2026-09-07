@@ -4931,32 +4931,44 @@ class TestApplicabilityCheckersSonority(unittest.TestCase):
             sonority_applies(compound)
         )
 
+
+    # def test_sonority_is_applicable_4(self):
+    #     compound = Compound("liebe_+s_brief")
+    #     self.assertTrue(
+    #         sonority_is_applicable(compound)
+    #     )
+
+    # def test_sonority_applies_4(self):
+    #     compound = Compound("liebe_+s_brief")
+    #     self.assertFalse(
+    #         sonority_applies(compound)
+    #     )
+
         
-    def test_sonority_is_applicable_4(self):
+    def test_sonority_is_applicable_5(self):
         compound = Compound("uhu_+s_nest")
         self.assertTrue(
             sonority_is_applicable(compound)
         )
 
-    def test_sonority_applies_4(self):
+    def test_sonority_applies_5(self):
         compound = Compound("uhu_+s_nest")
         self.assertFalse(
             sonority_applies(compound)
         )
 
 
-    def test_sonority_is_applicable_5(self):
+    def test_sonority_is_applicable_6(self):
         compound = Compound("gefäß_system")
         self.assertFalse(
             sonority_is_applicable(compound)
         )
 
-    def test_sonority_is_applicable_6(self):
+    def test_sonority_is_applicable_7(self):
         compound = Compound("beruf_+s_erfahrung")
         self.assertFalse(
             sonority_is_applicable(compound)
         )
-
 
 
 class TestApplicabilityCheckersSSmpx(unittest.TestCase):

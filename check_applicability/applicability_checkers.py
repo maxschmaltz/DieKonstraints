@@ -1043,7 +1043,7 @@ def vow_fin_is_applicable(compound: Compound):
 	last_bo_phone = phon_transcription[-2]
 	return (
 		_is_vowel(last_phone)
-		# avoid diphthongs
+		# avoid diphthongs and schwa
 		and not _is_vowel(last_bo_phone)
 		and not _ends_with_phon_schwa(n1)
 		# # DEPRECATED: see explanation in changelog of constraints
@@ -1388,9 +1388,16 @@ def sonority_is_applicable(compound: Compound):
 	)
 
 def sonority_applies(compound: Compound):
-	last_phone = _get_transcription(compound.constituents[0].morph)[-1]
+	n1 = compound.constituents[0].morph
+	phon_transcription = _get_transcription(n1)
+	last_phone = phon_transcription[-1]
+	last_bo_phone = phon_transcription[-2]
 	return not (
-		_is_vowel(last_phone)
+		(
+			_is_vowel(last_phone) and 
+			# avoid diphthongs and schwa
+			not _is_vowel(last_bo_phone) and 
+			not _ends_with_phon_schwa(n1))
 		# liquids
 		or (
 			_phone_has_property(last_phone, ["uvular"])
