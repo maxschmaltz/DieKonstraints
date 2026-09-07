@@ -342,11 +342,11 @@ def _is_of_catergory(lemma: Lexunit, cats: str | list[str]) -> bool:
 # The majority of compounds have a zero linker.
 # Zero linker is default for German compounds.
 
-def def_0_is_applicable(compound: Compound):
+def def_0_is_applicable(*args):	# make always accessible
 	# applicable by default
 	return True
 
-def def_0_applies(compound: Compound):
+def def_0_applies(compound: Compound, *args):
 	return _has_no_linker(compound)
 
 

@@ -2,7 +2,7 @@ constr_id	dataset	appl_item	n_appl_items	quantifier	cvg_item_abs	cvg_item	cvg_ty
 def-0	gecodb_v06	compound	282767	majority	282767	1.0	1.0	0.578	0.578	119391.0	False	False	low regularity	low regularity	supported
 def-0	gecodb_v07	compound	275411	majority	275397	1.0	1.0	0.577	0.577	116588.0	False	False	low regularity	low regularity	supported
 def-0	gecodb_v07_gn	compound	48976	majority	48976	1.0	1.0	0.573	0.573	20889.0	False	False	low regularity	low regularity	supported
-def-0	sp18_pl_constr														
+def-0	sp18_pl_constr	compound	2294	majority	2294	1.0	1.0	0.521	0.521	1098.0	False	False	low regularity	low regularity	supported
 p2l:decl_cl:pl:#0-0|def-0	gecodb_v06	n1	3614	almost regularly	241	0.067	0.066	0.954	0.936	11.047	True	False	high regularity	high regularity	supported
 p2l:decl_cl:pl:#0-0|def-0	gecodb_v07	n1	3593	almost regularly	240	0.067	0.065	0.958	0.939	10.051	True	False	high regularity	high regularity	supported
 p2l:decl_cl:pl:#0-0|def-0	gecodb_v07_gn	n1	3319	almost regularly	218	0.066	0.064	0.957	0.941	9.303	True	False	high regularity	high regularity	supported

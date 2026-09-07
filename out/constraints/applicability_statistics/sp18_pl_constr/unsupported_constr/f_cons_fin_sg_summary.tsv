@@ -1,4 +1,4 @@
 comp_gecodb	p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s_item	Nbwi_total	Nbwi_exc	%_exc
-person_+en_beförderung	person+sgsem	46	44	0.957
-schwester_+n_konvent	schwester+sgsem	21	11	0.524
-nation_+en_begriff	nation+sgsem	7	6	0.857
+person_+en_datum	person+sgsem	46	44	0.957
+schwester_+n_tag	schwester+sgsem	21	11	0.524
+nation_+en_wertung	nation+sgsem	7	6	0.857

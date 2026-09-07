@@ -7,5 +7,5 @@ p2l:drv:prx_deverb-s	527.0	84.089	184.806	0.649	low regularity
 p2l:phon_fin:F_stem_#t$-s	41.0	11.041	15.386	0.625	low regularity
 p2l:phon_fin:schwa$-en|def-en	569.0	89.693	134.177	0.764	moderate regularity
 l2p:s|tend_cmpx_phon	1021.0	147.362	319.0	0.688	low regularity
-l2p:s|tend_!sonority	95.0	20.861	44.0	0.537	low regularity
+l2p:s|tend_!sonority	95.0	20.861	43.0	0.547	low regularity
 l2p:s|smpx_high_freq	95.0	20.861	24.0	0.747	moderate regularity

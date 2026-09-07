@@ -2,5 +2,5 @@ constr_id	appl_item	n_appl_items	quantifier	cvg_item_abs	cvg_item	cvg_type	reg_i
 p2l:drv:sfx:sfx-s|def-s	n1	3593.0	regularly	777.0	0.216	0.16	0.98	0.985	15.209	True	False	regular	high regularity	partially supported
 p2l:drv:prx_deverb-s	n1	3593.0	tendency	574.0	0.16	0.124	0.643	0.66	204.992	False	False	moderate regularity	low regularity	partially supported
 l2p:s|tend_cmpx_phon	n1+linker	4741.0	tendency	1252.0	0.264	0.259	0.637	0.614	454.0	False	False	moderate regularity	low regularity	partially supported
-l2p:s|tend_!sonority	n1+linker	4741.0	tend	191.0	0.04	0.032	0.45	0.756	105.0	False	False	moderate regularity	below scale	not supported
+l2p:s|tend_!sonority	n1+linker	4741.0	tend	191.0	0.04	0.032	0.476	0.756	100.0	False	False	moderate regularity	below scale	not supported
 l2p:s|smpx_high_freq	n1+linker	4741.0	many	191.0	0.04	0.032	0.691	0.92	59.0	False	False	moderate regularity	low regularity	partially supported

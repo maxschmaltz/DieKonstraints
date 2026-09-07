@@ -1,5 +1,5 @@
 constr_id	appl_item	n_appl_items	quantifier	cvg_item_abs	cvg_item	cvg_type	reg_item	reg_type	n_violations	is_productive	is_regular	expected_reg_level	actual_reg_level	support_level
-def-0														
+def-0	compound	2294	majority	2294	1.0	1.0	0.521	0.521	1098.0	False	False	low regularity	low regularity	supported
 p2l:decl_cl:pl:#0-0|def-0														
 p2l:decl_cl:pl:#s-0														
 p2l:decl_cl:pl:#e-0|def-0														
