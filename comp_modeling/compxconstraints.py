@@ -2,7 +2,7 @@ import re
 import pandas as pd
 import yaml
 from collections import defaultdict
-from typing import Optional
+from typing import Optional, Literal
 
 from data_utils.gecodb_compound_parser import Compound
 from check_applicability import l2p_satisfaction_checkers
@@ -34,8 +34,8 @@ class CompXConstraints:
         def_constr = constraints[def_id]
         self.acceptable_linkers["_"].append({
             "c_id": def_id,
-            "item_reg": self._reg(def_constr),
-            "item_cvg": self._cvg(def_constr)
+            "confidence": self._reg(def_constr),
+            "cvg": self._cvg(def_constr)
         })
         # unacceptable (L2P-restricted) linkers
         self.unacceptable_linkers = defaultdict(list)
@@ -77,8 +77,18 @@ class CompXConstraints:
                     for linker in constr_linkers:
                         self.acceptable_linkers[linker].append({
                             "c_id": c_id,
-                            "item_reg": self._reg(constr),
-                            "item_cvg": self._cvg(constr),
+                            # divide by the number of the acceptable linkers
+                            # to control for the predictive power;
+                            # e.g. the fact that `p2l:decl_cl:pl:#er-0/er|def-0/er`
+                            # (produces both _ and _+=er_) has an item regularity
+                            # of 0.815 does not mean that either of these
+                            # linkers appears at regularity 0.815 individually;
+                            # the constraint contributes 0.815 to both linkers
+                            # in sum, so each should receive only a half
+                            "confidence": round(
+                                self._reg(constr) / len(constr_linkers), 3
+                            ),
+                            "cvg": self._cvg(constr),
                         })
 
             # unacceptable linkers: restricted by the L2P constraints;
@@ -98,8 +108,8 @@ class CompXConstraints:
                     ):
                         self.acceptable_linkers[linker].append({
                             "c_id": c_id,
-                            "item_reg": self._reg(constr),
-                            "item_cvg": self._cvg(constr),
+                            "confidence": self._reg(constr),
+                            "cvg": self._cvg(constr),
                         })
                     continue
 
@@ -132,6 +142,114 @@ class CompXConstraints:
                     for linker in constr_linkers:
                         self.unacceptable_linkers[linker].append({
                             "c_id": c_id,
-                            "item_reg": self._reg(constr),
-                            "item_cvg": self._cvg(constr),
+                            "confidence": self._reg(constr),
+                            "cvg": self._cvg(constr),
                         })
+
+    def predict(
+        self,
+        *,
+        method: Literal["albright_hayes"],
+        constr_cooperation: bool,
+        restrict_with_l2p: bool
+    ):
+        if method == "albright_hayes":
+            return self._albright_hayes(
+                constr_cooperation=constr_cooperation,
+                restrict_with_l2p=restrict_with_l2p
+            )
+
+    def _albright_hayes(
+        self,
+        constr_cooperation: bool,
+        restrict_with_l2p: bool
+    ):
+        
+        # first, sort acceptable linkers by the confidence
+        linker_scoreboard = {}
+        for linker, constrs in self.acceptable_linkers.items():
+            if not constr_cooperation:
+                # original Albright & Bayes method:
+                # take the max confidence score;
+                # note that we are using the raw
+                # confidence score, or regularity
+                most_conf_constr = max(
+                    constrs,
+                    key=lambda x: x["confidence"]
+                )
+                linker_scoreboard[linker] = {
+                    "confidence": most_conf_constr["confidence"],
+                    "cvg": most_conf_constr["cvg"]
+                }
+            else:
+                # sum all the confidences
+                confidence, cvg = 0, 0
+                for constr in constrs:
+                    confidence += constr["confidence"]
+                    # the problem with coverage is that
+                    # we cannot control for overlap here,
+                    # so we just have to be mindful of that
+                    cvg += constr["cvg"]
+                linker_scoreboard[linker] = {
+                    "confidence": confidence,
+                    "cvg": cvg
+                }
+
+        if restrict_with_l2p:
+            # remove linkers that are not acceptable
+            # in accordance with the L2P constraints
+            self.l2p_removals = {}
+            for linker, constrs in self.unacceptable_linkers.items():
+                if not linker in linker_scoreboard:
+                    continue
+                if not constr_cooperation:
+                    # original Albright & Bayes method:
+                    # take the max confidence
+                    most_conf_constr = max(
+                        constrs,
+                        key=lambda x: x["confidence"]
+                    )
+                    confidence = most_conf_constr["confidence"]
+                    cvg = most_conf_constr["cvg"]
+                    to_log = most_conf_constr
+                else:
+                    # sum all the confidences
+                    confidence, cvg = 0, 0
+                    for constr in constrs:
+                        confidence += constr["confidence"]
+                        cvg += constr["cvg"]
+                    to_log = constrs
+                # remove the linker only if the restrictive
+                # L2P constraint(s) has (have) a higher confidence
+                # than the P2L one(s); indirectly following Albright & Hayes 2002,
+                # choose the constraints with the higher coverage in case
+                # regularity is the same
+                if (
+                    confidence > linker_scoreboard[linker]["confidence"] or
+                    (
+                        confidence == linker_scoreboard[linker]["confidence"] and
+                        cvg > linker_scoreboard[linker]["cvg"]
+                    )
+                ):
+                    # log removal
+                    self.l2p_removals[linker] = to_log
+                    # remove
+                    linker_scoreboard.pop(linker)
+
+        # indirectly following Albright & Hayes 2002,
+        # prioritize the constraints with the higher coverage in case
+        # regularity is the same
+        self.linker_scoreboard = pd.DataFrame(linker_scoreboard).T  \
+            .sort_values(by=["confidence", "cvg"], ascending=[False, False])
+
+        # return generations: all linkers with the maximal confidence
+        max_conf = self.linker_scoreboard["confidence"].max()
+        max_linkers = self.linker_scoreboard[self.linker_scoreboard["confidence"] == max_conf]
+        max_cvg = max_linkers["cvg"].max()
+        preds = max_linkers[max_linkers["cvg"] == max_cvg]
+
+        self.preds = preds.index.tolist()
+        self.pred_conf = max_conf
+        self.pred_cvg = max_cvg
+
+        return self.preds
