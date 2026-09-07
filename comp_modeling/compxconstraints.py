@@ -1,3 +1,4 @@
+import re
 import pandas as pd
 import yaml
 from collections import defaultdict
@@ -22,7 +23,7 @@ class CompXConstraints:
         # comp
         self.comp_gecodb = appl_row.name
         self.comp = Compound(appl_row.name)
-        self.true = self.comp.linkers[0].morph
+        self.true = self._esc(self.comp.linkers[0].gecodb)
         # acceptable (P2L-generated) linkers
         self.acceptable_linkers = defaultdict(list)
         # add the default constraint right away
@@ -37,6 +38,13 @@ class CompXConstraints:
         self.unacceptable_linkers = defaultdict(list)
         self._apply_constraints()
 
+    def _esc(self, linker_gecodb: str) -> str:
+        # remove allomorphy: it is regular and irrelevant
+        # when predicting the linker;
+        # -(")er- is merged in the constraint file already
+        # NB! but not in the applicability indices
+        return re.sub(r"_\+n", "_+en", linker_gecodb)
+
     def _reg(self, constr: dict) -> float:
         return constr["measures"][self.dname]["regularity"]["item"]
 
@@ -49,14 +57,12 @@ class CompXConstraints:
 
             # retrieve acceptable constraint linkers
             # (will become unacceptable for the L2P constraints)
-            constr_linkers: list = constr["acceptable_linkers"].copy()
-            # remove allomorphs; -(")er- is merged in the constraint file
-            # NB! but not in the applicability indices
-            for allo in ["_+n_", "_+ns_"]:
-                if allo in constr_linkers:
-                    constr_linkers.remove(allo)
-                    constr_linkers.append(allo.replace("+n", "+en"))
-            constr_linkers = list(set(constr_linkers))
+            constr_linkers = list(set(
+                [
+                    self._esc(linker)
+                    for linker in constr["acceptable_linkers"].copy()
+                ]
+            ))
 
             # P2L: "generative" constraints that contribute 
             # to the acceptable linkers
@@ -74,6 +80,23 @@ class CompXConstraints:
             # implemented, but now, since we are not validating actual linkers
             # but restrict potential linkers, we disregard the former
             elif c_id.startswith("l2p:"):
+
+                if c_id == "l2p:en|non_par_m":
+                    # special case: this constraint removes a restriction
+                    # so it becomes a kind of a "generative" constraint;
+                    # on the other hand, it does not prohibit _+en_
+                    # if the conditions are not met
+                    if (
+                        l2p_satisfaction_checkers.en_non_par_m_is_presatisfied(self.comp) and
+                        l2p_satisfaction_checkers.en_non_par_m_is_satisfied(self.comp)
+                    ):
+                        self.acceptable_linkers[linker].append({
+                            "c_id": c_id,
+                            "item_reg": self._reg(constr),
+                            "item_cvg": self._cvg(constr),
+                        })
+                        continue
+
                 is_presat_func = getattr(
                     l2p_satisfaction_checkers,
                     f"{constr["func_alias"]}_is_presatisfied",
@@ -89,6 +112,7 @@ class CompXConstraints:
                 # since they are not simplex), we run this additional check
                 if not is_presat_func(self.comp):
                     continue
+
                 is_sat_func = getattr(
                     l2p_satisfaction_checkers,
                     f"{constr["func_alias"]}_is_satisfied"

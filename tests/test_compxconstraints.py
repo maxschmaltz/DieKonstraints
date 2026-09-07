@@ -3,7 +3,7 @@ import unittest
 import os
 import pandas as pd
 
-from comp_modeling.compxconstraints import (CompXConstraints, data_specs)
+from comp_modeling.compxconstraints import CompXConstraints, constraints, data_specs
 
 appl_ind_dir = "resources/semrel_comp_corp_study-private/constr_appl_indices"
 
@@ -18,16 +18,40 @@ appl_inds = {
     for k in data_specs
 }
 
+# remove unconfirmed and missing constraints
+for dname, appl_ind in appl_inds.items():
+    appl_ind.dropna(axis=1, how="all", inplace=True)  # drop columns with NAs
+    for c_id, constr in constraints.items():
+        to_remove = False
+        if dname not in constr["measures"]:
+            to_remove = True
+            message = f"Removed {c_id} from {dname}: not implemented."
+        else:
+            item_reg = constr["measures"][dname]["regularity"]["item"]
+            if item_reg < 0.5:
+                to_remove = True
+            message = f"Removed {c_id} from {dname} at item reg {item_reg}."
+        if to_remove:
+            appl_ind.drop(
+                columns=[
+                    f"{c_id}_{sfx}"
+                    for sfx in ["item", "is_applicable", "applies"]
+                ],
+                inplace=True,
+                errors="ignore"
+            )
+            print(message)
+
 
 class TestCompXConstraintsLinkers(unittest.TestCase):
 
 	def test_compxconstraints_0(self):
-		comp = "instrument_+en_bau"
+		comp = "blume_+n_strauß"
 		dname = "gecodb_v07_gn"
 		appl_row = appl_inds[dname].loc[comp]
 		cxc = CompXConstraints(appl_row, dname)
 		# true linker
-		self.assertTrue(cxc.comp.linkers[0].gecodb == "_+en_")
+		self.assertTrue(cxc.comp.linkers[0].gecodb == "_+n_")
 		self.assertTrue(cxc.true == "_+en_")
 		# acceptable linkers
 		self.assertTrue(cxc.acceptable_linkers == {
@@ -38,11 +62,11 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 					"item_cvg": 1.0
 				}
 			],
-			"_+e_": [
+			"_+en_": [
 				{
-					"c_id": "p2l:decl_cl:pl:#e-0|def-0",
-					"item_reg": 0.754,
-					"item_cvg": 0.162
+					"c_id": "p2l:phon_fin:schwa$-en|def-en",
+					"item_reg": 0.764,
+					"item_cvg": 0.171
 				}
 			]
 		})
@@ -55,16 +79,26 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 					"item_cvg": 0.285
 				}
 			],
-			"_+en_": [
+			"_+e_": [
 				{
-					"c_id": "l2p:en|par",
-					"item_reg": 0.985,
-					"item_cvg": 0.152
+					"c_id": "l2p:e|par",
+					"item_reg": 0.968,
+					"item_cvg": 0.009
+				},
+				{
+					"c_id": "l2p:e|#stressed_syl",
+					"item_reg": 1.0,
+					"item_cvg": 0.009
 				}
 			],
 			"_+=er_": [
 				{
 					"c_id": "l2p:er|par",
+					"item_reg": 1.0,
+					"item_cvg": 0.009
+				},
+				{
+					"c_id": "l2p:er|#stressed_syl",
 					"item_reg": 1.0,
 					"item_cvg": 0.009
 				}
@@ -108,9 +142,7 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 					"c_id": "def-0",
 					"item_reg": 0.573,
 					"item_cvg": 1.0
-				}
-			],
-			"_+e_": [
+				},
 				{
 					"c_id": "p2l:decl_cl:pl:#e-0|def-0",
 					"item_reg": 0.754,

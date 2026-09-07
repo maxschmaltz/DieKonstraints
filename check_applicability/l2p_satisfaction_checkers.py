@@ -193,8 +193,6 @@ def _is_of_catergory(lemma: Lexunit, cats: str | list[str]) -> bool:
 
 
 
-# Functions for applicability checks
-
 # Since we are using the L2P constraints not to validate
 # the prerequisites of N1 given the linker, but to
 # restrict acceptable linkers, we swap the potential
@@ -222,20 +220,23 @@ def _is_of_catergory(lemma: Lexunit, cats: str | list[str]) -> bool:
 # if a masc noun is not simplex (and thus does not fulfil
 # all the conditions), it does not mean it cannot attach
 # -s-; it means that the acceptability of -s- remains
-# undefined. Opposed to that case, some L2P constraints
+# undefined in this case. Opposed to that case, some L2P constraints
 # target all the nouns; if an N1 does not build the plural
 # with -e-, it cannot attach -e- under no circumstances, 
 # according to `l2p:e|par`. We therefore define dedicated
-# "_is_presatisfied" checks that will prevent false negatives
-# like described above. The "_is_presatisfied" check is
+# "_is_presatisfied" checks that will distinguish between
+# inapplicability and undefined applicability.
+# The "_is_presatisfied" check is
 # effectively the original "_is_applicable" L2P check
 # after removal of the linker condition.
 #
 # We remove `l2p:n` because it describes a completely
-# regular phonotactic change between allomorphs,
-# whereas we are aiming at predicting -n-/-en-.
+# regular (item regularity 1.0 in GeCoDB_v07_GN)
+# phonotactic change between allomorphs,
+# whereas we are aiming at predicting the morph -(e)n-.
 #
-# We remove `l2p:pl_marker|def-pl` because it is unconfirmed.
+# We remove `l2p:pl_marker|def-pl` because it is unconfirmed
+# (item regularity 0.147 over SP18_Pl_Constr).
 
 
 # l2p:s|smpx_mn
@@ -249,7 +250,6 @@ def s_smpx_is_presatisfied(compound: Compound):
 
 def s_smpx_is_satisfied(compound: Compound):
 	n1 = compound.constituents[0].morph
-	# simplex condition already checked in applicability
 	return (
 		_is_of_gender(n1, "m")
 		or _is_of_gender(n1, "n")
@@ -325,14 +325,17 @@ def en_non_par_m_is_presatisfied(compound: Compound):
 	)
 
 def en_non_par_m_is_satisfied(compound: Compound):
+	n1 = compound.constituents[0].morph
 	n1_lu = get_n1_lexunit(compound.lemma)
 	# given a high correlation between sex and gender
 	# in person designation, we assume that, since
 	# only masculine nouns are covered by this constraint,
 	# if they designate a person, it is a male one
-	return _is_of_catergory(
-		n1_lu,
-		["person", "animal", "astronomic_obj", "month"]
+	return (_is_monosyllabic(n1) and
+		_is_of_catergory(
+			n1_lu,
+			["person", "animal", "astronomic_obj", "month"]
+		)
 	)
 
 
