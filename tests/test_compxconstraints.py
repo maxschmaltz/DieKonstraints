@@ -1,55 +1,44 @@
 import unittest
 
-import os
 import pandas as pd
 
-from comp_modeling.compxconstraints import CompXConstraints, constraints, data_specs
+from comp_modeling.compxconstraints import CompXConstraints, constraints, DNAME
 
-appl_ind_dir = "resources/semrel_comp_corp_study-private/constr_appl_indices"
+appl_ind_path = "resources/semrel_comp_corp_study-private/gecodb_v07_gn_appl_ind.tsv"
 
-# load constraint applicability indices
-appl_inds = {
-    k: pd.read_csv(
-        os.path.join(appl_ind_dir, f"{k}.tsv"),
-        sep="\t",
-        header=0,
-        index_col=0
-    )
-    for k in data_specs
-}
+# load constraint applicability index
+appl_ind = pd.read_csv(
+	appl_ind_path,
+	sep="\t",
+	header=0,
+	index_col=0
+)
 
-# remove unconfirmed and missing constraints
-for dname, appl_ind in appl_inds.items():
-    appl_ind.dropna(axis=1, how="all", inplace=True)  # drop columns with NAs
-    for c_id, constr in constraints.items():
-        to_remove = False
-        if dname not in constr["measures"]:
-            to_remove = True
-            message = f"Removed {c_id} from {dname}: not implemented."
-        else:
-            item_reg = constr["measures"][dname]["regularity"]["item"]
-            if item_reg < 0.5:
-                to_remove = True
-            message = f"Removed {c_id} from {dname} at item reg {item_reg}."
-        if to_remove:
-            appl_ind.drop(
-                columns=[
-                    f"{c_id}_{sfx}"
-                    for sfx in ["item", "is_applicable", "applies"]
-                ],
-                inplace=True,
-                errors="ignore"
-            )
-            print(message)
+# remove unconfirmed constraints; missing constraints
+# are ignored by `CompXConstraints`
+appl_ind.dropna(axis=1, how="all", inplace=True)  # drop columns with NAs
+for c_id, constr in constraints.items():
+	to_remove = False
+	if DNAME in constr["measures"]:
+		item_reg = constr["measures"][DNAME]["regularity"]["item"]
+		if item_reg < 0.5:
+			appl_ind.drop(
+				columns=[
+					f"{c_id}_{sfx}"
+					for sfx in ["item", "is_applicable", "applies"]
+				],
+				inplace=True,
+				# errors="ignore"
+			)
+		print(f"Removed {c_id} from {DNAME} at item reg {item_reg}.")
 
 
 class TestCompXConstraintsLinkers(unittest.TestCase):
 
 	def test_compxconstraints_0(self):
 		comp = "blume_+n_topf"
-		dname = "gecodb_v07_gn"
-		appl_row = appl_inds[dname].loc[comp]
-		cxc = CompXConstraints(appl_row, dname)
+		appl_row = appl_ind.loc[comp]
+		cxc = CompXConstraints(appl_row)
 		# true linker
 		self.assertTrue(cxc.comp.linkers[0].gecodb == "_+n_")
 		self.assertTrue(cxc.true == "_+en_")
@@ -76,6 +65,11 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 				{
 					"c_id": "l2p:s|tend_cmpx_morph",
 					"item_reg": 0.907,
+					"item_cvg": 0.285
+				},
+				{
+					"c_id": "l2p:s|tend_cmpx_phon",
+					"item_reg": 0.688,
 					"item_cvg": 0.285
 				},
 				{
@@ -139,9 +133,8 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 
 	def test_compxconstraints_1(self):
 		comp = "beruf_+s_erfahrung"
-		dname = "gecodb_v07_gn"
-		appl_row = appl_inds[dname].loc[comp]
-		cxc = CompXConstraints(appl_row, dname)
+		appl_row = appl_ind.loc[comp]
+		cxc = CompXConstraints(appl_row)
 		# true linker
 		self.assertTrue(cxc.comp.linkers[0].gecodb == "_+s_")
 		self.assertTrue(cxc.true == "_+s_")
@@ -174,11 +167,6 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 					"c_id": "l2p:en|par",
 					"item_reg": 0.985,
 					"item_cvg": 0.152
-				},
-				{
-					"c_id": "l2p:en|non_par_m",
-					"item_reg": 0.786,
-					"item_cvg": 0.001
 				}
 			],
 			"_+e_": [
@@ -193,92 +181,10 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 					"c_id": "l2p:er|par",
 					"item_reg": 1.0,
 					"item_cvg": 0.009
-				}
-			],
-			"_+=e_": [
-				{
-					"c_id": "l2p:e_uml",
-					"item_reg": 1.0,
-					"item_cvg": 0.003
-				}
-			],
-			"_+es_": [
-				{
-					"c_id": "l2p:es|mono_syl",
-					"item_reg": 0.972,
-					"item_cvg": 0.01
-				}
-			],
-			"_+=_": [
-				{
-					"c_id": "l2p:0_uml",
-					"item_reg": 1.0,
-					"item_cvg": 0.001
-				}
-			]
-		})
-
-
-	def test_compxconstraints_2(self):
-		comp = "kind_+er_wagen"
-		dname = "sp18_pl_constr"
-		appl_row = appl_inds[dname].loc[comp]
-		cxc = CompXConstraints(appl_row, dname)
-		# true linker
-		self.assertTrue(cxc.comp.linkers[0].gecodb == "_+er_")
-		self.assertTrue(cxc.true == "_+er_")
-		# acceptable linkers
-		self.assertTrue(cxc.acceptable_linkers == {
-			"_": [
-				{
-					"c_id": "def-0",
-					"item_reg": 0.573,
-					"item_cvg": 1.0
 				},
 				{
-					"c_id": "p2l:decl_cl:pl:#er-0/er|def-0/e",
-					"item_reg": 0.815,
-					"item_cvg": 0.021
-				},
-				{
-					"c_id": "p2l:decl_cl:pl:#er-0/er|!pl_interpr-0",
-					"item_reg": 0.622,
-					"item_cvg": 0.171
-				}
-			],
-			"_+=er_": [
-				{
-					"c_id": "p2l:decl_cl:pl:#er-0/er|def-0/e",
-					"item_reg": 0.815,
-					"item_cvg": 0.021
-				}
-			]
-		})
-		# unacceptable linkers
-		self.assertTrue(cxc.unacceptable_linkers == {
-			"_+s_": [
-				{
-					"c_id": "l2p:s|tend_cmpx_morph",
-					"item_reg": 0.907,
-					"item_cvg": 0.285
-				},
-				{
-					"c_id": "l2p:s|tend:cmpx_phon",
-					"item_reg": 0.607,
-					"item_cvg": 0.27
-				}
-			],
-			"_+en_": [
-				{
-					"c_id": "l2p:en|par",
-					"item_reg": 0.985,
-					"item_cvg": 0.152
-				}
-			],
-			"_+e_": [
-				{
-					"c_id": "l2p:e|par",
-					"item_reg": 0.968,
+					"c_id": "l2p:er|smpx",
+					"item_reg": 0.903,
 					"item_cvg": 0.009
 				}
 			],
@@ -299,11 +205,10 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 		})
 
 
-	def test_compxconstraints_3(self):
+	def test_compxconstraints_2(self):
 		comp = "stern_+en_himmel"
-		dname = "gecodb_v07_gn"
-		appl_row = appl_inds[dname].loc[comp]
-		cxc = CompXConstraints(appl_row, dname)
+		appl_row = appl_ind.loc[comp]
+		cxc = CompXConstraints(appl_row)
 		# true linker
 		self.assertTrue(cxc.comp.linkers[0].gecodb == "_+en_")
 		self.assertTrue(cxc.true == "_+en_")
@@ -338,9 +243,14 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 					"item_cvg": 0.285
 				},
 				{
-					"c_id": "l2p:s|tend:cmpx_phon",
-					"item_reg": 0.607,
-					"item_cvg": 0.27
+					"c_id": "l2p:s|tend_cmpx_phon",
+					"item_reg": 0.688,
+					"item_cvg": 0.285
+				},
+				{
+					"c_id": "l2p:s|tend_!sonority",
+					"item_reg": 0.547,
+					"item_cvg": 0.026
 				}
 			],
 			"_+en_": [

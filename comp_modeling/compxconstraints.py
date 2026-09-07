@@ -2,6 +2,7 @@ import re
 import pandas as pd
 import yaml
 from collections import defaultdict
+from typing import Optional
 
 from data_utils.gecodb_compound_parser import Compound
 from check_applicability import l2p_satisfaction_checkers
@@ -13,10 +14,12 @@ with open(constr_path, encoding="utf-8") as f:
     constraints: dict = yamls[-1]["constraints"]
     data_specs: dict = yamls[-2]["datasets"]
 
+DNAME = "gecodb_v07_gn"
+
 
 class CompXConstraints:
 
-    def __init__(self, appl_row: pd.Series, dname: str):
+    def __init__(self, appl_row: pd.Series, dname: Optional[str]=DNAME):
         # input params
         self.appl_row = appl_row
         self.dname = dname
@@ -54,6 +57,9 @@ class CompXConstraints:
     def _apply_constraints(self) -> None:
 
         for c_id, constr in constraints.items():
+
+            if f"{c_id}_is_applicable" not in self.appl_row.index:
+                continue
 
             # retrieve acceptable constraint linkers
             # (will become unacceptable for the L2P constraints)
@@ -95,7 +101,7 @@ class CompXConstraints:
                             "item_reg": self._reg(constr),
                             "item_cvg": self._cvg(constr),
                         })
-                        continue
+                    continue
 
                 is_presat_func = getattr(
                     l2p_satisfaction_checkers,
