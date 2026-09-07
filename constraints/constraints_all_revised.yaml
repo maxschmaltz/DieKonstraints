@@ -584,6 +584,7 @@ constraints:
             gecodb_v06: 282767
             gecodb_v07: 275411
             gecodb_v07_gn: 48976
+            sp18_pl_constr: 2294
 
         func_alias: def_0
 
@@ -618,6 +619,17 @@ constraints:
                 regularity:
                     item: 0.573
                     type: 0.573
+                is_productive: False
+                expected_reg_level: low regularity
+                actual_reg_level: low regularity
+                support_level: supported
+            sp18_pl_constr:
+                coverage:
+                    item: 1.0
+                    type: 1.0
+                regularity:
+                    item: 0.521
+                    type: 0.521
                 is_productive: False
                 expected_reg_level: low regularity
                 actual_reg_level: low regularity
@@ -3397,8 +3409,8 @@ constraints:
                     item: 0.05
                     type: 0.032
                 regularity:
-                    item: 0.388
-                    type: 0.745
+                    item: 0.413
+                    type: 0.746
                 is_productive: False
                 expected_reg_level: moderate regularity
                 actual_reg_level: below scale
@@ -3408,7 +3420,7 @@ constraints:
                     item: 0.04
                     type: 0.032
                 regularity:
-                    item: 0.45
+                    item: 0.476
                     type: 0.756
                 is_productive: False
                 expected_reg_level: moderate regularity
@@ -3419,8 +3431,8 @@ constraints:
                     item: 0.026
                     type: 0.04
                 regularity:
-                    item: 0.537
-                    type: 0.821
+                    item: 0.547
+                    type: 0.822
                 is_productive: False
                 expected_reg_level: moderate regularity
                 actual_reg_level: low regularity
