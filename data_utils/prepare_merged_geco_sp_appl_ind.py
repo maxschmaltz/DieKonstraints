@@ -1,7 +1,12 @@
 import os
 import pandas as pd
 
-from data_utils.load_datasets import load_constraints, load_appl_ind
+from data_utils.load_datasets import (
+    load_constraints,
+    load_gecodb,
+    load_appl_ind
+)
+from comp_modeling.compxconstraints import CompXConstraints
 
 
 # python3 -m data_utils.prepare_merged_geco_sp_appl_ind
@@ -56,6 +61,12 @@ def main():
         if col.endswith("_item") or col.endswith("_to_remove")
     ]
     merged_appl_ind.drop(columns=to_remove, inplace=True)
+
+    # add escaped linkers
+    gecodb_path = "resources/semrel_comp_corp_study-private/gecodb_v07_gn.tsv"
+    gecodb = load_gecodb(gecodb_path)
+    linkers = gecodb.loc[merged_appl_ind.index, "linker"].map(CompXConstraints.esc)
+    merged_appl_ind.insert(0, "linker", linkers)
 
     outdir = "resources/developed"
     os.makedirs(outdir, exist_ok=True)
