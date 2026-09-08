@@ -49,7 +49,7 @@ The N+N compound class is the largest and the most productive class of compounds
 
 * The outputs of the experiment with the suggested corrected constraints are stored in [out/applicability_statistics/appl_index_corr.zip](out/applicability_statistics/appl_index_corr.zip) and [out/applicability_statistics/constr_statistics_corr.tsv](out/applicability_statistics/constr_statistics_corr.tsv). The files have the same structure as the corresponding main experiment files.
 
-* Notebook [check_applicability/inspect.ipynb](check_applicability/inspect.ipynb) is designed to inspect and analyze the obtained results. As a way to fix the findings, it creates a line of files in the [out/](out/) folder: actually, all the files except for the five files from the previous two bullet points. The notebook contains detailed explanations, refer to it for the analysis procedures and description of the output files.
+* Notebook [check_applicability/inspect.ipynb](check_applicability/inspect.ipynb) is designed to inspect and analyze the obtained results. As a way to fix the findings, it creates a line of files in the [out/](out/) folder: actually, all the files except for the five files from the previous two bullet points. The notebook contains detailed explanations, refer to it for the analysis procedures and description of the output files. An extraction from the notebook with the most important fragments is available in [out/constraints_corp_study.pdf](out/constraints_corp_study.pdf).
 
 
 ### Paper
