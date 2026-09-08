@@ -5,14 +5,11 @@ from collections import defaultdict
 from typing import Optional, Literal
 
 from data_utils.gecodb_compound_parser import Compound
+from data_utils.load_datasets import load_constraints
 from check_applicability import l2p_satisfaction_checkers
 
 constr_path = "constraints/constraints_all_revised.yaml"
-# load constraints
-with open(constr_path, encoding="utf-8") as f:
-    yamls = list(yaml.safe_load_all(f))
-    constraints: dict = yamls[-1]["constraints"]
-    data_specs: dict = yamls[-2]["datasets"]
+constraints = load_constraints(constr_path)
 
 DNAME = "gecodb_v07_gn"
 

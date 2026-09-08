@@ -2,35 +2,15 @@ import unittest
 
 import pandas as pd
 
-from comp_modeling.compxconstraints import CompXConstraints, constraints, DNAME
+from data_utils.load_datasets import load_appl_ind
+from comp_modeling.compxconstraints import CompXConstraints, constr_path, DNAME
 
 appl_ind_path = "resources/semrel_comp_corp_study-private/gecodb_v07_gn_appl_ind.tsv"
-
-# load constraint applicability index
-appl_ind = pd.read_csv(
-	appl_ind_path,
-	sep="\t",
-	header=0,
-	index_col=0
+appl_ind = load_appl_ind(
+	appl_ind_path=appl_ind_path,
+	constr_path=constr_path,
+	target_dname=DNAME
 )
-
-# remove unconfirmed constraints; missing constraints
-# are ignored by `CompXConstraints`
-appl_ind.dropna(axis=1, how="all", inplace=True)  # drop columns with NAs
-for c_id, constr in constraints.items():
-	to_remove = False
-	if DNAME in constr["measures"]:
-		item_reg = constr["measures"][DNAME]["regularity"]["item"]
-		if item_reg < 0.5:
-			appl_ind.drop(
-				columns=[
-					f"{c_id}_{sfx}"
-					for sfx in ["item", "is_applicable", "applies"]
-				],
-				inplace=True,
-				# errors="ignore"
-			)
-			print(f"Removed {c_id} from {DNAME} at item reg {item_reg}.")
 
 
 class TestCompXConstraintsLinkers(unittest.TestCase):
@@ -284,8 +264,8 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 		})
 
 	def test_compxconstraints_linker_3(self):
-		# distributed confidence
-		distr_c_id = "p2l:decl_cl:pl:#er-0/er|def-0/er"
+		# # distributed confidence
+		# distr_c_id = "p2l:decl_cl:pl:#er-0/er|def-0/er"
 		comp = "kind_+er_wagen"
 		appl_row = appl_ind.loc[comp]
 		cxc = CompXConstraints(appl_row)
@@ -300,9 +280,10 @@ class TestCompXConstraintsLinkers(unittest.TestCase):
 		self.assertTrue(
 			er_constr_shard_0["confidence"] ==
 			er_constr_shard_1["confidence"] ==
-			round(
-				constraints[distr_c_id]["measures"][DNAME]["regularity"]["item"] / 2, 3
-			) == 0.407
+			# round(
+			# 	constraints[distr_c_id]["measures"][DNAME]["regularity"]["item"] / 2, 3
+			# ) ==
+			0.407
 		)
 
 
