@@ -11,10 +11,17 @@ from check_applicability import l2p_satisfaction_checkers
 constr_path = "constraints/constraints_all_revised.yaml"
 constraints = load_constraints(constr_path)
 
+DEF_ID = "def-0"
+DEF_CONSTR = constraints[DEF_ID]
+
 
 class CompXConstraints:
 
-    def __init__(self, appl_row: pd.Series):
+    def __init__(
+        self,
+        appl_row: pd.Series,
+        count_def_constr: Optional[bool]=True
+    ):
         # input params
         self.appl_row = appl_row
         # comp
@@ -23,14 +30,16 @@ class CompXConstraints:
         self.true = self.esc(self.comp.linkers[0].gecodb)
         # acceptable (P2L-generated) linkers
         self.acceptable_linkers = defaultdict(list)
-        # add the default constraint right away
-        def_id = "def-0"
-        def_constr = constraints[def_id]
-        self.acceptable_linkers["_"].append({
-            "c_id": def_id,
-            "confidence": self._reg(def_constr),
-            "cvg": self._cvg(def_constr)
-        })
+        # add the default constraint into the competition;
+        # otherwise, it will not be used in the calculation
+        # of the prediction and will only be used as a backup
+        # in case no other linker could be predicted
+        if count_def_constr:
+            self.acceptable_linkers["_"].append({
+                "c_id": DEF_ID,
+                "confidence": self._reg(DEF_CONSTR),
+                "cvg": self._cvg(DEF_CONSTR)
+            })
         # unacceptable (L2P-restricted) linkers
         self.unacceptable_linkers = defaultdict(list)
         self._apply_constraints()
@@ -239,6 +248,11 @@ class CompXConstraints:
                     linker_scoreboard.pop(linker)
                 else:
                     linker_scoreboard_extended[linker]["removed_by"] = ""
+
+        # if all the linkers were eliminated, use the default linker
+        # as a backup
+        if not linker_scoreboard:
+            linker_scoreboard = {"_": DEF_CONSTR}
 
         # indirectly following Albright & Hayes 2002,
         # prioritize the constraints with the higher coverage in case
