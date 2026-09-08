@@ -73,7 +73,7 @@ def load_sp18(
 
 def load_appl_ind(
 	appl_ind_path: str,
-	constraints: Optional[dict],
+	constraints: Optional[dict]=None,
 	remove_na_columns: Optional[bool]=True,
 	remove_unconfirmed: Optional[bool]=True,
 	remove_missing: Optional[bool]=True,

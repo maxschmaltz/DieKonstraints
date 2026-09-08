@@ -1,8 +1,7 @@
 import re
 import pandas as pd
-import yaml
 from collections import defaultdict
-from typing import Optional, Literal
+from typing import Literal
 
 from data_utils.gecodb_compound_parser import Compound
 from data_utils.load_datasets import load_constraints
@@ -19,8 +18,7 @@ class CompXConstraints:
 
     def __init__(
         self,
-        appl_row: pd.Series,
-        count_def_constr: Optional[bool]=True
+        appl_row: pd.Series
     ):
         # input params
         self.appl_row = appl_row
@@ -30,16 +28,13 @@ class CompXConstraints:
         self.true = self.esc(self.comp.linkers[0].gecodb)
         # acceptable (P2L-generated) linkers
         self.acceptable_linkers = defaultdict(list)
-        # add the default constraint into the competition;
-        # otherwise, it will not be used in the calculation
-        # of the prediction and will only be used as a backup
-        # in case no other linker could be predicted
-        if count_def_constr:
-            self.acceptable_linkers["_"].append({
-                "c_id": DEF_ID,
-                "confidence": self._reg(DEF_CONSTR),
-                "cvg": self._cvg(DEF_CONSTR)
-            })
+        # add the default constraint into the competition
+        self._def = {
+            "c_id": DEF_ID,
+            "confidence": self._reg(DEF_CONSTR),
+            "cvg": self._cvg(DEF_CONSTR)
+        }
+        self.acceptable_linkers["_"].append(self._def)
         # unacceptable (L2P-restricted) linkers
         self.unacceptable_linkers = defaultdict(list)
         self._apply_constraints()
@@ -156,20 +151,36 @@ class CompXConstraints:
         self,
         *,
         method: Literal["albright_hayes"],
+        count_def_constr: bool,
         constr_cooperation: bool,
         restrict_with_l2p: bool
     ):
         if method == "albright_hayes":
             return self._albright_hayes(
+                count_def_constr=count_def_constr,
                 constr_cooperation=constr_cooperation,
                 restrict_with_l2p=restrict_with_l2p
             )
 
     def _albright_hayes(
         self,
+        count_def_constr: bool,
         constr_cooperation: bool,
         restrict_with_l2p: bool
     ):
+
+        if (
+            not count_def_constr and
+            self._def in self.acceptable_linkers.get("_", [])
+        ):
+            # do not use in the calculation
+            # of the prediction; only be used as a backup
+            # in case no other linker could be predicted
+            self.acceptable_linkers["_"].remove(self._def)
+            # remove the linker from acceptable
+            # if def was the only supporting constraint
+            if not self.acceptable_linkers["_"]:
+                self.acceptable_linkers.pop("_")
         
         # first, sort acceptable linkers by the confidence
         linker_scoreboard = {}
@@ -254,11 +265,10 @@ class CompXConstraints:
         # if all the linkers were eliminated, use the default linker
         # as a backup
         if not linker_scoreboard:
-            linker_scoreboard = {"_": {
-                "c_id": DEF_ID,
-                "confidence": self._reg(DEF_CONSTR),
-                "cvg": self._cvg(DEF_CONSTR)
-            }}
+            linker_scoreboard = {"_": self._def}
+
+        if restrict_with_l2p and not linker_scoreboard_extended:
+            linker_scoreboard_extended = {"_": {**self._def, "removed_by": ""}}
 
         # indirectly following Albright & Hayes 2002,
         # prioritize the constraints with the higher coverage in case
