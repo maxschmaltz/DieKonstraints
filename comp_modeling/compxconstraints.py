@@ -11,19 +11,16 @@ from check_applicability import l2p_satisfaction_checkers
 constr_path = "constraints/constraints_all_revised.yaml"
 constraints = load_constraints(constr_path)
 
-DNAME = "gecodb_v07_gn"
-
 
 class CompXConstraints:
 
-    def __init__(self, appl_row: pd.Series, dname: Optional[str]=DNAME):
+    def __init__(self, appl_row: pd.Series):
         # input params
         self.appl_row = appl_row
-        self.dname = dname
         # comp
         self.comp_gecodb = appl_row.name
         self.comp = Compound(appl_row.name)
-        self.true = self._esc(self.comp.linkers[0].gecodb)
+        self.true = self.esc(self.comp.linkers[0].gecodb)
         # acceptable (P2L-generated) linkers
         self.acceptable_linkers = defaultdict(list)
         # add the default constraint right away
@@ -38,7 +35,8 @@ class CompXConstraints:
         self.unacceptable_linkers = defaultdict(list)
         self._apply_constraints()
 
-    def _esc(self, linker_gecodb: str) -> str:
+    @staticmethod
+    def esc(linker_gecodb: str) -> str:
         # remove allomorphy: it is regular and irrelevant
         # when predicting the linker;
         # -(")er- is merged in the constraint file already
@@ -46,10 +44,10 @@ class CompXConstraints:
         return re.sub(r"_\+n", "_+en", linker_gecodb)
 
     def _reg(self, constr: dict) -> float:
-        return constr["measures"][self.dname]["regularity"]["item"]
+        return constr["measures"]["regularity"]["item"]
 
     def _cvg(self, constr: dict) -> float:
-        return constr["measures"][self.dname]["coverage"]["item"]
+        return constr["measures"]["coverage"]["item"]
 
     def _apply_constraints(self) -> None:
 
@@ -62,7 +60,7 @@ class CompXConstraints:
             # (will become unacceptable for the L2P constraints)
             constr_linkers = list(set(
                 [
-                    self._esc(linker)
+                    self.esc(linker)
                     for linker in constr["acceptable_linkers"].copy()
                 ]
             ))
@@ -176,23 +174,27 @@ class CompXConstraints:
                 )
                 linker_scoreboard[linker] = {
                     "confidence": most_conf_constr["confidence"],
-                    "cvg": most_conf_constr["cvg"]
+                    "cvg": most_conf_constr["cvg"],
+                    "constraints": most_conf_constr["c_id"]
                 }
             else:
                 # sum all the confidences
-                confidence, cvg = 0, 0
+                confidence, cvg, c_ids = 0, 0, []
                 for constr in constrs:
                     confidence += constr["confidence"]
                     # the problem with coverage is that
                     # we cannot control for overlap here,
                     # so we just have to be mindful of that
                     cvg += constr["cvg"]
+                    c_ids.append(constr["c_id"])
                 linker_scoreboard[linker] = {
                     "confidence": confidence,
-                    "cvg": cvg
+                    "cvg": cvg,
+                    "constraints": ", ".join(c_ids)
                 }
 
         if restrict_with_l2p:
+            linker_scoreboard_extended = linker_scoreboard.copy()
             # remove linkers that are not acceptable
             # in accordance with the L2P constraints
             self.l2p_removals = {}
@@ -209,12 +211,14 @@ class CompXConstraints:
                     confidence = most_conf_constr["confidence"]
                     cvg = most_conf_constr["cvg"]
                     to_log = most_conf_constr
+                    c_ids = [to_log["c_id"]]
                 else:
                     # sum all the confidences
-                    confidence, cvg = 0, 0
+                    confidence, cvg, c_ids = 0, 0, []
                     for constr in constrs:
                         confidence += constr["confidence"]
                         cvg += constr["cvg"]
+                        c_ids.append(constr["c_id"])
                     to_log = constrs
                 # remove the linker only if the restrictive
                 # L2P constraint(s) has (have) a higher confidence
@@ -230,23 +234,28 @@ class CompXConstraints:
                 ):
                     # log removal
                     self.l2p_removals[linker] = to_log
+                    linker_scoreboard_extended[linker]["removed_by"] = ", ".join(c_ids)
                     # remove
                     linker_scoreboard.pop(linker)
+                else:
+                    linker_scoreboard_extended[linker]["removed_by"] = ""
 
         # indirectly following Albright & Hayes 2002,
         # prioritize the constraints with the higher coverage in case
         # regularity is the same
         self.linker_scoreboard = pd.DataFrame(linker_scoreboard).T  \
             .sort_values(by=["confidence", "cvg"], ascending=[False, False])
+        if restrict_with_l2p:
+            self.linker_scoreboard_extended = pd.DataFrame(linker_scoreboard_extended).T  \
+                .sort_values(by=["confidence", "cvg"], ascending=[False, False])
 
-        # return generations: all linkers with the maximal confidence
-        max_conf = self.linker_scoreboard["confidence"].max()
-        max_linkers = self.linker_scoreboard[self.linker_scoreboard["confidence"] == max_conf]
-        max_cvg = max_linkers["cvg"].max()
-        preds = max_linkers[max_linkers["cvg"] == max_cvg]
+        # return generations; since we distribute the confidence
+        # for the constraints that accept more than one linker,
+        # the probability of several linkers to have both the same
+        # confidence and regularity is virtually zero
+        pred_row = self.linker_scoreboard.iloc[0]
+        self.y_pred = pred_row.name
+        self.pred_conf = pred_row["confidence"]
+        self.pred_cvg = pred_row["cvg"]
 
-        self.preds = preds.index.tolist()
-        self.pred_conf = max_conf
-        self.pred_cvg = max_cvg
-
-        return self.preds
+        return self.y_pred

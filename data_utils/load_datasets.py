@@ -73,8 +73,7 @@ def load_sp18(
 
 def load_appl_ind(
 	appl_ind_path: str,
-	target_dname: Optional[str],
-	constr_path: Optional[str],
+	constraints: Optional[dict],
 	remove_na_columns: Optional[bool]=True,
 	remove_unconfirmed: Optional[bool]=True,
 	remove_missing: Optional[bool]=True,
@@ -95,25 +94,19 @@ def load_appl_ind(
 	if not remove_unconfirmed or remove_missing:
 		return appl_ind
 
-	assert (
-		(target_dname, constr_path),
-		"`target_dname` and `constr_path` required for filtering."
-	)
-
-	constraints = load_constraints(constr_path)
+	assert constraints, "`constraints` required for filtering."
 
 	# remove unconfirmed constraints and/or missing constraints
 	for c_id, constr in constraints.items():
 		to_remove = False
-		if target_dname not in constr["measures"]:
-			if remove_missing:
-				to_remove = True
-				message = f"Removed {c_id} from {target_dname}: not implemented."
+		if remove_missing and not constr["datasets_n_appl_items"]:
+			to_remove = True
+			message = f"Removed {c_id}: not implemented."
 		else:
-			item_reg = constr["measures"][target_dname]["regularity"]["item"]
+			item_reg = constr["measures"]["regularity"]["item"]
 			if remove_unconfirmed and (item_reg < 0.5):
 				to_remove = True
-				message = f"Removed {c_id} from {target_dname} at item reg {item_reg}."
+				message = f"Removed {c_id} at item reg {item_reg}."
 		if to_remove:
 			appl_ind.drop(
 				columns=[

@@ -47,7 +47,7 @@ readme: |
 
     ## Changelog
 
-    This is version 2 of the constraint list. It was obtained by revising [Version 1](https://github.com/maxschmaltz/DieKonstraints/blob/comp_constr_corp_study_mar26/constraints/constraints.yaml) of the constraint list, which was a result of [_Constraints on Linking Element Choice in German Nominal Compounding: A Large-Scale Corpus Study_](https://github.com/maxschmaltz/DieKonstraints/tree/comp_constr_corp_study_mar26), and incorporating the [correction suggestions](https://github.com/maxschmaltz/DieKonstraints/blob/comp_constr_corp_study_mar26/constraints/constraint_corrections.yaml) from the same study. The revision corrected a few minor mistakes in the evidence summaries and expanded those; incorporating the correction suggestions has changed the definitions of the constraints that were partially/not supported by the empirical data, as reported in the corpus study. A few constraint definitions/properties were changed after the revision, see the changelog of the current version.
+    This is version 3 of the constraint list. It was obtained by revising [Version 2](https://github.com/maxschmaltz/DieKonstraints/blob/semrel_comp_corp_study-private/constraints/constraints_revised_all.yaml) of the constraint list. TODO.
 
     ### Version 1 changelog:
 
@@ -72,7 +72,7 @@ readme: |
     * Detailed a few constraints.
     * By mistake, compounds built from N1 'Samt' were recorded as starting from 'Amt' in GeCoDB_v06 (resolved July 20, 2026). The number of unique N1s was therefore one more than recorded here (3614 and not 3613). This change fixed that. Note that the issue didn't affect constraint measurements, since the number of unique constraints was calculated dynamically, and so the number if unique N1 s of 3614 was used for calculation (e.g., see `comp_constr_corp_study_mar26-private/out/applicability_statistics/constr_statistics.tsv`). N1 'Samt' had two N1+linker combinations: 'Samt-0' and 'Samt-s'. Correspondingly, the real number of N1+linker unique combinations was 4870, not 4868. Similarly, this did not affect the measurements.
 
-    ### Current version changelog:
+    ### Version 2 changelog:
 
     * Expanded topology for `l2p:pl_marker`. 
     * Revised the evidence summaries and added more evidence from the literature.
@@ -94,6 +94,10 @@ readme: |
     * Apply the new regularity scale (see [check_applicability/regularity_scale.py](check_applicability/regularity_scale.py)).
     * The three general tendencies (formerly `p2l:tend:morph_phon-s`, `p2l:tend:cmpx_phon-s`, and `p2l:tend:sonority-!s`) were transferred towards the L2P constraints and became `l2p:s|tend_cmpx_morph`, `l2p:s|tend_cmpx_phon`, and `l2p:s|tend_!sonority`, respectively.
 
+    ### Current version changelog:
+
+    * Only left the measures for GeCoDB_v07_GN and SP18_Pl_Constr.
+    * Merged the measures from the two datasets into a single "measures" property. All the measures for the pluralic linkers were taken from SP18_Pl_Constr, otherwise GeCoDB_v07_GN was adopted.
 
 
 notes:
@@ -182,24 +186,6 @@ linkers:
 
 datasets:
 
-    # # Not used in this iteration
-    # gecodb_v06:
-    #     description: "~280k German N+N compounds from the DECOW16A corpus that are built from nouns found in CELEX2 and have a WC of at least 20 in DeReKo."
-    #     origin: Originates from [Schäfer & Pankratz 2018](https://doi.org/10.5281/zenodo.1323211) (file 'linkingelements/Data/Database/compounds/decow16ax_comps_counts.txt'), first preprocessing(s) in [Shmalts BA Thesis](https://github.com/maxschmaltz/DEKOR), final preprocessing in [Shmalts 2026](https://lrec.elra.info/lrec2026-ws-slide-02).
-    #     size: 282767 compound lemmata. 3614 N1 lemmata. 9 linkers, 11 linker allomorphs. 4768 unique N1+linker combinations.
-    #     filepath: resources/comp_constr_corp_study_mar26/gecodb_v06.tsv
-    #     load_func: load_gecodb
-    #     celexn_version: 0
-
-    # # Not used in this iteration
-    # gecodb_v07:
-    #     description: "~275k German N+N compounds from GeCoDB_v06 built from nouns found in GermaNet."
-    #     origin: Originates from GeCoDB_v06, downstream preprocessing in the present study ([data_utils/prepare_celex_gecodb.py](data_utils/prepare_celex_gecodb.py)).
-    #     size: 275411 compound lemmata. 3593 N1 lemmata. 10 linkers, 12 linker allomorphs. 4741 unique N1+linker combinations.
-    #     filepath: resources/developed/gecodb_v07.tsv
-    #     load_func: load_gecodb
-    #     celexn_version: 1
-
     gecodb_v07_gn:
         description: "~49k German N+N compounds from GeCoDB_v07 that can be parsed confidently in GermaNet."
         origin: Originates from GeCoDB_v07, downstream preprocessing in the present study ([data_utils/prepare_gecodb_v07_gn.py](data_utils/prepare_gecodb_v07_gn.py)).
@@ -215,15 +201,6 @@ datasets:
         filepath: resources/developed/sp18/sp18_pl_constr.tsv
         load_func: load_sp18
         celexn_version: 0
-
-    # # The validity of the dataset is being assessed at the moment.
-    # gecodb_v07_pll_ant:
-    #     description: "~1.3k German N+N compounds from GeCoDB_v07 with annotated singular/plural meaning of N1."
-    #     origin: "Originates from GeCoDB_v07. The preparation is the product of the present study. Sample extraction and vignettes generation in [data_utils/prepare_gecodb_v07_pll_ant_vignettes.ipynb](data_utils/prepare_gecodb_v07_pll_ant_vignettes.ipynb). The vignettes were annotated by two independent annotators: our HiWis, native German speakers. The annotated vignettes are parsed and filtered in [data_utils/prepare_gecodb_v07_pll_ant.ipynb](data_utils/prepare_gecodb_v07_pll_ant.ipynb). Only entries where the two annotators agreed on the class were kept."
-    #     size: 1308 compound lemmata. 49 N1 lemmata. 8 linkers, 9 linker allomorphs. 82 unique N1+(Sg/Pl meaning) combinations. 99 unique N1+linker combinations.
-    #     filepath: resources/developed/gecodb_v07_pll_ant/gecodb_v07_pll_ant.tsv
-    #     load_func: load_sp18
-    #     celexn_version: 1
 
 ---
 
@@ -581,59 +558,22 @@ constraints:
         
         appl_item: compound
         datasets_n_appl_items:
-            gecodb_v06: 282767
-            gecodb_v07: 275411
             gecodb_v07_gn: 48976
-            sp18_pl_constr: 2294
 
         func_alias: def_0
 
         quantifier: majority
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 1.0
-                    type: 1.0
-                regularity:
-                    item: 0.578
-                    type: 0.578
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 1.0
-                    type: 1.0
-                regularity:
-                    item: 0.577
-                    type: 0.577
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 1.0
-                    type: 1.0
-                regularity:
-                    item: 0.573
-                    type: 0.573
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
-            sp18_pl_constr:
-                coverage:
-                    item: 1.0
-                    type: 1.0
-                regularity:
-                    item: 0.521
-                    type: 0.521
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
+            coverage:
+                item: 1.0
+                type: 1.0
+            regularity:
+                item: 0.573
+                type: 0.573
+            is_productive: False
+            expected_reg_level: low regularity
+            actual_reg_level: low regularity
+            support_level: supported
 
         examples_pro: [land_kreis, haus_tür, stadt_mauer]
         examples_contra: [land_+es_regierung, haus_+=er_block, stadt_+=e_tag]
@@ -715,47 +655,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: plur_0
 
         quantifier: almost regularly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.067
-                    type: 0.066
-                regularity:
-                    item: 0.954
-                    type: 0.936
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.067
-                    type: 0.065
-                regularity:
-                    item: 0.958
-                    type: 0.939
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.066
-                    type: 0.064
-                regularity:
-                    item: 0.957
-                    type: 0.941
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
+            coverage:
+                item: 0.066
+                type: 0.064
+            regularity:
+                item: 0.957
+                type: 0.941
+            is_productive: True
+            expected_reg_level: high regularity
+            actual_reg_level: high regularity
+            support_level: supported
 
         examples_pro: [schlitten_fahrt, wagen_rad, ufer_promenade]
         examples_contra: [orden_+s_bruder, teufel_+s_werk, frieden_+s_angebot]
@@ -780,47 +695,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: plur_s
 
         quantifier: almost all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.035
-                    type: 0.033
-                regularity:
-                    item: 0.97
-                    type: 0.957
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.035
-                    type: 0.034
-                regularity:
-                    item: 0.968
-                    type: 0.957
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.035
-                    type: 0.029
-                regularity:
-                    item: 0.965
-                    type: 0.962
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
+            coverage:
+                item: 0.035
+                type:  0.029
+            regularity:
+                item: 0.965
+                type: 0.962
+            is_productive: True
+            expected_reg_level: high regularity
+            actual_reg_level: regular
+            support_level: supported+
 
         examples_pro: [balkon_möbel, hotel_kette, bob_bahn]
         examples_contra: [deck_+s_balken, interim_+s_phase, karneval_+s_kostüm, leutnant_+s_uniform]
@@ -889,47 +779,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
             
         func_alias: plur_e
 
         quantifier: mostly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.159
-                    type: 0.184
-                regularity:
-                    item: 0.762
-                    type: 0.689
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.159
-                    type: 0.184
-                regularity:
-                    item: 0.761
-                    type: 0.687
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.162
-                    type: 0.193
-                regularity:
-                    item: 0.754
-                    type: 0.686
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
+            coverage:
+                item: 0.162
+                type: 0.193
+            regularity:
+                item: 0.754
+                type: 0.686
+            is_productive: False
+            expected_reg_level: low regularity
+            actual_reg_level: moderate regularity
+            support_level: supported+
 
         examples_pro: [tisch_decke, projekt_gruppe, pilz_sammler]
         examples_contra: [tag_+e_gericht, projekt_+e_macherei, hund_+e_leine]
@@ -954,23 +819,21 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pll_ant: 82
-
+            
         func_alias: plur_e_pl
 
         quantifier: irregularly
         measures:
-            sp18_pl_constr:
-                coverage:
-                    item: 0.079
-                    type: 0.022
-                regularity:
-                    item: 0.544
-                    type: 0.52
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
+            coverage:
+                item: 0.079
+                type: 0.022
+            regularity:
+                item: 0.544
+                type: 0.52
+            is_productive: True
+            expected_reg_level: low regularity
+            actual_reg_level: low regularity
+            support_level: supported
 
         examples_pro: [projekt_+e_macherei, tag_+e_buch, punkt_+e_stand]
         examples_contra: [pilz_sammler, brot_korb, jahr_zehnt,  tag_+e_lohn]
@@ -1005,17 +868,16 @@ constraints:
 
         quantifier: irregularly
         measures:
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.009
-                    type: 0.009
-                regularity:
-                    item: 0.088
-                    type: 0.385
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: below scale
-                support_level: not supported
+            coverage:
+                item: 0.009
+                type: 0.009
+            regularity:
+                item: 0.088
+                type: 0.385
+            is_productive: False
+            expected_reg_level: low regularity
+            actual_reg_level: below scale
+            support_level: not supported
 
         examples_pro: [hund_+e_leine, swein_+e_stall, pferd_+e_wagen]
         examples_contra: [hund_+s_stern, schwein_kram, schaf_stall]
@@ -1053,47 +915,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: plur_er
 
         quantifier: mostly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.019
-                    type: 0.058
-                regularity:
-                    item: 0.833
-                    type: 0.868
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.019
-                    type: 0.058
-                regularity:
-                    item: 0.835
-                    type: 0.868
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.021
-                    type: 0.065
-                regularity:
-                    item: 0.815
-                    type: 0.808
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
+            coverage:
+                item: 0.021
+                type: 0.065
+            regularity:
+                item: 0.815
+                type: 0.808
+            is_productive: True
+            expected_reg_level: low regularity
+            actual_reg_level: moderate regularity
+            support_level: supported+
 
         examples_pro: [buch_deckel, buch_+=er_regal, kind_+er_jacke]
         examples_contra: [kind_+es_alter, mann_+s_volk, rind_fleisch]
@@ -1123,23 +960,21 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pll_ant: 82
-
+            
         func_alias: plur_er_sg
 
         quantifier: majority
         measures:
-            sp18_pl_constr:
-                coverage:
-                    item: 0.171
-                    type: 0.329
-                regularity:
-                    item: 0.622
-                    type: 0.572
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
+            coverage:
+                item: 0.171
+                type: 0.329
+            regularity:
+                item: 0.622
+                type: 0.572
+            is_productive: True
+            expected_reg_level: low regularity
+            actual_reg_level: low regularity
+            support_level: supported
 
         examples_pro: [buch_deckel, grab_stein, blatt_fläche]
         examples_contra: [mann_+=er_herz, kind_+er_bild,   buch_handel]
@@ -1180,17 +1015,16 @@ constraints:
 
         quantifier: tend
         measures:
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.002
-                    type: 0.009
-                regularity:
-                    item: 0.741
-                    type: 0.906
-                is_productive: True
-                expected_reg_level: moderate regularity
-                actual_reg_level: regular
-                support_level: supported+
+            coverage:
+                item: 0.002
+                type: 0.009
+            regularity:
+                item: 0.741
+                type: 0.906
+            is_productive: True
+            expected_reg_level: moderate regularity
+            actual_reg_level: regular
+            support_level: supported+
 
         examples_pro: [glas_auge, kraut_salat, horn_haut]
         examples_contra: [kraut_garten]
@@ -1216,23 +1050,21 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pll_ant: 82
-
+            
         func_alias: plur_er_pl
 
         quantifier: more likely
         measures:
-            sp18_pl_constr:
-                coverage:
-                    item: 0.132
-                    type: 0.037
-                regularity:
-                    item: 0.754
-                    type: 0.721
-                is_productive: True
-                expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+            coverage:
+                item: 0.132
+                type: 0.037
+            regularity:
+                item: 0.754
+                type: 0.721
+            is_productive: True
+            expected_reg_level: moderate regularity
+            actual_reg_level: moderate regularity
+            support_level: supported
 
         examples_pro: [buch_+=er_regal, grab_+=er_feld, kraut_+=er_frau]
         examples_contra: [buch_handel, bild_band,   kind_+er_jacke, mann_+=er_herz]
@@ -1278,17 +1110,16 @@ constraints:
 
         quantifier: may
         measures:
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.003
-                    type: 0.01
-                regularity:
-                    item: 0.501
-                    type: 0.803
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
+            coverage:
+                item: 0.003
+                type: 0.01
+            regularity:
+                item: 0.501
+                type: 0.803
+            is_productive: False
+            expected_reg_level: low regularity
+            actual_reg_level: low regularity
+            support_level: supported
 
         examples_pro: [kind_+er_jacke, huhn_+=er_ei, rind_+er_brust]
         examples_contra: []
@@ -1322,47 +1153,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: plur_e_uml
 
         quantifier: mostly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.08
-                    type: 0.111
-                regularity:
-                    item: 0.722
-                    type: 0.756
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.08
-                    type: 0.111
-                regularity:
-                    item: 0.723
-                    type: 0.756
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.083
-                    type: 0.118
-                regularity:
-                    item: 0.716
-                    type: 0.766
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
+            coverage:
+                item: 0.083
+                type: 0.118
+            regularity:
+                item: 0.716
+                type: 0.766
+            is_productive: False
+            expected_reg_level: low regularity
+            actual_reg_level: moderate regularity
+            support_level: supported+
 
         examples_pro: [hand_fläche, frucht_joghurt, arzt_praxis]
         examples_contra: [hand_+=e_druck, arzt_+=e_streik, frucht_+=e_tee]
@@ -1387,23 +1193,21 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pll_ant: 82
-
+            
         func_alias: plur_e_uml_pl
 
         quantifier: irregularly
         measures:
-            sp18_pl_constr:
-                coverage:
-                    item: 0.053
-                    type: 0.01
-                regularity:
-                    item: 0.562
-                    type: 0.864
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
+            coverage:
+                item: 0.053
+                type: 0.01
+            regularity:
+                item: 0.562
+                type: 0.864
+            is_productive: True
+            expected_reg_level: low regularity
+            actual_reg_level: low regularity
+            support_level: supported
 
         examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
         examples_contra: [baum_gruppe, zug_verkehr]
@@ -1441,47 +1245,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: plur_0_uml
 
         quantifier: almost always
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.007
-                    type: 0.016
-                regularity:
-                    item: 0.946
-                    type: 0.967
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.007
-                    type: 0.016
-                regularity:
-                    item: 0.952
-                    type: 0.97
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.007
-                    type: 0.019
-                regularity:
-                    item: 0.974
-                    type: 0.986
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
+            coverage:
+                item: 0.007
+                type: 0.019
+            regularity:
+                item: 0.974
+                type: 0.986
+            is_productive: True
+            expected_reg_level: high regularity
+            actual_reg_level: regular
+            support_level: supported+
 
         examples_pro: [apfel_baum, kloster_kirche, mutter_sprache]
         examples_contra: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
@@ -1507,21 +1286,19 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pll_ant: 82
-
+            
         quantifier: irregularly
         measures:
-            sp18_pl_constr:
-                coverage:
-                    item: 0.039
-                    type: 0.007
-                regularity:
-                    item: 0.667
-                    type: 0.625
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: regular
-                support_level: supported+
+            coverage:
+                item: 0.039
+                type: 0.007
+            regularity:
+                item: 0.667
+                type: 0.625
+            is_productive: True
+            expected_reg_level: low regularity
+            actual_reg_level: regular
+            support_level: supported+
 
         examples_pro: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
         examples_contra: [vogel_futter]
@@ -1547,47 +1324,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: mixed_mn
 
         quantifier: regularly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.013
-                    type: 0.013
-                regularity:
-                    item: 0.997
-                    type: 0.996
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.013
-                    type: 0.013
-                regularity:
-                    item: 0.996
-                    type: 0.996
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.013
-                    type: 0.016
-                regularity:
-                    item: 0.996
-                    type: 0.995
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.013
+                type: 0.016
+            regularity:
+                item: 0.996
+                type: 0.995
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [staat_+s_amt, staat_+en_bund, bett_anzug, auge_+n_lied]
         examples_contra: [schmerz_+ens_schrei]
@@ -1633,23 +1385,21 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pll_ant: 82
-
+            
         func_alias: mixed_mn_pl
 
         quantifier: more likely
         measures:
-            sp18_pl_constr:
-                coverage:
-                    item: 0.039
-                    type: 0.004
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: moderate regularity
-                actual_reg_level: regular
-                support_level: supported+
+            coverage:
+                item: 0.039
+                type: 0.004
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: moderate regularity
+            actual_reg_level: regular
+            support_level: supported+
 
         examples_pro: [staat_+en_bund, bett_+en_zahl, strahl_+en_belastung]
         examples_contra: [  motor_+en_geräusch, professor_+en_titel, auge_+n_lied, interesse_+n_bereich]
@@ -1682,47 +1432,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: sfx_pl_0
 
         quantifier: regularly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.071
-                    type: 0.045
-                regularity:
-                    item: 0.983
-                    type: 0.968
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.071
-                    type: 0.045
-                regularity:
-                    item: 0.986
-                    type: 0.969
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.068
-                    type: 0.032
-                regularity:
-                    item: 0.984
-                    type: 0.96
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.068
+                type: 0.032
+            regularity:
+                item: 0.984
+                type: 0.96
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [reiter_schwert, gürtel_schnalle, brötchen_geber]
         examples_contra: [alter_+s_abstand, reiter_+s_mann]
@@ -1747,47 +1472,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: sfx_pl_e
 
         quantifier: regularly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.005
-                    type: 0.004
-                regularity:
-                    item: 1.0
-                    type: 0.999
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.005
-                    type: 0.005
-                regularity:
-                    item: 1.0
-                    type: 0.999
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.005
-                    type: 0.005
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.005
+                type: 0.005
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [erlaubnis_schein, radikal_operation, personal_ausweis]
         examples_contra: [radikal_+e_fänger]
@@ -1814,47 +1514,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: schwa_fin_deverb
 
         quantifier: mostly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.028
-                    type: 0.028
-                regularity:
-                    item: 0.579
-                    type: 0.592
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.028
-                    type: 0.028
-                regularity:
-                    item: 0.576
-                    type: 0.594
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.028
-                    type: 0.027
-                regularity:
-                    item: 0.587
-                    type: 0.624
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
+            coverage:
+                item: 0.028
+                type: 0.027
+            regularity:
+                item: 0.587
+                type: 0.624
+            is_productive: False
+            expected_reg_level: low regularity
+            actual_reg_level: low regularity
+            support_level: supported
 
         examples_pro: [abgabe_soll, sorge_pflicht, lage_plan]
         examples_contra: [abgabe_+n_ordnung, anzeige_+n_blatt, lüge_+n_detektor]
@@ -1890,8 +1565,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pll_ant: 82
-
+            
         func_alias: schwa_fin_deverb_pl
 
         quantifier: tend
@@ -1921,47 +1595,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: schwa_fin_deadj
 
         quantifier: always
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.009
-                    type: 0.01
-                regularity:
-                    item: 0.97
-                    type: 0.852
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.009
-                    type: 0.01
-                regularity:
-                    item: 0.97
-                    type: 0.849
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.009
-                    type: 0.008
-                regularity:
-                    item: 0.966
-                    type: 0.833
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.009
+                type: 0.008
+            regularity:
+                item: 0.966
+                type: 0.833
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [fläche_maß, hitze_welle, tiefe_+n_meter, größe_+n_klasse]
         examples_contra: [liebe_+s_brief]
@@ -2001,47 +1650,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: sfx_s
 
         quantifier: regularly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.215
-                    type: 0.158
-                regularity:
-                    item: 0.98
-                    type: 0.985
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: high regularity
-                support_level: partially supported
-            gecodb_v07:
-                coverage:
-                    item: 0.216
-                    type: 0.16
-                regularity:
-                    item: 0.98
-                    type: 0.985
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: high regularity
-                support_level: partially supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.214
-                    type: 0.154
-                regularity:
-                    item: 0.987
-                    type: 0.995
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: high regularity
-                support_level: partially supported
+            coverage:
+                item: 0.214
+                type: 0.154
+            regularity:
+                item: 0.987
+                type: 0.995
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: high regularity
+            support_level: partially supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, schicksal_+s_drama, rarität_+s_wert, eigentum_+s_recht]
         examples_contra: [minderheit_+en_recht, kuriosität_+en_museum, nationalität_+en_kampf]
@@ -2124,23 +1748,21 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pll_ant: 82
-
+            
         func_alias: sfx_s_pl
 
         quantifier: irregularly
         measures:
-            sp18_pl_constr:
-                coverage:
-                    item: 0.013
-                    type: 0.001
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: regular
-                support_level: supported+
+            coverage:
+                item: 0.013
+                type: 0.001
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: low regularity
+            actual_reg_level: regular
+            support_level: supported+
 
         examples_pro: [rarität_+en_sammlung, minderheit_+en_regelung, generation_+en_konflikt]
         examples_contra: [generation_+s_unterschied]
@@ -2172,47 +1794,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: sfx_deverb_en
 
         quantifier: mostly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.005
-                    type: 0.009
-                regularity:
-                    item: 0.773
-                    type: 0.926
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.005
-                    type: 0.009
-                regularity:
-                    item: 0.775
-                    type: 0.928
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.005
-                    type: 0.01
-                regularity:
-                    item: 0.831
-                    type: 0.962
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
+            coverage:
+                item: 0.005
+                type: 0.01
+            regularity:
+                item: 0.831
+                type: 0.962
+            is_productive: True
+            expected_reg_level: low regularity
+            actual_reg_level: moderate regularity
+            support_level: supported+
 
         examples_pro: [leben_+s_mittel, essen_+s_gewohnheit, unternehmen_+s_bereich]
         examples_contra: [essen_portion, leben_geschäft, husten_tropfen, beben_gebiet]
@@ -2253,8 +1850,6 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: sfx_F_in_en
@@ -2288,47 +1883,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: prx_deverb
 
         quantifier: tendency
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.159
-                    type: 0.122
-                regularity:
-                    item: 0.641
-                    type: 0.659
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
-            gecodb_v07:
-                coverage:
-                    item: 0.16
-                    type: 0.124
-                regularity:
-                    item: 0.643
-                    type: 0.66
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.159
-                    type: 0.123
-                regularity:
-                    item: 0.649
-                    type: 0.702
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
+            coverage:
+                item: 0.159
+                type: 0.123
+            regularity:
+                item: 0.649
+                type: 0.702
+            is_productive: False
+            expected_reg_level: moderate regularity
+            actual_reg_level: low regularity
+            support_level: partially supported
 
         examples_pro: [anspruch_+s_haltung, eintrag_+s_frist, bedarf_+s_fall, verfall_+s_datum]
         examples_contra: [anruf_beantworter, überfall_kommando, bestand_teil]
@@ -2397,47 +1967,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: sibilant_fin
 
         quantifier: almost regularly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.083
-                    type: 0.1
-                regularity:
-                    item: 0.97
-                    type: 0.953
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.083
-                    type: 0.1
-                regularity:
-                    item: 0.969
-                    type: 0.952
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.085
-                    type: 0.105
-                regularity:
-                    item: 0.97
-                    type: 0.961
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
+            coverage:
+                item: 0.085
+                type: 0.105
+            regularity:
+                item: 0.97
+                type: 0.961
+            is_productive: True
+            expected_reg_level: high regularity
+            actual_reg_level: high regularity
+            support_level: supported
 
         examples_pro: [gefäß_system, fisch_öl, notiz_buch, herbst_anfang]
         examples_contra: [gast_+=e_buch, geist_+=er_haus]
@@ -2472,47 +2017,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: vow_fin
 
         quantifier: almost regularly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.041
-                    type: 0.036
-                regularity:
-                    item: 0.968
-                    type: 0.976
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.041
-                    type: 0.037
-                regularity:
-                    item: 0.968
-                    type: 0.976
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.04
-                    type: 0.033
-                regularity:
-                    item: 0.96
-                    type: 0.979
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
+            coverage:
+                item: 0.04
+                type: 0.033
+            regularity:
+                item: 0.96
+                type: 0.979
+            is_productive: True
+            expected_reg_level: high regularity
+            actual_reg_level: high regularity
+            support_level: supported
 
         examples_pro: [auto_bahn, uhu_paar, kuh_milch, gummi_bär]
         examples_contra: [melodie_+n_folge, idee_+n_liste]
@@ -2550,47 +2070,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: stressed_phon_fin
 
         quantifier: usually
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.03
-                    type: 0.033
-                regularity:
-                    item: 0.95
-                    type: 0.969
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.03
-                    type: 0.033
-                regularity:
-                    item: 0.95
-                    type: 0.969
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.028
-                    type: 0.032
-                regularity:
-                    item: 0.94
-                    type: 0.975
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
+            coverage:
+                item: 0.028
+                type: 0.032
+            regularity:
+                item: 0.94
+                type: 0.975
+            is_productive: True
+            expected_reg_level: high regularity
+            actual_reg_level: high regularity
+            support_level: supported
 
         examples_pro: [kosmetik_industrie, akustik_paneele, architektur_büro, metzgerei_produkt]
         examples_contra: [kultur_+en_folge, melodie_+n_reigen, partei_+en_staat]
@@ -2618,8 +2113,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pll_ant: 82
-
+            
         func_alias: stressed_phon_fin_pl
 
         quantifier: irregularly
@@ -2646,47 +2140,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: f_t_fin
 
         quantifier: sometimes
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.013
-                    type: 0.016
-                regularity:
-                    item: 0.505
-                    type: 0.463
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.013
-                    type: 0.016
-                regularity:
-                    item: 0.516
-                    type: 0.464
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.012
-                    type: 0.02
-                regularity:
-                    item: 0.625
-                    type: 0.501
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: low regularity
-                support_level: supported
+            coverage:
+                item: 0.012
+                type: 0.02
+            regularity:
+                item: 0.625
+                type: 0.501
+            is_productive: False
+            expected_reg_level: low regularity
+            actual_reg_level: low regularity
+            support_level: supported
 
         examples_pro: [arbeit_+s_tag, heirat_+s_antrag, zukunft_+s_angst]
         examples_contra: [arbeit_geber, jugend_alter, umwelt_schutz]
@@ -2721,47 +2190,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: schwa_fin
 
         quantifier: mostly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.172
-                    type: 0.149
-                regularity:
-                    item: 0.752
-                    type: 0.72
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.173
-                    type: 0.147
-                regularity:
-                    item: 0.753
-                    type: 0.717
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.171
-                    type: 0.139
-                regularity:
-                    item: 0.764
-                    type: 0.705
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
+            coverage:
+                item: 0.171
+                type: 0.139
+            regularity:
+                item: 0.764
+                type: 0.705
+            is_productive: False
+            expected_reg_level: low regularity
+            actual_reg_level: moderate regularity
+            support_level: supported+
 
         examples_pro: [biene_+n_zucht, suppe_+n_schüssel, auge_+n_lied]
         examples_contra: [fläche_maß, sorge_pflicht, gebäude_komplex, gedanke_+ns_turm]
@@ -2876,47 +2320,22 @@ constraints:
         
         appl_item: n1
         datasets_n_appl_items:
-            gecodb_v06: 3614
-            gecodb_v07: 3593
             gecodb_v07_gn: 3319
 
         func_alias: f_cons_fin
 
         quantifier: regularly
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.249
-                    type: 0.21
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.25
-                    type: 0.212
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.249
-                    type: 0.212
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.249
+                type: 0.212
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [schrift_führer, geburt_+s_tag, burg_anlage, burg_+en_blick]
         examples_contra: []
@@ -2949,23 +2368,21 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pll_ant: 82
-
+            
         func_alias: f_cons_fin_sg
 
         quantifier: mostly
         measures:
-            sp18_pl_constr:
-                coverage:
-                    item: 0.053
-                    type: 0.033
-                regularity:
-                    item: 0.416
-                    type: 0.187
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: below scale
-                support_level: not supported
+            coverage:
+                item: 0.053
+                type: 0.033
+            regularity:
+                item: 0.416
+                type: 0.187
+            is_productive: True
+            expected_reg_level: low regularity
+            actual_reg_level: below scale
+            support_level: not supported
 
         examples_pro: [schrift_führer, geburt_+s_tag, burg_anlage]
         examples_contra: [burg_+en_blick, frau_+en_bild]
@@ -3002,23 +2419,21 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pll_ant: 82
-
+            
         func_alias: f_cons_fin_pl
 
         quantifier: more likely
         measures:
-            sp18_pl_constr:
-                coverage:
-                    item: 0.039
-                    type: 0.009
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: moderate regularity
-                actual_reg_level: regular
-                support_level: supported+
+            coverage:
+                item: 0.039
+                type: 0.009
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: moderate regularity
+            actual_reg_level: regular
+            support_level: supported+
 
         examples_pro: [schrift_+en_verzeichnis, geburt_+en_kontrolle, burg_+en_land]
         examples_contra: [  burg_+en_blick]
@@ -3189,17 +2604,16 @@ constraints:
 
         quantifier: tend
         measures:
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.001
-                    type: 0.001
-                regularity:
-                    item: 0.482
-                    type: 0.483
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: below scale
-                support_level: not supported
+            coverage:
+                item: 0.001
+                type: 0.001
+            regularity:
+                item: 0.482
+                type: 0.483
+            is_productive: False
+            expected_reg_level: moderate regularity
+            actual_reg_level: below scale
+            support_level: not supported
 
         examples_pro: [reiter_+s_mann, lehrer_+s_tochter, bäcker_+s_leute]
         examples_contra: []
@@ -3232,47 +2646,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: cmpx_morph
 
         quantifier: tendency
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.27
-                    type: 0.256
-                regularity:
-                    item: 0.816
-                    type: 0.874
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.264
-                    type: 0.259
-                regularity:
-                    item: 0.847
-                    type: 0.876
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.285
-                    type: 0.269
-                regularity:
-                    item: 0.907
-                    type: 0.85
-                is_productive: True
-                expected_reg_level: moderate regularity
-                actual_reg_level: high regularity
-                support_level: supported+
+            coverage:
+                item: 0.285
+                type: 0.269
+            regularity:
+                item: 0.907
+                type: 0.85
+            is_productive: True
+            expected_reg_level: moderate regularity
+            actual_reg_level: high regularity
+            support_level: supported+
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, anspruch_+s_haltung, eintrag_+s_frist]
         examples_contra: [ort_+s_amt, krieg_+s_ende, anruf_beantworter, minderheit_+en_recht]
@@ -3316,47 +2705,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: cmpx_phon
 
         quantifier: tendency
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.27
-                    type: 0.256
-                regularity:
-                    item: 0.607
-                    type: 0.611
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
-            gecodb_v07:
-                coverage:
-                    item: 0.264
-                    type: 0.259
-                regularity:
-                    item: 0.637
-                    type: 0.614
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.285
-                    type: 0.269
-                regularity:
-                    item: 0.688
-                    type: 0.587
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
+            coverage:
+                item: 0.285
+                type: 0.269
+            regularity:
+                item: 0.688
+                type: 0.587
+            is_productive: False
+            expected_reg_level: moderate regularity
+            actual_reg_level: low regularity
+            support_level: partially supported
 
         examples_pro: [beruf_+s_erfahrung, religion_+s_unterricht]
         examples_contra: [liebe_+s_brief, land_+s_mann,     bestand_teil]
@@ -3396,47 +2760,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: sonority
 
         quantifier: tend
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.05
-                    type: 0.032
-                regularity:
-                    item: 0.413
-                    type: 0.746
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: below scale
-                support_level: not supported
-            gecodb_v07:
-                coverage:
-                    item: 0.04
-                    type: 0.032
-                regularity:
-                    item: 0.476
-                    type: 0.756
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: below scale
-                support_level: not supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.026
-                    type: 0.04
-                regularity:
-                    item: 0.547
-                    type: 0.822
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
+            coverage:
+                item: 0.026
+                type: 0.04
+            regularity:
+                item: 0.547
+                type: 0.822
+            is_productive: False
+            expected_reg_level: moderate regularity
+            actual_reg_level: low regularity
+            support_level: partially supported
 
         examples_pro: [ort_+s_tarif, glück_+s_rad, land_+s_mann]
         examples_contra: [himmel_+s_bahn, uhu_+s_nest,  arbeit_geber]
@@ -3487,47 +2826,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: s_smpx
 
         quantifier: almost all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.05
-                    type: 0.032
-                regularity:
-                    item: 0.988
-                    type: 0.915
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.04
-                    type: 0.032
-                regularity:
-                    item: 0.984
-                    type: 0.912
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.026
-                    type: 0.04
-                regularity:
-                    item: 0.979
-                    type: 0.875
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
+            coverage:
+                item: 0.026
+                type: 0.04
+            regularity:
+                item: 0.979
+                type: 0.875
+            is_productive: True
+            expected_reg_level: high regularity
+            actual_reg_level: regular
+            support_level: supported+
 
         examples_pro: [zwang_+s_jacke, ort_+s_angabe, könig_+s_haus]
         examples_contra: [arbeit_+s_amt, heirat_+s_antrag, liebe_+s_brief]
@@ -3566,47 +2880,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: s_freq
 
         quantifier: many
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.05
-                    type: 0.032
-                regularity:
-                    item: 0.649
-                    type: 0.914
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
-            gecodb_v07:
-                coverage:
-                    item: 0.04
-                    type: 0.032
-                regularity:
-                    item: 0.691
-                    type: 0.92
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: low regularity
-                support_level: partially supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.026
-                    type: 0.04
-                regularity:
-                    item: 0.747
-                    type: 0.933
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: moderate regularity
-                support_level: supported
+            coverage:
+                item: 0.026
+                type: 0.04
+            regularity:
+                item: 0.747
+                type: 0.933
+            is_productive: False
+            expected_reg_level: moderate regularity
+            actual_reg_level: moderate regularity
+            support_level: supported
 
         examples_pro: [volk_+s_brauch, amt_+s_anwalt, staat_+s_amt]
         examples_contra: [fasching_+s_foto, gral_+s_sage, konvent_+s_sitzung]
@@ -3630,47 +2919,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: s_f_cmpx
 
         quantifier: almost all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.163
-                    type: 0.159
-                regularity:
-                    item: 0.996
-                    type: 0.983
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.167
-                    type: 0.161
-                regularity:
-                    item: 0.996
-                    type: 0.982
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.202
-                    type: 0.161
-                regularity:
-                    item: 0.997
-                    type: 0.968
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: regular
-                support_level: supported+
+            coverage:
+                item: 0.202
+                type: 0.161
+            regularity:
+                item: 0.997
+                type: 0.968
+            is_productive: True
+            expected_reg_level: high regularity
+            actual_reg_level: regular
+            support_level: supported+
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, liebe_+s_brief]
         examples_contra: [arbeit_+s_tag, heirat_+s_antrag]
@@ -3699,47 +2963,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: s_f_polysyl
 
         quantifier: all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.163
-                    type: 0.159
-                regularity:
-                    item: 0.999
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.167
-                    type: 0.161
-                regularity:
-                    item: 0.999
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.202
-                    type: 0.161
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.202
+                type: 0.161
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [gesundheit_+s_amt, gesellschaft_+s_politik, heirat_+s_antrag, liebe_+s_brief]
         examples_contra: []
@@ -3770,47 +3009,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: n_schwa
 
         quantifier: all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.116
-                    type: 0.109
-                regularity:
-                    item: 0.988
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: high regularity
-                support_level: partially supported
-            gecodb_v07:
-                coverage:
-                    item: 0.115
-                    type: 0.107
-                regularity:
-                    item: 0.996
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.129
-                    type: 0.099
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.129
+                type: 0.099
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [biene_+n_zucht, auge_+n_lied, oper_+n_haus]
         examples_contra: []
@@ -3853,47 +3067,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: en_par
 
         quantifier: almost all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.143
-                    type: 0.127
-                regularity:
-                    item: 0.971
-                    type: 0.986
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.143
-                    type: 0.125
-                regularity:
-                    item: 0.979
-                    type: 0.986
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.152
-                    type: 0.116
-                regularity:
-                    item: 0.985
-                    type: 0.991
-                is_productive: True
-                expected_reg_level: high regularity
-                actual_reg_level: high regularity
-                support_level: supported
+            coverage:
+                item: 0.152
+                type: 0.116
+            regularity:
+                item: 0.985
+                type: 0.991
+            is_productive: True
+            expected_reg_level: high regularity
+            actual_reg_level: high regularity
+            support_level: supported
 
         examples_pro: [blume_+n_topf, katze_+n_fell, frau_+en_hand]
         examples_contra: [hahn_+en_kamm, mond_+en_schein, instrument_+en_bau]
@@ -3943,17 +3132,16 @@ constraints:
 
         quantifier: all
         measures:
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.001
-                    type: 0.001
-                regularity:
-                    item: 0.786
-                    type: 0.774
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.001
+                type: 0.001
+            regularity:
+                item: 0.786
+                type: 0.774
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [hahn_+en_kamm, mond_+en_schein, stern_+en_himmel, mai_+en_nacht]
         examples_contra: [  mond_aufgang, stern_bild, mai_baum]
@@ -4011,47 +3199,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: e_par
 
         quantifier: all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.023
-                    type: 0.008
-                regularity:
-                    item: 0.982
-                    type: 0.994
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.023
-                    type: 0.008
-                regularity:
-                    item: 0.981
-                    type: 0.994
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.009
-                    type: 0.006
-                regularity:
-                    item: 0.968
-                    type: 0.997
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.009
+                type: 0.006
+            regularity:
+                item: 0.968
+                type: 0.997
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
         examples_contra: [herz_+e_leid, maus_+e_zahn]
@@ -4091,47 +3254,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: e_last_syl
 
         quantifier: all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.023
-                    type: 0.008
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.023
-                    type: 0.008
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.009
-                    type: 0.006
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.009
+                type: 0.006
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine, anhelt_+e_stelle]
         examples_contra: []
@@ -4156,47 +3294,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: e_smpx
 
         quantifier: most
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.023
-                    type: 0.008
-                regularity:
-                    item: 0.73
-                    type: 0.783
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.023
-                    type: 0.008
-                regularity:
-                    item: 0.729
-                    type: 0.781
-                is_productive: False
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.009
-                    type: 0.006
-                regularity:
-                    item: 0.806
-                    type: 0.826
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
+            coverage:
+                item: 0.009
+                type: 0.006
+            regularity:
+                item: 0.806
+                type: 0.826
+            is_productive: True
+            expected_reg_level: low regularity
+            actual_reg_level: moderate regularity
+            support_level: supported+
 
         examples_pro: [tag_+e_buch, punkt_+e_stand, hund_+e_leine]
         examples_contra: [anhalt_+e_stelle]
@@ -4257,47 +3370,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: er_par
 
         quantifier: all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.01
-                    type: 0.015
-                regularity:
-                    item: 0.979
-                    type: 0.999
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.01
-                    type: 0.015
-                regularity:
-                    item: 0.979
-                    type: 0.999
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.009
-                    type: 0.014
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.009
+                type: 0.014
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+er_jacke]
         examples_contra: []
@@ -4341,47 +3429,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: er_last_syl
 
         quantifier: all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.01
-                    type: 0.015
-                regularity:
-                    item: 0.979
-                    type: 0.999
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.01
-                    type: 0.015
-                regularity:
-                    item: 0.979
-                    type: 0.999
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.009
-                    type: 0.014
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.009
+                type: 0.014
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+er_jacke, mitglied_+er_liste]
         examples_contra: []
@@ -4409,47 +3472,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: er_smpx
 
         quantifier: most
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.01
-                    type: 0.015
-                regularity:
-                    item: 0.875
-                    type: 0.935
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07:
-                coverage:
-                    item: 0.01
-                    type: 0.015
-                regularity:
-                    item: 0.875
-                    type: 0.934
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: moderate regularity
-                support_level: supported+
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.009
-                    type: 0.014
-                regularity:
-                    item: 0.903
-                    type: 0.914
-                is_productive: True
-                expected_reg_level: low regularity
-                actual_reg_level: regular
-                support_level: supported+
+            coverage:
+                item: 0.009
+                type: 0.014
+            regularity:
+                item: 0.903
+                type: 0.914
+            is_productive: True
+            expected_reg_level: low regularity
+            actual_reg_level: regular
+            support_level: supported+
 
         examples_pro: [buch_+=er_regal, kraut_+=er_frau, kind_+er_jacke]
         examples_contra: [mitglied_+er_liste, vorbild_+er_sammlung]
@@ -4502,47 +3540,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: e_uml_par
 
         quantifier: all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.011
-                    type: 0.003
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.011
-                    type: 0.003
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.003
-                    type: 0.002
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.003
+                type: 0.002
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [hand_+=e_druck, arzt_+=e_streik, gast_+=e_buch]
         examples_contra: []
@@ -4624,47 +3637,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: es_monosyl
 
         quantifier: all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.012
-                    type: 0.011
-                regularity:
-                    item: 0.983
-                    type: 0.94
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.011
-                    type: 0.011
-                regularity:
-                    item: 0.963
-                    type: 0.939
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.01
-                    type: 0.015
-                regularity:
-                    item: 0.972
-                    type: 0.941
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.01
+                type: 0.015
+            regularity:
+                item: 0.972
+                type: 0.941
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [bund_+es_tag, kind_+es_alter, tag_+es_schau, land_+es_regierung, vorjahr_+es_gewinner]
         examples_contra: [gesetz_+es_änderung]
@@ -4731,47 +3719,22 @@ constraints:
         
         appl_item: n1+linker
         datasets_n_appl_items:
-            gecodb_v06: 4870
-            gecodb_v07: 4741
             gecodb_v07_gn: 3585
 
         func_alias: zero_uml_par
 
         quantifier: all
         measures:
-            gecodb_v06:
-                coverage:
-                    item: 0.003
-                    type: 0.0
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07:
-                coverage:
-                    item: 0.003
-                    type: 0.0
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
-            gecodb_v07_gn:
-                coverage:
-                    item: 0.001
-                    type: 0.0
-                regularity:
-                    item: 1.0
-                    type: 1.0
-                is_productive: True
-                expected_reg_level: regular
-                actual_reg_level: regular
-                support_level: supported
+            coverage:
+                item: 0.001
+                type: 0.0
+            regularity:
+                item: 1.0
+                type: 1.0
+            is_productive: True
+            expected_reg_level: regular
+            actual_reg_level: regular
+            support_level: supported
 
         examples_pro: [bruder_+=_gemeinde, mutter_+=_zentrum, vater_+=_aufbruch]
         examples_contra: []
@@ -4798,23 +3761,21 @@ constraints:
         appl_item: n1+linker
         datasets_n_appl_items:
             sp18_pl_constr: 86
-            # gecodb_v07_pll_ant: 99
 
         func_alias: pl_interpr
 
         quantifier: tend
         measures:
-            sp18_pl_constr:
-                coverage:
-                    item: 0.465
-                    type: 0.463
-                regularity:
-                    item: 0.147
-                    type: 0.154
-                is_productive: False
-                expected_reg_level: moderate regularity
-                actual_reg_level: below scale
-                support_level: not supported
+            coverage:
+                item: 0.465
+                type: 0.463
+            regularity:
+                item: 0.147
+                type: 0.154
+            is_productive: False
+            expected_reg_level: moderate regularity
+            actual_reg_level: below scale
+            support_level: not supported
 
         examples_pro: [punkt_+e_stand, buch_+=er_regal, staat_+en_bund, burg_+en_land, mutter_+=_zentrum]
         examples_contra: [motor_+en_geräusch, burg_+en_blick, kind_+er_jacke, hund_+e_leine,   pilz_sammler, buch_handel, vogel_futter]
