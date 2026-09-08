@@ -50,7 +50,9 @@ class CompXConstraints:
         # when predicting the linker;
         # -(")er- is merged in the constraint file already
         # NB! but not in the applicability indices
-        return re.sub(r"_\+n", "_+en", linker_gecodb)
+        linker_gecodb = re.sub(r"_\+n", "_+en", linker_gecodb)
+        linker_gecodb = re.sub(r"_\+er", "_+=er", linker_gecodb)
+        return linker_gecodb
 
     def _reg(self, constr: dict) -> float:
         return constr["measures"]["regularity"]["item"]
@@ -252,7 +254,11 @@ class CompXConstraints:
         # if all the linkers were eliminated, use the default linker
         # as a backup
         if not linker_scoreboard:
-            linker_scoreboard = {"_": DEF_CONSTR}
+            linker_scoreboard = {"_": {
+                "c_id": DEF_ID,
+                "confidence": self._reg(DEF_CONSTR),
+                "cvg": self._cvg(DEF_CONSTR)
+            }}
 
         # indirectly following Albright & Hayes 2002,
         # prioritize the constraints with the higher coverage in case
