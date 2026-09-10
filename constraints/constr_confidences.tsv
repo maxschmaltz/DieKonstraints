@@ -1,0 +1,66 @@
+c_id	condition	spec_score	cvg	reg
+l2p:en|non_par_n_pl_interpr	[PL:!en] & [G:N] & [nsyl:!mono] & [coda:CLT] & [loan:T] & [sem:PL]	73.3	2.0	0.0
+p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en	[G:F] & [PL:en] & [coda:CN] & [sem:PL]	52.5	0.039	1.0
+p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s	[G:F] & [PL:en] & [coda:CN] & [sem:!PL]	50.9	0.053	0.416
+l2p:en|non_par_m	[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]	50.8	0.001	0.786
+p2l:phon_fin:F_stem_#t$-s	[G:F] & [nsyl:!mono] & [coda:t] & [drv:!sfx]	48.9	0.012	0.625
+p2l:decl_cl:pl:#e-0|msyl_anim-e	[PL:e] & [nsyl:mono] & [sem:anim]	42.0	0.009	0.088
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en	[G:F] & [PL:en] & [coda:CN]	39.7	0.249	1.0
+p2l:decl_cl:pl:#0-0|def-0	[PL:o] & [[[drv:smpx] & [G:!F]] | [G:F]]	33.0	0.066	0.957
+p2l:sem:2const_anim/pers-s	[sem:pers] & [nt:lex]	28.0	0.001	0.482
+p2l:decl_cl:pl:#er-0/er|mass-interpr-0	[PL:er] & [sem:mass]	28.0	0.002	0.741
+p2l:decl_cl:pl:#er-0/er|anim-er	[PL:er] & [[sem:anim] | [sem:pers]]	28.0	0.003	0.501
+l2p:s|smpx_high_freq	[drv:smpx] & [hfreq:T]	26.9	0.026	0.747
+p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml	[PL:uo] & [sem:PL]	26.8	0.039	0.667
+p2l:decl_cl:mixed-0/s/en|pl_interpr-en	[PL:m] & [sem:PL]	26.8	0.039	1.0
+p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml	[PL:ue] & [sem:PL]	26.8	0.053	0.562
+p2l:decl_cl:pl:#e-0|pl_interpr-e	[PL:e] & [sem:PL]	26.8	0.079	0.544
+p2l:decl_cl:pl:#er-0/er|pl_interpr-er	[PL:er] & [sem:PL]	26.8	0.132	0.754
+l2p:s|f_cmpx	[G:F] & [drv:T]	25.8	0.202	0.997
+p2l:drv:sfx:sfx-s|pl_interpr-en	[drv:SFX] & [sem:PL]	25.5	0.013	1.0
+p2l:drv:deverb_schwa$-0|pl_interpr-en	[drv:SFX] & [sem:PL]	25.5	2.0	0.0
+p2l:phon_fin:F_#stressed_phon$|pl_interpr-en	[coda:CLT] & [sem:PL]	25.5	2.0	0.0
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	[PL:er] & [sem:!PL]	25.2	0.171	0.622
+l2p:s|smpx_mn	[G:!F] & [drv:smpx]	25.1	0.026	0.979
+l2p:s|f_poly_syl	[G:F] & [nsyl:!mono]	23.9	0.202	1.0
+l2p:s|tend_!sonority	[coda:!NL] & [coda:!V]	22.3	0.026	0.547
+l2p:es|mono_syl	[nsyl:mono] | [[nsyl:mono] & [drv:PRX]]	20.4	0.01	0.972
+l2p:e|#stressed_syl	[coda:CLT] | [[coda:CLT] & [drv:PRX]]	19.0	0.009	1.0
+l2p:er|#stressed_syl	[coda:CLT] | [[coda:CLT] & [drv:PRX]]	19.0	0.009	1.0
+l2p:0_uml	[PL:uo]	14.0	0.001	1.0
+l2p:e_uml	[PL:ue]	14.0	0.003	1.0
+p2l:decl_cl:pl:#0_uml-0|def-0	[PL:uo]	14.0	0.007	0.974
+l2p:e|par	[PL:e]	14.0	0.009	0.968
+l2p:e|smpx	[drv:smpx]	14.0	0.009	0.806
+l2p:er|par	[PL:er]	14.0	0.009	1.0
+l2p:er|smpx	[drv:smpx]	14.0	0.009	0.903
+p2l:decl_cl:mixed-0/s/en|def-0/s/en	[PL:m]	14.0	0.013	0.996
+p2l:decl_cl:pl:#er-0/er|def-0/er	[PL:er]	14.0	0.021	0.815
+p2l:decl_cl:pl:#s-0	[PL:s]	14.0	0.035	0.965
+p2l:decl_cl:pl:#e_uml-0|def-0	[PL:ue]	14.0	0.083	0.716
+l2p:n	[coda:e]	14.0	0.129	1.0
+l2p:en|par	[PL:en]	14.0	0.152	0.985
+p2l:decl_cl:pl:#e-0|def-0	[PL:e]	14.0	0.162	0.754
+p2l:phon_fin:schwa$-en|def-en	[coda:e]	14.0	0.171	0.764
+p2l:sem:comp_type:copula-0	[csem:cop]	14.0	2.0	0.0
+p2l:sem:comp_type:arg-s	[csem:arg]	14.0	2.0	0.0
+p2l:sem:tech_term-0	[csem:tech]	14.0	2.0	0.0
+l2p:es|isol	[no:lex]	14.0	2.0	0.0
+l2p:ens	[no:lex]	14.0	2.0	0.0
+l2p:s|tend_cmpx_morph	[drv:T]	12.9	0.285	0.907
+l2p:s|tend_cmpx_phon	[tro:F]	12.9	0.285	0.688
+l2p:pl_marker|def-pl	[PL:A]	12.9	0.465	0.147
+l2p:e|!loan	[loan:F]	12.9	2.0	0.0
+l2p:er|!loan	[loan:F]	12.9	2.0	0.0
+p2l:phon_fin:vow$-0	[coda:VW]	12.8	0.04	0.96
+p2l:phon_fin:sibilant$-0	[coda:S] | [coda:CLT]	12.8	0.085	0.97
+p2l:drv:sfx:e_pl_sfx-0	[drv:SFX]	12.7	0.005	1.0
+p2l:drv:sfx:deverb_#en$-s	[drv:SFX]	12.7	0.005	0.831
+p2l:drv:deadj_schwa$-0/en	[drv:SFX]	12.7	0.009	0.966
+p2l:drv:deverb_schwa$-0|def-0	[drv:SFX]	12.7	0.028	0.587
+p2l:phon_fin:F_#stressed_phon$|def-0	[coda:CLT]	12.7	0.028	0.94
+p2l:drv:sfx:0_pl_sfx-0	[drv:SFX]	12.7	0.068	0.984
+p2l:drv:prx_deverb-s	[drv:PRX]	12.7	0.159	0.649
+p2l:drv:sfx:sfx-s|def-s	[drv:SFX]	12.7	0.214	0.987
+p2l:drv:sfx:F_#in$-en	[drv:SFX]	12.7	2.0	0.0
+def-0		0.0	1.0	0.573
