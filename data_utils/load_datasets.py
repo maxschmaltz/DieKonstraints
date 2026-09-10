@@ -4,6 +4,15 @@ from collections import defaultdict
 from typing import Optional
 
 
+def load_tsv_generic(tsv_path: str) -> pd.DataFrame:
+	return pd.read_csv(
+		tsv_path,
+		sep="\t",
+		header=0,
+		index_col=0
+	)
+
+
 def load_constraints(
 	constr_path: str,
 	load_data_specs: Optional[bool]=False
