@@ -9,7 +9,7 @@ from data_utils.load_datasets import load_constraints
 # python3 -m data_utils.get_constr_confidences
 def main():
 
-    # When modeling compounding, we have two options as of
+    # When modeling compounding, we have three options as of
     # what to use as the confidence score to resolve constraint
     # conflicts:
     # * Regularity (Albright & Hayes 2002). While Albright & Hayes 2002

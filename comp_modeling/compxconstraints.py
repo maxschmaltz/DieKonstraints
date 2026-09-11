@@ -187,11 +187,31 @@ class CompXConstraints:
     def predict(
         self,
         *,
-        method: Literal["albright_hayes", "yang-cond", "yang-cvg"],
+        method: Literal["albright-hayes", "yang-cond", "yang-cvg"],
         count_def_constr: bool,
         constr_cooperation: bool,
         restrict_with_l2p: bool
     ):
+
+        # While the Elsewhere condition prescripts to stop generation
+        # once an applicable rule is found, we adopt the workflow
+        # of Albright & Hayes 2002. While iteration over the whole set
+        # of rules is not characteristic to the Elsewhere condition,
+        # the final prediction will be the one predicted by the 
+        # highest-confident applicable constraint, which is exactly
+        # what the Elsewhere condition does. So the real difference
+        # is, really, not the prediction itself but how much information 
+        # is elicited during the modeling, where Albright & Hayes 2002
+        # clearly have an edge. Otherwise, the two are not rivals
+        # but the same method, just with a different rule ordering.
+        #
+        # So what we do during prediction is:
+        # 1. Sort the applicable constraints in the appropriate to the
+        # method manner.
+        # 2. Iterate over each constraint and record its prediction
+        # and the associated confidence (Albright & Hayes 2002).
+        # 3. Eliminate predictions restricted by the L2P constraints.
+        # 4. Declare the most confident remaining outcome the prediction.
 
         # to resolve constraint conflicts, we will be referencing
         # the constraint confidence table prepared in advance,
@@ -202,7 +222,7 @@ class CompXConstraints:
         # all are constraints on paradigmatic linkers,
         # so there should not be conflicts between those
         match method:
-            case "albright_hayes":
+            case "albright-hayes":
                 # use regularity as the confidence score;
                 # in case of equal regularity, prefer constraints
                 # with higher coverage, since high regularity
