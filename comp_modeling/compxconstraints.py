@@ -125,9 +125,6 @@ class CompXConstraints:
                     for linker in constr_linkers:
                         self.unacceptable_linkers[linker].append(c_id)
 
-    # def _constr_rank(self, c_id: str) -> int:
-    #     return constr_confidences.index.to_list().index(c_id)
-
     def _build_linker_scoreboard(
             self,
             un_acceptable_linkers: dict
@@ -166,16 +163,25 @@ class CompXConstraints:
                 for col in self._sort_kwargs["by"]
             }
             agg_map["c_id"] = list
+            # this will return the sum of target and auxiliary prop
+            # for each linker, and a liststr of the contributing constraints
+            linker_scoreboard = linker_scoreboard.groupby(
+                "linker", as_index=False
+            ).agg(agg_map).sort_values(**self._sort_kwargs)
+            linker_scoreboard["c_id"] = linker_scoreboard["c_id"].map(
+                lambda c_ids: ", ".join(c_ids)
+            )
         else:
-            # max pooling
-            agg_map = {
-                self._target: max,
-                self._sort_kwargs["by"][1]: lambda x: x
-            }
-            agg_map["c_id"] = lambda x: x
-        linker_scoreboard = linker_scoreboard.groupby(
-            "linker", as_index=False
-        ).agg(agg_map).sort_values(**self._sort_kwargs)
+            # max pooling; this will keep only one row
+            # per each linker where it achieves the highest confidence
+            linker_scoreboard = linker_scoreboard   \
+                .sort_values(**self._sort_kwargs)   \
+                .drop_duplicates("linker", keep="first")
+            linker_scoreboard = linker_scoreboard[
+                # by = confidence + auxiliary property
+                ["linker", *self._sort_kwargs["by"], "c_id"]
+            ]
+        linker_scoreboard.set_index("linker", inplace=True)
         return linker_scoreboard
 
     def predict(
@@ -232,6 +238,10 @@ class CompXConstraints:
         constr_confidences.sort_values(by=by, ascending=ascend, inplace=True)
 
         self._target = target
+        # we unify sorting of the final scoreboard; we will sort it by
+        # confidence, and values that have the same confidence score
+        # will be sorted by an auxiliary property (cvg, reg, etc.)
+        # in accordance with the method of prediction
         by[0] = "confidence"
         self._sort_kwargs = {"by": by, "ascending": ascend}
 
@@ -247,21 +257,27 @@ class CompXConstraints:
             # if def was the only supporting constraint
             if not self.acceptable_linkers["_"]:
                 self.acceptable_linkers.pop("_")
-        
-        # sort acceptable linkers by the confidence
-        linker_scoreboard = self._build_linker_scoreboard(
-            self.acceptable_linkers
-        )
-        # save for the record
-        self.gen_constr_df = linker_scoreboard  \
-            .sort_values(**self._sort_kwargs)   \
-            .set_index("c_id")
-        # aggregate under cooperation if necessary
-        # and sort to produce the final ranking
-        linker_scoreboard = self._agg_linker_scoreboard(
-            linker_scoreboard,
-            constr_cooperation=constr_cooperation
-        )
+
+        if self.acceptable_linkers:
+            # sort acceptable linkers by the confidence
+            linker_scoreboard = self._build_linker_scoreboard(
+                self.acceptable_linkers
+            )
+            # save for the record
+            self.gen_constr_df = linker_scoreboard  \
+                .sort_values(**self._sort_kwargs)   \
+                .set_index("c_id")
+            # aggregate under cooperation if necessary
+            # and sort to produce the final ranking
+            linker_scoreboard = self._agg_linker_scoreboard(
+                linker_scoreboard,
+                constr_cooperation=constr_cooperation
+            )
+        else:
+            # empty scoreboard
+            linker_scoreboard = pd.DataFrame(
+                {k: [] for k in ["linker", *self._sort_kwargs["by"], "c_id"]}
+            ).set_index("linker")
 
         if restrict_with_l2p:
 
@@ -286,33 +302,38 @@ class CompXConstraints:
             # now, remove linkers that are not acceptable
             # in accordance with the L2P constraints
             # if their confidence is higher
-            for _, row in linker_scoreboard_l2p.iterrows():
-                linker = row["linker"]
-                if not linker in linker_scoreboard:
+            for _, l2p_row in linker_scoreboard_l2p.iterrows():
+                linker = l2p_row.name
+                if not linker in linker_scoreboard.index:
                     continue
-                gen_confidence = linker_scoreboard[
-                    linker_scoreboard["linker"] == linker
-                # always one record per linker in the scoreboard
-                ][0]["confidence"]
+                gen_confidence = linker_scoreboard.loc[linker, "confidence"]
                 # TODO: if the confidence is the same
-                if row["confidence"] > gen_confidence:
+                if l2p_row["confidence"] > gen_confidence:
                     # log removal
-                    linker_scoreboard[linker]["removed_by"] = row["c_id"]
+                    linker_scoreboard.loc[linker, "removed_by"] = l2p_row["c_id"]
 
+        # record the final scoreboard
         self.linker_scoreboard = linker_scoreboard.copy()
 
+        # return generations
+        # remove the eliminated linker from the working scoreboard
+        if restrict_with_l2p:
+            linker_scoreboard = linker_scoreboard[
+                linker_scoreboard["removed_by"] == ""
+            ]
         # if all the linkers were eliminated, use the default linker as a backup
-        if not linker_scoreboard:
+        if linker_scoreboard.empty:
             self.default_backup = True
+            self.pred_row = None
+            self.y_pred = "_"
         else:
             self.default_backup = False
-
-        # return generations; since we distribute the confidence
-        # for the constraints that accept more than one linker,
-        # the probability of several linkers to have both the same
-        # confidence and the same auxiliary property is virtually zero
-        linker_scoreboard = linker_scoreboard[linker_scoreboard["removed_by"] == ""]
-        self.pred_row = linker_scoreboard.iloc[0]
-        self.y_pred = self.pred_row.name
+            # since we distribute the confidence
+            # for the constraints that accept more than one linker,
+            # the probability of several linkers to have both the same
+            # confidence and the same auxiliary property is virtually zero,
+            # so we directly take the first record
+            self.pred_row = linker_scoreboard.iloc[0]
+            self.y_pred = self.pred_row.name
 
         return self.y_pred
