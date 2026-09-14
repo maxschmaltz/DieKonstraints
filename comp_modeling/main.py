@@ -76,6 +76,27 @@ def main():
     ]
     Y_true = appl_ind["linker"].to_list()
 
+
+    # record the acceptable and the unacceptable linkers
+    # for each compound to be able to inspect the initial
+    # conflict before its resolution
+    os.makedirs("out", exist_ok=True)
+
+    acceptable_linkers_all = {
+        cxc.comp_gecodb: cxc.acceptable_linkers
+        for cxc in cXc
+    }
+    with open("out/acceptable_linkers.json", "w", encoding="utf-8") as o:
+        
+        json.dump(acceptable_linkers_all, o, ensure_ascii=False, indent=4)
+    unacceptable_linkers_all = {
+            cxc.comp_gecodb: cxc.unacceptable_linkers
+            for cxc in cXc
+        }
+    with open("out/unacceptable_linkers.json", "w", encoding="utf-8") as o:
+        json.dump(unacceptable_linkers_all, o, ensure_ascii=False, indent=4)
+
+
     # define the metrics
     def calculate_ldistr(linkers: List[str]) -> pd.Series:
         n = len(linkers)
