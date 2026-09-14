@@ -1,9 +1,9 @@
-	acc	acc_balanced	f1_avg	is_best_key
-+count_def|+coop|+l2p	0.667	0.224	0.23	True
-+count_def|+coop|-l2p	0.667	0.224	0.23	False
-+count_def|-coop|+l2p	0.667	0.224	0.23	False
--count_def|+coop|+l2p	0.667	0.224	0.23	False
--count_def|-coop|+l2p	0.667	0.224	0.23	False
--count_def|+coop|-l2p	0.667	0.224	0.223	False
-+count_def|-coop|-l2p	0.66	0.223	0.221	False
--count_def|-coop|-l2p	0.66	0.223	0.221	False
+	acc	f1	is_best_key
++count_def|+coop|+l2p	0.667	0.23	True
++count_def|+coop|-l2p	0.667	0.23	False
++count_def|-coop|+l2p	0.667	0.23	False
+-count_def|+coop|+l2p	0.667	0.23	False
+-count_def|-coop|+l2p	0.667	0.23	False
+-count_def|+coop|-l2p	0.667	0.223	False
++count_def|-coop|-l2p	0.66	0.221	False
+-count_def|-coop|-l2p	0.66	0.221	False
