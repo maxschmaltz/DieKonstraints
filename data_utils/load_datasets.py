@@ -13,6 +13,15 @@ def load_tsv_generic(tsv_path: str) -> pd.DataFrame:
 	)
 
 
+def save_tsv_generic(df: pd.DataFrame, tsv_path: str) -> None:
+	df.to_csv(
+		tsv_path,
+		sep="\t",
+		header=True,
+		index=True
+	)
+
+
 def load_constraints(
 	constr_path: str,
 	load_data_specs: Optional[bool]=False

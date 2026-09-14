@@ -3,7 +3,7 @@ import re
 import pandas as pd
 from typing import List, Tuple, Union
 
-from data_utils.load_datasets import load_constraints
+from data_utils.load_datasets import load_constraints, save_tsv_generic
 
 
 # python3 -m data_utils.get_constr_confidences
@@ -312,11 +312,9 @@ def main():
         ascending=[False, True]
     )
 
-    constr_specificity_df.to_csv(
-        os.path.join(constr_dir, "constr_confidences.tsv"),
-        sep="\t",
-        header=True,
-        index=True
+    save_tsv_generic(
+        constr_specificity_df,
+        os.path.join(constr_dir, "constr_confidences.tsv")
     )
 
 

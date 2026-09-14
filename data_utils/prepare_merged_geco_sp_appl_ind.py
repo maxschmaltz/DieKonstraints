@@ -1,10 +1,10 @@
 import os
-import pandas as pd
 
 from data_utils.load_datasets import (
     load_constraints,
     load_gecodb,
-    load_appl_ind
+    load_appl_ind,
+    save_tsv_generic
 )
 from comp_modeling.compxconstraints import CompXConstraints
 
@@ -70,11 +70,9 @@ def main():
 
     outdir = "resources/developed"
     os.makedirs(outdir, exist_ok=True)
-    merged_appl_ind.to_csv(
-        os.path.join(outdir, "merged_geco_sp_appl_ind.tsv"),
-        sep="\t",
-        header=True,
-        index=True
+    save_tsv_generic(
+        merged_appl_ind,
+        os.path.join(outdir, "merged_geco_sp_appl_ind.tsv")
     )
 
 
