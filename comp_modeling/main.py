@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 from sklearn.metrics import (
@@ -5,16 +6,18 @@ from sklearn.metrics import (
     accuracy_score, balanced_accuracy_score,
     confusion_matrix
 )
-from itertools import product, pairwise
-from tqdm.notebook import tqdm
-from typing import List, Tuple, Optional
+from itertools import product
+from tqdm import tqdm
+import json
+from typing import List, Tuple
 
-from data_utils.load_datasets import load_appl_ind
+from data_utils.load_datasets import load_appl_ind, save_tsv_generic
 from comp_modeling.compxconstraints import CompXConstraints
 
 rng = np.random.default_rng(579372518)
 
 
+# python3 -m comp_modeling.main
 def main():
 
     # When modeling compounding, we have three options as of
@@ -146,32 +149,73 @@ def main():
 
 
     # run available models and record their metrics
-    Y_pred = {}
+
+    def pred_df(pred_rows: List[pd.DataFrame]) -> pd.DataFrame:
+        pred_rows_df = pd.concat(pred_rows, axis=1).T   \
+            .reset_index(drop=True) \
+            .set_index(appl_ind.index)
+        pred_df = pd.DataFrame(
+            {"true": Y_true, "pred": preds},
+            index=appl_ind.index
+        )
+        return pd.concat((pred_df, pred_rows_df), axis=1)
+
+    def record_results(output: dict, outdir: str) -> None:
+
+        # preds
+        save_tsv_generic(
+            pred_df(output["pred_row"]),
+            os.path.join(outdir, "preds.tsv")
+        )
+
+        # method best stats
+        for m_name, metric in zip(
+            ["ldistr_comparison", "accuracies_df", "f1_df", "confusion_matrix"],
+            output["metrics"]
+        ):
+            save_tsv_generic(
+                metric,
+                os.path.join(outdir, f"{m_name}.tsv")
+            )
+
+        # method best outputs; dump to dicts, from which they are
+        # nicely recoverable with `pd.DataFrame.from_dict()`
+        for key in ["gen_constr_df", "restr_constr_df", "linker_scoreboard"]:
+            if not key in output:
+                continue
+            outdict = {
+                comp: df.to_dict()
+                for comp, df
+                in zip(appl_ind.index, output[key])
+            }
+            with open(
+                os.path.join(method_dir, f"{key}s.tsv"), "w", encoding="utf-8"
+            ) as o:
+                json.dump(outdict, o, ensure_ascii=False, indent=4)
+
     metrics = {}
     outputs = {}
-
 
     # start with the baselines
     
     # baseline 1: zero linker only
-    method = "zero"
-    Y_pred[method] = ["_"] * N
-    metrics[method] = calculate_metrics(Y_pred[method])
+    preds_zero = ["_"] * N
+    metrics["zero"] = calculate_metrics(preds_zero)
 
     # baseline 2: random distribution-aware sampling
-    method = "rand"
-    Y_pred[method] = rng.choice(
+    preds_rand = rng.choice(
         ldistr.index, size=N, replace=True, p=ldistr
     ).tolist()
-    metrics[method] = calculate_metrics(Y_pred[method])
+    metrics["rand"] = calculate_metrics(preds_rand)
 
     # now proceed to our constraint-based models; in their case,
     # we additionally record the outputs such are 
     # constraint conflicts etc.
     s = lambda x: "+" if x else "-"
-    for method in ["albright-hayes", "yang-cond", "yang-cvg"]:
+    methods = ["albright-hayes", "yang-cond", "yang-cvg"]
+    for method in methods:
         
-        print(f"\n\nModeling with the {method} method...")
+        print(f"\nModeling with the {method} method...")
 
         outputs[method] = {}
         for count_def, coop, l2p in product([True, False], repeat=3):
@@ -206,7 +250,6 @@ def main():
 
             # populate the outputs
             outputs[method][key] = {
-                "Y_pred": preds,
                 "pred_row": pred_rows,
                 "gen_constr_df": gen_constr_dfs,
                 "linker_scoreboard": linker_scoreboards
@@ -217,8 +260,14 @@ def main():
             # get metrics
             outputs[method][key]["metrics"] = calculate_metrics(preds)
 
+        # record the preds, the metrics, and the outputs for each method;
+        # since the baselines are trivial, we do not record anything for them
+        method_dir = os.path.join("out", method)
+        os.makedirs(method_dir, exist_ok=True)
+
+        # method metric summary
         # summarize metrics
-        outputs[method]["metrics_summary"] = pd.DataFrame({
+        metrics_summary = pd.DataFrame({
             key: {
                 "acc": outputs[method][key]["metrics"][1].loc["overall"],
                 "acc_balanced": outputs[method][key]["metrics"][1].loc["balanced"],
@@ -228,15 +277,43 @@ def main():
         }).T.sort_values(by=["f1_avg", "acc_balanced", "acc"], ascending=False)
 
         # get the best-performing params to record to the overall results
-        # and record these results to the overall results
-        best_key = outputs[method]["metrics_summary"]["f1_avg"].idxmax()
-        Y_pred[method] = outputs[method][best_key]["Y_pred"]
-        metrics[method] = outputs[method][best_key]["metrics"]
+        best_key = metrics_summary["f1_avg"].idxmax()
+        best_output = outputs[method][best_key]
+        metrics[method] = best_output["metrics"]
 
-    # now that we are done with the modeling, we summarize and record the results
+        # mark the best key
+        metrics_summary["is_best_key"] = False
+        metrics_summary.loc[best_key, "is_best_key"] = True
 
+        # now save the metrics summary
+        save_tsv_generic(
+            metrics_summary,
+            os.path.join(method_dir, "metrics_summary.tsv")
+        )
 
+        # and record the best results
+        record_results(best_output, method_dir)
+        
+        # and the detailed outputs
+        for key, output in outputs[method].items():
+            
+            kmethod_dir = os.path.join(method_dir, key)
+            os.makedirs(kmethod_dir, exist_ok=True)
 
+            record_results(output, kmethod_dir)
+
+    # overall metrics over the two baselines and the three
+    # methods at their best parameters
+    metric_summary = pd.DataFrame({
+        key: {
+            "acc": metrics[key][1].loc["overall"],
+            "acc_balanced": metrics[key][1].loc["balanced"],
+            "f1_avg": metrics[key][2].loc["avg", "f1"]
+        }
+        for key in metrics
+    }).T.sort_values(by=["f1_avg", "acc_balanced", "acc"], ascending=False)
+
+    save_tsv_generic(metric_summary, "out/metric_summary.tsv")
 
 
 if __name__ == "__main__":

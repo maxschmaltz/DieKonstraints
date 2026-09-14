@@ -1,0 +1,6 @@
+	acc	acc_balanced	f1_avg
+yang-cvg	0.715	0.395	0.446
+yang-cond	0.713	0.361	0.397
+albright-hayes	0.667	0.224	0.23
+rand	0.375	0.127	0.128
+zero	0.57	0.143	0.104

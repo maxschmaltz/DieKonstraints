@@ -294,17 +294,22 @@ class CompXConstraints:
                 constr_cooperation=constr_cooperation
             )
         else:
-            # empty scoreboard
+            # empty scoreboard; keep the structure to unify the 
+            # L2P restriction workflow below
             linker_scoreboard = pd.DataFrame(
                 {k: [] for k in ["linker", *self._sort_kwargs["by"], "c_id"]}
             ).set_index("linker")
+            # empty df
+            self.gen_constr_df = pd.DataFrame()
 
         if restrict_with_l2p:
 
             linker_scoreboard["removed_by"] = ""
             
             # do all the same operations with the L2P constraint first
-            # sort acceptable linkers by the confidence
+            # sort acceptable linkers by the confidence;
+            # this df cannot be empty since there will be at least
+            # a few paradigmatic restrictions
             linker_scoreboard_l2p = self._build_linker_scoreboard(
                 self.unacceptable_linkers
             )
@@ -327,7 +332,7 @@ class CompXConstraints:
                 if not linker in linker_scoreboard.index:
                     continue
                 gen_confidence = linker_scoreboard.loc[linker, "confidence"]
-                # TODO: if the confidence is the same
+                # TODO: if the confidence is equal
                 if l2p_row["confidence"] > gen_confidence:
                     # log removal
                     linker_scoreboard.loc[linker, "removed_by"] = l2p_row["c_id"]
@@ -335,7 +340,7 @@ class CompXConstraints:
         # record the final scoreboard
         self.linker_scoreboard = linker_scoreboard.copy()
 
-        # return generations
+        # return pred
         # remove the eliminated linker from the working scoreboard
         if restrict_with_l2p:
             linker_scoreboard = linker_scoreboard[
@@ -343,17 +348,10 @@ class CompXConstraints:
             ]
         # if all the linkers were eliminated, use the default linker as a backup
         if linker_scoreboard.empty:
-            self.default_backup = True
-            self.pred_row = None
+            self.pred_row = pd.Series(index=linker_scoreboard.columns)  # NAs
             self.y_pred = "_"
         else:
-            self.default_backup = False
-            # since we distribute the confidence
-            # for the constraints that accept more than one linker,
-            # the probability of several linkers to have both the same
-            # confidence and the same auxiliary property is virtually zero,
-            # so we directly take the first record
-            self.pred_row = linker_scoreboard.iloc[0]
+            self.pred_row = linker_scoreboard.iloc[0]   # will be empty if using default
             self.y_pred = self.pred_row.name
 
         return self.y_pred
