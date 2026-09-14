@@ -174,7 +174,7 @@ def main():
 
         # method best stats
         for m_name, metric in zip(
-            ["ldistr_comparison", "accuracies_df", "f1_df", "confusion_matrix"],
+            ["ldistr_comparison", "f1_acc_df", "confusion_matrix"],
             output["metrics"]
         ):
             save_tsv_generic(
