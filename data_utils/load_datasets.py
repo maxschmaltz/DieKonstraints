@@ -109,7 +109,7 @@ def load_appl_ind(
 	if remove_na_columns:
 		appl_ind.dropna(axis=1, how="all", inplace=True)
 
-	if not remove_unconfirmed or remove_missing:
+	if not remove_unconfirmed and not remove_missing:
 		return appl_ind
 
 	assert constraints, "`constraints` required for filtering."
@@ -120,6 +120,9 @@ def load_appl_ind(
 		if remove_missing and not constr["datasets_n_appl_items"]:
 			to_remove = True
 			message = f"Removed {c_id}: not implemented."
+		elif constr["measures"] == "NA":	# missing items
+			to_remove = True
+			message = f"Removed {c_id}: underspecified."
 		else:
 			item_reg = constr["measures"]["regularity"]["item"]
 			if remove_unconfirmed and (item_reg < 0.5):
@@ -136,3 +139,5 @@ def load_appl_ind(
 			)
 			if verbose:
 				print(message)
+
+	return appl_ind

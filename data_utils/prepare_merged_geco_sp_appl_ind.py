@@ -30,6 +30,7 @@ def main():
     gecodb_appl_ind = load_appl_ind(
         os.path.join(appl_inds_dir, f"{dname}_appl_ind.tsv"),
         constraints=constraints,
+        remove_na_columns=True,
         remove_unconfirmed=True,
         remove_missing=True,
         verbose=False

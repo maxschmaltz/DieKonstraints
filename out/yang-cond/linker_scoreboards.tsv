@@ -3766,425 +3766,350 @@
     "hund_+e_halter": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_schule": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_besitzer": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_rasse": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_führer": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_futter": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_freund": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_trainer": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_haltung": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_sport": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_erziehung": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_kot": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_strand": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_haar": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_ausbildung": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_kampf": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_züchter": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_staffel": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_kuchen": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_decke": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_klo": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_kacke": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+e_betreuung": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+s_rose": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
     "hund_+s_kamille": {
         "confidence": {
             "_+en_": 50.8,
-            "_+e_": 42.0,
             "_": 14.0
         },
         "cvg": {
             "_+en_": 0.001,
-            "_+e_": 0.009,
             "_": 0.162
         },
         "c_id": {
             "_+en_": "l2p:en|non_par_m",
-            "_+e_": "p2l:decl_cl:pl:#e-0|msyl_anim-e",
             "_": "p2l:decl_cl:pl:#e-0|def-0"
         }
     },
@@ -7852,52 +7777,52 @@
     },
     "person_+en_gesellschaft": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_schaden": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_zug": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
@@ -7920,154 +7845,154 @@
     },
     "person_+en_beförderung": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_kult": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_name": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_kontrolle": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_beschreibung": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_transport": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_suche": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_schützer": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_sorge": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
@@ -8090,52 +8015,52 @@
     },
     "person_+en_waage": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_aufzug": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_wahl": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
@@ -8158,52 +8083,52 @@
     },
     "person_+en_fähre": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_versicherung": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_bezeichnung": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
@@ -8226,18 +8151,18 @@
     },
     "person_+en_profil": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
@@ -8260,35 +8185,35 @@
     },
     "person_+en_schiff": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_angabe": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
@@ -8311,461 +8236,461 @@
     },
     "person_+en_darstellung": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_überwachung": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "person_+en_dampfer": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "ohr_feige": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_ring": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_muschel": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_stöpsel": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_geräusch": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_schmerz": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_hörer": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_schmaus": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_marke": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_stecker": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_sessel": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_stöpsel": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_entzündung": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_arzt": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_zeuge": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_schützer": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_tropfen": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_hänger": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_trompete": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_weide": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_klappe": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_schützer": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_robbe": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "ohr_+en_spiegel": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bad_+=er_architektur": {
@@ -9245,120 +9170,120 @@
     "bett_wäsche": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_kante": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_gestell": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_+en_haus": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_wanze": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_bezug": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_vorleger": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_+en_zahl": {
@@ -9381,69 +9306,69 @@
     "bett_geschichte": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_rand": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_rahmen": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_gitter": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_+en_kapazität": {
@@ -9466,86 +9391,86 @@
     "bett_nachbar": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_szene": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_pfosten": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_+en_station": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_pfanne": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_+en_auslastung": {
@@ -9568,35 +9493,35 @@
     "bett_kasten": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_flasche": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_+en_belegung": {
@@ -9636,52 +9561,52 @@
     "bett_+en_kauf": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_überwurf": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "bett_laken": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "gitarre_+n_riff": {
@@ -10521,18 +10446,18 @@
     },
     "schwester_modell": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
@@ -10555,18 +10480,18 @@
     },
     "schwester_zeitung": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
@@ -11235,138 +11160,138 @@
     },
     "nation_+en_wertung": {
         "confidence": {
-            "_": 25.45,
-            "_+s_": 25.45,
+            "_": 13.233333333333334,
+            "_+s_": 13.233333333333334,
             "_+en_": 13.233333333333334
         },
         "cvg": {
-            "_": 0.053,
-            "_+s_": 0.053,
+            "_": 0.249,
+            "_+s_": 0.249,
             "_+en_": 0.249
         },
         "c_id": {
-            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
-            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s",
+            "_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
+            "_+s_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "_+en_": "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         }
     },
     "hemd_tasche": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "hemd_+s_ärmel": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "hemd_knopf": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "hemd_bluse": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "hemd_+en_tasche": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "hemd_+en_knopf": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     },
     "hemd_+en_kragen": {
         "confidence": {
             "_": 4.666666666666666,
-            "_+en_": 4.666666666666666,
-            "_+s_": 4.666666666666666
+            "_+s_": 4.666666666666666,
+            "_+en_": 4.666666666666666
         },
         "cvg": {
             "_": 0.013,
-            "_+en_": 0.013,
-            "_+s_": 0.013
+            "_+s_": 0.013,
+            "_+en_": 0.013
         },
         "c_id": {
             "_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
+            "_+s_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
+            "_+en_": "p2l:decl_cl:mixed-0/s/en|def-0/s/en"
         }
     }
 }

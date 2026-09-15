@@ -632,36 +632,36 @@ zahn_operation	_	_	1.289	1.083	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 zahn_fund	_	_	1.289	1.083	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 person_+en_kreis	_+en_	_+en_	1.3333333333333333	0.288	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
 person_+en_gruppe	_+en_	_+en_	1.3333333333333333	0.288	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
-person_+en_gesellschaft	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_schaden	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_zug	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
+person_+en_gesellschaft	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_schaden	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_zug	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 person_+en_zahl	_+en_	_+en_	1.3333333333333333	0.288	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
-person_+en_beförderung	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_kult	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_name	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_kontrolle	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_beschreibung	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_transport	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_suche	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_schützer	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_sorge	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
+person_+en_beförderung	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_kult	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_name	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_kontrolle	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_beschreibung	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_transport	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_suche	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_schützer	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_sorge	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 person_+en_anzahl	_+en_	_+en_	1.3333333333333333	0.288	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
-person_+en_waage	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_aufzug	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_wahl	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
+person_+en_waage	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_aufzug	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_wahl	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 person_+en_verzeichnis	_+en_	_+en_	1.3333333333333333	0.288	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
-person_+en_fähre	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_versicherung	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_bezeichnung	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
+person_+en_fähre	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_versicherung	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_bezeichnung	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 person_+en_konstellation	_+en_	_+en_	1.3333333333333333	0.288	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
-person_+en_profil	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
+person_+en_profil	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 person_+en_liste	_+en_	_+en_	1.3333333333333333	0.288	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
-person_+en_schiff	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_angabe	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
+person_+en_schiff	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_angabe	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 person_+en_wechsel	_+en_	_+en_	1.3333333333333333	0.288	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
-person_+en_darstellung	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_überwachung	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
-person_+en_dampfer	_+en_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
+person_+en_darstellung	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_überwachung	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_dampfer	_+en_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 ohr_feige	_	_	0.9049999999999999	1.013	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
 ohr_ring	_	_	0.9049999999999999	1.013	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
 ohr_muschel	_	_	0.9049999999999999	1.013	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
@@ -819,9 +819,9 @@ geschenk_päckchen	_	_	1.327	1.162	def-0, p2l:decl_cl:pl:#e-0|def-0
 geschenk_+e_sack	_+e_	_	1.327	1.162	def-0, p2l:decl_cl:pl:#e-0|def-0
 geschenk_+e_liste	_+e_	_	1.327	1.162	def-0, p2l:decl_cl:pl:#e-0|def-0
 geschenk_+e_laden	_+e_	_	1.327	1.162	def-0, p2l:decl_cl:pl:#e-0|def-0
-schwester_modell	_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
+schwester_modell	_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 schwester_+n_paar	_+en_	_+en_	1.3333333333333333	0.288	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
-schwester_zeitung	_	_	1.1143333333333332	1.302	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
+schwester_zeitung	_	_	0.9063333333333332	1.249	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 vater_tag	_	_	1.547	1.007	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 vater_stadt	_	_	1.547	1.007	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 vater_haus	_	_	1.547	1.007	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
@@ -873,7 +873,7 @@ wurm_erkrankung	_	_+en_	1.6025	1.192	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2
 wurm_infektion	_	_+en_	1.6025	1.192	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 wurm_larve	_	_+en_	1.6025	1.192	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 wurm_krankheit	_	_+en_	1.6025	1.192	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
-nation_+en_wertung	_+en_	_+s_	1.5283333333333333	0.516	p2l:drv:sfx:sfx-s|def-s, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s
+nation_+en_wertung	_+en_	_+s_	1.3203333333333334	0.46299999999999997	p2l:drv:sfx:sfx-s|def-s, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 hemd_tasche	_	_	0.9049999999999999	1.013	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
 hemd_+s_ärmel	_+s_	_	0.9049999999999999	1.013	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
 hemd_knopf	_	_	0.9049999999999999	1.013	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en

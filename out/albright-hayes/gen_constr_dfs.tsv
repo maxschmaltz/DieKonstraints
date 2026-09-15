@@ -7660,801 +7660,651 @@
     "hund_+e_halter": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_schule": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_besitzer": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_rasse": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_führer": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_futter": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_freund": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_trainer": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_haltung": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_sport": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_erziehung": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_kot": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_strand": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_haar": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_ausbildung": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_kampf": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_züchter": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_staffel": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_kuchen": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_decke": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_klo": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_kacke": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+e_betreuung": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+s_rose": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "hund_+s_kamille": {
         "linker": {
             "l2p:en|non_par_m": "_+en_",
-            "p2l:decl_cl:pl:#e-0|def-0": "_",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "_+e_"
+            "p2l:decl_cl:pl:#e-0|def-0": "_"
         },
         "condition": {
             "l2p:en|non_par_m": "[PL:!en] & [G:M] & [nsyl:mono] & [sem:A]",
-            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]",
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": "[PL:e] & [nsyl:mono] & [sem:anim]"
+            "p2l:decl_cl:pl:#e-0|def-0": "[PL:e]"
         },
         "spec_score": {
             "l2p:en|non_par_m": 50.8,
-            "p2l:decl_cl:pl:#e-0|def-0": 14.0,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 42.0
+            "p2l:decl_cl:pl:#e-0|def-0": 14.0
         },
         "cvg": {
             "l2p:en|non_par_m": 0.001,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.162,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.009
+            "p2l:decl_cl:pl:#e-0|def-0": 0.162
         },
         "reg": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         },
         "confidence": {
             "l2p:en|non_par_m": 0.786,
-            "p2l:decl_cl:pl:#e-0|def-0": 0.754,
-            "p2l:decl_cl:pl:#e-0|msyl_anim-e": 0.088
+            "p2l:decl_cl:pl:#e-0|def-0": 0.754
         }
     },
     "frau_+en_arzt": {},
@@ -15094,7 +14944,7 @@
     "person_+en_kreis": {
         "linker": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "[G:F] & [PL:en] & [coda:CN] & [sem:PL]",
@@ -15120,7 +14970,7 @@
     "person_+en_gruppe": {
         "linker": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "[G:F] & [PL:en] & [coda:CN] & [sem:PL]",
@@ -15145,86 +14995,68 @@
     },
     "person_+en_gesellschaft": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_schaden": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_zug": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_zahl": {
         "linker": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "[G:F] & [PL:en] & [coda:CN] & [sem:PL]",
@@ -15249,242 +15081,188 @@
     },
     "person_+en_beförderung": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_kult": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_name": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_kontrolle": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_beschreibung": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_transport": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_suche": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_schützer": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_sorge": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_anzahl": {
         "linker": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "[G:F] & [PL:en] & [coda:CN] & [sem:PL]",
@@ -15509,86 +15287,68 @@
     },
     "person_+en_waage": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_aufzug": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_wahl": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_verzeichnis": {
         "linker": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "[G:F] & [PL:en] & [coda:CN] & [sem:PL]",
@@ -15613,86 +15373,68 @@
     },
     "person_+en_fähre": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_versicherung": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_bezeichnung": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_konstellation": {
         "linker": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "[G:F] & [PL:en] & [coda:CN] & [sem:PL]",
@@ -15717,34 +15459,28 @@
     },
     "person_+en_profil": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_liste": {
         "linker": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "[G:F] & [PL:en] & [coda:CN] & [sem:PL]",
@@ -15769,60 +15505,48 @@
     },
     "person_+en_schiff": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_angabe": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_wechsel": {
         "linker": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "[G:F] & [PL:en] & [coda:CN] & [sem:PL]",
@@ -15847,85 +15571,67 @@
     },
     "person_+en_darstellung": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_überwachung": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "person_+en_dampfer": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "ohr_feige": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -15945,7 +15651,7 @@
     },
     "ohr_ring": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -15965,7 +15671,7 @@
     },
     "ohr_muschel": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -15985,7 +15691,7 @@
     },
     "ohr_stöpsel": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16005,7 +15711,7 @@
     },
     "ohr_geräusch": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16025,7 +15731,7 @@
     },
     "ohr_+en_schmerz": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16045,7 +15751,7 @@
     },
     "ohr_hörer": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16065,7 +15771,7 @@
     },
     "ohr_+en_schmaus": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16085,7 +15791,7 @@
     },
     "ohr_marke": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16105,7 +15811,7 @@
     },
     "ohr_stecker": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16125,7 +15831,7 @@
     },
     "ohr_+en_sessel": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16145,7 +15851,7 @@
     },
     "ohr_+en_stöpsel": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16165,7 +15871,7 @@
     },
     "ohr_+en_entzündung": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16185,7 +15891,7 @@
     },
     "ohr_+en_arzt": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16205,7 +15911,7 @@
     },
     "ohr_+en_zeuge": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16225,7 +15931,7 @@
     },
     "ohr_+en_schützer": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16245,7 +15951,7 @@
     },
     "ohr_+en_tropfen": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16265,7 +15971,7 @@
     },
     "ohr_hänger": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16285,7 +15991,7 @@
     },
     "ohr_trompete": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16305,7 +16011,7 @@
     },
     "ohr_+en_weide": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16325,7 +16031,7 @@
     },
     "ohr_+en_klappe": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16345,7 +16051,7 @@
     },
     "ohr_schützer": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16365,7 +16071,7 @@
     },
     "ohr_+en_robbe": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -16385,7 +16091,7 @@
     },
     "ohr_+en_spiegel": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17269,7 +16975,7 @@
     },
     "bett_wäsche": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17289,7 +16995,7 @@
     },
     "bett_kante": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17309,7 +17015,7 @@
     },
     "bett_gestell": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17329,7 +17035,7 @@
     },
     "bett_+en_haus": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17349,7 +17055,7 @@
     },
     "bett_wanze": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17369,7 +17075,7 @@
     },
     "bett_bezug": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17389,7 +17095,7 @@
     },
     "bett_vorleger": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17410,7 +17116,7 @@
     "bett_+en_zahl": {
         "linker": {
             "p2l:decl_cl:mixed-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|pl_interpr-en": "[PL:m] & [sem:PL]",
@@ -17435,7 +17141,7 @@
     },
     "bett_geschichte": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17455,7 +17161,7 @@
     },
     "bett_rand": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17475,7 +17181,7 @@
     },
     "bett_rahmen": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17495,7 +17201,7 @@
     },
     "bett_gitter": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17516,7 +17222,7 @@
     "bett_+en_kapazität": {
         "linker": {
             "p2l:decl_cl:mixed-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|pl_interpr-en": "[PL:m] & [sem:PL]",
@@ -17541,7 +17247,7 @@
     },
     "bett_nachbar": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17561,7 +17267,7 @@
     },
     "bett_szene": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17581,7 +17287,7 @@
     },
     "bett_pfosten": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17601,7 +17307,7 @@
     },
     "bett_+en_station": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17621,7 +17327,7 @@
     },
     "bett_pfanne": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17642,7 +17348,7 @@
     "bett_+en_auslastung": {
         "linker": {
             "p2l:decl_cl:mixed-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|pl_interpr-en": "[PL:m] & [sem:PL]",
@@ -17667,7 +17373,7 @@
     },
     "bett_kasten": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17687,7 +17393,7 @@
     },
     "bett_flasche": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17708,7 +17414,7 @@
     "bett_+en_belegung": {
         "linker": {
             "p2l:decl_cl:mixed-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|pl_interpr-en": "[PL:m] & [sem:PL]",
@@ -17734,7 +17440,7 @@
     "bett_+en_wechsel": {
         "linker": {
             "p2l:decl_cl:mixed-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|pl_interpr-en": "[PL:m] & [sem:PL]",
@@ -17759,7 +17465,7 @@
     },
     "bett_+en_kauf": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17779,7 +17485,7 @@
     },
     "bett_überwurf": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -17799,7 +17505,7 @@
     },
     "bett_laken": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -19359,34 +19065,28 @@
     },
     "schwester_modell": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "schwester_+n_paar": {
         "linker": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "_+en_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en": "[G:F] & [PL:en] & [coda:CN] & [sem:PL]",
@@ -19411,28 +19111,22 @@
     },
     "schwester_zeitung": {
         "linker": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "vater_tag": {
@@ -20770,38 +20464,32 @@
     "nation_+en_wertung": {
         "linker": {
             "p2l:drv:sfx:sfx-s|def-s": "_+s_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "_+s_"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:drv:sfx:sfx-s|def-s": "[drv:SFX]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]",
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": "[G:F] & [PL:en] & [coda:CN] & [sem:!PL]"
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": "[G:F] & [PL:en] & [coda:CN]"
         },
         "spec_score": {
             "p2l:drv:sfx:sfx-s|def-s": 12.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 50.9
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 39.7
         },
         "cvg": {
             "p2l:drv:sfx:sfx-s|def-s": 0.214,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.053
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.249
         },
         "reg": {
             "p2l:drv:sfx:sfx-s|def-s": 0.987,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.416
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 1.0
         },
         "confidence": {
             "p2l:drv:sfx:sfx-s|def-s": 0.987,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333,
-            "p2l:phon_fin:weak_F_cons$-0/s/en|!pl_interpr-0/s": 0.208
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en": 0.3333333333333333
         }
     },
     "hemd_tasche": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -20821,7 +20509,7 @@
     },
     "hemd_+s_ärmel": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -20841,7 +20529,7 @@
     },
     "hemd_knopf": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -20861,7 +20549,7 @@
     },
     "hemd_bluse": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -20881,7 +20569,7 @@
     },
     "hemd_+en_tasche": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -20901,7 +20589,7 @@
     },
     "hemd_+en_knopf": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
@@ -20921,7 +20609,7 @@
     },
     "hemd_+en_kragen": {
         "linker": {
-            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+s_"
+            "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "_+en_"
         },
         "condition": {
             "p2l:decl_cl:mixed-0/s/en|def-0/s/en": "[PL:m]"
