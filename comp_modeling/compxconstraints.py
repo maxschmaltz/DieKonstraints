@@ -2,7 +2,7 @@ import os
 import re
 import pandas as pd
 from collections import defaultdict
-from typing import Literal
+from typing import Literal, List
 
 from data_utils.gecodb_compound_parser import Compound
 from data_utils.load_datasets import load_tsv_generic, load_constraints
@@ -51,6 +51,10 @@ class CompXConstraints:
         linker_gecodb = re.sub(r"_\+er", "_+=er", linker_gecodb)
         return linker_gecodb
 
+    @staticmethod
+    def esc_batch(linkers_gecodb: List[str]) -> List[str]:
+        return list(set([CompXConstraints.esc(linker) for linker in linkers_gecodb]))
+
     def _apply_constraints(self) -> None:
 
         for c_id, constr in constraints.items():
@@ -60,12 +64,7 @@ class CompXConstraints:
 
             # retrieve acceptable constraint linkers
             # (will become unacceptable for the L2P constraints)
-            constr_linkers = list(set(
-                [
-                    self.esc(linker)
-                    for linker in constr["acceptable_linkers"].copy()
-                ]
-            ))
+            constr_linkers = self.esc_batch(constr["acceptable_linkers"].copy())
 
             # if a constraint produces several linkers, only
             # distribute the confidence score between them
