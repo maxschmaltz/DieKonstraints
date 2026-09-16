@@ -209,12 +209,14 @@ def main():
             if not key in output:
                 continue
             outdict = {
+                # TODO: this changes float precision,
+                # e.g. 1.602 becomes 1.6019999999999999
                 comp: df.to_dict()
                 for comp, df
                 in zip(appl_ind.index, output[key])
             }
             with open(
-                os.path.join(method_dir, f"{key}s.json"), "w", encoding="utf-8"
+                os.path.join(outdir, f"{key}s.json"), "w", encoding="utf-8"
             ) as o:
                 json.dump(outdict, o, ensure_ascii=False, indent=4)
 

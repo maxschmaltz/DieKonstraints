@@ -325,6 +325,7 @@ class CompXConstraints:
             linker_scoreboard = linker_scoreboard[
                 linker_scoreboard["removed_by"] == ""
             ]
+            linker_scoreboard.drop(columns=["removed_by"], inplace=True)
         # if all the linkers were eliminated, use the default linker as a backup
         if linker_scoreboard.empty:
             self.pred_row = pd.Series(index=linker_scoreboard.columns)  # NAs
