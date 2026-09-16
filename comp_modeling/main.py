@@ -210,8 +210,12 @@ def main():
                 continue
             outdict = {
                 # TODO: this changes float precision,
-                # e.g. 1.602 becomes 1.6019999999999999
-                comp: df.to_dict()
+                # e.g. 1.602 becomes 1.6019999999999999;
+                # we squeeze the df with `orient="tight"`
+                # in order to prevent index collision for
+                # multi-linker constraints (they are used
+                # as dict keys and collide otherwise)
+                comp: df.to_dict(orient="tight")
                 for comp, df
                 in zip(appl_ind.index, output[key])
             }
@@ -239,7 +243,7 @@ def main():
     # we additionally record the outputs such are 
     # constraint conflicts etc.
     s = lambda x: "+" if x else "-"
-    methods = ["albright-hayes", "yang-cond", "yang-cvg"]
+    methods = ["albright-hayes", "yang-cvg", "yang-cond"]
     for method in methods:
         
         print(f"\nModeling with the {method} method...")

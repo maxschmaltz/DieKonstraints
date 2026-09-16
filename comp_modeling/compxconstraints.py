@@ -15,6 +15,7 @@ constraints = load_constraints(
 constr_confidences = load_tsv_generic(
     os.path.join(constr_dir, "constr_confidences.tsv")
 )
+constr_confidences["condition"] = constr_confidences["condition"].astype(str)
 
 DEF_ID = "def-0"
 
