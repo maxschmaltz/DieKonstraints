@@ -132,6 +132,8 @@ class CompXConstraints:
         linker_scoreboard = []
         for linker, c_ids in un_acceptable_linkers.items():
             for c_id in c_ids:
+                if (not self.count_def_constr) and c_id == DEF_ID:
+                    continue
                 linker_scoreboard.append({
                     "linker": linker,
                     "c_id": c_id,
@@ -147,13 +149,8 @@ class CompXConstraints:
                 })
         return pd.DataFrame(linker_scoreboard)#.sort_values(**self._sort_kwargs)
 
-    def _agg_linker_scoreboard(
-        self,
-        linker_scoreboard: pd.DataFrame,
-        *,
-        constr_cooperation: bool
-    ) -> pd.DataFrame:
-        if constr_cooperation:
+    def _agg_linker_scoreboard(self, linker_scoreboard: pd.DataFrame) -> pd.DataFrame:
+        if self.constr_cooperation:
             # sum up the confidence and store the participating
             # constraints for the reference
             agg_map = {
@@ -189,8 +186,13 @@ class CompXConstraints:
         method: Literal["albright-hayes", "yang-cond", "yang-cvg"],
         count_def_constr: bool,
         constr_cooperation: bool,
-        restrict_with_l2p: bool
+        eliminate_with_l2p: bool
     ):
+
+        self.method = method
+        self.count_def_constr = count_def_constr
+        self.constr_cooperation = constr_cooperation
+        self.eliminate_with_l2p = eliminate_with_l2p
 
         # While the Elsewhere condition prescripts to stop generation
         # once an applicable rule is found, we adopt the workflow
@@ -264,35 +266,18 @@ class CompXConstraints:
         by[0] = "confidence"
         self._sort_kwargs = {"by": by, "ascending": ascend}
 
-        if (
-            not count_def_constr and
-            DEF_ID in self.acceptable_linkers.get("_", [])
-        ):
-            # do not use in the calculation
-            # of the prediction; only be used as a backup
-            # in case no other linker could be predicted
-            self.acceptable_linkers["_"].remove(DEF_ID)
-            # remove the linker from acceptable
-            # if def was the only supporting constraint
-            if not self.acceptable_linkers["_"]:
-                self.acceptable_linkers.pop("_")
+        # sort acceptable linkers by the confidence
+        linker_scoreboard = self._build_linker_scoreboard(self.acceptable_linkers)
 
-        if self.acceptable_linkers:
-            # sort acceptable linkers by the confidence
-            linker_scoreboard = self._build_linker_scoreboard(
-                self.acceptable_linkers
-            )
+        if not linker_scoreboard.empty:
             # save for the record
             self.gen_constr_df = linker_scoreboard  \
                 .sort_values(**self._sort_kwargs)   \
                 .set_index("c_id")
             # aggregate under cooperation if necessary
             # and sort to produce the final ranking
-            linker_scoreboard = self._agg_linker_scoreboard(
-                linker_scoreboard,
-                constr_cooperation=constr_cooperation
-            )
-        else:
+            linker_scoreboard = self._agg_linker_scoreboard(linker_scoreboard)
+        else:   # if only def was present and we ignore it
             # empty scoreboard; keep the structure to unify the 
             # L2P restriction workflow below
             linker_scoreboard = pd.DataFrame(
@@ -301,7 +286,7 @@ class CompXConstraints:
             # empty df
             self.gen_constr_df = pd.DataFrame()
 
-        if restrict_with_l2p:
+        if eliminate_with_l2p:
 
             linker_scoreboard["removed_by"] = ""
             
@@ -309,19 +294,14 @@ class CompXConstraints:
             # sort acceptable linkers by the confidence;
             # this df cannot be empty since there will be at least
             # a few paradigmatic restrictions
-            linker_scoreboard_l2p = self._build_linker_scoreboard(
-                self.unacceptable_linkers
-            )
+            linker_scoreboard_l2p = self._build_linker_scoreboard(self.unacceptable_linkers)
             # save for the record
             self.restr_constr_df = linker_scoreboard_l2p  \
                 .sort_values(**self._sort_kwargs)   \
                 .set_index("c_id")
             # aggregate under cooperation if necessary
             # and sort to produce the final restrictive ranking
-            linker_scoreboard_l2p = self._agg_linker_scoreboard(
-                linker_scoreboard_l2p,
-                constr_cooperation=constr_cooperation
-            )
+            linker_scoreboard_l2p = self._agg_linker_scoreboard(linker_scoreboard_l2p)
             
             # now, remove linkers that are not acceptable
             # in accordance with the L2P constraints
@@ -341,7 +321,7 @@ class CompXConstraints:
 
         # return pred
         # remove the eliminated linker from the working scoreboard
-        if restrict_with_l2p:
+        if eliminate_with_l2p:
             linker_scoreboard = linker_scoreboard[
                 linker_scoreboard["removed_by"] == ""
             ]
@@ -354,3 +334,16 @@ class CompXConstraints:
             self.y_pred = self.pred_row.name
 
         return self.y_pred
+
+    def update_pred_params(self, **update):
+        # for demonstration purposes
+        if not update:
+            return self.y_pred
+        kwargs = {
+            "method": self.method,
+            "count_def_constr": self.count_def_constr,
+            "constr_cooperation": self.constr_cooperation,
+            "eliminate_with_l2p": self.eliminate_with_l2p
+        }
+        kwargs.update(update)
+        return self.predict(**kwargs)
