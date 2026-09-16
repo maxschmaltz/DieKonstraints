@@ -262,7 +262,7 @@ def main():
                     method=method,
                     count_def_constr=count_def,
                     constr_cooperation=coop,
-                    restrict_with_l2p=l2p
+                    eliminate_with_l2p=l2p
                 )
 
                 # populate the outputs

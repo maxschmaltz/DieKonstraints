@@ -298,7 +298,7 @@ appl_ind = load_appl_ind(
 # 		cxc.predict(
 # 			method="albright_hayes",
 # 			constr_cooperation=False,
-# 			restrict_with_l2p=False
+# 			eliminate_with_l2p=False
 # 		)
 # 		self.assertEqual(cxc.y_pred, "_")
 # 		self.assertEqual(cxc.pred_conf, 0.573)
@@ -311,7 +311,7 @@ appl_ind = load_appl_ind(
 # 		cxc.predict(
 # 			method="albright_hayes",
 # 			constr_cooperation=True,
-# 			restrict_with_l2p=False
+# 			eliminate_with_l2p=False
 # 		)
 # 		self.assertEqual(cxc.y_pred, "_")
 # 		self.assertEqual(cxc.pred_conf, 0.98)
@@ -325,7 +325,7 @@ appl_ind = load_appl_ind(
 # 			cxc.predict(
 # 				method="albright_hayes",
 # 				constr_cooperation=False,
-# 				restrict_with_l2p=False
+# 				eliminate_with_l2p=False
 # 			)
 # 			self.assertEqual(cxc.y_pred, "_+s_")
 	
@@ -336,7 +336,7 @@ appl_ind = load_appl_ind(
 # 		cxc.predict(
 # 			method="albright_hayes",
 # 			constr_cooperation=False,
-# 			restrict_with_l2p=True
+# 			eliminate_with_l2p=True
 # 		)
 # 		self.assertEqual(cxc.y_pred, "_")
 # 		expected_removals = {
@@ -355,7 +355,7 @@ appl_ind = load_appl_ind(
 # 		cxc.predict(
 # 			method="albright_hayes",
 # 			constr_cooperation=True,
-# 			restrict_with_l2p=True
+# 			eliminate_with_l2p=True
 # 		)
 # 		self.assertEqual(cxc.y_pred, "_")
 # 		expected_removals = {
