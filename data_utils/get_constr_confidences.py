@@ -275,18 +275,16 @@ def main():
         .reset_index(drop=False)    \
         .set_index("c_id")
 
-    # add coverages to be able to ultimately resolve
-    # constraints with the same scores,
-    # and regularities for Albright & Hayes 2002
+    # add coverages for coverage specificity
     measures = {
         c_id: {
-            "cvg": (
+            "cvg_score": (
                 constr["measures"]["coverage"]["item"]
                 # force the worst coverage rank for unimplemented
                 # constraints; this step is, however,
                 # optional, since such constraints
                 # will not be used in modeling, anyway
-                if constr["measures"] != "NA" else 2
+                if constr["measures"] != "NA" else 1
             ),
             "reg": (
                 constr["measures"]["regularity"]["item"]
@@ -301,6 +299,17 @@ def main():
         coverages_df,
         how="left"
     ).rename(columns={"index": "condition"})
+    # since during prediction, we will be summing
+    # confidences if constraint cooperation is enabled,
+    # and will be distributing the confidences for the
+    # multi-linker constraint, keeping coverage
+    # as a "less is better" metric makes no sense
+    # because these operation will take the opposite effect
+    # (e.g. multi-linker constraint distribution
+    # will make the coverage less, hence, better,
+    # while it has to be a penalty); we therefore invert it
+    # so that cvg becomes "more is better", too
+    constr_specificity_df["cvg_score"] = 1 - constr_specificity_df["cvg_score"]
 
     # final sorting: score (higher is better), cvg between 
     # identical scores (lower is better);
@@ -308,8 +317,8 @@ def main():
     # constraints are sorted by confidence dynamically 
     # for each individual compound
     constr_specificity_df = constr_specificity_df.sort_values(
-        by=["spec_score", "cvg"],
-        ascending=[False, True]
+        by=["spec_score", "cvg_score"],
+        ascending=[False, False]
     )
 
     save_tsv_generic(

@@ -153,12 +153,9 @@ class CompXConstraints:
     def _agg_linker_scoreboard(self, linker_scoreboard: pd.DataFrame) -> pd.DataFrame:
         if self.constr_cooperation:
             # sum up the confidence and store the participating
-            # constraints for the reference
-            agg_map = {
-                # limitation: coverages may overlap
-                col: sum
-                for col in self._sort_kwargs["by"]
-            }
+            # constraints for the reference;
+            # limitation: coverages may overlap
+            agg_map = {col: sum for col in self._by}
             agg_map["c_id"] = list
             # this will return the sum of target and auxiliary prop
             # for each linker, and a liststr of the contributing constraints
@@ -176,7 +173,7 @@ class CompXConstraints:
                 .drop_duplicates("linker", keep="first")
             linker_scoreboard = linker_scoreboard[
                 # by = confidence + auxiliary property
-                ["linker", *self._sort_kwargs["by"], "c_id"]
+                ["linker", *self._by, "c_id"]
             ]
         linker_scoreboard.set_index("linker", inplace=True)
         return linker_scoreboard
@@ -221,51 +218,57 @@ class CompXConstraints:
         #
         # * there are a few records with all the records
         # (spec_score, cvg, reg) being equal; however, they
-        # all are constraints on paradigmatic linkers,
+        # all seem to be constraints on paradigmatic linkers,
         # so there should not be conflicts between those
+        #
+        # * to take the most of the available confidence score
+        # types we have now (regularity vs. specificity)
+        # during this initial attempt, where we cannot model
+        # the complex interaction of those, we employ the counterpart
+        # to resolve the cases where the target confidence type
+        # are identical among two or more entries; thus for example,
+        # if two constraints have the same specificity score,
+        # the one with the higher regularity wins, and vice versa
         match method:
             case "albright-hayes":
                 # use regularity as the confidence score;
-                # in case of equal regularity, prefer constraints
-                # with higher coverage, since high regularity
-                # over a larger sample of compounds
-                # is more reliable
-                target = "reg"
-                by = [target, "cvg"]
-                ascend = [False, False]
+                # we choose the coverage specificity as the 
+                # counterpart indirectly following the original
+                # Albright & Bright 2002 method, who used absolute
+                # coverage of a rule to adjust regularity
+                # to the final confidence
+                self._target = "reg"
+                self._by = ["confidence", "cvg_score"]
+            case "yang-cvg":
+                # use the coverage score* as the specificity 
+                # of a constraint and its confidence score
+                #
+                # *we invert the coverage as $1 - cvg$ 
+                # to unify with the "more is better" workflow the other methods
+                self._target = "cvg_score"
+                self._by = ["confidence", "reg"]
             case "yang-cond":
                 # use the specificity of the linguistic conditions
                 # on constraint's potential applicability as its
                 # confidence score; we developed a custom system
                 # to evaluate the condition specificity,
                 # see `data_utils/get_constr_confidences.py`;
-                # on the contrary to Albright & Bayes 2002,
+                # contrary to Albright & Bayes 2002,
                 # specificity prefers lower coverage, which
                 # will be used to resolve conflicts of constraints
                 # with equal condition specificity
-                target = "spec_score"
-                by = [target, "cvg"]
-                ascend = [False, True]
-            case "yang-cvg":
-                # use the coverage score as the specificity 
-                # of a constraint and its confidence score;
-                # in case of equal coverage, resolve the conflict
-                # by regularity
-                target = "cvg"
-                by = [target, "reg"]
-                ascend = [True, False]
-        # UPD: this step is not necessary, since we will adjust the
-        # final confidence values to account for "multi-linker" constraints;
-        # we keep it here because it is nice
-        constr_confidences.sort_values(by=by, ascending=ascend, inplace=True)
+                self._target = "spec_score"
+                self._by = ["confidence", "reg"]
 
-        self._target = target
+        # # UPD: this step is not necessary, since we will adjust the
+        # # final confidence values to account for "multi-linker" constraints
+        # constr_confidences.sort_values(...)
+
         # we unify sorting of the final scoreboard; we will sort it by
         # confidence, and values that have the same confidence score
         # will be sorted by an auxiliary property (cvg, reg, etc.)
         # in accordance with the method of prediction
-        by[0] = "confidence"
-        self._sort_kwargs = {"by": by, "ascending": ascend}
+        self._sort_kwargs = {"by": self._by, "ascending": False}
 
         # sort acceptable linkers by the confidence
         linker_scoreboard = self._build_linker_scoreboard(self.acceptable_linkers)
@@ -282,7 +285,7 @@ class CompXConstraints:
             # empty scoreboard; keep the structure to unify the 
             # L2P restriction workflow below
             linker_scoreboard = pd.DataFrame(
-                {k: [] for k in ["linker", *self._sort_kwargs["by"], "c_id"]}
+                {k: [] for k in ["linker", *self._by, "c_id"]}
             ).set_index("linker")
             # empty df
             self.gen_constr_df = pd.DataFrame()

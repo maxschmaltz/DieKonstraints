@@ -1,6 +1,6 @@
 	acc	f1
-yang-cond	0.723	0.414
-yang-cvg	0.574	0.384
+yang-cond	0.713	0.397
+yang-cvg	0.698	0.369
 albright-hayes	0.667	0.23
 rand	0.375	0.128
 zero	0.57	0.104

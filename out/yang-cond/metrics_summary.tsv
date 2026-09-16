@@ -1,6 +1,6 @@
 	acc	f1	is_best_key
-+count_def|+coop|+l2p	0.723	0.414	True
-+count_def|+coop|-l2p	0.723	0.414	False
++count_def|+coop|+l2p	0.713	0.397	True
++count_def|+coop|-l2p	0.713	0.397	False
 +count_def|-coop|+l2p	0.713	0.397	False
 +count_def|-coop|-l2p	0.713	0.397	False
 -count_def|+coop|+l2p	0.713	0.397	False
