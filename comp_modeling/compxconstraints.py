@@ -145,7 +145,7 @@ class CompXConstraints:
                     **(d := constr_confidences.loc[c_id].to_dict()),
                     # if a constraint produces several linkers, only
                     # take the average of the confidence score
-                    "confidence": d[self._target] * self._conf_coeffs[c_id]
+                    "confidence": round(d[self._target] * self._conf_coeffs[c_id], 3)
                 })
         return pd.DataFrame(linker_scoreboard)#.sort_values(**self._sort_kwargs)
 

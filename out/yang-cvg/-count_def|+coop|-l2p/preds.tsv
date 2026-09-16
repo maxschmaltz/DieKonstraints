@@ -1,112 +1,112 @@
 comp_gecodb	true	pred	confidence	reg	c_id
-kind_+er_zimmer	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_wagen	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_buch	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_arzt	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_wunsch	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_schuh	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_schänder	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_krankheit	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_sitz	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_klinik	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_tag	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_chor	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_haus	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_gruppe	_+=er_	_+=er_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-kind_+er_krippe	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_lied	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_bett	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_film	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_stube	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_mädchen	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_hospiz	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_lähmung	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_herz	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_sicherung	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_zeit	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_seele	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+s_tod	_+s_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_schar	_+=er_	_+=er_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-kind_+er_kanal	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_sendung	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_traum	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_seite	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_museum	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+s_vater	_+s_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_karussell	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_mörder	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_zeichnung	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_abteilung	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+s_kopf	_+s_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_reim	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_foto	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_paradies	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_treff	_+=er_	_+=er_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-kind_+s_tötung	_+s_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_kino	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+s_mutter	_+s_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_bett	_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_party	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_kurs	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_veranstaltung	_+=er_	_+=er_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-kind_+er_jury	_+=er_	_+=er_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-kind_+er_leiche	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_roman	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+s_mord	_+s_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_patenschaft	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+s_taufe	_+s_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+s_bewegung	_+s_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_artikel	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_reise	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_schicksal	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+s_mörder	_+s_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+s_pech	_+s_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-kind_+er_gitarre	_+=er_	_+=er_	0.013500000000000002	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
-bild_qualität	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_material	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_bearbeitung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_punkt	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_ausschnitt	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_sprache	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_größe	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_stabilisator	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_verarbeitung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_suche	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_teil	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_gestaltung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_welt	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_stock	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_geschichte	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_schärfe	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_agentur	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_röhre	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_flut	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_winkel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_rätsel	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_sprache	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_beispiel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_störung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_verbot	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_wiedergabe	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_legende	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_strecke	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_sturm	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_strecke	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_dokumentation	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_wechsel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_stelle	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_fenster	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_reihe	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_zeile	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_reihe	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_schrift	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_schnitt	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_vortrag	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_wand	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_tradition	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_macher	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_verehrung	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bild_+er_atlas	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+kind_+er_zimmer	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_wagen	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_buch	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_arzt	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_wunsch	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_schuh	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_schänder	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_krankheit	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_sitz	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_klinik	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_tag	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_chor	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_haus	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_gruppe	_+=er_	_+=er_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+kind_+er_krippe	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_lied	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_bett	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_film	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_stube	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_mädchen	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_hospiz	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_lähmung	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_herz	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_sicherung	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_zeit	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_seele	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+s_tod	_+s_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_schar	_+=er_	_+=er_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+kind_+er_kanal	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_sendung	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_traum	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_seite	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_museum	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+s_vater	_+s_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_karussell	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_mörder	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_zeichnung	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_abteilung	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+s_kopf	_+s_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_reim	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_foto	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_paradies	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_treff	_+=er_	_+=er_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+kind_+s_tötung	_+s_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_kino	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+s_mutter	_+s_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_bett	_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_party	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_kurs	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_veranstaltung	_+=er_	_+=er_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+kind_+er_jury	_+=er_	_+=er_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+kind_+er_leiche	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_roman	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+s_mord	_+s_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_patenschaft	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+s_taufe	_+s_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+s_bewegung	_+s_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_artikel	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_reise	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_schicksal	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+s_mörder	_+s_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+s_pech	_+s_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+kind_+er_gitarre	_+=er_	_+=er_	0.013999999999999999	1.3159999999999998	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er
+bild_qualität	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_material	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_bearbeitung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_punkt	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_ausschnitt	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_sprache	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_größe	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_stabilisator	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_verarbeitung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_suche	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_teil	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_gestaltung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_welt	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_stock	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_geschichte	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_schärfe	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_agentur	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_röhre	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_flut	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_winkel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_rätsel	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_sprache	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_beispiel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_störung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_verbot	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_wiedergabe	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_legende	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_strecke	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_sturm	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_strecke	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_dokumentation	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_wechsel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_stelle	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_fenster	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_reihe	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_zeile	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_reihe	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_schrift	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_schnitt	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_vortrag	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_wand	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_tradition	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_macher	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_verehrung	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bild_+er_atlas	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
 stadt_gebiet	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
 stadt_entwicklung	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
 stadt_zentrum	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
@@ -164,121 +164,121 @@ stadt_+=e_verbindung	_+=e_	_+=e_	0.053	0.562	p2l:decl_cl:pl:#e_uml-0|pl_interpr-
 stadt_+=e_führer	_+=e_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
 stadt_möbel	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
 stadt_geografie	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
-haus_tier	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_tür	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_meister	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_besitzer	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_nummer	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_wand	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_besuch	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_eigentümer	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_mittel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_durchsuchung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_katze	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_verwaltung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_wirtschaft	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_verbot	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_ordnung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_recht	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_boot	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_eingang	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_schuh	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_gebrauch	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_gemeinschaft	_	_	0.0955	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
-haus_garten	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_kauf	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_messe	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_regel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_kreis	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_verwalter	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_hund	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_+=er_zeile	_+=er_	_	0.0955	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
-haus_+=er_wand	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_schwein	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_+=er_kampf	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_strecke	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_schwamm	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_+=er_schlucht	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_gast	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_+=er_reihe	_+=er_	_	0.0955	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
-haus_+=er_meer	_+=er_	_	0.0955	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
-haus_mann	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_maus	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_+=er_gruppe	_+=er_	_	0.0955	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
-haus_kaninchen	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_+=er_preis	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_besitz	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_+=er_markt	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_rind	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_mütterchen	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_sklave	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_sender	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-haus_+=er_komplex	_+=er_	_	0.0955	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
-haus_+=er_ansammlung	_+=er_	_	0.0955	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
-haus_ziege	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_handel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_messe	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_händler	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_laden	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_regal	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_autor	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_titel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_form	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_reihe	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_markt	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_preis	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_vorstellung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_verlag	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_wert	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_deckel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_seite	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_empfehlung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_veröffentlichung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_verbrennung	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_binder	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_schrank	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_macher	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_wurm	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_präsentation	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_vorlage	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_tisch	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_ausgabe	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_malerei	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_sammlung	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_rezension	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_druckerei	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_freund	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_beschreibung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_schau	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_kiste	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_illustration	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_sendung	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_geschenk	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_bus	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_lesung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_liste	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_regal	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_stapel	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_wand	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_ecke	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_religion	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_bestand	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_rolle	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_basar	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_stand	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_spende	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_teil	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_herstellung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_illustrator	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_kauf	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_künstler	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_paket	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_sammler	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_herbst	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_hinweis	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_+=er_angebot	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_vertrieb	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-buch_sammlung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_tier	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_tür	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_meister	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_besitzer	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_nummer	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_wand	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_besuch	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_eigentümer	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_mittel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_durchsuchung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_katze	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_verwaltung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_wirtschaft	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_verbot	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_ordnung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_recht	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_boot	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_eingang	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_schuh	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_gebrauch	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_gemeinschaft	_	_	0.096	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
+haus_garten	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_kauf	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_messe	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_regel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_kreis	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_verwalter	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_hund	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_+=er_zeile	_+=er_	_	0.096	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
+haus_+=er_wand	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_schwein	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_+=er_kampf	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_strecke	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_schwamm	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_+=er_schlucht	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_gast	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_+=er_reihe	_+=er_	_	0.096	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
+haus_+=er_meer	_+=er_	_	0.096	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
+haus_mann	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_maus	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_+=er_gruppe	_+=er_	_	0.096	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
+haus_kaninchen	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_+=er_preis	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_besitz	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_+=er_markt	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_rind	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_mütterchen	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_sklave	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_sender	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+haus_+=er_komplex	_+=er_	_	0.096	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
+haus_+=er_ansammlung	_+=er_	_	0.096	1.785	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
+haus_ziege	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_handel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_messe	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_händler	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_laden	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_regal	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_autor	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_titel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_form	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_reihe	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_markt	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_preis	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_vorstellung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_verlag	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_wert	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_deckel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_seite	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_empfehlung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_veröffentlichung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_verbrennung	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_binder	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_schrank	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_macher	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_wurm	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_präsentation	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_vorlage	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_tisch	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_ausgabe	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_malerei	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_sammlung	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_rezension	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_druckerei	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_freund	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_beschreibung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_schau	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_kiste	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_illustration	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_sendung	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_geschenk	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_bus	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_lesung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_liste	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_regal	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_stapel	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_wand	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_ecke	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_religion	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_bestand	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_rolle	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_basar	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_stand	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_spende	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_teil	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_herstellung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_illustrator	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_kauf	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_künstler	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_paket	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_sammler	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_herbst	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_hinweis	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_+=er_angebot	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_vertrieb	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+buch_sammlung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
 hund_+e_halter	_+e_	_+en_	0.001	0.786	l2p:en|non_par_m
 hund_+e_schule	_+e_	_+en_	0.001	0.786	l2p:en|non_par_m
 hund_+e_besitzer	_+e_	_+en_	0.001	0.786	l2p:en|non_par_m
@@ -443,61 +443,61 @@ weg_gabel	_	_+e_	0.079	0.544	p2l:decl_cl:pl:#e-0|pl_interpr-e
 weg_suche	_	_	0.162	0.754	p2l:decl_cl:pl:#e-0|def-0
 weg_netz	_	_+e_	0.079	0.544	p2l:decl_cl:pl:#e-0|pl_interpr-e
 weg_richtung	_	_	0.162	0.754	p2l:decl_cl:pl:#e-0|def-0
-rad_stand	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_strecke	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_lager	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_reise	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_satz	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_haus	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_lauf	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_kappe	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_kasten	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_+=er_werk	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_nabe	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_aufhängung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_dampfer	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_marathon	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_wanderung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_mutter	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_station	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_wechsel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_achse	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_laden	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_spur	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_team	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_freund	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_verleih	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_panzer	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_+=er_uhr	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-rad_reifen	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_gelb	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_sprung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_stock	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_ablage	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_kuchen	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_schale	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_tanz	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_dotter	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_mann	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_becher	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_uhr	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_karton	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_suche	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_kopf	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_masse	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_speise	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_hülle	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_schale	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_masse	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_dieb	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_lauf	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_form	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_nudel	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_+er_farbe	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_zahn	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_entwicklung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_schaum	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-ei_spende	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_stand	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_strecke	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_lager	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_reise	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_satz	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_haus	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_lauf	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_kappe	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_kasten	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_+=er_werk	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_nabe	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_aufhängung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_dampfer	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_marathon	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_wanderung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_mutter	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_station	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_wechsel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_achse	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_laden	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_spur	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_team	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_freund	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_verleih	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_panzer	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_+=er_uhr	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+rad_reifen	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_gelb	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_sprung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_stock	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_ablage	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_kuchen	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_schale	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_tanz	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_dotter	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_mann	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_becher	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_uhr	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_karton	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_suche	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_kopf	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_masse	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_speise	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_hülle	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_schale	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_masse	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_dieb	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_lauf	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_form	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_nudel	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_+er_farbe	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_zahn	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_entwicklung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_schaum	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+ei_spende	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
 gerät_+e_haus	_+e_	_	0.162	0.754	p2l:decl_cl:pl:#e-0|def-0
 gerät_+e_hersteller	_+e_	_	0.162	0.754	p2l:decl_cl:pl:#e-0|def-0
 gerät_+e_wart	_+e_	_	0.162	0.754	p2l:decl_cl:pl:#e-0|def-0
@@ -536,33 +536,33 @@ vogel_fuß	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 vogel_kenner	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 vogel_spur	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 vogel_tränke	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
-schloss_park	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_garten	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_hotel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_anlage	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_museum	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_+=er_verwaltung	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_turm	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_insel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_hund	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_gespenst	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_teich	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_führung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_keller	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_gebäude	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_mauer	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_graben	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_brücke	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_gelände	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_brauerei	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_besitzer	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_besichtigung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_geist	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_bewohner	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_verwaltung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_ruine	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_saal	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schloss_+=er_stiftung	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_park	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_garten	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_hotel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_anlage	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_museum	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_+=er_verwaltung	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_turm	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_insel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_hund	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_gespenst	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_teich	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_führung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_keller	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_gebäude	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_mauer	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_graben	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_brücke	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_gelände	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_brauerei	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_besitzer	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_besichtigung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_geist	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_bewohner	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_verwaltung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_ruine	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_saal	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schloss_+=er_stiftung	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
 mutter_sprache	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 mutter_milch	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 mutter_tag	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
@@ -630,66 +630,66 @@ zahn_fach	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
 zahn_krankheit	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
 zahn_operation	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
 zahn_fund	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
-person_+en_kreis	_+en_	_+en_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_gruppe	_+en_	_+en_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_gesellschaft	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_schaden	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_zug	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_zahl	_+en_	_+en_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_beförderung	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_kult	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_name	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_kontrolle	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_beschreibung	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_transport	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_suche	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_schützer	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_sorge	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_anzahl	_+en_	_+en_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_waage	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_aufzug	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_wahl	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_verzeichnis	_+en_	_+en_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_fähre	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_versicherung	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_bezeichnung	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_konstellation	_+en_	_+en_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_profil	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_liste	_+en_	_+en_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_schiff	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_angabe	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_wechsel	_+en_	_+en_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_darstellung	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_überwachung	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person_+en_dampfer	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-ohr_feige	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_ring	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_muschel	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_stöpsel	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_geräusch	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_schmerz	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_hörer	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_schmaus	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_marke	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_stecker	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_sessel	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_stöpsel	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_entzündung	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_arzt	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_zeuge	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_schützer	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_tropfen	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_hänger	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_trompete	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_weide	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_klappe	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_schützer	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_robbe	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-ohr_+en_spiegel	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bad_+=er_architektur	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bad_reiniger	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bad_vorleger	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-bad_+=er_bereich	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+person_+en_kreis	_+en_	_+en_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_gruppe	_+en_	_+en_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_gesellschaft	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_schaden	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_zug	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_zahl	_+en_	_+en_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_beförderung	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_kult	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_name	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_kontrolle	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_beschreibung	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_transport	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_suche	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_schützer	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_sorge	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_anzahl	_+en_	_+en_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_waage	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_aufzug	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_wahl	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_verzeichnis	_+en_	_+en_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_fähre	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_versicherung	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_bezeichnung	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_konstellation	_+en_	_+en_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_profil	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_liste	_+en_	_+en_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_schiff	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_angabe	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_wechsel	_+en_	_+en_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_darstellung	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_überwachung	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person_+en_dampfer	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+ohr_feige	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_ring	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_muschel	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_stöpsel	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_geräusch	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_schmerz	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_hörer	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_schmaus	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_marke	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_stecker	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_sessel	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_stöpsel	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_entzündung	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_arzt	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_zeuge	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_schützer	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_tropfen	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_hänger	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_trompete	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_weide	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_klappe	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_schützer	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_robbe	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+ohr_+en_spiegel	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bad_+=er_architektur	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bad_reiniger	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bad_vorleger	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+bad_+=er_bereich	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
 ball_besitz	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
 ball_verlust	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
 ball_wechsel	_	_	0.083	0.716	p2l:decl_cl:pl:#e_uml-0|def-0
@@ -728,32 +728,32 @@ apfel_+=_säure	_+=_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 apfel_torte	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 apfel_schuss	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 apfel_füllung	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
-bett_wäsche	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_kante	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_gestell	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_+en_haus	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_wanze	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_bezug	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_vorleger	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_+en_zahl	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_geschichte	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_rand	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_rahmen	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_gitter	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_+en_kapazität	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_nachbar	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_szene	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_pfosten	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_+en_station	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_pfanne	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_+en_auslastung	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_kasten	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_flasche	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_+en_belegung	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_+en_wechsel	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_+en_kauf	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_überwurf	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett_laken	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_wäsche	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_kante	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_gestell	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_+en_haus	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_wanze	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_bezug	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_vorleger	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_+en_zahl	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_geschichte	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_rand	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_rahmen	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_gitter	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_+en_kapazität	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_nachbar	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_szene	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_pfosten	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_+en_station	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_pfanne	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_+en_auslastung	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_kasten	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_flasche	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_+en_belegung	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_+en_wechsel	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_+en_kauf	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_überwurf	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett_laken	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
 gitarre_+n_riff	_+en_	_+en_	0.171	0.764	p2l:phon_fin:schwa$-en|def-en
 gitarre_+n_solo	_+en_	_+en_	0.171	0.764	p2l:phon_fin:schwa$-en|def-en
 gitarre_+n_klang	_+en_	_+en_	0.171	0.764	p2l:phon_fin:schwa$-en|def-en
@@ -780,29 +780,29 @@ gitarre_+n_schüler	_+en_	_+en_	0.171	0.764	p2l:phon_fin:schwa$-en|def-en
 gitarre_+n_legende	_+en_	_+en_	0.171	0.764	p2l:phon_fin:schwa$-en|def-en
 gitarre_+n_hersteller	_+en_	_+en_	0.171	0.764	p2l:phon_fin:schwa$-en|def-en
 gitarre_+n_arrangement	_+en_	_+en_	0.171	0.764	p2l:phon_fin:schwa$-en|def-en
-lied_+er_macher	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_+er_buch	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_+er_abend	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_+er_kranz	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_vortrag	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_begleitung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_zeile	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_+er_sammlung	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_+er_dichter	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_auswahl	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_+er_heft	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_beitrag	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_form	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_titel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_begleiter	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_sänger	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_+er_kreis	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_+er_sänger	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_satz	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_gestaltung	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_+er_auswahl	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_interpretation	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-lied_anfang	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_+er_macher	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_+er_buch	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_+er_abend	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_+er_kranz	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_vortrag	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_begleitung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_zeile	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_+er_sammlung	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_+er_dichter	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_auswahl	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_+er_heft	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_beitrag	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_form	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_titel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_begleiter	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_sänger	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_+er_kreis	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_+er_sänger	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_satz	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_gestaltung	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_+er_auswahl	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_interpretation	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+lied_anfang	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
 geschenk_idee	_	_+s_	0.159	0.649	p2l:drv:prx_deverb-s
 geschenk_artikel	_	_+s_	0.159	0.649	p2l:drv:prx_deverb-s
 geschenk_karte	_	_+s_	0.159	0.649	p2l:drv:prx_deverb-s
@@ -819,9 +819,9 @@ geschenk_päckchen	_	_+s_	0.159	0.649	p2l:drv:prx_deverb-s
 geschenk_+e_sack	_+e_	_+s_	0.159	0.649	p2l:drv:prx_deverb-s
 geschenk_+e_liste	_+e_	_+e_	0.079	0.544	p2l:decl_cl:pl:#e-0|pl_interpr-e
 geschenk_+e_laden	_+e_	_+s_	0.159	0.649	p2l:drv:prx_deverb-s
-schwester_modell	_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-schwester_+n_paar	_+en_	_+en_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-schwester_zeitung	_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+schwester_modell	_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+schwester_+n_paar	_+en_	_+en_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+schwester_zeitung	_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 vater_tag	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 vater_stadt	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 vater_haus	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
@@ -845,39 +845,39 @@ nagel_feile	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 nagel_schmied	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 nagel_kopf	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
 nagel_bürste	_	_	0.007	0.974	p2l:decl_cl:pl:#0_uml-0|def-0
-schwert_kämpfer	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schwert_träger	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schwert_hieb	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schwert_lilie	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schwert_scheide	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schwert_griff	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schwert_klinge	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schwert_spitze	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schwert_tanz	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-schwert_pflanze	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schwert_kämpfer	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schwert_träger	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schwert_hieb	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schwert_lilie	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schwert_scheide	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schwert_griff	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schwert_klinge	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schwert_spitze	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schwert_tanz	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+schwert_pflanze	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
 geräusch_dämmung	_	_	0.159	0.649	p2l:drv:prx_deverb-s
 geräusch_+e_macher	_+e_	_	0.159	0.649	p2l:drv:prx_deverb-s
 geräusch_reduzierung	_	_	0.159	0.649	p2l:drv:prx_deverb-s
-brett_+er_bude	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-brett_+er_wand	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-brett_+er_verschlag	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-brett_+er_zaun	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-brett_+er_boden	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-brett_spieler	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-brett_wurzel	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-brett_rand	_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
-brett_+er_gerüst	_+=er_	_	0.0105	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+brett_+er_bude	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+brett_+er_wand	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+brett_+er_verschlag	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+brett_+er_zaun	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+brett_+er_boden	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+brett_spieler	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+brett_wurzel	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+brett_rand	_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
+brett_+er_gerüst	_+=er_	_	0.011	0.815	p2l:decl_cl:pl:#er-0/er|def-0/er
 wurm_befall	_	_+en_	0.001	0.786	l2p:en|non_par_m
 wurm_art	_	_+en_	0.001	0.786	l2p:en|non_par_m
 wurm_erkrankung	_	_+en_	0.001	0.786	l2p:en|non_par_m
 wurm_infektion	_	_+en_	0.001	0.786	l2p:en|non_par_m
 wurm_larve	_	_+en_	0.001	0.786	l2p:en|non_par_m
 wurm_krankheit	_	_+en_	0.001	0.786	l2p:en|non_par_m
-nation_+en_wertung	_+en_	_	0.08299999999999999	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-hemd_tasche	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-hemd_+s_ärmel	_+s_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-hemd_knopf	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-hemd_bluse	_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-hemd_+en_tasche	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-hemd_+en_knopf	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
-hemd_+en_kragen	_+en_	_	0.004333333333333333	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+nation_+en_wertung	_+en_	_	0.083	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+hemd_tasche	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+hemd_+s_ärmel	_+s_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+hemd_knopf	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+hemd_bluse	_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+hemd_+en_tasche	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+hemd_+en_knopf	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
+hemd_+en_kragen	_+en_	_	0.004	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en

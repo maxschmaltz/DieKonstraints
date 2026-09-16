@@ -214,7 +214,7 @@ def main():
                 in zip(appl_ind.index, output[key])
             }
             with open(
-                os.path.join(method_dir, f"{key}s.tsv"), "w", encoding="utf-8"
+                os.path.join(method_dir, f"{key}s.json"), "w", encoding="utf-8"
             ) as o:
                 json.dump(outdict, o, ensure_ascii=False, indent=4)
 
