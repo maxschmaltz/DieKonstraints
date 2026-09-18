@@ -279,31 +279,31 @@ buch_hinweis	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er
 buch_+=er_angebot	_+=er_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 buch_vertrieb	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 buch_sammlung	_	_+=er_	1.161	1.847	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|pl_interpr-er
-hund_+e_halter	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_schule	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_besitzer	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_rasse	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_führer	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_futter	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_freund	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_trainer	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_haltung	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_sport	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_erziehung	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_kot	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_strand	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_haar	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_ausbildung	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_kampf	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_züchter	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_staffel	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_kuchen	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_decke	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_klo	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_kacke	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_betreuung	_+e_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+s_rose	_+s_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+s_kamille	_+s_	_+en_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_halter	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_schule	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_besitzer	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_rasse	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_führer	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_futter	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_freund	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_trainer	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_haltung	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_sport	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_erziehung	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_kot	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_strand	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_haar	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_ausbildung	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_kampf	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_züchter	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_staffel	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_kuchen	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_decke	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_klo	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_kacke	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_betreuung	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+s_rose	_+s_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+s_kamille	_+s_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
 frau_+en_arzt	_+en_	_	0.573	0.0	def-0
 frau_+en_anteil	_+en_	_	0.573	0.0	def-0
 frau_+en_haus	_+en_	_	0.573	0.0	def-0
@@ -867,12 +867,12 @@ brett_spieler	_	_	2.343	2.806	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_
 brett_wurzel	_	_	2.343	2.806	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|mass-interpr-0
 brett_rand	_	_	2.343	2.806	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|mass-interpr-0
 brett_+er_gerüst	_+=er_	_	2.343	2.806	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|mass-interpr-0
-wurm_befall	_	_+en_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
-wurm_art	_	_+en_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
-wurm_erkrankung	_	_+en_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
-wurm_infektion	_	_+en_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
-wurm_larve	_	_+en_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
-wurm_krankheit	_	_+en_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
+wurm_befall	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
+wurm_art	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
+wurm_erkrankung	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
+wurm_infektion	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
+wurm_larve	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
+wurm_krankheit	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 nation_+en_wertung	_+en_	_+s_	1.32	1.537	p2l:drv:sfx:sfx-s|def-s, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 hemd_tasche	_	_	0.905	0.987	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
 hemd_+s_ärmel	_+s_	_	0.905	0.987	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en

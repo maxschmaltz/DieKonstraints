@@ -16925,8 +16925,8 @@
     "person_+en_gesellschaft": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -16960,8 +16960,8 @@
     "person_+en_schaden": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -16995,8 +16995,8 @@
     "person_+en_zug": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17065,8 +17065,8 @@
     "person_+en_beförderung": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17100,8 +17100,8 @@
     "person_+en_kult": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17135,8 +17135,8 @@
     "person_+en_name": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17170,8 +17170,8 @@
     "person_+en_kontrolle": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17205,8 +17205,8 @@
     "person_+en_beschreibung": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17240,8 +17240,8 @@
     "person_+en_transport": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17275,8 +17275,8 @@
     "person_+en_suche": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17310,8 +17310,8 @@
     "person_+en_schützer": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17345,8 +17345,8 @@
     "person_+en_sorge": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17415,8 +17415,8 @@
     "person_+en_waage": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17450,8 +17450,8 @@
     "person_+en_aufzug": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17485,8 +17485,8 @@
     "person_+en_wahl": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17555,8 +17555,8 @@
     "person_+en_fähre": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17590,8 +17590,8 @@
     "person_+en_versicherung": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17625,8 +17625,8 @@
     "person_+en_bezeichnung": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17695,8 +17695,8 @@
     "person_+en_profil": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17765,8 +17765,8 @@
     "person_+en_schiff": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17800,8 +17800,8 @@
     "person_+en_angabe": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17870,8 +17870,8 @@
     "person_+en_darstellung": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17905,8 +17905,8 @@
     "person_+en_überwachung": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17940,8 +17940,8 @@
     "person_+en_dampfer": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -17975,8 +17975,8 @@
     "ohr_feige": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18010,8 +18010,8 @@
     "ohr_ring": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18045,8 +18045,8 @@
     "ohr_muschel": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18080,8 +18080,8 @@
     "ohr_stöpsel": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18115,8 +18115,8 @@
     "ohr_geräusch": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18150,8 +18150,8 @@
     "ohr_+en_schmerz": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18185,8 +18185,8 @@
     "ohr_hörer": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18220,8 +18220,8 @@
     "ohr_+en_schmaus": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18255,8 +18255,8 @@
     "ohr_marke": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18290,8 +18290,8 @@
     "ohr_stecker": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18325,8 +18325,8 @@
     "ohr_+en_sessel": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18360,8 +18360,8 @@
     "ohr_+en_stöpsel": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18395,8 +18395,8 @@
     "ohr_+en_entzündung": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18430,8 +18430,8 @@
     "ohr_+en_arzt": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18465,8 +18465,8 @@
     "ohr_+en_zeuge": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18500,8 +18500,8 @@
     "ohr_+en_schützer": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18535,8 +18535,8 @@
     "ohr_+en_tropfen": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18570,8 +18570,8 @@
     "ohr_hänger": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18605,8 +18605,8 @@
     "ohr_trompete": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18640,8 +18640,8 @@
     "ohr_+en_weide": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18675,8 +18675,8 @@
     "ohr_+en_klappe": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18710,8 +18710,8 @@
     "ohr_schützer": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18745,8 +18745,8 @@
     "ohr_+en_robbe": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -18780,8 +18780,8 @@
     "ohr_+en_spiegel": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -19805,8 +19805,8 @@
     "bett_wäsche": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -19840,8 +19840,8 @@
     "bett_kante": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -19875,8 +19875,8 @@
     "bett_gestell": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -19910,8 +19910,8 @@
     "bett_+en_haus": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -19945,8 +19945,8 @@
     "bett_wanze": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -19980,8 +19980,8 @@
     "bett_bezug": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20015,8 +20015,8 @@
     "bett_vorleger": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20085,8 +20085,8 @@
     "bett_geschichte": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20120,8 +20120,8 @@
     "bett_rand": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20155,8 +20155,8 @@
     "bett_rahmen": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20190,8 +20190,8 @@
     "bett_gitter": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20260,8 +20260,8 @@
     "bett_nachbar": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20295,8 +20295,8 @@
     "bett_szene": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20330,8 +20330,8 @@
     "bett_pfosten": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20365,8 +20365,8 @@
     "bett_+en_station": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20400,8 +20400,8 @@
     "bett_pfanne": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20470,8 +20470,8 @@
     "bett_kasten": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20505,8 +20505,8 @@
     "bett_flasche": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20610,8 +20610,8 @@
     "bett_+en_kauf": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20645,8 +20645,8 @@
     "bett_überwurf": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -20680,8 +20680,8 @@
     "bett_laken": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -22606,8 +22606,8 @@
     "schwester_modell": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -22676,8 +22676,8 @@
     "schwester_zeitung": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -24123,8 +24123,8 @@
     "hemd_tasche": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -24158,8 +24158,8 @@
     "hemd_+s_ärmel": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -24193,8 +24193,8 @@
     "hemd_knopf": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -24228,8 +24228,8 @@
     "hemd_bluse": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -24263,8 +24263,8 @@
     "hemd_+en_tasche": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -24298,8 +24298,8 @@
     "hemd_+en_knopf": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",
@@ -24333,8 +24333,8 @@
     "hemd_+en_kragen": {
         "index": [
             "_",
-            "_+en_",
-            "_+s_"
+            "_+s_",
+            "_+en_"
         ],
         "columns": [
             "confidence",

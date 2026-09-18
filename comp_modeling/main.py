@@ -179,8 +179,9 @@ def main():
         pred_rows_df = pd.concat(pred_rows, axis=1).T   \
             .reset_index(drop=True) \
             .set_index(appl_ind.index)
+        Y_pred = [pred_row.name or "_" for pred_row in pred_rows]
         pred_df = pd.DataFrame(
-            {"true": Y_true, "pred": preds},
+            {"true": Y_true, "pred": Y_pred},
             index=appl_ind.index
         )
         return pd.concat((pred_df, pred_rows_df), axis=1)
@@ -203,7 +204,7 @@ def main():
                 os.path.join(outdir, f"{m_name}.tsv")
             )
 
-        # method best outputs; dump to dicts, from which they are
+        # method outputs; dump to dicts, from which they are
         # nicely recoverable with `pd.DataFrame.from_dict()`
         for key in ["gen_constr_df", "restr_constr_df", "linker_scoreboard"]:
             if not key in output:

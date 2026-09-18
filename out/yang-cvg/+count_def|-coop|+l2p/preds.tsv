@@ -817,7 +817,7 @@ geschenk_übergabe	_	_+s_	0.841	0.649	p2l:drv:prx_deverb-s
 geschenk_aktion	_	_+s_	0.841	0.649	p2l:drv:prx_deverb-s
 geschenk_päckchen	_	_+s_	0.841	0.649	p2l:drv:prx_deverb-s
 geschenk_+e_sack	_+e_	_+s_	0.841	0.649	p2l:drv:prx_deverb-s
-geschenk_+e_liste	_+e_	_+e_	0.841	0.649	p2l:drv:prx_deverb-s
+geschenk_+e_liste	_+e_	_+s_	0.841	0.649	p2l:drv:prx_deverb-s
 geschenk_+e_laden	_+e_	_+s_	0.841	0.649	p2l:drv:prx_deverb-s
 schwester_modell	_	_	0.25	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 schwester_+n_paar	_+en_	_+en_	0.961	1.0	p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en

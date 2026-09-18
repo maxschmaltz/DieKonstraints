@@ -873,7 +873,7 @@ wurm_erkrankung	_	_+en_	50.8	0.786	l2p:en|non_par_m
 wurm_infektion	_	_+en_	50.8	0.786	l2p:en|non_par_m
 wurm_larve	_	_+en_	50.8	0.786	l2p:en|non_par_m
 wurm_krankheit	_	_+en_	50.8	0.786	l2p:en|non_par_m
-nation_+en_wertung	_+en_	_	25.933	1.987	p2l:drv:sfx:sfx-s|def-s, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+nation_+en_wertung	_+en_	_+s_	25.933	1.987	p2l:drv:sfx:sfx-s|def-s, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 hemd_tasche	_	_	4.667	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
 hemd_+s_ärmel	_+s_	_	4.667	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en
 hemd_knopf	_	_	4.667	0.996	p2l:decl_cl:mixed-0/s/en|def-0/s/en

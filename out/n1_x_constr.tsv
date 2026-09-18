@@ -2,8 +2,8 @@
 apfel	2	-0-	"-s-, -en-, -e-, -""er-, -""e-, -es-"	_+=_	apfel_baum	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 bad	3	"-0-, -""er-"	"-s-, -en-, -e-, -""e-, -""0-"		bad_+=er_architektur	def-0, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|def-0/er
 ball	2	-0-	"-s-, -en-, -e-, -""er-, -""0-"	_+=e_	ball_besitz	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-bett	2	-0-, -s-, -en-	"-s-, -e-, -""er-, -""e-, -""0-"		bett_wäsche	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
-bett	3	-0-, -s-, -en-	"-s-, -e-, -""er-, -""e-, -""0-"		bett_+en_zahl	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en, p2l:decl_cl:mixed-0/s/en|pl_interpr-en
+bett	2	-0-, -en-, -s-	"-s-, -e-, -""er-, -""e-, -""0-"		bett_wäsche	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
+bett	3	-0-, -en-, -s-	"-s-, -e-, -""er-, -""e-, -""0-"		bett_+en_zahl	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en, p2l:decl_cl:mixed-0/s/en|pl_interpr-en
 bild	3	"-0-, -""er-"	"-s-, -en-, -e-, -""e-, -""0-"		bild_qualität	def-0, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|def-0/er
 brett	4	"-0-, -""er-"	"-s-, -en-, -e-, -""e-, -""0-"		brett_+er_bude	def-0, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|mass-interpr-0
 buch	3	"-0-, -""er-"	"-s-, -en-, -e-, -""e-, -""0-"		buch_handel	def-0, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|def-0/er
@@ -17,7 +17,7 @@ geschenk	4	-0-, -e-, -s-	"-en-, -e-, -""er-, -""e-, -es-, -""0-"		geschenk_+e_li
 gitarre	2	-0-, -en-	"-s-, -e-, -""er-, -""e-, -es-, -""0-"		gitarre_+n_riff	def-0, p2l:phon_fin:schwa$-en|def-en
 hand	2	-0-	"-s-, -en-, -e-, -""er-, -""0-"	_+=e_	hand_gelenk	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 haus	4	"-0-, -""er-"	"-s-, -en-, -e-, -""e-, -""0-"		haus_tier	def-0, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
-hemd	2	-0-, -s-, -en-	"-s-, -e-, -""er-, -""e-, -""0-"		hemd_tasche	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
+hemd	2	-0-, -en-, -s-	"-s-, -e-, -""er-, -""e-, -""0-"		hemd_tasche	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
 hund	3	-0-, -en-	"-s-, -en-, -""er-, -""e-, -""0-"	_+e_	hund_+e_halter	def-0, l2p:en|non_par_m, p2l:decl_cl:pl:#e-0|def-0
 katze	2	-0-, -en-	"-s-, -e-, -""er-, -""e-, -es-, -""0-"		katze_+n_klo	def-0, p2l:phon_fin:schwa$-en|def-en
 kind	4	"-0-, -""er-"	"-s-, -en-, -e-, -""e-, -""0-"		kind_+er_zimmer	def-0, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|anim-er, p2l:decl_cl:pl:#er-0/er|def-0/er
@@ -26,14 +26,14 @@ mutter	2	-0-	"-s-, -en-, -e-, -""er-, -""e-, -es-"	_+=_	mutter_sprache	def-0, p2
 mutter	3	"-0-, -""0-"	"-s-, -en-, -e-, -""er-, -""e-, -es-"		mutter_+=_treff	def-0, p2l:decl_cl:pl:#0_uml-0|def-0, p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml
 nagel	2	-0-	"-s-, -en-, -e-, -""er-, -""e-, -es-"	_+=_	nagel_lack	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 nation	3	-0-, -s-, -en-	"-e-, -""er-, -""e-, -es-, -""0-"		nation_+en_wertung	def-0, p2l:drv:sfx:sfx-s|def-s, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-ohr	2	-0-, -s-, -en-	"-s-, -e-, -""er-, -""e-, -""0-"		ohr_feige	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
-person	2	-0-, -s-, -en-	"-s-, -e-, -""er-, -""e-, -es-, -""0-"		person_+en_gesellschaft	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-person	3	-0-, -s-, -en-	"-s-, -e-, -""er-, -""e-, -es-, -""0-"		person_+en_kreis	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
+ohr	2	-0-, -en-, -s-	"-s-, -e-, -""er-, -""e-, -""0-"		ohr_feige	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
+person	2	-0-, -en-, -s-	"-s-, -e-, -""er-, -""e-, -es-, -""0-"		person_+en_gesellschaft	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+person	3	-0-, -en-, -s-	"-s-, -e-, -""er-, -""e-, -es-, -""0-"		person_+en_kreis	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
 rad	3	"-0-, -""er-"	"-s-, -en-, -e-, -""e-, -""0-"		rad_stand	def-0, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|def-0/er
 schloss	4	"-0-, -""er-"	"-s-, -en-, -e-, -""er-, -""e-, -""0-"		schloss_park	def-0, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:phon_fin:sibilant$-0
 schwert	3	"-0-, -""er-"	"-s-, -en-, -e-, -""e-, -""0-"		schwert_kämpfer	def-0, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|def-0/er
-schwester	2	-0-, -s-, -en-	"-s-, -e-, -""er-, -""e-, -es-, -""0-"		schwester_modell	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-schwester	3	-0-, -s-, -en-	"-s-, -e-, -""er-, -""e-, -es-, -""0-"		schwester_+n_paar	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
+schwester	2	-0-, -en-, -s-	"-s-, -e-, -""er-, -""e-, -es-, -""0-"		schwester_modell	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
+schwester	3	-0-, -en-, -s-	"-s-, -e-, -""er-, -""e-, -es-, -""0-"		schwester_+n_paar	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
 sonne	2	-0-, -en-	"-s-, -e-, -""er-, -""e-, -es-, -""0-"		sonne_+n_strahl	def-0, p2l:phon_fin:schwa$-en|def-en
 stadt	2	-0-	"-s-, -en-, -e-, -""er-, -""0-"	_+=e_	stadt_gebiet	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 stadt	3	"-0-, -""e-"	"-s-, -en-, -e-, -""er-, -""0-"		stadt_+=e_partnerschaft	def-0, p2l:decl_cl:pl:#e_uml-0|def-0, p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml
