@@ -1,385 +1,385 @@
-==== LINKER _+e_ ====
-
-geräusch_+e_macher:	_
-                          linker    reg  confidence
-c_id                                               
-p2l:phon_fin:sibilant$-0       _  0.970       0.915
-p2l:drv:prx_deverb-s        _+s_  0.649       0.841
-p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.838
-def-0                          _  0.573       0.000
-
-
-geschenk_+e_liste:	_+e_
-                                 linker    reg  confidence
-c_id                                                      
-p2l:decl_cl:pl:#e-0|pl_interpr-e   _+e_  0.544       0.921
-p2l:drv:prx_deverb-s               _+s_  0.649       0.841
-p2l:decl_cl:pl:#e-0|def-0             _  0.754       0.838
-def-0                                 _  0.573       0.000
-
-
-geschenk_+e_sack:	_+s_
-                          linker    reg  confidence
-c_id                                               
-p2l:drv:prx_deverb-s        _+s_  0.649       0.841
-p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.838
-def-0                          _  0.573       0.000
-
-
-hund_+e_halter:	_
-                          linker    reg  confidence
-c_id                                               
-p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.838
-def-0                          _  0.573       0.000
-
-
-weg_+e_netz:	_+e_
-                                 linker    reg  confidence
-c_id                                                      
-p2l:decl_cl:pl:#e-0|pl_interpr-e   _+e_  0.544       0.921
-p2l:decl_cl:pl:#e-0|def-0             _  0.754       0.838
-def-0                                 _  0.573       0.000
-
-
-==== LINKER _+=e_ ====
-
-stadt_+=e_name:	_
-                              linker    reg  confidence
-c_id                                                   
-p2l:decl_cl:pl:#e_uml-0|def-0      _  0.716       0.917
-def-0                              _  0.573       0.000
-
-
-stadt_+=e_partnerschaft:	_+=e_
-                                         linker    reg  confidence
-c_id                                                              
-p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml  _+=e_  0.562       0.947
-p2l:decl_cl:pl:#e_uml-0|def-0                 _  0.716       0.917
-def-0                                         _  0.573       0.000
-
-
 ==== LINKER _+=_ ====
 
 mutter_+=_treff:	_
-                                         linker    reg  confidence
-c_id                                                              
-p2l:decl_cl:pl:#0_uml-0|def-0                 _  0.974       0.993
-p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml   _+=_  0.667       0.961
-def-0                                         _  0.573       0.000
+                                         linker  cvg_score  confidence
+c_id                                                                  
+p2l:decl_cl:pl:#0_uml-0|def-0                 _      0.993       0.993
+p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml   _+=_      0.961       0.961
+def-0                                         _      0.000       0.000
 
 
 mutter_+=_zentrum:	_
-                              linker    reg  confidence
+                              linker  cvg_score  confidence
+c_id                                                       
+p2l:decl_cl:pl:#0_uml-0|def-0      _      0.993       0.993
+def-0                              _      0.000       0.000
+
+
+==== LINKER _+e_ ====
+
+geräusch_+e_macher:	_
+                          linker  cvg_score  confidence
 c_id                                                   
-p2l:decl_cl:pl:#0_uml-0|def-0      _  0.974       0.993
-def-0                              _  0.573       0.000
+p2l:phon_fin:sibilant$-0       _      0.915       0.915
+p2l:drv:prx_deverb-s        _+s_      0.841       0.841
+p2l:decl_cl:pl:#e-0|def-0      _      0.838       0.838
+def-0                          _      0.000       0.000
 
 
-==== LINKER _+s_ ====
-
-hemd_+s_ärmel:	_
-                                    linker    reg  confidence
-c_id                                                         
-p2l:decl_cl:mixed-0/s/en|def-0/s/en      _  0.996       0.329
-p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_  0.996       0.329
-p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_  0.996       0.329
-def-0                                    _  0.573       0.000
+geschenk_+e_liste:	_+e_
+                                 linker  cvg_score  confidence
+c_id                                                          
+p2l:decl_cl:pl:#e-0|pl_interpr-e   _+e_      0.921       0.921
+p2l:drv:prx_deverb-s               _+s_      0.841       0.841
+p2l:decl_cl:pl:#e-0|def-0             _      0.838       0.838
+def-0                                 _      0.000       0.000
 
 
-hund_+s_rose:	_
-                          linker    reg  confidence
-c_id                                               
-p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.838
-def-0                          _  0.573       0.000
+geschenk_+e_sack:	_+s_
+                          linker  cvg_score  confidence
+c_id                                                   
+p2l:drv:prx_deverb-s        _+s_      0.841       0.841
+p2l:decl_cl:pl:#e-0|def-0      _      0.838       0.838
+def-0                          _      0.000       0.000
 
 
-kind_+s_tod:	_+=er_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:decl_cl:pl:#er-0/er|anim-er        _+=er_  0.501       0.997
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _  0.622       0.829
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+hund_+e_halter:	_
+                          linker  cvg_score  confidence
+c_id                                                   
+p2l:decl_cl:pl:#e-0|def-0      _      0.838       0.838
+def-0                          _      0.000       0.000
+
+
+weg_+e_netz:	_+e_
+                                 linker  cvg_score  confidence
+c_id                                                          
+p2l:decl_cl:pl:#e-0|pl_interpr-e   _+e_      0.921       0.921
+p2l:decl_cl:pl:#e-0|def-0             _      0.838       0.838
+def-0                                 _      0.000       0.000
 
 
 ==== LINKER _+en_ ====
 
 bett_+en_zahl:	_+en_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:decl_cl:mixed-0/s/en|pl_interpr-en  _+en_  1.000       0.961
-p2l:decl_cl:mixed-0/s/en|def-0/s/en         _  0.996       0.329
-p2l:decl_cl:mixed-0/s/en|def-0/s/en     _+en_  0.996       0.329
-p2l:decl_cl:mixed-0/s/en|def-0/s/en      _+s_  0.996       0.329
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:decl_cl:mixed-0/s/en|pl_interpr-en  _+en_      0.961       0.961
+p2l:decl_cl:mixed-0/s/en|def-0/s/en         _      0.987       0.329
+p2l:decl_cl:mixed-0/s/en|def-0/s/en     _+en_      0.987       0.329
+p2l:decl_cl:mixed-0/s/en|def-0/s/en      _+s_      0.987       0.329
+def-0                                       _      0.000       0.000
 
 
 frau_+en_arzt:	_
-      linker    reg  confidence
-c_id                           
-def-0      _  0.573         0.0
+      linker  cvg_score  confidence
+c_id                               
+def-0      _        0.0         0.0
 
 
 nation_+en_wertung:	_+s_
-                                            linker    reg  confidence
-c_id                                                                 
-p2l:drv:sfx:sfx-s|def-s                       _+s_  0.987       0.786
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _  1.000       0.250
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_  1.000       0.250
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_  1.000       0.250
-def-0                                            _  0.573       0.000
+                                            linker  cvg_score  confidence
+c_id                                                                     
+p2l:drv:sfx:sfx-s|def-s                       _+s_      0.786       0.786
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _      0.751       0.250
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_      0.751       0.250
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_      0.751       0.250
+def-0                                            _      0.000       0.000
 
 
 ohr_+en_schmerz:	_
-                                    linker    reg  confidence
-c_id                                                         
-p2l:decl_cl:mixed-0/s/en|def-0/s/en      _  0.996       0.329
-p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_  0.996       0.329
-p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_  0.996       0.329
-def-0                                    _  0.573       0.000
+                                    linker  cvg_score  confidence
+c_id                                                             
+p2l:decl_cl:mixed-0/s/en|def-0/s/en      _      0.987       0.329
+p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_      0.987       0.329
+p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_      0.987       0.329
+def-0                                    _      0.000       0.000
 
 
 person_+en_gesellschaft:	_
-                                            linker    reg  confidence
-c_id                                                                 
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _  1.000        0.25
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_  1.000        0.25
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_  1.000        0.25
-def-0                                            _  0.573        0.00
+                                            linker  cvg_score  confidence
+c_id                                                                     
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _      0.751        0.25
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_      0.751        0.25
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_      0.751        0.25
+def-0                                            _      0.000        0.00
 
 
 person_+en_kreis:	_+en_
-                                               linker    reg  confidence
-c_id                                                                    
-p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en  _+en_  1.000       0.961
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en         _  1.000       0.250
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _+s_  1.000       0.250
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en     _+en_  1.000       0.250
-def-0                                               _  0.573       0.000
+                                               linker  cvg_score  confidence
+c_id                                                                        
+p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en  _+en_      0.961       0.961
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en         _      0.751       0.250
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _+s_      0.751       0.250
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en     _+en_      0.751       0.250
+def-0                                               _      0.000       0.000
 
 
 sonne_+n_strahl:	_+en_
-                              linker    reg  confidence
-c_id                                                   
-p2l:phon_fin:schwa$-en|def-en  _+en_  0.764       0.829
-def-0                              _  0.573       0.000
+                              linker  cvg_score  confidence
+c_id                                                       
+p2l:phon_fin:schwa$-en|def-en  _+en_      0.829       0.829
+def-0                              _      0.000       0.000
 
 
 ==== LINKER _+=er_ ====
 
 bild_+er_flut:	_+=er_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:decl_cl:pl:#er-0/er|pl_interpr-er  _+=er_  0.754       0.868
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:decl_cl:pl:#er-0/er|pl_interpr-er  _+=er_      0.868       0.868
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
 
 
 bild_+er_suche:	_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _  0.622       0.829
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _      0.829       0.829
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
 
 
 ei_+er_stock:	_
-                                        linker    reg  confidence
-c_id                                                             
-p2l:decl_cl:pl:#er-0/er|mass-interpr-0       _  0.741       0.998
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0        _  0.622       0.829
-p2l:decl_cl:pl:#er-0/er|def-0/er             _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er        _+=er_  0.815       0.489
-def-0                                        _  0.573       0.000
+                                        linker  cvg_score  confidence
+c_id                                                                 
+p2l:decl_cl:pl:#er-0/er|mass-interpr-0       _      0.998       0.998
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0        _      0.829       0.829
+p2l:decl_cl:pl:#er-0/er|def-0/er             _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er        _+=er_      0.979       0.489
+def-0                                        _      0.000       0.000
 
 
 haus_+=er_wand:	_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:phon_fin:sibilant$-0                    _  0.970       0.915
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _  0.622       0.829
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:phon_fin:sibilant$-0                    _      0.915       0.915
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _      0.829       0.829
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
 
 
 haus_+=er_zeile:	_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:phon_fin:sibilant$-0                    _  0.970       0.915
-p2l:decl_cl:pl:#er-0/er|pl_interpr-er  _+=er_  0.754       0.868
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:phon_fin:sibilant$-0                    _      0.915       0.915
+p2l:decl_cl:pl:#er-0/er|pl_interpr-er  _+=er_      0.868       0.868
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
 
 
 kind_+er_gruppe:	_+=er_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:decl_cl:pl:#er-0/er|anim-er        _+=er_  0.501       0.997
-p2l:decl_cl:pl:#er-0/er|pl_interpr-er  _+=er_  0.754       0.868
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:decl_cl:pl:#er-0/er|anim-er        _+=er_      0.997       0.997
+p2l:decl_cl:pl:#er-0/er|pl_interpr-er  _+=er_      0.868       0.868
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
 
 
 kind_+er_zimmer:	_+=er_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:decl_cl:pl:#er-0/er|anim-er        _+=er_  0.501       0.997
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _  0.622       0.829
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:decl_cl:pl:#er-0/er|anim-er        _+=er_      0.997       0.997
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _      0.829       0.829
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
+
+
+==== LINKER _+=e_ ====
+
+stadt_+=e_name:	_
+                              linker  cvg_score  confidence
+c_id                                                       
+p2l:decl_cl:pl:#e_uml-0|def-0      _      0.917       0.917
+def-0                              _      0.000       0.000
+
+
+stadt_+=e_partnerschaft:	_+=e_
+                                         linker  cvg_score  confidence
+c_id                                                                  
+p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml  _+=e_      0.947       0.947
+p2l:decl_cl:pl:#e_uml-0|def-0                 _      0.917       0.917
+def-0                                         _      0.000       0.000
+
+
+==== LINKER _+s_ ====
+
+hemd_+s_ärmel:	_
+                                    linker  cvg_score  confidence
+c_id                                                             
+p2l:decl_cl:mixed-0/s/en|def-0/s/en      _      0.987       0.329
+p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_      0.987       0.329
+p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_      0.987       0.329
+def-0                                    _      0.000       0.000
+
+
+hund_+s_rose:	_
+                          linker  cvg_score  confidence
+c_id                                                   
+p2l:decl_cl:pl:#e-0|def-0      _      0.838       0.838
+def-0                          _      0.000       0.000
+
+
+kind_+s_tod:	_+=er_
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:decl_cl:pl:#er-0/er|anim-er        _+=er_      0.997       0.997
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _      0.829       0.829
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
 
 
 ==== LINKER _ ====
 
 bild_qualität:	_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _  0.622       0.829
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _      0.829       0.829
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
 
 
 bild_strecke:	_+=er_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:decl_cl:pl:#er-0/er|pl_interpr-er  _+=er_  0.754       0.868
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:decl_cl:pl:#er-0/er|pl_interpr-er  _+=er_      0.868       0.868
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
 
 
 ei_sprung:	_
-                                        linker    reg  confidence
-c_id                                                             
-p2l:decl_cl:pl:#er-0/er|mass-interpr-0       _  0.741       0.998
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0        _  0.622       0.829
-p2l:decl_cl:pl:#er-0/er|def-0/er             _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er        _+=er_  0.815       0.489
-def-0                                        _  0.573       0.000
+                                        linker  cvg_score  confidence
+c_id                                                                 
+p2l:decl_cl:pl:#er-0/er|mass-interpr-0       _      0.998       0.998
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0        _      0.829       0.829
+p2l:decl_cl:pl:#er-0/er|def-0/er             _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er        _+=er_      0.979       0.489
+def-0                                        _      0.000       0.000
 
 
 geräusch_dämmung:	_
-                          linker    reg  confidence
-c_id                                               
-p2l:phon_fin:sibilant$-0       _  0.970       0.915
-p2l:drv:prx_deverb-s        _+s_  0.649       0.841
-p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.838
-def-0                          _  0.573       0.000
+                          linker  cvg_score  confidence
+c_id                                                   
+p2l:phon_fin:sibilant$-0       _      0.915       0.915
+p2l:drv:prx_deverb-s        _+s_      0.841       0.841
+p2l:decl_cl:pl:#e-0|def-0      _      0.838       0.838
+def-0                          _      0.000       0.000
 
 
 geschenk_idee:	_+s_
-                          linker    reg  confidence
-c_id                                               
-p2l:drv:prx_deverb-s        _+s_  0.649       0.841
-p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.838
-def-0                          _  0.573       0.000
+                          linker  cvg_score  confidence
+c_id                                                   
+p2l:drv:prx_deverb-s        _+s_      0.841       0.841
+p2l:decl_cl:pl:#e-0|def-0      _      0.838       0.838
+def-0                          _      0.000       0.000
 
 
 gitarre_spiel:	_+en_
-                              linker    reg  confidence
-c_id                                                   
-p2l:phon_fin:schwa$-en|def-en  _+en_  0.764       0.829
-def-0                              _  0.573       0.000
+                              linker  cvg_score  confidence
+c_id                                                       
+p2l:phon_fin:schwa$-en|def-en  _+en_      0.829       0.829
+def-0                              _      0.000       0.000
 
 
 haus_gemeinschaft:	_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:phon_fin:sibilant$-0                    _  0.970       0.915
-p2l:decl_cl:pl:#er-0/er|pl_interpr-er  _+=er_  0.754       0.868
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:phon_fin:sibilant$-0                    _      0.915       0.915
+p2l:decl_cl:pl:#er-0/er|pl_interpr-er  _+=er_      0.868       0.868
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
 
 
 haus_tier:	_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:phon_fin:sibilant$-0                    _  0.970       0.915
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _  0.622       0.829
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:phon_fin:sibilant$-0                    _      0.915       0.915
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _      0.829       0.829
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
 
 
 kind_bett:	_+=er_
-                                       linker    reg  confidence
-c_id                                                            
-p2l:decl_cl:pl:#er-0/er|anim-er        _+=er_  0.501       0.997
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _  0.622       0.829
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.489
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.489
-def-0                                       _  0.573       0.000
+                                       linker  cvg_score  confidence
+c_id                                                                
+p2l:decl_cl:pl:#er-0/er|anim-er        _+=er_      0.997       0.997
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _      0.829       0.829
+p2l:decl_cl:pl:#er-0/er|def-0/er            _      0.979       0.489
+p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_      0.979       0.489
+def-0                                       _      0.000       0.000
 
 
 ohr_feige:	_
-                                    linker    reg  confidence
-c_id                                                         
-p2l:decl_cl:mixed-0/s/en|def-0/s/en      _  0.996       0.329
-p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_  0.996       0.329
-p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_  0.996       0.329
-def-0                                    _  0.573       0.000
+                                    linker  cvg_score  confidence
+c_id                                                             
+p2l:decl_cl:mixed-0/s/en|def-0/s/en      _      0.987       0.329
+p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_      0.987       0.329
+p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_      0.987       0.329
+def-0                                    _      0.000       0.000
 
 
 schwester_modell:	_
-                                            linker    reg  confidence
-c_id                                                                 
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _  1.000        0.25
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_  1.000        0.25
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_  1.000        0.25
-def-0                                            _  0.573        0.00
+                                            linker  cvg_score  confidence
+c_id                                                                     
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _      0.751        0.25
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_      0.751        0.25
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_      0.751        0.25
+def-0                                            _      0.000        0.00
 
 
 stadt_gebiet:	_
-                              linker    reg  confidence
-c_id                                                   
-p2l:decl_cl:pl:#e_uml-0|def-0      _  0.716       0.917
-def-0                              _  0.573       0.000
+                              linker  cvg_score  confidence
+c_id                                                       
+p2l:decl_cl:pl:#e_uml-0|def-0      _      0.917       0.917
+def-0                              _      0.000       0.000
 
 
 vogel_art:	_
-                              linker    reg  confidence
-c_id                                                   
-p2l:decl_cl:pl:#0_uml-0|def-0      _  0.974       0.993
-def-0                              _  0.573       0.000
+                              linker  cvg_score  confidence
+c_id                                                       
+p2l:decl_cl:pl:#0_uml-0|def-0      _      0.993       0.993
+def-0                              _      0.000       0.000
 
 
 vogel_zug:	_
-                                         linker    reg  confidence
-c_id                                                              
-p2l:decl_cl:pl:#0_uml-0|def-0                 _  0.974       0.993
-p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml   _+=_  0.667       0.961
-def-0                                         _  0.573       0.000
+                                         linker  cvg_score  confidence
+c_id                                                                  
+p2l:decl_cl:pl:#0_uml-0|def-0                 _      0.993       0.993
+p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml   _+=_      0.961       0.961
+def-0                                         _      0.000       0.000
 
 
 weg_gabelung:	_+e_
-                                 linker    reg  confidence
-c_id                                                      
-p2l:decl_cl:pl:#e-0|pl_interpr-e   _+e_  0.544       0.921
-p2l:decl_cl:pl:#e-0|def-0             _  0.754       0.838
-def-0                                 _  0.573       0.000
+                                 linker  cvg_score  confidence
+c_id                                                          
+p2l:decl_cl:pl:#e-0|pl_interpr-e   _+e_      0.921       0.921
+p2l:decl_cl:pl:#e-0|def-0             _      0.838       0.838
+def-0                                 _      0.000       0.000
 
 
 weg_strecke:	_
-                          linker    reg  confidence
-c_id                                               
-p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.838
-def-0                          _  0.573       0.000
+                          linker  cvg_score  confidence
+c_id                                                   
+p2l:decl_cl:pl:#e-0|def-0      _      0.838       0.838
+def-0                          _      0.000       0.000
 
 
 zahn_wechsel:	_+=e_
-                                         linker    reg  confidence
-c_id                                                              
-p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml  _+=e_  0.562       0.947
-p2l:decl_cl:pl:#e_uml-0|def-0                 _  0.716       0.917
-def-0                                         _  0.573       0.000
+                                         linker  cvg_score  confidence
+c_id                                                                  
+p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml  _+=e_      0.947       0.947
+p2l:decl_cl:pl:#e_uml-0|def-0                 _      0.917       0.917
+def-0                                         _      0.000       0.000
 
 
