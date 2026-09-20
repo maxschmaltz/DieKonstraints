@@ -8597,8 +8597,7 @@
     },
     "hund_+e_halter": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8612,12 +8611,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8629,8 +8622,7 @@
     },
     "hund_+e_schule": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8644,12 +8636,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8661,8 +8647,7 @@
     },
     "hund_+e_besitzer": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8676,12 +8661,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8693,8 +8672,7 @@
     },
     "hund_+e_rasse": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8708,12 +8686,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8725,8 +8697,7 @@
     },
     "hund_+e_führer": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8740,12 +8711,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8757,8 +8722,7 @@
     },
     "hund_+e_futter": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8772,12 +8736,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8789,8 +8747,7 @@
     },
     "hund_+e_freund": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8804,12 +8761,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8821,8 +8772,7 @@
     },
     "hund_+e_trainer": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8836,12 +8786,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8853,8 +8797,7 @@
     },
     "hund_+e_haltung": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8868,12 +8811,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8885,8 +8822,7 @@
     },
     "hund_+e_sport": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8900,12 +8836,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8917,8 +8847,7 @@
     },
     "hund_+e_erziehung": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8932,12 +8861,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8949,8 +8872,7 @@
     },
     "hund_+e_kot": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8964,12 +8886,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -8981,8 +8897,7 @@
     },
     "hund_+e_strand": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -8996,12 +8911,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9013,8 +8922,7 @@
     },
     "hund_+e_haar": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9028,12 +8936,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9045,8 +8947,7 @@
     },
     "hund_+e_ausbildung": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9060,12 +8961,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9077,8 +8972,7 @@
     },
     "hund_+e_kampf": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9092,12 +8986,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9109,8 +8997,7 @@
     },
     "hund_+e_züchter": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9124,12 +9011,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9141,8 +9022,7 @@
     },
     "hund_+e_staffel": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9156,12 +9036,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9173,8 +9047,7 @@
     },
     "hund_+e_kuchen": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9188,12 +9061,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9205,8 +9072,7 @@
     },
     "hund_+e_decke": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9220,12 +9086,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9237,8 +9097,7 @@
     },
     "hund_+e_klo": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9252,12 +9111,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9269,8 +9122,7 @@
     },
     "hund_+e_kacke": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9284,12 +9136,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9301,8 +9147,7 @@
     },
     "hund_+e_betreuung": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9316,12 +9161,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9333,8 +9172,7 @@
     },
     "hund_+s_rose": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9348,12 +9186,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -9365,8 +9197,7 @@
     },
     "hund_+s_kamille": {
         "index": [
-            "_",
-            "_+en_"
+            "_"
         ],
         "columns": [
             "confidence",
@@ -9380,12 +9211,6 @@
                 0.838,
                 "def-0, p2l:decl_cl:pl:#e-0|def-0",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -26266,8 +26091,7 @@
     "wurm_befall": {
         "index": [
             "_",
-            "_+=er_",
-            "_+en_"
+            "_+=er_"
         ],
         "columns": [
             "confidence",
@@ -26287,12 +26111,6 @@
                 1.976,
                 "p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -26305,8 +26123,7 @@
     "wurm_art": {
         "index": [
             "_",
-            "_+=er_",
-            "_+en_"
+            "_+=er_"
         ],
         "columns": [
             "confidence",
@@ -26326,12 +26143,6 @@
                 1.976,
                 "p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -26344,8 +26155,7 @@
     "wurm_erkrankung": {
         "index": [
             "_",
-            "_+=er_",
-            "_+en_"
+            "_+=er_"
         ],
         "columns": [
             "confidence",
@@ -26365,12 +26175,6 @@
                 1.976,
                 "p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -26383,8 +26187,7 @@
     "wurm_infektion": {
         "index": [
             "_",
-            "_+=er_",
-            "_+en_"
+            "_+=er_"
         ],
         "columns": [
             "confidence",
@@ -26404,12 +26207,6 @@
                 1.976,
                 "p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -26422,8 +26219,7 @@
     "wurm_larve": {
         "index": [
             "_",
-            "_+=er_",
-            "_+en_"
+            "_+=er_"
         ],
         "columns": [
             "confidence",
@@ -26443,12 +26239,6 @@
                 1.976,
                 "p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [
@@ -26461,8 +26251,7 @@
     "wurm_krankheit": {
         "index": [
             "_",
-            "_+=er_",
-            "_+en_"
+            "_+=er_"
         ],
         "columns": [
             "confidence",
@@ -26482,12 +26271,6 @@
                 1.976,
                 "p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|anim-er",
                 ""
-            ],
-            [
-                0.786,
-                0.999,
-                "l2p:en|non_par_m",
-                "l2p:en|par"
             ]
         ],
         "index_names": [

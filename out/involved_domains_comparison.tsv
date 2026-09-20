@@ -1,7 +1,7 @@
 	gen	gen	gen	restr	restr	restr
 	%	ours	reference	%	ours	reference
-morphological	80	16	20	100	8	8
+morphological	75	15	20	100	8	8
 derivational	20	2	10	100	7	7
-semantic	90	10	11	100	0	0
-phonological	62	5	8	85	6	7
+semantic	81	9	11	100	0	0
+phonological	50	4	8	85	6	7
 lexical	100	0	0	100	1	1

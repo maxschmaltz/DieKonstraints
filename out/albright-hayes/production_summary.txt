@@ -29,7 +29,6 @@ def-0                          _  0.573       0.573
 hund_+e_halter:	_
                           linker    reg  confidence
 c_id                                               
-l2p:en|non_par_m           _+en_  0.786       0.786
 p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.754
 def-0                          _  0.573       0.573
 
@@ -40,13 +39,6 @@ c_id
 p2l:decl_cl:pl:#e-0|def-0             _  0.754       0.754
 def-0                                 _  0.573       0.573
 p2l:decl_cl:pl:#e-0|pl_interpr-e   _+e_  0.544       0.544
-
-
-weg_+e_recht:	_
-                          linker    reg  confidence
-c_id                                               
-p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.754
-def-0                          _  0.573       0.573
 
 
 ==== LINKER _+=e_ ====
@@ -90,14 +82,13 @@ hemd_+s_ärmel:	_
 c_id                                                         
 def-0                                    _  0.573       0.573
 p2l:decl_cl:mixed-0/s/en|def-0/s/en      _  0.996       0.332
-p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_  0.996       0.332
 p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_  0.996       0.332
+p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_  0.996       0.332
 
 
 hund_+s_rose:	_
                           linker    reg  confidence
 c_id                                               
-l2p:en|non_par_m           _+en_  0.786       0.786
 p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.754
 def-0                          _  0.573       0.573
 
@@ -120,8 +111,8 @@ c_id
 p2l:decl_cl:mixed-0/s/en|pl_interpr-en  _+en_  1.000       1.000
 def-0                                       _  0.573       0.573
 p2l:decl_cl:mixed-0/s/en|def-0/s/en         _  0.996       0.332
-p2l:decl_cl:mixed-0/s/en|def-0/s/en      _+s_  0.996       0.332
 p2l:decl_cl:mixed-0/s/en|def-0/s/en     _+en_  0.996       0.332
+p2l:decl_cl:mixed-0/s/en|def-0/s/en      _+s_  0.996       0.332
 
 
 frau_+en_arzt:	_
@@ -145,8 +136,8 @@ ohr_+en_schmerz:	_
 c_id                                                         
 def-0                                    _  0.573       0.573
 p2l:decl_cl:mixed-0/s/en|def-0/s/en      _  0.996       0.332
-p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_  0.996       0.332
 p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_  0.996       0.332
+p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_  0.996       0.332
 
 
 person_+en_gesellschaft:	_
@@ -334,8 +325,8 @@ ohr_feige:	_
 c_id                                                         
 def-0                                    _  0.573       0.573
 p2l:decl_cl:mixed-0/s/en|def-0/s/en      _  0.996       0.332
-p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_  0.996       0.332
 p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_  0.996       0.332
+p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_  0.996       0.332
 
 
 schwester_modell:	_
@@ -382,17 +373,6 @@ weg_strecke:	_
 c_id                                               
 p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.754
 def-0                          _  0.573       0.573
-
-
-wurm_befall:	_
-                                       linker    reg  confidence
-c_id                                                            
-l2p:en|non_par_m                        _+en_  0.786       0.786
-p2l:decl_cl:pl:#er-0/er|!pl_interpr-0       _  0.622       0.622
-def-0                                       _  0.573       0.573
-p2l:decl_cl:pl:#er-0/er|anim-er        _+=er_  0.501       0.501
-p2l:decl_cl:pl:#er-0/er|def-0/er            _  0.815       0.407
-p2l:decl_cl:pl:#er-0/er|def-0/er       _+=er_  0.815       0.407
 
 
 zahn_wechsel:	_

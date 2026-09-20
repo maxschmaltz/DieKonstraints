@@ -85,15 +85,18 @@ class CompXConstraints:
             elif c_id.startswith("l2p:"):
 
                 if c_id == "l2p:en|non_par_m":
-                    # special case: this constraint removes a restriction
-                    # so it becomes a kind of a "generative" constraint;
-                    # on the other hand, it does not prohibit _+en_
-                    # if the conditions are not met
-                    if (
-                        l2p_satisfaction_checkers.en_non_par_m_is_presatisfied(self.comp) and
-                        l2p_satisfaction_checkers.en_non_par_m_is_satisfied(self.comp)
-                    ):
-                        self.acceptable_linkers[linker].append(c_id)
+                    # # DEPRECATED; ignore it for now because making it generative
+                    # # unnecessarily deteriorates the model performance
+                    # # as the empirical results show.
+                    # # special case: this constraint removes a restriction
+                    # # so it becomes a kind of a "generative" constraint;
+                    # # on the other hand, it does not prohibit _+en_
+                    # # if the conditions are not met
+                    # if (
+                    #     l2p_satisfaction_checkers.en_non_par_m_is_presatisfied(self.comp) and
+                    #     l2p_satisfaction_checkers.en_non_par_m_is_satisfied(self.comp)
+                    # ):
+                    #     self.acceptable_linkers[linker].append(c_id)
                     continue
 
                 is_presat_func = getattr(

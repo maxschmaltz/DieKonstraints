@@ -279,31 +279,31 @@ buch_hinweis	_	_	1.318	2.01	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl
 buch_+=er_angebot	_+=er_	_	1.318	2.01	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 buch_vertrieb	_	_	1.318	2.01	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 buch_sammlung	_	_+=er_	1.357	1.569	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|pl_interpr-er
-hund_+e_halter	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_schule	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_besitzer	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_rasse	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_führer	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_futter	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_freund	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_trainer	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_haltung	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_sport	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_erziehung	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_kot	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_strand	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_haar	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_ausbildung	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_kampf	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_züchter	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_staffel	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_kuchen	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_decke	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_klo	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_kacke	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+e_betreuung	_+e_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+s_rose	_+s_	_+en_	0.999	0.786	l2p:en|non_par_m
-hund_+s_kamille	_+s_	_+en_	0.999	0.786	l2p:en|non_par_m
+hund_+e_halter	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_schule	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_besitzer	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_rasse	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_führer	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_futter	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_freund	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_trainer	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_haltung	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_sport	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_erziehung	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_kot	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_strand	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_haar	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_ausbildung	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_kampf	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_züchter	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_staffel	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_kuchen	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_decke	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_klo	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_kacke	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+e_betreuung	_+e_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+s_rose	_+s_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
+hund_+s_kamille	_+s_	_	0.838	1.327	def-0, p2l:decl_cl:pl:#e-0|def-0
 frau_+en_arzt	_+en_	_	0.0	0.573	def-0
 frau_+en_anteil	_+en_	_	0.0	0.573	def-0
 frau_+en_haus	_+en_	_	0.0	0.573	def-0

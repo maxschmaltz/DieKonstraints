@@ -1,9 +1,9 @@
 	morphological	morphological	morphological+semantic	morphological+semantic	morphological+phonological	morphological+phonological	morphological+phonological+semantic	morphological+phonological+semantic	derivational	derivational	phonological	phonological
 	n	constraints	n	constraints	n	constraints	n	constraints	n	constraints	n	constraints
-_	5	p2l:decl_cl:pl:#e-0|def-0, p2l:decl_cl:pl:#0_uml-0|def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en, p2l:decl_cl:pl:#e_uml-0|def-0, p2l:decl_cl:pl:#er-0/er|def-0/er	2	p2l:decl_cl:pl:#er-0/er|mass-interpr-0, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	1	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en	0		0		1	p2l:phon_fin:sibilant$-0
+_	5	p2l:decl_cl:pl:#e_uml-0|def-0, p2l:decl_cl:pl:#0_uml-0|def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#e-0|def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en	2	p2l:decl_cl:pl:#er-0/er|mass-interpr-0, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0	1	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en	0		0		1	p2l:phon_fin:sibilant$-0
 _+=_	0		1	p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml	0		0		0		0	
 _+=e_	0		1	p2l:decl_cl:pl:#e_uml-0|pl_interpr-e_uml	0		0		0		0	
-_+=er_	1	p2l:decl_cl:pl:#er-0/er|def-0/er	2	p2l:decl_cl:pl:#er-0/er|pl_interpr-er, p2l:decl_cl:pl:#er-0/er|anim-er	0		0		0		0	
+_+=er_	1	p2l:decl_cl:pl:#er-0/er|def-0/er	2	p2l:decl_cl:pl:#er-0/er|anim-er, p2l:decl_cl:pl:#er-0/er|pl_interpr-er	0		0		0		0	
 _+e_	0		1	p2l:decl_cl:pl:#e-0|pl_interpr-e	0		0		0		0	
-_+en_	1	p2l:decl_cl:mixed-0/s/en|def-0/s/en	1	p2l:decl_cl:mixed-0/s/en|pl_interpr-en	1	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en	2	p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en, l2p:en|non_par_m	0		1	p2l:phon_fin:schwa$-en|def-en
+_+en_	1	p2l:decl_cl:mixed-0/s/en|def-0/s/en	1	p2l:decl_cl:mixed-0/s/en|pl_interpr-en	1	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en	1	p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en	0		1	p2l:phon_fin:schwa$-en|def-en
 _+s_	1	p2l:decl_cl:mixed-0/s/en|def-0/s/en	0		1	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en	0		2	p2l:drv:sfx:sfx-s|def-s, p2l:drv:prx_deverb-s	0	

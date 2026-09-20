@@ -8597,7 +8597,6 @@
     },
     "hund_+e_halter": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8607,12 +8606,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8629,7 +8622,6 @@
     },
     "hund_+e_schule": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8639,12 +8631,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8661,7 +8647,6 @@
     },
     "hund_+e_besitzer": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8671,12 +8656,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8693,7 +8672,6 @@
     },
     "hund_+e_rasse": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8703,12 +8681,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8725,7 +8697,6 @@
     },
     "hund_+e_führer": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8735,12 +8706,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8757,7 +8722,6 @@
     },
     "hund_+e_futter": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8767,12 +8731,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8789,7 +8747,6 @@
     },
     "hund_+e_freund": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8799,12 +8756,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8821,7 +8772,6 @@
     },
     "hund_+e_trainer": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8831,12 +8781,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8853,7 +8797,6 @@
     },
     "hund_+e_haltung": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8863,12 +8806,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8885,7 +8822,6 @@
     },
     "hund_+e_sport": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8895,12 +8831,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8917,7 +8847,6 @@
     },
     "hund_+e_erziehung": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8927,12 +8856,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8949,7 +8872,6 @@
     },
     "hund_+e_kot": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8959,12 +8881,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -8981,7 +8897,6 @@
     },
     "hund_+e_strand": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -8991,12 +8906,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9013,7 +8922,6 @@
     },
     "hund_+e_haar": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9023,12 +8931,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9045,7 +8947,6 @@
     },
     "hund_+e_ausbildung": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9055,12 +8956,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9077,7 +8972,6 @@
     },
     "hund_+e_kampf": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9087,12 +8981,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9109,7 +8997,6 @@
     },
     "hund_+e_züchter": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9119,12 +9006,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9141,7 +9022,6 @@
     },
     "hund_+e_staffel": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9151,12 +9031,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9173,7 +9047,6 @@
     },
     "hund_+e_kuchen": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9183,12 +9056,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9205,7 +9072,6 @@
     },
     "hund_+e_decke": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9215,12 +9081,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9237,7 +9097,6 @@
     },
     "hund_+e_klo": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9247,12 +9106,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9269,7 +9122,6 @@
     },
     "hund_+e_kacke": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9279,12 +9131,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9301,7 +9147,6 @@
     },
     "hund_+e_betreuung": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9311,12 +9156,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9333,7 +9172,6 @@
     },
     "hund_+s_rose": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9343,12 +9181,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -9365,7 +9197,6 @@
     },
     "hund_+s_kamille": {
         "index": [
-            "_+en_",
             "_"
         ],
         "columns": [
@@ -9375,12 +9206,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 14.0,
                 0.754,
@@ -19104,8 +18929,8 @@
     "ohr_feige": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19124,13 +18949,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19143,8 +18968,8 @@
     "ohr_ring": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19163,13 +18988,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19182,8 +19007,8 @@
     "ohr_muschel": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19202,13 +19027,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19221,8 +19046,8 @@
     "ohr_stöpsel": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19241,13 +19066,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19260,8 +19085,8 @@
     "ohr_geräusch": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19280,13 +19105,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19299,8 +19124,8 @@
     "ohr_+en_schmerz": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19319,13 +19144,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19338,8 +19163,8 @@
     "ohr_hörer": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19358,13 +19183,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19377,8 +19202,8 @@
     "ohr_+en_schmaus": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19397,13 +19222,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19416,8 +19241,8 @@
     "ohr_marke": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19436,13 +19261,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19455,8 +19280,8 @@
     "ohr_stecker": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19475,13 +19300,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19494,8 +19319,8 @@
     "ohr_+en_sessel": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19514,13 +19339,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19533,8 +19358,8 @@
     "ohr_+en_stöpsel": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19553,13 +19378,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19572,8 +19397,8 @@
     "ohr_+en_entzündung": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19592,13 +19417,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19611,8 +19436,8 @@
     "ohr_+en_arzt": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19631,13 +19456,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19650,8 +19475,8 @@
     "ohr_+en_zeuge": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19670,13 +19495,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19689,8 +19514,8 @@
     "ohr_+en_schützer": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19709,13 +19534,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19728,8 +19553,8 @@
     "ohr_+en_tropfen": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19748,13 +19573,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19767,8 +19592,8 @@
     "ohr_hänger": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19787,13 +19612,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19806,8 +19631,8 @@
     "ohr_trompete": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19826,13 +19651,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19845,8 +19670,8 @@
     "ohr_+en_weide": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19865,13 +19690,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19884,8 +19709,8 @@
     "ohr_+en_klappe": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19904,13 +19729,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19923,8 +19748,8 @@
     "ohr_schützer": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19943,13 +19768,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -19962,8 +19787,8 @@
     "ohr_+en_robbe": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -19982,13 +19807,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -20001,8 +19826,8 @@
     "ohr_+en_spiegel": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -20021,13 +19846,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_!sonority"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_!sonority"
             ]
         ],
         "index_names": [
@@ -21118,8 +20943,8 @@
     "bett_wäsche": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21138,13 +20963,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21157,8 +20982,8 @@
     "bett_kante": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21177,13 +21002,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21196,8 +21021,8 @@
     "bett_gestell": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21216,13 +21041,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21235,8 +21060,8 @@
     "bett_+en_haus": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21255,13 +21080,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21274,8 +21099,8 @@
     "bett_wanze": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21294,13 +21119,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21313,8 +21138,8 @@
     "bett_bezug": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21333,13 +21158,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21352,8 +21177,8 @@
     "bett_vorleger": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21372,13 +21197,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21430,8 +21255,8 @@
     "bett_geschichte": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21450,13 +21275,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21469,8 +21294,8 @@
     "bett_rand": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21489,13 +21314,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21508,8 +21333,8 @@
     "bett_rahmen": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21528,13 +21353,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21547,8 +21372,8 @@
     "bett_gitter": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21567,13 +21392,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21625,8 +21450,8 @@
     "bett_nachbar": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21645,13 +21470,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21664,8 +21489,8 @@
     "bett_szene": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21684,13 +21509,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21703,8 +21528,8 @@
     "bett_pfosten": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21723,13 +21548,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21742,8 +21567,8 @@
     "bett_+en_station": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21762,13 +21587,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21781,8 +21606,8 @@
     "bett_pfanne": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21801,13 +21626,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21859,8 +21684,8 @@
     "bett_kasten": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21879,13 +21704,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -21898,8 +21723,8 @@
     "bett_flasche": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -21918,13 +21743,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -22015,8 +21840,8 @@
     "bett_+en_kauf": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -22035,13 +21860,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -22054,8 +21879,8 @@
     "bett_überwurf": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -22074,13 +21899,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -22093,8 +21918,8 @@
     "bett_laken": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -22113,13 +21938,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -25432,7 +25257,6 @@
     },
     "wurm_befall": {
         "index": [
-            "_+en_",
             "_+=er_",
             "_"
         ],
@@ -25443,12 +25267,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 28.0,
                 0.501,
@@ -25471,7 +25289,6 @@
     },
     "wurm_art": {
         "index": [
-            "_+en_",
             "_+=er_",
             "_"
         ],
@@ -25482,12 +25299,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 28.0,
                 0.501,
@@ -25510,7 +25321,6 @@
     },
     "wurm_erkrankung": {
         "index": [
-            "_+en_",
             "_+=er_",
             "_"
         ],
@@ -25521,12 +25331,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 28.0,
                 0.501,
@@ -25549,7 +25353,6 @@
     },
     "wurm_infektion": {
         "index": [
-            "_+en_",
             "_+=er_",
             "_"
         ],
@@ -25560,12 +25363,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 28.0,
                 0.501,
@@ -25588,7 +25385,6 @@
     },
     "wurm_larve": {
         "index": [
-            "_+en_",
             "_+=er_",
             "_"
         ],
@@ -25599,12 +25395,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 28.0,
                 0.501,
@@ -25627,7 +25417,6 @@
     },
     "wurm_krankheit": {
         "index": [
-            "_+en_",
             "_+=er_",
             "_"
         ],
@@ -25638,12 +25427,6 @@
             "removed_by"
         ],
         "data": [
-            [
-                50.8,
-                0.786,
-                "l2p:en|non_par_m",
-                ""
-            ],
             [
                 28.0,
                 0.501,
@@ -25706,8 +25489,8 @@
     "hemd_tasche": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -25726,13 +25509,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -25745,8 +25528,8 @@
     "hemd_+s_ärmel": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -25765,13 +25548,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -25784,8 +25567,8 @@
     "hemd_knopf": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -25804,13 +25587,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -25823,8 +25606,8 @@
     "hemd_bluse": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -25843,13 +25626,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -25862,8 +25645,8 @@
     "hemd_+en_tasche": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -25882,13 +25665,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -25901,8 +25684,8 @@
     "hemd_+en_knopf": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -25921,13 +25704,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
@@ -25940,8 +25723,8 @@
     "hemd_+en_kragen": {
         "index": [
             "_",
-            "_+s_",
-            "_+en_"
+            "_+en_",
+            "_+s_"
         ],
         "columns": [
             "confidence",
@@ -25960,13 +25743,13 @@
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                "l2p:s|tend_cmpx_morph"
+                ""
             ],
             [
                 4.667,
                 0.996,
                 "p2l:decl_cl:mixed-0/s/en|def-0/s/en",
-                ""
+                "l2p:s|tend_cmpx_morph"
             ]
         ],
         "index_names": [
