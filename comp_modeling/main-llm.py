@@ -21,7 +21,7 @@ def main():
     # knowledge of German compounds, and then proceed to 
     # constraint conflict resolution with the model.
 
-    llm, tokenizer, model_id = init_llm()
+    llm, tokenizer, model_id = init_llm("Qwen/Qwen3.5-4B")
 
     # 1. Evaluate the model for its general knowledge of
     # German compounds.
