@@ -4,6 +4,11 @@ ipykernel==7.3.0
 ipywidgets==8.1.9
 jupyter==1.1.1
 matplotlib==3.11.2
+# openai==3.16.2
 pandas==3.0.5
 PyYAML==6.0.3
 scikit-learn==1.9.0
+torch==2.14.0
+# torchvision==0.29.0
+# transformers[serving]==5.17.0
+transformers==5.17.0

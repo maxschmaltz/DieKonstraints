@@ -1,23 +1,19 @@
 import os
 import numpy as np
 import pandas as pd
-from sklearn.metrics import (
-    precision_recall_fscore_support,
-    accuracy_score, # balanced_accuracy_score,
-    confusion_matrix
-)
 from itertools import product
 from tqdm import tqdm
 import json
-from typing import List, Tuple
+from typing import List
 
 from data_utils.load_datasets import load_appl_ind, save_tsv_generic
 from comp_modeling.compxconstraints import CompXConstraints
+from comp_modeling.metrics import calculate_ldistr, calculate_metrics
 
 rng = np.random.default_rng(579372518)
 
 
-# python3 -m comp_modeling.main
+# python3 -m comp_modeling.main-modeling
 def main():
 
     # When modeling compounding, we have three options as of
@@ -97,82 +93,6 @@ def main():
         json.dump(unacceptable_linkers_all, o, ensure_ascii=False, indent=4)
 
 
-    # define the metrics
-    def calculate_ldistr(linkers: List[str]) -> pd.Series:
-        n = len(linkers)
-        unique_linkers = np.unique(linkers)
-        return pd.Series({
-            l: linkers.count(l) / n
-            for l in unique_linkers
-        }).sort_values(ascending=False)#.round(3)
-
-    ldistr = calculate_ldistr(Y_true)
-    def compare_ldistr(linkers: List[str]) -> pd.DataFrame:
-        test_ldistr = calculate_ldistr(linkers).to_frame("ours")
-        return ldistr.to_frame(name="reference")    \
-            .join(test_ldistr)  \
-            .fillna(0)  \
-            .round(3)
-
-    def calculate_f1_acc(Y_pred: List[str]) -> pd.DataFrame:
-        
-        # f1s
-        f1_df = pd.DataFrame(
-            precision_recall_fscore_support(
-                Y_true, Y_pred,
-                labels=ldistr.index,
-                zero_division=0
-            ),
-            index=["prec", "recall", "f1", "N"],
-            columns=ldistr.index
-        )
-        f1_df.insert(0, "avg", f1_df.mean(axis=1))
-        f1_df = f1_df.T
-
-        # accs
-        eval_df = pd.DataFrame({"true": Y_true, "pred": Y_pred})
-        accuracies_data = {}
-        for linker in ldistr.index:
-            eval_df_linker = eval_df[eval_df["true"] == linker]
-            acc = accuracy_score(eval_df_linker["true"], eval_df_linker["pred"])
-            accuracies_data[linker] = acc
-        overall_acc = accuracy_score(eval_df["true"], eval_df["pred"])
-        accuracies_data["avg"] = overall_acc
-        accuracies_df = pd.Series(accuracies_data).to_frame("acc")
-        
-        # # Deprecated: balanced accuracy correlates well with the F1 score
-        # # but is less sensitive; it therefore brings no new information for us
-        # # because its functions are taken up entirely by the classic accuracy and F1
-        # balanced_acc = balanced_accuracy_score(eval_df["true"], eval_df["pred"])
-
-        # merge
-        f1_acc_df = pd.concat((f1_df, accuracies_df), axis=1)
-        f1_acc_df.loc["avg", "N"] = N   # correct
-        f1_acc_df = f1_acc_df[["acc", "f1", "N", "prec", "recall"]]
-
-        return f1_acc_df.round(3)
-
-    def calculate_confusion_matrix(Y_pred: List[str]) -> pd.DataFrame:
-        return pd.DataFrame(
-            confusion_matrix(
-                Y_true, Y_pred,
-                labels=ldistr.index,
-                normalize="true"
-            ),
-            index=ldistr.index,
-            columns=ldistr.index,
-        ).round(3)
-
-    # entrypoint
-    def calculate_metrics(
-        Y_pred: List[str]
-    ) -> Tuple[pd.DataFrame, pd.Series, pd.DataFrame, pd.DataFrame]:
-        ldistr_comparison = compare_ldistr(Y_pred)
-        f1_acc_df = calculate_f1_acc(Y_pred)
-        confusion_matrix = calculate_confusion_matrix(Y_pred)
-        return ldistr_comparison, f1_acc_df, confusion_matrix
-
-
     # run available models and record their metrics
 
     def pred_df(pred_rows: List[pd.DataFrame]) -> pd.DataFrame:
@@ -232,13 +152,14 @@ def main():
     
     # baseline 1: zero linker only
     preds_zero = ["_"] * N
-    metrics["zero"] = calculate_metrics(preds_zero)
+    metrics["zero"] = calculate_metrics(Y_true, preds_zero)
 
     # baseline 2: random distribution-aware sampling
+    ldistr = calculate_ldistr(Y_true)
     preds_rand = rng.choice(
         ldistr.index, size=N, replace=True, p=ldistr
     ).tolist()
-    metrics["rand"] = calculate_metrics(preds_rand)
+    metrics["rand"] = calculate_metrics(Y_true, preds_rand)
 
     # now proceed to our constraint-based models; in their case,
     # we additionally record the outputs such are 
@@ -290,7 +211,7 @@ def main():
                 outputs[method][key]["restr_constr_df"] = restr_constr_dfs
 
             # get metrics
-            outputs[method][key]["metrics"] = calculate_metrics(preds)
+            outputs[method][key]["metrics"] = calculate_metrics(Y_true, preds)
 
         # record the preds, the metrics, and the outputs for each method;
         # since the baselines are trivial, we do not record anything for them
