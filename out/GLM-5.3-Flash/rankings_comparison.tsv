@@ -1,0 +1,4 @@
+	acc	t_avg	t_pooled
+GLM-3.5 Flash vs. AH02	0.157	0.262	0.295
+GLM-3.5 Flash vs. Y16-cvg	0.8	0.788	0.819
+GLM-3.5 Flash vs. Y16-cond	0.723	0.763	0.786

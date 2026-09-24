@@ -1,0 +1,7 @@
+	acc	f1
+GLM-5.3 Flash	0.701	0.84
+yang-cond	0.712	0.526
+yang-cvg	0.688	0.483
+albright-hayes	0.638	0.242
+rand	0.368	0.156
+zero	0.485	0.093

@@ -1,0 +1,58 @@
+nation_+en_wertung
+Specificity (more specific rules outrank more general rules): rule 3 targets a narrow, well-defined morphological class (nouns with the listed derivational suffixes) and demands -s-; rule 1 applies to the broader class of consonant-final weak feminine nouns and permits several linkers; rule 2 is the fully general default (zero linker). When rules conflict, the most specific applicable rule wins — so a -ung/-heit/-schaft noun takes -s- despite the general zero-linker preference.
+                                                               condition  spec_score  cvg_score    reg
+c_id                                                                                                  
+p2l:drv:sfx:sfx-s|def-s                                        [drv:SFX]        12.7      0.786  0.987
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  [G:F] & [PL:en] & [coda:CN]        39.7      0.751  1.000
+def-0                                                                NaN         0.0      0.000  0.573
+
+
+haus_+=er_wand
+Specificity overrides generality (the 'elsewhere' / Pāṇinian principle): the most specific applicable rule wins. Rule 3 (phonological condition: sibilant/[s]-cluster ending → zero linker, 'almost regularly') is the most specific and most deterministic, so it ranks first. Rule 4 (plural in -er + singular meaning → zero linker) is more specific than rule 2 (plural in -er in general), and rule 2 in turn overrides rule 1, the general default for all compounds.
+                                                   condition  spec_score  cvg_score    reg
+c_id                                                                                      
+p2l:phon_fin:sibilant$-0               [coda:S] | [coda:CLT]        12.8      0.915  0.970
+p2l:decl_cl:pl:#er-0/er|!pl_interpr-0    [PL:er] & [sem:!PL]        25.2      0.829  0.622
+p2l:decl_cl:pl:#er-0/er|def-0/er                     [PL:er]        14.0      0.979  0.815
+def-0                                                    NaN         0.0      0.000  0.573
+
+
+geschenk_idee
+Specificity (precision) outranks generality: the most specific rule applying to a given noun wins, with the general default rule (rule 3) ranked lowest. Rule 2 targets a narrow, morphologically defined class (prefixed deverbal nouns like ver- kaufen → Verkauf), so it beats rule 1, which is based on the plural form, and rule 3, which is the catch-all default.
+                           condition  spec_score  cvg_score    reg
+c_id                                                              
+p2l:drv:prx_deverb-s       [drv:PRX]        12.7      0.841  0.649
+p2l:decl_cl:pl:#e-0|def-0     [PL:e]        14.0      0.838  0.754
+def-0                            NaN         0.0      0.000  0.573
+
+
+geräusch_+e_macher
+Ranking by specificity and (near-)obligatoriness of the constraint. Rule 1 is the maximally general default, so it sits at the bottom. Rules 2 and 3 are more specific classes of first constituents, with rule 4 being the most specific AND the most categorical one ('almost regularly'): phonological well-formedness blocks the insertion of -s- after a sibilant or an s-cluster, since an -s- linker there would create an awkward [s] sequence. Categorical phonological constraints therefore outrank morphological tendencies (rule 3) and plural-class generalizations (rule 2), which in turn outrank the bare default (rule 1).
+                                       condition  spec_score  cvg_score    reg
+c_id                                                                          
+p2l:phon_fin:sibilant$-0   [coda:S] | [coda:CLT]        12.8      0.915  0.970
+p2l:drv:prx_deverb-s                   [drv:PRX]        12.7      0.841  0.649
+p2l:decl_cl:pl:#e-0|def-0                 [PL:e]        14.0      0.838  0.754
+def-0                                        NaN         0.0      0.000  0.573
+
+
+haus_+=er_gruppe
+Specificity overrides generality: phonologically conditioned rules (avoiding a sibilant cluster like [s] or [st] before the linker) rank highest, followed by semantically conditioned rules (-er- is preferred when the first constituent has plural meaning), then the general morphological rule for -er-plural nouns, and finally the fully general default (zero linker). More specific/exceptional rules outrank the general default.
+                                                   condition  spec_score  cvg_score    reg
+c_id                                                                                      
+p2l:phon_fin:sibilant$-0               [coda:S] | [coda:CLT]        12.8      0.915  0.970
+p2l:decl_cl:pl:#er-0/er|pl_interpr-er     [PL:er] & [sem:PL]        26.8      0.868  0.754
+p2l:decl_cl:pl:#er-0/er|def-0/er                     [PL:er]        14.0      0.979  0.815
+def-0                                                    NaN         0.0      0.000  0.573
+
+
+geschenk_+e_liste
+The ranking follows the specificity principle (a Panini-style hierarchy): the most specific rule wins over more general ones. Rule 4 carries two conditions at once (noun forms its plural in -e AND the compound has actual plural/collective meaning), so it outranks everything else when it applies. Rule 1 adds a morphological condition on the first constituent (prefixed deverbal noun), making it more specific than Rule 2, which only requires an -e-plural. Rule 3 is the unmarked default ('zero linker') and only kicks in when no other rule matches.
+                                          condition  spec_score  cvg_score    reg
+c_id                                                                             
+p2l:decl_cl:pl:#e-0|pl_interpr-e  [PL:e] & [sem:PL]        26.8      0.921  0.544
+p2l:drv:prx_deverb-s                      [drv:PRX]        12.7      0.841  0.649
+p2l:decl_cl:pl:#e-0|def-0                    [PL:e]        14.0      0.838  0.754
+def-0                                           NaN         0.0      0.000  0.573
+
+
