@@ -1,0 +1,562 @@
+comp_gecodb	true	pred	response	reasoning
+schloss_besitzer	_	_	Schlossbesitzer	None
+kind_+er_haus	_+=er_	_+=er_	kinderhaus	
+kind_+er_tag	_+=er_	_+=er_	kindertag	
+kind_+er_gruppe	_+=er_	_+=er_	Kindergruppe	
+gitarre_spiel	_	_+en_	Gitarrenspiel	Gitarrenspiel.
+kind_+er_chor	_+=er_	_+=er_	kinderchor	
+gitarre_+n_unterricht	_+en_	_+en_	gitarrenunterricht	
+weg_+e_netz	_+e_	_+e_	Wegenetz	
+schloss_gelände	_	_	schlossgelände	
+schloss_besichtigung	_	_	schlossbesichtigung	
+gitarre_+n_part	_+en_	_+en_	gitarrenpart	Gitarrenpart.
+schloss_brauerei	_	_	schlossbrauerei	
+weg_kreuzung	_	_	wegkreuzung	None
+gitarre_+n_saite	_+en_	_+en_	gitarrensaite	
+gitarre_+n_lehrer	_+en_	_+en_	gitarrenlehrer	
+kind_+er_krippe	_+=er_	_+=er_	Kinderkrippe	
+kind_+er_lied	_+=er_	_+=er_	Kinderlied	
+schloss_bewohner	_	_	schlossbewohner	
+gitarre_+n_verstärker	_+en_	_+en_	gitarrenverstärker	
+schloss_verwaltung	_	_	schlossverwaltung	
+kind_+er_film	_+=er_	_+=er_	Kinderfilm	
+gitarre_+n_begleitung	_+en_	_+en_	Gitarrenbegleitung	
+gitarre_+n_spieler	_+en_	_+en_	Gitarrenspieler	
+gitarre_+n_melodie	_+en_	_+en_	Gitarrenmelodie	
+weg_gabelung	_	_	Weggabelung	
+kind_+er_mädchen	_+=er_	_+=er_	Kindermädchen	
+kind_+er_bett	_+=er_	_+=er_	Kinderbett	
+stadt_+=e_freundschaft	_+=e_	_+=e_	Städtefreundschaft	Städtefreundschaft (city partnership).
+gitarre_+n_koffer	_+en_	_+en_	Gitarrenkoffer	
+schloss_+=er_stiftung	_+=er_	_	schlossstiftung	Schlossstiftung.
+kind_+er_stube	_+=er_	_+=er_	Kinderstube	
+schloss_ruine	_	_	schlossruine	"Schloss" compounds use the form "Schlossruine" (Schloss, Schlosses). Correct: schlossruine.
+kind_+er_hospiz	_+=er_	_+=er_	Kinderhospiz	
+gitarre_+n_spur	_+en_	_+en_	gitarrenspur	
+weg_+e_kreuz	_+e_	_	wegkreuz	Wegkreuz is common; Wegekreuz also exists. Textbook pattern: linking element. "Wegkreuz" is standard.
+kind_+er_herz	_+=er_	_+=er_	Kinderherz	
+gitarre_+n_griff	_+en_	_+en_	Gitarrengriff	
+kind_+er_lähmung	_+=er_	_+=er_	Kinderlähmung	
+gitarre_+n_kurs	_+en_	_+en_	Gitarrenkurs	
+weg_kreuz	_	_	Wegkreuz	Wegkreuz exists; Wegekreuz less common. Correct: Wegkreuz.
+gitarre_+n_schule	_+en_	_+en_	Gitarrenschule	
+schloss_saal	_	_	Schlosssaal	Schlosssaal.
+kind_+er_sicherung	_+=er_	_+=er_	kindersicherung	
+stadt_+=e_verbindung	_+=e_	_+=e_	städteverbindung	
+kind_+er_zeit	_+=er_	_+=er_	Kinderzeit	
+kind_+er_seele	_+=er_	_+=er_	kinderseele	
+gitarre_+n_gruppe	_+en_	_+en_	gitarrengruppe	
+gitarre_+n_hals	_+en_	_+en_	gitarrenhals	
+kind_+s_tod	_+s_	_+=er_	kindertod	Fugenelement: Kindertod.
+gitarre_+n_linie	_+en_	_+en_	Gitarrenlinie	
+kind_+er_schar	_+=er_	_+=er_	kinderschar	
+gitarre_+n_stück	_+en_	_+en_	Gitarrenstück	
+gitarre_+n_stil	_+en_	_+en_	Gitarrenstil	Gitarrenstil (n-Doppelung after -e).
+haus_tier	_	_	haustier	
+kind_+er_sendung	_+=er_	_+=er_	kindersendung	
+gitarre_+n_schüler	_+en_	_+en_	Gitarrenschüler	
+kind_+er_kanal	_+=er_	_+=er_	kinderkanal	
+haus_tür	_	_	haustür	
+kind_+er_seite	_+=er_	_+=er_	Kinderseite	
+gitarre_+n_legende	_+en_	_+en_	Gitarrenlegende	
+weg_scheide	_	_	wegscheide	Wegscheide exists.
+kind_+er_museum	_+=er_	_+=er_	Kindermuseum	
+weg_gabel	_	_+e_	Wegegabel	
+kind_+s_vater	_+s_	_+=er_	Kindervater	
+haus_meister	_	_	Hausmeister	
+kind_+er_traum	_+=er_	_+=er_	kindertraum	
+haus_besitzer	_	_	Hausbesitzer	
+gitarre_+n_hersteller	_+en_	_+en_	Gitarrenhersteller	
+lied_+er_buch	_+=er_	_+=er_	Liederbuch	
+kind_+er_karussell	_+=er_	_+=er_	Kinderkarussell	
+haus_nummer	_	_	Hausnummer	
+lied_+er_macher	_+=er_	_+=er_	Liedermacher	
+kind_+er_mörder	_+=er_	_+=er_	Kindermörder	
+weg_netz	_	_+e_	wegenetz	
+haus_besuch	_	_	Hausbesuch	
+haus_wand	_	_	Hauswand	
+lied_+er_abend	_+=er_	_+=er_	Liederabend	
+haus_eigentümer	_	_	hauseigentümer	
+rad_stand	_	_	Radstand	
+kind_+er_zeichnung	_+=er_	_+=er_	kinderzeichnung	
+lied_+er_kranz	_+=er_	_+=er_	Liederkranz	
+rad_strecke	_	_	Radstrecke	Radstrecke.
+haus_mittel	_	_	hausmittel	Hausmittel.
+kind_+er_abteilung	_+=er_	_+=er_	kinderabteilung	
+kind_+s_kopf	_+s_	_+=er_	kinderkopf	
+lied_vortrag	_	_+=er_	liedervortrag	
+haus_durchsuchung	_	_	Hausdurchsuchung	
+rad_lager	_	_	Radlager	Radlager.
+haus_katze	_	_	hauskatze	Hauskatze
+lied_begleitung	_	_	Liedbegleitung	Liedbegleitung is standard, but compound uses singular normally — Liedbegleitung.
+schloss_geist	_	Error	Timeout error	
+lied_zeile	_	_+=er_	liederzeile	
+haus_verwaltung	_	_	Hausverwaltung	
+kind_+er_foto	_+=er_	_+=er_	kinderfoto	
+rad_satz	_	_	Radsatz	
+haus_wirtschaft	_	_	hauswirtschaft	
+stadt_+=e_vergleich	_+=e_	Error	Timeout error	
+lied_+er_dichter	_+=er_	_+=er_	liederdichter	
+kind_+er_treff	_+=er_	_+=er_	Kindertreff	
+kind_+er_paradies	_+=er_	_+=er_	kinderparadies	
+rad_haus	_	_	Radhaus	Rathaus — but among variants... 'Radhaus' exists (shipbuilding). Correct: Radhaus.
+haus_verbot	_	_	Hausverbot	Hausverbot.
+kind_+er_reim	_+=er_	_+=er_	kinderreim	
+rad_lauf	_	_	radlauf	
+rad_reise	_	_	Radreise	
+haus_ordnung	_	_	Hausordnung	
+lied_auswahl	_	_+=er_	liederauswahl	Liederauswahl.
+kind_+er_kino	_+=er_	_+=er_	kinderkino	
+kind_+s_tötung	_+s_	_+=er_	Kindertötung	
+rad_kasten	_	_	Radkasten	
+kind_+s_mutter	_+s_	_+=er_	Kindermutter	Kindermutter.
+rad_kappe	_	_	Radkappe	
+lied_beitrag	_	_	Liedbeitrag	
+haus_recht	_	_	Hausrecht	Hausrecht.
+haus_boot	_	_	Hausboot	
+kind_bett	_	_+=er_	Kinderbett	
+lied_form	_	_	liedform	Liedform (capitalization but choose 'liedform').
+rad_nabe	_	_	Radnabe	Radnabe
+haus_eingang	_	_	hauseingang	
+rad_+=er_werk	_+=er_	_+=er_	räderwerk	
+lied_+er_heft	_+=er_	_+=er_	liederheft	
+haus_schuh	_	_	hausschuh	
+haus_gebrauch	_	_	hausgebrauch	None
+rad_aufhängung	_	_	radaufhängung	
+kind_+er_party	_+=er_	_+=er_	Kinderparty	
+lied_begleiter	_	_+=er_	liederbegleiter	
+rad_marathon	_	_	radmarathon	None
+haus_gemeinschaft	_	_	Hausgemeinschaft	
+rad_dampfer	_	_	raddampfer	Raddampfer.
+lied_sänger	_	_+=er_	liedersänger	Liedersänger.
+kind_+er_veranstaltung	_+=er_	_+=er_	kinderveranstaltung	
+haus_garten	_	_	Hausgarten	Hausgarten.
+mutter_+=_treff	_+=_	_+=_	müttertreff	
+lied_+er_kreis	_+=er_	_+=er_	Liederkreis	Liederkreis.
+gitarre_+n_arrangement	_+en_	Error	Timeout error	
+haus_kauf	_	_	Hauskauf	
+kind_+er_jury	_+=er_	_+=er_	Kinderjury	
+rad_mutter	_	_	Radmutter	
+lied_+er_sänger	_+=er_	_+=er_	Liedersänger	Liedersänger? Actually "Liedersänger" exists; "Liedsänger" less common. Correct: Liedersänger.
+lied_titel	_	_	Liedtitel	Liedtitel (nouns capitalized? User gave lowercase, but answer: Liedtitel).
+lied_gestaltung	_	_	Liedgestaltung	
+lied_satz	_	_	liedsatz	Liedersatz? Actually "Liedersatz" isn't common; "Liedsatz" is a musicology term. But textbook pattern: Lied → Lieder. Hmm. Compound "Liedsatz" exists (setting of a song). But plural linking "Liedersatz" — like "Liedersammlung". Given variants, likely "Liedersatz"? Actually "Liedsatz" is a real term (song movement). I'll pick Liedsatz.
+rad_station	_	_	Radstation	
+haus_regel	_	_	Hausregel	Hausregel is correct (existing word).
+kind_+er_roman	_+=er_	_+=er_	Kinderroman	
+kind_+s_mord	_+s_	_+=er_	kindermord	
+lied_+er_auswahl	_+=er_	_+=er_	liederauswahl	liedauswahl? Plural? "Liederauswahl" — likely using plural linking -er. Common: "Liederauswahl".
+kind_+er_patenschaft	_+=er_	_+=er_	kinderpatenschaft	
+kind_+er_leiche	_+=er_	_+=er_	kinderleiche	Kinderleiche.
+rad_achse	_	_	radachse	
+haus_verwalter	_	_	Hausverwalter	None
+lied_interpretation	_	_	liedinterpretation	
+kind_+s_taufe	_+s_	_+=er_	Kindertaufe	Kindertaufe.
+rad_laden	_	_+=er_	Räderladen	
+lied_anfang	_	_	Liedanfang	Liedanfang? Actually "Liedanfang" is common. But plural linking "Liederanfang" less common. Correct: Liedanfang.
+kind_+s_bewegung	_+s_	_+=er_	Kinderbewegung	
+rad_spur	_	_	radspur	None
+geschenk_idee	_	_	Geschenkidee	Geschenkidee.
+lied_+er_sammlung	_+=er_	Error	Timeout error	
+haus_+=er_zeile	_+=er_	_+=er_	Häuserzeile	None
+kind_+er_artikel	_+=er_	_+=er_	kinderartikel	None
+haus_hund	_	_	haushund	Hmm, the task is to form compound nouns. The task is combining "Haus" (house) and "Hund" (dog) into a compound noun.
+
+The variants are "häuserhund" and "haushund".
+
+The correct compound is "Haushund" (house dog). "Häuserhund" would use the plural "Häuser" which doesn't make sense here.
+
+So the correct answer is "haushund".
+haus_kreis	_	_	Hauskreis	Häuserkreis? Actually "Hauskreis" is common (Bibelkreis, Hauskreis). But "Wohnviertel" – Hauskreis is a common word (Hauskreis/Hauskreis community). Yes, 'Hauskreis'.
+rad_team	_	_+=er_	Räderteam	
+kind_+er_reise	_+=er_	_+=er_	Kinderreise	
+rad_wechsel	_	_	radwechsel	
+rad_wanderung	_	_	Radwanderung	
+haus_schwein	_	_	hausschwein	
+geschenk_artikel	_	_	Geschenkartikel	Geschenkartikel is standard, but note example 1 uses Fugen-s (Freundeskreis). 'Geschenksartikel' is Austrian. Standard German: Geschenkartikel.
+kind_+er_schicksal	_+=er_	_+=er_	kinderschicksal	
+haus_+=er_kampf	_+=er_	_	Hauskampf	
+geschenk_verpackung	_	_	Geschenkverpackung	Geschenkverpackung.
+kind_+s_mörder	_+s_	_+=er_	Kindermörder	
+rad_verleih	_	_	radverleih	Radverleih.
+kind_+s_pech	_+s_	_+=er_	Kinderpech	None
+haus_strecke	_	_	Hausstrecke	None
+rad_panzer	_	_	Radpanzer	
+geschenk_box	_	_+s_	Geschenksbox	
+kind_+er_gitarre	_+=er_	_+=er_	Kindergitarre	
+geschenk_korb	_	_	Geschenkkorb	Geschenkkorb.
+rad_+=er_uhr	_+=er_	_	raduhr	
+haus_+=er_wand	_+=er_	_	hauswand	Hauswand.
+rad_reifen	_	_	Radreifen	
+kind_+er_kurs	_+=er_	Error	Timeout error	
+haus_schwamm	_	_	hausschwamm	Haus + Schwamm = Hausschwamm.
+geschenk_paket	_	_	Geschenkpaket	Geschenkpaket.
+bild_material	_	_	Bildmaterial	Bildmaterial.
+bild_qualität	_	_	Bildqualität	
+ei_gelb	_	_	Eigelb	
+haus_+=er_schlucht	_+=er_	_+=er_	häuserschlucht	
+haus_gast	_	_	hausgast	
+ei_+er_stock	_+=er_	_+=er_	Eierstock	Eierstock.
+haus_+=er_reihe	_+=er_	_+=er_	häuserreihe	häuserreihe
+geschenk_tüte	_	_	Geschenktüte	Geschenktüte? Actually "Geschenktüte" is standard.
+bild_punkt	_	_	bildpunkt	None
+bild_bearbeitung	_	_	bildbearbeitung	
+ei_sprung	_	_	Eisprung	
+geschenk_packung	_	_	Geschenkpackung	
+ei_ablage	_	_	Eiablage	
+ei_+er_kuchen	_+=er_	_+=er_	Eierkuchen	None
+haus_mann	_	_	hausmann	
+geschenk_übergabe	_	_	Geschenkübergabe	Geschenkübergabe? Common: "Geschenkübergabe". Yes.
+rad_freund	_	_	radfreund	
+bild_ausschnitt	_	_	Bildausschnitt	"Bildausschnitt" — actually "Bildausschnitt" exists.
+geschenk_karton	_	_+s_	geschenkskarton	Geschenkkarton is standard; but with Fugen-s "Geschenkskarton" is Austrian/southern. Textbook examples suggest Fugen-s with linking... Freundeskreis, Herzensbedürfnis use -es/-ens. For Geschenk: Geschenkskarton (southern) vs Geschenkkarton. Duden: Geschenkkarton. But pattern suggests s-linking. Hmm, "Geschenkskarton" exists in Austrian usage; Duden lists both? Duden lists "Geschenkkarton" primarily. Given the examples show genitive-s linking, answer likely "geschenkskarton".
+geschenk_aktion	_	_+s_	Geschenksaktion	None
+geschenk_karte	_	_	Geschenkkarte	Geschenkkarte.
+haus_messe	_	Error	Timeout error	
+haus_+=er_meer	_+=er_	_+=er_	häusermeer	
+geschenk_+e_sack	_+e_	_	Geschenksack	
+haus_maus	_	_	hausmaus	
+ei_+er_tanz	_+=er_	_+=er_	eiertanz	
+haus_+=er_gruppe	_+=er_	_+=er_	Häusergruppe	Häusergruppe is standard.
+geschenk_päckchen	_	_	geschenkpäckchen	
+ei_+er_schale	_+=er_	_+=er_	eierschale	
+zahn_wechsel	_	_	zahnwechsel	Zahnwechsel.
+bild_sprache	_	_	bildsprache	Bildersprache? Actually "Bildsprache" is common.
+geschenk_+e_liste	_+e_	_+e_	Geschenkeliste	Geschenkeliste.
+bild_stabilisator	_	_	Bildstabilisator	
+ei_dotter	_	_	eidotter	
+bild_verarbeitung	_	_	bildverarbeitung	
+ei_+er_mann	_+=er_	_+=er_	eiermann	
+schwester_modell	_	_	Schwestermodell	
+bild_teil	_	_	Bildteil	
+ei_+er_becher	_+=er_	_+=er_	Eierbecher	
+haus_+=er_markt	_+=er_	_	Hausmarkt	
+bild_+er_suche	_+=er_	_+=er_	bildersuche	
+haus_besitz	_	_	Hausbesitz	
+ei_+er_uhr	_+=er_	_+=er_	eieruhr	
+bild_gestaltung	_	_	bildgestaltung	Bildgestaltung.
+schwester_+n_paar	_+en_	_	Schwesterpaar	Schwesternpaar... but not in variants. Best: Schwesterpaar.
+bild_größe	_	_	Bildgröße	Bildgröße.
+ei_+er_karton	_+=er_	_+=er_	eierkarton	Eierkarton.
+bild_+er_welt	_+=er_	_+=er_	bilderwelt	None
+haus_rind	_	_	hausrind	
+schwester_zeitung	_	_	schwesterzeitung	Schwesterzeitung.
+ei_+er_suche	_+=er_	_+=er_	Eiersuche	Eiersuche.
+kind_+er_sitz	_+=er_	_+=er_	kindersitz	None
+geschenk_+e_laden	_+e_	_	geschenkladen	Geschenkeladen? But must pick from variants. Standard: Geschenkeladen. Among options "geschenkladen" (no Fugen-s). Choose geschenkladen? Duden: Geschenkeladen. But restricted to variants: "geschenkladen" is closer (no s). Actually common: Geschenkeladen; Geschenkshop etc. Pick geschenkladen.
+kind_+er_krankheit	_+=er_	_+=er_	kinderkrankheit	
+kind_+er_klinik	_+=er_	_+=er_	kinderklinik	None
+bild_stock	_	_	bildstock	Bildstock exists.
+bild_+er_geschichte	_+=er_	_+=er_	Bildergeschichte	
+haus_sklave	_	_	haussklave	
+haus_sender	_	_	haussender	
+haus_+=er_preis	_+=er_	_	Hauspreis	
+bad_+=er_bereich	_+=er_	_+=er_	bäderbereich	None
+ei_masse	_	_+=er_	Eiermasse	Eiermasse.
+bild_schärfe	_	_	Bildschärfe	
+ei_+er_kopf	_+=er_	_	Eikopf	Eikopf.
+haus_+=er_komplex	_+=er_	_+=er_	Häuserkomplex	Wohnhaus... "Häuserkomplex" exists; "Hauskomplex" less common. Correct: Häuserkomplex.
+haus_+=er_ansammlung	_+=er_	_+=er_	häuseransammlung	
+bild_röhre	_	_	Bildröhre	
+haus_ziege	_	_	Hausziege	Hausziege.
+bild_agentur	_	_	bildagentur	
+ei_hülle	_	_	Eihülle	
+ei_schale	_	_+=er_	Eierschale	
+buch_handel	_	_	buchhandel	
+ei_+er_masse	_+=er_	_+=er_	eiermasse	Eiermasse.
+buch_messe	_	_	Buchmesse	
+bild_+er_flut	_+=er_	_+=er_	bilderflut	
+bild_winkel	_	_	bildwinkel	
+ei_+er_dieb	_+=er_	_+=er_	Eierdieb	Eierdieb.
+buch_händler	_	_	buchhändler	None
+bild_+er_rätsel	_+=er_	_+=er_	Bilderrätsel	
+buch_laden	_	_	Buchladen	None
+ei_+er_lauf	_+=er_	_+=er_	Eierlauf	
+ei_+er_speise	_+=er_	_+=er_	eierspeise	
+ei_form	_	_	Eiform	Eiform.
+bild_+er_sprache	_+=er_	_+=er_	bildersprache	"Bildersprache" is the established word.
+buch_+=er_regal	_+=er_	_+=er_	Bücherregal	
+bild_beispiel	_	_	Bildbeispiel	
+bild_störung	_	_	Bildstörung	
+bild_+er_verbot	_+=er_	_+=er_	Bilderverbot	Bildverbot? "Bilder"? Actually plural Bilder + verbot → Bilderverbot.
+ei_+er_farbe	_+=er_	_	eifarbe	
+buch_titel	_	_	Buchtitel	Buchtitel.
+bild_wiedergabe	_	_	bildwiedergabe	
+person_+en_kreis	_+en_	_+en_	Personenkreis	
+ei_entwicklung	_	_+=er_	Eierentwicklung	
+buch_autor	_	_	Buchautor	
+bild_legende	_	_	Bildlegende	Bildlegende.
+buch_reihe	_	_+=er_	Bücherreihe	Bücherreihe.
+buch_form	_	_	Buchform	Buchform.
+ei_zahn	_	_	eizahn	
+ei_schaum	_	_+=er_	eierschaum	
+person_+en_gesellschaft	_+en_	_+en_	Personengesellschaft	
+bild_+er_strecke	_+=er_	_+=er_	bilderstrecke	
+ei_spende	_	_	eispende	
+person_+en_schaden	_+en_	_+en_	Personenschaden	
+buch_markt	_	_+=er_	büchermarkt	
+bild_+er_sturm	_+=er_	_	Bildsturm	Bildsturm is standard (iconoclasm, Bildsturm). Answer: Bildsturm.
+person_+en_gruppe	_+en_	_+en_	Personengruppe	
+buch_preis	_	_	Buchpreis	Buchpreis is standard.
+person_+en_zug	_+en_	_+en_	personenzug	
+bild_strecke	_	_	Bildstrecke	Bildstrecke? In publishing, "Bildstrecke" is common. But rule: Bild → Bilder? "Bildstrecke" exists. Answer: Bildstrecke.
+buch_vorstellung	_	_	buchvorstellung	Buchvorstellung.
+buch_verlag	_	_	buchverlag	
+haus_kaninchen	_	Error	Timeout error	
+person_+en_zahl	_+en_	_+en_	Personenzahl	Personenzahl.
+bild_dokumentation	_	_	bilddokumentation	
+buch_deckel	_	_	Buchdeckel	
+bild_wechsel	_	_+=er_	Bilderwechsel	
+person_+en_kult	_+en_	_+en_	personenkult	
+buch_wert	_	_	buchwert	
+bild_fenster	_	_	Bildfenster	
+person_+en_name	_+en_	_+en_	personenname	
+buch_seite	_	_	Buchseite	
+bild_stelle	_	_	bildstelle	'Bildstelle' – no, 'Stelle' as feminine head. 'bilderstelle'? Compound: Bild + Stelle → 'Bildstelle' (noun capitalized). Variants given lowercase but answer 'bildstelle'.
+person_+en_kontrolle	_+en_	_+en_	personenkontrolle	
+bild_+er_reihe	_+=er_	_	Bildreihe	Bildreihe is standard. But textbook examples show linking elements... "Bildreihe" is the existing word.
+bild_zeile	_	_	Bildzeile	
+buch_empfehlung	_	_	Buchempfehlung	Buchempfehlung is common; but plural linking bücherempfehlung also exists. Typically singular Buchempfehlung.
+person_+en_transport	_+en_	_+en_	Personentransport	Personentransport.
+schwert_kämpfer	_	_	Schwertkämpfer	
+bild_reihe	_	_	Bildreihe	
+person_+en_suche	_+en_	_+en_	personensuche	Personensuche.
+haus_mütterchen	_	Error	Timeout error	
+person_+en_beschreibung	_+en_	_+en_	personenbeschreibung	
+bild_+er_schrift	_+=er_	_+=er_	Bilderschrift	Bilderschrift.
+buch_binder	_	_	buchbinder	Buchbinder.
+schwert_träger	_	_+=er_	schwerterträger	Schwerterträger.
+person_+en_schützer	_+en_	_+en_	Personenschützer	Fugen-s: Personenschützer.
+buch_veröffentlichung	_	_	buchveröffentlichung	
+schwert_hieb	_	_	Schwerthieb	None
+buch_+=er_schrank	_+=er_	_+=er_	bücherschrank	
+bild_schnitt	_	_	bildschnitt	Bildschnitt.
+person_+en_sorge	_+en_	_+en_	Personensorge	
+buch_macher	_	_	buchmacher	
+schwert_lilie	_	_	schwertlilie	
+schwert_scheide	_	_	Schwertscheide	
+person_+en_anzahl	_+en_	_+en_	personenanzahl	
+bild_+er_wand	_+=er_	_+=er_	Bilderwand	
+schwert_griff	_	_	schwertgriff	
+buch_+=er_wurm	_+=er_	_+=er_	Bücherwurm	
+person_+en_waage	_+en_	_+en_	Personenwaage	
+schwert_klinge	_	_	schwertklinge	None
+person_+en_aufzug	_+en_	_+en_	Personenaufzug	
+person_+en_wahl	_+en_	_+en_	Personenwahl	None
+buch_vorlage	_	_	buchvorlage	
+bild_+er_verehrung	_+=er_	_+=er_	Bilderverehrung	None
+bild_+er_vortrag	_+=er_	_+=er_	bildervortrag	Bild → Bilder as linking element? "Bildvortrag" seems plausible, but textbook pattern prefers plural linking? Bild + Vortrag → "Bildvortrag" is unusual; "Bildervortrag"? I'd say Bildvortrag... Actually common compounds: Bildbericht, Bildvortrag. Hmm, textbook examples use linking elements; Bild often takes -er: "Bilderrahmen"? No, "Bilderrahmen" yes! Bild + Rahmen = Bilderrahmen? Actually "Bilderrahmen" is common. So Bildervortrag.
+schwert_spitze	_	_	schwertspitze	Schwerterspitze? Actually "Schwertspitze" is common. But genitive -s: "Schwertes"... compound "Schwertspitze" exists. Answer: schwertspitze.
+ei_+er_nudel	_+=er_	Error	Timeout error	
+bild_+er_macher	_+=er_	_+=er_	bildermacher	Bild + Macher → Bildermacher? Correct is "Bildermacher"? Actually compounds: "Filmemacher", so "Bildmacher"? Common word is "Bildermacher". I'll say Bildermacher.
+sonne_+n_strahl	_+en_	_+en_	Sonnenstrahl	
+buch_+=er_tisch	_+=er_	_+=er_	büchertisch	
+schwert_tanz	_	_	schwerttanz	
+bild_+er_atlas	_+=er_	_	Bildatlas	
+vogel_zug	_	_	Vogelzug	
+buch_ausgabe	_	_	buchausgabe	Plural compounds usually: Buchausgabe? Actually "Bücherausgabe" isn't standard; "Buchausgabe" is a word. But textbook pattern suggests plural linking element... Buchausgabe is common.
+person_+en_fähre	_+en_	_+en_	Personenfähre	Personenfähre.
+sonne_+n_brille	_+en_	_+en_	sonnenbrille	
+sonne_+n_schirm	_+en_	_+en_	sonnenschirm	Note: textbook examples use capitalization; but variants given lowercase. Answer: Sonnenschirm? Variants lowercase — pick as given: sonnenschirm.
+buch_malerei	_	_	Buchmalerei	Buchmalerei.
+geräusch_dämmung	_	_	Geräuschdämmung	None
+buch_+=er_sammlung	_+=er_	_+=er_	Büchersammlung	None
+person_+en_versicherung	_+en_	_+en_	Personenversicherung	Personenversicherung
+person_+en_bezeichnung	_+en_	_+en_	personenbezeichnung	None
+sonne_+n_brand	_+en_	_+en_	sonnenbrand	
+person_+en_konstellation	_+en_	_+en_	personenkonstellation	
+geräusch_+e_macher	_+e_	_	Geräuschmacher	
+person_+en_beförderung	_+en_	Error	Timeout error	
+buch_rezension	_	_	Buchrezension	Buchrezension.
+geräusch_reduzierung	_	_	Geräuschreduzierung	Geräuschreduzierung.
+sonne_+n_terrasse	_+en_	_+en_	sonnenterrasse	
+vogel_schwarm	_	_	vogelschwarm	Vogelschwarm.
+buch_druckerei	_	_	Buchdruckerei	Buchdruckerei.
+brett_+er_bude	_+=er_	_+=er_	Bretterbude	
+buch_+=er_freund	_+=er_	_+=er_	Bücherfreund	
+person_+en_profil	_+en_	_+en_	Personenprofil	
+sonne_+n_finsternis	_+en_	_+en_	sonnenfinsternis	
+buch_+=er_verbrennung	_+=er_	Error	Timeout error	
+brett_+er_wand	_+=er_	_+=er_	Bretterwand	
+sonne_+n_bad	_+en_	_+en_	sonnenbad	
+person_+en_liste	_+en_	_+en_	personenliste	
+buch_beschreibung	_	_	buchbeschreibung	
+buch_+=er_schau	_+=er_	_+=er_	bücherschau	
+sonne_+n_strahlung	_+en_	_+en_	Sonnenstrahlung	Sonnenstrahlung.
+person_+en_angabe	_+en_	_+en_	personenangabe	
+brett_+er_verschlag	_+=er_	_+=er_	bretterverschlag	
+person_+en_schiff	_+en_	_+en_	Personenschiff	
+person_+en_wechsel	_+en_	_+en_	Personenwechsel	None
+brett_+er_zaun	_+=er_	_+=er_	bretterzaun	
+brett_+er_boden	_+=er_	_+=er_	Bretterboden	Bretterboden.
+buch_+=er_kiste	_+=er_	_+=er_	bücherkiste	
+sonne_+n_gott	_+en_	_+en_	Sonnengott	Sonnengott.
+kind_+er_zimmer	_+=er_	_+=er_	Kinderzimmer	
+buch_illustration	_	_	Buchillustration	
+sonne_+n_seite	_+en_	_+en_	Sonnenseite	
+kind_+er_wagen	_+=er_	_+=er_	kinderwagen	
+person_+en_darstellung	_+en_	_+en_	Personendarstellung	Personendarstellung.
+brett_spieler	_	_	brettspieler	
+bild_tradition	_	Error	Timeout error	
+buch_präsentation	_	Error	Timeout error	
+buch_+=er_sendung	_+=er_	_+=er_	büchersendung	
+kind_+er_buch	_+=er_	_+=er_	Kinderbuch	
+person_+en_überwachung	_+en_	_+en_	personenüberwachung	
+brett_wurzel	_	_	brettwurzel	
+buch_geschenk	_	_	buchgeschenk	
+sonne_+n_fleck	_+en_	_+en_	Sonnenfleck	
+person_+en_dampfer	_+en_	_+en_	Personendampfer	Personendampfer.
+bett_kante	_	_	Bettkante	
+person_+en_verzeichnis	_+en_	Error	Timeout error	
+brett_rand	_	_	brettrand	
+buch_+=er_bus	_+=er_	_+=er_	Bücherbus	
+ohr_feige	_	_	ohrfeige	Ohrfeige — capitalized? Variants lowercase; return 'ohrfeige'.
+schwert_pflanze	_	Error	Timeout error	
+buch_lesung	_	_	Buchlesung	
+kind_+er_wunsch	_+=er_	_+=er_	Kinderwunsch	
+vogel_schar	_	_	Vogelschar	
+ohr_ring	_	_	ohrring	Ohrring.
+sonne_+n_blume	_+en_	Error	Timeout error	
+bett_+en_haus	_+en_	_+en_	bettenhaus	Bett + Haus → Bettenhaus? Common: "Bettenhaus". Duden: Bettenhaus.
+wurm_befall	_	_	Wurmbefall	
+kind_+er_schuh	_+=er_	_+=er_	Kinderschuh	
+buch_+=er_liste	_+=er_	_+=er_	bücherliste	
+sonne_+n_stunde	_+en_	_+en_	Sonnenstunde	
+bett_wanze	_	_	Bettwanze	
+kind_+er_schänder	_+=er_	_+=er_	kinderschänder	
+sonne_+n_wind	_+en_	_+en_	sonnenwind	None
+ohr_muschel	_	_+en_	ohrenmuschel	None
+bett_gestell	_	_	bettgestell	None
+kind_+er_arzt	_+=er_	_+=er_	Kinderarzt	None
+sonne_+n_blende	_+en_	_+en_	Sonnenblende	Sonnenblende.
+wurm_art	_	_	wurmart	
+bett_bezug	_	_	bettbezug	
+stadt_+=e_partnerschaft	_+=e_	_+=e_	Städtepartnerschaft	
+buch_regal	_	_+=er_	Bücherregal	
+vogel_gruppe	_	_	vogelgruppe	
+sonne_+n_stand	_+en_	_+en_	sonnenstand	Sonnenstand.
+sonne_+n_studio	_+en_	_+en_	Sonnenstudio	Sonnenstudio.
+ohr_stöpsel	_	_	ohrstöpsel	
+wurm_erkrankung	_	_	Wurmerkrankung	
+vogel_paar	_	_	Vogelpaar	Vogelpaar.
+ohr_geräusch	_	_	ohrgeräusch	
+buch_+=er_stapel	_+=er_	_+=er_	bücherstapel	
+bett_vorleger	_	_	bettvorleger	None
+vogel_reichtum	_	_	vogelreichtum	None
+wurm_infektion	_	_	Wurminfektion	
+sonne_+n_insel	_+en_	_+en_	sonneninsel	
+buch_+=er_wand	_+=er_	_+=er_	bücherwand	Bücherwand.
+stadt_+=e_tag	_+=e_	_+=e_	städtetag	Deutscher Städtetag.
+bett_wäsche	_	Error	Timeout error	
+ohr_+en_schmerz	_+en_	_+en_	Ohrenschmerz	
+buch_+=er_ecke	_+=er_	_+=er_	bücherecke	bücherecke.
+wurm_larve	_	_	Wurmlarve	
+bett_+en_zahl	_+en_	_+en_	Bettenzahl	Bettenzahl? Actually "Bettenzahl" (number of beds) is standard.
+bett_geschichte	_	_	Bettgeschichte	
+sonne_+n_scheibe	_+en_	_+en_	sonnenscheibe	
+buch_religion	_	_	Buchreligion	
+bett_rand	_	_	Bettrand	
+ohr_+en_schmaus	_+en_	_+en_	ohrenschmaus	
+buch_+=er_bestand	_+=er_	_+=er_	bücherbestand	
+bett_rahmen	_	_	Bettrahmen	
+sonne_+n_dach	_+en_	_+en_	sonnendach	Sonnen- Fugen-s? Variant only sonnendach vs sonnedach → sonnendach.
+brett_+er_gerüst	_+=er_	Error	Timeout error	
+nation_+en_wertung	_+en_	_+en_	nationenwertung	
+sonne_+n_könig	_+en_	_+en_	sonnenkönig	None
+ohr_hörer	_	_	Ohrhörer	None
+wurm_krankheit	_	_	wurmkrankheit	Wurmerkrankheit? Not in variants. Given variants, 'wurmkrankheit' is the compound; correct German would be Wurmerkrankheit but among options pick wurmkrankheit.
+buch_rolle	_	_	Buchrolle	
+hemd_tasche	_	_	hemdtasche	Hemdtasche? Correct compound: "Hemdtasche". But Fugen-s? "Hemdtasche" is standard.
+buch_+=er_basar	_+=er_	_	Buchbasar	Buchbasar.
+bett_gitter	_	_	bettgitter	
+sonne_+n_hang	_+en_	_+en_	sonnenhang	
+ohr_+en_sessel	_+en_	_+en_	Ohrensessel	None
+ohr_marke	_	_+en_	Ohrenmarke	Ohrenmarke (ear tag).
+ohr_stecker	_	_	ohrstecker	
+schloss_park	_	_	Schlosspark	
+sonne_+n_rand	_+en_	_+en_	Sonnenrand	Sonnenrand (diminutive-like n-Fugen) — actually "Sonnenrand" exists.
+hemd_+s_ärmel	_+s_	_	hemdärmel	Hemdärmel is standard, but among variants: hemdsärmel? Actually correct is "Hemdärmel" (no Fugen-s). So 'hemdärmel'.
+schloss_garten	_	_	schlossgarten	
+sonne_+n_glut	_+en_	_+en_	Sonnenglut	
+hemd_knopf	_	_	Hemdknopf	
+bett_nachbar	_	_	Bettnachbar	Bettnachbar.
+bett_+en_kapazität	_+en_	_+en_	Bettenkapazität	
+ohr_+en_entzündung	_+en_	_+en_	Ohrenentzündung	
+sonne_+n_einfall	_+en_	_+en_	Sonneneinfall	Sonneneinfall.
+ohr_+en_stöpsel	_+en_	_	ohrstöpsel	
+schloss_hotel	_	_	Schlosshotel	Schlosshotel.
+buch_+=er_spende	_+=er_	_+=er_	bücherspende	
+buch_teil	_	_	buchteil	None
+sonne_+n_balkon	_+en_	_+en_	Sonnenbalkon	None
+hemd_+en_tasche	_+en_	_	hemdtasche	Hemdtasche
+bett_szene	_	_	Bettszene	
+hemd_bluse	_	_	Hemdbluse	
+sonne_+n_liege	_+en_	Error	Timeout error	
+ohr_+en_arzt	_+en_	_+en_	Ohrenarzt	
+hemd_+en_knopf	_+en_	_	Hemdknopf	
+schloss_anlage	_	_	Schlossanlage	
+sonne_+n_ofen	_+en_	_+en_	sonnenofen	
+schloss_museum	_	_	Schlossmuseum	
+bett_pfosten	_	_	bettpfosten	
+hemd_+en_kragen	_+en_	_	Hemdkragen	
+bett_+en_station	_+en_	_+en_	bettenstation	
+buch_illustrator	_	_	Buchillustrator	Buchillustrator.
+bett_pfanne	_	_	Bettpfanne	
+sonne_+n_stern	_+en_	_+en_	sonnenstern	None
+sonne_+n_gürtel	_+en_	_+en_	sonnengürtel	Sonnengürtel — but existing compound: "Sonnengürtel"? Actual asteroid belt = "Sonnengürtel"? "Gürtel der Sonne"... Standard is "Sonnengürtel".
+ohr_+en_schützer	_+en_	_+en_	Ohrenschützer	
+schloss_turm	_	_	schlossturm	Schlossturm.
+schloss_+=er_verwaltung	_+=er_	_	Schlossverwaltung	
+buch_+=er_kauf	_+=er_	_	buchkauf	
+ohr_+en_tropfen	_+en_	_+en_	ohrentropfen	
+katze_+n_klo	_+en_	_+en_	katzenklo	
+buch_künstler	_	_	buchkünstler	
+bett_+en_auslastung	_+en_	_+en_	Bettenauslastung	
+ohr_hänger	_	_+en_	Ohrenhänger	
+schloss_insel	_	_	Schlossinsel	
+buch_+=er_paket	_+=er_	_+=er_	bücherpaket	
+katze_+n_halter	_+en_	_+en_	katzenhalter	None
+schloss_hund	_	_	schlosshund	Schlosshund? Existing compound... "Schlosshund" (castle dog). Correct: Schlosshund.
+buch_+=er_sammler	_+=er_	_+=er_	büchersammler	
+katze_+n_besitzer	_+en_	_+en_	Katzenbesitzer	
+bett_flasche	_	_	Bettflasche	
+bett_kasten	_	_	Bettkasten	
+bett_+en_belegung	_+en_	_	bettbelegung	None
+ohr_+en_weide	_+en_	_+en_	Ohrenweide	Ohrenweide.
+katze_+n_haltung	_+en_	_+en_	katzenhaltung	
+schloss_teich	_	_	Schlossteich	Schlossteich (also Schlossteich is common).
+schloss_gespenst	_	_	Schlossgespenst	Schlossgespenst is standard; "Schlössergespenst" hmm — actually the classic compound is "Schlossgespenst" (castle ghost). But Schlösser plural would be Schlössergespenst? Plural would be "Schlössergespenst"? No, plural genitive... Plural compound: Schlösser + Gespenst = "Schlössergespenst". Singular: Schlossgespenst. Textbook wants one correct; likely "Schlossgespenst".
+buch_+=er_herbst	_+=er_	_+=er_	bücherherbst	Buchherbst? Compound nouns usually don't umlaut... but "Bücherherbst" – like "Herbstbuch"? Actually both exist? Textbook answer likely "bücherherbst"? Hmm. Compound "Herbstbuch" exists; "Buchherbst" unnatural. Plural linking "Bücherherbst" seems intended.
+buch_hinweis	_	_	Buchhinweis	
+bett_+en_wechsel	_+en_	_	Bettwechsel	
+schloss_führung	_	_	Schlossführung	
+ohr_+en_klappe	_+en_	_	Ohrklappe	Ohrklappe.
+ohr_schützer	_	_+en_	ohrenschützer	
+katze_+n_ausstellung	_+en_	_+en_	katzenausstellung	
+buch_+=er_angebot	_+=er_	_+=er_	bücherangebot	
+bett_+en_kauf	_+en_	_	bettkauf	
+katze_+n_korb	_+en_	_+en_	Katzenkorb	
+katze_+n_baum	_+en_	_+en_	Katzenbaum	
+ohr_+en_robbe	_+en_	_+en_	ohrenrobbe	
+buch_vertrieb	_	_	Buchvertrieb	
+schloss_keller	_	_	Schlosskeller	Schlosskeller (as in castle cellar? or lock?). Likely "Schlosskeller".
+bett_überwurf	_	_	bettüberwurf	Bettüberwurf.
+schloss_gebäude	_	_	schlossgebäude	Schlossgebäude.
+bett_laken	_	_	bettlaken	
+ohr_trompete	_	_	Ohrtrompete	Ohrtrompete.
+katze_+n_krankheit	_+en_	_+en_	Katzenkrankheit	
+buch_sammlung	_	_+=er_	büchersammlung	
+schloss_mauer	_	_	Schlossmauer	
+gitarre_+n_riff	_+en_	_+en_	gitarrenriff	Gitarrenriff
+katze_+n_züchter	_+en_	_+en_	katzenzüchter	
+bad_reiniger	_	_	Badreiniger	Badreiniger.
+schloss_graben	_	_	schlossgraben	Schlossgraben.
+bad_+=er_architektur	_+=er_	_+=er_	Bäderarchitektur	Bäderarchitektur
+buch_+=er_stand	_+=er_	Error	Timeout error	
+ohr_+en_spiegel	_+en_	_+en_	Ohrenspiegel	Ohrspiegel vs Ohrenspiegel — "Rückspiegel" style... rearview mirror? Actually "Ohrenspiegel"? The compound existing: "Ohrenspiegel" exists (mirror for ears?). Hmm. Textbook pattern: foreign? "Ohrenspiegel" is a real term (ENT). I'll say Ohrenspiegel.
+schloss_brücke	_	_	Schlossbrücke	
+gitarre_+n_solo	_+en_	_+en_	Gitarrensolo	
+bad_vorleger	_	_+=er_	Bädervorleger	Badevorleger... but among variants: Bädervorleger.
+gitarre_+n_klang	_+en_	_+en_	Gitarrenklang	Gitarrenklang.
+buch_herstellung	_	Error	Timeout error	
+ohr_+en_zeuge	_+en_	Error	Timeout error	

@@ -18,7 +18,8 @@ Below is the real task I have. Please help me and pick
 the correct answer from the given Variants. There is always
 only one correct answer in the Variants so make sure that you
 find it exclusively among them. Only return the correct answer
-without any tags, punctuation, or any other marks.
+without any tags, punctuation, or any other marks. Don't think
+about the answer, return directly what you believe is the correct option.
 
 REAL TASK
 Nouns: '{n1}' and '{n2}'
