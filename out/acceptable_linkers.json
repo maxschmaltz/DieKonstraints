@@ -5278,12 +5278,12 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
-        ],
         "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en"
+        ],
+        "_+s_": [
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
     "person_+en_gruppe": {
@@ -5291,12 +5291,12 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
-        ],
         "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en"
+        ],
+        "_+s_": [
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
     "person_+en_gesellschaft": {
@@ -5304,10 +5304,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5316,10 +5316,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5328,10 +5328,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5340,12 +5340,12 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
-        ],
         "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en"
+        ],
+        "_+s_": [
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
     "person_+en_beförderung": {
@@ -5353,10 +5353,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5365,10 +5365,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5377,10 +5377,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5389,10 +5389,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5401,10 +5401,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5413,10 +5413,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5425,10 +5425,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5437,10 +5437,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5449,10 +5449,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5461,12 +5461,12 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
-        ],
         "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en"
+        ],
+        "_+s_": [
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
     "person_+en_waage": {
@@ -5474,10 +5474,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5486,10 +5486,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5498,10 +5498,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5510,12 +5510,12 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
-        ],
         "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en"
+        ],
+        "_+s_": [
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
     "person_+en_fähre": {
@@ -5523,10 +5523,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5535,10 +5535,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5547,10 +5547,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5559,12 +5559,12 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
-        ],
         "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en"
+        ],
+        "_+s_": [
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
     "person_+en_profil": {
@@ -5572,10 +5572,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5584,12 +5584,12 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
-        ],
         "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en"
+        ],
+        "_+s_": [
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
     "person_+en_schiff": {
@@ -5597,10 +5597,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5609,10 +5609,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5621,12 +5621,12 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
-        ],
         "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en"
+        ],
+        "_+s_": [
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
     "person_+en_darstellung": {
@@ -5634,10 +5634,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5646,10 +5646,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -5658,10 +5658,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -7128,10 +7128,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
@@ -7140,12 +7140,12 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
-            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
-        ],
         "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en",
             "p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en"
+        ],
+        "_+s_": [
+            "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },
     "schwester_zeitung": {
@@ -7153,10 +7153,10 @@
             "def-0",
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+s_": [
+        "_+en_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ],
-        "_+en_": [
+        "_+s_": [
             "p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en"
         ]
     },

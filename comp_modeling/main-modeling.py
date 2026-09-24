@@ -70,7 +70,6 @@ def main():
         CompXConstraints(row)
         for _, row in tqdm(appl_ind.iterrows(), total=N, desc="Building X")
     ]
-    Y_true = appl_ind["linker"].to_list()
 
 
     # record the acceptable and the unacceptable linkers
@@ -95,14 +94,29 @@ def main():
 
     # run available models and record their metrics
 
+    # since conflictless (one-linker) compounds are deterministic,
+    # and are informstive of the performasnce of the model,
+    # we only keep compounds with >= 2 linkers
+    cXc = [
+        cxc for cxc in cXc
+        if len(cxc.acceptable_linkers) >= 2
+    ]
+    Y_true = [cxc.y_true for cxc in cXc]
+    index = [cxc.comp_gecodb for cxc in cXc]
+    N = len(index)
+
+    # record for later inspection
+    true_df = pd.DataFrame({"true": Y_true}, index=index)
+    save_tsv_generic(true_df, "out/comps_for_modeling.tsv")
+
     def pred_df(pred_rows: List[pd.DataFrame]) -> pd.DataFrame:
-        pred_rows_df = pd.concat(pred_rows, axis=1).T   \
-            .reset_index(drop=True) \
-            .set_index(appl_ind.index)
+        pred_rows_df = pd.concat(pred_rows, axis=1).T.reset_index(drop=True)
+        pred_rows_df["index"] = index
+        pred_rows_df.set_index("index", inplace=True)
         Y_pred = [pred_row.name or "_" for pred_row in pred_rows]
         pred_df = pd.DataFrame(
             {"true": Y_true, "pred": Y_pred},
-            index=appl_ind.index
+            index=index
         )
         return pd.concat((pred_df, pred_rows_df), axis=1)
 
@@ -138,7 +152,7 @@ def main():
                 # as dict keys and collide otherwise)
                 comp: df.to_dict(orient="tight")
                 for comp, df
-                in zip(appl_ind.index, output[key])
+                in zip(index, output[key])
             }
             with open(
                 os.path.join(outdir, f"{key}s.json"), "w", encoding="utf-8"

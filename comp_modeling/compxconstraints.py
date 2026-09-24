@@ -31,7 +31,7 @@ class CompXConstraints:
         # comp
         self.comp_gecodb = appl_row.name
         self.comp = Compound(appl_row.name)
-        self.true = self.esc(self.comp.linkers[0].gecodb)
+        self.y_true = self.esc(self.comp.linkers[0].gecodb)
         # acceptable (P2L-generated) linkers
         self.acceptable_linkers = defaultdict(list)
         # add the default constraint into the competition

@@ -1,4 +1,4 @@
-comp_gecodb	true	pred	confidence	cvg_score	c_id
+	true	pred	confidence	cvg_score	c_id
 kind_+er_zimmer	_+=er_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 kind_+er_wagen	_+=er_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 kind_+er_buch	_+=er_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
@@ -107,63 +107,11 @@ bild_tradition	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#
 bild_+er_macher	_+=er_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 bild_+er_verehrung	_+=er_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 bild_+er_atlas	_+=er_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
-stadt_gebiet	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_entwicklung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_zentrum	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_halle	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_bild	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_mauer	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_führung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_rand	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_park	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_bücherei	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_museum	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_kern	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_verkehr	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_grenze	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 stadt_+=e_partnerschaft	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_umbau	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 stadt_+=e_tag	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_meisterschaft	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_planer	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_besichtigung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_parlament	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_raum	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_garten	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_hafen	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_lauf	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_vater	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_pfarrer	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_kreis	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_magazin	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_bereich	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_meister	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_bevölkerung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_graben	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_+=e_name	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_schule	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_schreiber	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_+=e_planer	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_forschung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_strand	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_erkundung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_gericht	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_marathon	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_auto	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_+=e_planung	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 stadt_+=e_vergleich	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_sprecher	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_+=e_ordnung	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 stadt_+=e_freundschaft	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_gefüge	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_+=e_bild	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_architektur	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_gärtner	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_+=e_gründung	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 stadt_+=e_verbindung	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_+=e_führer	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_möbel	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-stadt_geografie	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 haus_tier	_	_	2.572	2.723	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:phon_fin:sibilant$-0
 haus_tür	_	_	2.572	2.723	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:phon_fin:sibilant$-0
 haus_meister	_	_	2.572	2.723	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:phon_fin:sibilant$-0
@@ -279,104 +227,6 @@ buch_hinweis	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er
 buch_+=er_angebot	_+=er_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 buch_vertrieb	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 buch_sammlung	_	_+=er_	1.161	1.847	p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|pl_interpr-er
-hund_+e_halter	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_schule	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_besitzer	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_rasse	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_führer	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_futter	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_freund	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_trainer	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_haltung	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_sport	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_erziehung	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_kot	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_strand	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_haar	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_ausbildung	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_kampf	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_züchter	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_staffel	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_kuchen	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_decke	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_klo	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_kacke	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+e_betreuung	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+s_rose	_+s_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-hund_+s_kamille	_+s_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-frau_+en_arzt	_+en_	_	0.573	0.0	def-0
-frau_+en_anteil	_+en_	_	0.573	0.0	def-0
-frau_+en_haus	_+en_	_	0.573	0.0	def-0
-frau_+en_tag	_+en_	_	0.573	0.0	def-0
-frau_+en_gruppe	_+en_	_	0.573	0.0	def-0
-frau_+en_bild	_+en_	_	0.573	0.0	def-0
-frau_+en_stimme	_+en_	_	0.573	0.0	def-0
-frau_+en_recht	_+en_	_	0.573	0.0	def-0
-frau_+en_chor	_+en_	_	0.573	0.0	def-0
-frau_+en_förderung	_+en_	_	0.573	0.0	def-0
-frau_+en_klinik	_+en_	_	0.573	0.0	def-0
-frau_+en_organisation	_+en_	_	0.573	0.0	def-0
-frau_+en_gemeinschaft	_+en_	_	0.573	0.0	def-0
-frau_+en_zimmer	_+en_	_	0.573	0.0	def-0
-frau_+en_frage	_+en_	_	0.573	0.0	def-0
-frau_+en_verband	_+en_	_	0.573	0.0	def-0
-frau_+en_kleid	_+en_	_	0.573	0.0	def-0
-frau_+en_körper	_+en_	_	0.573	0.0	def-0
-frau_+en_welt	_+en_	_	0.573	0.0	def-0
-frau_+en_schwarm	_+en_	_	0.573	0.0	def-0
-frau_+en_kreis	_+en_	_	0.573	0.0	def-0
-frau_+en_zentrum	_+en_	_	0.573	0.0	def-0
-frau_+en_rat	_+en_	_	0.573	0.0	def-0
-frau_+en_thema	_+en_	_	0.573	0.0	def-0
-frau_+en_hand	_+en_	_	0.573	0.0	def-0
-frau_+en_name	_+en_	_	0.573	0.0	def-0
-frau_+en_emanzipation	_+en_	_	0.573	0.0	def-0
-frau_+en_unterdrückung	_+en_	_	0.573	0.0	def-0
-frau_+en_mord	_+en_	_	0.573	0.0	def-0
-frau_+en_referat	_+en_	_	0.573	0.0	def-0
-frau_+en_konferenz	_+en_	_	0.573	0.0	def-0
-frau_+en_freundschaft	_+en_	_	0.573	0.0	def-0
-frau_+en_hasser	_+en_	_	0.573	0.0	def-0
-frau_+en_studie	_+en_	_	0.573	0.0	def-0
-frau_+en_schule	_+en_	_	0.573	0.0	def-0
-frau_+en_fuß	_+en_	_	0.573	0.0	def-0
-frau_+en_beirat	_+en_	_	0.573	0.0	def-0
-frau_+en_staffel	_+en_	_	0.573	0.0	def-0
-frau_+en_paar	_+en_	_	0.573	0.0	def-0
-frau_+en_akt	_+en_	_	0.573	0.0	def-0
-frau_+en_sauna	_+en_	_	0.573	0.0	def-0
-frau_+en_runde	_+en_	_	0.573	0.0	def-0
-hand_gelenk	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_fläche	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_gepäck	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_bremse	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_bewegung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_schelle	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_schlag	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_zeichen	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_spiel	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_rücken	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_lauf	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_puppe	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_gemenge	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_stand	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_abdruck	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_wagen	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_geld	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_zeichnung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_haltung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_pumpe	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_schaltung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_+=e_desinfektion	_+=e_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_feger	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_teller	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_kante	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_säge	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_spiegel	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_mühle	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_satz	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_koffer	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-hand_stempel	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 sonne_+n_strahl	_+en_	_+en_	0.764	0.829	p2l:phon_fin:schwa$-en|def-en
 sonne_+n_brille	_+en_	_+en_	0.764	0.829	p2l:phon_fin:schwa$-en|def-en
 sonne_+n_schirm	_+en_	_+en_	0.764	0.829	p2l:phon_fin:schwa$-en|def-en
@@ -416,33 +266,14 @@ katze_+n_korb	_+en_	_+en_	0.764	0.829	p2l:phon_fin:schwa$-en|def-en
 katze_+n_baum	_+en_	_+en_	0.764	0.829	p2l:phon_fin:schwa$-en|def-en
 katze_+n_krankheit	_+en_	_+en_	0.764	0.829	p2l:phon_fin:schwa$-en|def-en
 katze_+n_züchter	_+en_	_+en_	0.764	0.829	p2l:phon_fin:schwa$-en|def-en
-weg_strecke	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_beschreibung	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_punkt	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_rand	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
 weg_+e_netz	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
 weg_gabelung	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
 weg_kreuzung	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_+e_recht	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_führung	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_+e_unfall	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_stück	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_+e_führung	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
 weg_+e_kreuz	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
 weg_kreuz	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_länge	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_zeichen	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_abschnitt	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_verlauf	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_+e_zeit	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_biegung	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
 weg_scheide	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_stunde	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_+e_markierung	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
 weg_gabel	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_suche	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
 weg_netz	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-weg_richtung	_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
 rad_stand	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 rad_strecke	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 rad_lager	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
@@ -498,44 +329,12 @@ ei_zahn	_	_	2.343	2.806	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:
 ei_entwicklung	_	_	2.343	2.806	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|mass-interpr-0
 ei_schaum	_	_	2.343	2.806	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|mass-interpr-0
 ei_spende	_	_	2.343	2.806	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:decl_cl:pl:#er-0/er|mass-interpr-0
-gerät_+e_haus	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-gerät_+e_hersteller	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-gerät_+e_wart	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-gerät_+e_treiber	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-gerät_+e_wagen	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-gerät_+e_raum	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-gerät_+e_träger	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-gerät_+e_schuppen	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
-vogel_art	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_grippe	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_welt	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_spinne	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_park	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_nest	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_stimme	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_freund	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 vogel_zug	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_beobachtung	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_häuschen	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_käfig	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 vogel_schwarm	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_halter	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_schützer	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_stange	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_paradies	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_feder	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_kirsche	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_fänger	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_bestand	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 vogel_schar	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_jagd	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 vogel_gruppe	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 vogel_paar	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 vogel_reichtum	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_fuß	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_kenner	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_spur	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vogel_tränke	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 schloss_park	_	_	2.572	2.723	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:phon_fin:sibilant$-0
 schloss_garten	_	_	2.572	2.723	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:phon_fin:sibilant$-0
 schloss_hotel	_	_	2.572	2.723	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:phon_fin:sibilant$-0
@@ -563,73 +362,8 @@ schloss_verwaltung	_	_	2.572	2.723	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:
 schloss_ruine	_	_	2.572	2.723	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:phon_fin:sibilant$-0
 schloss_saal	_	_	2.572	2.723	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:phon_fin:sibilant$-0
 schloss_+=er_stiftung	_+=er_	_	2.572	2.723	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0, p2l:phon_fin:sibilant$-0
-mutter_sprache	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_milch	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_tag	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_leib	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_land	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_schutz	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_tier	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_mund	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_pflanze	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_liebe	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_rolle	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_+=_zentrum	_+=_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_kuh	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_schoß	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_+=_sterblichkeit	_+=_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_instinkt	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_göttin	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_herz	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_brust	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_witz	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_erde	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_bild	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_kreuz	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_pflicht	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_zelle	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_+=_beratung	_+=_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_freude	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_mord	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_komplex	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 mutter_+=_treff	_+=_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-mutter_sonde	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-zahn_arzt	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_ersatz	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_bürste	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_riemen	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_pasta	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_schmerz	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_reinigung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_behandlung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_techniker	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_spange	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_seide	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_implantat	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_belag	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_wurzel	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_lücke	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_klinik	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_verlust	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_technik	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_hals	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 zahn_wechsel	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_mediziner	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_paste	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_füllung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_kranz	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_fee	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_stange	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_erhaltung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_aufhellung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_nerv	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_ausfall	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_wal	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_karpfen	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_fach	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_krankheit	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_operation	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-zahn_fund	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
 person_+en_kreis	_+en_	_+en_	1.333	1.712	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
 person_+en_gruppe	_+en_	_+en_	1.333	1.712	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
 person_+en_gesellschaft	_+en_	_	0.9059999999999999	0.751	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
@@ -690,44 +424,6 @@ bad_+=er_architektur	_+=er_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:d
 bad_reiniger	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 bad_vorleger	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 bad_+=er_bereich	_+=er_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
-ball_besitz	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_verlust	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_wechsel	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_spiel	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_kontakt	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_saal	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_haus	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_gewinn	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_annahme	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_kleid	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_wurf	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_gefühl	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_nacht	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_berührung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_behandlung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_gast	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_führung	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_abgabe	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_zauberer	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_besucher	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_abend	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_technik	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_spieler	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-ball_kind	_	_	1.289	0.917	def-0, p2l:decl_cl:pl:#e_uml-0|def-0
-apfel_baum	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_saft	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_kuchen	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_sorte	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_strudel	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_bäumchen	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_stück	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_kern	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_garten	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_tasche	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_+=_säure	_+=_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_torte	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_schuss	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-apfel_füllung	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 bett_wäsche	_	_	0.905	0.987	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
 bett_kante	_	_	0.905	0.987	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
 bett_gestell	_	_	0.905	0.987	def-0, p2l:decl_cl:mixed-0/s/en|def-0/s/en
@@ -822,29 +518,6 @@ geschenk_+e_laden	_+e_	_	1.327	0.838	def-0, p2l:decl_cl:pl:#e-0|def-0
 schwester_modell	_	_	0.9059999999999999	0.751	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
 schwester_+n_paar	_+en_	_+en_	1.333	1.712	p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en, p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en
 schwester_zeitung	_	_	0.9059999999999999	0.751	def-0, p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en
-vater_tag	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_stadt	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_haus	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_rolle	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_herz	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_mord	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_bild	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_mörder	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_freude	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_ersatz	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_+=_generation	_+=_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_gefühl	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_komplex	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-vater_pflicht	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-nagel_lack	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-nagel_studio	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-nagel_bett	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-nagel_probe	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-nagel_schere	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-nagel_feile	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-nagel_schmied	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-nagel_kopf	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
-nagel_bürste	_	_	1.547	0.993	def-0, p2l:decl_cl:pl:#0_uml-0|def-0
 schwert_kämpfer	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 schwert_träger	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
 schwert_hieb	_	_	1.6019999999999999	1.8079999999999998	def-0, p2l:decl_cl:pl:#er-0/er|def-0/er, p2l:decl_cl:pl:#er-0/er|!pl_interpr-0
