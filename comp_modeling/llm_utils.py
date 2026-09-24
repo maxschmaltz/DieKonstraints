@@ -1,16 +1,10 @@
 import os
-import re
 import asyncio
-import torch
 import requests
-from openai import OpenAI
-from transformers import AutoModelForCausalLM, AutoTokenizer
-import huggingface_hub
-from typing import List, Literal
+from typing import List, Optional
 import dotenv
 
 dotenv.load_dotenv()
-# openai.api_requestor.TIMEOUT_SECS = 10
 
 
 #region DEPRECATED
@@ -186,6 +180,7 @@ dotenv.load_dotenv()
 # multimodal 320B model with 18B active parameters.
 # 
 # The HF model card: https://huggingface.co/zai-org/GLM-5.3-Flash.
+# GLM Cloud Console: https://console.gmicloud.ai/user-console/ie/model-hub/llm/60e50c31-b7d0-45a9-b83b-905a0d169c10.
 # Technical report: https://arxiv.org/abs/2602.15763.
 # 
 # At the state of Sep 21, 2026:
@@ -219,6 +214,7 @@ dotenv.load_dotenv()
 # GPT-6-Astra, outperforming all Gemini's, QWEN's, DeepSeek's etc.
 
 MODEL_ID = "zai-org/GLM-5.3-Flash"
+# https://console.gmicloud.ai/user-console/ie/model-hub/llm/60e50c31-b7d0-45a9-b83b-905a0d169c10
 URL = "https://api.gmi-serving.com/v1/chat/completions"
 HEADERS = {
     "Content-Type": "application/json",
@@ -232,11 +228,13 @@ def generate_with_llm(
     **gen_kwargs
 ) -> dict:
 
+    # https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create?site_locale=en
     _gen_kwargs = {
         # "max_tokens": 512,
         "max_completion_tokens": 512,
         "temperature": 0.6,
         "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
         "reasoning_effort": "high"  # "low" / "high" / "max"
     }
     _gen_kwargs.update(gen_kwargs)
@@ -247,25 +245,18 @@ def generate_with_llm(
         **_gen_kwargs
     }
 
-    response = requests.post(URL, headers=HEADERS, json=payload, timeout=30)
-    if response.status_code == 200:
-        return response.json()
-
     try:
-        error_body = response.json()
-    except requests.exceptions.JSONDecodeError:
-        error_body = response.text
-    return {
-        "status_code": response.status_code,
-        "reason": response.reason,
-        "error": error_body,
-    }
+        response = requests.post(URL, headers=HEADERS, json=payload, timeout=30)
+        return response
+    except requests.exceptions.ReadTimeout:
+        return
 
 
 # https://console.gmicloud.ai/user-console/ie/model-hub/llm/60e50c31-b7d0-45a9-b83b-905a0d169c10
 async def agenerate_with_llm(
     *,
     messages: List[dict],
+    timeout: Optional[int]=15,
     **gen_kwargs
 ) -> dict:
 
@@ -290,7 +281,7 @@ async def agenerate_with_llm(
             URL,
             headers=HEADERS,
             json=payload,
-            timeout=30
+            timeout=timeout
         )
         return response
     except requests.exceptions.ReadTimeout:

@@ -98,19 +98,14 @@ async def predict_linker(comp_gecodb, row, acceptable_linkers_all, semaphore):
         }
     
 
-# python3 -m comp_modeling.main-llm
+# python3 -m comp_modeling.main-llm-benchmarking
 async def main():
 
     # In this script, we evaluate GLM-3.5-Flash on our German
     # compounding modeling dataset to estimate its overall
-    # knowledge of German compounds, and then proceed to
-    # constraint conflict resolution with the model.
-
-    # 1. Evaluate the model for its general knowledge of
-    # German compounds.
+    # knowledge of German compounds.
 
     appl_ind_path = "resources/developed/merged_geco_sp_appl_ind.tsv"
-
     appl_ind = load_appl_ind(
         appl_ind_path=appl_ind_path,
         # this dataset is clean
@@ -129,8 +124,8 @@ async def main():
     # for logging
     if os.path.exists(preds_tsv_path):
         preds_df = load_tsv_generic(preds_tsv_path)
-        # drop NAs...
-        preds_df = preds_df[preds_df["pred"] != "na"]
+        # drop NAs to genenerate them
+        preds_df = preds_df[preds_df["pred"] != "NA"]
         # and remove them from log
         save_tsv_generic(preds_df.sort_index(), preds_tsv_path)
         Y_true = preds_df["true"].tolist()

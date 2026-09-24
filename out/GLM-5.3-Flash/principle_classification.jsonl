@@ -1,0 +1,555 @@
+{"comp_gecodb": "person_+en_versicherung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "wurm_krankheit", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_führung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_ecke", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_+en_sessel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_zahn", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "brett_+er_bude", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "wurm_larve", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_aufzug", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_stock", "label": "cond", "response": "cond", "reasoning": "Condition specificity? \"narrowest class of nouns\" — but \"covering the narrowest class\" sounds coverage. However the specificity is defined by conditions (plural type AND meaning), not by counted compounds. Hmm. \"covering the narrowest class\" — ambiguous. The conditions are semantic/morphological, not empirical counts → cond."}
+{"comp_gecodb": "ohr_ring", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_spende", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_verzeichnis", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_lager", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "wurm_erkrankung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_wirtschaft", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_nummer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_+er_sammlung", "label": "cond", "response": "cond", "reasoning": "Restricts by plural meaning / class of nouns — condition specificity? \"restricts -er-linking to cases with plural meaning\" — condition specificity (cond)."}
+{"comp_gecodb": "haus_tier", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_teich", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "katze_+n_ausstellung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_lauf", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_+en_zeuge", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_regel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "brett_+er_verschlag", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "stadt_+=e_freundschaft", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_verwalter", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_besuch", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "katze_+n_baum", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_+en_schützer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_muschel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_gestaltung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_wechsel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_suche", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_kauf", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_geschichte", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "brett_+er_boden", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_balkon", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_verarbeitung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_krankheit", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_agentur", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "brett_+er_zaun", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_+en_stöpsel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_teil", "label": "cond", "response": "cond", "reasoning": "Rule 3 restricts by condition (semantic condition), not by number of covered compounds? It says \"most specific rule applies first\" — Panini/Elsewhere. The specificity here is condition-based (restricts to -er-plural AND singular meaning). Answer: cond."}
+{"comp_gecodb": "buch_+=er_spende", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_überwachung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "katze_+n_züchter", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_hund", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_mauer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_stöpsel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_verstärker", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "nation_+en_wertung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_basar", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "katze_+n_haltung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_zeile", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_schwein", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_teil", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "brett_spieler", "label": "cond", "response": "cond", "reasoning": "Condition specificity — \"narrowly defined context.\""}
+{"comp_gecodb": "kind_+er_tag", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_kurs", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_hals", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_begleitung", "label": "cond", "response": "cond", "reasoning": "Condition specificity — restricts applicability conditions."}
+{"comp_gecodb": "haus_+=er_wand", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_auswahl", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_+=er_kampf", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_+en_schmerz", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_strecke", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_+er_dichter", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_hersteller", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "hemd_+en_tasche", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_+er_heft", "label": "cond", "response": "cond", "reasoning": "The fragment ranks by generality of conditions — condition specificity."}
+{"comp_gecodb": "gitarre_spiel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_recht", "label": "reg", "response": "reg", "reasoning": ""}
+{"comp_gecodb": "bild_röhre", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_chor", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "brett_wurzel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_vortrag", "label": "cond", "response": "cond", "reasoning": "Condition specificity? The fragment emphasizes default outranks more specific rules... Actually it says more specific rules are narrower in applicability condition — condition specificity. But default-first ranking... The ranking is by specificity of conditions (semantic informativeness). Answer: cond."}
+{"comp_gecodb": "hemd_+en_knopf", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "vogel_schar", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_+=er_meer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_beitrag", "label": "cvg", "response": "cvg", "reasoning": "Coverage specificity: majority behavior = more compounds covered... \"describing the majority behavior\" — empirical coverage. Answer: cvg."}
+{"comp_gecodb": "haus_+=er_schlucht", "label": "cond", "response": "cond", "reasoning": "The fragment emphasizes \"more specific/exceptional rule wins\" — condition specificity? It mentions \"phonologically conditioned\" and \"semantic condition\" — specificity of applicability conditions. Label: cond."}
+{"comp_gecodb": "bad_reiniger", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_schärfe", "label": "cond", "response": "cond", "reasoning": "Condition specificity: ranking by specificity of applicability conditions."}
+{"comp_gecodb": "rad_+=er_werk", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_haus", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_form", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "weg_+e_netz", "label": "cond", "response": "cond", "reasoning": "\"targets nouns with -e plural AND a plural meaning\" — condition specificity."}
+{"comp_gecodb": "schloss_brücke", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_park", "label": "cond", "response": "cond", "reasoning": "Condition specificity — mentions Paninian/Elsewhere, conditions."}
+{"comp_gecodb": "rad_kasten", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_gast", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_gebrauch", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bad_vorleger", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_illustrator", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_klinik", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_+=er_reihe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_wäsche", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_aufhängung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "weg_gabelung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_+er_kreis", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_+=er_gruppe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_hörer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_rätsel", "label": "cond", "response": "cond", "reasoning": "The fragment mentions \"restricts to -er-plural nouns AND singular meaning\" — condition specificity."}
+{"comp_gecodb": "kind_+er_sitz", "label": "cond", "response": "cond", "reasoning": "The Pāṇinian principle is condition specificity? It says \"more specific rules\" — but specificity here defined by applicability conditions (person/animal designations, etc.). That's condition specificity."}
+{"comp_gecodb": "rad_marathon", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_verbot", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_+en_robbe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_titel", "label": "cond", "response": "cond", "reasoning": "Condition specificity — ranking by semantic condition precision."}
+{"comp_gecodb": "brett_+er_gerüst", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_box", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_wiedergabe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_winkel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_marke", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_stube", "label": "cond", "response": "cond", "reasoning": "Condition specificity? The ranking is by specificity of conditions (person/animal nouns with -er plural...). \"cond\"."}
+{"comp_gecodb": "haus_kaninchen", "label": "cond", "response": "cond", "reasoning": "Condition specificity — mentions semantic condition, morphological class. Answer: cond."}
+{"comp_gecodb": "kind_+er_film", "label": "cond", "response": "cond", "reasoning": "Condition specificity — semantic conditions. Answer: cond."}
+{"comp_gecodb": "schloss_gelände", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_garten", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_aktion", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_mütterchen", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bad_+=er_architektur", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "weg_kreuzung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_kauf", "label": "cond", "response": "cond", "reasoning": "Condition specificity — \"singular meaning of first constituent\" is a condition."}
+{"comp_gecodb": "haus_sender", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_idee", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_+en_haus", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_dampfer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_hotel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_sprung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_stelle", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_bett", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_begleiter", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_garten", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_sendung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_fenster", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_lähmung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_besitzer", "label": "cond", "response": "cond", "reasoning": "Condition specificity: rules ranked by specificity of applicability conditions."}
+{"comp_gecodb": "bild_+er_reihe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_kuchen", "label": "cond", "response": "cond", "reasoning": "Condition specificity — conditions like \"plural -er AND mass meaning\". Answer: cond."}
+{"comp_gecodb": "haus_+=er_markt", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_künstler", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_+en_schmaus", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_+e_liste", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_korb", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_besitz", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_sänger", "label": "cond", "response": "cond", "reasoning": "Condition specificity — semantic condition."}
+{"comp_gecodb": "geschenk_karton", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_handel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_rind", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_wanderung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_geschenk", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_paket", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_messe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_paket", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "vogel_reichtum", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_herz", "label": "cond", "response": "cond", "reasoning": "The fragment describes rules ranked by narrowness of applicability conditions (semantic classes) — condition specificity. But \"covering the smallest class\" could be coverage. The description emphasizes semantic conditions narrowing rules — cond."}
+{"comp_gecodb": "buch_empfehlung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_schrift", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_störung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "vogel_schwarm", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schwert_hieb", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_seele", "label": "cond", "response": "cond", "reasoning": "Condition specificity — the fragment discusses specificity of applicability conditions (singular meaning, plural class), not counts. Answer: cond."}
+{"comp_gecodb": "buch_+=er_regal", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_mutter", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_museum", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_schnitt", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+s_tod", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_sammler", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_wand", "label": "cond", "response": "cond", "reasoning": "Condition specificity? Rule 2 targets narrow class — condition specificity. But \"narrow class... covering same class but broader\" — coverage? Rule 2 and 3 cover same class; specificity is in condition. Answer: cond."}
+{"comp_gecodb": "ohr_+en_entzündung", "label": "cvg", "response": "cvg", "reasoning": "Statistically dominant = coverage? \"unmarked, statistically dominant\" — regularity? \"most regular rule wins\" — but \"statistically dominant\" suggests coverage (empirical). Hmm. Regularity defined as least exceptions; \"statistically dominant\" = applies to most compounds → coverage specificity."}
+{"comp_gecodb": "lied_satz", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_sklave", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_bearbeitung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schwester_+n_paar", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "stadt_+=e_partnerschaft", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_schar", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_geist", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_patenschaft", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schwester_modell", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_rand", "label": "cvg", "response": "cvg", "reasoning": ""}
+{"comp_gecodb": "hemd_knopf", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_+er_sänger", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schwester_zeitung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_gitter", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_entwicklung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_sprache", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "hemd_+s_ärmel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+s_mord", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schwert_träger", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_nachbar", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_tisch", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_gitarre", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schwert_scheide", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_händler", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_geräusch", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_besitzer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_foto", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_kanal", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_trompete", "label": "reg", "response": "reg", "reasoning": ""}
+{"comp_gecodb": "kind_+s_tötung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_szene", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_wand", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_form", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_stecker", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_+=er_komplex", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_legende", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_achse", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_schützer", "label": "cvg", "response": "cvg", "reasoning": ""}
+{"comp_gecodb": "kind_+er_artikel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_+en_station", "label": "cvg", "response": "cvg", "reasoning": ""}
+{"comp_gecodb": "bett_pfosten", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_präsentation", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_schuh", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_+er_auswahl", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_vorlage", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_strecke", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_flut", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_gespenst", "label": "cond", "response": "cond", "reasoning": "Mixed: mentions condition specificity (rule 4 combines conditions) but also regularity (rule 3 \"highly regular\"). The heading \"Specificity: the more specific and restrictive a rule is\" — condition specificity. Answer: cond."}
+{"comp_gecodb": "geräusch_reduzierung", "label": "reg", "response": "reg", "reasoning": ""}
+{"comp_gecodb": "schloss_ruine", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_herbst", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schwert_pflanze", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_vertrieb", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_angebot", "label": "cond", "response": "cond", "reasoning": "Paninian specificity — condition specificity? It mentions restricts applicability condition... \"restricts to -er-plural nouns\" — condition specificity. But \"coverage\" also mentioned? Paninian elsewhere = condition specificity. Answer: cond."}
+{"comp_gecodb": "haus_verwaltung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_titel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_brauerei", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_gemeinschaft", "label": "cond", "response": "cond", "reasoning": "Rule 3 wins by near-exceptionless (regularity); rule 2 by condition specificity. Mixed... but must pick one. The fragment emphasizes both. The ranking between 1 and 2 uses condition specificity; rule 3 uses regularity. Which dominates? The title: \"Specificity and regularity over default.\" Hmm. The main conflict resolution between 1 and 2 is condition specificity. But \"near-exceptionless\" is regularity. Likely answer: cond."}
+{"comp_gecodb": "buch_hinweis", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_gestell", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_boot", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_wagen", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_strecke", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_laden", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_bezug", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_durchsuchung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_ausgabe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_sammlung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_zeichnung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_wanze", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_verbot", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_museum", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_spur", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_+en_zahl", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_kreis", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_schützer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_autor", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_+en_kapazität", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_laden", "label": "cond", "response": "cond", "reasoning": "The fragment mentions both restricts on conditions... \"restricts to -er-plural nouns AND singular meaning\" — condition specificity. But \"most specific applicable rule\" could be either. The specificity is defined by applicability conditions (restrictions), so \"cond\"."}
+{"comp_gecodb": "kind_+er_arzt", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_+=er_stiftung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_angabe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_vorleger", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_ordnung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_interpretation", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_kreis", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schwert_klinge", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_schuh", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_sturm", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_form", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_beförderung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_mann", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_eingang", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_dokumentation", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_geschichte", "label": "cond", "response": "cond", "reasoning": "Condition specificity — about a particular class of first constituents."}
+{"comp_gecodb": "kind_+s_bewegung", "label": "cond", "response": "cond", "reasoning": "Condition specificity — it restricts applicability conditions semantically. Answer: cond."}
+{"comp_gecodb": "bild_wechsel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+s_vater", "label": "cond", "response": "cond", "reasoning": "Condition specificity — specificity of applicability conditions."}
+{"comp_gecodb": "person_+en_kult", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "katze_+n_korb", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_kiste", "label": "cvg", "response": "cvg", "reasoning": "Fragment mentions both coverage and condition specificity... \"covers fewer cases\" — coverage specificity. But also restricts conditions. The Elsewhere Condition is typically condition specificity? It says \"covers fewer cases\" — cvg."}
+{"comp_gecodb": "buch_+=er_schau", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_+en_belegung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "zahn_wechsel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_besichtigung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "hemd_+en_kragen", "label": "cond", "response": "cond", "reasoning": "Condition specificity — narrow lexical class definition."}
+{"comp_gecodb": "brett_rand", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_fleck", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_freund", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_markt", "label": "cond", "response": "cond", "reasoning": "Condition specificity: more specific condition ranked above broader."}
+{"comp_gecodb": "kind_+er_buch", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_sendung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_anfang", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "mutter_+=_treff", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_beispiel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_wunsch", "label": "cond", "response": "cond", "reasoning": "Condition specificity — semantic/morphological conditions."}
+{"comp_gecodb": "haus_ziege", "label": "cond", "response": "cond", "reasoning": "The fragment mentions \"specificity (elsewhere) principle\" and condition specificity (semantic condition). But also \"nearly exceptionless\" — regularity. Hmm. The ranking is by specificity of conditions — (b) explicitly condition specificity. Answer: cond."}
+{"comp_gecodb": "bett_+en_wechsel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_strahl", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_insel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_+en_weide", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_illustration", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_artikel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_vorstellung", "label": "cond", "response": "cond", "reasoning": "Narrowest rule = condition specificity? \"restricts to singular meaning\" — condition specificity. But \"Pāṇinian principle\" is condition specificity. Answer: cond."}
+{"comp_gecodb": "buch_lesung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_blume", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_schänder", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_verlag", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_panzer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_waage", "label": "cvg", "response": "cvg", "reasoning": ""}
+{"comp_gecodb": "bild_+er_vortrag", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_mörder", "label": "cond", "response": "cond", "reasoning": "Elsewhere Condition — condition specificity? Elsewhere Condition is about condition specificity. But the ranking described is by specificity of conditions... \"cond\"."}
+{"comp_gecodb": "rad_verleih", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_preis", "label": "cond", "response": "cond", "reasoning": "Condition specificity — specificity of applicability conditions (applies to -er-plural nouns AND singular meaning restriction)."}
+{"comp_gecodb": "buch_+=er_liste", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_schirm", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_flasche", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "wurm_infektion", "label": "cond", "response": "cond", "reasoning": "Pāṇinian = condition specificity? The fragment says \"most specific rule wins\" based on applicability conditions (person/animal nouns). But \"covers all -(e)r-plural nouns\" suggests coverage. Pāṇinian Elsewhere Condition is typically condition specificity... but ranking by number covered is coverage. The description \"rule 3 is most specific (person/animal nouns...)\" — condition-based. Answer: cond."}
+{"comp_gecodb": "buch_deckel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_stand", "label": "cond", "response": "cond", "reasoning": "Condition specificity (semantic condition), Pāṇinian."}
+{"comp_gecodb": "gitarre_+n_klang", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_leiche", "label": "cond", "response": "cond", "reasoning": "The ranking is based on applicability conditions (person/animal designations...) — condition specificity."}
+{"comp_gecodb": "person_+en_zug", "label": "cond", "response": "cond", "reasoning": "Condition specificity? \"weak feminine first constituents\" — condition-based specificity. Answer: cond."}
+{"comp_gecodb": "rad_reifen", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_feige", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_wert", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_strecke", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_stapel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_traum", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_verpackung", "label": "cond", "response": "cond", "reasoning": "Mentions specificity of conditions and strength/regularity. \"specific, well-established regularity... least exceptions\" — regularity. But \"specific\" suggests condition specificity. The ranking: specific strong rules > general default — condition specificity. Answer: cond."}
+{"comp_gecodb": "sonne_+n_brand", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_sprache", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_hänger", "label": "cvg", "response": "cvg", "reasoning": ""}
+{"comp_gecodb": "geschenk_karte", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_melodie", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_veröffentlichung", "label": "cond", "response": "cond", "reasoning": "Condition specificity: restricts semantic context."}
+{"comp_gecodb": "sonne_+n_bad", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_keller", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_bestand", "label": "cond", "response": "cond", "reasoning": "Condition specificity: \"most narrowly applicable\" — but ranking driven by default/unmarked vs special cases... The fragment says Rule 1 lowest because most narrowly applicable — condition specificity. But top rule wins because default. Hmm. The decisive reasoning: \"most narrowly applicable and thus lowest-ranked\" — cond."}
+{"comp_gecodb": "haus_schwamm", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_kino", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_gesellschaft", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_reihe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_+en_klappe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_zeile", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_koffer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_bett", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_gebäude", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "wurm_befall", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_veranstaltung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_seite", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_zahl", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_+=er_uhr", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_kappe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_+en_auslastung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_gelb", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_haus", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_part", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_nabe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_transport", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_name", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_krippe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_binder", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_tüte", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_party", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_+en_spiegel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_+en_kauf", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_jury", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_dampfer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_gruppe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_macher", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_stock", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_ablage", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_bezeichnung", "label": "cond", "response": "cond", "reasoning": "Condition specificity? The fragment says general default wins over more specific rule — that's about specificity of applicability condition... but it says general wins. The strategy invoked is condition specificity (specificity of conditions). Label: cond."}
+{"comp_gecodb": "kind_+er_lied", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_herstellung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_stunde", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_schrank", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_seite", "label": "cvg", "response": "cvg", "reasoning": ""}
+{"comp_gecodb": "person_+en_fähre", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_saite", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_lehrer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bad_+=er_bereich", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_schale", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_begleitung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_liege", "label": "cond", "response": "cond", "reasoning": "Condition specificity — phonological class condition."}
+{"comp_gecodb": "kind_+er_mädchen", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_station", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_spieler", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_tradition", "label": "cond", "response": "cond", "reasoning": "Condition specificity — restrictions on applicability conditions."}
+{"comp_gecodb": "schloss_verwaltung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_wurm", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_übergabe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_sammlung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bett_kante", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_reise", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_packung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_hospiz", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_dotter", "label": "cond", "response": "cond", "reasoning": "Condition specificity — semantic restriction of conditions."}
+{"comp_gecodb": "bild_+er_verehrung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+s_taufe", "label": "cond", "response": "cond", "reasoning": "Condition specificity — rules ranked by specificity of applicability conditions."}
+{"comp_gecodb": "schloss_saal", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_team", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_malerei", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_beschreibung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_schule", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_macher", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_+e_sack", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_brille", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_zeit", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_zimmer", "label": "cond", "response": "cond", "reasoning": "Condition specificity — specificity defined by applicability conditions."}
+{"comp_gecodb": "person_+en_gruppe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_atlas", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_päckchen", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_freund", "label": "cond", "response": "cond", "reasoning": "Condition specificity — restricts applicability conditions."}
+{"comp_gecodb": "bett_rahmen", "label": "cvg", "response": "cvg", "reasoning": ""}
+{"comp_gecodb": "person_+en_schaden", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_linie", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_sorge", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_finsternis", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_qualität", "label": "reg", "response": "reg", "reasoning": "Default/generic wins — regularity? \"Most regular rule wins\" — default rule = regularity. Answer: reg."}
+{"comp_gecodb": "person_+en_suche", "label": "cvg", "response": "cvg", "reasoning": ""}
+{"comp_gecodb": "buch_beschreibung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_seite", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_terrasse", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_anzahl", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_material", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+s_pech", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_karussell", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_gott", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_stand", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_uhr", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_studio", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_kontrolle", "label": "cvg", "response": "cvg", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_stück", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_becher", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_gruppe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_rezension", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "geschenk_+e_laden", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_blende", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_suche", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_mann", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_karton", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+s_kopf", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_ausschnitt", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_stil", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_wind", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_scheibe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "stadt_+=e_verbindung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "stadt_+=e_tag", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_bus", "label": "cond", "response": "cond", "reasoning": "Condition specificity: more restrictive condition outranks."}
+{"comp_gecodb": "bett_überwurf", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_arrangement", "label": "cond", "response": "cond", "reasoning": "Condition specificity: rule targeting specific word class."}
+{"comp_gecodb": "gitarre_+n_schüler", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_treff", "label": "cond", "response": "cond", "reasoning": "\"regardless of interpretation\" — condition specificity? The hierarchy is based on specificity of conditions... but \"specificity/exception hierarchy\" — hmm. The rule \"person/animal nouns with -er plurals taking -er-\" is more specific in condition. Answer: cond."}
+{"comp_gecodb": "weg_kreuz", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_kopf", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_solo", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_riff", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_legende", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+s_mutter", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_größe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_könig", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_wahl", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_dach", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_anlage", "label": "cond", "response": "cond", "reasoning": "Condition specificity: Rule 4 wins by narrowest condition."}
+{"comp_gecodb": "buch_regal", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_masse", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_tür", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schwert_lilie", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_hülle", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_hang", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_unterricht", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_rand", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_schale", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_einfall", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_+=er_verwaltung", "label": "cond", "response": "cond", "reasoning": "\"most specific and most restrictive rule overrides\" — condition specificity? But \"nearly exceptionless\" hints regularity. The ranking is by specificity of conditions (phonological, semantic, morphological). Label: cond."}
+{"comp_gecodb": "weg_gabel", "label": "cond", "response": "cond", "reasoning": "Condition specificity? Rule 1 \"most specific\" — but rule 3 is statistical tendency... The ranking is by specificity of conditions: rule 1 more specific condition than rule 3, which is more specific than general default. Answer: cond."}
+{"comp_gecodb": "sonne_+n_ofen", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_stabilisator", "label": "cond", "response": "cond", "reasoning": "Condition specificity: general default outranks more specific rules based on condition specificity? The fragment says default outranks more specific rules — that's condition specificity (more general condition wins? Actually condition specificity says more specific wins). Here general default wins — that's regularity? Hmm. The ranking is based on specificity of conditions... The rule that is more specific in applicability condition takes precedence — but here general wins. The classification is by which strategy the scholar uses: they rank by condition specificity (default = general condition). Answer: cond."}
+{"comp_gecodb": "sonne_+n_glut", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "weg_netz", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_konstellation", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_kurs", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_+er_kranz", "label": "cond", "response": "cond", "reasoning": "Condition specificity — restricting applicability conditions. Answer: cond."}
+{"comp_gecodb": "person_+en_liste", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_dieb", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_masse", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_lauf", "label": "cond", "response": "cond", "reasoning": "Condition specificity — semantic conditions."}
+{"comp_gecodb": "schloss_turm", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_+er_macher", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_roman", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_wand", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_schiff", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_gürtel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_stern", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schwert_spitze", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "person_+en_profil", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "katze_+n_klo", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_hund", "label": "cvg", "response": "cvg", "reasoning": "The fragment mentions \"most specific rule that applies wins\" — but defines specificity by coverage (\"covers\"). It says \"most narrowly applicable rule\" — coverage specificity. Answer: cvg."}
+{"comp_gecodb": "person_+en_darstellung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_+er_abend", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_+er_welt", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schloss_insel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_spur", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "gitarre_+n_griff", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_religion", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_+er_buch", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_schaum", "label": "cond", "response": "cond", "reasoning": "Condition specificity vs coverage? \"narrowly conditioned\" — but mentions coverage of broader classes... The ranking is by condition specificity (\"most specific, context-sensitive rule wins\"). Answer: cond."}
+{"comp_gecodb": "ei_+er_nudel", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_reise", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_farbe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "schwert_tanz", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_schicksal", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_eigentümer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_satz", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "katze_+n_krankheit", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "katze_+n_halter", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_rolle", "label": "cond", "response": "cond", "reasoning": "The fragment describes specificity in applicability conditions (subtypes) — but \"subtype\" based on classes... It's condition specificity? Rule 2 is a subtype of Rule 1 — more specific applicability condition. Answer: cond."}
+{"comp_gecodb": "vogel_gruppe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "vogel_zug", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_meister", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "vogel_paar", "label": "cond", "response": "cond", "reasoning": "Subset relations = condition specificity."}
+{"comp_gecodb": "buch_+=er_stand", "label": "cond", "response": "cond", "reasoning": "Rule 3 more specific in applicability condition → cond."}
+{"comp_gecodb": "hemd_bluse", "label": "cvg", "response": "cvg", "reasoning": "\"c vast majority\" — coverage specificity."}
+{"comp_gecodb": "ei_+er_speise", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "lied_gestaltung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "wurm_art", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "hemd_tasche", "label": "reg", "response": "reg", "reasoning": "Default rule = general default wins → regularity? Actually \"default\" ranked above specific — that's condition specificity inverted... The specific rule applies only when default doesn't apply — condition specificity? The claim ranks general default above specific rule, i.e., regularity (most regular/default wins). Answer: reg."}
+{"comp_gecodb": "bett_pfanne", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_reihe", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_reim", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_messe", "label": "cond", "response": "cond", "reasoning": "Condition specificity — \"lexically-phonologically conditioned\" — but \"most specific\" could be coverage. The fragment emphasizes condition specificity? \"lexically-phonologically conditioned rule\" — condition specificity. Answer: cond."}
+{"comp_gecodb": "bett_laken", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "sonne_+n_strahlung", "label": "cond", "response": "cond", "reasoning": "Condition specificity — based on applicability condition (phonological condition). Answer: cond."}
+{"comp_gecodb": "kind_+s_mörder", "label": "cond", "response": "cond", "reasoning": "Condition specificity? It says \"ranked by specificity\" — general default first, more specific conditions later. That's condition specificity: cond."}
+{"comp_gecodb": "bett_kasten", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "bild_punkt", "label": "cond", "response": "cond", "reasoning": "Condition specificity — restricts applicability conditions."}
+{"comp_gecodb": "schwert_griff", "label": "cvg", "response": "cvg", "reasoning": "Narrower class of nouns = coverage specificity? \"applying to the narrower class of nouns\" — empirical coverage. Answer: cvg."}
+{"comp_gecodb": "geräusch_+e_macher", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_mittel", "label": "cond", "response": "cond", "reasoning": "Condition specificity — rules ranked by specificity of applicability conditions."}
+{"comp_gecodb": "kind_+er_sicherung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "katze_+n_besitzer", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "buch_+=er_verbrennung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_maus", "label": "cond", "response": "cond", "reasoning": "Condition specificity — ranking by specificity of applicability conditions."}
+{"comp_gecodb": "haus_+=er_zeile", "label": "cvg", "response": "cvg", "reasoning": "Coverage specificity: \"statistically dominant\", \"more specific rules\" ranked by coverage. Answer: cvg."}
+{"comp_gecodb": "buch_druckerei", "label": "cvg", "response": "cvg", "reasoning": "Coverage: statistically dominant = number of compounds. \"cvg\"."}
+{"comp_gecodb": "kind_+er_abteilung", "label": "cond", "response": "cond", "reasoning": "The ranking is based on applicability conditions narrowing — condition specificity."}
+{"comp_gecodb": "schloss_graben", "label": "cond", "response": "cond", "reasoning": "The fragment emphasizes narrowness of applicability condition — condition specificity. Though \"exceptionless\" hints regularity... \"more narrow and exceptionless\" — Pāṇinian principle is condition specificity. Answer: cond."}
+{"comp_gecodb": "stadt_+=e_vergleich", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "kind_+er_paradies", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_+=er_ansammlung", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ei_+er_tanz", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_+=er_preis", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "haus_katze", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "rad_wechsel", "label": "cond", "response": "cond", "reasoning": "Rule 2 refers to condition (plural-meaning condition) — but \"most specific\" could be condition specificity. It says \"more specific in its applicability condition\" — mentions condition. Answer: cond."}
+{"comp_gecodb": "weg_+e_kreuz", "label": "cond", "response": "cond", "reasoning": ""}
+{"comp_gecodb": "ohr_+en_arzt", "label": "cvg", "response": "cvg", "reasoning": "Coverage: \"most German compounds\" — empirical coverage. But \"default outranks more specific\" — that's condition specificity? The default rule wins because it's most general... Actually the justification \"most German compounds form compounds without linker\" is empirical coverage. Label: cvg."}
+{"comp_gecodb": "schloss_bewohner", "label": "cond", "response": "cond", "reasoning": "The ranking is by condition specificity? The fragment ranks rules by specificity of conditions... \"general default > strong phonological regularity > semantic tendency > weak morphological option\" — this is condition specificity (cond)."}
+{"comp_gecodb": "ohr_+en_tropfen", "label": "cvg", "response": "cvg", "reasoning": "The fragment: specific rule ranked lower because it doesn't decide; default rule wins because statistically dominant — coverage/regularity? \"statistically dominant\" suggests empirical frequency → cvg. But \"default rule wins selection\" — default = general rule, more coverage → cvg."}
+{"comp_gecodb": "brett_+er_wand", "label": "cond", "response": "cond", "reasoning": "Semantic conditions → cond."}
+{"comp_gecodb": "schwert_kämpfer", "label": "cvg", "response": "cvg", "reasoning": "Coverage specificity — \"covers the broader class\" — empirical coverage."}
+{"comp_gecodb": "geräusch_dämmung", "label": "cond", "response": "cond", "reasoning": "Condition specificity plus regularity? \"narrowly conditioned constraints outrank broad tendencies\" — condition specificity. But ordering among specific rules by regularity... Primary: cond."}
+{"comp_gecodb": "weg_scheide", "label": "cond", "response": "cond", "reasoning": "Condition specificity? Rule 3 specific in applicability condition (plural meaning). \"covers\" mentioned but the specificity is about condition. Answer: cond."}
