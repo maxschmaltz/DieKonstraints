@@ -8,13 +8,6 @@ p2l:decl_cl:pl:#0_uml-0|def-0                 _             [PL:uo]        14.0 
 def-0                                         _                 NaN         0.0         0.0
 
 
-mutter_+=_zentrum:	_
-                              linker condition  spec_score  confidence
-c_id                                                                  
-p2l:decl_cl:pl:#0_uml-0|def-0      _   [PL:uo]        14.0        14.0
-def-0                              _       NaN         0.0         0.0
-
-
 ==== LINKER _+e_ ====
 
 geräusch_+e_macher:	_
@@ -43,13 +36,6 @@ p2l:drv:prx_deverb-s        _+s_  [drv:PRX]        12.7        12.7
 def-0                          _        NaN         0.0         0.0
 
 
-hund_+e_halter:	_
-                          linker condition  spec_score  confidence
-c_id                                                              
-p2l:decl_cl:pl:#e-0|def-0      _    [PL:e]        14.0        14.0
-def-0                          _       NaN         0.0         0.0
-
-
 weg_+e_netz:	_+e_
                                  linker          condition  spec_score  confidence
 c_id                                                                              
@@ -68,12 +54,6 @@ p2l:decl_cl:mixed-0/s/en|def-0/s/en         _             [PL:m]        14.0    
 p2l:decl_cl:mixed-0/s/en|def-0/s/en     _+en_             [PL:m]        14.0       4.667
 p2l:decl_cl:mixed-0/s/en|def-0/s/en      _+s_             [PL:m]        14.0       4.667
 def-0                                       _                NaN         0.0       0.000
-
-
-frau_+en_arzt:	_
-      linker  condition  spec_score  confidence
-c_id                                           
-def-0      _        NaN         0.0         0.0
 
 
 nation_+en_wertung:	_+s_
@@ -99,8 +79,8 @@ person_+en_gesellschaft:	_
                                             linker                    condition  spec_score  confidence
 c_id                                                                                                   
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _  [G:F] & [PL:en] & [coda:CN]        39.7      13.233
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_  [G:F] & [PL:en] & [coda:CN]        39.7      13.233
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_  [G:F] & [PL:en] & [coda:CN]        39.7      13.233
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_  [G:F] & [PL:en] & [coda:CN]        39.7      13.233
 def-0                                            _                          NaN         0.0       0.000
 
 
@@ -109,8 +89,8 @@ person_+en_kreis:	_+en_
 c_id                                                                                                                 
 p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en  _+en_  [G:F] & [PL:en] & [coda:CN] & [sem:PL]        52.5      52.500
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en         _             [G:F] & [PL:en] & [coda:CN]        39.7      13.233
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _+s_             [G:F] & [PL:en] & [coda:CN]        39.7      13.233
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en     _+en_             [G:F] & [PL:en] & [coda:CN]        39.7      13.233
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _+s_             [G:F] & [PL:en] & [coda:CN]        39.7      13.233
 def-0                                               _                                     NaN         0.0       0.000
 
 
@@ -193,13 +173,6 @@ def-0                                       _                                  N
 
 ==== LINKER _+=e_ ====
 
-stadt_+=e_name:	_
-                              linker condition  spec_score  confidence
-c_id                                                                  
-p2l:decl_cl:pl:#e_uml-0|def-0      _   [PL:ue]        14.0        14.0
-def-0                              _       NaN         0.0         0.0
-
-
 stadt_+=e_partnerschaft:	_+=e_
                                          linker           condition  spec_score  confidence
 c_id                                                                                       
@@ -217,13 +190,6 @@ p2l:decl_cl:mixed-0/s/en|def-0/s/en      _    [PL:m]        14.0       4.667
 p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_    [PL:m]        14.0       4.667
 p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_    [PL:m]        14.0       4.667
 def-0                                    _       NaN         0.0       0.000
-
-
-hund_+s_rose:	_
-                          linker condition  spec_score  confidence
-c_id                                                              
-p2l:decl_cl:pl:#e-0|def-0      _    [PL:e]        14.0        14.0
-def-0                          _       NaN         0.0         0.0
 
 
 kind_+s_tod:	_+=er_
@@ -333,23 +299,9 @@ schwester_modell:	_
                                             linker                    condition  spec_score  confidence
 c_id                                                                                                   
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _  [G:F] & [PL:en] & [coda:CN]        39.7      13.233
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_  [G:F] & [PL:en] & [coda:CN]        39.7      13.233
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_  [G:F] & [PL:en] & [coda:CN]        39.7      13.233
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_  [G:F] & [PL:en] & [coda:CN]        39.7      13.233
 def-0                                            _                          NaN         0.0       0.000
-
-
-stadt_gebiet:	_
-                              linker condition  spec_score  confidence
-c_id                                                                  
-p2l:decl_cl:pl:#e_uml-0|def-0      _   [PL:ue]        14.0        14.0
-def-0                              _       NaN         0.0         0.0
-
-
-vogel_art:	_
-                              linker condition  spec_score  confidence
-c_id                                                                  
-p2l:decl_cl:pl:#0_uml-0|def-0      _   [PL:uo]        14.0        14.0
-def-0                              _       NaN         0.0         0.0
 
 
 vogel_zug:	_+=_
@@ -366,13 +318,6 @@ c_id
 p2l:decl_cl:pl:#e-0|pl_interpr-e   _+e_  [PL:e] & [sem:PL]        26.8        26.8
 p2l:decl_cl:pl:#e-0|def-0             _             [PL:e]        14.0        14.0
 def-0                                 _                NaN         0.0         0.0
-
-
-weg_strecke:	_
-                          linker condition  spec_score  confidence
-c_id                                                              
-p2l:decl_cl:pl:#e-0|def-0      _    [PL:e]        14.0        14.0
-def-0                          _       NaN         0.0         0.0
 
 
 zahn_wechsel:	_+=e_

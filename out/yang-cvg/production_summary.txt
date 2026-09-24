@@ -8,13 +8,6 @@ p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml   _+=_      0.961       0.961
 def-0                                         _      0.000       0.000
 
 
-mutter_+=_zentrum:	_
-                              linker  cvg_score  confidence
-c_id                                                       
-p2l:decl_cl:pl:#0_uml-0|def-0      _      0.993       0.993
-def-0                              _      0.000       0.000
-
-
 ==== LINKER _+e_ ====
 
 geräusch_+e_macher:	_
@@ -43,13 +36,6 @@ p2l:decl_cl:pl:#e-0|def-0      _      0.838       0.838
 def-0                          _      0.000       0.000
 
 
-hund_+e_halter:	_
-                          linker  cvg_score  confidence
-c_id                                                   
-p2l:decl_cl:pl:#e-0|def-0      _      0.838       0.838
-def-0                          _      0.000       0.000
-
-
 weg_+e_netz:	_+e_
                                  linker  cvg_score  confidence
 c_id                                                          
@@ -68,12 +54,6 @@ p2l:decl_cl:mixed-0/s/en|def-0/s/en         _      0.987       0.329
 p2l:decl_cl:mixed-0/s/en|def-0/s/en     _+en_      0.987       0.329
 p2l:decl_cl:mixed-0/s/en|def-0/s/en      _+s_      0.987       0.329
 def-0                                       _      0.000       0.000
-
-
-frau_+en_arzt:	_
-      linker  cvg_score  confidence
-c_id                               
-def-0      _        0.0         0.0
 
 
 nation_+en_wertung:	_+s_
@@ -99,8 +79,8 @@ person_+en_gesellschaft:	_
                                             linker  cvg_score  confidence
 c_id                                                                     
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _      0.751        0.25
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_      0.751        0.25
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_      0.751        0.25
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_      0.751        0.25
 def-0                                            _      0.000        0.00
 
 
@@ -109,8 +89,8 @@ person_+en_kreis:	_+en_
 c_id                                                                        
 p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en  _+en_      0.961       0.961
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en         _      0.751       0.250
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _+s_      0.751       0.250
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en     _+en_      0.751       0.250
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _+s_      0.751       0.250
 def-0                                               _      0.000       0.000
 
 
@@ -193,13 +173,6 @@ def-0                                       _      0.000       0.000
 
 ==== LINKER _+=e_ ====
 
-stadt_+=e_name:	_
-                              linker  cvg_score  confidence
-c_id                                                       
-p2l:decl_cl:pl:#e_uml-0|def-0      _      0.917       0.917
-def-0                              _      0.000       0.000
-
-
 stadt_+=e_partnerschaft:	_+=e_
                                          linker  cvg_score  confidence
 c_id                                                                  
@@ -217,13 +190,6 @@ p2l:decl_cl:mixed-0/s/en|def-0/s/en      _      0.987       0.329
 p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_      0.987       0.329
 p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_      0.987       0.329
 def-0                                    _      0.000       0.000
-
-
-hund_+s_rose:	_
-                          linker  cvg_score  confidence
-c_id                                                   
-p2l:decl_cl:pl:#e-0|def-0      _      0.838       0.838
-def-0                          _      0.000       0.000
 
 
 kind_+s_tod:	_+=er_
@@ -333,23 +299,9 @@ schwester_modell:	_
                                             linker  cvg_score  confidence
 c_id                                                                     
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _      0.751        0.25
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_      0.751        0.25
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_      0.751        0.25
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_      0.751        0.25
 def-0                                            _      0.000        0.00
-
-
-stadt_gebiet:	_
-                              linker  cvg_score  confidence
-c_id                                                       
-p2l:decl_cl:pl:#e_uml-0|def-0      _      0.917       0.917
-def-0                              _      0.000       0.000
-
-
-vogel_art:	_
-                              linker  cvg_score  confidence
-c_id                                                       
-p2l:decl_cl:pl:#0_uml-0|def-0      _      0.993       0.993
-def-0                              _      0.000       0.000
 
 
 vogel_zug:	_
@@ -366,13 +318,6 @@ c_id
 p2l:decl_cl:pl:#e-0|pl_interpr-e   _+e_      0.921       0.921
 p2l:decl_cl:pl:#e-0|def-0             _      0.838       0.838
 def-0                                 _      0.000       0.000
-
-
-weg_strecke:	_
-                          linker  cvg_score  confidence
-c_id                                                   
-p2l:decl_cl:pl:#e-0|def-0      _      0.838       0.838
-def-0                          _      0.000       0.000
 
 
 zahn_wechsel:	_+=e_

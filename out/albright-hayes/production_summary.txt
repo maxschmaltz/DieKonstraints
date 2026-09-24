@@ -26,13 +26,6 @@ p2l:drv:prx_deverb-s        _+s_  0.649       0.649
 def-0                          _  0.573       0.573
 
 
-hund_+e_halter:	_
-                          linker    reg  confidence
-c_id                                               
-p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.754
-def-0                          _  0.573       0.573
-
-
 weg_+e_netz:	_
                                  linker    reg  confidence
 c_id                                                      
@@ -42,13 +35,6 @@ p2l:decl_cl:pl:#e-0|pl_interpr-e   _+e_  0.544       0.544
 
 
 ==== LINKER _+=e_ ====
-
-stadt_+=e_name:	_
-                              linker    reg  confidence
-c_id                                                   
-p2l:decl_cl:pl:#e_uml-0|def-0      _  0.716       0.716
-def-0                              _  0.573       0.573
-
 
 stadt_+=e_partnerschaft:	_
                                          linker    reg  confidence
@@ -68,13 +54,6 @@ p2l:decl_cl:pl:#0_uml-0|pl_interpr-0_uml   _+=_  0.667       0.667
 def-0                                         _  0.573       0.573
 
 
-mutter_+=_zentrum:	_
-                              linker    reg  confidence
-c_id                                                   
-p2l:decl_cl:pl:#0_uml-0|def-0      _  0.974       0.974
-def-0                              _  0.573       0.573
-
-
 ==== LINKER _+s_ ====
 
 hemd_+s_ärmel:	_
@@ -84,13 +63,6 @@ def-0                                    _  0.573       0.573
 p2l:decl_cl:mixed-0/s/en|def-0/s/en      _  0.996       0.332
 p2l:decl_cl:mixed-0/s/en|def-0/s/en  _+en_  0.996       0.332
 p2l:decl_cl:mixed-0/s/en|def-0/s/en   _+s_  0.996       0.332
-
-
-hund_+s_rose:	_
-                          linker    reg  confidence
-c_id                                               
-p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.754
-def-0                          _  0.573       0.573
 
 
 kind_+s_tod:	_
@@ -113,12 +85,6 @@ def-0                                       _  0.573       0.573
 p2l:decl_cl:mixed-0/s/en|def-0/s/en         _  0.996       0.332
 p2l:decl_cl:mixed-0/s/en|def-0/s/en     _+en_  0.996       0.332
 p2l:decl_cl:mixed-0/s/en|def-0/s/en      _+s_  0.996       0.332
-
-
-frau_+en_arzt:	_
-      linker    reg  confidence
-c_id                           
-def-0      _  0.573       0.573
 
 
 nation_+en_wertung:	_+s_
@@ -145,8 +111,8 @@ person_+en_gesellschaft:	_
 c_id                                                                 
 def-0                                            _  0.573       0.573
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _  1.000       0.333
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_  1.000       0.333
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_  1.000       0.333
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_  1.000       0.333
 
 
 person_+en_kreis:	_+en_
@@ -155,8 +121,8 @@ c_id
 p2l:phon_fin:weak_F_cons$-0/s/en|pl_interpr-en  _+en_  1.000       1.000
 def-0                                               _  0.573       0.573
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en         _  1.000       0.333
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _+s_  1.000       0.333
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en     _+en_  1.000       0.333
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _+s_  1.000       0.333
 
 
 sonne_+n_strahl:	_+en_
@@ -334,22 +300,8 @@ schwester_modell:	_
 c_id                                                                 
 def-0                                            _  0.573       0.573
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en      _  1.000       0.333
-p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_  1.000       0.333
 p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en  _+en_  1.000       0.333
-
-
-stadt_gebiet:	_
-                              linker    reg  confidence
-c_id                                                   
-p2l:decl_cl:pl:#e_uml-0|def-0      _  0.716       0.716
-def-0                              _  0.573       0.573
-
-
-vogel_art:	_
-                              linker    reg  confidence
-c_id                                                   
-p2l:decl_cl:pl:#0_uml-0|def-0      _  0.974       0.974
-def-0                              _  0.573       0.573
+p2l:phon_fin:weak_F_cons$-0/s/en|def-0/s/en   _+s_  1.000       0.333
 
 
 vogel_zug:	_
@@ -366,13 +318,6 @@ c_id
 p2l:decl_cl:pl:#e-0|def-0             _  0.754       0.754
 def-0                                 _  0.573       0.573
 p2l:decl_cl:pl:#e-0|pl_interpr-e   _+e_  0.544       0.544
-
-
-weg_strecke:	_
-                          linker    reg  confidence
-c_id                                               
-p2l:decl_cl:pl:#e-0|def-0      _  0.754       0.754
-def-0                          _  0.573       0.573
 
 
 zahn_wechsel:	_
