@@ -160,13 +160,7 @@ geschenk_idee	_	_	Geschenkidee	Geschenkidee.
 lied_+er_sammlung	_+=er_	Error	Timeout error	
 haus_+=er_zeile	_+=er_	_+=er_	Häuserzeile	None
 kind_+er_artikel	_+=er_	_+=er_	kinderartikel	None
-haus_hund	_	_	haushund	Hmm, the task is to form compound nouns. The task is combining "Haus" (house) and "Hund" (dog) into a compound noun.
-
-The variants are "häuserhund" and "haushund".
-
-The correct compound is "Haushund" (house dog). "Häuserhund" would use the plural "Häuser" which doesn't make sense here.
-
-So the correct answer is "haushund".
+haus_hund	_	_	haushund	Hmm, the task is to form compound nouns. The task is combining "Haus" (house) and "Hund" (dog) into a compound noun. The variants are "häuserhund" and "haushund". The correct compound is "Haushund" (house dog). "Häuserhund" would use the plural "Häuser" which doesn't make sense here. So the correct answer is "haushund".
 haus_kreis	_	_	Hauskreis	Häuserkreis? Actually "Hauskreis" is common (Bibelkreis, Hauskreis). But "Wohnviertel" – Hauskreis is a common word (Hauskreis/Hauskreis community). Yes, 'Hauskreis'.
 rad_team	_	_+=er_	Räderteam	
 kind_+er_reise	_+=er_	_+=er_	Kinderreise	

@@ -4,13 +4,14 @@ from collections import defaultdict
 from typing import Optional
 
 
-def load_tsv_generic(tsv_path: str) -> pd.DataFrame:
-	return pd.read_csv(
-		tsv_path,
-		sep="\t",
-		header=0,
-		index_col=0
-	)
+def load_tsv_generic(tsv_path: str, **kwargs) -> pd.DataFrame:
+	_kwargs = {
+		"sep": "\t",
+		"header": 0,
+		"index_col": 0,
+	}
+	_kwargs.update(kwargs)
+	return pd.read_csv(tsv_path, **_kwargs)
 
 
 def save_tsv_generic(df: pd.DataFrame, tsv_path: str) -> None:
