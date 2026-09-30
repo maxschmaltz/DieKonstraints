@@ -1,6 +1,7 @@
 	acc	f1
-GLM-5.3 Flash	0.701	0.84
+GLM-5.3 Flash (production)	0.84	0.701
 yang-cond	0.712	0.526
+GLM-5.3 Flash (ranking)	0.622	0.488
 yang-cvg	0.688	0.483
 albright-hayes	0.638	0.242
 rand	0.368	0.156
