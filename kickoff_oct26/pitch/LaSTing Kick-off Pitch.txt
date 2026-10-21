@@ -1,0 +1,9 @@
+An important distinction in the linguistic theory has been made between strong constraints which only allow idiosyncratic exceptions, and weak constraints that can be violated to various extent. This opposition is also sometimes referred to as core vs. periphery.
+
+Now, there is evidence that suggests that humans acquire this distinction and are, moreover, capable of resolving complex constraint conflicts that arise in irregular phenomena in different languages. Thus, Albright & Hayes find that the regularity of both strong and weak constraints that govern English past tense correlates closely with the speakers’ acceptability ratings of the outputs of these constraints. In his turn, Charles Yang demonstrates that resolving constraint conflicts by careful constraint ranking predicts German plural formation quite accurately.
+
+These findings raise the question whether neural language models acquire the opposition between core and periphery, too. Our LaSTing project will address this question by exploring how LLMs account for constrain interaction in irregular linguistic phenomena in German. Specifically, we have selected three phenomena that are suitably diverse in terms of their complexity and irregularity — these are syllabification, plural formation, and nominal compounding.
+
+Our hot take is: peripheral does not mean negligible. For both humans and LLMs, the so-called core and the so-called periphery are equally important, and a good language model should account adequately for their interaction.
+
+Two members of our team are present here today: Erhard Hinrichs and me, Maksim Shmalts. We also have two very capable HiWis — Celine Kimball and Andrea Martin — but they are not here today. And what you see here (in the picture) is the four of us and an LLM thinking about The Status of Linguistic Constraints in Neural Language Models.
