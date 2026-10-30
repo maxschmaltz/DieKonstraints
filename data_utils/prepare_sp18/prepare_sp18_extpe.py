@@ -8,11 +8,11 @@ from tqdm import tqdm
 from typing import Tuple
 
 from check_applicability import applicability_checkers
-from .gecodb_compound_parser import Compound
-from .load_datasets import load_sp18
+from ..gecodb_compound_parser import Compound
+from ..load_datasets import load_sp18
 
 
-# python3 -m data_utils.prepare_sp18_extpe
+# python3 -m data_utils.prepare_sp18.prepare_sp18_extpe
 def main():
 
     # This script prepares the default version of SP18 dataset

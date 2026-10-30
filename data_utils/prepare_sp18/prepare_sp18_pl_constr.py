@@ -3,10 +3,10 @@
 
 import os
 
-from .load_datasets import load_celex, load_sp18
+from ..load_datasets import load_celex, load_sp18
 
 
-# python3 -m data_utils.prepare_sp18_pl_constr
+# python3 -m data_utils.prepare_sp18.prepare_sp18_pl_constr
 def main():
 
     # This script prepares the default version of SP18 dataset

@@ -7,10 +7,11 @@ from tqdm.asyncio import tqdm
 from collections import defaultdict
 from typing import Optional, Tuple
 
-from gecodb_compound_parser import Compound, perform_umlaut
-from dereko_search import get_dereko_counts
+from ..gecodb_compound_parser import Compound, perform_umlaut
+from ..dereko_search import get_dereko_counts
 
 
+# python3 -m data_utils.prepare_sp18.prepare_sp18
 def main():
 
     # In this script, we preprocess the annotated dataset from [schaefer_pankratz_2018]
