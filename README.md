@@ -33,7 +33,7 @@ During the talk, we will first briefly introduce the GNC constraint set and show
 
 ### Data
 
-* The central datasets we used are the constraint applicability indices originated from [Shmalts 2026](https://github.com/maxschmaltz/DieKonstraints/tree/comp_constr_corp_study_mar26) and [Shmalts in preparation](https://github.com/maxschmaltz/DieKonstraints/tree/TODO). For each of the compound they are defined over, these indices record whether a given constraint is potentially and actually applicable to it or not. The applicability indices can be found in the [resources/semrel_comp_corp_study-private/appl_inds](resources/semrel_comp_corp_study-private/appl_inds) directory.
+* The central datasets we used are the constraint applicability indices originated from [Shmalts 2026](https://github.com/maxschmaltz/DieKonstraints/tree/comp_constr_corp_study_mar26) and [Shmalts in preparation](https://github.com/maxschmaltz/DieKonstraints/tree/semcue_comp_sp18_aug26). For each of the compound they are defined over, these indices record whether a given constraint is potentially and actually applicable to it or not. The applicability indices can be found in the [resources/semrel_comp_corp_study-private/appl_inds](resources/semrel_comp_corp_study-private/appl_inds) directory.
 
 * For the experiments, we merged the two applicability indices in [data_utils/prepare_merged_geco_sp_appl_ind.py](data_utils/prepare_merged_geco_sp_appl_ind.py) by intersecting the compounds they are defined over. The merged applicability index is stored in [resources/developed/merged_geco_sp_appl_ind.tsv](resources/developed/merged_geco_sp_appl_ind.tsv).
 
