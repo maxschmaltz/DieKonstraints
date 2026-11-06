@@ -11,13 +11,13 @@ import copy
 from collections import defaultdict
 from tqdm import tqdm
 
-# python3 -m check_applicability.main
 from data_utils.gecodb_compound_parser import Compound
 from data_utils import load_datasets
 from . import applicability_checkers
 from .regularity_scale import REGULARITY_SCALE
 
 
+# python3 -m check_applicability.main
 def main():
     
     constr_path = "constraints/constraints_all_revised.yaml"
