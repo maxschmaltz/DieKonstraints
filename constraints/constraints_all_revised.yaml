@@ -214,9 +214,6 @@ datasets:
         load_func: load_sp18
         celexn_version: 0
 
-    # # The validity of the dataset is being assessed at the moment.
-    # gecodb_v07_pl_constr: TODO
-
 ---
 
 
@@ -946,8 +943,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pl_constr: 82
-
+            
         func_alias: plur_e_pl
 
         quantifier: irregularly
@@ -1115,8 +1111,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pl_constr: 82
-
+            
         func_alias: plur_er_sg
 
         quantifier: majority
@@ -1208,8 +1203,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pl_constr: 82
-
+            
         func_alias: plur_er_pl
 
         quantifier: more likely
@@ -1379,8 +1373,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pl_constr: 82
-
+            
         func_alias: plur_e_uml_pl
 
         quantifier: irregularly
@@ -1499,8 +1492,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pl_constr: 82
-
+            
         quantifier: irregularly
         measures:
             sp18_pl_constr:
@@ -1625,8 +1617,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pl_constr: 82
-
+            
         func_alias: mixed_mn_pl
 
         quantifier: more likely
@@ -1882,8 +1873,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pl_constr: 82
-
+            
         func_alias: schwa_fin_deverb_pl
 
         quantifier: tend
@@ -2116,8 +2106,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pl_constr: 82
-
+            
         func_alias: sfx_s_pl
 
         quantifier: irregularly
@@ -2610,8 +2599,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pl_constr: 82
-
+            
         func_alias: stressed_phon_fin_pl
 
         quantifier: irregularly
@@ -2941,8 +2929,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pl_constr: 82
-
+            
         func_alias: f_cons_fin_sg
 
         quantifier: mostly
@@ -2994,8 +2981,7 @@ constraints:
         appl_item: n1+sem
         datasets_n_appl_items:
             sp18_pl_constr: 76
-            # gecodb_v07_pl_constr: 82
-
+            
         func_alias: f_cons_fin_pl
 
         quantifier: more likely
@@ -4790,7 +4776,6 @@ constraints:
         appl_item: n1+linker
         datasets_n_appl_items:
             sp18_pl_constr: 86
-            # gecodb_v07_pl_constr: 99
 
         func_alias: pl_interpr
 

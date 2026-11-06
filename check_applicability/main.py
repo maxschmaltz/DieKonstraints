@@ -182,7 +182,7 @@ def main():
                 # the semantic plurality of N1 is determined
                 # differently, depending on the dataset
                 match dname:
-                    case "sp18_pl_constr" | "gecodb_v07_pl_constr":
+                    case "sp18_pl_constr":
                         # While annotating the Pl meaning of N1s, Schäfer & Pankratz 2018
                         # found a number of uncertain examples, so they made two measurements:
                         # a strict measurement (the uncertain cases were treated as a Sg N1 meaning) 
